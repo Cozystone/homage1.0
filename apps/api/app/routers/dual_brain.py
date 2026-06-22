@@ -8,7 +8,9 @@ from pydantic import BaseModel, Field
 
 from app.services.alpha_services import alpha_service
 from packages.base_brain.zero_user_answer import answer_with_base_brain
+from packages.cgsr.cgsr.conversation_surface import generate_conversation_surface
 from packages.core_proof.three_core_answer_path import run_prompt_proof
+from packages.voice_loop.runtime_availability import check_voice_runtime_availability
 from packages.surface_brain.monitor import monitor_answer, repair_answer_for_mode
 from packages.surface_brain.dual_projection import ingest_source_sentence_dual_projection
 from packages.surface_brain.models import SourceSentence, honesty_flags
@@ -52,6 +54,9 @@ def _flags() -> dict[str, Any]:
         **honesty_flags(),
         "final_answer_generation_claimed": True,
         "trace_hidden_by_default": True,
+        "production_store_mutated": False,
+        "candidate_promotion": False,
+        "internal_trace_exposed": False,
     }
 
 
@@ -145,6 +150,219 @@ def _attach_three_core_trace(
     result["default_trace_visible"] = False
     result["trace_hidden_by_default"] = True
     return response
+
+
+def _compact_conversation_text(question: str) -> str:
+    return re.sub(r"[\s!.?,:;~\-_'\"()\[\]{}]+", "", question.strip().lower())
+
+
+def _is_live_selfhood_conversation(question: str) -> bool:
+    compact = _compact_conversation_text(question)
+    if not compact:
+        return True
+    if compact in {
+        "안녕",
+        "안녕하세요",
+        "하이",
+        "헬로",
+        "반가워",
+        "고마워",
+        "감사",
+        "감사합니다",
+        "hi",
+        "hello",
+        "hey",
+        "yo",
+        "thanks",
+        "thankyou",
+    }:
+        return True
+    lowered = question.strip().lower()
+    return any(
+        term in lowered
+        for term in (
+            "자기 모델",
+            "자아 모델",
+            "자의식",
+            "내적 언어",
+            "생각 중추",
+            "유리 구",
+            "구슬",
+            "orb",
+            "self model",
+            "selfhood",
+            "inner speech",
+            "voice mode",
+        )
+    ) and len(question.strip()) <= 80
+
+
+def _live_selfhood_speech_act(question: str, language: str) -> str:
+    compact = _compact_conversation_text(question)
+    if language == "ko":
+        if compact in {"안녕", "안녕하세요", "하이", "헬로", "반가워"}:
+            return "greeting"
+        if compact in {"고마워", "감사", "감사합니다"}:
+            return "thanks"
+        if any(term in question for term in ("자기 모델", "자아 모델", "자의식", "내적 언어", "생각 중추")):
+            return "self_model"
+        if any(term in question for term in ("유리 구", "구슬")):
+            return "orb"
+        return "conversation"
+    if compact in {"hi", "hello", "hey", "yo"}:
+        return "greeting"
+    if compact in {"thanks", "thankyou"}:
+        return "thanks"
+    if any(term in question.lower() for term in ("self model", "selfhood", "inner speech")):
+        return "self_model"
+    return "conversation"
+
+
+def _voice_runtime_snapshot(text: str, language: str) -> dict[str, Any]:
+    """Describe optional Fish TTS readiness without loading models or saving audio."""
+
+    try:
+        availability = check_voice_runtime_availability()
+    except Exception as exc:  # pragma: no cover - optional runtime isolation
+        return {
+            "requested": True,
+            "tts_engine": "fish_2",
+            "available": False,
+            "audio_stream_available": False,
+            "visual_speaking_recommended": bool(text),
+            "external_service": False,
+            "generated_audio_persisted": False,
+            "unavailable_reason": type(exc).__name__,
+        }
+    fish2 = availability.get("fish_2")
+    available = bool(fish2 and fish2.available)
+    return {
+        "requested": True,
+        "tts_engine": "fish_2",
+        "available": available,
+        "audio_stream_available": False,
+        "visual_speaking_recommended": bool(text),
+        "external_service": False,
+        "generated_audio_persisted": False,
+        "language": "ko-KR" if language == "ko" else "en-US",
+        "unavailable_reason": None if available else ",".join(fish2.missing_modules if fish2 else ["fish_2_status_unavailable"]),
+    }
+
+
+def _live_selfhood_payload(
+    request: AtanorChatRequest,
+    *,
+    question: str,
+    language: str,
+) -> dict[str, Any]:
+    speech_act = _live_selfhood_speech_act(question, language)
+    generated = generate_conversation_surface(question, language=language)
+    compact_trace = {
+        "local_coverage": "live_selfhood_conversation",
+        "selfhood_loop": {
+            "used": True,
+            "internal_scratchpad_visible": False,
+            "rule_based_answer_blocked": True,
+            "requires_learned_generator": False,
+            "speech_act": speech_act,
+            "emotion_hint": "warm" if speech_act in {"greeting", "thanks"} else "calm",
+        },
+        "semantic_cloud_graph": {"attached_nodes": 0, "evidence_docs": 0},
+        "surface_graph": {
+            "construction_families": [],
+            "discourse_moves": [],
+            "conversation_surface": generated.diagnostics,
+        },
+        "q_cortex": {"used": False, "run_id": None, "real_quantum_hardware_used": False},
+        "working_memory": {"temporary_context": False, "local_brain_write": False},
+        "confidence": "medium" if generated.confidence >= 0.5 else "abstained",
+    }
+    if not generated.answer:
+        payload = {
+            "answer": None,
+            "language": language,
+            "confidence": 0.0,
+            "answer_kind": "generation_abstained_no_rule_based_model",
+            "speech_act": speech_act,
+            "can_speak": False,
+            "abstain_reason": generated.diagnostics.get("abstain_reason", "no_safe_token_walk"),
+            "default_trace_visible": False,
+            "trace": compact_trace if request.include_trace or request.mode in {"trace", "research"} else None,
+            "compact_trace": compact_trace,
+            "research_trace": {"selfhood_loop": compact_trace["selfhood_loop"]} if request.mode == "research" else None,
+            "evidence_docs": [],
+            "matched_nodes": [],
+            "matched_edges": [],
+            "surface_plan": {
+                "plan_id": None,
+                "intent": "live_selfhood_conversation",
+                "construction_families": compact_trace["surface_graph"]["construction_families"],
+                "q_cortex_used": False,
+                "q_cortex_run_id": None,
+            },
+            "answer_engine": {
+                "name": "ATANOR Live Selfhood Conversation Surface",
+                "semantic_plane": "conversation_only",
+                "surface_plane": "asm_v0_construction_conditioned_surface",
+                "external_llm": False,
+                "external_sllm": False,
+                "local_brain_write": False,
+                "production_store_mutated": False,
+                "candidate_promotion": False,
+                "trace_hidden_by_default": True,
+                "internal_scratchpad_visible": False,
+                "internal_trace_exposed": False,
+                "rule_based_answer_used": False,
+                "template_free_surface": True,
+                "generation_basis": generated.diagnostics.get("generation_basis"),
+                "diagnostics": generated.diagnostics,
+            },
+            **{**_flags(), "final_answer_generation_claimed": False},
+        }
+        return {"state": "abstained", "result": payload, **{**_flags(), "final_answer_generation_claimed": False}}
+    voice_output = _voice_runtime_snapshot(generated.answer, language)
+    payload = {
+        "answer": generated.answer,
+        "language": language,
+        "confidence": generated.confidence,
+        "answer_kind": "asm_v0_conversation_surface",
+        "speech_act": speech_act,
+        "can_speak": True,
+        "voice_output": voice_output,
+        "default_trace_visible": False,
+        "trace": compact_trace if request.include_trace or request.mode in {"trace", "research"} else None,
+        "compact_trace": compact_trace,
+        "research_trace": {"selfhood_loop": compact_trace["selfhood_loop"]} if request.mode == "research" else None,
+        "evidence_docs": [],
+        "matched_nodes": [],
+        "matched_edges": [],
+        "surface_plan": {
+            "plan_id": None,
+            "intent": "live_selfhood_conversation",
+            "construction_families": compact_trace["surface_graph"]["construction_families"],
+            "q_cortex_used": False,
+            "q_cortex_run_id": None,
+        },
+        "answer_engine": {
+            "name": "ATANOR Live Selfhood Conversation Surface",
+            "semantic_plane": "conversation_only",
+            "surface_plane": "asm_v0_construction_conditioned_surface",
+            "external_llm": False,
+            "external_sllm": False,
+            "local_brain_write": False,
+            "production_store_mutated": False,
+            "candidate_promotion": False,
+            "trace_hidden_by_default": True,
+            "internal_scratchpad_visible": False,
+            "internal_trace_exposed": False,
+            "rule_based_answer_used": False,
+            "template_free_surface": True,
+            "generation_basis": generated.diagnostics.get("generation_basis"),
+            "diagnostics": generated.diagnostics,
+        },
+        **_flags(),
+    }
+    return {"state": "completed", "result": payload, **_flags()}
 
 
 def _clean_graph_count_question(question: str) -> bool:
@@ -743,9 +961,12 @@ UNSAFE_DEFAULT_ANSWER_RE = re.compile(
 
 
 def _answer_is_unsafe(answer: str) -> bool:
-    if UNSAFE_DEFAULT_ANSWER_RE.search(str(answer or "")):
+    text = str(answer or "")
+    if UNSAFE_DEFAULT_ANSWER_RE.search(text):
         return True
-    monitor = monitor_answer(str(answer or ""))
+    if any(term in text for term in ("먼저 의도와 경계", "내부적으로 점검", "내부 점검", "숨겨진 사고", "내적 독백")):
+        return True
+    monitor = monitor_answer(text)
     return bool(set(monitor.get("issues") or []) & {"encoding_artifact", "internal_trace_leakage", "internal_identifier_leakage"})
 
 
@@ -924,6 +1145,12 @@ async def chat_atanor(request: AtanorChatRequest) -> dict[str, Any]:
         raise HTTPException(status_code=422, detail="question, query, or message is required")
     language = request.language or ("ko" if any("\uac00" <= char <= "\ud7a3" for char in question) else "en")
     three_core_trace = _run_three_core_compact_trace(question)
+    if _is_live_selfhood_conversation(question):
+        return _attach_three_core_trace(
+            _live_selfhood_payload(request, question=question, language=language),
+            request=request,
+            three_core_trace=three_core_trace,
+        )
     if _clean_graph_count_question(question) or _is_graph_count_question(question):
         return _attach_three_core_trace(
             _clean_graph_count_payload(request, question=question, language=language),

@@ -284,3 +284,78 @@ def test_computer_memory_questions_still_use_base_brain(tmp_path, monkeypatch) -
     assert "RAM" in comparison_payload["answer"]
     assert "SSD" in comparison_payload["answer"]
     assert comparison_payload["compact_trace"]["local_coverage"] == "base_brain"
+
+
+def test_live_selfhood_greeting_uses_native_conversation_surface(tmp_path, monkeypatch) -> None:
+    monkeypatch.chdir(tmp_path)
+
+    async def fail_query_graphrag(*args, **kwargs):  # pragma: no cover - should never be called
+        raise AssertionError("short live conversation must not enter graph retrieval")
+
+    monkeypatch.setattr(dual_brain.alpha_service, "query_graphrag", fail_query_graphrag)
+    client = TestClient(app)
+
+    response = client.post(
+        "/api/chat/atanor",
+        json={"question": "안녕", "language": "ko", "brain_mode": "unified", "include_trace": True},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    payload = body["result"]
+    assert body["state"] == "completed"
+    assert payload["answer"]
+    assert "먼저 의도와 경계" not in payload["answer"]
+    assert "내부적으로 점검" not in payload["answer"]
+    assert payload["answer_kind"] == "asm_v0_conversation_surface"
+    assert payload["speech_act"] == "greeting"
+    assert payload["can_speak"] is True
+    assert payload["final_answer_generation_claimed"] is True
+    assert payload["compact_trace"]["local_coverage"] == "live_selfhood_conversation"
+    assert payload["compact_trace"]["selfhood_loop"]["internal_scratchpad_visible"] is False
+    assert payload["compact_trace"]["selfhood_loop"]["rule_based_answer_blocked"] is True
+    assert payload["compact_trace"]["selfhood_loop"]["requires_learned_generator"] is False
+    assert payload["compact_trace"]["surface_graph"]["conversation_surface"]["generation_basis"] == "local_corpus_construction_transition_model"
+    assert payload["answer_engine"]["rule_based_answer_used"] is False
+    assert payload["answer_engine"]["template_free_surface"] is True
+    assert payload["answer_engine"]["external_llm"] is False
+    assert payload["answer_engine"]["external_sllm"] is False
+    assert payload["answer_engine"]["production_store_mutated"] is False
+    assert payload["answer_engine"]["candidate_promotion"] is False
+    assert payload["answer_engine"]["internal_trace_exposed"] is False
+    assert payload["voice_output"]["tts_engine"] == "fish_2"
+    assert payload["voice_output"]["external_service"] is False
+    assert payload["voice_output"]["generated_audio_persisted"] is False
+    assert payload["local_brain_write"] is False
+
+
+def test_live_selfhood_self_model_generates_without_scratchpad_or_rule_answer(tmp_path, monkeypatch) -> None:
+    monkeypatch.chdir(tmp_path)
+
+    async def fail_query_graphrag(*args, **kwargs):  # pragma: no cover - should never be called
+        raise AssertionError("short self-model conversation must not enter graph retrieval")
+
+    monkeypatch.setattr(dual_brain.alpha_service, "query_graphrag", fail_query_graphrag)
+    client = TestClient(app)
+
+    response = client.post(
+        "/api/chat/atanor",
+        json={"question": "지금 자기 모델을 설명해줘", "language": "ko", "brain_mode": "unified", "include_trace": False},
+    )
+
+    assert response.status_code == 200
+    payload = response.json()["result"]
+    assert payload["answer"]
+    assert "자기 모델" in payload["answer"]
+    assert "먼저 의도와 경계" not in payload["answer"]
+    assert "내부적으로 점검" not in payload["answer"]
+    assert payload["answer_kind"] == "asm_v0_conversation_surface"
+    assert payload["speech_act"] == "self_model"
+    assert payload["can_speak"] is True
+    assert payload["trace"] is None
+    assert payload["compact_trace"]["selfhood_loop"]["internal_scratchpad_visible"] is False
+    assert payload["compact_trace"]["selfhood_loop"]["rule_based_answer_blocked"] is True
+    assert payload["answer_engine"]["rule_based_answer_used"] is False
+    assert payload["answer_engine"]["generation_basis"] == "local_corpus_construction_transition_model"
+    assert payload["external_llm_used"] is False
+    assert payload["external_sllm_used"] is False
