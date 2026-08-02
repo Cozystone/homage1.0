@@ -1,0 +1,70 @@
+{
+ "train_runs": [
+  "travel2_145430"
+ ],
+ "test_run": "travel_145231",
+ "init": "depthnet.pt",
+ "before": {
+  "model": 0.08492,
+  "identity": 0.08543,
+  "constant": 0.08493
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "train_loss": 0.08087,
+   "automask_kept": 0.274,
+   "model": 0.18876,
+   "identity": 0.08543,
+   "constant": 0.18774
+  },
+  {
+   "epoch": 1,
+   "train_loss": 0.07576,
+   "automask_kept": 0.284,
+   "model": 0.18504,
+   "identity": 0.08543,
+   "constant": 0.18379
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.07351,
+   "automask_kept": 0.292,
+   "model": 0.17857,
+   "identity": 0.08543,
+   "constant": 0.17861
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.06815,
+   "automask_kept": 0.309,
+   "model": 0.16303,
+   "identity": 0.08543,
+   "constant": 0.17236
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.06524,
+   "automask_kept": 0.322,
+   "model": 0.16198,
+   "identity": 0.08543,
+   "constant": 0.16822
+  }
+ ],
+ "beats_identity": false,
+ "beats_constant": true,
+ "improved_on_carla_init": false,
+ "note": "no ground truth exists in City Sample; these are photometric, not metric",
+ "REVISED_2026_07_31": {
+  "by": "blind sealed exam data/e5_depth_seal_002, scored by the operator",
+  "measured_on_carla_ground_truth": {
+   "citysample_selfsup_delta125": 0.1506,
+   "constant_baseline_delta125": 0.2181,
+   "depthnet_delta125": 0.5268
+  },
+  "verdict": "This checkpoint is WORSE THAN CONSTANT DEPTH on CARLA. It began from depthnet.pt, which scores 0.5268 on the same seal, so the fine-tune destroyed a working model rather than adapting it.",
+  "the_training_log_already_showed_it": "model photometric error 0.08492 -> 0.18876 at epoch 0, recovering only to 0.16198 by epoch 4 -- it never returned to where it started, and this file already recorded improved_on_carla_init: false and beats_identity: false.",
+  "and_the_metric_was_confounded": "the CONSTANT baseline moved too, 0.08493 -> 0.18774. Constant depth's photometric error cannot change unless something other than depth changed: evaluate() takes pose_net, which was being trained jointly. A degrading pose network raises every arm at once, so the during-training numbers do not separate depth quality from pose quality at all.",
+  "status": "This checkpoint should not be used or cited as a self-supervised result. Any future self-supervised adaptation must hold out the ORIGINAL domain and measure it every epoch, against ground truth rather than a photometric proxy that shares parameters with what is being trained."
+ }
+}

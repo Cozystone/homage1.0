@@ -1,0 +1,798 @@
+{"s": "bakelite", "p": "made_of", "o": "synthetic components", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ball", "p": "made_of", "o": "hard-wearing materials are used", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bassoon", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bread", "p": "made_of", "o": "water", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "capsid", "p": "made_of", "o": "protein called protomers", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "carabiner", "p": "made_of", "o": "both steel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chocolate", "p": "made_of", "o": "roasted", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dynamite", "p": "made_of", "o": "nitroglycerin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gazpacho", "p": "made_of", "o": "raw", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "glucose", "p": "made_of", "o": "water", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "guitarist", "p": "made_of", "o": "bone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kiln", "p": "made_of", "o": "clay into pottery", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kilt", "p": "made_of", "o": "twill-woven worsted wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kimono", "p": "made_of", "o": "long", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "knitting", "p": "made_of", "o": "interconnected loops", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "microlith", "p": "made_of", "o": "flint", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "oboe", "p": "made_of", "o": "synthetic materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "oboe", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "quiver", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "quiver", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "red", "p": "made_of", "o": "magenta", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "saxophone", "p": "made_of", "o": "brass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "song", "p": "made_of", "o": "sections", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "spaghetti", "p": "made_of", "o": "milled wheat sometimes enriched", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "squid", "p": "made_of", "o": "chitin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tequila", "p": "made_of", "o": "blue agave plant", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "toad", "p": "made_of", "o": "parotoid glands", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "topaz", "p": "made_of", "o": "aluminum", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "vaccine", "p": "made_of", "o": "weakened", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "vellum", "p": "made_of", "o": "calfskin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "whisky", "p": "made_of", "o": "fermented grain mash", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "wine", "p": "made_of", "o": "fermented grape juice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "avalanche", "p": "made_of", "o": "looser snow", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "avalanche", "p": "made_of", "o": "tightly packed snow", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bacon", "p": "made_of", "o": "various cuts", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "botifarra", "p": "made_of", "o": "raw pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "buckminsterfullerene", "p": "made_of", "o": "twenty hexagons", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bullet", "p": "made_of", "o": "variety of materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "butter", "p": "made_of", "o": "fat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "calvados", "p": "made_of", "o": "apples", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cardamom", "p": "made_of", "o": "seeds of several plants", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dam", "p": "made_of", "o": "concrete", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "diaper", "p": "made_of", "o": "cloth", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "doughnut", "p": "made_of", "o": "leavened dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gong", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gravy", "p": "made_of", "o": "juices of meats", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hummus", "p": "made_of", "o": "cooked", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "jeans", "p": "made_of", "o": "denim", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "jellyfish", "p": "made_of", "o": "mesoglea", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kava", "p": "made_of", "o": "its root", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lamington", "p": "made_of", "o": "squares of butter cake", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "marshmallow", "p": "made_of", "o": "sugar", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mortadella", "p": "made_of", "o": "finely hashed", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "noodle", "p": "made_of", "o": "unleavened dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pie", "p": "made_of", "o": "pastry dough casing", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pollen", "p": "made_of", "o": "sporopollenin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "polyvinylpyrrolidone", "p": "made_of", "o": "monomer n-vinylpyrrolidone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sediment", "p": "made_of", "o": "loose particles", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "snowball", "p": "made_of", "o": "snow", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tamale", "p": "made_of", "o": "masa", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tamale", "p": "made_of", "o": "nixtamalized corn", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tzatziki", "p": "made_of", "o": "salted strained yogurt", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cuvette", "p": "made_of", "o": "clear", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gnocchi", "p": "made_of", "o": "small rolls of dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "eraillure", "p": "made_of", "o": "bone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "meringue", "p": "made_of", "o": "whipped egg whites", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "anmitsu", "p": "made_of", "o": "red algae", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "camshaft", "p": "made_of", "o": "steel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cellophane", "p": "made_of", "o": "regenerated cellulose", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "corset", "p": "made_of", "o": "whalebone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "croissant", "p": "made_of", "o": "laminated yeast dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "falafel", "p": "made_of", "o": "ground fava beans", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "glove", "p": "made_of", "o": "materials including cloth", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "halloumi", "p": "made_of", "o": "mixture of goat milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "marmalade", "p": "made_of", "o": "juice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ocarina", "p": "made_of", "o": "clay", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "parka", "p": "made_of", "o": "caribou", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pepperoni", "p": "made_of", "o": "cured pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "portcullis", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "posset", "p": "made_of", "o": "milk curdled", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sarcophagus", "p": "made_of", "o": "limestone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shovel", "p": "made_of", "o": "sheet steel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "soba", "p": "made_of", "o": "buckwheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "soju", "p": "made_of", "o": "rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "suede", "p": "made_of", "o": "underside of the skin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "surfboard", "p": "made_of", "o": "wood from local trees", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sweater", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sweater", "p": "made_of", "o": "knitted", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tendon", "p": "made_of", "o": "collagen", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tonfa", "p": "made_of", "o": "red", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "udon", "p": "made_of", "o": "wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "wetsuit", "p": "made_of", "o": "foamed neoprene", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bagel", "p": "made_of", "o": "yeasted wheat dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "blackboard", "p": "made_of", "o": "smooth", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bratwurst", "p": "made_of", "o": "pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chimney", "p": "made_of", "o": "masonry", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "compote", "p": "made_of", "o": "whole", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "goulash", "p": "made_of", "o": "meat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hinge", "p": "made_of", "o": "flexible material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "islet", "p": "made_of", "o": "rock", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lacquer", "p": "made_of", "o": "tree sap", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "milkshake", "p": "made_of", "o": "non-dairy products", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "necklace", "p": "made_of", "o": "precious metals", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pretzel", "p": "made_of", "o": "dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "silage", "p": "made_of", "o": "green foliage crops", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sjambok", "p": "made_of", "o": "adult hippopotamus", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sjambok", "p": "made_of", "o": "plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "spire", "p": "made_of", "o": "stonework", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tipi", "p": "made_of", "o": "animal hides", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "toaster", "p": "made_of", "o": "nichrome wire", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "waffle", "p": "made_of", "o": "usually leavened batter", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "wig", "p": "made_of", "o": "human", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ashiko", "p": "made_of", "o": "hardwood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "baguette", "p": "made_of", "o": "basic lean dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "barolo", "p": "made_of", "o": "nebbiolo grape", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "blade", "p": "made_of", "o": "materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bodystocking", "p": "made_of", "o": "sheer fabric similar", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "catsuit", "p": "made_of", "o": "stretchable material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chair", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ferrule", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "groyne", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "halyard", "p": "made_of", "o": "natural fibre like manila", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hammock", "p": "made_of", "o": "fabric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kumis", "p": "made_of", "o": "mare milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lipoma", "p": "made_of", "o": "fat tissue", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ouzo", "p": "made_of", "o": "rectified spirits", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "roux", "p": "made_of", "o": "equal parts of flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "scalpel", "p": "made_of", "o": "hardened", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "scone", "p": "made_of", "o": "either wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "seitan", "p": "made_of", "o": "gluten", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tahini", "p": "made_of", "o": "ground sesame seeds", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tempeh", "p": "made_of", "o": "fermented soybeans", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "velour", "p": "made_of", "o": "polyester", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "aglet", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "aglet", "p": "made_of", "o": "plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "beignet", "p": "made_of", "o": "choux pastry", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "brazier", "p": "made_of", "o": "terracotta", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "brooch", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chalumeau", "p": "made_of", "o": "cane", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "clog", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "comb", "p": "made_of", "o": "number of materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "desk", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hardtack", "p": "made_of", "o": "flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nougat", "p": "made_of", "o": "sugar", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "panties", "p": "made_of", "o": "variety of materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sistrum", "p": "made_of", "o": "brass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "webbing", "p": "made_of", "o": "hemp", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "woolen", "p": "made_of", "o": "carded wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "zorbing", "p": "made_of", "o": "transparent plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "box", "p": "made_of", "o": "variety of materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "funnel", "p": "made_of", "o": "stainless steel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "grommet", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "idli", "p": "made_of", "o": "semolina", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kashkaval", "p": "made_of", "o": "milk of cows", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kurta", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "plasticine", "p": "made_of", "o": "calcium salts", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "redan", "p": "made_of", "o": "earthworks", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "reredos", "p": "made_of", "o": "stone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "roti", "p": "made_of", "o": "stoneground whole-wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "semolina", "p": "made_of", "o": "durum wheat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "swimfin", "p": "made_of", "o": "rubber", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "beret", "p": "made_of", "o": "hand-knitted wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "boater", "p": "made_of", "o": "stiff sennit straw", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "broth", "p": "made_of", "o": "water", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bulgogi", "p": "made_of", "o": "thin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "canting", "p": "made_of", "o": "copper", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cheesecake", "p": "made_of", "o": "crushed cookies", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "conpoy", "p": "made_of", "o": "adductor muscle of scallops", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ferrofluid", "p": "made_of", "o": "nanoscale ferromagnetic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gomashio", "p": "made_of", "o": "unhulled", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lunchbox", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "negroni", "p": "made_of", "o": "equal parts gin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "quesadilla", "p": "made_of", "o": "tortilla folded", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "rendang", "p": "made_of", "o": "meat stewed", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ringfort", "p": "made_of", "o": "stone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shortbread", "p": "made_of", "o": "one part white sugar", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "varenyky", "p": "made_of", "o": "unleavened dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "zongzi", "p": "made_of", "o": "glutinous rice stuffed", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "zori", "p": "made_of", "o": "rice straw", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bimetal", "p": "made_of", "o": "brass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "choker", "p": "made_of", "o": "variety of materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "espadrille", "p": "made_of", "o": "esparto rope", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "magiritsa", "p": "made_of", "o": "lamb offal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "martinet", "p": "made_of", "o": "wooden handle of about", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "masa", "p": "made_of", "o": "ground nixtamalized corn", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nadaswaram", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nightgown", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ookpik", "p": "made_of", "o": "wolf fur", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "overalls", "p": "made_of", "o": "denim", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "polenta", "p": "made_of", "o": "other grains", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shehnai", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "slipcase", "p": "made_of", "o": "high-quality cardboard", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "vase", "p": "made_of", "o": "number of materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "absorber", "p": "made_of", "o": "variety of materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "barrel", "p": "made_of", "o": "wooden staves", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bullwhip", "p": "made_of", "o": "braided leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "carton", "p": "made_of", "o": "paperboard", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cromlech", "p": "made_of", "o": "large stone blocks", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "feijoada", "p": "made_of", "o": "mixture of meat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gudeg", "p": "made_of", "o": "young", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kirsch", "p": "made_of", "o": "other kinds of cherries", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lavash", "p": "made_of", "o": "leavened", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pandebono", "p": "made_of", "o": "cassava starch", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pastrami", "p": "made_of", "o": "beef brisket", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "saag", "p": "made_of", "o": "mustard greens", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "stucco", "p": "made_of", "o": "aggregates", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "taiaha", "p": "made_of", "o": "either wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "vambrace", "p": "made_of", "o": "either boiled leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "wallet", "p": "made_of", "o": "fabric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "badge", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bell", "p": "made_of", "o": "other hard materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "boglins", "p": "made_of", "o": "flexible rubber", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chaps", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "crumpet", "p": "made_of", "o": "unsweetened batter of water", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "igil", "p": "made_of", "o": "solid piece of pine", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kaftan", "p": "made_of", "o": "wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "phillumeny", "p": "made_of", "o": "cardboard", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pruno", "p": "made_of", "o": "apples", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ricotta", "p": "made_of", "o": "sheep", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "schwarzbier", "p": "made_of", "o": "roasted malt", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "treen", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "earthship", "p": "made_of", "o": "both natural", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gruel", "p": "made_of", "o": "millet", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "guzheng", "p": "made_of", "o": "paulownia wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "koeksister", "p": "made_of", "o": "fried dough infused", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "piccalilli", "p": "made_of", "o": "chopped", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pozole", "p": "made_of", "o": "hominy", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chalet", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "flannel", "p": "made_of", "o": "carded wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "flannel", "p": "made_of", "o": "either wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "garrote", "p": "made_of", "o": "different materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "joist", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "last", "p": "made_of", "o": "firm materials hardwoods", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "launeddas", "p": "made_of", "o": "three pipes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "paneer", "p": "made_of", "o": "cow milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "petasos", "p": "made_of", "o": "wool felt", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "teacup", "p": "made_of", "o": "ceramic material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tortillon", "p": "made_of", "o": "rolled paper", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "awamori", "p": "made_of", "o": "rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bangle", "p": "made_of", "o": "gold", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bangle", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bresaola", "p": "made_of", "o": "horse", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bukusu", "p": "made_of", "o": "mud", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "copha", "p": "made_of", "o": "hydrogenated coconut oil", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "copha", "p": "made_of", "o": "rice bubbles", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "crate", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dallasite", "p": "made_of", "o": "subequant", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ekiben", "p": "made_of", "o": "plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kasseri", "p": "made_of", "o": "pasteurised", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mbege", "p": "made_of", "o": "fermented bananas", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "penuche", "p": "made_of", "o": "brown sugar", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "underdevelopment", "p": "made_of", "o": "two components", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "vintage", "p": "made_of", "o": "grapes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "avakaya", "p": "made_of", "o": "raw green mangoes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "buisine", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "corduroy", "p": "made_of", "o": "multiple cords laid parallel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "endpin", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "glengarry", "p": "made_of", "o": "thick-milled woollen material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "masonite", "p": "made_of", "o": "steam-cooked", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "rissole", "p": "made_of", "o": "pears", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "scrimshaw", "p": "made_of", "o": "bones", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "scrimshaw", "p": "made_of", "o": "same material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "taramasalata", "p": "made_of", "o": "tarama", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tsampa", "p": "made_of", "o": "roasted flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tzimmes", "p": "made_of", "o": "carrots", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "vla", "p": "made_of", "o": "fresh milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "aguardiente", "p": "made_of", "o": "various plants", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bathrobe", "p": "made_of", "o": "four different fibres", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bathrobe", "p": "made_of", "o": "towelling", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bracer", "p": "made_of", "o": "ivory", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bracer", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "breadbox", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "burrata", "p": "made_of", "o": "mozzarella", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fluoromethane", "p": "made_of", "o": "carbon", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "orarion", "p": "made_of", "o": "brocade", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "phelonion", "p": "made_of", "o": "wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tafia", "p": "made_of", "o": "sugarcane juice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "whipcord", "p": "made_of", "o": "hard-twisted yarns", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "zibeline", "p": "made_of", "o": "hair of other animals", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "zibeline", "p": "made_of", "o": "wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "advocaat", "p": "made_of", "o": "eggs", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "blazer", "p": "made_of", "o": "navy", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "boardshorts", "p": "made_of", "o": "strong", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cambozola", "p": "made_of", "o": "cow milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "camisole", "p": "made_of", "o": "satin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "epimanikia", "p": "made_of", "o": "thickened fabric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "farfel", "p": "made_of", "o": "jewish egg noodle dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gingham", "p": "made_of", "o": "carded", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gingham", "p": "made_of", "o": "dyed cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "limoncello", "p": "made_of", "o": "zest of lemons", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "misua", "p": "made_of", "o": "wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "peignoir", "p": "made_of", "o": "chiffon", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "airstone", "p": "made_of", "o": "bonded glass beads", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bombazine", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bombazine", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bukkehorn", "p": "made_of", "o": "horn of a sheep", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "came", "p": "made_of", "o": "lead", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "drambuie", "p": "made_of", "o": "scotch whisky", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "farinata", "p": "made_of", "o": "chickpea flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hibachi", "p": "made_of", "o": "or lined", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kennel", "p": "made_of", "o": "various materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "naengmyeon", "p": "made_of", "o": "flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "stemware", "p": "made_of", "o": "ceramics", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "stemware", "p": "made_of", "o": "glass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "venu", "p": "made_of", "o": "bamboo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "wicker", "p": "made_of", "o": "pliable plant material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "arepa", "p": "made_of", "o": "ground maize dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "baratol", "p": "made_of", "o": "mixture of tnt", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bigilla", "p": "made_of", "o": "mashed beans", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "comforter", "p": "made_of", "o": "two lengths of fabric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fritos", "p": "made_of", "o": "cornmeal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hardboard", "p": "made_of", "o": "exploded wood fibers", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "impluvium", "p": "made_of", "o": "marble", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kuih", "p": "made_of", "o": "rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pachamanca", "p": "made_of", "o": "lamb", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "seatpost", "p": "made_of", "o": "steel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "breastplate", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "brigandine", "p": "made_of", "o": "heavy cloth", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bumbo", "p": "made_of", "o": "rum", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hasenpfeffer", "p": "made_of", "o": "marinated hare", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hasenpfeffer", "p": "made_of", "o": "wine", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "laddu", "p": "made_of", "o": "various ingredients", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lardon", "p": "made_of", "o": "pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mansaf", "p": "made_of", "o": "lamb", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "migas", "p": "made_of", "o": "stale bread", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mititei", "p": "made_of", "o": "mixture of beef", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pin", "p": "made_of", "o": "bone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pulk", "p": "made_of", "o": "plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pulk", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "boilie", "p": "made_of", "o": "boiled paste", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "buchteln", "p": "made_of", "o": "enriched yeast dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "camauro", "p": "made_of", "o": "red velvet", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cruet", "p": "made_of", "o": "glass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "muscadet", "p": "made_of", "o": "melon de bourgogne grape", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tempoyak", "p": "made_of", "o": "fermented durian", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tofurkey", "p": "made_of", "o": "grains", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cepelinai", "p": "made_of", "o": "grated potatoes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chistorra", "p": "made_of", "o": "minced pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gavel", "p": "made_of", "o": "hardwood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kibbeh", "p": "made_of", "o": "spiced lean ground meat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lowboy", "p": "made_of", "o": "oak", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sirene", "p": "made_of", "o": "milk of goats", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sriracha", "p": "made_of", "o": "paste of chili peppers", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tlacoyo", "p": "made_of", "o": "masa", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "windbreaker", "p": "made_of", "o": "synthetic material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bocal", "p": "made_of", "o": "variety of metals", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chalupa", "p": "made_of", "o": "fried", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "credenza", "p": "made_of", "o": "burnished", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hushpuppy", "p": "made_of", "o": "cornmeal-based batter", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lipstick", "p": "made_of", "o": "wax", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "popover", "p": "made_of", "o": "egg batter similar", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sericite", "p": "made_of", "o": "muscovite", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tadelakt", "p": "made_of", "o": "lime plaster", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "buskin", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cioppino", "p": "made_of", "o": "catch of the day", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "decanter", "p": "made_of", "o": "glass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "neurochip", "p": "made_of", "o": "silicon", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "switchel", "p": "made_of", "o": "water mixed", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ugali", "p": "made_of", "o": "maize", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "washstand", "p": "made_of", "o": "mahogany", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bistek", "p": "made_of", "o": "strips of beef sirloin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "carnyx", "p": "made_of", "o": "bronze", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hodden", "p": "made_of", "o": "undyed wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kamptulicon", "p": "made_of", "o": "powdered cork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "koteka", "p": "made_of", "o": "dried-out gourd", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "linzertorte", "p": "made_of", "o": "flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "percale", "p": "made_of", "o": "both carded", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shrikhand", "p": "made_of", "o": "strained yogurt", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "timewheel", "p": "made_of", "o": "granite", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cezve", "p": "made_of", "o": "brass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "doenjang", "p": "made_of", "o": "soybean", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "formwork", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kumkuma", "p": "made_of", "o": "turmeric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "spurtle", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "strapping", "p": "made_of", "o": "steel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "velveteen", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "virge", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gemshorn", "p": "made_of", "o": "horn of a chamois", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gugel", "p": "made_of", "o": "wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "melktert", "p": "made_of", "o": "milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "samp", "p": "made_of", "o": "dried corn kernels", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "vichyssoise", "p": "made_of", "o": "cooked", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "washcloth", "p": "made_of", "o": "terrycloth", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "galaktoboureko", "p": "made_of", "o": "custard", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "genoise", "p": "made_of", "o": "almond paste", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kempul", "p": "made_of", "o": "bronze", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "longbow", "p": "made_of", "o": "many different woods", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nagaika", "p": "made_of", "o": "leather strips", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "purfling", "p": "made_of", "o": "laminated strips of wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "rein", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "buccina", "p": "made_of", "o": "either bronze", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fid", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "marlinspike", "p": "made_of", "o": "iron", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "plateway", "p": "made_of", "o": "cast iron", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chakli", "p": "made_of", "o": "flours of rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dowel", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "taffeta", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fernet", "p": "made_of", "o": "number of herbs", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "japchae", "p": "made_of", "o": "sweet potato starch", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "jug", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mellorine", "p": "made_of", "o": "both animal fat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "orzo", "p": "made_of", "o": "flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sisig", "p": "made_of", "o": "pork jowl", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tulumba", "p": "made_of", "o": "unleavened choux pastry dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "urumi", "p": "made_of", "o": "special combination of strong", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cavatelli", "p": "made_of", "o": "semolina", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ipu", "p": "made_of", "o": "gourds", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kashk", "p": "made_of", "o": "strained yogurt", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kukicha", "p": "made_of", "o": "stems", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "piscola", "p": "made_of", "o": "pisco", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "scratchcard", "p": "made_of", "o": "thin cardstock", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "himation", "p": "made_of", "o": "heavier drape", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "jajangmyeon", "p": "made_of", "o": "chunjang", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kefalotyri", "p": "made_of", "o": "sheep milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kurbash", "p": "made_of", "o": "hide of the hippopotamus", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "barbaresco", "p": "made_of", "o": "nebbiolo grape", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bockwurst", "p": "made_of", "o": "ground pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chainplate", "p": "made_of", "o": "stainless steel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "danso", "p": "made_of", "o": "bamboo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "danso", "p": "made_of", "o": "plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hairnet", "p": "made_of", "o": "extremely fine silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kaross", "p": "made_of", "o": "sheepskin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "khlui", "p": "made_of", "o": "bamboo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "khlui", "p": "made_of", "o": "other types of wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "namahage", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "valiha", "p": "made_of", "o": "species of local bamboo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "zivania", "p": "made_of", "o": "xynisteri", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chinrest", "p": "made_of", "o": "ebony", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "doshpuluur", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "janggu", "p": "made_of", "o": "various types of leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pastille", "p": "made_of", "o": "thick liquid", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kangling", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "madhalam", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pakol", "p": "made_of", "o": "wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "periaktos", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "skirlie", "p": "made_of", "o": "oatmeal fried", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "amchoor", "p": "made_of", "o": "dried unripe green mangoes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gusset", "p": "made_of", "o": "rectangular lengths of linen", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "huipil", "p": "made_of", "o": "two", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "khoa", "p": "made_of", "o": "either dried whole milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cendol", "p": "made_of", "o": "rice flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "meeple", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "moccasin", "p": "made_of", "o": "deerskin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "moccasin", "p": "made_of", "o": "one piece of leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "petha", "p": "made_of", "o": "ash gourd", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "salmagundi", "p": "made_of", "o": "different ingredients", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dasymeter", "p": "made_of", "o": "glass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kiondo", "p": "made_of", "o": "indigenous vegetable twine", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "koudi", "p": "made_of", "o": "bamboo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lusheng", "p": "made_of", "o": "hardwood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "miswak", "p": "made_of", "o": "salvadora persica tree", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hayrack", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pelmet", "p": "made_of", "o": "fabric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pelmet", "p": "made_of", "o": "plywood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kaymak", "p": "made_of", "o": "milk of water buffalo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "organza", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "saddlebag", "p": "made_of", "o": "various materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "wetu", "p": "made_of", "o": "grass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bhaji", "p": "made_of", "o": "spicy hot vegetables", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kachori", "p": "made_of", "o": "maida filled", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kemanak", "p": "made_of", "o": "bronze", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "subcinctorium", "p": "made_of", "o": "red", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kolpik", "p": "made_of", "o": "brown fur", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kue", "p": "made_of", "o": "variety of ingredients", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "leblebi", "p": "made_of", "o": "roasted chickpeas", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "muddler", "p": "made_of", "o": "plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pandesal", "p": "made_of", "o": "flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pashmak", "p": "made_of", "o": "sugar", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pathiri", "p": "made_of", "o": "rice flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "placemat", "p": "made_of", "o": "many different materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bradawl", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fattoush", "p": "made_of", "o": "toasted", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "piki", "p": "made_of", "o": "blue corn meal used", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "saxonette", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "schabziger", "p": "made_of", "o": "skimmed cow milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "camlet", "p": "made_of", "o": "camel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "interpositive", "p": "made_of", "o": "edited camera negative", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kitenge", "p": "made_of", "o": "colorful fabric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kulcha", "p": "made_of", "o": "refined wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nohkan", "p": "made_of", "o": "split", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pongee", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "matnakash", "p": "made_of", "o": "wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nagak", "p": "made_of", "o": "large seashell", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pamonha", "p": "made_of", "o": "sweet corn whisked", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sheftalia", "p": "made_of", "o": "caul fat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "akara", "p": "made_of", "o": "cowpeas", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "padeye", "p": "made_of", "o": "steel plate", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sbiten", "p": "made_of", "o": "honey", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "skilandis", "p": "made_of", "o": "meat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "slushy", "p": "made_of", "o": "flavored ice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "streuselkuchen", "p": "made_of", "o": "yeast dough covered", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tamis", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "veldskoen", "p": "made_of", "o": "vegetable-tanned leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dolos", "p": "made_of", "o": "non-reinforced concrete", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "flowerpot", "p": "made_of", "o": "plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hippocras", "p": "made_of", "o": "wine mixed", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "organdy", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tepache", "p": "made_of", "o": "peel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shillelagh", "p": "made_of", "o": "stout knotty blackthorn stick", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "luchi", "p": "made_of", "o": "maida flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kalpak", "p": "made_of", "o": "felt", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shendyt", "p": "made_of", "o": "cloth", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "escalado", "p": "made_of", "o": "lead", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "geogrid", "p": "made_of", "o": "polymer materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "geomembrane", "p": "made_of", "o": "impregnation of geotextiles", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pistou", "p": "made_of", "o": "cloves of garlic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "zosui", "p": "made_of", "o": "pre-cooked rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "anaglypta", "p": "made_of", "o": "paper", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "munkoyo", "p": "made_of", "o": "maize porridge", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tofurky", "p": "made_of", "o": "blend of wheat protein", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "goiabada", "p": "made_of", "o": "red guavas", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kaipen", "p": "made_of", "o": "fresh water green algae", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "khinkali", "p": "made_of", "o": "twisted knobs of dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fauteuil", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "haemolacria", "p": "made_of", "o": "blood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lemang", "p": "made_of", "o": "glutinous rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "skordalia", "p": "made_of", "o": "garlic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "songkok", "p": "made_of", "o": "black", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bazlama", "p": "made_of", "o": "wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chain", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kobyz", "p": "made_of", "o": "horsehair", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lokma", "p": "made_of", "o": "leavened", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pitha", "p": "made_of", "o": "dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tocino", "p": "made_of", "o": "pork belly", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dildo", "p": "made_of", "o": "number of solid materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gopchang", "p": "made_of", "o": "small intestines", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pajeon", "p": "made_of", "o": "batter of eggs", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "geoboard", "p": "made_of", "o": "rubber", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "paraganglion", "p": "made_of", "o": "chromaffin cells", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "paraganglion", "p": "made_of", "o": "glomus cells", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "salumi", "p": "made_of", "o": "beef", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cartonnage", "p": "made_of", "o": "layers of linen", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "faloodeh", "p": "made_of", "o": "starch", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shvi", "p": "made_of", "o": "reed", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tassets", "p": "made_of", "o": "single piece", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "wingsail", "p": "made_of", "o": "carbon fiber for lightness", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cassareep", "p": "made_of", "o": "cassava root", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "earwire", "p": "made_of", "o": "precious metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lobscouse", "p": "made_of", "o": "meat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mostarda", "p": "made_of", "o": "candied fruit", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "guige", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "jebena", "p": "made_of", "o": "clay", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "jebena", "p": "made_of", "o": "pottery", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "marver", "p": "made_of", "o": "polished steel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bosal", "p": "made_of", "o": "braided rawhide", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "loukaniko", "p": "made_of", "o": "pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cracklings", "p": "made_of", "o": "other poultry", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cracklings", "p": "made_of", "o": "pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "elastolefin", "p": "made_of", "o": "ethylene", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "freeskates", "p": "made_of", "o": "two separate metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kkwaenggwari", "p": "made_of", "o": "brass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "qingtuan", "p": "made_of", "o": "glutinous rice mixed", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shumai", "p": "made_of", "o": "ground pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gatepost", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "thinset", "p": "made_of", "o": "cement", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chilorio", "p": "made_of", "o": "pork fried", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chilorio", "p": "made_of", "o": "re-hydrated dried chiles", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mijiu", "p": "made_of", "o": "glutinous rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "vasilopita", "p": "made_of", "o": "variety of dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bakso", "p": "made_of", "o": "beef surimi", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chupalla", "p": "made_of", "o": "straw", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "combat", "p": "made_of", "o": "aluminium", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "stockwhip", "p": "made_of", "o": "long", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "laverbread", "p": "made_of", "o": "laver", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "teponaztli", "p": "made_of", "o": "hollow hardwood logs", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dishcloth", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ducana", "p": "made_of", "o": "grated sweet potatoes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ledikeni", "p": "made_of", "o": "chhena", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "boondi", "p": "made_of", "o": "fried chickpea flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "diachylon", "p": "made_of", "o": "lead oxide boiled together", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "foulard", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kikoi", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shoti", "p": "made_of", "o": "white flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "charmeuse", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "emping", "p": "made_of", "o": "melinjo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hairwork", "p": "made_of", "o": "human hair", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "muhammara", "p": "made_of", "o": "walnuts", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fext", "p": "made_of", "o": "glass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "arkhalig", "p": "made_of", "o": "various kinds of fabric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "featherstitch", "p": "made_of", "o": "open", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "manouri", "p": "made_of", "o": "goat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pempek", "p": "made_of", "o": "fish", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tkemali", "p": "made_of", "o": "cherry plum", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "padaek", "p": "made_of", "o": "pickled", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chalcogel", "p": "made_of", "o": "chalcogenides", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "croustade", "p": "made_of", "o": "flaky pastry", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "barm", "p": "made_of", "o": "ground millet combined", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bukayo", "p": "made_of", "o": "sweetened coconut strips", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hemacite", "p": "made_of", "o": "sawdust", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cottolene", "p": "made_of", "o": "beef suet", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ghevar", "p": "made_of", "o": "ghee", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "heterocodeine", "p": "made_of", "o": "morphine", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lontong", "p": "made_of", "o": "compressed rice cake", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pastina", "p": "made_of", "o": "wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pleximeter", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "shambar", "p": "made_of", "o": "wheat grains", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kongbap", "p": "made_of", "o": "scratch", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "monobloc", "p": "made_of", "o": "single block", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "romal", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "etorki", "p": "made_of", "o": "pasteurized sheep milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "everclear", "p": "made_of", "o": "grain", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "frustule", "p": "made_of", "o": "silicic acid", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kouxian", "p": "made_of", "o": "bamboo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pasulj", "p": "made_of", "o": "usually white", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "interposer", "p": "made_of", "o": "either silicon", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "rondache", "p": "made_of", "o": "boards of light wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "slatko", "p": "made_of", "o": "fruit", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bojagi", "p": "made_of", "o": "variety of materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "caipora", "p": "made_of", "o": "certain plants", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "palitaw", "p": "made_of", "o": "galapong - washed", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tharra", "p": "made_of", "o": "yeast fermentation of sugarcane", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "beanpot", "p": "made_of", "o": "ceramic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "beanpot", "p": "made_of", "o": "other materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "potholder", "p": "made_of", "o": "polyester", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "watalappam", "p": "made_of", "o": "coconut milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "rassolnik", "p": "made_of", "o": "pickled cucumbers", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "panocha", "p": "made_of", "o": "ground sprouted wheat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sulibao", "p": "made_of", "o": "hollowed out log covered", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "terret", "p": "made_of", "o": "brass", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "brandade", "p": "made_of", "o": "salt cod", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "clairin", "p": "made_of", "o": "sugarcane produced", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gozinaki", "p": "made_of", "o": "caramelized nuts", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ghugni", "p": "made_of", "o": "peas", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kiribath", "p": "made_of", "o": "rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ausbruch", "p": "made_of", "o": "grapes affected", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ripstop", "p": "made_of", "o": "nylon", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "yukgaejang", "p": "made_of", "o": "shredded beef", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dolium", "p": "made_of", "o": "fired clay", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "standee", "p": "made_of", "o": "foam-board", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nigerose", "p": "made_of", "o": "two glucose residues", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "baklava", "p": "made_of", "o": "filo pastry", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "archaea", "p": "made_of", "o": "ether-linked lipids", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kalaleng", "p": "made_of", "o": "bamboo from the philippines", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kalaga", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kalaga", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "arthropod", "p": "made_of", "o": "chitin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "heishe", "p": "made_of", "o": "organic shells", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fukusa", "p": "made_of", "o": "fine silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "liangpi", "p": "made_of", "o": "wheat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lotoko", "p": "made_of", "o": "maize", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "paduka", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "diples", "p": "made_of", "o": "thin sheet-like dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kasiri", "p": "made_of", "o": "cassava", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bamboula", "p": "made_of", "o": "rum barrel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chremslach", "p": "made_of", "o": "potato", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hyson", "p": "made_of", "o": "young leaves", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "siltuximab", "p": "made_of", "o": "human", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cherryade", "p": "made_of", "o": "cherry juice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "babiche", "p": "made_of", "o": "netted rawhide thongs", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bunsik", "p": "made_of", "o": "flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kokis", "p": "made_of", "o": "rice flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "camphine", "p": "made_of", "o": "purified spirits of turpentine", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tejuino", "p": "made_of", "o": "corn", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tejuino", "p": "made_of", "o": "corn dough", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "stolichnaya", "p": "made_of", "o": "wheat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mursik", "p": "made_of", "o": "cow", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "snoot", "p": "made_of", "o": "various materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "spirangle", "p": "made_of", "o": "straight line segments", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "disgorger", "p": "made_of", "o": "plastic", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cocktion", "p": "made_of", "o": "parched corn", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ramkie", "p": "made_of", "o": "fishing wire", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "palmier", "p": "made_of", "o": "puff pastry", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "giubo", "p": "made_of", "o": "flexible synthetic rubber", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ngapi", "p": "made_of", "o": "either fish", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tracheotome", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hawaij", "p": "made_of", "o": "cumin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "suaasat", "p": "made_of", "o": "seal meat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "suaasat", "p": "made_of", "o": "whale", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tolkusha", "p": "made_of", "o": "dried fish meat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ganache", "p": "made_of", "o": "chocolate", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "braies", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "salmoriglio", "p": "made_of", "o": "lemon juice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sarsaparilla", "p": "made_of", "o": "smilax plants", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "balgha", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kabuni", "p": "made_of", "o": "rice fried", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dabeli", "p": "made_of", "o": "tamarind", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mashk", "p": "made_of", "o": "waterproofed goat-skin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "grafter", "p": "made_of", "o": "thin metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "windshaft", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "trinitramide", "p": "made_of", "o": "nitrogen atom bonded", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cardboard", "p": "made_of", "o": "multiple plies of material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dhebra", "p": "made_of", "o": "pearl millet flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nanoneedle", "p": "made_of", "o": "silicon", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dutar", "p": "made_of", "o": "local turkmen raw silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tandoor", "p": "made_of", "o": "clay", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bioliquids", "p": "made_of", "o": "virgin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "alfaia", "p": "made_of", "o": "animal skin tensioned", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "caraco", "p": "made_of", "o": "printed linen", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ploong", "p": "made_of", "o": "gourds", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "xutuli", "p": "made_of", "o": "clay", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "alan", "p": "made_of", "o": "aerospace grade aluminum", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "napoleonka", "p": "made_of", "o": "whole eggs", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "rosolio", "p": "made_of", "o": "base of alcohol", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "perkedel", "p": "made_of", "o": "mashed potatoes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "toubeleki", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "karinding", "p": "made_of", "o": "bamboo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "splinter", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chhundo", "p": "made_of", "o": "grated green mangoes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "feedbag", "p": "made_of", "o": "leather", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "khaman", "p": "made_of", "o": "ground channa daal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "cavaletti", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ransingha", "p": "made_of", "o": "copper", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chhena", "p": "made_of", "o": "cow", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chhena", "p": "made_of", "o": "water buffalo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "babygrow", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "babygrow", "p": "made_of", "o": "fleece", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chaudin", "p": "made_of", "o": "ingredients sewn up", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pellegrina", "p": "made_of", "o": "black", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "beaverslide", "p": "made_of", "o": "wooden poles", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "didukh", "p": "made_of", "o": "first", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "didukh", "p": "made_of", "o": "sheaf of wheat", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "acheke", "p": "made_of", "o": "cassava", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bag", "p": "made_of", "o": "cloth", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "orthopyroxenite", "p": "made_of", "o": "mineral orthopyroxene", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pustakari", "p": "made_of", "o": "molasses", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nanocapsule", "p": "made_of", "o": "nontoxic polymer", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nanocapsule", "p": "made_of", "o": "polymeric membrane", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tarada", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pkhali", "p": "made_of", "o": "cabbage", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kuurdak", "p": "made_of", "o": "lamb", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "grodziskie", "p": "made_of", "o": "oak-smoked wheat malt", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "migan", "p": "made_of", "o": "ordinary non-glutinous rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ganthiya", "p": "made_of", "o": "chickpea flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lingam", "p": "made_of", "o": "stone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "axatse", "p": "made_of", "o": "dried gourd", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "axatse", "p": "made_of", "o": "smaller gourd", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kutsinta", "p": "made_of", "o": "mixture of tapioca", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "paletot", "p": "made_of", "o": "flannel", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "iqmik", "p": "made_of", "o": "mixture of tobacco", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kewpie", "p": "made_of", "o": "bisque exclusively", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "plastiglomerate", "p": "made_of", "o": "mixture of sedimentary grains", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sail", "p": "made_of", "o": "fabric", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sompoton", "p": "made_of", "o": "calabash gourd", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "qamutiik", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "aguachile", "p": "made_of", "o": "raw seafood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "keffiyeh", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "balbacua", "p": "made_of", "o": "beef", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "podom", "p": "made_of", "o": "stone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "waruga", "p": "made_of", "o": "stone", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bakkwa", "p": "made_of", "o": "pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bochet", "p": "made_of", "o": "honey", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "injera", "p": "made_of", "o": "teff flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kabanos", "p": "made_of", "o": "pork", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "krupuk", "p": "made_of", "o": "starch combined", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "lumpia", "p": "made_of", "o": "thin paper-like", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "paprika", "p": "made_of", "o": "capsicum annuum varietals", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "paprika", "p": "made_of", "o": "dried", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "acetomel", "p": "made_of", "o": "honey", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "ddakji", "p": "made_of", "o": "paper", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "qadad", "p": "made_of", "o": "lime plaster treated", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "snack", "p": "made_of", "o": "fresh ingredients at home", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sarooj", "p": "made_of", "o": "clay", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "styca", "p": "made_of", "o": "debased alloy of silver", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "aerogel", "p": "made_of", "o": "variety of chemical compounds", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "tortilla", "p": "made_of", "o": "wheat flour", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nanopipette", "p": "made_of", "o": "quartz capillaries", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dolsot", "p": "made_of", "o": "amphibole", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "satsebeli", "p": "made_of", "o": "tomato", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "anito", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pagash", "p": "made_of", "o": "mashed potatoes", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "feuilletine", "p": "made_of", "o": "thin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sumpit", "p": "made_of", "o": "bamboo", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sumpit", "p": "made_of", "o": "wood", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "calamanco", "p": "made_of", "o": "worsted-spun wool yarn", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "borhani", "p": "made_of", "o": "sour doi", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "insignia", "p": "made_of", "o": "metal", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "binagol", "p": "made_of", "o": "mashed giant taro corms", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "casaquin", "p": "made_of", "o": "linen", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "canite", "p": "made_of", "o": "sugar cane fibres", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "sneng", "p": "made_of", "o": "ox horn", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nutukas", "p": "made_of", "o": "soft hide", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "kajenglei", "p": "made_of", "o": "plant khekwai", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "dillegrout", "p": "made_of", "o": "almond milk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pkaila", "p": "made_of", "o": "beans", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "bourette", "p": "made_of", "o": "bourette fibers", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "huckaback", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "balzarine", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "barege", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "caffoy", "p": "made_of", "o": "wool", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "xiapei", "p": "made_of", "o": "diverse materials", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nillaes", "p": "made_of", "o": "silk", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "radzimir", "p": "made_of", "o": "plain weave", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "imping", "p": "made_of", "o": "keratin", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "katashiro", "p": "made_of", "o": "paper", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "filakto", "p": "made_of", "o": "cloth", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "gizdodo", "p": "made_of", "o": "gizzard", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "oes", "p": "made_of", "o": "silver", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "fraisier", "p": "made_of", "o": "almond sponge cake", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "thuthse", "p": "made_of", "o": "sticky rice", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "asun", "p": "made_of", "o": "grilling", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "chicheme", "p": "made_of", "o": "corn", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "nogger", "p": "made_of", "o": "vanilla ice cream", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "firinda", "p": "made_of", "o": "uncoated mashed beans", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "trollkrem", "p": "made_of", "o": "lingonberries", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "miassite", "p": "made_of", "o": "rhodium", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "pheichom", "p": "made_of", "o": "cotton", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "hotend", "p": "made_of", "o": "bulk heat-conductive material", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}
+{"s": "mebos", "p": "made_of", "o": "dried apricots seasoned", "weight": 1.0, "src": "wikipedia_lead_common_noun", "tier": "candidate"}

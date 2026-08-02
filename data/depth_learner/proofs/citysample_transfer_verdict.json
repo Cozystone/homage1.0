@@ -1,0 +1,26 @@
+{
+  "question": "does the depth ATANOR learned in CARLA apply in City Sample, which it has never seen?",
+  "verdict": "YES — measurable, significant, and short of the CARLA ceiling",
+  "instrument": "flow agreement: Spearman rank correlation between predicted DISPARITY and the flow measured independently by sparse LK tracking. Scale-free (monocular depth has no metres), computed at a few hundred tracked corners rather than 76,800 pixels.",
+  "instrument_validated_first": {
+    "where": "CARLA, where ground-truth metres exist",
+    "true_depth_rho": 0.629, "net_depth_rho": 0.683,
+    "random_depth_rho": 0.0014, "constant_depth_rho": 0.0,
+    "derotated": {"true": 0.3199, "net": 0.3070, "random": -0.0107},
+    "verdict": "PASSES — separates truth from noise by 0.63; the previous whole-frame photometric instrument could not separate them at all (span 0.0009 across no-warp/constant/random/CARLA)"
+  },
+  "citysample_derotated": {
+    "travel_145231": {"net_rho_median": 0.283, "iqr": [0.194, 0.414], "random": -0.006,
+                      "beats_random": "54/61 pairs", "p": 2.16e-10, "parallax_px": 1.58},
+    "travel2_145430": {"net_rho_median": 0.252, "iqr": [0.025, 0.385], "random": 0.007,
+                       "beats_random": "50/61 pairs", "p": 2.29e-07, "parallax_px": 5.07}
+  },
+  "read_against_the_ceiling": "CARLA ground truth scores 0.320 on the same derotated instrument; City Sample reaches 0.252-0.283, i.e. 79-88% of what perfect depth achieves there.",
+  "efficiency": "90% of the depth information in a frame lives in 26.5% of the pixels (|grad I|/Z^2). A dense whole-frame average spends ~73% of its computation on pixels that cannot answer the question, and dilutes the ones that can until the answer is unreadable — which is exactly what happened.",
+  "caveats": [
+    "derotation subtracts the best-fit affine flow to remove rotation, which also removes some genuine translational signal: it cost CARLA 0.63 -> 0.32. The derotated numbers are therefore conservative on both sides.",
+    "the two City Sample runs disagree more than sampling alone explains (travel2 read 0.187 in one sampling and 0.252 in another), and higher parallax did not give a higher score, which is unexplained.",
+    "rank correlation checks ORDERING only. No metric depth claim is made for City Sample; no ground truth exists there.",
+    "supersedes the earlier INCONCLUSIVE verdict, which was correct about its own instrument"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "atanor.pattern-05-web-authority-candidate-binding.v1",
+  "binding_id": "pattern-05-web-authority-on-candidate-v1-20260727",
+  "bound_at": "2026-07-27T01:21:42.1884284+09:00",
+  "preregistration_id": "pattern-05-web-authority-live-surface-v1-20260727",
+  "preregistration_commit": "6e8e70d5d3a43e63a179e7c22a002dc2b5f46bab",
+  "off_candidate": {
+    "commit": "bc5cccde42080a784f490ebbb53414cf7ec45131",
+    "path": "apps/api/app/services/web_search.py",
+    "raw_sha256": "3e18f1461b046bd642102e328d61ca50782ec3eff219c1876b7716881d4dfda2"
+  },
+  "on_candidate": {
+    "path": "apps/api/app/services/web_search.py",
+    "raw_sha256": "948b029b7d133eb9d37b4cd1d8cc3bb5fb0a999dd6b6ea5e9c3416ea43362e70",
+    "production_paths_changed": [
+      "apps/api/app/services/web_search.py"
+    ],
+    "authority_signal": "canonical HTTP(S) URL hostname only",
+    "independence_signal": "distinct canonical HTTP(S) URL hostnames only",
+    "unbound_evidence_policy": "may remain a tainted single-source hedge but cannot contribute a corroborating domain"
+  },
+  "sealed_inputs": {
+    "dataset_path": "data/eval/pattern_05_web_authority_dataset_v1.json",
+    "dataset_raw_sha256": "d0804422d49c0d5baac3cf110741e29e48ef2c2ecae6164dcd9e3b28bccd1128",
+    "preregistration_path": "data/eval/pattern_05_web_authority_preregister_v1.json",
+    "preregistration_raw_sha256": "0c2eef67b43b039ccc9664f6666fb5f293ecca56375061968c728442beb6b425",
+    "mechanism_test_path": "apps/api/tests/test_web_authority_boundary.py",
+    "mechanism_test_raw_sha256": "a5fa9638cfc8a0253eb336eaca6b429bffc42feb31e1b823d51c567f7eaf7064"
+  },
+  "mechanism_result": {
+    "green": true,
+    "focused_tests_passed": 20,
+    "focused_tests_failed": 0,
+    "forged_authority_promotions": 0,
+    "normal_authoritative_accepts": 6,
+    "benign_single_source_hedges": 6,
+    "change_aware_bypass_tests": 2
+  },
+  "capability_execution": {
+    "executed": false,
+    "authorized_executor": "parent Track A shared counterbalanced evaluator only",
+    "result_run_limit": 1,
+    "mechanical_retry_limit": 0
+  }
+}

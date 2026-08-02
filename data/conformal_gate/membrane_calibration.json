@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "created_utc": "2026-07-24T01:37:58.669468+00:00",
+  "method": "mondrian",
+  "alpha": 0.1,
+  "bins_field": "derivation_kind|relation",
+  "bin_q_hat": {
+    "grounded_composition": "__abstain_all__",
+    "relational_edge_lookup": 0.22381796388965472,
+    "ontology_graph_derivation": 0.39666666666666667
+  },
+  "fallback_q_hat": 0.22381796388965472,
+  "calibration_n": 268,
+  "n_wrong": 18,
+  "n_correct": 250,
+  "achieved": {
+    "pooled_accept_rate": 0.6977611940298507,
+    "pooled_abstain_rate": 0.3022388059701493,
+    "pooled_false_accept_given_wrong": 0.05555555555555555
+  },
+  "source": {
+    "dataset": "seal_knowledge_holdout.jsonl",
+    "limit": 0,
+    "language": "en"
+  },
+  "scope_note": "SMALL-SLICE proof run. A production calibration needs the full seal holdout over the full store (operator step; S1 ingest mid-flight).",
+  "define_bin": {
+    "q_hat": 0.39666666666666667,
+    "alpha": 0.1,
+    "n_good": 30,
+    "n_wrong": 10,
+    "good_pass_rate": 1.0,
+    "wrong_gate_rate": 0.9,
+    "signals": "subject_coverage + graded_confidence + support_path_count",
+    "dataset": "seal_define_calibration.jsonl",
+    "created_utc": "2026-07-24T06:14:49.123311+00:00",
+    "note": "define-lane bin (base_brain_zero_user_data / ontology_graph_derivation). The relational_edge_lookup q_hat and grounded_composition bin are PRESERVED unchanged; this bin was ADDED, not a rescale. Owner-approved define-lane closure 2026-07-24."
+  }
+}

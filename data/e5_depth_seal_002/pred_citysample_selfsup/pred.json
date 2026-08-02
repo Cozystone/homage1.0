@@ -1,0 +1,15 @@
+{
+  "schema": "atanor.depth.e4.pred.v3",
+  "n": 225,
+  "units": "metres (exp of the net's log-depth head, clamped to [0.5, 200])",
+  "median_predicted_m": 3.5850250720977783,
+  "pred_sha256": "fd6a8bc4353cd6d73093afe95c8558cd609d61e9f3dc7e0616b168e0cf1f7090",
+  "checkpoint": "citysample_selfsup.pt",
+  "checkpoint_kind": "unknown",
+  "checkpoint_init": "depthnet.pt",
+  "checkpoint_sha256": "663e8f46bad11983f79f1514a033b3949df1a20e7607c00e8130afb73ec82959",
+  "checkpoint_mtime": "2026-07-29T14:58:23",
+  "predates_the_frames": true,
+  "answers_sha256": "be190827589b2b108172c1b1cc99055a03dddf1b1b59e1f97279346c6245afdd",
+  "read_ground_truth": false
+}

@@ -1,0 +1,87 @@
+{
+  "at": "2026-07-14T12:15:29",
+  "store_meta": {
+    "count": 26870297,
+    "terms": 10233395,
+    "format": "int32_columnar_spo",
+    "dict_backend": "sharded"
+  },
+  "benchmark": "KMMLU(open-book)",
+  "subjects": [
+    "Biology",
+    "Chemistry",
+    "Ecology",
+    "Health",
+    "Economics",
+    "Political-Science-and-Sociology",
+    "Psychology",
+    "Food-Processing"
+  ],
+  "n_per_subject": 25,
+  "total": 200,
+  "answered": 45,
+  "coverage": 0.225,
+  "answered_acc": 0.2,
+  "strict_acc": 0.045,
+  "guess_baseline": 0.25,
+  "per_subject": {
+    "Biology": {
+      "n": 25,
+      "answered": 2,
+      "correct": 0,
+      "coverage": 0.08,
+      "answered_acc": 0.0
+    },
+    "Chemistry": {
+      "n": 25,
+      "answered": 3,
+      "correct": 1,
+      "coverage": 0.12,
+      "answered_acc": 0.333
+    },
+    "Ecology": {
+      "n": 25,
+      "answered": 5,
+      "correct": 1,
+      "coverage": 0.2,
+      "answered_acc": 0.2
+    },
+    "Health": {
+      "n": 25,
+      "answered": 7,
+      "correct": 0,
+      "coverage": 0.28,
+      "answered_acc": 0.0
+    },
+    "Economics": {
+      "n": 25,
+      "answered": 3,
+      "correct": 0,
+      "coverage": 0.12,
+      "answered_acc": 0.0
+    },
+    "Political-Science-and-Sociology": {
+      "n": 25,
+      "answered": 13,
+      "correct": 3,
+      "coverage": 0.52,
+      "answered_acc": 0.231
+    },
+    "Psychology": {
+      "n": 25,
+      "answered": 7,
+      "correct": 2,
+      "coverage": 0.28,
+      "answered_acc": 0.286
+    },
+    "Food-Processing": {
+      "n": 25,
+      "answered": 5,
+      "correct": 2,
+      "coverage": 0.2,
+      "answered_acc": 0.4
+    }
+  },
+  "elapsed_s": 36.4,
+  "honest_note": "strict_acc counts abstentions as wrong; MMLU-style accuracy cannot measure hallucination — coverage+answered_acc are the grounded metrics."
+}

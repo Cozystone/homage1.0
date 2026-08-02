@@ -1,0 +1,88 @@
+{
+  "proof": {
+    "result": "PASS",
+    "proved_at": "2026-06-15T21:56:11Z",
+    "trace_leakage": {
+      "candidate_id": "proof_trace_leak",
+      "naturalness": 0.67,
+      "helpfulness": 0.58,
+      "directness": 0.43,
+      "trace_hygiene": 0.05,
+      "grounding": 0.62,
+      "template_smell": 1.0,
+      "style_fit": 0.78,
+      "language_native": 0.52,
+      "concision": 0.72,
+      "repair_success": 0.8,
+      "overall": 0.5665,
+      "flags": [
+        "grounding_context_absent",
+        "korean_not_native_enough",
+        "starts_with_system_explanation",
+        "trace_leakage"
+      ],
+      "notes": [
+        "Default answer exposed internal terms: Local Brain, Cloud Brain, Working Memory",
+        "No semantic context was provided; factuality is only weakly measurable.",
+        "No before-draft provided; repair success is inferred from final text only."
+      ]
+    },
+    "natural_answer": {
+      "candidate_id": "proof_natural",
+      "naturalness": 0.82,
+      "helpfulness": 0.58,
+      "directness": 0.78,
+      "trace_hygiene": 1.0,
+      "grounding": 0.45,
+      "template_smell": 1.0,
+      "style_fit": 0.78,
+      "language_native": 0.82,
+      "concision": 0.72,
+      "repair_success": 0.8,
+      "overall": 0.7435,
+      "flags": [
+        "semantic_concepts_missing"
+      ],
+      "notes": [
+        "Heuristic language-native check passed; this is not a human-grade linguistic judgment.",
+        "Grounding is a simple concept-preservation heuristic, not perfect factuality detection.",
+        "Heuristic language-native check passed; this is not a human-grade linguistic judgment.",
+        "No before-draft provided; repair success is inferred from final text only."
+      ]
+    },
+    "template_smell": {
+      "score": 0.55,
+      "flags": [
+        "template_opening_overused"
+      ]
+    },
+    "mini_run": {
+      "run_id": "aqr_a4db1a4d32779fe4",
+      "overall": 0.6992,
+      "feedback_count": 6,
+      "auto_promoted": false
+    },
+    "claims": [
+      "ATANOR can locally evaluate answer quality heuristically.",
+      "It can detect trace leakage and template smell.",
+      "It can generate reviewable Surface Brain feedback.",
+      "It can compare baseline vs Surface Brain vs repaired answer paths."
+    ],
+    "does_not_claim": [
+      "GPT-level answer quality",
+      "human-level language judgment",
+      "external LLM judging",
+      "perfect factuality evaluation",
+      "automatic safe self-improvement without review"
+    ],
+    "honesty": {
+      "external_llm_judge_used": false,
+      "external_llm_generation_used": false,
+      "external_sllm_used": false,
+      "local_brain_write": false,
+      "auto_promoted_feedback": false,
+      "perfect_factuality_claimed": false,
+      "gpt_level_judgment_claimed": false
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "declared_dim": 32,
+  "patches": 4160,
+  "ladder": {
+    "1": {
+      "relations": [
+        "identity"
+      ],
+      "participation_ratio": 5.594937801361084,
+      "naming_precision": 0.7681159420289855,
+      "coverage": 0.69,
+      "triplets": 6000
+    },
+    "2": {
+      "relations": [
+        "identity",
+        "depth"
+      ],
+      "participation_ratio": 4.531736373901367,
+      "naming_precision": 0.7589285714285714,
+      "coverage": 0.7466666666666667,
+      "triplets": 6000
+    },
+    "3": {
+      "relations": [
+        "identity",
+        "depth",
+        "height"
+      ],
+      "participation_ratio": 3.2125256061553955,
+      "naming_precision": 0.656934306569343,
+      "coverage": 0.9133333333333333,
+      "triplets": 6000
+    },
+    "4": {
+      "relations": [
+        "identity",
+        "depth",
+        "height",
+        "lighting"
+      ],
+      "participation_ratio": 4.33143424987793,
+      "naming_precision": 0.7829457364341085,
+      "coverage": 0.86,
+      "triplets": 6000
+    },
+    "5": {
+      "relations": [
+        "identity",
+        "depth",
+        "height",
+        "lighting",
+        "texture"
+      ],
+      "participation_ratio": 4.36272668838501,
+      "naming_precision": 0.773109243697479,
+      "coverage": 0.7933333333333333,
+      "triplets": 6000
+    },
+    "6": {
+      "relations": [
+        "identity",
+        "depth",
+        "height",
+        "lighting",
+        "texture",
+        "colour"
+      ],
+      "participation_ratio": 4.052018642425537,
+      "naming_precision": 0.6231884057971014,
+      "coverage": 0.92,
+      "triplets": 6000
+    }
+  },
+  "human_reference_dims": "49 (Hebart 2020), 66 later"
+}

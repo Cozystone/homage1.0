@@ -1,0 +1,3823 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "package_root": "packages",
+    "excluded_directories": [
+      "__pycache__"
+    ]
+  },
+  "definitions": {
+    "lifecycle": "Architectural census role only; it does not imply runtime reachability or capability.",
+    "canonical_domain": "The single target subsystem that owns the organ in the canonical architecture.",
+    "built": "Whether the in-scope source directory exists, with filesystem refs.",
+    "wiring": "Attested runtime reachability; unknown is retained until direct call-path evidence is cited.",
+    "authority": "Attested decision authority; none means this registry grants and infers no authority.",
+    "evidence": "Strongest completed evidence stage and the repository refs supporting that stage."
+  },
+  "enums": {
+    "lifecycle": [
+      "canonical",
+      "adapter",
+      "shadow",
+      "fixture",
+      "archive"
+    ],
+    "canonical_domain": [
+      "core_spine",
+      "world_ledger",
+      "semantic_compiler",
+      "world_model_4d",
+      "unified_deliberator",
+      "operational_self",
+      "interoception_resource",
+      "membrane_governance",
+      "language_action",
+      "learning_evolution",
+      "embodiment",
+      "evaluation",
+      "platform"
+    ],
+    "evidence_stage": [
+      "V0",
+      "M1",
+      "M2",
+      "M3",
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "authority": [
+      "primary",
+      "secondary",
+      "none"
+    ],
+    "runtime_status": [
+      "live_default",
+      "live_conditional",
+      "test_only",
+      "unwired",
+      "unknown"
+    ]
+  },
+  "organs": [
+    {
+      "name": "acquisition_daemon",
+      "path": "packages/acquisition_daemon",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/acquisition_daemon"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/acquisition_daemon"
+        ]
+      }
+    },
+    {
+      "name": "advisor_loop",
+      "path": "packages/advisor_loop",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/advisor_loop"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/advisor_loop"
+        ]
+      }
+    },
+    {
+      "name": "affordance",
+      "path": "packages/affordance",
+      "lifecycle": "adapter",
+      "canonical_domain": "semantic_compiler",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/affordance"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/affordance"
+        ]
+      }
+    },
+    {
+      "name": "agentic_micro_os",
+      "path": "packages/agentic_micro_os",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/agentic_micro_os"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/agentic_micro_os"
+        ]
+      }
+    },
+    {
+      "name": "airllm_offload_sandbox",
+      "path": "packages/airllm_offload_sandbox",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/airllm_offload_sandbox"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/airllm_offload_sandbox"
+        ]
+      }
+    },
+    {
+      "name": "answer_quality",
+      "path": "packages/answer_quality",
+      "lifecycle": "adapter",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/answer_quality"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/answer_quality"
+        ]
+      }
+    },
+    {
+      "name": "arc_agi",
+      "path": "packages/arc_agi",
+      "lifecycle": "adapter",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/arc_agi"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/arc_agi"
+        ]
+      }
+    },
+    {
+      "name": "architecture_registry",
+      "path": "packages/architecture_registry",
+      "lifecycle": "canonical",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/architecture_registry"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/architecture_registry"
+        ]
+      }
+    },
+    {
+      "name": "atanor_browser",
+      "path": "packages/atanor_browser",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/atanor_browser"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/atanor_browser"
+        ]
+      }
+    },
+    {
+      "name": "atanor_ecosystem",
+      "path": "packages/atanor_ecosystem",
+      "lifecycle": "shadow",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/atanor_ecosystem"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/atanor_ecosystem"
+        ]
+      }
+    },
+    {
+      "name": "atanor_index",
+      "path": "packages/atanor_index",
+      "lifecycle": "canonical",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/atanor_index"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/atanor_index"
+        ]
+      }
+    },
+    {
+      "name": "atanor_shell",
+      "path": "packages/atanor_shell",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/atanor_shell"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/atanor_shell"
+        ]
+      }
+    },
+    {
+      "name": "atlas_p2p_sandbox",
+      "path": "packages/atlas_p2p_sandbox",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/atlas_p2p_sandbox"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/atlas_p2p_sandbox"
+        ]
+      }
+    },
+    {
+      "name": "atlas_router",
+      "path": "packages/atlas_router",
+      "lifecycle": "shadow",
+      "canonical_domain": "core_spine",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/atlas_router"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/atlas_router"
+        ]
+      }
+    },
+    {
+      "name": "autonomy_envelope",
+      "path": "packages/autonomy_envelope",
+      "lifecycle": "canonical",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/autonomy_envelope"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/autonomy_envelope"
+        ]
+      }
+    },
+    {
+      "name": "autonomy_kernel",
+      "path": "packages/autonomy_kernel",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/autonomy_kernel"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/autonomy_kernel"
+        ]
+      }
+    },
+    {
+      "name": "b5_missions",
+      "path": "packages/b5_missions",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/b5_missions"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/b5_missions"
+        ]
+      }
+    },
+    {
+      "name": "base_brain",
+      "path": "packages/base_brain",
+      "lifecycle": "shadow",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/base_brain"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/base_brain"
+        ]
+      }
+    },
+    {
+      "name": "brain_graph",
+      "path": "packages/brain_graph",
+      "lifecycle": "adapter",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/brain_graph"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/brain_graph"
+        ]
+      }
+    },
+    {
+      "name": "brain_link",
+      "path": "packages/brain_link",
+      "lifecycle": "adapter",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/brain_link"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/brain_link"
+        ]
+      }
+    },
+    {
+      "name": "brain_link_pool",
+      "path": "packages/brain_link_pool",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/brain_link_pool"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/brain_link_pool"
+        ]
+      }
+    },
+    {
+      "name": "candidate_promotion_gate",
+      "path": "packages/candidate_promotion_gate",
+      "lifecycle": "adapter",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/candidate_promotion_gate"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/candidate_promotion_gate"
+        ]
+      }
+    },
+    {
+      "name": "cgsr",
+      "path": "packages/cgsr",
+      "lifecycle": "canonical",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/cgsr"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "live_conditional",
+        "refs": [
+          "packages/cgsr/cgsr/response_workspace.py"
+        ]
+      },
+      "authority": {
+        "level": "secondary",
+        "refs": [
+          "packages/cgsr/cgsr/response_workspace.py"
+        ]
+      },
+      "evidence": {
+        "stage": "M3",
+        "refs": [
+          "packages/cgsr/cgsr/response_workspace.py",
+          "packages/world4d/tests/test_live_temporal_shadow.py",
+          "reports/baseline_evidence/baseline_20260724T225531.739793Z_45bfaf0d04c9.manifest.json"
+        ]
+      }
+    },
+    {
+      "name": "cloud_brain",
+      "path": "packages/cloud_brain",
+      "lifecycle": "adapter",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/cloud_brain"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/cloud_brain"
+        ]
+      }
+    },
+    {
+      "name": "co_allocator",
+      "path": "packages/co_allocator",
+      "lifecycle": "canonical",
+      "canonical_domain": "interoception_resource",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/co_allocator"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/co_allocator"
+        ]
+      }
+    },
+    {
+      "name": "code_reason",
+      "path": "packages/code_reason",
+      "lifecycle": "adapter",
+      "canonical_domain": "unified_deliberator",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/code_reason"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/code_reason"
+        ]
+      }
+    },
+    {
+      "name": "cognitive_core",
+      "path": "packages/cognitive_core",
+      "lifecycle": "canonical",
+      "canonical_domain": "core_spine",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/cognitive_core"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "live_conditional",
+        "refs": [
+          "apps/api/app/routers/dual_brain.py",
+          "packages/cognitive_core/chat_shadow.py",
+          "packages/cognitive_core/continuous_self_shadow.py",
+          "packages/continuous_self/loop.py"
+        ]
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "M3",
+        "refs": [
+          "packages/cognitive_core",
+          "packages/cognitive_core/tests",
+          "packages/cognitive_core/tests/test_continuous_self_shadow.py",
+          "packages/continuous_self/tests/test_loop.py",
+          "apps/api/tests/test_cognitive_cycle_shadow.py",
+          "reports/baseline_evidence/baseline_20260724T232815.306610Z_42f21ef3d6f0.manifest.json"
+        ]
+      }
+    },
+    {
+      "name": "conformal_gate",
+      "path": "packages/conformal_gate",
+      "lifecycle": "canonical",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/conformal_gate"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/conformal_gate"
+        ]
+      }
+    },
+    {
+      "name": "consciousness_audit",
+      "path": "packages/consciousness_audit",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/consciousness_audit"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/consciousness_audit"
+        ]
+      }
+    },
+    {
+      "name": "consciousness_blind",
+      "path": "packages/consciousness_blind",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/consciousness_blind"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/consciousness_blind"
+        ]
+      }
+    },
+    {
+      "name": "construction_bank",
+      "path": "packages/construction_bank",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/construction_bank"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/construction_bank"
+        ]
+      }
+    },
+    {
+      "name": "continuous_self",
+      "path": "packages/continuous_self",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/continuous_self"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "live_default",
+        "refs": [
+          "apps/api/app/main.py",
+          "apps/api/app/routers/continuous_self.py",
+          "packages/continuous_self/loop.py"
+        ]
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "M1",
+        "refs": [
+          "apps/api/app/main.py",
+          "apps/api/app/routers/continuous_self.py",
+          "packages/continuous_self/loop.py",
+          "packages/continuous_self/tests/test_loop.py"
+        ]
+      }
+    },
+    {
+      "name": "contrast_family",
+      "path": "packages/contrast_family",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/contrast_family"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/contrast_family"
+        ]
+      }
+    },
+    {
+      "name": "conversation",
+      "path": "packages/conversation",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/conversation"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/conversation"
+        ]
+      }
+    },
+    {
+      "name": "conversation_state",
+      "path": "packages/conversation_state",
+      "lifecycle": "canonical",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/conversation_state"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/conversation_state"
+        ]
+      }
+    },
+    {
+      "name": "core_proof",
+      "path": "packages/core_proof",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/core_proof"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/core_proof"
+        ]
+      }
+    },
+    {
+      "name": "cortex_g2",
+      "path": "packages/cortex_g2",
+      "lifecycle": "shadow",
+      "canonical_domain": "core_spine",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/cortex_g2"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/cortex_g2"
+        ]
+      }
+    },
+    {
+      "name": "cost_model",
+      "path": "packages/cost_model",
+      "lifecycle": "adapter",
+      "canonical_domain": "interoception_resource",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/cost_model"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/cost_model"
+        ]
+      }
+    },
+    {
+      "name": "custom_hub",
+      "path": "packages/custom_hub",
+      "lifecycle": "adapter",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/custom_hub"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/custom_hub"
+        ]
+      }
+    },
+    {
+      "name": "datagate",
+      "path": "packages/datagate",
+      "lifecycle": "canonical",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/datagate"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/datagate"
+        ]
+      }
+    },
+    {
+      "name": "deliberator",
+      "path": "packages/deliberator",
+      "lifecycle": "adapter",
+      "canonical_domain": "unified_deliberator",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/deliberator"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/deliberator"
+        ]
+      }
+    },
+    {
+      "name": "depth_learner",
+      "path": "packages/depth_learner",
+      "lifecycle": "shadow",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/depth_learner"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "E4",
+        "refs": [
+          "data/e4_depth_seal_002/verdict.json",
+          "docs/ATANOR_depth_E4_prereg.md",
+          "scripts/depth_e4_exam.py",
+          "packages/depth_learner"
+        ]
+      }
+    },
+    {
+      "name": "digital_life_kernel",
+      "path": "packages/digital_life_kernel",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/digital_life_kernel"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/digital_life_kernel"
+        ]
+      }
+    },
+    {
+      "name": "ego_network",
+      "path": "packages/ego_network",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/ego_network"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/ego_network"
+        ]
+      }
+    },
+    {
+      "name": "embodiment",
+      "path": "packages/embodiment",
+      "lifecycle": "canonical",
+      "canonical_domain": "embodiment",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/embodiment"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/embodiment"
+        ]
+      }
+    },
+    {
+      "name": "energy_descent",
+      "path": "packages/energy_descent",
+      "lifecycle": "shadow",
+      "canonical_domain": "interoception_resource",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/energy_descent"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/energy_descent"
+        ]
+      }
+    },
+    {
+      "name": "episodic_memory",
+      "path": "packages/episodic_memory",
+      "lifecycle": "canonical",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/episodic_memory"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/episodic_memory"
+        ]
+      }
+    },
+    {
+      "name": "eval_evidence",
+      "path": "packages/eval_evidence",
+      "lifecycle": "canonical",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/eval_evidence"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "M1",
+        "refs": [
+          "packages/eval_evidence",
+          "packages/eval_evidence/tests"
+        ]
+      }
+    },
+    {
+      "name": "evolution",
+      "path": "packages/evolution",
+      "lifecycle": "canonical",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/evolution"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/evolution"
+        ]
+      }
+    },
+    {
+      "name": "eye",
+      "path": "packages/eye",
+      "lifecycle": "shadow",
+      "canonical_domain": "embodiment",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/eye"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/eye"
+        ]
+      }
+    },
+    {
+      "name": "federation",
+      "path": "packages/federation",
+      "lifecycle": "adapter",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/federation"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/federation"
+        ]
+      }
+    },
+    {
+      "name": "fluency",
+      "path": "packages/fluency",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/fluency"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/fluency"
+        ]
+      }
+    },
+    {
+      "name": "flywheel",
+      "path": "packages/flywheel",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/flywheel"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/flywheel"
+        ]
+      }
+    },
+    {
+      "name": "fusion_loop",
+      "path": "packages/fusion_loop",
+      "lifecycle": "canonical",
+      "canonical_domain": "core_spine",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/fusion_loop"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/fusion_loop"
+        ]
+      }
+    },
+    {
+      "name": "genesis_sandbox",
+      "path": "packages/genesis_sandbox",
+      "lifecycle": "canonical",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/genesis_sandbox"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/genesis_sandbox"
+        ]
+      }
+    },
+    {
+      "name": "graph_hub",
+      "path": "packages/graph_hub",
+      "lifecycle": "adapter",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/graph_hub"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/graph_hub"
+        ]
+      }
+    },
+    {
+      "name": "graph_scale",
+      "path": "packages/graph_scale",
+      "lifecycle": "canonical",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/graph_scale"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/graph_scale"
+        ]
+      }
+    },
+    {
+      "name": "grounded_composer",
+      "path": "packages/grounded_composer",
+      "lifecycle": "canonical",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/grounded_composer"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/grounded_composer"
+        ]
+      }
+    },
+    {
+      "name": "guard",
+      "path": "packages/guard",
+      "lifecycle": "canonical",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/guard"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/guard"
+        ]
+      }
+    },
+    {
+      "name": "hand",
+      "path": "packages/hand",
+      "lifecycle": "shadow",
+      "canonical_domain": "embodiment",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/hand"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/hand"
+        ]
+      }
+    },
+    {
+      "name": "hermes_intake",
+      "path": "packages/hermes_intake",
+      "lifecycle": "shadow",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/hermes_intake"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/hermes_intake"
+        ]
+      }
+    },
+    {
+      "name": "holographic_fold",
+      "path": "packages/holographic_fold",
+      "lifecycle": "shadow",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/holographic_fold"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/holographic_fold"
+        ]
+      }
+    },
+    {
+      "name": "image_schema",
+      "path": "packages/image_schema",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/image_schema"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/image_schema"
+        ]
+      }
+    },
+    {
+      "name": "imagination",
+      "path": "packages/imagination",
+      "lifecycle": "shadow",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/imagination"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/imagination"
+        ]
+      }
+    },
+    {
+      "name": "inner_voice",
+      "path": "packages/inner_voice",
+      "lifecycle": "adapter",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/inner_voice"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/inner_voice"
+        ]
+      }
+    },
+    {
+      "name": "itt",
+      "path": "packages/itt",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/itt"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/itt"
+        ]
+      }
+    },
+    {
+      "name": "kind_prediction",
+      "path": "packages/kind_prediction",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/kind_prediction"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/kind_prediction"
+        ]
+      }
+    },
+    {
+      "name": "knowledge_acquisition",
+      "path": "packages/knowledge_acquisition",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/knowledge_acquisition"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/knowledge_acquisition"
+        ]
+      }
+    },
+    {
+      "name": "knowledge_bakery",
+      "path": "packages/knowledge_bakery",
+      "lifecycle": "canonical",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/knowledge_bakery"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/knowledge_bakery"
+        ]
+      }
+    },
+    {
+      "name": "knowledge_harvest",
+      "path": "packages/knowledge_harvest",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/knowledge_harvest"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/knowledge_harvest"
+        ]
+      }
+    },
+    {
+      "name": "knowledge_repair",
+      "path": "packages/knowledge_repair",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/knowledge_repair"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/knowledge_repair"
+        ]
+      }
+    },
+    {
+      "name": "lad_morphology",
+      "path": "packages/lad_morphology",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/lad_morphology"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/lad_morphology"
+        ]
+      }
+    },
+    {
+      "name": "learned_router",
+      "path": "packages/learned_router",
+      "lifecycle": "adapter",
+      "canonical_domain": "core_spine",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/learned_router"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/learned_router"
+        ]
+      }
+    },
+    {
+      "name": "live_selfhood_cycle",
+      "path": "packages/live_selfhood_cycle",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/live_selfhood_cycle"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/live_selfhood_cycle"
+        ]
+      }
+    },
+    {
+      "name": "live_selfhood_monitor",
+      "path": "packages/live_selfhood_monitor",
+      "lifecycle": "adapter",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/live_selfhood_monitor"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/live_selfhood_monitor"
+        ]
+      }
+    },
+    {
+      "name": "local_brain",
+      "path": "packages/local_brain",
+      "lifecycle": "canonical",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/local_brain"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/local_brain"
+        ]
+      }
+    },
+    {
+      "name": "local_memory_approval",
+      "path": "packages/local_memory_approval",
+      "lifecycle": "adapter",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/local_memory_approval"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/local_memory_approval"
+        ]
+      }
+    },
+    {
+      "name": "local_memory_operator_confirmation",
+      "path": "packages/local_memory_operator_confirmation",
+      "lifecycle": "adapter",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/local_memory_operator_confirmation"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/local_memory_operator_confirmation"
+        ]
+      }
+    },
+    {
+      "name": "local_memory_sandbox",
+      "path": "packages/local_memory_sandbox",
+      "lifecycle": "shadow",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/local_memory_sandbox"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/local_memory_sandbox"
+        ]
+      }
+    },
+    {
+      "name": "local_memory_write_plan",
+      "path": "packages/local_memory_write_plan",
+      "lifecycle": "adapter",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/local_memory_write_plan"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/local_memory_write_plan"
+        ]
+      }
+    },
+    {
+      "name": "loop_schema",
+      "path": "packages/loop_schema",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/loop_schema"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/loop_schema"
+        ]
+      }
+    },
+    {
+      "name": "main_core",
+      "path": "packages/main_core",
+      "lifecycle": "shadow",
+      "canonical_domain": "core_spine",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/main_core"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/main_core"
+        ]
+      }
+    },
+    {
+      "name": "memaware_eval",
+      "path": "packages/memaware_eval",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/memaware_eval"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/memaware_eval"
+        ]
+      }
+    },
+    {
+      "name": "meta_diagnosis",
+      "path": "packages/meta_diagnosis",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/meta_diagnosis"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/meta_diagnosis"
+        ]
+      }
+    },
+    {
+      "name": "metacog",
+      "path": "packages/metacog",
+      "lifecycle": "canonical",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/metacog"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/metacog"
+        ]
+      }
+    },
+    {
+      "name": "mirofish_deliberation",
+      "path": "packages/mirofish_deliberation",
+      "lifecycle": "shadow",
+      "canonical_domain": "unified_deliberator",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/mirofish_deliberation"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/mirofish_deliberation"
+        ]
+      }
+    },
+    {
+      "name": "model",
+      "path": "packages/model",
+      "lifecycle": "shadow",
+      "canonical_domain": "semantic_compiler",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/model"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/model"
+        ]
+      }
+    },
+    {
+      "name": "multimodal_tasks",
+      "path": "packages/multimodal_tasks",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/multimodal_tasks"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/multimodal_tasks"
+        ]
+      }
+    },
+    {
+      "name": "neural_emotion",
+      "path": "packages/neural_emotion",
+      "lifecycle": "canonical",
+      "canonical_domain": "interoception_resource",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/neural_emotion"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/neural_emotion"
+        ]
+      }
+    },
+    {
+      "name": "neuro_efficiency",
+      "path": "packages/neuro_efficiency",
+      "lifecycle": "canonical",
+      "canonical_domain": "interoception_resource",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/neuro_efficiency"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/neuro_efficiency"
+        ]
+      }
+    },
+    {
+      "name": "neuro_ledger",
+      "path": "packages/neuro_ledger",
+      "lifecycle": "adapter",
+      "canonical_domain": "world_ledger",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/neuro_ledger"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/neuro_ledger"
+        ]
+      }
+    },
+    {
+      "name": "oam_holdout",
+      "path": "packages/oam_holdout",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/oam_holdout"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/oam_holdout"
+        ]
+      }
+    },
+    {
+      "name": "ontology_forge",
+      "path": "packages/ontology_forge",
+      "lifecycle": "canonical",
+      "canonical_domain": "semantic_compiler",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/ontology_forge"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/ontology_forge"
+        ]
+      }
+    },
+    {
+      "name": "operator_census",
+      "path": "packages/operator_census",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/operator_census"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/operator_census"
+        ]
+      }
+    },
+    {
+      "name": "os_action_lane",
+      "path": "packages/os_action_lane",
+      "lifecycle": "canonical",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/os_action_lane"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/os_action_lane"
+        ]
+      }
+    },
+    {
+      "name": "perception",
+      "path": "packages/perception",
+      "lifecycle": "canonical",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/perception"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/perception"
+        ]
+      }
+    },
+    {
+      "name": "perception_recurrence",
+      "path": "packages/perception_recurrence",
+      "lifecycle": "adapter",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/perception_recurrence"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/perception_recurrence"
+        ]
+      }
+    },
+    {
+      "name": "perception_stream",
+      "path": "packages/perception_stream",
+      "lifecycle": "adapter",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/perception_stream"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/perception_stream"
+        ]
+      }
+    },
+    {
+      "name": "perceptual_projection",
+      "path": "packages/perceptual_projection",
+      "lifecycle": "adapter",
+      "canonical_domain": "semantic_compiler",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/perceptual_projection"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/perceptual_projection"
+        ]
+      }
+    },
+    {
+      "name": "phone_link",
+      "path": "packages/phone_link",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/phone_link"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/phone_link"
+        ]
+      }
+    },
+    {
+      "name": "promotion_gate",
+      "path": "packages/promotion_gate",
+      "lifecycle": "adapter",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/promotion_gate"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/promotion_gate"
+        ]
+      }
+    },
+    {
+      "name": "promotion_manifest",
+      "path": "packages/promotion_manifest",
+      "lifecycle": "adapter",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/promotion_manifest"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/promotion_manifest"
+        ]
+      }
+    },
+    {
+      "name": "promotion_review",
+      "path": "packages/promotion_review",
+      "lifecycle": "adapter",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/promotion_review"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/promotion_review"
+        ]
+      }
+    },
+    {
+      "name": "q_cortex",
+      "path": "packages/q_cortex",
+      "lifecycle": "shadow",
+      "canonical_domain": "unified_deliberator",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/q_cortex"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/q_cortex"
+        ]
+      }
+    },
+    {
+      "name": "rag_engine",
+      "path": "packages/rag_engine",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/rag_engine"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/rag_engine"
+        ]
+      }
+    },
+    {
+      "name": "realcity_learning",
+      "path": "packages/realcity_learning",
+      "lifecycle": "shadow",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/realcity_learning"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/realcity_learning"
+        ]
+      }
+    },
+    {
+      "name": "realizer_struct",
+      "path": "packages/realizer_struct",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/realizer_struct"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/realizer_struct"
+        ]
+      }
+    },
+    {
+      "name": "reasoning_vm",
+      "path": "packages/reasoning_vm",
+      "lifecycle": "canonical",
+      "canonical_domain": "unified_deliberator",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/reasoning_vm"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/reasoning_vm"
+        ]
+      }
+    },
+    {
+      "name": "rhfc",
+      "path": "packages/rhfc",
+      "lifecycle": "shadow",
+      "canonical_domain": "semantic_compiler",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/rhfc"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/rhfc"
+        ]
+      }
+    },
+    {
+      "name": "runtime_control",
+      "path": "packages/runtime_control",
+      "lifecycle": "canonical",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/runtime_control"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/runtime_control"
+        ]
+      }
+    },
+    {
+      "name": "scene_model",
+      "path": "packages/scene_model",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/scene_model"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/scene_model"
+        ]
+      }
+    },
+    {
+      "name": "seed_research",
+      "path": "packages/seed_research",
+      "lifecycle": "shadow",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/seed_research"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/seed_research"
+        ]
+      }
+    },
+    {
+      "name": "self_acceleration",
+      "path": "packages/self_acceleration",
+      "lifecycle": "shadow",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/self_acceleration"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/self_acceleration"
+        ]
+      }
+    },
+    {
+      "name": "self_check",
+      "path": "packages/self_check",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/self_check"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/self_check"
+        ]
+      }
+    },
+    {
+      "name": "self_evolution",
+      "path": "packages/self_evolution",
+      "lifecycle": "canonical",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/self_evolution"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/self_evolution"
+        ]
+      }
+    },
+    {
+      "name": "self_improve",
+      "path": "packages/self_improve",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/self_improve"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/self_improve"
+        ]
+      }
+    },
+    {
+      "name": "self_model",
+      "path": "packages/self_model",
+      "lifecycle": "canonical",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/self_model"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/self_model"
+        ]
+      }
+    },
+    {
+      "name": "self_repair",
+      "path": "packages/self_repair",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/self_repair"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/self_repair"
+        ]
+      }
+    },
+    {
+      "name": "selfhood_control",
+      "path": "packages/selfhood_control",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/selfhood_control"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/selfhood_control"
+        ]
+      }
+    },
+    {
+      "name": "selfhood_runtime",
+      "path": "packages/selfhood_runtime",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/selfhood_runtime"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/selfhood_runtime"
+        ]
+      }
+    },
+    {
+      "name": "sensory_cortex",
+      "path": "packages/sensory_cortex",
+      "lifecycle": "adapter",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/sensory_cortex"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/sensory_cortex"
+        ]
+      }
+    },
+    {
+      "name": "situation_model",
+      "path": "packages/situation_model",
+      "lifecycle": "canonical",
+      "canonical_domain": "semantic_compiler",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/situation_model"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/situation_model"
+        ]
+      }
+    },
+    {
+      "name": "spark_chamber",
+      "path": "packages/spark_chamber",
+      "lifecycle": "shadow",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/spark_chamber"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/spark_chamber"
+        ]
+      }
+    },
+    {
+      "name": "splatra_imagination",
+      "path": "packages/splatra_imagination",
+      "lifecycle": "shadow",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/splatra_imagination"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/splatra_imagination"
+        ]
+      }
+    },
+    {
+      "name": "splatra_turbovec",
+      "path": "packages/splatra_turbovec",
+      "lifecycle": "shadow",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/splatra_turbovec"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/splatra_turbovec"
+        ]
+      }
+    },
+    {
+      "name": "splatra_worldmodel",
+      "path": "packages/splatra_worldmodel",
+      "lifecycle": "shadow",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/splatra_worldmodel"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/splatra_worldmodel"
+        ]
+      }
+    },
+    {
+      "name": "subjective",
+      "path": "packages/subjective",
+      "lifecycle": "shadow",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/subjective"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/subjective"
+        ]
+      }
+    },
+    {
+      "name": "substrate",
+      "path": "packages/substrate",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/substrate"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/substrate"
+        ]
+      }
+    },
+    {
+      "name": "surface_brain",
+      "path": "packages/surface_brain",
+      "lifecycle": "canonical",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/surface_brain"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/surface_brain"
+        ]
+      }
+    },
+    {
+      "name": "swe_eval",
+      "path": "packages/swe_eval",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/swe_eval"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/swe_eval"
+        ]
+      }
+    },
+    {
+      "name": "tabularis_privacy",
+      "path": "packages/tabularis_privacy",
+      "lifecycle": "shadow",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/tabularis_privacy"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/tabularis_privacy"
+        ]
+      }
+    },
+    {
+      "name": "temporal_reasoning",
+      "path": "packages/temporal_reasoning",
+      "lifecycle": "canonical",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/temporal_reasoning"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "live_conditional",
+        "refs": [
+          "packages/cgsr/cgsr/response_workspace.py",
+          "packages/temporal_reasoning/block_universe.py"
+        ]
+      },
+      "authority": {
+        "level": "secondary",
+        "refs": [
+          "packages/cgsr/cgsr/response_workspace.py",
+          "packages/temporal_reasoning/block_universe.py"
+        ]
+      },
+      "evidence": {
+        "stage": "M3",
+        "refs": [
+          "packages/temporal_reasoning/block_universe.py",
+          "packages/world4d/tests/test_live_temporal_shadow.py",
+          "reports/baseline_evidence/baseline_20260724T225531.739793Z_45bfaf0d04c9.manifest.json"
+        ]
+      }
+    },
+    {
+      "name": "tom_bench",
+      "path": "packages/tom_bench",
+      "lifecycle": "fixture",
+      "canonical_domain": "evaluation",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/tom_bench"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/tom_bench"
+        ]
+      }
+    },
+    {
+      "name": "trainer",
+      "path": "packages/trainer",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/trainer"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/trainer"
+        ]
+      }
+    },
+    {
+      "name": "transfer_gate",
+      "path": "packages/transfer_gate",
+      "lifecycle": "shadow",
+      "canonical_domain": "platform",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/transfer_gate"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/transfer_gate"
+        ]
+      }
+    },
+    {
+      "name": "truth_maintenance",
+      "path": "packages/truth_maintenance",
+      "lifecycle": "canonical",
+      "canonical_domain": "membrane_governance",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/truth_maintenance"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/truth_maintenance"
+        ]
+      }
+    },
+    {
+      "name": "turbovec_sandbox",
+      "path": "packages/turbovec_sandbox",
+      "lifecycle": "shadow",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/turbovec_sandbox"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/turbovec_sandbox"
+        ]
+      }
+    },
+    {
+      "name": "user_model",
+      "path": "packages/user_model",
+      "lifecycle": "canonical",
+      "canonical_domain": "operational_self",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/user_model"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/user_model"
+        ]
+      }
+    },
+    {
+      "name": "voice_io",
+      "path": "packages/voice_io",
+      "lifecycle": "adapter",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/voice_io"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/voice_io"
+        ]
+      }
+    },
+    {
+      "name": "voice_loop",
+      "path": "packages/voice_loop",
+      "lifecycle": "shadow",
+      "canonical_domain": "language_action",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/voice_loop"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/voice_loop"
+        ]
+      }
+    },
+    {
+      "name": "vsa_reasoning",
+      "path": "packages/vsa_reasoning",
+      "lifecycle": "shadow",
+      "canonical_domain": "semantic_compiler",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/vsa_reasoning"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/vsa_reasoning"
+        ]
+      }
+    },
+    {
+      "name": "wild_web",
+      "path": "packages/wild_web",
+      "lifecycle": "adapter",
+      "canonical_domain": "learning_evolution",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/wild_web"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "unknown",
+        "refs": []
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "V0",
+        "refs": [
+          "packages/wild_web"
+        ]
+      }
+    },
+    {
+      "name": "world4d",
+      "path": "packages/world4d",
+      "lifecycle": "adapter",
+      "canonical_domain": "world_model_4d",
+      "built": {
+        "status": true,
+        "refs": [
+          "packages/world4d"
+        ]
+      },
+      "wiring": {
+        "runtime_status": "live_conditional",
+        "refs": [
+          "packages/cgsr/cgsr/response_workspace.py",
+          "packages/world4d/shadow.py"
+        ]
+      },
+      "authority": {
+        "level": "none",
+        "refs": []
+      },
+      "evidence": {
+        "stage": "M3",
+        "refs": [
+          "packages/world4d",
+          "packages/world4d/tests",
+          "packages/cgsr/cgsr/response_workspace.py",
+          "reports/baseline_evidence/baseline_20260724T225531.739793Z_45bfaf0d04c9.manifest.json"
+        ]
+      }
+    }
+  ]
+}

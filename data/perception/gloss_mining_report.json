@@ -1,0 +1,41 @@
+{
+  "noun_entries": 598510,
+  "glosses": 334310,
+  "candidates": {
+    "made_of": 1828,
+    "capable_of": 14109,
+    "used_for": 7952
+  },
+  "subjects": {
+    "made_of": 1801,
+    "capable_of": 13512,
+    "used_for": 7740
+  },
+  "store_today": {
+    "used_for": 39673,
+    "capable_of": 22662,
+    "has_property": 196813,
+    "made_of": 1300565
+  },
+  "written": 23889,
+  "tier": "candidate",
+  "promoted": 0,
+  "conceptnet_agreement": {
+    "used_for": {
+      "checkable_subjects": 186,
+      "agreed": 104,
+      "agreement": 0.5591397849462365
+    },
+    "capable_of": {
+      "checkable_subjects": 202,
+      "agreed": 64,
+      "agreement": 0.31683168316831684
+    },
+    "made_of": {
+      "checkable_subjects": 15,
+      "agreed": 6,
+      "agreement": 0.4
+    }
+  },
+  "agreement_caveat": "ConceptNet is crowd data with its own gaps, so disagreement is not proof of error. What this catches is a pattern producing junk, which would show as agreement near zero."
+}

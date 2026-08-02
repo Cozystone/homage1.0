@@ -1,0 +1,13 @@
+{
+ "battery": "holdout_v1.jsonl",
+ "sha256": "978f5bb5d2e67710ec20a22980e492f13613fa6584db43731d439ba0bf5bd3f8",
+ "items": 60,
+ "rng_seed": 20260704,
+ "sealed_at": "2026-07-04T00:34:24+00:00",
+ "rule": "NEVER seed these terms; rotate quarterly to holdout_v2; score gap vs working battery = Goodhart signal",
+ "retired": {
+  "at": "2026-07-17",
+  "reason": "Korean answer surfaces are contained (owner directive: no Korean in extraction or answers). The battery file and its seal stay intact for the record; scoring it against a contained engine measures the containment, not knowledge.",
+  "supersededBy": "seal_{knowledge,conversation,honesty,speed}_{dev,holdout} (English)"
+ }
+}

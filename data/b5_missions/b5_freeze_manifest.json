@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-07-19T13:07:52.574597+00:00",
+  "spec": "docs/ATANOR_b5_mission_spec_v1.md",
+  "artifacts": {
+    "decoder": {
+      "path": "data\\graph_scale\\realizer.pt",
+      "present": true,
+      "sha256": "9cf41e5a245d86617f3a46ad49cb231f44fb8fd67cb3551c38574b8f40db1208",
+      "bytes": 142895634
+    },
+    "skeleton_bank_10k": {
+      "path": "data\\construction_bank\\formulaic_frames.jsonl",
+      "present": true,
+      "sha256": "3740dddff2415e9560cf7c342f7bfbc105c212f5934f2d26b0dcae3d3dc54f71",
+      "bytes": 1909492
+    },
+    "graph_snapshot_base_brain": {
+      "path": "data\\base_brain\\proofs\\base_brain_proof.json",
+      "present": true,
+      "sha256": "b93db643967264d1c956aec6c0a9c181e6ef445af413e7f11314ee5050bd1160",
+      "bytes": 2168
+    }
+  }
+}

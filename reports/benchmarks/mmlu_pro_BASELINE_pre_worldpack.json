@@ -1,0 +1,2990 @@
+{
+  "at": "2026-07-14T12:23:52",
+  "store_meta": {
+    "count": 26870297,
+    "terms": 10233395,
+    "format": "int32_columnar_spo",
+    "dict_backend": "sharded"
+  },
+  "benchmark": "mmlu-pro(open-book)",
+  "subjects": [
+    "biology",
+    "chemistry",
+    "physics",
+    "history",
+    "economics",
+    "psychology",
+    "health",
+    "law"
+  ],
+  "n_per_subject": 25,
+  "items": [
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "divisions",
+        "following",
+        "examples",
+        "provide",
+        "mitotic",
+        "likely",
+        "Which",
+        "would"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "photosynthesis",
+        "reactions",
+        "following",
+        "Calvin",
+        "supply",
+        "which",
+        "cycle",
+        "light"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "represents",
+        "offspring",
+        "genotypes",
+        "dominant",
+        "parents",
+        "produce",
+        "silver",
+        "brown"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "nucleotides",
+        "reference",
+        "molecules",
+        "following",
+        "contains",
+        "segment",
+        "number",
+        "fewest"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "individuals",
+        "maintained",
+        "unchanging",
+        "composed",
+        "entirely",
+        "species",
+        "fixed",
+        "group"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "statements",
+        "apoptosis",
+        "following",
+        "correct",
+        "about",
+        "Which",
+        "NOT",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "accurately",
+        "described",
+        "evolution",
+        "theory",
+        "most",
+        "The"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "principle",
+        "inorganic",
+        "compound",
+        "living",
+        "things",
+        "found",
+        "The"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "evolutionary",
+        "distantly",
+        "organisms",
+        "related",
+        "expect",
+        "modern",
+        "should",
+        "sense"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "statements",
+        "following",
+        "correct",
+        "lipids",
+        "about",
+        "Which",
+        "not",
+        "the"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "statements",
+        "following",
+        "correct",
+        "immune",
+        "system",
+        "about",
+        "Which",
+        "NOT"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "reactants",
+        "reaction",
+        "includes",
+        "energy",
+        "called",
+        "that",
+        "its",
+        "one"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "Individuals",
+        "associated",
+        "population",
+        "recessive",
+        "reproduce",
+        "preserved",
+        "disorder",
+        "explain"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "glycoproteins",
+        "expression",
+        "referred",
+        "inherits",
+        "pattern",
+        "surface",
+        "parent",
+        "allele"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "frameshift",
+        "mutation",
+        "created",
+        "when"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "encompasses",
+        "fibroblast",
+        "following",
+        "motility",
+        "cultured",
+        "EXCEPT",
+        "viewed",
+        "Cell"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "observations",
+        "experimental",
+        "glycoprotein",
+        "pellucida",
+        "initiates",
+        "following",
+        "acrosomal",
+        "receptors"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "culture",
+        "similar",
+        "normal",
+        "Cancer",
+        "cells",
+        "grown",
+        "they",
+        "that"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "important",
+        "evolution",
+        "thousand",
+        "present",
+        "genetic",
+        "twenty",
+        "years",
+        "human"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "characteristics",
+        "significanceof",
+        "humanbeing",
+        "Describe",
+        "ontogeny",
+        "briefly",
+        "zygote",
+        "mature"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "difference",
+        "frequency",
+        "Americans",
+        "ancestral",
+        "African",
+        "factors",
+        "account",
+        "people"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "generations",
+        "generation",
+        "frequency",
+        "increase",
+        "percent",
+        "alleles",
+        "mutates",
+        "acting"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "chromosomal",
+        "produced",
+        "factors",
+        "modify",
+        "breaks",
+        "these",
+        "What",
+        "are"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "amongmatingsbetween",
+        "Caucasians",
+        "themselves",
+        "offspring",
+        "nonwhites",
+        "incidence",
+        "fibrosis",
+        "randomly"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "biology",
+      "q_tokens": [
+        "sequences",
+        "enhancer",
+        "What",
+        "are"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "electricity",
+        "conductor",
+        "substance",
+        "contains",
+        "dissolve",
+        "addition",
+        "melting",
+        "unknown"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "following",
+        "electrons",
+        "central",
+        "around",
+        "Which",
+        "octet",
+        "atom",
+        "has"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "milliliters",
+        "neutralize",
+        "completely",
+        "many",
+        "does",
+        "take",
+        "KOH",
+        "How"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "hybridization",
+        "structures",
+        "molecules",
+        "following",
+        "molecule",
+        "Consider",
+        "central",
+        "exhibit"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "represents",
+        "magnesium",
+        "equation",
+        "possible",
+        "solution",
+        "reaction",
+        "chromium",
+        "oxidized"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "simplest",
+        "alkene",
+        "The",
+        "has"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "decomposition",
+        "concentration",
+        "Hypochlorous",
+        "equivalence",
+        "agreement",
+        "hydroxide",
+        "titration",
+        "products"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "solution",
+        "ideal"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "incorrectly",
+        "following",
+        "Which",
+        "named",
+        "the"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "resulting",
+        "mixture",
+        "sample",
+        "mixed",
+        "with",
+        "What",
+        "HBr",
+        "KOH"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "through",
+        "effuses",
+        "pinhole",
+        "unknown",
+        "Helium",
+        "faster",
+        "likely",
+        "times"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "component",
+        "momentum",
+        "maximum",
+        "angular",
+        "value",
+        "spin",
+        "What",
+        "the"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "duration",
+        "strength",
+        "pulse",
+        "What",
+        "the"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "radioactive",
+        "microcuries",
+        "diagnostic",
+        "delivered",
+        "hospital",
+        "activity",
+        "delivery",
+        "quantity"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "oxidation",
+        "element",
+        "stable",
+        "state",
+        "group",
+        "which",
+        "than",
+        "more"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "described",
+        "molecular",
+        "chloride",
+        "geometry",
+        "thionyl",
+        "SOCl",
+        "best",
+        "The"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "occupancies",
+        "frequencies",
+        "Calculate",
+        "relative",
+        "radical",
+        "species",
+        "levels",
+        "energy"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "frequency",
+        "magnetic",
+        "field",
+        "What",
+        "NMR",
+        "the"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "nanoparticle",
+        "probability",
+        "dimensional",
+        "calculate",
+        "following",
+        "confined",
+        "modelled",
+        "particle"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "GibbsHelmholtz",
+        "rightarrow",
+        "Calculate",
+        "equation",
+        "reaction",
+        "values",
+        "mathrm",
+        "ominus"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "wavefunction",
+        "probability",
+        "normalized",
+        "Calculate",
+        "nanotube",
+        "electron",
+        "between",
+        "Suppose"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "acetaldehyde",
+        "difference",
+        "molecule",
+        "chemical",
+        "magnetic",
+        "between",
+        "protons",
+        "regions"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "ultraviolet",
+        "wavelength",
+        "ionization",
+        "radiation",
+        "Calculate",
+        "electrons",
+        "directed",
+        "ejected"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "rectangular",
+        "electron",
+        "certain",
+        "energy",
+        "mathrm",
+        "lowest",
+        "bottom",
+        "depth"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "chemistry",
+      "q_tokens": [
+        "electronic",
+        "rightarrow",
+        "ground",
+        "mathrm",
+        "state",
+        "Delta",
+        "Find",
+        "circ"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "significance",
+        "resonance",
+        "Jupiter",
+        "system",
+        "moons",
+        "What",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "accurately",
+        "diameter",
+        "measure",
+        "Pluto",
+        "first",
+        "were",
+        "able",
+        "from"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "asteroids",
+        "searching",
+        "surveys",
+        "about",
+        "stand",
+        "makes",
+        "them",
+        "What"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "Approximately",
+        "Andromeda",
+        "Galaxy",
+        "away",
+        "the",
+        "how",
+        "far"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "material",
+        "showers",
+        "causes",
+        "source",
+        "meteor",
+        "What",
+        "that",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "greenhouse",
+        "effect",
+        "work",
+        "does",
+        "How",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "wavelength",
+        "refraction",
+        "reflected",
+        "following",
+        "normally",
+        "incident",
+        "strongly",
+        "surface"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "coefficient",
+        "revolutions",
+        "turntable",
+        "distance",
+        "friction",
+        "maximum",
+        "surface",
+        "rotates"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "accelerated",
+        "experiment",
+        "difference",
+        "trajectory",
+        "direction",
+        "potential",
+        "electric",
+        "magnetic"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "approximate",
+        "scattering",
+        "conditions",
+        "impinging",
+        "electrons",
+        "diffract",
+        "obtained",
+        "pattern"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "fundamental",
+        "frequency",
+        "designed",
+        "harmonic",
+        "closed",
+        "higher",
+        "organ",
+        "other"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "meterstick",
+        "spaceships",
+        "directions",
+        "spaceship",
+        "opposite",
+        "measured",
+        "observer",
+        "occupant"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "wavelengths",
+        "identical",
+        "hydrogen",
+        "spectrum",
+        "emission",
+        "lithium",
+        "ionized",
+        "doubly"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "displacement",
+        "beginning",
+        "gasoline",
+        "straight",
+        "station",
+        "another",
+        "arrival",
+        "farther"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "surroundings",
+        "surrounded",
+        "increases",
+        "Calculate",
+        "spherical",
+        "required",
+        "roughly",
+        "tension"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "contracts",
+        "Calculate",
+        "performed",
+        "constant",
+        "Assume",
+        "weight",
+        "mathrm",
+        "muscle"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "temperature",
+        "consisting",
+        "immersion",
+        "pressure",
+        "constant",
+        "resistor",
+        "current",
+        "through"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "operatorname",
+        "rightarrow",
+        "calculate",
+        "formation",
+        "standard",
+        "reaction",
+        "Consider",
+        "energy"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "acceleration",
+        "displacement",
+        "oscillator",
+        "operating",
+        "Determine",
+        "harmonic",
+        "velocity",
+        "forced"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "travels",
+        "seconds",
+        "dropped",
+        "splash",
+        "later",
+        "heard",
+        "depth",
+        "stone"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "supplies",
+        "currentI",
+        "through",
+        "starter",
+        "battery",
+        "charge",
+        "passes",
+        "motor"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "adiabatically",
+        "temperature",
+        "compressed",
+        "pressures",
+        "assumed",
+        "bicycle",
+        "pumps",
+        "tires"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "acceleration",
+        "discovered",
+        "density",
+        "surface",
+        "exactly",
+        "gravity",
+        "planet",
+        "radius"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "electric",
+        "released",
+        "strength",
+        "distance",
+        "electron",
+        "uniform",
+        "between",
+        "voltage"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "physics",
+      "q_tokens": [
+        "accelerating",
+        "corresponds",
+        "accelerator",
+        "deposited",
+        "electrons",
+        "current",
+        "capable",
+        "energy"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "obvious",
+        "reasons",
+        "fight",
+        "have",
+        "Inca",
+        "less",
+        "many",
+        "wars"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "societies",
+        "material",
+        "ancient",
+        "obvious",
+        "symbols",
+        "state",
+        "most",
+        "are"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "population",
+        "contained",
+        "ancient",
+        "Cahokia",
+        "around",
+        "city",
+        "than",
+        "more"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "center",
+        "build",
+        "their",
+        "Moche",
+        "heart",
+        "urban",
+        "What",
+        "did"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "civilization",
+        "development",
+        "foundation",
+        "coherent",
+        "Chinese",
+        "Dynasty",
+        "lasted",
+        "Shang"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "controversial",
+        "morphologies",
+        "discoveries",
+        "Dinaledi",
+        "mixture",
+        "species",
+        "fossils",
+        "cranial"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "determines",
+        "quadruped",
+        "following",
+        "primates",
+        "location",
+        "biped",
+        "which",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "Australian",
+        "megafauna",
+        "probably",
+        "America",
+        "wiped",
+        "were",
+        "out",
+        "and"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "indicates",
+        "evidence",
+        "million",
+        "evolved",
+        "hominid",
+        "fossil",
+        "years",
+        "known"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "discrimination",
+        "Congressional",
+        "congressional",
+        "commonwealth",
+        "particularly",
+        "institutions",
+        "antecedents",
+        "information"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "Remonstrance",
+        "Presbyterian",
+        "Netherlands",
+        "Independent",
+        "information",
+        "significant",
+        "consciences",
+        "inhabitants"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "libertarianism",
+        "conservatives",
+        "neighborhood",
+        "Libertarians",
+        "libertarians",
+        "conservatism",
+        "interference",
+        "information"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "distinctively",
+        "Aristotelian",
+        "philosophers",
+        "universalist",
+        "independence",
+        "independent",
+        "information",
+        "rationality"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "manufacturing",
+        "independence",
+        "improvident",
+        "information",
+        "distresses",
+        "department",
+        "comparable",
+        "starvation"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "enthusiastically",
+        "characterizes",
+        "particularly",
+        "information",
+        "differences",
+        "helicopters",
+        "Presidents",
+        "supposedly"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "conveniences",
+        "information",
+        "opportunity",
+        "automobile",
+        "organized",
+        "guarantee",
+        "attracted",
+        "inflicted"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "distinctively",
+        "Aristotelian",
+        "philosophers",
+        "universalist",
+        "independence",
+        "independent",
+        "information",
+        "rationality"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "unconstitutional",
+        "acknowledgement",
+        "Constitution",
+        "contradicted",
+        "information",
+        "naturalized",
+        "distinction",
+        "inhabitants"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "organizations",
+        "organization",
+        "slaveholders",
+        "information",
+        "marshalship",
+        "governments",
+        "magistracy",
+        "influenced"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "characteristic",
+        "dissimulation",
+        "responsible",
+        "information",
+        "catastrophe",
+        "Deutschland",
+        "unfortunate",
+        "Clemenceau"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "Introduction",
+        "referencing",
+        "cultivating",
+        "Manufacture",
+        "information",
+        "contributed",
+        "Scribbling",
+        "reasonably"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "understanding",
+        "accomplished",
+        "particularly",
+        "instruments",
+        "information",
+        "Castiglione",
+        "vernacular",
+        "recommends"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "argumentation",
+        "strengthening",
+        "familiarized",
+        "irresistible",
+        "monopolized",
+        "ornamenting",
+        "Collectanea",
+        "Reformation"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "Enlightenment",
+        "unspeakable",
+        "information",
+        "compatriots",
+        "Inquisition",
+        "philosophes",
+        "businessmen",
+        "inquisitors"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "history",
+      "q_tokens": [
+        "representatives",
+        "irrespectively",
+        "participation",
+        "modifications",
+        "determination",
+        "transgression",
+        "transgressor",
+        "distinctions"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "calculating",
+        "classified",
+        "following",
+        "under",
+        "Which",
+        "would",
+        "when",
+        "GDP"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "aggregate",
+        "demand",
+        "curve",
+        "The"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "following",
+        "increase",
+        "supply",
+        "Which",
+        "money",
+        "tool",
+        "used",
+        "Fed"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "domestic",
+        "exceeds",
+        "expect",
+        "copper",
+        "world",
+        "price",
+        "would",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "unemployment",
+        "natural",
+        "rate",
+        "The"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "aggregate",
+        "following",
+        "demand",
+        "curve",
+        "right",
+        "Which",
+        "shift",
+        "would"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "Crowding",
+        "out"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "Deflator",
+        "differs",
+        "that",
+        "from",
+        "CPI",
+        "GDP",
+        "the",
+        "The"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "Marginal",
+        "marginal",
+        "revenue",
+        "equals",
+        "where",
+        "point",
+        "cost",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "following",
+        "increases",
+        "expect",
+        "price",
+        "pears",
+        "When",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "competitive",
+        "statements",
+        "following",
+        "perfectly",
+        "industry",
+        "Which",
+        "true",
+        "firm"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "production",
+        "earning",
+        "profit",
+        "normal",
+        "good",
+        "true",
+        "When",
+        "firm"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "equilibrium",
+        "Cincinnati",
+        "following",
+        "currently",
+        "increase",
+        "baseball",
+        "consumer",
+        "received"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "adjustment",
+        "following",
+        "example",
+        "owners",
+        "small",
+        "Which",
+        "long",
+        "caf"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "following",
+        "studying",
+        "student",
+        "already",
+        "decides",
+        "likely",
+        "should",
+        "having"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "effectively",
+        "government",
+        "problem",
+        "could",
+        "rider",
+        "avoid",
+        "most",
+        "What"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "information",
+        "statements",
+        "consistent",
+        "additional",
+        "concerning",
+        "following",
+        "criterion",
+        "Adjusted"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "regression",
+        "augmenting",
+        "purpose",
+        "Dickey",
+        "Fuller",
+        "test",
+        "the",
+        "The"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "cointegrated",
+        "criticisms",
+        "variables",
+        "following",
+        "procedure",
+        "overcome",
+        "approach",
+        "Granger"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "autocorrelation",
+        "statements",
+        "concerning",
+        "following",
+        "identical",
+        "whatever",
+        "function",
+        "general"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "adjustmentsin",
+        "economists",
+        "seasonal",
+        "economic",
+        "isolate",
+        "trends",
+        "before",
+        "trying"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "andeconomic",
+        "Distinguish",
+        "transfer",
+        "earnings",
+        "between",
+        "piece",
+        "rent",
+        "land"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "transactions",
+        "capitalism",
+        "circular",
+        "normally",
+        "include",
+        "economy",
+        "entire",
+        "leave"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "industrial",
+        "production",
+        "employment",
+        "typically",
+        "recession",
+        "concerned",
+        "producing",
+        "consumer"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "economics",
+      "q_tokens": [
+        "unwarranted",
+        "government",
+        "enrichment",
+        "prevented",
+        "ownership",
+        "withthis",
+        "produced",
+        "analysis"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "Functioning",
+        "Cognitive",
+        "received",
+        "rating",
+        "Rancho",
+        "Amigos",
+        "person",
+        "Scale"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "psychologist",
+        "completely",
+        "girlfriend",
+        "miserable",
+        "political",
+        "repugnant",
+        "ethical",
+        "Hermann"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "preconventional",
+        "development",
+        "children",
+        "Kohlberg",
+        "because",
+        "second",
+        "During",
+        "stage"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "preventable",
+        "retardation",
+        "associated",
+        "mental",
+        "with",
+        "The",
+        "PKU"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "differentiation",
+        "difficulty",
+        "performing",
+        "examinees",
+        "following",
+        "maximizes",
+        "levels",
+        "groups"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "emergency",
+        "situation",
+        "helped",
+        "likely",
+        "person",
+        "when",
+        "most"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "developed",
+        "least",
+        "birth",
+        "brain",
+        "area",
+        "the",
+        "The"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "appropriate",
+        "adolescent",
+        "abilities",
+        "cognitive",
+        "nonverbal",
+        "following",
+        "measure",
+        "general"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "psychological",
+        "Bartering",
+        "services",
+        "payment",
+        "form",
+        "for"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "overgeneralized",
+        "confabulatory",
+        "Rorschach",
+        "following",
+        "responses",
+        "examinee",
+        "inkblot",
+        "suggest"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "continuously",
+        "information",
+        "stability",
+        "deviation",
+        "feedback",
+        "maintain",
+        "minimize",
+        "referred"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "maintained",
+        "sensory",
+        "sounds",
+        "memory",
+        "Images",
+        "and",
+        "are",
+        "for"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "psychologist",
+        "liability",
+        "Vicarious",
+        "concern",
+        "likely",
+        "acting",
+        "when",
+        "most"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "stimulation",
+        "Electrical",
+        "treatment",
+        "chronic",
+        "brain",
+        "pain",
+        "for",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "Attentional",
+        "posits",
+        "theory",
+        "load"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "information",
+        "involved",
+        "acquired",
+        "recall",
+        "aspect",
+        "within",
+        "memory",
+        "hours"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "participate",
+        "permission",
+        "Dependence",
+        "diagnosis",
+        "currently",
+        "Dinwoody",
+        "Inviting",
+        "received"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "difficulties",
+        "neurologist",
+        "evaluation",
+        "neurologic",
+        "Sometime",
+        "concerns",
+        "requests",
+        "contacts"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "variability",
+        "correlation",
+        "accounted",
+        "studying",
+        "students",
+        "between",
+        "amount",
+        "school"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "psychotherapy",
+        "nonminority",
+        "minority",
+        "clients",
+        "regard",
+        "With",
+        "and"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "developmental",
+        "acquisition",
+        "identifies",
+        "cognitive",
+        "following",
+        "Kohlberg",
+        "initial",
+        "gender"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "Psychoanalytic",
+        "anxiety",
+        "states",
+        "arises",
+        "theory",
+        "that",
+        "from"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "Psychological",
+        "Associations",
+        "psychologist",
+        "violation",
+        "colleague",
+        "published",
+        "According",
+        "Canadian"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "respectively",
+        "performance",
+        "information",
+        "deviations",
+        "chemistry",
+        "standard",
+        "conclude",
+        "freshman"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "psychology",
+      "q_tokens": [
+        "organizations",
+        "commitment",
+        "predictive",
+        "affective",
+        "following",
+        "likely",
+        "least",
+        "which"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "eradicated",
+        "following",
+        "which",
+        "Polio",
+        "can",
+        "the"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "polyomaviruses",
+        "predominantly",
+        "disease",
+        "cause",
+        "Which"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "discovered",
+        "virus",
+        "first",
+        "Who",
+        "the"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "Poliovirus",
+        "processes",
+        "following",
+        "virulent",
+        "become",
+        "easily",
+        "which",
+        "most"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "calcivirus",
+        "replicate",
+        "viruses",
+        "family",
+        "How",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "encouraged",
+        "Viruses",
+        "change",
+        "world",
+        "have",
+        "now",
+        "our"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "completely",
+        "following",
+        "oxidised",
+        "releases",
+        "energy",
+        "Which",
+        "when",
+        "most"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "unbalanced",
+        "unlimited",
+        "provided",
+        "reaction",
+        "Hydrogen",
+        "dioxide",
+        "formula",
+        "follows"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "potential",
+        "arriving",
+        "endplate",
+        "release",
+        "causes",
+        "action",
+        "motor",
+        "the"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "breathing",
+        "following",
+        "conscious",
+        "abnormal",
+        "pattern",
+        "altered",
+        "injury",
+        "Which"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "adhesive",
+        "Removal",
+        "strips"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "clubbing",
+        "reliable",
+        "assess",
+        "Which",
+        "most",
+        "the",
+        "for",
+        "way"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "characterized",
+        "Bronchial",
+        "breathing"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "musculoskeletal",
+        "following",
+        "history",
+        "taking",
+        "which",
+        "true",
+        "When",
+        "are"
+      ],
+      "answered": true,
+      "correct": true
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "important",
+        "because",
+        "patient",
+        "health",
+        "report",
+        "staff",
+        "self",
+        "care"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "hypothesis",
+        "docility",
+        "that",
+        "The"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "cognitive",
+        "symptoms",
+        "dementia",
+        "likely",
+        "which",
+        "less",
+        "are"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "Remarriages",
+        "are"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "discontinuous",
+        "example",
+        "change",
+        "adult",
+        "years",
+        "over",
+        "the"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "senescence",
+        "theories",
+        "problem",
+        "immune",
+        "system",
+        "for"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "disposal",
+        "religion",
+        "typical",
+        "sundown",
+        "before",
+        "death",
+        "which",
+        "rapid"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "following",
+        "causes",
+        "death",
+        "Which",
+        "among",
+        "NOT",
+        "top",
+        "the"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "differences",
+        "influence",
+        "important",
+        "nurture",
+        "greater",
+        "Nature",
+        "while",
+        "more"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "anatomical",
+        "following",
+        "abdomen",
+        "sternum",
+        "regions",
+        "distal",
+        "Which",
+        "just"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "health",
+      "q_tokens": [
+        "auditory",
+        "tube",
+        "The"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "jurisdiction",
+        "apprehended",
+        "approached",
+        "possession",
+        "convicted",
+        "properly",
+        "carrying",
+        "standing"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "environmentally",
+        "incrimination",
+        "investigating",
+        "corporation",
+        "documents",
+        "regarding",
+        "requiring",
+        "sensitive"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "constitutional",
+        "interpretation",
+        "Constitution",
+        "requirements",
+        "appropriate",
+        "information",
+        "prospective",
+        "difficulty"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "Unbeknownst",
+        "intervened",
+        "eventually",
+        "statements",
+        "struggling",
+        "accomplice",
+        "apologized",
+        "briefcase"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "unjustifiable",
+        "premeditated",
+        "aforethought",
+        "jurisdiction",
+        "subsequently",
+        "Manslaughter",
+        "intentional",
+        "fraternity"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "subsequently",
+        "girlfriend",
+        "undercover",
+        "recognized",
+        "responded",
+        "passenger",
+        "attempted",
+        "directed"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "conversation",
+        "relationship",
+        "appropriate",
+        "institutes",
+        "accessible",
+        "Infuriated",
+        "confronted",
+        "antebellum"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "excruciating",
+        "hospitalized",
+        "identifiable",
+        "technicians",
+        "malpractice",
+        "additional",
+        "printouts",
+        "objection"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "Defendant",
+        "discharge",
+        "February",
+        "released",
+        "occurred",
+        "arrested",
+        "December",
+        "charged"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "unauthorized",
+        "prosecution",
+        "prosecuting",
+        "examination",
+        "committing",
+        "testified",
+        "committed",
+        "testimony"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "construction",
+        "calculating",
+        "subcontract",
+        "contractor",
+        "successful",
+        "carpenter",
+        "submitted",
+        "preparing"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "constitutionality",
+        "appropriation",
+        "appropriated",
+        "inseverable",
+        "memorabilia",
+        "cigarettes",
+        "continuing",
+        "historical"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "following",
+        "statement",
+        "regarding",
+        "ownership",
+        "gardener",
+        "executes",
+        "property",
+        "granting"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "constitutional",
+        "administration",
+        "disrespectful",
+        "disciplinary",
+        "specifically",
+        "recommended",
+        "accurately",
+        "applicable"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "survivorship",
+        "extinguished",
+        "surviving",
+        "mortgagee",
+        "interest",
+        "property",
+        "judgment",
+        "defended"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "prosecution",
+        "objection",
+        "illegally",
+        "property",
+        "entering",
+        "stealing",
+        "possible",
+        "question"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "psychiatric",
+        "political",
+        "following",
+        "campaign",
+        "objector",
+        "argument",
+        "evidence",
+        "election"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "distinction",
+        "obligation",
+        "statement",
+        "explains",
+        "obliged",
+        "purpose",
+        "between",
+        "having"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "misunderstood",
+        "progressive",
+        "societies",
+        "hitherto",
+        "Contract",
+        "aphorism",
+        "movement",
+        "famous"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "misunderstood",
+        "progressive",
+        "societies",
+        "hitherto",
+        "Contract",
+        "aphorism",
+        "movement",
+        "famous"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "following",
+        "purposes",
+        "internal",
+        "concept",
+        "Which",
+        "point",
+        "play",
+        "view"
+      ],
+      "answered": false,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "represents",
+        "punishment",
+        "statement",
+        "Durkheim",
+        "function",
+        "Which",
+        "below",
+        "view"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "naturalism",
+        "positivism",
+        "difference",
+        "between",
+        "major",
+        "What",
+        "and",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "naturalism",
+        "positivism",
+        "difference",
+        "between",
+        "major",
+        "What",
+        "and",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    },
+    {
+      "subject": "law",
+      "q_tokens": [
+        "permitted",
+        "Nations",
+        "Charter",
+        "United",
+        "prior",
+        "force",
+        "armed",
+        "the"
+      ],
+      "answered": true,
+      "correct": false
+    }
+  ],
+  "total": 200,
+  "answered": 103,
+  "coverage": 0.515,
+  "answered_acc": 0.0971,
+  "strict_acc": 0.05,
+  "guess_baseline": 0.25,
+  "per_subject": {
+    "biology": {
+      "n": 25,
+      "answered": 16,
+      "correct": 2,
+      "coverage": 0.64,
+      "answered_acc": 0.125
+    },
+    "chemistry": {
+      "n": 25,
+      "answered": 2,
+      "correct": 0,
+      "coverage": 0.08,
+      "answered_acc": 0.0
+    },
+    "physics": {
+      "n": 25,
+      "answered": 4,
+      "correct": 0,
+      "coverage": 0.16,
+      "answered_acc": 0.0
+    },
+    "history": {
+      "n": 25,
+      "answered": 17,
+      "correct": 1,
+      "coverage": 0.68,
+      "answered_acc": 0.059
+    },
+    "economics": {
+      "n": 25,
+      "answered": 18,
+      "correct": 1,
+      "coverage": 0.72,
+      "answered_acc": 0.056
+    },
+    "psychology": {
+      "n": 25,
+      "answered": 14,
+      "correct": 1,
+      "coverage": 0.56,
+      "answered_acc": 0.071
+    },
+    "health": {
+      "n": 25,
+      "answered": 12,
+      "correct": 5,
+      "coverage": 0.48,
+      "answered_acc": 0.417
+    },
+    "law": {
+      "n": 25,
+      "answered": 20,
+      "correct": 0,
+      "coverage": 0.8,
+      "answered_acc": 0.0
+    }
+  },
+  "elapsed_s": 88.8,
+  "honest_note": "strict_acc counts abstentions as wrong; MMLU-style accuracy cannot measure hallucination — coverage+answered_acc are the grounded metrics."
+}

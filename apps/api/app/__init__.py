@@ -1,0 +1,1 @@
+"""ATANOR FastAPI application package."""

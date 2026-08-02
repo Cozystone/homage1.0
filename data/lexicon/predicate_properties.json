@@ -1,0 +1,8 @@
+{
+ "_comment": "Predicate algebraic properties — GRAPH METADATA, not code (난제 P3). New reasoning behaviour = edit this file, not the engine. symmetric/functional can also be INDUCED from observed data (predicate_algebra.induce_properties); transitive stays declared.",
+ "transitive": ["IS_A", "PART_OF", "LOCATED_IN", "SUBCLASS_OF"],
+ "symmetric": ["ADJACENT_TO", "SIBLING_OF", "인접하다"],
+ "functional": ["CAPITAL_OF_INV", "수도", "BORN_IN_YEAR"],
+ "inheritable": ["HAS", "HAS_PART", "USED_FOR", "CAN", "ENABLES"],
+ "inverse": {"PART_OF": "HAS_PART", "HAS_PART": "PART_OF"}
+}

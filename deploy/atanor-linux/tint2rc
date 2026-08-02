@@ -1,0 +1,68 @@
+# ATANOR taskbar — Windows-like bottom panel in our design tokens
+# (near-black #0b0d12, one accent #d2521f, Apple restraint x Palantir truth).
+
+# background 1: panel
+rounded = 0
+border_width = 0
+background_color = #0b0d12 92
+border_color = #0b0d12 0
+
+# background 2: active task
+rounded = 3
+border_width = 0
+background_color = #d2521f 100
+border_color = #d2521f 0
+
+# background 3: hover
+rounded = 3
+border_width = 0
+background_color = #1a1e26 100
+border_color = #1a1e26 0
+
+panel_monitor = all
+panel_position = bottom center horizontal
+panel_items = LTSC
+panel_size = 100% 42
+panel_padding = 8 3 8
+panel_background_id = 1
+panel_layer = top
+strut_policy = follow_size
+wm_menu = 1
+
+# launcher — the start-corner: ATANOR, files, terminal
+launcher_padding = 8 4 8
+launcher_icon_size = 22
+launcher_icon_theme_override = 0
+launcher_item_app = /usr/share/applications/atanor-start.desktop
+launcher_item_app = /usr/share/applications/atanor-dashboard.desktop
+launcher_item_app = /usr/share/applications/pcmanfm.desktop
+launcher_item_app = /usr/share/applications/lxterminal.desktop
+
+taskbar_mode = single_desktop
+taskbar_padding = 2 2 4
+taskbar_background_id = 0
+taskbar_name = 0
+
+task_text = 1
+task_icon = 1
+task_centered = 0
+task_maximum_size = 220 36
+task_padding = 8 3 8
+task_font = Noto Sans CJK KR 10
+task_font_color = #dfe4ea 100
+task_background_id = 0
+task_active_background_id = 2
+task_active_font_color = #ffffff 100
+task_urgent_background_id = 2
+mouse_left = toggle_iconify
+
+systray_padding = 6 4 6
+systray_icon_size = 18
+systray_background_id = 0
+
+time1_format = %H:%M
+time2_format = %m-%d (%a)
+clock_font = Noto Sans CJK KR 10
+clock_font_color = #dfe4ea 100
+clock_padding = 12 2
+clock_background_id = 0

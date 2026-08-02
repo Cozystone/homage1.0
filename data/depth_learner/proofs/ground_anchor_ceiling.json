@@ -1,0 +1,29 @@
+{
+  "episode": "ep460",
+  "road_mask": "ORACLE (ground-truth semantics)",
+  "camera_height_m": 2.4,
+  "fx": 160.0,
+  "cy": 120.0,
+  "flat_ground_formula_error_vs_truth": 0.053,
+  "arms": {
+    "depthnet.pt": {
+      "median_scaled": 0.4075118942309991,
+      "ground_scalar": 0.08758296126463135,
+      "ground_monotone": 0.0,
+      "random_ground_monotone": 0.043308313949305774,
+      "oracle_monotone": 0.4167727370974327,
+      "spearman": 0.8132414368275898,
+      "constant": 0.2246451643891544
+    },
+    "ordinal_selfsup.pt": {
+      "median_scaled": 0.24965236154399426,
+      "ground_scalar": 0.024230722818872934,
+      "ground_monotone": 0.030430924917867676,
+      "random_ground_monotone": 0.0430352433469192,
+      "oracle_monotone": 0.24860681867958045,
+      "spearman": 0.49156268566016786,
+      "constant": 0.2246451643891544
+    }
+  },
+  "conclusion": "Scale anchoring buys at most +0.008 delta<1.25. The binding constraint is ordering quality (Spearman), not scale. Stereo's value is better ORDERING, not scale recovery."
+}

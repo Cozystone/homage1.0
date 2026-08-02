@@ -1,0 +1,1166 @@
+{
+  "catalog": {
+    "catalog_id": "baseline_suite_v1",
+    "path": "data/eval/catalog/baseline_suite_v1.json",
+    "sha256": "c6c5bf745b6a5f6875417b842764af862f0364512383d6f9164baee426790b5f"
+  },
+  "catalog_trust": "The catalog is a reviewed recipe input, not an authority boundary. Runner-owned validation and the automatic runner-source binding are independent of catalog fields.",
+  "claim_scope": "Command execution evidence only. Stable exit/output/report digests are not benchmark capability evidence; metrics remain null until a benchmark-owned report parser and independent capability gate populate them. Mutation claims cover only the explicitly recorded observation surfaces.",
+  "created_at_utc": "2026-07-25T00:26:38.046332Z",
+  "environment": {
+    "allowlist": [
+      "ATANOR_DISABLE_PACK",
+      "ATANOR_NETWORK_DISABLED",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD",
+      "PYTHONHASHSEED"
+    ],
+    "values": {
+      "ATANOR_DISABLE_PACK": "1",
+      "ATANOR_NETWORK_DISABLED": "1",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "PYTHONHASHSEED": "0"
+    }
+  },
+  "evidence_kind": "command_execution_only",
+  "filesystem_control": {
+    "enforced": false,
+    "mechanism": "catalog_policy_plus_post_hoc_observation",
+    "note": "The runner installs no filesystem sandbox. Git-visible and recorded repository surfaces are checked after execution; undeclared ignored paths and writes outside the repository are not observed.",
+    "requested": "repository_read_only"
+  },
+  "inputs": {
+    "artifacts": [
+      {
+        "bytes": 257,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/__init__.py",
+        "sha256": "dc6d4c93fcaea3aa914596fc495a5a8c2ae706dae0a55183c3a93ba4cec50738"
+      },
+      {
+        "bytes": 2592,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/adjudicator.py",
+        "sha256": "a7047b771b45fc920acdf73d7831dd26a656de220b485a98624952a43a2768e1"
+      },
+      {
+        "bytes": 26391,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/back_chain.py",
+        "sha256": "e2572c9804cb6d421b65039cc3bed46a8bfeae89f2ed51fe6b605197991b4ed4"
+      },
+      {
+        "bytes": 5808,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/compiler.py",
+        "sha256": "c40542b260eabbb1282645ab39d8baad1afb5134f35bd5a16321c80c927dbee3"
+      },
+      {
+        "bytes": 13811,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/controlled_probe.py",
+        "sha256": "23567ebd1e935a2a6cb236db9b3c0cd85b8987a4630c0d8ba63f69d4fd1d9a60"
+      },
+      {
+        "bytes": 5750,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/doubt_gate.py",
+        "sha256": "24b0980ce87bc749bbee84aa129fe039425d9ac706a3e89ee17be633fe8089cb"
+      },
+      {
+        "bytes": 9919,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/kernel_forge.py",
+        "sha256": "53249c1d7376bf78c67a56774fff6932c86cb2d2e94567ab7d7f1e7649478a97"
+      },
+      {
+        "bytes": 2225,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/live_reasoner.py",
+        "sha256": "c921b6bf13ee48c0452c5d6b0e4d909fed38e85d915e969c4e9435d9223bb6c5"
+      },
+      {
+        "bytes": 3389,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/mcq_adapter.py",
+        "sha256": "6aab4daeef1e2aa510ab43472abe5f4c38d842774caf03e755d53435098eeac3"
+      },
+      {
+        "bytes": 10869,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/planner.py",
+        "sha256": "ec401d584e962cd091ea6117e41c4ba28cc2164a7381429532acae5840eac3f9"
+      },
+      {
+        "bytes": 7017,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/realtime.py",
+        "sha256": "b978016ab72c1846cac640cd0b9e8647693f21e0f0079524c44bd06b9235f0b0"
+      },
+      {
+        "bytes": 15639,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/reasoner.py",
+        "sha256": "94c519fa5c6e71d948caf80c76d1adb3270a4b942f7e01e12db0832cb019919c"
+      },
+      {
+        "bytes": 11442,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/relational_object_compiler.py",
+        "sha256": "fdfdec0830ccd5b2b7bed7d6ca13ed23bcae376f078104de8280bed630e996e3"
+      },
+      {
+        "bytes": 9251,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/relational_object_shadow.py",
+        "sha256": "f116f1444ead377e25a1e06a99f8df63924456406d159e9a862760d319de4476"
+      },
+      {
+        "bytes": 2277,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/system_router.py",
+        "sha256": "b51d196570a13570c8f5b390b00576cdc4a589feefd28958f675c55bd5bddfb2"
+      },
+      {
+        "bytes": 8708,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/exam_answer.py",
+        "sha256": "3b286ded9ccc0fcd421b340e4939befb813881c976bc21b00b9de57d52ebe459"
+      },
+      {
+        "bytes": 5697,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/deliberator_controlled_probe.py",
+        "sha256": "93172180315feb0d972c9af13ffd83ccc71f983b8365ccfb5680ee5c63f1bcfe"
+      }
+    ],
+    "datasets": [],
+    "dependencies": [
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 108876,
+        "files": 1,
+        "kind": "file",
+        "path": "projects/realcity/package-lock.json",
+        "sha256": "eb207ade05b3040a318cd581b241fbd3d5be2bb0cf045c53d22f4798b6f38cf0"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      }
+    ],
+    "suites": [
+      {
+        "bytes": 4572,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/tests/test_deliberator_compiler.py",
+        "sha256": "c8f6305ed06f4a38d134c0d97397dc671ef798828370dd83d675af0d9f66f4be"
+      },
+      {
+        "bytes": 8931,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+        "sha256": "570b9f270d3929964c0bf88bbbf9d23a7532c068579100637f8d49fa5ec59810"
+      }
+    ]
+  },
+  "manifest_hash": "6d396442331c81b8da5e75fc38b87ff7910fad73dfcb68a0b92e6af1e361a787",
+  "mutation_sensitive": {
+    "after": [
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 1263178,
+        "files": 55,
+        "kind": "directory",
+        "path": "data/eval",
+        "sha256": "5ba96d89c92a53d97addc9e2b45fd1910f4a24b9aecb5e0995c38f11e90aba8b"
+      },
+      {
+        "bytes": 20844,
+        "files": 1,
+        "kind": "file",
+        "path": "data/eval/catalog/baseline_suite_v1.json",
+        "sha256": "c6c5bf745b6a5f6875417b842764af862f0364512383d6f9164baee426790b5f"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 257,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/__init__.py",
+        "sha256": "dc6d4c93fcaea3aa914596fc495a5a8c2ae706dae0a55183c3a93ba4cec50738"
+      },
+      {
+        "bytes": 2592,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/adjudicator.py",
+        "sha256": "a7047b771b45fc920acdf73d7831dd26a656de220b485a98624952a43a2768e1"
+      },
+      {
+        "bytes": 26391,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/back_chain.py",
+        "sha256": "e2572c9804cb6d421b65039cc3bed46a8bfeae89f2ed51fe6b605197991b4ed4"
+      },
+      {
+        "bytes": 5808,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/compiler.py",
+        "sha256": "c40542b260eabbb1282645ab39d8baad1afb5134f35bd5a16321c80c927dbee3"
+      },
+      {
+        "bytes": 13811,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/controlled_probe.py",
+        "sha256": "23567ebd1e935a2a6cb236db9b3c0cd85b8987a4630c0d8ba63f69d4fd1d9a60"
+      },
+      {
+        "bytes": 5750,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/doubt_gate.py",
+        "sha256": "24b0980ce87bc749bbee84aa129fe039425d9ac706a3e89ee17be633fe8089cb"
+      },
+      {
+        "bytes": 9919,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/kernel_forge.py",
+        "sha256": "53249c1d7376bf78c67a56774fff6932c86cb2d2e94567ab7d7f1e7649478a97"
+      },
+      {
+        "bytes": 2225,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/live_reasoner.py",
+        "sha256": "c921b6bf13ee48c0452c5d6b0e4d909fed38e85d915e969c4e9435d9223bb6c5"
+      },
+      {
+        "bytes": 3389,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/mcq_adapter.py",
+        "sha256": "6aab4daeef1e2aa510ab43472abe5f4c38d842774caf03e755d53435098eeac3"
+      },
+      {
+        "bytes": 10869,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/planner.py",
+        "sha256": "ec401d584e962cd091ea6117e41c4ba28cc2164a7381429532acae5840eac3f9"
+      },
+      {
+        "bytes": 7017,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/realtime.py",
+        "sha256": "b978016ab72c1846cac640cd0b9e8647693f21e0f0079524c44bd06b9235f0b0"
+      },
+      {
+        "bytes": 15639,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/reasoner.py",
+        "sha256": "94c519fa5c6e71d948caf80c76d1adb3270a4b942f7e01e12db0832cb019919c"
+      },
+      {
+        "bytes": 11442,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/relational_object_compiler.py",
+        "sha256": "fdfdec0830ccd5b2b7bed7d6ca13ed23bcae376f078104de8280bed630e996e3"
+      },
+      {
+        "bytes": 9251,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/relational_object_shadow.py",
+        "sha256": "f116f1444ead377e25a1e06a99f8df63924456406d159e9a862760d319de4476"
+      },
+      {
+        "bytes": 2277,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/system_router.py",
+        "sha256": "b51d196570a13570c8f5b390b00576cdc4a589feefd28958f675c55bd5bddfb2"
+      },
+      {
+        "bytes": 8708,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/exam_answer.py",
+        "sha256": "3b286ded9ccc0fcd421b340e4939befb813881c976bc21b00b9de57d52ebe459"
+      },
+      {
+        "bytes": 4572,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/tests/test_deliberator_compiler.py",
+        "sha256": "c8f6305ed06f4a38d134c0d97397dc671ef798828370dd83d675af0d9f66f4be"
+      },
+      {
+        "bytes": 8931,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+        "sha256": "570b9f270d3929964c0bf88bbbf9d23a7532c068579100637f8d49fa5ec59810"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 108876,
+        "files": 1,
+        "kind": "file",
+        "path": "projects/realcity/package-lock.json",
+        "sha256": "eb207ade05b3040a318cd581b241fbd3d5be2bb0cf045c53d22f4798b6f38cf0"
+      },
+      {
+        "bytes": 16895624,
+        "files": 127,
+        "kind": "directory",
+        "path": "reports/benchmarks",
+        "sha256": "aaa0e3a07de304624e062d5bd98bee644ea15e4192d4ebfe8b7e8c66c9e01d9d"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      },
+      {
+        "bytes": 5697,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/deliberator_controlled_probe.py",
+        "sha256": "93172180315feb0d972c9af13ffd83ccc71f983b8365ccfb5680ee5c63f1bcfe"
+      }
+    ],
+    "automatic_input_paths": [
+      "apps/api/requirements.txt",
+      "data/eval/catalog/baseline_suite_v1.json",
+      "deploy/requirements-cloud.txt",
+      "deploy/requirements-voice.txt",
+      "package-lock.json",
+      "packages/cgsr/pyproject.toml",
+      "packages/datagate/pyproject.toml",
+      "packages/guard/pyproject.toml",
+      "packages/knowledge_bakery/pyproject.toml",
+      "packages/model/pyproject.toml",
+      "packages/neuro_efficiency/pyproject.toml",
+      "packages/ontology_forge/pyproject.toml",
+      "packages/rag_engine/pyproject.toml",
+      "packages/reasoning_vm/deliberator/__init__.py",
+      "packages/reasoning_vm/deliberator/adjudicator.py",
+      "packages/reasoning_vm/deliberator/back_chain.py",
+      "packages/reasoning_vm/deliberator/compiler.py",
+      "packages/reasoning_vm/deliberator/controlled_probe.py",
+      "packages/reasoning_vm/deliberator/doubt_gate.py",
+      "packages/reasoning_vm/deliberator/kernel_forge.py",
+      "packages/reasoning_vm/deliberator/live_reasoner.py",
+      "packages/reasoning_vm/deliberator/mcq_adapter.py",
+      "packages/reasoning_vm/deliberator/planner.py",
+      "packages/reasoning_vm/deliberator/realtime.py",
+      "packages/reasoning_vm/deliberator/reasoner.py",
+      "packages/reasoning_vm/deliberator/relational_object_compiler.py",
+      "packages/reasoning_vm/deliberator/relational_object_shadow.py",
+      "packages/reasoning_vm/deliberator/system_router.py",
+      "packages/reasoning_vm/exam_answer.py",
+      "packages/reasoning_vm/tests/test_deliberator_compiler.py",
+      "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+      "packages/rhfc/pyproject.toml",
+      "packages/seed_research/pyproject.toml",
+      "packages/trainer/pyproject.toml",
+      "projects/realcity/package-lock.json",
+      "requirements-edge.txt",
+      "scripts/deliberator_controlled_probe.py"
+    ],
+    "before": [
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 1263178,
+        "files": 55,
+        "kind": "directory",
+        "path": "data/eval",
+        "sha256": "5ba96d89c92a53d97addc9e2b45fd1910f4a24b9aecb5e0995c38f11e90aba8b"
+      },
+      {
+        "bytes": 20844,
+        "files": 1,
+        "kind": "file",
+        "path": "data/eval/catalog/baseline_suite_v1.json",
+        "sha256": "c6c5bf745b6a5f6875417b842764af862f0364512383d6f9164baee426790b5f"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 257,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/__init__.py",
+        "sha256": "dc6d4c93fcaea3aa914596fc495a5a8c2ae706dae0a55183c3a93ba4cec50738"
+      },
+      {
+        "bytes": 2592,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/adjudicator.py",
+        "sha256": "a7047b771b45fc920acdf73d7831dd26a656de220b485a98624952a43a2768e1"
+      },
+      {
+        "bytes": 26391,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/back_chain.py",
+        "sha256": "e2572c9804cb6d421b65039cc3bed46a8bfeae89f2ed51fe6b605197991b4ed4"
+      },
+      {
+        "bytes": 5808,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/compiler.py",
+        "sha256": "c40542b260eabbb1282645ab39d8baad1afb5134f35bd5a16321c80c927dbee3"
+      },
+      {
+        "bytes": 13811,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/controlled_probe.py",
+        "sha256": "23567ebd1e935a2a6cb236db9b3c0cd85b8987a4630c0d8ba63f69d4fd1d9a60"
+      },
+      {
+        "bytes": 5750,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/doubt_gate.py",
+        "sha256": "24b0980ce87bc749bbee84aa129fe039425d9ac706a3e89ee17be633fe8089cb"
+      },
+      {
+        "bytes": 9919,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/kernel_forge.py",
+        "sha256": "53249c1d7376bf78c67a56774fff6932c86cb2d2e94567ab7d7f1e7649478a97"
+      },
+      {
+        "bytes": 2225,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/live_reasoner.py",
+        "sha256": "c921b6bf13ee48c0452c5d6b0e4d909fed38e85d915e969c4e9435d9223bb6c5"
+      },
+      {
+        "bytes": 3389,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/mcq_adapter.py",
+        "sha256": "6aab4daeef1e2aa510ab43472abe5f4c38d842774caf03e755d53435098eeac3"
+      },
+      {
+        "bytes": 10869,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/planner.py",
+        "sha256": "ec401d584e962cd091ea6117e41c4ba28cc2164a7381429532acae5840eac3f9"
+      },
+      {
+        "bytes": 7017,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/realtime.py",
+        "sha256": "b978016ab72c1846cac640cd0b9e8647693f21e0f0079524c44bd06b9235f0b0"
+      },
+      {
+        "bytes": 15639,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/reasoner.py",
+        "sha256": "94c519fa5c6e71d948caf80c76d1adb3270a4b942f7e01e12db0832cb019919c"
+      },
+      {
+        "bytes": 11442,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/relational_object_compiler.py",
+        "sha256": "fdfdec0830ccd5b2b7bed7d6ca13ed23bcae376f078104de8280bed630e996e3"
+      },
+      {
+        "bytes": 9251,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/relational_object_shadow.py",
+        "sha256": "f116f1444ead377e25a1e06a99f8df63924456406d159e9a862760d319de4476"
+      },
+      {
+        "bytes": 2277,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/deliberator/system_router.py",
+        "sha256": "b51d196570a13570c8f5b390b00576cdc4a589feefd28958f675c55bd5bddfb2"
+      },
+      {
+        "bytes": 8708,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/exam_answer.py",
+        "sha256": "3b286ded9ccc0fcd421b340e4939befb813881c976bc21b00b9de57d52ebe459"
+      },
+      {
+        "bytes": 4572,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/tests/test_deliberator_compiler.py",
+        "sha256": "c8f6305ed06f4a38d134c0d97397dc671ef798828370dd83d675af0d9f66f4be"
+      },
+      {
+        "bytes": 8931,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+        "sha256": "570b9f270d3929964c0bf88bbbf9d23a7532c068579100637f8d49fa5ec59810"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 108876,
+        "files": 1,
+        "kind": "file",
+        "path": "projects/realcity/package-lock.json",
+        "sha256": "eb207ade05b3040a318cd581b241fbd3d5be2bb0cf045c53d22f4798b6f38cf0"
+      },
+      {
+        "bytes": 16895624,
+        "files": 127,
+        "kind": "directory",
+        "path": "reports/benchmarks",
+        "sha256": "aaa0e3a07de304624e062d5bd98bee644ea15e4192d4ebfe8b7e8c66c9e01d9d"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      },
+      {
+        "bytes": 5697,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/deliberator_controlled_probe.py",
+        "sha256": "93172180315feb0d972c9af13ffd83ccc71f983b8365ccfb5680ee5c63f1bcfe"
+      }
+    ],
+    "explicit_paths": [
+      "data/eval",
+      "reports/benchmarks"
+    ],
+    "observation_scope": "All declared suites, datasets, artifacts, dependency descriptors, the catalog, and explicit mutation-sensitive paths. Git tracked and non-ignored untracked state is also fingerprinted; ignored paths outside these surfaces are not observed.",
+    "observed_path_mutation_detected": false,
+    "paths": [
+      "apps/api/requirements.txt",
+      "data/eval",
+      "data/eval/catalog/baseline_suite_v1.json",
+      "deploy/requirements-cloud.txt",
+      "deploy/requirements-voice.txt",
+      "package-lock.json",
+      "packages/cgsr/pyproject.toml",
+      "packages/datagate/pyproject.toml",
+      "packages/guard/pyproject.toml",
+      "packages/knowledge_bakery/pyproject.toml",
+      "packages/model/pyproject.toml",
+      "packages/neuro_efficiency/pyproject.toml",
+      "packages/ontology_forge/pyproject.toml",
+      "packages/rag_engine/pyproject.toml",
+      "packages/reasoning_vm/deliberator/__init__.py",
+      "packages/reasoning_vm/deliberator/adjudicator.py",
+      "packages/reasoning_vm/deliberator/back_chain.py",
+      "packages/reasoning_vm/deliberator/compiler.py",
+      "packages/reasoning_vm/deliberator/controlled_probe.py",
+      "packages/reasoning_vm/deliberator/doubt_gate.py",
+      "packages/reasoning_vm/deliberator/kernel_forge.py",
+      "packages/reasoning_vm/deliberator/live_reasoner.py",
+      "packages/reasoning_vm/deliberator/mcq_adapter.py",
+      "packages/reasoning_vm/deliberator/planner.py",
+      "packages/reasoning_vm/deliberator/realtime.py",
+      "packages/reasoning_vm/deliberator/reasoner.py",
+      "packages/reasoning_vm/deliberator/relational_object_compiler.py",
+      "packages/reasoning_vm/deliberator/relational_object_shadow.py",
+      "packages/reasoning_vm/deliberator/system_router.py",
+      "packages/reasoning_vm/exam_answer.py",
+      "packages/reasoning_vm/tests/test_deliberator_compiler.py",
+      "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+      "packages/rhfc/pyproject.toml",
+      "packages/seed_research/pyproject.toml",
+      "packages/trainer/pyproject.toml",
+      "projects/realcity/package-lock.json",
+      "reports/benchmarks",
+      "requirements-edge.txt",
+      "scripts/deliberator_controlled_probe.py"
+    ]
+  },
+  "network_control": {
+    "enforced": false,
+    "environment_flag": "ATANOR_NETWORK_DISABLED",
+    "mechanism": "cooperative_environment_flag_only",
+    "note": "The runner strips nonessential environment variables and sets an offline flag, but it does not install an OS firewall or network namespace.",
+    "requested": "offline"
+  },
+  "platform": {
+    "hardware": {
+      "gpu": {
+        "reason": "baseline runner does not invoke vendor-specific tooling",
+        "status": "not_probed"
+      },
+      "logical_cpu_count": 32,
+      "memory_probe": "windows_global_memory_status",
+      "physical_memory_bytes": 33441435648,
+      "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD"
+    },
+    "machine": "AMD64",
+    "python_environment": {
+      "cache_tag": "cpython-313",
+      "executable": {
+        "bytes": 105288,
+        "name": "python.exe",
+        "sha256": "f77193cf0405ab440c39324bdb2f8864596321c1df888adbbe357f3d760f4716"
+      },
+      "implementation": "CPython",
+      "installed_distributions": {
+        "entry_count": 333,
+        "name_version_sha256": "fd49f545a0d0fbff62912589398bc4fb6ddeb6a1f681c2e0a42d7d8b67bf20d5",
+        "scope": "normalized_distribution_name_and_version_only"
+      },
+      "version": "3.13.12"
+    },
+    "python_environment_after": {
+      "cache_tag": "cpython-313",
+      "executable": {
+        "bytes": 105288,
+        "name": "python.exe",
+        "sha256": "f77193cf0405ab440c39324bdb2f8864596321c1df888adbbe357f3d760f4716"
+      },
+      "implementation": "CPython",
+      "installed_distributions": {
+        "entry_count": 333,
+        "name_version_sha256": "fd49f545a0d0fbff62912589398bc4fb6ddeb6a1f681c2e0a42d7d8b67bf20d5",
+        "scope": "normalized_distribution_name_and_version_only"
+      },
+      "version": "3.13.12"
+    },
+    "python_environment_mutation_detected": false,
+    "python_implementation": "CPython",
+    "python_version": "3.13.12",
+    "release": "11",
+    "system": "Windows"
+  },
+  "profile": {
+    "max_total_seconds": 10,
+    "name": "reasoning_control",
+    "worst_case_seconds": 10
+  },
+  "recipes": [
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+            "packages/reasoning_vm/tests/test_deliberator_compiler.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 0.453744,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "7595c36e9a5f14ff001b5f9e99ad375b030a5f5d236cc2c84dcd458eb3be96a0",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 81,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 81,
+            "sha256": "f7e4ad4ed6eadbcec67657213fec22042823489962bbfdfa48122921f037ce8b",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 5
+        },
+        {
+          "attempt": 2,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+            "packages/reasoning_vm/tests/test_deliberator_compiler.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 0.805193,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "7595c36e9a5f14ff001b5f9e99ad375b030a5f5d236cc2c84dcd458eb3be96a0",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 81,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 81,
+            "sha256": "f7e4ad4ed6eadbcec67657213fec22042823489962bbfdfa48122921f037ce8b",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 5
+        }
+      ],
+      "id": "g0_deliberator_control",
+      "repeat_metrics": {
+        "attempts_completed": 2,
+        "attempts_requested": 2,
+        "benchmark_metrics": {
+          "accuracy": null,
+          "coverage": null,
+          "firing_rate": null,
+          "latency_ms": null,
+          "resource_use": null,
+          "status": "not_parsed_by_recipe_orchestrator"
+        },
+        "evidence_kind": "command_execution_only",
+        "failed_attempts": 0,
+        "outcome_digest_counts": {
+          "7595c36e9a5f14ff001b5f9e99ad375b030a5f5d236cc2c84dcd458eb3be96a0": 2
+        },
+        "output_limit_exceeded_attempts": 0,
+        "stable_outcome": true,
+        "successful_attempts": 2,
+        "successful_reproduced": true,
+        "timeouts": 0
+      }
+    }
+  ],
+  "schema": "atanor.baseline-evidence-manifest.v1",
+  "source": {
+    "excluded_evidence_output": "reports/baseline_evidence/g0_closure_reasoning_control_20260725_v1.manifest.json",
+    "git": {
+      "branch": "demo",
+      "clean": true,
+      "dirty_tracked_paths": {
+        "entry_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "head": "f512dff6176b9b8c08c073b7573ba2f60bbd861a",
+      "tracked_diff": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "untracked_paths": {
+        "bytes": 0,
+        "content_only_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "content_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "entry_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "git_after": {
+      "branch": "demo",
+      "clean": true,
+      "dirty_tracked_paths": {
+        "entry_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "head": "f512dff6176b9b8c08c073b7573ba2f60bbd861a",
+      "tracked_diff": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "untracked_paths": {
+        "bytes": 0,
+        "content_only_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "content_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "entry_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "repository_mutation_detected": false,
+    "runner": {
+      "bytes": 75794,
+      "implementation": "scripts.baseline_suite",
+      "location": "repository",
+      "path": "scripts/baseline_suite.py",
+      "sha256": "6ce35111ef693232f0c38b1720e724d5426c14f59b811d392f7181076a316002"
+    },
+    "runner_after": {
+      "bytes": 75794,
+      "implementation": "scripts.baseline_suite",
+      "location": "repository",
+      "path": "scripts/baseline_suite.py",
+      "sha256": "6ce35111ef693232f0c38b1720e724d5426c14f59b811d392f7181076a316002"
+    },
+    "runner_mutation_detected": false,
+    "sealed": true,
+    "sealed_scope": "git_tracked_and_nonignored_untracked_plus_recorded_input_surfaces_and_python_environment; ignored_paths_outside_recorded_surfaces_unobserved"
+  },
+  "successful": true,
+  "successful_reproduced": true
+}

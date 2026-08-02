@@ -1,0 +1,188 @@
+{
+  "session_id": "itt-test-seed4",
+  "created_at": "2026-07-20T09:09:42.449608+00:00",
+  "topic": "Should advanced AI models be open-sourced, or does that spread capability too dangerously?",
+  "rounds": 0,
+  "seat_of": {
+    "y": "A",
+    "x": "B",
+    "atanor": "C"
+  },
+  "transcript": [
+    {
+      "round": 1,
+      "seat": "A",
+      "speaker": "y",
+      "text": "ok"
+    },
+    {
+      "round": 1,
+      "seat": "B",
+      "speaker": "x",
+      "text": "ok"
+    },
+    {
+      "round": 1,
+      "seat": "C",
+      "speaker": "atanor",
+      "text": "ok"
+    },
+    {
+      "round": 2,
+      "seat": "A",
+      "speaker": "y",
+      "text": "ok"
+    },
+    {
+      "round": 2,
+      "seat": "B",
+      "speaker": "x",
+      "text": "ok"
+    },
+    {
+      "round": 2,
+      "seat": "C",
+      "speaker": "atanor",
+      "text": "ok"
+    },
+    {
+      "round": 3,
+      "seat": "A",
+      "speaker": "y",
+      "text": "ok"
+    },
+    {
+      "round": 3,
+      "seat": "B",
+      "speaker": "x",
+      "text": "ok"
+    },
+    {
+      "round": 3,
+      "seat": "C",
+      "speaker": "atanor",
+      "text": "ok"
+    },
+    {
+      "round": 4,
+      "seat": "A",
+      "speaker": "y",
+      "text": "ok"
+    },
+    {
+      "round": 4,
+      "seat": "B",
+      "speaker": "x",
+      "text": "ok"
+    },
+    {
+      "round": 4,
+      "seat": "C",
+      "speaker": "atanor",
+      "text": "ok"
+    },
+    {
+      "round": 5,
+      "seat": "A",
+      "speaker": "y",
+      "text": "ok"
+    },
+    {
+      "round": 5,
+      "seat": "B",
+      "speaker": "x",
+      "text": "ok"
+    },
+    {
+      "round": 5,
+      "seat": "C",
+      "speaker": "atanor",
+      "text": "ok"
+    },
+    {
+      "round": 6,
+      "seat": "A",
+      "speaker": "y",
+      "text": "ok"
+    },
+    {
+      "round": 6,
+      "seat": "B",
+      "speaker": "x",
+      "text": "ok"
+    },
+    {
+      "round": 6,
+      "seat": "C",
+      "speaker": "atanor",
+      "text": "ok"
+    },
+    {
+      "round": 7,
+      "seat": "A",
+      "speaker": "y",
+      "text": "ok"
+    },
+    {
+      "round": 7,
+      "seat": "B",
+      "speaker": "x",
+      "text": "ok"
+    },
+    {
+      "round": 7,
+      "seat": "C",
+      "speaker": "atanor",
+      "text": "ok"
+    },
+    {
+      "round": 8,
+      "seat": "A",
+      "speaker": "y",
+      "text": "ok"
+    },
+    {
+      "round": 8,
+      "seat": "B",
+      "speaker": "x",
+      "text": "ok"
+    },
+    {
+      "round": 8,
+      "seat": "C",
+      "speaker": "atanor",
+      "text": "ok"
+    }
+  ],
+  "votes": {
+    "y": "unparsed",
+    "x": "unparsed",
+    "atanor": "unparsed"
+  },
+  "vote_raw": {
+    "y": "ok",
+    "x": "ok",
+    "atanor": "ok"
+  },
+  "peer_evaluation": {
+    "evaluations": {
+      "x": {
+        "assessment": "ok",
+        "scores": {}
+      },
+      "y": {
+        "assessment": "ok",
+        "scores": {}
+      }
+    },
+    "quarantine": "telemetry only; never tunes ATANOR (G-ITT4)"
+  },
+  "score": {
+    "judges_picked_atanor": 0,
+    "n_judges": 2,
+    "both_judges_picked_atanor": false,
+    "atanor_said_neither": false,
+    "atanor_humanity_claims": 0
+  },
+  "quarantine": "NEVER ingest into any learner; never tune against judge verdicts (G-ITT4)."
+}

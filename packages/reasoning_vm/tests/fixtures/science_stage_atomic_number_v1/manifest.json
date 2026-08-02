@@ -1,0 +1,54 @@
+{
+  "schema_version": "atanor.science-stage.v1",
+  "stage_id": "science-stage-atomic-number-e4-v1",
+  "classification": "frozen_development_probe_not_e5",
+  "completion_state": "complete",
+  "evaluation_only": true,
+  "promotion_eligible": false,
+  "row_count": 15,
+  "relation_profile": [
+    "atomic_number"
+  ],
+  "functional_predicates": [
+    "atomic_number"
+  ],
+  "object_semantics": {
+    "atomic_number": {
+      "kind": "integer",
+      "minimum": 1,
+      "maximum": 200,
+      "unit": "dimensionless"
+    }
+  },
+  "facts_file": {
+    "path": "facts.jsonl",
+    "bytes": 2369,
+    "sha256": "13616e25d28bbcfae8bd2b04d65396320c2760334cacf11bbc09a65e984e5f84"
+  },
+  "evidence_file": {
+    "path": "evidence.jsonl",
+    "bytes": 3786,
+    "sha256": "91e85295e8e5635c8dceb5a2682ac15e61f22ea950c6b3bb4c0960a767f65399"
+  },
+  "provenance_policy": {
+    "row_aligned": true,
+    "source_revision_required": true,
+    "source_record_id_required": true,
+    "license_required": true,
+    "allowed_license": "CC0-1.0",
+    "quarantined_rows_allowed": false
+  },
+  "source_dataset": {
+    "name": "Wikidata",
+    "property": "P1086",
+    "snapshot_kind": "per_entity_immutable_revision",
+    "license": "CC0-1.0"
+  },
+  "claims": {
+    "e4_only": true,
+    "e5_eligible": false,
+    "benchmark_capability_claimed": false,
+    "independent_evaluator_claimed": false
+  },
+  "manifest_checksum_sha256": "67b5d5c909e69c72aef2d83a1e4bf24ac4020cf02dd2c71a212ddb20f33f869f"
+}

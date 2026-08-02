@@ -1,0 +1,121 @@
+id,role,zone,spawn_x,spawn_z
+npc0,gardener,suburban,-819.489,-218.308
+npc1,retiree,suburban,-820.511,-151.731
+npc2,gardener,suburban,-821.517,-138.439
+npc3,gardener,suburban,-786.508,-80.960
+npc4,dog walker,suburban,-818.231,-30.470
+npc5,retiree,suburban,-788.877,-30.056
+npc6,deliverer,suburban,-810.307,34.018
+npc7,deliverer,suburban,-797.069,86.776
+npc8,deliverer,suburban,-794.256,146.788
+npc9,gardener,suburban,-821.464,218.187
+npc10,gardener,suburban,-746.691,-398.694
+npc11,gardener,suburban,-767.598,-378.869
+npc12,gardener,suburban,-735.234,-317.159
+npc13,kid,suburban,-742.774,-212.920
+npc14,dog walker,suburban,-766.694,-98.654
+npc15,kid,suburban,-735.229,-105.157
+npc16,kid,suburban,-748.050,-33.854
+npc17,dog walker,suburban,-755.843,31.579
+npc18,kid,suburban,-743.689,139.291
+npc19,kid,suburban,-767.100,163.782
+npc20,dog walker,suburban,-769.137,201.244
+npc21,gardener,suburban,-753.396,192.939
+npc22,deliverer,suburban,-745.046,270.870
+npc23,dog walker,suburban,-761.128,402.738
+npc24,dog walker,suburban,-745.441,376.836
+npc25,gardener,suburban,-687.141,-379.798
+npc26,gardener,suburban,-691.721,-344.954
+npc27,gardener,suburban,-693.127,-274.165
+npc28,kid,suburban,-684.178,-204.094
+npc29,deliverer,suburban,-684.810,-196.582
+npc30,retiree,suburban,-691.462,-150.649
+npc31,gardener,suburban,-686.836,-92.393
+npc32,retiree,suburban,-677.267,-69.731
+npc33,gardener,suburban,-678.222,-22.615
+npc34,deliverer,suburban,-707.495,21.523
+npc35,dog walker,suburban,-685.762,36.876
+npc36,dog walker,suburban,-678.822,95.785
+npc37,retiree,suburban,-701.600,217.095
+npc38,kid,suburban,-684.752,206.568
+npc39,dog walker,suburban,-694.385,256.725
+npc40,deliverer,suburban,-690.205,256.094
+npc41,deliverer,suburban,-694.759,438.028
+npc42,dog walker,suburban,-633.881,-488.950
+npc43,kid,suburban,-631.404,-509.703
+npc44,deliverer,suburban,-633.883,-440.541
+npc45,deliverer,suburban,-631.040,-378.218
+npc46,gardener,suburban,-635.285,-326.651
+npc47,kid,suburban,-619.413,-323.105
+npc48,kid,suburban,-616.836,-267.211
+npc49,deliverer,suburban,-636.782,-144.827
+npc50,gardener,suburban,-644.611,-172.747
+npc51,gardener,suburban,-636.789,-42.530
+npc52,retiree,suburban,-630.917,-44.661
+npc53,nurse,residential,-622.319,42.748
+npc54,kid,suburban,-648.898,25.341
+npc55,deliverer,suburban,-623.673,130.442
+npc56,kid,suburban,-646.238,216.853
+npc57,dog walker,suburban,-609.760,285.171
+npc58,kid,suburban,-640.811,283.899
+npc59,deliverer,suburban,-637.868,441.884
+npc60,retiree,suburban,-558.501,-558.690
+npc61,dog walker,suburban,-561.381,-583.477
+npc62,gardener,suburban,-571.761,-503.710
+npc63,retiree,suburban,-587.723,-337.080
+npc64,retiree,suburban,-567.263,-271.232
+npc65,kid,suburban,-570.209,-273.838
+npc66,jogger,residential,-572.643,-148.392
+npc67,jogger,residential,-570.146,-75.213
+npc68,student,residential,-561.469,-75.058
+npc69,student,residential,-574.974,-18.071
+npc70,student,residential,-566.757,20.788
+npc71,artist,residential,-555.266,19.215
+npc72,gardener,suburban,-551.953,280.895
+npc73,dog walker,suburban,-581.613,280.013
+npc74,kid,suburban,-568.354,333.108
+npc75,kid,suburban,-567.321,322.469
+npc76,gardener,suburban,-574.328,393.336
+npc77,dog walker,suburban,-564.838,452.981
+npc78,gardener,suburban,-579.737,565.587
+npc79,retiree,suburban,-570.700,561.999
+npc80,gardener,suburban,-488.284,-620.537
+npc81,kid,suburban,-487.840,-635.010
+npc82,gardener,suburban,-493.734,-578.131
+npc83,dog walker,suburban,-511.211,-525.316
+npc84,deliverer,suburban,-522.404,-526.976
+npc85,kid,suburban,-495.761,-443.586
+npc86,deliverer,suburban,-497.630,-446.513
+npc87,dog walker,suburban,-498.742,-386.352
+npc88,retiree,suburban,-501.433,-396.244
+npc89,parent,residential,-521.532,-338.282
+npc90,jogger,residential,-520.319,-285.977
+npc91,jogger,residential,-508.769,-215.014
+npc92,artist,residential,-517.685,-130.297
+npc93,student,residential,-509.605,-97.446
+npc94,jogger,residential,-505.970,-96.868
+npc95,jogger,residential,-506.565,-28.057
+npc96,student,residential,-528.629,-26.503
+npc97,nurse,residential,-520.556,107.387
+npc98,artist,residential,-503.127,99.433
+npc99,student,residential,-521.987,196.776
+npc100,student,residential,-510.602,278.244
+npc101,retiree,suburban,-525.403,379.677
+npc102,retiree,suburban,-499.770,438.542
+npc103,kid,suburban,-498.626,456.850
+npc104,dog walker,suburban,-513.408,626.694
+npc105,retiree,suburban,-499.302,642.437
+npc106,kid,suburban,-434.487,-688.348
+npc107,gardener,suburban,-448.448,-628.888
+npc108,dog walker,suburban,-446.796,-575.129
+npc109,dog walker,suburban,-468.634,-497.849
+npc110,kid,suburban,-448.341,-522.356
+npc111,student,residential,-445.418,-346.740
+npc112,parent,residential,-466.445,-310.365
+npc113,artist,residential,-453.139,-274.962
+npc114,nurse,residential,-436.863,-188.770
+npc115,jogger,residential,-439.095,-201.207
+npc116,parent,residential,-446.777,-159.808
+npc117,parent,residential,-446.974,-92.921
+npc118,student,residential,-443.097,-90.273
+npc119,student,residential,-433.495,30.844

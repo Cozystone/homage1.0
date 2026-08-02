@@ -1,0 +1,192 @@
+subject,relation,object
+France,capital,Paris
+Japan,capital,Tokyo
+Germany,capital,Berlin
+Italy,capital,Rome
+Spain,capital,Madrid
+Portugal,capital,Lisbon
+United Kingdom,capital,London
+Ireland,capital,Dublin
+Netherlands,capital,Amsterdam
+Belgium,capital,Brussels
+Switzerland,capital,Bern
+Austria,capital,Vienna
+Sweden,capital,Stockholm
+Norway,capital,Oslo
+Denmark,capital,Copenhagen
+Finland,capital,Helsinki
+Poland,capital,Warsaw
+Greece,capital,Athens
+Russia,capital,Moscow
+Ukraine,capital,Kyiv
+Turkey,capital,Ankara
+Egypt,capital,Cairo
+Morocco,capital,Rabat
+Nigeria,capital,Abuja
+Kenya,capital,Nairobi
+South Africa,capital,Pretoria
+Ethiopia,capital,Addis Ababa
+Ghana,capital,Accra
+China,capital,Beijing
+India,capital,New Delhi
+Pakistan,capital,Islamabad
+Bangladesh,capital,Dhaka
+Indonesia,capital,Jakarta
+Thailand,capital,Bangkok
+Vietnam,capital,Hanoi
+South Korea,capital,Seoul
+Malaysia,capital,Kuala Lumpur
+Philippines,capital,Manila
+Saudi Arabia,capital,Riyadh
+Iran,capital,Tehran
+Iraq,capital,Baghdad
+United Arab Emirates,capital,Abu Dhabi
+Brazil,capital,Brasília
+Argentina,capital,Buenos Aires
+Chile,capital,Santiago
+Peru,capital,Lima
+Colombia,capital,Bogotá
+Mexico,capital,Mexico City
+Canada,capital,Ottawa
+United States,capital,"Washington, D.C."
+Australia,capital,Canberra
+New Zealand,capital,Wellington
+Cuba,capital,Havana
+Japan,population,124 million
+Germany,population,83 million
+Italy,population,59 million
+Spain,population,48 million
+United Kingdom,population,67 million
+Russia,population,144 million
+China,population,1.41 billion
+India,population,1.43 billion
+United States,population,335 million
+Brazil,population,215 million
+Egypt,population,109 million
+Nigeria,population,223 million
+Indonesia,population,278 million
+Pakistan,population,241 million
+Bangladesh,population,171 million
+Mexico,population,128 million
+Canada,population,39 million
+South Korea,population,52 million
+Turkey,population,85 million
+Argentina,population,46 million
+Poland,population,38 million
+Vietnam,population,98 million
+Japan,currency,Japanese yen
+United States,currency,US dollar
+United Kingdom,currency,pound sterling
+France,currency,euro
+Germany,currency,euro
+Italy,currency,euro
+Spain,currency,euro
+Portugal,currency,euro
+Ireland,currency,euro
+Netherlands,currency,euro
+Greece,currency,euro
+Austria,currency,euro
+Belgium,currency,euro
+China,currency,renminbi
+India,currency,Indian rupee
+Russia,currency,Russian ruble
+Brazil,currency,Brazilian real
+Mexico,currency,Mexican peso
+Canada,currency,Canadian dollar
+Switzerland,currency,Swiss franc
+Sweden,currency,Swedish krona
+South Korea,currency,South Korean won
+Egypt,currency,Egyptian pound
+Australia,currency,Australian dollar
+Turkey,currency,Turkish lira
+France,official_language,French
+Japan,official_language,Japanese
+Germany,official_language,German
+Italy,official_language,Italian
+Spain,official_language,Spanish
+Portugal,official_language,Portuguese
+Brazil,official_language,Portuguese
+Russia,official_language,Russian
+China,official_language,Standard Chinese
+Egypt,official_language,Arabic
+Saudi Arabia,official_language,Arabic
+Mexico,official_language,Spanish
+Argentina,official_language,Spanish
+Netherlands,official_language,Dutch
+Greece,official_language,Greek
+Poland,official_language,Polish
+Sweden,official_language,Swedish
+Norway,official_language,Norwegian
+Turkey,official_language,Turkish
+South Korea,official_language,Korean
+Vietnam,official_language,Vietnamese
+Thailand,official_language,Thai
+India,official_language,Hindi
+Iran,official_language,Persian
+Israel,official_language,Hebrew
+Kenya,official_language,Swahili
+France,located_in,Europe
+Germany,located_in,Europe
+Italy,located_in,Europe
+Spain,located_in,Europe
+United Kingdom,located_in,Europe
+Russia,located_in,Europe
+Poland,located_in,Europe
+Greece,located_in,Europe
+Japan,located_in,Asia
+China,located_in,Asia
+India,located_in,Asia
+South Korea,located_in,Asia
+Vietnam,located_in,Asia
+Thailand,located_in,Asia
+Saudi Arabia,located_in,Asia
+Iran,located_in,Asia
+Egypt,located_in,Africa
+Nigeria,located_in,Africa
+Kenya,located_in,Africa
+South Africa,located_in,Africa
+Brazil,located_in,South America
+Argentina,located_in,South America
+United States,located_in,North America
+Canada,located_in,North America
+Australia,located_in,Oceania
+Hamlet,author,William Shakespeare
+Macbeth,author,William Shakespeare
+Romeo and Juliet,author,William Shakespeare
+Othello,author,William Shakespeare
+King Lear,author,William Shakespeare
+Pride and Prejudice,author,Jane Austen
+Emma,author,Jane Austen
+Sense and Sensibility,author,Jane Austen
+War and Peace,author,Leo Tolstoy
+Anna Karenina,author,Leo Tolstoy
+Crime and Punishment,author,Fyodor Dostoevsky
+The Brothers Karamazov,author,Fyodor Dostoevsky
+The Odyssey,author,Homer
+The Iliad,author,Homer
+Don Quixote,author,Miguel de Cervantes
+Frankenstein,author,Mary Shelley
+Moby-Dick,author,Herman Melville
+The Great Gatsby,author,F. Scott Fitzgerald
+Great Expectations,author,Charles Dickens
+Oliver Twist,author,Charles Dickens
+A Tale of Two Cities,author,Charles Dickens
+Jane Eyre,author,Charlotte Brontë
+Wuthering Heights,author,Emily Brontë
+Les Misérables,author,Victor Hugo
+The Divine Comedy,author,Dante Alighieri
+One Hundred Years of Solitude,author,Gabriel García Márquez
+Ulysses,author,James Joyce
+The Old Man and the Sea,author,Ernest Hemingway
+telephone,inventor,Alexander Graham Bell
+light bulb,inventor,Thomas Edison
+phonograph,inventor,Thomas Edison
+telegraph,inventor,Samuel Morse
+radio,inventor,Guglielmo Marconi
+dynamite,inventor,Alfred Nobel
+printing press,inventor,Johannes Gutenberg
+steam engine,inventor,James Watt
+airplane,inventor,the Wright brothers
+television,inventor,Philo Farnsworth
+World Wide Web,inventor,Tim Berners-Lee
+telescope,inventor,Hans Lippershey

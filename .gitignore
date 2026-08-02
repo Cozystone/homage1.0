@@ -1,0 +1,101 @@
+.venv/
+.codex-source/
+node_modules/
+# downloaded model weights (YOLO-World etc.) — never commit large binaries
+yolov8s-world*.pt
+yolov8*-world*.pt
+# bulk source corpora (Tatoeba etc.) — large, re-downloadable, not source
+data/corpora/
+.next/
+apps/web/.next/
+apps/web/out/
+build/
+dist/
+dist-artifacts/
+backups/
+apps/api/data/
+UI/
+# RealCity's source-level UI is product code, not the legacy root UI artifact.
+!projects/realcity/src/ui/
+!projects/realcity/src/ui/**
+Branding/
+src-tauri/target/
+src-tauri/binaries/homage-api-*
+src-tauri/certs/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+logs/
+tmp_*.log
+ATANOR_*BACKUP*.patch
+data/cleaned/
+data/rejected/
+data/metadata/
+data/*
+!data/*/
+data/*/**
+!data/*/proofs/
+!data/*/proofs/**
+!data/*/catalog/
+!data/*/catalog/**
+# sealed holdout eval batteries are tracked (Goodhart defence); running log stays ignored
+!data/eval/holdout_v1.jsonl
+# lane manifest is TRACKED — it is the source of truth audit_wiring.py checks code against,
+# not a data artifact (the built-but-unwired class this defends against needs it versioned)
+!data/graph_scale/LANES.json
+!data/eval/holdout_v2.jsonl
+!data/eval/holdout_v1.manifest.json
+!data/eval/holdout_v2.manifest.json
+!data/eval/holdout_exclusions.json
+# learned define-vs-relational router: small deterministic model artifact + its paraphrase
+# set are TRACKED (the trained weights are part of the system, and the held-out set backs a test)
+!data/relational_router/
+!data/relational_router/**
+reports/
+.tmp-msix-inspect*/
+homage-bench-*.bin
+/main.exe
+/main.pdb
+# data/ontology: ignore generated contents but TRACK the 4D relation-type schema
+# (config, not generated data). Dir itself is not excluded so the file can be re-included.
+data/ontology/*
+!data/ontology/relation_type_schema.jsonl
+data/memory/
+checkpoints/
+*.log
+.env
+.env.*
+!.env.example
+data/cleaned/
+data/rejected/
+data/metadata/
+apps/landing/.vercel
+
+# live runtime state (self-model, voice loop, local brain) - never commit
+/runtime/
+/apps/api/runtime/
+
+# local research probes and downloaded samples; promoted source belongs in packages/scripts
+/scratchpad/
+/_r2_backup_path.txt
+# orchestration mailbox traffic (protocol docs ARE committed)
+/orchestration/requests/
+/orchestration/responses/
+
+data/graph_scale/conceptnet_dump/
+data/graph_scale/phase_space_conceptnet/
+data/graph_scale/codebase_knowledge.jsonl
+
+# Office lock/temp files
+~$*
+data/evolution/arena_history.jsonl
+data/evolution/arena_daemon.log
+data/evolution/critic_genome.json
+data/evolution/critic_arena_history.jsonl
+data/evolution/diet_targets.jsonl
+
+# model weights — never in git (353MB CLIP etc.)
+weights/
+data/arc_agi/arc.tar.gz
+data/arc_agi/ARC-AGI-master/

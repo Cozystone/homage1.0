@@ -1,0 +1,33 @@
+# ATANOR desktop defaults (compiled into the system dconf db).
+# HARD RULE: one section header per group — dconf compile REJECTS duplicate
+# groups and the WHOLE db silently fails (stock Ubuntu look). Edit in place.
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/atanor/logo.png'
+picture-uri-dark='file:///usr/share/atanor/logo.png'
+picture-options='centered'
+primary-color='#000000'
+color-shading-type='solid'
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:///usr/share/atanor/logo.png'
+picture-options='centered'
+primary-color='#000000'
+
+[org/gnome/shell]
+favorite-apps=['atanor.desktop', 'chromium_chromium.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop']
+enabled-extensions=['dash-to-panel@jderose9.github.com', 'ubuntu-appindicators@ubuntu.com', 'atanor-orb@atanor.ai']
+# ding (desktop icons) is itself a desktop-type window and would fight the
+# ATANOR living wallpaper for the background layer — one owner only.
+disabled-extensions=['ubuntu-dock@ubuntu.com', 'ding@rastersoft.com']
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Yaru-dark'
+
+[org/gnome/mutter]
+center-new-windows=true
+
+[org/gnome/shell/extensions/dash-to-panel]
+panel-positions='{"0":"BOTTOM"}'
+appicon-margin=4
+show-favorites=true

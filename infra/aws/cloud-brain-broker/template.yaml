@@ -1,0 +1,298 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: ATANOR Cloud Brain Broker dev stack. Lowest-cost serverless control plane.
+
+Parameters:
+  StageName:
+    Type: String
+    Default: dev
+    AllowedPattern: "^[a-z0-9-]+$"
+  BrokerApiKey:
+    Type: String
+    Default: ""
+    NoEcho: true
+    Description: Optional shared secret for non-status broker routes.
+  AllowedOrigins:
+    Type: String
+    Default: "http://127.0.0.1:3022,http://localhost:3022"
+    Description: Comma-separated CORS origins.
+  BudgetAlertEmail:
+    Type: String
+    Default: ""
+    Description: Optional email for AWS Budget alerts. Leave blank to skip budgets.
+
+Conditions:
+  HasBudgetEmail: !Not [!Equals [!Ref BudgetAlertEmail, ""]]
+
+Globals:
+  Function:
+    Runtime: python3.11
+    Architectures:
+      - x86_64
+    Timeout: 5
+    MemorySize: 128
+    Tracing: Disabled
+    Environment:
+      Variables:
+        ATANOR_CLOUD_MODE: !Ref StageName
+        NODES_TABLE: !Ref NodesTable
+        TASKS_TABLE: !Ref TasksTable
+        FRAGMENTS_TABLE: !Ref FragmentsTable
+        CREDITS_TABLE: !Ref CreditsTable
+        FRAGMENTS_BUCKET: !Ref FragmentsBucket
+        BROKER_API_KEY: !Ref BrokerApiKey
+        ALLOWED_ORIGINS: !Ref AllowedOrigins
+
+Resources:
+  CloudBrainHttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: !Ref StageName
+      CorsConfiguration:
+        AllowOrigins: !Split [",", !Ref AllowedOrigins]
+        AllowMethods:
+          - GET
+          - POST
+          - OPTIONS
+        AllowHeaders:
+          - Content-Type
+          - Authorization
+          - X-ATANOR-API-Key
+        MaxAge: 300
+
+  BrokerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub atanor-cloud-brain-broker-${StageName}
+      CodeUri: .
+      Handler: handler.handler
+      Description: ATANOR tiny Cloud Brain Broker for public metadata, tasks, and fragments.
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NodesTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref TasksTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref FragmentsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CreditsTable
+        - S3CrudPolicy:
+            BucketName: !Ref FragmentsBucket
+      Events:
+        Status:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/status
+            Method: GET
+        RegisterNode:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/register-node
+            Method: POST
+        Heartbeat:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/heartbeat
+            Method: POST
+        PollTask:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/tasks/poll
+            Method: POST
+        SubmitTask:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/tasks/submit
+            Method: POST
+        QueryFragments:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/fragments/query
+            Method: GET
+        PutFragment:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/fragments/put
+            Method: POST
+        Shards:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/shards
+            Method: GET
+        Credits:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref CloudBrainHttpApi
+            Path: /cloud/credits
+            Method: GET
+
+  BrokerFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/atanor-cloud-brain-broker-${StageName}
+      RetentionInDays: 7
+
+  NodesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub atanor_cloud_nodes_${StageName}
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: node_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: node_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: expires_at
+        Enabled: false
+
+  TasksTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub atanor_cloud_tasks_${StageName}
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: task_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: task_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: expires_at
+        Enabled: true
+
+  FragmentsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub atanor_cloud_fragments_${StageName}
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: fragment_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: fragment_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: expires_at
+        Enabled: true
+
+  CreditsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub atanor_cloud_credits_${StageName}
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: credit_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: credit_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: expires_at
+        Enabled: false
+
+  FragmentsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub atanor-cloud-fragments-${StageName}-${AWS::AccountId}-${AWS::Region}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Suspended
+      LifecycleConfiguration:
+        Rules:
+          - Id: ExpireDevFragments
+            Status: Enabled
+            ExpirationInDays: 30
+
+  BudgetOneDollar:
+    Condition: HasBudgetEmail
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: atanor-cloud-broker-dev-1usd
+        BudgetLimit:
+          Amount: 1
+          Unit: USD
+        TimeUnit: MONTHLY
+        BudgetType: COST
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 100
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref BudgetAlertEmail
+
+  BudgetFiveDollar:
+    Condition: HasBudgetEmail
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: atanor-cloud-broker-dev-5usd
+        BudgetLimit:
+          Amount: 5
+          Unit: USD
+        TimeUnit: MONTHLY
+        BudgetType: COST
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 100
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref BudgetAlertEmail
+
+  BudgetTenDollar:
+    Condition: HasBudgetEmail
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: atanor-cloud-broker-dev-10usd
+        BudgetLimit:
+          Amount: 10
+          Unit: USD
+        TimeUnit: MONTHLY
+        BudgetType: COST
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 100
+            ThresholdType: PERCENTAGE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref BudgetAlertEmail
+
+Outputs:
+  CloudBrainBrokerEndpoint:
+    Description: HTTPS endpoint for ATANOR_CLOUD_ENDPOINT.
+    Value: !Sub https://${CloudBrainHttpApi}.execute-api.${AWS::Region}.amazonaws.com/${StageName}
+  BrokerFunctionName:
+    Value: !Ref BrokerFunction
+  NodesTableName:
+    Value: !Ref NodesTable
+  TasksTableName:
+    Value: !Ref TasksTable
+  FragmentsTableName:
+    Value: !Ref FragmentsTable
+  CreditsTableName:
+    Value: !Ref CreditsTable
+  FragmentsBucketName:
+    Value: !Ref FragmentsBucket

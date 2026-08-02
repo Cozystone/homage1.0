@@ -1,0 +1,32 @@
+{
+  "name": "@atanor/web",
+  "private": true,
+  "version": "0.1.2",
+  "scripts": {
+    "dev": "next dev",
+    "dev:local": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "build:desktop": "node ../../scripts/build_desktop_web.mjs",
+    "start": "next start",
+    "start:local": "next start --hostname 127.0.0.1",
+    "lint": "next lint",
+    "tauri": "node ../../scripts/run_tauri_workspace.mjs"
+  },
+  "dependencies": {
+    "@tauri-apps/plugin-process": "^2.0.0",
+    "@tauri-apps/plugin-updater": "^2.0.0",
+    "@types/three": "^0.184.1",
+    "lucide-react": "^1.18.0",
+    "next": "^16.0.7",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "cross-env": "^10.0.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "_doc": "Lane manifest — single source of truth for which data asset is CANONICAL per role, and which are PARKED (retired/superseded but kept on disk). Born 2026-07-18 after one session found five built-but-unwired assets, all traceable to loaders whose hardcoded defaults predated the English-only pivot (2026-07-17). Loaders should migrate to reading this file; until then scripts/audit_wiring.py flags code that references a parked lane. Editing rule: moving a lane between canonical and parked is an operator-visible change — record the reason and date.",
+  "era": "english_only",
+  "era_since": "2026-07-17",
+  "canonical": {
+    "passages": {
+      "name": "wiki_passages_en_full",
+      "path": "data/graph_scale/wiki_passages_en_full/passages.tsv",
+      "desc": "7,016,505 pure-English wiki lead passages, 4.34 GB — the open-book corpus"
+    },
+    "search_index": {
+      "name": "atanor_index/wiki_en_full",
+      "path": "data/atanor_index/wiki_en_full",
+      "desc": "memmapped disk BM25 over the same 7.0M EN corpus (~1.8 GB, ~20ms topk)"
+    },
+    "wiki_kg": {
+      "name": "wiki_kg_en",
+      "path": "data/graph_scale/wiki_kg_en",
+      "desc": "4,539,962 EN harvested triples (int32 columnar)"
+    },
+    "store": {
+      "name": "kg_triples",
+      "path": "data/graph_scale/kg_triples",
+      "desc": "7,165,801 triples — the English rebuild (post-surgery main store)"
+    },
+    "world_pack": {
+      "name": "world_pack_full",
+      "path": "data/graph_scale/world_pack_full",
+      "desc": "memmapped world pack (read-safe, RSS ~0.18GB)"
+    },
+    "ace2_tokenizer": {
+      "name": "ace2_tokenizer",
+      "path": "data/graph_scale/ace2_tokenizer/tokenizer.json",
+      "desc": "byte-BPE 16,384 — Phase A span-roundtrip gate PASSED 1.0 (commit 64e5bc6c)"
+    }
+  },
+  "parked": [
+    {
+      "name": "wiki_passages",
+      "reason": "685k KOREAN lead passages — retired by the English-only pivot; kept for KMMLU-lane reproduction only. Was the silent default of load_passages() until 2026-07-18 (E6a)."
+    },
+    {
+      "name": "wiki_passages_full",
+      "reason": "800MB Korean fuller-passage variant of the retired lane"
+    },
+    {
+      "name": "wiki_passages_en",
+      "reason": "278k EN subset — superseded by wiki_passages_en_full (7.0M)"
+    },
+    {
+      "name": "wiki_passages_en_rich",
+      "reason": "20k EN rich-passage experiment — superseded"
+    },
+    {
+      "name": "wiki_kg",
+      "reason": "503k KOREAN harvest — superseded by wiki_kg_en for the English era; still silently unioned by benchmark_openbook.py (E6c queue: swap, measured separately)"
+    },
+    {
+      "name": "kg_triples_legacy_ko",
+      "reason": "26.9M pre-surgery Korean store — parked by the English rebuild (visible-equivalence 500/500)"
+    },
+    {
+      "name": "atanor_index/wiki_en_278k",
+      "reason": "index over the 278k subset — superseded by wiki_en_full"
+    }
+  ]
+}

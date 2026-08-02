@@ -1,0 +1,484 @@
+.shell {
+  --demo-bg: #030407;
+  --demo-panel: #0d0f14;
+  --demo-panel-soft: #14171d;
+  --demo-line: rgba(255, 255, 255, 0.11);
+  --demo-text: #f5f1ea;
+  --demo-muted: rgba(245, 241, 234, 0.62);
+  --demo-orange: #ff7a1a;
+  --demo-green: #5ee889;
+  --demo-blue: #6ea8ff;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  min-height: 100vh;
+  background: var(--demo-bg);
+  color: var(--demo-text);
+  font-family: Helvetica, "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+}
+
+.sidebar {
+  border-right: 1px solid var(--demo-line);
+  background: #050608;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 28px 16px;
+}
+
+.brand {
+  border-bottom: 1px solid var(--demo-line);
+  padding-bottom: 28px;
+}
+
+.brand span {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.brand strong {
+  color: var(--demo-muted);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: grid;
+  gap: 8px;
+  margin-top: 34px;
+}
+
+.nav a {
+  align-items: center;
+  border: 1px solid transparent;
+  color: rgba(245, 241, 234, 0.76);
+  display: flex;
+  gap: 11px;
+  padding: 12px 10px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background: rgba(255, 122, 26, 0.08);
+  border-color: rgba(255, 122, 26, 0.25);
+  color: #ffffff;
+}
+
+.sideStats {
+  border: 1px solid var(--demo-line);
+  display: grid;
+  gap: 7px;
+  margin-top: auto;
+  padding: 14px;
+}
+
+.sideStats span {
+  align-items: center;
+  color: var(--demo-muted);
+  display: flex;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+
+.sideStats i {
+  background: var(--demo-green);
+  border-radius: 999px;
+  height: 7px;
+  width: 7px;
+}
+
+.sideStats i[data-blue] {
+  background: var(--demo-blue);
+}
+
+.sideStats strong {
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+}
+
+.main {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+  padding: 28px;
+}
+
+.topbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.topbar span,
+.pipelineHeader span,
+.stageOverlay span,
+.scaleBadge span,
+.chatHeader span,
+.forecastGrid article span,
+.communityPanel header span {
+  color: var(--demo-muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topbar h1 {
+  font-size: clamp(2rem, 4vw, 4.6rem);
+  line-height: 0.96;
+  margin: 6px 0 0;
+  max-width: 980px;
+}
+
+.topbar button {
+  align-items: center;
+  background: rgba(255, 122, 26, 0.12);
+  border: 1px solid rgba(255, 122, 26, 0.36);
+  color: #ffe0c2;
+  display: flex;
+  gap: 8px;
+  font-weight: 900;
+  padding: 11px 14px;
+}
+
+.hero {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  min-height: 560px;
+}
+
+.graphStage,
+.pipeline,
+.questionPanel,
+.forecastGrid article,
+.communityPanel,
+.boundary {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
+  border: 1px solid var(--demo-line);
+}
+
+.graphStage {
+  min-height: 560px;
+  overflow: hidden;
+  position: relative;
+}
+
+.nodeCanvas {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.stageOverlay {
+  background: rgba(3, 4, 7, 0.68);
+  border: 1px solid rgba(255, 122, 26, 0.2);
+  bottom: 28px;
+  left: 28px;
+  padding: 18px 20px;
+  position: absolute;
+  width: min(440px, calc(100% - 56px));
+}
+
+.stageOverlay strong {
+  display: block;
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: 0;
+  line-height: 1;
+  margin-top: 8px;
+}
+
+.stageOverlay small,
+.scaleBadge small {
+  color: var(--demo-muted);
+  display: block;
+  margin-top: 6px;
+}
+
+.scaleBadge {
+  background: rgba(5, 6, 8, 0.74);
+  border: 1px solid rgba(110, 168, 255, 0.22);
+  padding: 13px 15px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 230px;
+}
+
+.scaleBadge strong {
+  display: block;
+  margin-top: 5px;
+}
+
+.pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 18px;
+}
+
+.pipelineHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pipelineHeader strong {
+  color: #ffe0c2;
+  font-size: 1.4rem;
+}
+
+.progressTrack {
+  background: rgba(255, 255, 255, 0.08);
+  height: 8px;
+  overflow: hidden;
+}
+
+.progressTrack i {
+  background: linear-gradient(90deg, var(--demo-orange), var(--demo-green));
+  display: block;
+  height: 100%;
+}
+
+.stageRow {
+  align-items: center;
+  border: 1px solid var(--demo-line);
+  display: flex;
+  gap: 12px;
+  padding: 13px;
+}
+
+.stageRow[data-state="running"] {
+  background: rgba(255, 122, 26, 0.11);
+  border-color: rgba(255, 122, 26, 0.38);
+}
+
+.stageRow[data-state="complete"] {
+  background: rgba(94, 232, 137, 0.08);
+  border-color: rgba(94, 232, 137, 0.26);
+}
+
+.stageRow svg {
+  color: var(--demo-orange);
+  flex: 0 0 auto;
+}
+
+.stageRow[data-state="complete"] svg {
+  color: var(--demo-green);
+}
+
+.stageRow strong,
+.stageRow span {
+  display: block;
+}
+
+.stageRow span {
+  color: var(--demo-muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin-top: 3px;
+}
+
+.metricGrid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: auto;
+}
+
+.metricGrid span {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid var(--demo-line);
+  padding: 11px;
+}
+
+.metricGrid small,
+.communityRows span {
+  color: var(--demo-muted);
+  display: block;
+  font-size: 0.72rem;
+}
+
+.metricGrid strong {
+  display: block;
+  margin-top: 5px;
+}
+
+.questionPanel {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+}
+
+.chatHeader {
+  align-items: center;
+  display: flex;
+  gap: 11px;
+}
+
+.chatHeader strong {
+  display: block;
+  margin-top: 4px;
+}
+
+.chatBubble {
+  border: 1px solid var(--demo-line);
+  line-height: 1.55;
+  max-width: 980px;
+  padding: 15px 17px;
+}
+
+.chatBubble[data-role="user"] {
+  background: rgba(110, 168, 255, 0.08);
+  color: #dce9ff;
+}
+
+.chatBubble[data-role="assistant"] {
+  background: rgba(255, 122, 26, 0.08);
+  color: #fff1e4;
+  margin-left: min(70px, 8vw);
+}
+
+.forecastGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.forecastGrid article {
+  min-height: 220px;
+  padding: 18px;
+}
+
+.forecastGrid h2 {
+  font-size: 1.28rem;
+  line-height: 1.08;
+  margin: 14px 0 12px;
+}
+
+.forecastGrid p {
+  color: var(--demo-muted);
+  line-height: 1.48;
+  margin: 0;
+}
+
+.communityPanel {
+  padding: 20px;
+}
+
+.communityPanel header {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.communityPanel header strong {
+  color: #ffe0c2;
+}
+
+.communityRows {
+  display: grid;
+  gap: 10px;
+}
+
+.communityRows article {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(240px, 1fr) minmax(180px, 460px) 48px;
+}
+
+.communityRows i {
+  background: linear-gradient(90deg, var(--demo-orange), var(--demo-blue));
+  display: block;
+  height: 10px;
+}
+
+.communityRows em {
+  color: var(--demo-text);
+  font-style: normal;
+  font-weight: 900;
+  text-align: right;
+}
+
+.boundary {
+  align-items: center;
+  color: var(--demo-muted);
+  display: flex;
+  gap: 12px;
+  line-height: 1.5;
+  padding: 16px 18px;
+}
+
+.boundary p {
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-bottom: 1px solid var(--demo-line);
+    border-right: 0;
+    min-height: auto;
+  }
+
+  .hero,
+  .forecastGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .graphStage {
+    min-height: 520px;
+  }
+
+  .communityRows article {
+    grid-template-columns: 1fr;
+  }
+
+  .communityRows em {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 18px;
+  }
+
+  .topbar {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .graphStage {
+    min-height: 480px;
+  }
+
+  .stageOverlay,
+  .scaleBadge {
+    left: 18px;
+    right: 18px;
+    width: auto;
+  }
+
+  .scaleBadge {
+    top: 18px;
+  }
+
+  .stageOverlay {
+    bottom: 18px;
+  }
+
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+}

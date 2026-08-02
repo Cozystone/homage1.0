@@ -1,0 +1,19 @@
+{
+  "attempted": "2026-07-31",
+  "goal": "mine spatial constructions so scene speech stops being telegraphic",
+  "corpus": "data/graph_scale/bones_to_text.jsonl (52.4 MB, Wikipedia bones->text)",
+  "material": {
+    "rows_with_spatial_bones": 18601,
+    "located_in": 6344,
+    "part_of": 13030,
+    "near": 64
+  },
+  "result": "FAILED. Of 820 located_in templates and 1026 part_of templates, the only ones surviving the quality guards (>=12 distinct argument pairs, not head-concentrated) are EMPTY juxtapositions: {o}  {s} and {s}  {o}. Adopting them would make speech worse, turning \"Road in the near left.\" into \"the near left road\".",
+  "why": "Two separate reasons, and the second is the deeper one. (1) In encyclopedic prose the arguments of located_in sit far apart with content between them, so the content-word guard rejects every real connective and only adjacency survives. (2) Wikipedia located_in is GEOGRAPHY -- Paris located_in France -- not scene layout. The relation name matches and the sense does not.",
+  "diagnosis": "This corpus has no SCENE-DESCRIPTION REGISTER. That is the same wall this project already measured for fluency: the cause is register complexity, not corpus size. Encyclopedic text about entities cannot teach how to say what is in front of an eye.",
+  "what_would_work": [
+    "a caption-register corpus (image captions describe layout in exactly this register)",
+    "or hand-authored spatial frames, which the realizer accepts as curated -- but that is AUTHORING, not mining, and would be a training wheel that must be labelled as one"
+  ],
+  "not_done": "No hand-written spatial templates were added. Writing them would have hidden this measurement behind a template, which is the pattern this project explicitly guards against."
+}

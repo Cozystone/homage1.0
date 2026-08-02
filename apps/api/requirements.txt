@@ -1,0 +1,11 @@
+fastapi==0.124.0
+httpx==0.28.1
+uvicorn[standard]==0.38.0
+youtube-transcript-api>=1.0.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# Optional: Korean morphological analyser for robust noun/particle extraction in
+# neighbourhood retrieval (packages/base_brain/neighborhood.py). Pure C++/Python, no JVM
+# (unlike KoNLPy). Code falls back to a regex tokenizer when this is absent.
+kiwipiepy>=0.17

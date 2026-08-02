@@ -1,0 +1,34 @@
+{
+  "prereg": "docs/ATANOR_E5_transfer_prereg.md",
+  "sealed_at_commit": "a56e6db720c03f0a03c68c54d7019f3301de416a",
+  "baseline": {
+    "B1-yield_facts_per_1k_pages": 13.317804760324158,
+    "B1-agree_used_for": 0.471,
+    "B1-agree_capable_of": 0.235,
+    "B2-queued": 656,
+    "B2-pursued": 26349
+  },
+  "gate": {
+    "rise_required_relative": 0.05,
+    "agreement_floor_absolute_drop": 0.02
+  },
+  "b_files": {
+    "scripts/wiki_property_sweep.py": "6393e658b137d2f6a49948c729244f58b763d558862230b6191b948e1fc440ba",
+    "scripts/run_acquisition_daemon.py": "1dce37152c0c4c6b9d9eaf5a784cbd6bef54760b9ababcfe6071c7b368b72642",
+    "packages/acquisition_daemon/daemon.py": "723fbab89b282477af60c3d954f84d446e21cb4f8eb0ee984f3f087ef8c2ef00",
+    "packages/knowledge_acquisition/loop.py": "3f1e10b712d4cc57542072e0b1cdb42d28f2fbbb74ae20fc67414d824c0c9d66",
+    "packages/knowledge_acquisition/consensus.py": "47d418c7ad4aba8eafd024e50c47f77d9f8e618dd02ea3ca23e2e1f8a4e92d90",
+    "packages/knowledge_acquisition/evidence.py": "64e50943b331b1528c6dd0aff775e970cab0c01be3e79943ed1bf046ad847d47",
+    "packages/atanor_index/retriever.py": "fe7d0202bd2c9366b86519f536bd0d3afc2c4ec80cbb8ce14ff0ebd49c1eaa80",
+    "data/acquisition_daemon/deficit_questions.txt": "453cc1c49c73101b1874182f4999e101dd67cd987b1f976c94fdf0a268ccf80e"
+  },
+  "a_files": {
+    "packages/graph_scale/property_extraction.py": "17a12ea6e689e3260ad3454f94863d4ee54396d7a3624006821153228d1532a0"
+  },
+  "commands": {
+    "B1": "python scripts/wiki_property_sweep.py --max-pages 200000",
+    "B2": "python scripts/run_acquisition_daemon.py --local --table --no-curiosity --questions data/acquisition_daemon/deficit_questions.txt --batch 600 --min-pressure 2 --state data/acquisition_daemon/e5_b2"
+  },
+  "rule": "any change to a b_file VOIDS the run; inconclusive counts as FAIL",
+  "spent": true
+}

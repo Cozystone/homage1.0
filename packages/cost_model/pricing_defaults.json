@@ -1,0 +1,50 @@
+{
+  "note": "Editable assumptions only. Verify against current provider pricing and actual bills before commercial launch.",
+  "cloudflare": {
+    "api_request_per_million": 0.0,
+    "worker_invocation_per_million": 0.30,
+    "db_read_per_million": 0.001,
+    "db_write_per_million": 1.0,
+    "object_storage_gb_month": 0.015,
+    "object_get_per_million": 0.36,
+    "object_put_per_million": 4.5,
+    "egress_gb": 0.0,
+    "logs_gb": 0.05,
+    "queue_op_per_million": 0.40
+  },
+  "aws": {
+    "api_request_per_million": 1.0,
+    "worker_invocation_per_million": 0.20,
+    "db_read_per_million": 0.25,
+    "db_write_per_million": 1.25,
+    "object_storage_gb_month": 0.023,
+    "object_get_per_million": 0.40,
+    "object_put_per_million": 5.0,
+    "egress_gb": 0.09,
+    "logs_gb": 0.50,
+    "queue_op_per_million": 0.40
+  },
+  "plan_scenarios": {
+    "optimistic": {
+      "free": 0.05,
+      "plus": 0.05,
+      "pro": 4.0,
+      "on_premise": 2.0,
+      "director": 29.0
+    },
+    "base": {
+      "free": 0.10,
+      "plus": 0.20,
+      "pro": 5.0,
+      "on_premise": 3.0,
+      "director": 35.0
+    },
+    "risk": {
+      "free": 0.20,
+      "plus": 1.0,
+      "pro": 8.0,
+      "on_premise": 5.0,
+      "director": 50.0
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "atanor.pattern09-verifier-adversarial.v2",
+  "preregistration_id": "pattern09-public-speech-capability-v2-20260727",
+  "attacks": [
+    {
+      "attack_id": "arm_source_binding_wrong_condition",
+      "invariant": "Each arm source_binding must equal the independently derived binding for that arm condition.",
+      "expected_result": "REJECT"
+    },
+    {
+      "attack_id": "worker_isolation_self_attestation",
+      "invariant": "The verifier must pass each raw worker result through validate_worker_result instead of trusting arm summary booleans.",
+      "expected_result": "REJECT"
+    },
+    {
+      "attack_id": "post_execution_source_mutation",
+      "invariant": "Each materialized arm source must be rebound after worker execution and must equal its pre-execution binding.",
+      "expected_result": "REJECT"
+    }
+  ]
+}

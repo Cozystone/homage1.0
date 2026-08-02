@@ -1,0 +1,92 @@
+{
+  "question": "do prediction-error peaks mark real event boundaries?",
+  "ground_truth": "CARLA pose-derived motion-regime changes (start/stop/turn); never from the image",
+  "raw_residual": {
+    "speed_rho": 0.685,
+    "speed_positive_pct": 97,
+    "recall": 0.171,
+    "chance": 0.129,
+    "beat_chance_pct": 32,
+    "verdict": "measures how fast things are moving, not when the pattern changes"
+  },
+  "divisively_normalised": {
+    "speed_rho": 0.091,
+    "speed_positive_pct": 60,
+    "recall": 0.243,
+    "chance": 0.09,
+    "beat_chance_pct": 55,
+    "accel_rho": -0.234,
+    "verdict": "confound removed; boundary recall 2.7x chance but only half of episodes beat chance, and the negative accel correlation shows the division over-corrects"
+  },
+  "testbed_limit": "CARLA episodes are 40 frames (~2s), barely one event. City Sample has 2,900-frame runs but no pose, so no ground truth for when an event began.",
+  "not_claimed": "that this segments video into events well enough to abstract over",
+  "explainer_testbed": {
+    "what": "generated informational video with the answer key built in; owner clarified the videos they meant are conceptual/knowledge channels, not live-action footage",
+    "cut": {
+      "prediction_error": [
+        1.0,
+        "5.5x chance",
+        "13 found / 13 true"
+      ],
+      "replacement": [
+        1.0,
+        "5.5x",
+        "13/13"
+      ]
+    },
+    "build": {
+      "prediction_error": [
+        0.769,
+        "1.7x",
+        "38.5 found / 13 true - fires on every sub-step"
+      ],
+      "replacement": [
+        1.0,
+        "5.4x",
+        "13/13 - solved exactly"
+      ]
+    },
+    "pan": {
+      "prediction_error": [
+        0.692,
+        "1.6x",
+        "37.8/13"
+      ],
+      "replacement": [
+        0.654,
+        "1.7x",
+        "31.8/13"
+      ],
+      "replacement_self_motion_removed": [
+        0.673,
+        "2.0x",
+        "26.8/13 - slight gain only, and the same compensation DAMAGED build 1.000 -> 0.692"
+      ]
+    },
+    "divisive_normalisation": "helped a lot on CARLA, HURT on explainer pans (0.808 -> 0.692); data-dependent, not a universal fix"
+  },
+  "long_real_testbed": {
+    "what": "21,032 frames / 240s of City Sample; boundaries RECORDED at the moment ATANOR's own motor command changed - no threshold, no percentile, nothing inferred",
+    "true_boundaries": 30,
+    "raw_change": [
+      0.733,
+      0.572,
+      "1.3x",
+      82
+    ],
+    "prediction_error": [
+      0.933,
+      0.659,
+      "1.4x",
+      103
+    ],
+    "replacement": [
+      0.867,
+      0.587,
+      "1.5x",
+      87
+    ],
+    "verdict": "all three ~1.4x chance, all firing 3x too often; the 5.4x on generated explainer video does NOT transfer to real 3D footage"
+  },
+  "standing_verdict": "replacement-vs-addition is a real measured advance on explainer-style video (1.7x -> 5.4x on build, exact boundary count). On real footage of a moving body it is 1.5x chance and unsolved."
+}

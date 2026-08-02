@@ -1,0 +1,58 @@
+{
+  "encoder_kb": 103,
+  "dim": 32,
+  "classes": [
+    "building",
+    "car",
+    "road",
+    "sidewalk",
+    "terrain",
+    "vegetation"
+  ],
+  "chance": 0.16666666666666666,
+  "by_anchors": {
+    "1": {
+      "speak_always_precision": 0.35833333333333334,
+      "abstaining_precision": 0.6704545454545454,
+      "coverage": 0.36666666666666664,
+      "n_test": 240
+    },
+    "2": {
+      "speak_always_precision": 0.3625,
+      "abstaining_precision": 0.6777777777777778,
+      "coverage": 0.375,
+      "n_test": 240
+    },
+    "3": {
+      "speak_always_precision": 0.5125,
+      "abstaining_precision": 0.7889908256880734,
+      "coverage": 0.45416666666666666,
+      "n_test": 240
+    },
+    "5": {
+      "speak_always_precision": 0.5208333333333334,
+      "abstaining_precision": 0.7857142857142857,
+      "coverage": 0.4666666666666667,
+      "n_test": 240
+    },
+    "10": {
+      "speak_always_precision": 0.4083333333333333,
+      "abstaining_precision": 0.5327102803738317,
+      "coverage": 0.44583333333333336,
+      "n_test": 240
+    },
+    "20": {
+      "speak_always_precision": 0.4041666666666667,
+      "abstaining_precision": 0.5471698113207547,
+      "coverage": 0.44166666666666665,
+      "n_test": 240
+    }
+  },
+  "owlv2_reference": {
+    "precision": 0.51,
+    "recall": 0.95,
+    "cache_mb": 593,
+    "params_m": 155
+  },
+  "caveat": "patch classification over known classes is an EASIER task than open-vocabulary scene detection; these numbers are not interchangeable with OWLv2's."
+}

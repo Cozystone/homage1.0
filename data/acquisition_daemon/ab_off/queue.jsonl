@@ -1,0 +1,383 @@
+{
+  "cloud_candidate_0a4ce7867f715760": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua"
+    ],
+    "fact": {
+      "object": "cloth well pitched",
+      "predicate": "made_of",
+      "subject": "saucisse"
+    },
+    "item_id": "cloud_candidate_0a4ce7867f715760",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/saucisse",
+      "https://gcide.gnu.org.ua/?q=Saucisse"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: saucisse made_of cloth well pitched. Corroborated by 2 distinct domains (en.wiktionary.org, gcide.gnu.org.ua).",
+    "title": "saucisse made of = cloth well pitched",
+    "urls": [
+      "https://en.wiktionary.org/wiki/saucisse",
+      "https://gcide.gnu.org.ua/?q=Saucisse"
+    ]
+  },
+  "cloud_candidate_19f2207b3822fdaf": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua"
+    ],
+    "fact": {
+      "object": "ancient manuscripts",
+      "predicate": "used_for",
+      "subject": "majuscule"
+    },
+    "item_id": "cloud_candidate_19f2207b3822fdaf",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/majuscule",
+      "https://gcide.gnu.org.ua/?q=Majuscule"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: majuscule used_for ancient manuscripts. Corroborated by 2 distinct domains (en.wiktionary.org, gcide.gnu.org.ua).",
+    "title": "majuscule used for = ancient manuscripts",
+    "urls": [
+      "https://en.wiktionary.org/wiki/majuscule",
+      "https://gcide.gnu.org.ua/?q=Majuscule"
+    ]
+  },
+  "cloud_candidate_24bf2786f544aace": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "wordnetweb.princeton.edu"
+    ],
+    "fact": {
+      "object": "cooking",
+      "predicate": "used_for",
+      "subject": "cornflour"
+    },
+    "item_id": "cloud_candidate_24bf2786f544aace",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/cornflour",
+      "http://wordnetweb.princeton.edu/perl/webwn?s=cornflour"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: cornflour used_for cooking. Corroborated by 2 distinct domains (en.wiktionary.org, wordnetweb.princeton.edu).",
+    "title": "cornflour used for = cooking",
+    "urls": [
+      "https://en.wiktionary.org/wiki/cornflour",
+      "http://wordnetweb.princeton.edu/perl/webwn?s=cornflour"
+    ]
+  },
+  "cloud_candidate_273ae8394a5d2b4a": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua"
+    ],
+    "fact": {
+      "object": "linen",
+      "predicate": "made_of",
+      "subject": "linsey"
+    },
+    "item_id": "cloud_candidate_273ae8394a5d2b4a",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/linsey",
+      "https://gcide.gnu.org.ua/?q=Linsey-woolsey"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: linsey made_of linen. Corroborated by 2 distinct domains (en.wiktionary.org, gcide.gnu.org.ua).",
+    "title": "linsey made of = linen",
+    "urls": [
+      "https://en.wiktionary.org/wiki/linsey",
+      "https://gcide.gnu.org.ua/?q=Linsey-woolsey"
+    ]
+  },
+  "cloud_candidate_396737bfbc7be40c": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua"
+    ],
+    "fact": {
+      "object": "arts",
+      "predicate": "used_for",
+      "subject": "benzol"
+    },
+    "item_id": "cloud_candidate_396737bfbc7be40c",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/benzol",
+      "https://gcide.gnu.org.ua/?q=Benzol"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: benzol used_for arts. Corroborated by 2 distinct domains (en.wiktionary.org, gcide.gnu.org.ua).",
+    "title": "benzol used for = arts",
+    "urls": [
+      "https://en.wiktionary.org/wiki/benzol",
+      "https://gcide.gnu.org.ua/?q=Benzol"
+    ]
+  },
+  "cloud_candidate_4c68d504e8ad3f5a": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua"
+    ],
+    "fact": {
+      "object": "rum",
+      "predicate": "made_of",
+      "subject": "bogus"
+    },
+    "item_id": "cloud_candidate_4c68d504e8ad3f5a",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/bogus",
+      "https://gcide.gnu.org.ua/?q=Bogus"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: bogus made_of rum. Corroborated by 2 distinct domains (en.wiktionary.org, gcide.gnu.org.ua).",
+    "title": "bogus made of = rum",
+    "urls": [
+      "https://en.wiktionary.org/wiki/bogus",
+      "https://gcide.gnu.org.ua/?q=Bogus"
+    ]
+  },
+  "cloud_candidate_62838a582956d3de": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "gcide.gnu.org.ua",
+      "wordnetweb.princeton.edu"
+    ],
+    "fact": {
+      "object": "operate at very low temperatures",
+      "predicate": "capable_of",
+      "subject": "cryostat"
+    },
+    "item_id": "cloud_candidate_62838a582956d3de",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://gcide.gnu.org.ua/?q=cryostat",
+      "http://wordnetweb.princeton.edu/perl/webwn?s=cryostat"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: cryostat capable_of operate at very low temperatures. Corroborated by 2 distinct domains (gcide.gnu.org.ua, wordnetweb.princeton.edu).",
+    "title": "cryostat capable of = operate at very low temperatures",
+    "urls": [
+      "https://gcide.gnu.org.ua/?q=cryostat",
+      "http://wordnetweb.princeton.edu/perl/webwn?s=cryostat"
+    ]
+  },
+  "cloud_candidate_7bd43997cb7e854e": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua"
+    ],
+    "fact": {
+      "object": "making brooms",
+      "predicate": "used_for",
+      "subject": "piassava"
+    },
+    "item_id": "cloud_candidate_7bd43997cb7e854e",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/piassava",
+      "https://gcide.gnu.org.ua/?q=Piassava"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: piassava used_for making brooms. Corroborated by 2 distinct domains (en.wiktionary.org, gcide.gnu.org.ua).",
+    "title": "piassava used for = making brooms",
+    "urls": [
+      "https://en.wiktionary.org/wiki/piassava",
+      "https://gcide.gnu.org.ua/?q=Piassava"
+    ]
+  },
+  "cloud_candidate_89e7f55ac42ee48d": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wikipedia.org",
+      "en.wiktionary.org"
+    ],
+    "fact": {
+      "object": "soap",
+      "predicate": "used_for",
+      "subject": "guaiac"
+    },
+    "item_id": "cloud_candidate_89e7f55ac42ee48d",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wikipedia.org/wiki/Oil_of_guaiac",
+      "https://en.wiktionary.org/wiki/guaiac"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: guaiac used_for soap. Corroborated by 2 distinct domains (en.wikipedia.org, en.wiktionary.org).",
+    "title": "guaiac used for = soap",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Oil_of_guaiac",
+      "https://en.wiktionary.org/wiki/guaiac"
+    ]
+  },
+  "cloud_candidate_a0ee985fdb879d41": {
+    "confidence": 0.7,
+    "consensus_domains": 3,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua",
+      "wordnetweb.princeton.edu"
+    ],
+    "fact": {
+      "object": "wax",
+      "predicate": "made_of",
+      "subject": "waxwork"
+    },
+    "item_id": "cloud_candidate_a0ee985fdb879d41",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/waxwork",
+      "https://gcide.gnu.org.ua/?q=Waxwork",
+      "http://wordnetweb.princeton.edu/perl/webwn?s=waxwork"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: waxwork made_of wax. Corroborated by 3 distinct domains (en.wiktionary.org, gcide.gnu.org.ua, wordnetweb.princeton.edu).",
+    "title": "waxwork made of = wax",
+    "urls": [
+      "https://en.wiktionary.org/wiki/waxwork",
+      "https://gcide.gnu.org.ua/?q=Waxwork",
+      "http://wordnetweb.princeton.edu/perl/webwn?s=waxwork"
+    ]
+  },
+  "cloud_candidate_be6ac88f134ce8b5": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua"
+    ],
+    "fact": {
+      "object": "communicate fire to mines",
+      "predicate": "used_for",
+      "subject": "saucisse"
+    },
+    "item_id": "cloud_candidate_be6ac88f134ce8b5",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/saucisse",
+      "https://gcide.gnu.org.ua/?q=Saucisse"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: saucisse used_for communicate fire to mines. Corroborated by 2 distinct domains (en.wiktionary.org, gcide.gnu.org.ua).",
+    "title": "saucisse used for = communicate fire to mines",
+    "urls": [
+      "https://en.wiktionary.org/wiki/saucisse",
+      "https://gcide.gnu.org.ua/?q=Saucisse"
+    ]
+  },
+  "cloud_candidate_d803c14028bc6f11": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wikipedia.org",
+      "en.wiktionary.org"
+    ],
+    "fact": {
+      "object": "spray a liquid",
+      "predicate": "used_for",
+      "subject": "sprayer"
+    },
+    "item_id": "cloud_candidate_d803c14028bc6f11",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wikipedia.org/wiki/Sprayer",
+      "https://en.wiktionary.org/wiki/sprayer"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: sprayer used_for spray a liquid. Corroborated by 2 distinct domains (en.wikipedia.org, en.wiktionary.org).",
+    "title": "sprayer used for = spray a liquid",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Sprayer",
+      "https://en.wiktionary.org/wiki/sprayer"
+    ]
+  },
+  "cloud_candidate_e706d6a220b39387": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wikipedia.org",
+      "en.wiktionary.org"
+    ],
+    "fact": {
+      "object": "soot",
+      "predicate": "made_of",
+      "subject": "bistre"
+    },
+    "item_id": "cloud_candidate_e706d6a220b39387",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wikipedia.org/wiki/Bistre",
+      "https://en.wiktionary.org/wiki/bistre"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: bistre made_of soot. Corroborated by 2 distinct domains (en.wikipedia.org, en.wiktionary.org).",
+    "title": "bistre made of = soot",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bistre",
+      "https://en.wiktionary.org/wiki/bistre"
+    ]
+  },
+  "cloud_candidate_fb558cb698ed1d6f": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wiktionary.org",
+      "gcide.gnu.org.ua"
+    ],
+    "fact": {
+      "object": "paving",
+      "predicate": "used_for",
+      "subject": "flagstone"
+    },
+    "item_id": "cloud_candidate_fb558cb698ed1d6f",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wiktionary.org/wiki/flagstone",
+      "https://gcide.gnu.org.ua/?q=Flagstone"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: flagstone used_for paving. Corroborated by 2 distinct domains (en.wiktionary.org, gcide.gnu.org.ua).",
+    "title": "flagstone used for = paving",
+    "urls": [
+      "https://en.wiktionary.org/wiki/flagstone",
+      "https://gcide.gnu.org.ua/?q=Flagstone"
+    ]
+  }
+}

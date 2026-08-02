@@ -1,0 +1,82 @@
+# ATANOR firehose seed corpus — a small, DIVERSE sample so the fast-ingest layer
+# works out of the box (formal docs + casual speech + slang + dialogue, EN + KO).
+# For sustained 10k/sec, drop large public corpora into the corpora dir (see
+# deploy/README). Lines starting with # are ignored.
+The mitochondrion is the powerhouse of the cell.
+Water boils at 100 degrees Celsius at sea level.
+Photosynthesis converts light energy into chemical energy stored in glucose.
+The French Revolution began in 1789 and reshaped European politics.
+A black hole is a region of spacetime where gravity is so strong nothing escapes.
+Marie Curie was the first person to win Nobel Prizes in two different sciences.
+The internet is a global system of interconnected computer networks.
+Supply and demand determine the price of goods in a market economy.
+DNA carries the genetic instructions for the development of living organisms.
+The speed of light in a vacuum is about 299,792 kilometers per second.
+honestly that movie was kinda mid, not gonna lie
+ngl the new update slaps so hard
+bro why is this so funny i can't even
+lowkey obsessed with this song rn
+that's lowkey genius, fr fr
+wait that's actually crazy lol
+im dead this is too real
+no cap the food there is unreal
+he really said that and just walked off lmao
+ok but the vibes are immaculate
+spill the tea what happened next
+this aged like milk ngl
+it's giving main character energy
+caught in 4k, no escape
+touch grass my guy
+"Are you coming to the party tonight?" "Maybe, I'll see how I feel."
+"I can't believe you did that." "Did what? I have no idea what you mean."
+"Could you pass the salt?" "Sure, here you go."
+"Where have you been all day?" "Just running errands, nothing exciting."
+"Do you want coffee or tea?" "Coffee, please, with a little milk."
+"I'm so tired." "Same, I barely slept last night."
+"What time is it?" "Almost midnight, we should head home."
+"Did you watch the game?" "Yeah, what a comeback in the last minute."
+세포의 발전소는 미토콘드리아라고 불린다.
+물은 해수면에서 섭씨 100도에 끓는다.
+광합성은 빛 에너지를 포도당에 저장된 화학 에너지로 바꾼다.
+프랑스 혁명은 1789년에 시작되어 유럽 정치를 바꿔놓았다.
+블랙홀은 중력이 너무 강해 빛조차 빠져나갈 수 없는 시공간 영역이다.
+마리 퀴리는 서로 다른 두 과학 분야에서 노벨상을 받은 최초의 인물이다.
+대한민국의 수도는 서울이다.
+진짜 이거 개웃기다 ㅋㅋㅋㅋ
+아 그거 완전 인정 ㅇㅈ
+와 이거 실화냐 미쳤다
+오늘따라 텐션 왜 이렇게 높냐
+ㄹㅇ 노래 미쳤다 무한반복각
+약속 ㄱㄱ 지금 출발함
+이거 보고 빵 터졌잖아
+방금 그거 좀 소름이었어
+대박 그래서 어떻게 됐는데
+완전 내 취향 저격이네
+"오늘 파티 올 거야?" "글쎄, 컨디션 봐서."
+"왜 이렇게 늦었어?" "그냥 볼일 좀 보느라."
+"커피 마실래 차 마실래?" "커피, 우유 살짝만."
+"그 경기 봤어?" "응 마지막에 역전하는 거 진짜 미쳤더라."
+"지금 몇 시야?" "거의 자정, 슬슬 가자."
+The quick brown fox jumps over the lazy dog.
+Stock markets fluctuate based on investor sentiment and economic indicators.
+Climate change is driven largely by greenhouse gas emissions from human activity.
+The human brain contains roughly 86 billion neurons.
+Coffee is one of the most widely traded commodities in the world.
+Quantum entanglement links the states of two particles regardless of distance.
+The Great Wall of China stretches thousands of kilometers across northern China.
+Vaccines train the immune system to recognize and fight specific pathogens.
+A balanced diet includes proteins, carbohydrates, fats, vitamins, and minerals.
+The printing press, invented by Gutenberg, revolutionized the spread of knowledge.
+머신러닝 모델은 데이터에서 패턴을 학습한다.
+지구는 약 24시간에 한 번 자전한다.
+인공지능은 의료, 금융, 교육 등 여러 분야에 적용된다.
+운동은 심혈관 건강을 개선하는 데 도움이 된다.
+독서는 어휘력과 사고력을 길러준다.
+yo this deadline is killing me, send help
+brb gotta grab food real quick
+that meeting could've been an email fr
+my wifi is acting up again ugh
+just vibing, nothing much going on
+gym then nap, perfect plan
+who else is up at 3am scrolling
+this playlist is carrying me through finals

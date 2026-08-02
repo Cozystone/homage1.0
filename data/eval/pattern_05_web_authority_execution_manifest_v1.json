@@ -1,0 +1,56 @@
+{
+  "schema_version": "atanor.pattern-05-web-authority-execution-manifest.v1",
+  "manifest_id": "pattern-05-web-authority-capability-execution-v1-20260727",
+  "created_at": "2026-07-27T01:35:42.8221340+09:00",
+  "preregistration_raw_sha256": "0c2eef67b43b039ccc9664f6666fb5f293ecca56375061968c728442beb6b425",
+  "dataset_raw_sha256": "d0804422d49c0d5baac3cf110741e29e48ef2c2ecae6164dcd9e3b28bccd1128",
+  "candidate_binding_raw_sha256": "ae248243bf77a7b2d015aae09e29c5765b76e1f63639f1d8cfbac56b1ce2ef9b",
+  "execution_binding_v2_raw_sha256": "8b38ac61110190a0be8996e547421e05b7601b4f19a1fe0a9bd6b9dced0e9caa",
+  "off_commit": "bc5cccde42080a784f490ebbb53414cf7ec45131",
+  "on_commit": "e94d1c1e934554fad7ed4cb54a0d0fcdccb6ff0a",
+  "off_git_object_id_sha1": "9a132f61d17d0820c8f67a198750572872c48c5d",
+  "on_git_object_id_sha1": "9c4d16b6df09c2df55c360677a24ad0f02a7ccfd",
+  "off_git_blob_sha256": "cca015ab8e4f39bbdff60c7533b68cd992941e93fd7fee219a53d6a89c75ef8d",
+  "on_git_blob_sha256": "c9385021fb047a05ff0156849a631274885785bae1a8de53c32850095c19a386",
+  "off_referent_resonance_sha256": "86b0d8aebb0ef96db3050d14e6576e4136030db9d32ea94eb1d6de1f217bee3b",
+  "on_referent_resonance_sha256": "86b0d8aebb0ef96db3050d14e6576e4136030db9d32ea94eb1d6de1f217bee3b",
+  "evaluator_files": {
+    "scripts/pattern_05_web_authority_capability_eval.py": "7723d8ce48142917f142d287214aaa09129568a980ff0f1a5aafbe0407ec0764",
+    "scripts/pattern_05_web_authority_capability_worker.py": "8bee09e9ede200bdb7b4f336c10742cc3ded3013ac16a72463630dbb585f158d",
+    "scripts/tests/test_pattern_05_web_authority_capability_eval.py": "a248422723ba45f4dd521ae721079bbe9297010a161a3615f1c0fe6ce6363639"
+  },
+  "execution": {
+    "static_validation_command": "python scripts/pattern_05_web_authority_capability_eval.py validate",
+    "one_shot_command": "python scripts/pattern_05_web_authority_capability_eval.py run",
+    "target_case_count": 18,
+    "blocks": [
+      "A_OFF forward",
+      "B_ON forward",
+      "A_ON reverse",
+      "B_OFF reverse"
+    ],
+    "fresh_worker_processes": 4,
+    "off_and_on_executions_per_case": 1,
+    "mechanical_retry_limit": 0,
+    "attempt_marker_before_root_materialization": true,
+    "refuse_if_attempt_report_or_failure_exists": true,
+    "report_path": "reports/benchmarks/pattern_05_web_authority_capability_v1_20260727.json",
+    "attempt_path": "reports/benchmarks/pattern_05_web_authority_capability_v1_20260727.attempt.json",
+    "failure_path": "reports/benchmarks/pattern_05_web_authority_capability_v1_20260727.failure.json"
+  },
+  "isolation": {
+    "off_root": "fresh minimal git archive from OFF commit",
+    "on_root": "fresh minimal git archive from ON commit",
+    "working_tree_candidate_fallback": false,
+    "current_repo_python_paths_removed": true,
+    "repo_import_origins_recorded": true,
+    "worker_environment": "explicit OS path/temp allowlist plus deterministic Python variables; no PYTHONPATH, proxy, ATANOR, provider, API-key, or auth-token inheritance",
+    "network": "worker urllib.request.urlopen and socket.create_connection fail closed",
+    "archived_local_env": false
+  },
+  "state": {
+    "target_cohort_executed": false,
+    "attempt_marker_created": false,
+    "production_default_changed": false
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "uuid": "atanor-orb@atanor.ai",
+  "name": "ATANOR Orb Overlay",
+  "description": "Pins the ATANOR orb window as an always-on-top, all-workspaces, click-through-friendly overlay — the resident particle sphere floating over the desktop.",
+  "shell-version": ["45", "46", "47", "48"],
+  "version": 1
+}

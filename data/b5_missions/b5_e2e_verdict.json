@@ -1,0 +1,21 @@
+{
+  "missions": {
+    "B5-1-E2E incident (real composer)": true,
+    "B5-2-E2E memory (out-of-proc oracle)": true,
+    "B5-3-E2E recovery (raw-triple reasoning)": true
+  },
+  "b5_e2e_pass": true,
+  "git_sha": "bdb2914d1bbdb4e795f42ada2fba61b73ae53042",
+  "report_sha256_16": {
+    "b5_1_e2e_report.json": "cb370d7edcefa989",
+    "b5_2_e2e_report.json": "b982c538a03c27dd",
+    "b5_3_e2e_report.json": "d6f896634bc133a1"
+  },
+  "still_not_run": [
+    "141M_retrieval",
+    "live_prompt_path",
+    "3B_8B_baseline",
+    "human_fluency",
+    "sealed_private_holdout"
+  ]
+}

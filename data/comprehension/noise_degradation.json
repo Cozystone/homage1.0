@@ -1,0 +1,88 @@
+{
+  "n_items": 400,
+  "pool": "bAbI valid qa1-8 x50 (external)",
+  "clean_acc": 0.9925,
+  "families": {
+    "keyboard": {
+      "0.025": {
+        "acc": 0.9075,
+        "delta_vs_clean": -0.085,
+        "flip_rate": 0.0425,
+        "abstain_rate": 0.045
+      },
+      "0.1": {
+        "acc": 0.74,
+        "delta_vs_clean": -0.2525,
+        "flip_rate": 0.12,
+        "abstain_rate": 0.1525
+      },
+      "0.25": {
+        "acc": 0.4475,
+        "delta_vs_clean": -0.545,
+        "flip_rate": 0.2275,
+        "abstain_rate": 0.3425
+      }
+    },
+    "natural": {
+      "0.025": {
+        "acc": 0.975,
+        "delta_vs_clean": -0.0175,
+        "flip_rate": 0.0175,
+        "abstain_rate": 0.0
+      },
+      "0.1": {
+        "acc": 0.9325,
+        "delta_vs_clean": -0.06,
+        "flip_rate": 0.05,
+        "abstain_rate": 0.01
+      },
+      "0.25": {
+        "acc": 0.9,
+        "delta_vs_clean": -0.0925,
+        "flip_rate": 0.0725,
+        "abstain_rate": 0.0225
+      }
+    },
+    "case_punct": {
+      "0.025": {
+        "acc": 0.9925,
+        "delta_vs_clean": 0.0,
+        "flip_rate": 0.0,
+        "abstain_rate": 0.0
+      },
+      "0.1": {
+        "acc": 0.9925,
+        "delta_vs_clean": 0.0,
+        "flip_rate": 0.0125,
+        "abstain_rate": 0.0
+      },
+      "0.25": {
+        "acc": 0.9925,
+        "delta_vs_clean": 0.0,
+        "flip_rate": 0.0125,
+        "abstain_rate": 0.0
+      }
+    },
+    "fragment": {
+      "0.025": {
+        "acc": 0.955,
+        "delta_vs_clean": -0.0375,
+        "flip_rate": 0.0075,
+        "abstain_rate": 0.03
+      },
+      "0.1": {
+        "acc": 0.8575,
+        "delta_vs_clean": -0.135,
+        "flip_rate": 0.02,
+        "abstain_rate": 0.115
+      },
+      "0.25": {
+        "acc": 0.675,
+        "delta_vs_clean": -0.3175,
+        "flip_rate": 0.0575,
+        "abstain_rate": 0.2625
+      }
+    }
+  },
+  "elapsed_s": 113.0
+}

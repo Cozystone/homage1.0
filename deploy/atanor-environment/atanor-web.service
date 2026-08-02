@@ -1,0 +1,22 @@
+# ATANOR Environment — the shell surface (Next.js production build).
+[Unit]
+Description=ATANOR web shell (Next.js)
+After=atanor-engine.service
+Requires=atanor-engine.service
+
+[Service]
+Type=simple
+User=atanor
+Group=atanor
+WorkingDirectory=/opt/atanor/apps/web
+Environment=NODE_ENV=production
+Environment=PORT=3000
+ExecStart=/usr/bin/npm run start
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectHome=true
+ReadWritePaths=/opt/atanor
+
+[Install]
+WantedBy=multi-user.target

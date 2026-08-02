@@ -1,0 +1,7 @@
+{"alias":"HCl","canonical_id":"chem:hydrochloric_acid","equivalents_per_mole":1,"evidence_id":"quantity-evidence-001","quarantined":false,"role":"acid","row_id":"quantity-species-row-001"}
+{"alias":"NaOH","canonical_id":"chem:sodium_hydroxide","equivalents_per_mole":1,"evidence_id":"quantity-evidence-002","quarantined":false,"role":"base","row_id":"quantity-species-row-002"}
+{"alias":"H2SO4","canonical_id":"chem:sulfuric_acid","equivalents_per_mole":2,"evidence_id":"quantity-evidence-003","quarantined":false,"role":"acid","row_id":"quantity-species-row-003"}
+{"alias":"Ca(OH)2","canonical_id":"chem:calcium_hydroxide","equivalents_per_mole":2,"evidence_id":"quantity-evidence-004","quarantined":false,"role":"base","row_id":"quantity-species-row-004"}
+{"alias":"H3PO4","canonical_id":"chem:phosphoric_acid","equivalents_per_mole":3,"evidence_id":"quantity-evidence-005","quarantined":false,"role":"acid","row_id":"quantity-species-row-005"}
+{"alias":"KOH","canonical_id":"chem:potassium_hydroxide","equivalents_per_mole":1,"evidence_id":"quantity-evidence-006","quarantined":false,"role":"base","row_id":"quantity-species-row-006"}
+{"alias":"HNO3","canonical_id":"chem:nitric_acid","equivalents_per_mole":1,"evidence_id":"quantity-evidence-007","quarantined":false,"role":"acid","row_id":"quantity-species-row-007"}

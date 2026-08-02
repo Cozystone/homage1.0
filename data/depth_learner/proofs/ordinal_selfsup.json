@@ -1,0 +1,59 @@
+{
+  "held_out": [
+    "Town06",
+    "Town07"
+  ],
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.089,
+      "label_accuracy": 0.7767,
+      "rank_accuracy": 0.7668,
+      "pairs": 6426,
+      "frames": 18
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.05679,
+      "label_accuracy": 0.7767,
+      "rank_accuracy": 0.8237,
+      "pairs": 6426,
+      "frames": 18
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.04716,
+      "label_accuracy": 0.7767,
+      "rank_accuracy": 0.7723,
+      "pairs": 6426,
+      "frames": 18
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.0405,
+      "label_accuracy": 0.7767,
+      "rank_accuracy": 0.7827,
+      "pairs": 6426,
+      "frames": 18
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.03504,
+      "label_accuracy": 0.7767,
+      "rank_accuracy": 0.8241,
+      "pairs": 6426,
+      "frames": 18
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.03159,
+      "label_accuracy": 0.7767,
+      "rank_accuracy": 0.8085,
+      "pairs": 6426,
+      "frames": 18
+    }
+  ],
+  "supervised_ceiling": 0.7876,
+  "ground_truth_used_for": "evaluation only \u2014 never in the optimiser",
+  "claim": "ordering, not metres"
+}

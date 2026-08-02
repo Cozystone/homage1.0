@@ -1,0 +1,238 @@
+{
+  "benchmark": "bAbI en-valid-10k (external, CC BY 3.0)",
+  "split": "train",
+  "cap_per_task": 1000,
+  "strict_mean": 0.976,
+  "strict_micro": 0.976,
+  "coverage": 0.9808,
+  "answered_acc": 0.9951,
+  "external_anchors": {
+    "ngram": 0.34,
+    "lstm": 0.49,
+    "memnn": 0.79,
+    "asp_symbolic": 0.996
+  },
+  "tasks": [
+    {
+      "task": 1,
+      "name": "single-fact",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 2,
+      "name": "two-facts",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 3,
+      "name": "three-facts",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 4,
+      "name": "two-arg rel",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 5,
+      "name": "three-arg rel",
+      "n": 1000,
+      "correct": 881,
+      "wrong": 53,
+      "abstain": 66,
+      "strict_acc": 0.881,
+      "coverage": 0.934,
+      "answered_acc": 0.943
+    },
+    {
+      "task": 6,
+      "name": "yes/no",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 7,
+      "name": "counting",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 8,
+      "name": "lists/sets",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 9,
+      "name": "simple negation",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 10,
+      "name": "indefinite",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 11,
+      "name": "basic coref",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 12,
+      "name": "conjunction",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 13,
+      "name": "compound coref",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 14,
+      "name": "time reasoning",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 15,
+      "name": "basic deduction",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 16,
+      "name": "basic induction",
+      "n": 1000,
+      "correct": 957,
+      "wrong": 43,
+      "abstain": 0,
+      "strict_acc": 0.957,
+      "coverage": 1.0,
+      "answered_acc": 0.957
+    },
+    {
+      "task": 17,
+      "name": "positional",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 18,
+      "name": "size reasoning",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 19,
+      "name": "path finding",
+      "n": 1000,
+      "correct": 1000,
+      "wrong": 0,
+      "abstain": 0,
+      "strict_acc": 1.0,
+      "coverage": 1.0,
+      "answered_acc": 1.0
+    },
+    {
+      "task": 20,
+      "name": "agent motivation",
+      "n": 1000,
+      "correct": 682,
+      "wrong": 0,
+      "abstain": 318,
+      "strict_acc": 0.682,
+      "coverage": 0.682,
+      "answered_acc": 1.0
+    }
+  ],
+  "elapsed_s": 94.4
+}

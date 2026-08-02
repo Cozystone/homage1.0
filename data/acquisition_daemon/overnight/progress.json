@@ -1,0 +1,13 @@
+{
+  "asked": 222,
+  "gaps": 211,
+  "pursued": 211,
+  "queued": 6,
+  "no_consensus": 205,
+  "elapsed_h": 2.9094082333644233,
+  "questions_total": 26544,
+  "live": true,
+  "pause_s": 240.0,
+  "tier": "operator_queue",
+  "promoted": 0
+}

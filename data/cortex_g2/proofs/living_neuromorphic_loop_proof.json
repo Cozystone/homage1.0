@@ -1,0 +1,290 @@
+{
+  "result": "PASS",
+  "proved_at": "2026-06-15T15:22:05Z",
+  "query": "Evidence와 Claim의 차이를 설명해줘.",
+  "local_brain_before": {
+    "local_total_nodes": 0,
+    "local_total_edges": 0,
+    "local_brain_initialized": false
+  },
+  "bundle_id": "cnb_5e2925ce2e7b2649f61565e4",
+  "attached_overlay_counts": {
+    "cloud_attached_nodes": 4,
+    "cloud_attached_edges": 3,
+    "seed_anchor_nodes": 4
+  },
+  "cortex_g2_summary": {
+    "enabled": true,
+    "activation_run_id": "act_2d33c7d1bfb52daaad",
+    "activated_nodes": 8,
+    "activated_edges": 3,
+    "inhibited_nodes": 0,
+    "global_workspace_frame_id": "gwf_2d33c7d1bfb52daaad",
+    "salience_nodes": 8,
+    "salience_edges": 3,
+    "prediction_trace_id": "ptr_2d33c7d1bfb52daaad",
+    "prediction_paths": 5,
+    "observed_paths": 0,
+    "prediction_error": 0.64,
+    "knowledge_crystal_candidate": false,
+    "local_brain_write": false,
+    "external_llm_used": false,
+    "external_sllm_used": false
+  },
+  "prediction_trace": {
+    "trace_id": "ptr_2d33c7d1bfb52daaad",
+    "query": "Evidence와 Claim의 차이를 설명해줘.",
+    "expected_paths": [
+      {
+        "source_concept": "Evidence",
+        "relation": "supports",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_acd79f2e110cadbfe0",
+        "target": "seed_anchor_94c67fcb24a3ba2c48"
+      },
+      {
+        "source_concept": "Source",
+        "relation": "provides",
+        "target_concept": "Evidence",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_6d7398ae2c1020cd72",
+        "target": "seed_anchor_acd79f2e110cadbfe0"
+      },
+      {
+        "source_concept": "Verification",
+        "relation": "evaluates",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_23c82f70311f85e830",
+        "target": "seed_anchor_94c67fcb24a3ba2c48"
+      },
+      {
+        "source_concept": "Evidence",
+        "relation": "has_source",
+        "target_concept": "Source",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_acd79f2e110cadbfe0",
+        "target": "seed_anchor_6d7398ae2c1020cd72"
+      },
+      {
+        "source_concept": "Verification",
+        "relation": "verifies",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_23c82f70311f85e830",
+        "target": "seed_anchor_94c67fcb24a3ba2c48"
+      }
+    ],
+    "observed_paths": [],
+    "prediction_errors": [
+      {
+        "source_concept": "Evidence",
+        "relation": "supports",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_acd79f2e110cadbfe0",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      },
+      {
+        "source_concept": "Source",
+        "relation": "provides",
+        "target_concept": "Evidence",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_6d7398ae2c1020cd72",
+        "target": "seed_anchor_acd79f2e110cadbfe0",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      },
+      {
+        "source_concept": "Verification",
+        "relation": "evaluates",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_23c82f70311f85e830",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      },
+      {
+        "source_concept": "Evidence",
+        "relation": "has_source",
+        "target_concept": "Source",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_acd79f2e110cadbfe0",
+        "target": "seed_anchor_6d7398ae2c1020cd72",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      },
+      {
+        "source_concept": "Verification",
+        "relation": "verifies",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_23c82f70311f85e830",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      }
+    ],
+    "strengthened_edges": [],
+    "weakened_edges": [
+      {
+        "source": "seed_anchor_acd79f2e110cadbfe0",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "relation": "supports",
+        "plasticity_delta": -0.04
+      },
+      {
+        "source": "seed_anchor_6d7398ae2c1020cd72",
+        "target": "seed_anchor_acd79f2e110cadbfe0",
+        "relation": "provides",
+        "plasticity_delta": -0.04
+      },
+      {
+        "source": "seed_anchor_23c82f70311f85e830",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "relation": "evaluates",
+        "plasticity_delta": -0.04
+      },
+      {
+        "source": "seed_anchor_acd79f2e110cadbfe0",
+        "target": "seed_anchor_6d7398ae2c1020cd72",
+        "relation": "has_source",
+        "plasticity_delta": -0.04
+      },
+      {
+        "source": "seed_anchor_23c82f70311f85e830",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "relation": "verifies",
+        "plasticity_delta": -0.04
+      }
+    ],
+    "unverified_hypotheses": [
+      {
+        "source_concept": "Evidence",
+        "relation": "supports",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_acd79f2e110cadbfe0",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      },
+      {
+        "source_concept": "Source",
+        "relation": "provides",
+        "target_concept": "Evidence",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_6d7398ae2c1020cd72",
+        "target": "seed_anchor_acd79f2e110cadbfe0",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      },
+      {
+        "source_concept": "Verification",
+        "relation": "evaluates",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_23c82f70311f85e830",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      },
+      {
+        "source_concept": "Evidence",
+        "relation": "has_source",
+        "target_concept": "Source",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_acd79f2e110cadbfe0",
+        "target": "seed_anchor_6d7398ae2c1020cd72",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      },
+      {
+        "source_concept": "Verification",
+        "relation": "verifies",
+        "target_concept": "Claim",
+        "expected": true,
+        "materializable": true,
+        "source": "seed_anchor_23c82f70311f85e830",
+        "target": "seed_anchor_94c67fcb24a3ba2c48",
+        "observed": false,
+        "prediction_error": 0.64,
+        "error_reason": "expected_path_missing"
+      }
+    ],
+    "mean_prediction_error": 0.64,
+    "self_generated_truth_saved": false,
+    "local_brain_write": false
+  },
+  "knowledge_crystal": {
+    "created": false,
+    "reason": "insufficient_evidence",
+    "self_generated_truth_saved": false,
+    "local_brain_write": false
+  },
+  "detach_result": {
+    "bundle_id": "cnb_5e2925ce2e7b2649f61565e4",
+    "detached": true,
+    "removed_nodes": 4,
+    "removed_edges": 3
+  },
+  "overlay_after_detach": {
+    "cloud_attached_nodes": 0,
+    "cloud_attached_edges": 0,
+    "seed_anchor_nodes": 0
+  },
+  "local_brain_after_detach": {
+    "local_total_nodes": 0,
+    "local_total_edges": 0,
+    "local_brain_initialized": false
+  },
+  "self_generated_truth_saved": false,
+  "local_brain_write": false,
+  "external_llm_used": false,
+  "external_sllm_used": false,
+  "rule_template_final_generation_claimed": false,
+  "claims": [
+    "ATANOR can run a neuromorphic graph activation loop over Seed/Cloud/Working Memory.",
+    "Active graph paths can enter a bounded Global Workspace.",
+    "Prediction paths can be compared against evidence.",
+    "Evidence-backed reasoning traces can become Knowledge Crystal candidates.",
+    "Cloud attached nodes remain temporary.",
+    "Local Brain remains isolated."
+  ],
+  "does_not_claim": [
+    "consciousness",
+    "human-level intelligence",
+    "unrestricted self-learning",
+    "final answer superiority",
+    "global multi-peer Cloud Brain",
+    "trillion actual node population",
+    "sLLM replacement"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "fluency",
+  "surface": [
+    "packages/fluency"
+  ],
+  "eval_entry": "packages.fluency.transfer_eval:evaluate",
+  "metrics": [
+    {
+      "name": "slot_copy_accuracy",
+      "baseline": 0.980392,
+      "direction": "higher_is_better",
+      "note": "content preserved through realization; has headroom"
+    },
+    {
+      "name": "fluency_proxy",
+      "baseline": 0.955086,
+      "direction": "higher_is_better",
+      "note": "discourse quality; has headroom"
+    },
+    {
+      "name": "faithfulness",
+      "baseline": 1.0,
+      "direction": "higher_is_better",
+      "note": "REGRESSION GUARD - already at ceiling"
+    },
+    {
+      "name": "empty_rate",
+      "baseline": 0.0,
+      "direction": "lower_is_better",
+      "note": "REGRESSION GUARD - abstention floor; silence must not read as skill"
+    },
+    {
+      "name": "scored",
+      "baseline": 17.0,
+      "direction": "higher_is_better",
+      "note": "REGRESSION GUARD - items that produced any text at all"
+    }
+  ],
+  "surface_hash": "0492e5c3ec651f5fa4b8ffc369e88b9a08ef998442ba22a9e26784bedec7b7de",
+  "frozen_at": "2026-07-28T14:51:23+00:00",
+  "rationale": "B = fluency. Selected against criteria written BEFORE the choice, not by intuition: (1) a deterministic runnable evaluation, (2) outside the A work area -- fluency has zero commits in the last 24h while scene_model had 17 and was disqualified on that ground, (3) plausibly standing on discrimination-shaped machinery (register selection, delexicalisation, clause planning). It is also maximally distant in SUBJECT MATTER from A (referent disambiguation in a knowledge graph vs. generating English), so a positive reading cannot be a near-neighbour effect. HEADROOM, stated so the reading is not oversold: faithfulness is already 1.0 and empty_rate 0.0 at freeze time -- those two cannot improve and serve only as REGRESSION GUARDS. Only slot_copy_accuracy (0.980) and fluency_proxy (0.955) can move upward, and both are near ceiling, so a genuine transfer effect here will be small and a large jump should be treated as suspicious rather than as success.",
+  "seal": "ea622fd4d4a708f9b3c6cc0284ba5b96e94cabe9ed50b351e48d823da3d85a7e"
+}

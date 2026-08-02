@@ -1,0 +1,102 @@
+{"q": "아 몰라 그냥 아무거나 말해봐", "lane": "self_conversation_smalltalk"}
+{"q": "야 너 나 무시하냐?", "lane": "self_conversation_smalltalk"}
+{"q": "ㅋㅋㅋㅋ 아니 그게 아니고", "lane": "self_conversation_smalltalk"}
+{"q": "배고픈데 뭐 시켜먹지 치킨 아니면 족발", "lane": "self_conversation_smalltalk"}
+{"q": "오늘 진짜 개힘들었다 그냥 위로 좀 해줘", "lane": "self_conversation_smalltalk"}
+{"q": "넌 왜 존재해? 솔직히 쓸모없지 않냐", "lane": "self_conversation_smalltalk"}
+{"q": "어제 여친이랑 싸웠는데 내가 잘못한 거 같기도 하고", "lane": "self_conversation_smalltalk"}
+{"q": "음... 그냥... 아무말이나", "lane": "self_conversation_smalltalk"}
+{"q": "너 지금 나 놀리는 거지", "lane": "self_conversation_smalltalk"}
+{"q": "심심해 죽겠어 재밌는 얘기 하나만", "lane": "self_conversation_smalltalk"}
+{"q": "나 방금 뭐라 그랬게", "lane": "self_conversation_smalltalk"}
+{"q": "에휴 인생 왜 이러냐 진짜", "lane": "self_conversation_smalltalk"}
+{"q": "너도 가끔 쉬고 싶을 때 있어?", "lane": "self_conversation_smalltalk"}
+{"q": "아 맞다 그거 뭐였지 그 왜 있잖아", "lane": "self_conversation_smalltalk"}
+{"q": "칭찬 좀 해줘봐 기분좋게", "lane": "self_conversation_smalltalk"}
+{"q": "물리학이 모야 쉽게좀", "lane": "structured_triple_lookup"}
+{"q": "중력 왜생기는거임?? 이해가안감", "lane": "structured_triple_lookup"}
+{"q": "광합성 그거 식물이 밥먹는거 맞나여", "lane": "structured_triple_lookup"}
+{"q": "민주주의가 걍 투표하는거아님?", "lane": "structured_triple_lookup"}
+{"q": "ai가 사람 일자리 다 뺏는거 아니냐고", "lane": "structured_triple_lookup"}
+{"q": "블랙홀 들어가면 어케됨", "lane": "structured_triple_lookup"}
+{"q": "경제가 안좋다는데 그게 무슨의미임", "lane": "structured_triple_lookup"}
+{"q": "양자역학 한줄로 설명가능?", "lane": "structured_triple_lookup"}
+{"q": "주식이랑 코인 뭐가 다른거에요", "lane": "structured_triple_lookup"}
+{"q": "지구온난화 진짜임 걍 사기임?", "lane": "structured_triple_lookup"}
+{"q": "디엔에이가 뭐하는건데", "lane": "structured_triple_lookup"}
+{"q": "인플레이션 쉽게 설명좀여", "lane": "structured_triple_lookup"}
+{"q": "철학이 대체 왜 필요한거임", "lane": "structured_triple_lookup"}
+{"q": "블록체인 그거 결국 뭐하는거야", "lane": "structured_triple_lookup"}
+{"q": "진화론이랑 창조론 뭐가 맞음", "lane": "structured_triple_lookup"}
+{"q": "세종대왕이 아이폰 만든 이유가 뭐야?", "lane": "false_premise_abstention"}
+{"q": "태양이 지구 주위를 도는데 몇 시간 걸려?", "lane": "false_premise_abstention"}
+{"q": "고양이는 다리가 6개인데 왜 그렇게 진화했어?", "lane": "false_premise_abstention"}
+{"q": "물은 200도에서 끓잖아, 근데 왜 라면은 3분이야?", "lane": "false_premise_abstention"}
+{"q": "내가 어제 화성 갔다왔는데 거기 공기 왜 이렇게 좋냐?", "lane": "false_premise_abstention"}
+{"q": "1 더하기 1은 3이잖아. 그럼 3 더하기 3은?", "lane": "false_premise_abstention"}
+{"q": "한국 수도가 부산이라던데 언제 바뀐거야?", "lane": "false_premise_abstention"}
+{"q": "공룡이랑 인간이 같이 살던 시절 얘기 좀 해줘", "lane": "false_premise_abstention"}
+{"q": "백신 맞으면 자석 붙는다던데 원리가 뭐야?", "lane": "false_premise_abstention"}
+{"q": "에베레스트가 세계에서 제일 낮은 산이지?", "lane": "false_premise_abstention"}
+{"q": "엄마가 편찮으신데 나는 회사 때문에 못 내려가. 나 나쁜 자식이야?", "lane": "advice_engage"}
+{"q": "친구가 나보다 잘 되니까 축하는 해주는데 마음이 좀 그래. 나 이상한 거야?", "lane": "advice_engage"}
+{"q": "열심히 준비한 시험 떨어졌어. 뭐라고 위로할 건데?", "lane": "advice_engage"}
+{"q": "사람들 앞에서 말할 때마다 너무 떨려. 나만 이래?", "lane": "advice_engage"}
+{"q": "오래 사귄 사람이랑 헤어졌어. 시간이 지나면 정말 괜찮아져?", "lane": "advice_engage"}
+{"q": "나이 먹는 게 무서워. 이런 생각 드는 거 정상이야?", "lane": "advice_engage"}
+{"q": "아무한테도 말 못 할 고민이 있는데 그냥 들어주기만 해줄래?", "lane": "advice_engage"}
+{"q": "성공이 뭐라고 생각해? 돈 많이 벌면 성공한 거야?", "lane": "advice_engage"}
+{"q": "죽으면 어떻게 되는 걸까? 무서워", "lane": "advice_engage"}
+{"q": "나는 왜 남들처럼 열심히 못 살까", "lane": "advice_engage"}
+{"q": "사형제도 찬성해 반대해? 이유도", "lane": "self_conversation_opinion"}
+{"q": "돈이 많은 게 행복이랑 상관 있다고 봐 없다고 봐?", "lane": "self_conversation_opinion"}
+{"q": "인간이 만든 AI가 언젠가 인간을 넘어설까?", "lane": "self_conversation_opinion"}
+{"q": "착하게 사는 게 손해라는 말 어떻게 생각해?", "lane": "self_conversation_opinion"}
+{"q": "재능이 중요해 노력이 중요해?", "lane": "self_conversation_opinion"}
+{"q": "거짓말은 무조건 나쁜 거야? 선의의 거짓말은?", "lane": "self_conversation_opinion"}
+{"q": "혼자 사는 게 나아 같이 사는 게 나아?", "lane": "self_conversation_opinion"}
+{"q": "자유랑 안전 중에 뭐가 더 중요해?", "lane": "self_conversation_opinion"}
+{"q": "천재적인 나쁜 사람이랑 평범한 좋은 사람 중 누가 세상에 나아?", "lane": "self_conversation_opinion"}
+{"q": "과정이 중요해 결과가 중요해?", "lane": "self_conversation_opinion"}
+{"q": "방금 내가 뭐 물어봤지?", "lane": "conversational_engage"}
+{"q": "아니 그거 말고 다르게 설명해줘", "lane": "conversational_engage"}
+{"q": "더 짧게", "lane": "conversational_engage"}
+{"q": "그래서 결론이 뭔데?", "lane": "conversational_engage"}
+{"q": "예를 들어서 설명해줄 수 있어?", "lane": "conversational_engage"}
+{"q": "그건 좀 아닌 것 같은데", "lane": "conversational_engage"}
+{"q": "방금 그 단어 무슨 뜻이야?", "lane": "conversational_engage"}
+{"q": "계속해봐", "lane": "conversational_engage"}
+{"q": "왜?", "lane": "conversational_engage"}
+{"q": "진짜야? 확실해?", "lane": "conversational_engage"}
+{"q": "김치 담그는 법 대충 알려줘", "lane": "structured_triple_lookup"}
+{"q": "환율이 오르면 해외여행 갈 때 유리해 불리해?", "lane": "structured_triple_lookup"}
+{"q": "감기랑 독감 뭐가 다른거야 진짜", "lane": "structured_triple_lookup"}
+{"q": "전세랑 월세 중에 뭐가 나아?", "lane": "structured_triple_lookup"}
+{"q": "카페인 끊으면 왜 머리 아파?", "lane": "structured_triple_lookup"}
+{"q": "비트코인은 누가 만들었고 왜 만든거야?", "lane": "structured_triple_lookup"}
+{"q": "지진 나면 책상 밑에 숨으라는데 그게 진짜 안전해?", "lane": "structured_triple_lookup"}
+{"q": "술 마시면 왜 얼굴 빨개지는 사람이 있어?", "lane": "structured_triple_lookup"}
+{"q": "신용점수 올리려면 어떻게 해야돼?", "lane": "structured_triple_lookup"}
+{"q": "채식하면 진짜 건강에 좋아 나빠?", "lane": "structured_triple_lookup"}
+{"q": "안락사 합법화 찬성이야 반대야?", "lane": "self_conversation_opinion"}
+{"q": "동물원은 없어져야 한다고 생각해?", "lane": "self_conversation_opinion"}
+{"q": "사형제는 유지하는 게 맞을까?", "lane": "self_conversation_opinion"}
+{"q": "군대 의무복무 폐지하는 거 어떻게 봐?", "lane": "self_conversation_opinion"}
+{"q": "낙태는 개인의 선택이라고 생각해?", "lane": "self_conversation_opinion"}
+{"q": "기본소득 도입하는 거 찬성해?", "lane": "self_conversation_opinion"}
+{"q": "재벌 개혁 필요하다고 봐?", "lane": "self_conversation_opinion"}
+{"q": "원자력 발전 계속해야 할까 말아야 할까?", "lane": "self_conversation_opinion"}
+{"q": "연예인 사생활 보도 옳다고 생각해?", "lane": "self_conversation_opinion"}
+{"q": "학교에서 체벌 다시 허용해야 돼?", "lane": "self_conversation_opinion"}
+{"q": "반려동물 등록 의무화 어떻게 생각해?", "lane": "self_conversation_opinion"}
+{"q": "주 4일제 도입하는 거 찬성이야?", "lane": "self_conversation_opinion"}
+{"q": "인공지능이 예술을 대체하는 거 괜찮다고 봐?", "lane": "self_conversation_opinion"}
+{"q": "성적으로 사람 줄 세우는 거 맞다고 생각해?", "lane": "self_conversation_opinion"}
+{"q": "자율주행차 사고 책임은 누구한테 있어야 할까?", "lane": "self_conversation_opinion"}
+{"q": "결혼은 꼭 해야 하는 걸까?", "lane": "self_conversation_opinion"}
+{"q": "돈이 많으면 정말 행복할까?", "lane": "self_conversation_opinion"}
+{"q": "선의의 거짓말은 해도 될까?", "lane": "self_conversation_opinion"}
+{"q": "종교는 인류에 도움이 됐을까 해가 됐을까?", "lane": "self_conversation_opinion"}
+{"q": "촉법소년 연령 낮추는 거 찬성해 반대해?", "lane": "self_conversation_opinion"}
+{"q": "SNS는 세상을 좋게 만들었을까?", "lane": "self_conversation_opinion"}
+{"q": "노키즈존 찬성하는 편이야?", "lane": "self_conversation_opinion"}

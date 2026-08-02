@@ -1,0 +1,83 @@
+{
+  "schema": "atanor.depth.e4.verdict.v1",
+  "pass": true,
+  "attestation": true,
+  "seal_spent_before_this_run": false,
+  "conditions": {
+    "net_p10_beats_constant_p90": true,
+    "absrel_agrees": true,
+    "net_p10_beats_shuffled_p90": true,
+    "preflight": true
+  },
+  "delta125": {
+    "net": {
+      "p10": 0.4563451916904677,
+      "median": 0.4849875109388051,
+      "p90": 0.5151126751843941
+    },
+    "constant": {
+      "p10": 0.19255767593651535,
+      "median": 0.20415644603219263,
+      "p90": 0.22656524795849528
+    },
+    "shuffled": {
+      "p10": 0.31361616264094916,
+      "median": 0.3427438731781044,
+      "p90": 0.386606397903489
+    },
+    "true": {
+      "p10": 1.0,
+      "median": 1.0,
+      "p90": 1.0
+    }
+  },
+  "absrel_median": {
+    "net": 0.3430108088999987,
+    "constant": 0.797225303389132,
+    "shuffled": 0.6212810086086393
+  },
+  "answers_sha256": "8648fb33f04d34746c215c82b4dd7e6698912440f936ff534826c5a23e4946f2",
+  "pred_sha256": "d82c664ce6dd9451bd30c4e5f05d55cbe753da9cfc631cc08f3a13ca891363ba",
+  "checkpoint_sha256": "03a4e037a9a9fed819e086014f429052f5986305e6f00f1871bd3c175f093664",
+  "prereg": "docs/ATANOR_depth_E4_prereg.md",
+  "preflight": {
+    "claim": "depth_learner E4: CARLA-learned depth transfers to a sealed held-out set",
+    "may_promote": true,
+    "checks": [
+      {
+        "check": "integrity",
+        "green": true,
+        "ran": true,
+        "passed": true,
+        "value": null,
+        "detail": "saw 'sealed CARLA episodes', wanted 'sealed CARLA episodes'"
+      },
+      {
+        "check": "data",
+        "green": true,
+        "ran": true,
+        "passed": true,
+        "value": 0.6867,
+        "detail": "present at 68.67%"
+      },
+      {
+        "check": "resolution",
+        "green": true,
+        "ran": true,
+        "passed": true,
+        "value": 8.355,
+        "detail": "target is 8.36x the unit"
+      },
+      {
+        "check": "discriminator",
+        "green": true,
+        "ran": true,
+        "passed": true,
+        "value": 0.2808,
+        "detail": "real 0.4850 vs control 0.2042, lift +0.2808"
+      }
+    ],
+    "blocked_by": []
+  },
+  "examiner": "\uc0ac\uc7a5\ub2d8"
+}

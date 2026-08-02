@@ -1,0 +1,40 @@
+{
+  "attach_behavior": {
+    "attached_edges": 4,
+    "attached_nodes": 5,
+    "cloud_attached_counts_as_local": false,
+    "local_brain_write": false,
+    "temporary": true
+  },
+  "browser_verification_url": "http://127.0.0.1:3022/?lang=ko&section=cloud&workspace=lab",
+  "concepts": 5,
+  "duplicate_merge_behavior": "Duplicate concepts merge by deterministic canonical ID; repeated relations increment seen_count and bounded weight.",
+  "evidence": 4,
+  "external_llm_used": false,
+  "external_sllm_used": false,
+  "generated_at": "2026-06-16T05:59:08Z",
+  "global_cloud_claim": false,
+  "handoff_id": "semantic_cloud_growth_handoff",
+  "known_limitations": [
+    "deterministic_v0_extraction_only",
+    "small_local_proof_store",
+    "not_global_cloud",
+    "not_web_scale",
+    "not_perfect_semantic_parser",
+    "not_full_cross_lingual_entity_resolution"
+  ],
+  "last_growth_run": {
+    "concepts_created": 0,
+    "concepts_merged": 5,
+    "evidence_added": 0,
+    "relations_created": 0,
+    "relations_strengthened": 4,
+    "run_id": "scg_bed4caada8b21a7248",
+    "sentences_processed": 1
+  },
+  "local_brain_write": false,
+  "old_mirror_snapshot_used_as_live_cloud": false,
+  "proof_store_only": true,
+  "proof_store_path": "data/cloud_brain/store",
+  "relations": 4
+}

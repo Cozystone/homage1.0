@@ -1,0 +1,22 @@
+{
+  "asked": 90,
+  "gaps": 86,
+  "pursued": 86,
+  "queued": 6,
+  "no_consensus": 80,
+  "elapsed_h": 0.1687703314092424,
+  "questions_total": 90,
+  "live": false,
+  "pause_s": 0.0,
+  "settled_by_tier": {
+    "web": 5,
+    "table": 1
+  },
+  "tier_consulted": {
+    "local": 85,
+    "web": 85,
+    "table": 34
+  },
+  "tier": "operator_queue",
+  "promoted": 0
+}

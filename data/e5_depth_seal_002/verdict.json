@@ -1,0 +1,89 @@
+{
+  "schema": "atanor.depth.e5.verdict.v1",
+  "pass": false,
+  "attestation": true,
+  "seal_spent_before_this_run": false,
+  "conditions": {
+    "metric_arms_clear_constant": false,
+    "label_free_clears_shuffled": false,
+    "arms_resolve": true,
+    "preflight": false
+  },
+  "arms": {
+    "depthnet.pt": {
+      "metric": "delta125",
+      "label_free": false,
+      "init": "random",
+      "real_p10": 0.504471439775219,
+      "real_median": 0.5267775185735044,
+      "shuffled_p90": 0.4355107676479445,
+      "shuffled_median": 0.4070724860438596,
+      "constant_p90": 0.24095731430976847
+    },
+    "ordinal_selfsup.pt": {
+      "metric": "spearman",
+      "label_free": true,
+      "init": "random",
+      "real_p10": 0.275712528073908,
+      "real_median": 0.3094143780212111,
+      "shuffled_p90": 0.3148236728669483,
+      "shuffled_median": 0.2913708129794258,
+      "constant_p90": -0.019358012866907054
+    },
+    "citysample_selfsup.pt": {
+      "metric": "delta125",
+      "label_free": false,
+      "init": "depthnet.pt",
+      "real_p10": 0.14716169983863325,
+      "real_median": 0.1506195862239773,
+      "shuffled_p90": 0.15704463734580862,
+      "shuffled_median": 0.15412166118407833,
+      "constant_p90": 0.2181012040609301
+    }
+  },
+  "dropped_frames": 0,
+  "answers_sha256": "be190827589b2b108172c1b1cc99055a03dddf1b1b59e1f97279346c6245afdd",
+  "prereg": "docs/ATANOR_depth_E5_prereg_v2.md",
+  "preflight": {
+    "claim": "depth_learner E5: label-free depth transfers to a sealed unseen town",
+    "may_promote": false,
+    "checks": [
+      {
+        "check": "integrity",
+        "green": true,
+        "ran": true,
+        "passed": true,
+        "value": null,
+        "detail": "saw 'sealed CARLA episodes', wanted 'sealed CARLA episodes'"
+      },
+      {
+        "check": "data",
+        "green": true,
+        "ran": true,
+        "passed": true,
+        "value": 0.7136,
+        "detail": "present at 71.36%"
+      },
+      {
+        "check": "resolution",
+        "green": false,
+        "ran": true,
+        "passed": false,
+        "value": 1.956,
+        "detail": "target is 1.96x the unit — needs 2.0x; the answer cannot express the thing"
+      },
+      {
+        "check": "discriminator",
+        "green": true,
+        "ran": true,
+        "passed": true,
+        "value": 0.018,
+        "detail": "real 0.3094 vs control 0.2914, lift +0.0180"
+      }
+    ],
+    "blocked_by": [
+      "resolution: failed (target is 1.96x the unit — needs 2.0x; the answer cannot express the thing)"
+    ]
+  },
+  "examiner": "사장님"
+}

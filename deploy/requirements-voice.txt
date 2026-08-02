@@ -1,0 +1,2 @@
+# Voice I/O v0 — optional local STT (NOT required by the cloud VM)
+faster-whisper>=1.2

@@ -1,0 +1,14 @@
+{
+  "schema_version": "atanor.gwip-mechanism-seed-manifest.v1",
+  "preregistration_commit": "820ebdb389034edbffdb38a28d6aa4acffd070ba",
+  "preregistration_raw_sha256": "9ab286bf14a5a4e511475427817f04056956e7769317fbe5f396952ef6a7176f",
+  "candidate_commit": "84e63520a2f59df62faaa5dbc74e0bfbb99deabd",
+  "candidate_source_sha256": "ba7d855b6c5abf6b20ca1b8d87fe74a8364cf113ed944c9ab93c1665518b4c96",
+  "evaluator_commit": "848bb2da656baa6c76b765ea3fc460f4413f1d8c",
+  "evaluator_source_sha256": "e60b126754d72b76522c1904dfaf7ed80e25031df555ada83d8b34f265ed413d",
+  "generator_seed": "3f00e247e971a48e24960d4d80c435fc88749d4bb9e5ba1ac20d3089cf1c4bd8",
+  "generator_nonce": "X-hNpgox79wlHKh7JVGmt8p84YuEKAztKf8Rk0P7pjo",
+  "candidate_policy_seed": 0,
+  "environment_seed_rule": "episode_index",
+  "counterbalance_rule": "mechanic_index_mod_6"
+}

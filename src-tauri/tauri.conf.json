@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "ATANOR",
+  "version": "0.1.2",
+  "identifier": "ai.homage.desktop",
+  "build": {
+    "beforeDevCommand": "npm --workspace apps/web run dev",
+    "devUrl": "http://localhost:3000",
+    "beforeBuildCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/tauri_before_build.ps1",
+    "frontendDist": "../apps/web/out"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "ATANOR",
+        "width": 1440,
+        "height": 920,
+        "minWidth": 1120,
+        "minHeight": 720,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "createUpdaterArtifacts": false,
+    "externalBin": ["binaries/homage-api"],
+    "windows": {
+      "signCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/sign_windows_artifact.ps1 -FilePath %1"
+    },
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://atanor.vercel.app/updater/{{target}}/{{arch}}/{{current_version}}/updater.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEUwNDRGMjkwRjg2MDhCRDAKUldUUWkyRDRrUEpFNEQ4SmdwcU5PaXl6R2ZRUUNvUnhIaVkwVUltV0NMaEx6VTkrWVhpT0ZqeEEK",
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}

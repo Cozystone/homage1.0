@@ -1,0 +1,108 @@
+{"entity": "moccasin", "relation": "made_of", "merged_into": "piece of deerskin", "from": ["deerskin", "piece of deerskin"], "domains": ["en.wikipedia.org", "en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "mower", "relation": "used_for", "merged_into": "cut grass on lawns", "from": ["lawns", "cut grass on lawns"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "burqa", "relation": "capable_of", "merged_into": "cover whole body", "from": ["cover body", "cover whole body"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "clacker", "relation": "capable_of", "merged_into": "make clacking noise", "from": ["make clacking noise", "clack"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "backpropagation", "relation": "used_for", "merged_into": "training a neural network", "from": ["training a neural network", "neural networks"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "sifter", "relation": "used_for", "merged_into": "sift flour in china", "from": ["sift flour in china", "sifting"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "straightener", "relation": "used_for", "merged_into": "straightening hair", "from": ["straightening hair", "straightening"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "determinative", "relation": "capable_of", "merged_into": "serve to determine", "from": ["determine", "serve to determine"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "flagstone", "relation": "used_for", "merged_into": "paving slabs", "from": ["paving slabs", "paving"], "domains": ["en.wikipedia.org", "en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "parer", "relation": "used_for", "merged_into": "paring fruits", "from": ["paring fruits", "paring"], "domains": ["gcide.gnu.org.ua", "wordnetweb.princeton.edu"]}
+{"entity": "percolator", "relation": "used_for", "merged_into": "brew coffee", "from": ["brewing", "brew coffee"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "refrigerant", "relation": "capable_of", "merged_into": "cool or freezes", "from": ["cool or freezes", "make to be cool"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "abrotanum", "relation": "used_for", "merged_into": "brewing beer", "from": ["brewing", "brewing beer"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "acetoxolone", "relation": "used_for", "merged_into": "treat peptic ulcer", "from": ["peptic ulcer", "treat peptic ulcer"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "acitretin", "relation": "used_for", "merged_into": "treat psoriasis", "from": ["psoriasis", "treat psoriasis"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "amice", "relation": "made_of", "merged_into": "or lined", "from": ["or lined", "lined"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "bandoneon", "relation": "used_for", "merged_into": "most tango ensembles", "from": ["most tango ensembles", "tango ensembles"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "bathometer", "relation": "used_for", "merged_into": "measuring water depth", "from": ["measuring water depth", "measuring depths"], "domains": ["en.wikipedia.org", "gcide.gnu.org.ua"]}
+{"entity": "beaverslide", "relation": "used_for", "merged_into": "stacking hay", "from": ["stacking hay", "stack hay"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "bedug", "relation": "used_for", "merged_into": "gamelan music", "from": ["gamelan", "gamelan music"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "bepridil", "relation": "used_for", "merged_into": "treat angina pectoris", "from": ["treat angina pectoris", "treat angina"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "boarhound", "relation": "used_for", "merged_into": "hunting wild boars", "from": ["hunt boars", "hunting wild boars"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "boffer", "relation": "used_for", "merged_into": "simulated handheld combat", "from": ["simulated handheld combat", "simulated combat"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "bragget", "relation": "made_of", "merged_into": "fermented ale", "from": ["fermented ale", "ale"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "carbolfuchsin", "relation": "used_for", "merged_into": "bacterial staining procedures", "from": ["bacterial staining procedures", "bacterial staining"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "celempung", "relation": "used_for", "merged_into": "javanese gamelan music", "from": ["javanese gamelan", "javanese gamelan music"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "chemotherapeutic", "relation": "used_for", "merged_into": "cancer chemotherapy", "from": ["cancer chemotherapy", "chemotherapy"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "chipboard", "relation": "made_of", "merged_into": "wood chips compressed", "from": ["wood chips compressed", "wood chips"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua", "wordnetweb.princeton.edu"]}
+{"entity": "chlortoluron", "relation": "used_for", "merged_into": "control broadleaf weeds", "from": ["control broadleaf", "control broadleaf weeds"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "cobicistat", "relation": "used_for", "merged_into": "treat hiv", "from": ["treat hiv", "treating hiv"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "cofferdam", "relation": "used_for", "merged_into": "construction under water", "from": ["construction", "construction under water"], "domains": ["en.wikipedia.org", "wordnetweb.princeton.edu"]}
+{"entity": "conpoy", "relation": "made_of", "merged_into": "adductor muscle of scallops", "from": ["adductor muscle of scallops", "scallops"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "copha", "relation": "made_of", "merged_into": "hydrogenated coconut oil", "from": ["hydrogenated coconut oil", "coconut oil"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "crossatron", "relation": "capable_of", "merged_into": "combine useful features of thyratrons", "from": ["combine features of thyratrons", "combine useful features of thyratrons"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "cyclocomputer", "relation": "capable_of", "merged_into": "calculate and displays trip information", "from": ["calculate and displays trip information", "display trip information"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "danso", "relation": "used_for", "merged_into": "korean folk music", "from": ["korean folk music", "korean music"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "darby", "relation": "used_for", "merged_into": "smoothing ceilings", "from": ["smooth", "smoothing ceilings"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "deadeye", "relation": "used_for", "merged_into": "tightening shrouds", "from": ["tightening shrouds", "tighten a shroud"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "deracoxib", "relation": "used_for", "merged_into": "treat osteoarthritis in dogs", "from": ["dogs", "treat osteoarthritis in dogs"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "diplexer", "relation": "capable_of", "merged_into": "implement frequency-domain multiplexing", "from": ["implement frequency-domain multiplexing", "implement frequency domain multiplexing"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "drometrizole", "relation": "used_for", "merged_into": "sunscreens", "from": ["sunscreens", "sunscreen"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "dustcloth", "relation": "used_for", "merged_into": "wiping dust from objects", "from": ["dusting", "wiping dust from objects"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua", "wordnetweb.princeton.edu"]}
+{"entity": "fengite", "relation": "used_for", "merged_into": "windows on account", "from": ["windows", "windows on account"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "flatboat", "relation": "used_for", "merged_into": "transport freight", "from": ["transport freight", "transportation"], "domains": ["en.wikipedia.org", "gcide.gnu.org.ua"]}
+{"entity": "fleam", "relation": "used_for", "merged_into": "open a vein", "from": ["open a vein", "opening veins"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "gantline", "relation": "used_for", "merged_into": "hoist rigging", "from": ["hoist rigging", "hoisting rigging"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "geogrid", "relation": "used_for", "merged_into": "reinforce soils", "from": ["reinforce soils", "reinforce soil"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "grapery", "relation": "used_for", "merged_into": "grape cultivation", "from": ["grape cultivation", "cultivation"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "hatstand", "relation": "used_for", "merged_into": "store hats upon", "from": ["store hats", "store hats upon"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "heroner", "relation": "used_for", "merged_into": "hunting herons", "from": ["hunting herons", "hunting the heron"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "hippocras", "relation": "made_of", "merged_into": "spiced wine mixed", "from": ["wine mixed", "spiced wine mixed", "spiced wine"], "domains": ["en.wikipedia.org", "en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "hygrothermograph", "relation": "capable_of", "merged_into": "measure and records both temperature", "from": ["measure and records both temperature", "measure"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "imipramine", "relation": "used_for", "merged_into": "treat clinical depression", "from": ["treat depression", "treat clinical depression"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "inker", "relation": "capable_of", "merged_into": "apply ink", "from": ["apply ink", "ink"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "intervalometer", "relation": "capable_of", "merged_into": "measure short intervals of time", "from": ["measure short intervals of time", "measure intervals of time"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "ipu", "relation": "made_of", "merged_into": "hollowed gourds", "from": ["gourds", "hollowed gourds"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "jaggery", "relation": "made_of", "merged_into": "palm tree sap", "from": ["palm tree sap", "palm sap"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "kaleidophone", "relation": "capable_of", "merged_into": "produce moving optical figures", "from": ["produce moving optical figures", "produce optical figures"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "kanamycin", "relation": "used_for", "merged_into": "treat severe bacterial infections", "from": ["treat severe bacterial infections", "treat severe infections"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "kemanak", "relation": "used_for", "merged_into": "javanese gamelan music", "from": ["javanese gamelan music", "javanese music"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "koteka", "relation": "made_of", "merged_into": "dried-out gourd", "from": ["dried-out gourd", "dried gourd"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "lanyard", "relation": "used_for", "merged_into": "extend shrouds", "from": ["extending", "extend shrouds"], "domains": ["gcide.gnu.org.ua", "wordnetweb.princeton.edu"]}
+{"entity": "latke", "relation": "made_of", "merged_into": "grated potato", "from": ["potatoes", "grated potato"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "linkwork", "relation": "made_of", "merged_into": "linked pieces of metal", "from": ["linked pieces of metal", "metal"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "mafenide", "relation": "used_for", "merged_into": "help treat severe burns", "from": ["treat severe burns", "help treat severe burns"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "magnetron", "relation": "used_for", "merged_into": "early radar systems", "from": ["early radar systems", "radar"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "malotilate", "relation": "used_for", "merged_into": "studies for the treatment", "from": ["studies for the treatment", "treatment"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "medialuna", "relation": "used_for", "merged_into": "chilean rodeos", "from": ["rodeos", "chilean rodeos"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "mercaptopurine", "relation": "capable_of", "merged_into": "interfere especially", "from": ["interfere especially", "interfere"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "methocarbamol", "relation": "used_for", "merged_into": "treat skeletal muscle spasms", "from": ["treat skeletal muscle spasms", "treat spasms"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "metoprolol", "relation": "used_for", "merged_into": "treat hypertension", "from": ["treat hypertension", "treating hypertension"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "metronidazole", "relation": "used_for", "merged_into": "treat vaginal trichomoniasis", "from": ["treat vaginal trichomoniasis", "treat trichomoniasis"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "mijiu", "relation": "made_of", "merged_into": "fermented glutinous rice", "from": ["glutinous rice", "fermented glutinous rice"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "multiplexer", "relation": "capable_of", "merged_into": "interleave several activities", "from": ["interleave several activities", "interleave two"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "nigrosin", "relation": "used_for", "merged_into": "negative staining", "from": ["negative staining", "staining"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "oxazepam", "relation": "used_for", "merged_into": "treat anxiety states", "from": ["treat anxiety states", "treat anxiety"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "panshon", "relation": "used_for", "merged_into": "holding milk etc", "from": ["holding milk etc", "holding milk"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "photomask", "relation": "used_for", "merged_into": "photolithography for the production", "from": ["photolithography for the production", "photolithography"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "polissoir", "relation": "used_for", "merged_into": "polish stone axes", "from": ["polishing", "polish stone axes"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "polony", "relation": "made_of", "merged_into": "meat partly cooked", "from": ["meat", "meat partly cooked"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "posser", "relation": "used_for", "merged_into": "possing laundry", "from": ["possing laundry", "possing"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "pseudoscope", "relation": "capable_of", "merged_into": "reverse depth perception", "from": ["reverse depth perception", "reverse perception of depth"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "raltitrexed", "relation": "used_for", "merged_into": "cancer chemotherapy", "from": ["cancer chemotherapy", "chemotherapy"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "roux", "relation": "made_of", "merged_into": "equal parts of flour", "from": ["equal parts of flour", "flour"], "domains": ["en.wikipedia.org", "gcide.gnu.org.ua"]}
+{"entity": "rubboard", "relation": "used_for", "merged_into": "zydeco music similar", "from": ["zydeco music similar", "zydeco music"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "saung", "relation": "used_for", "merged_into": "traditional burmese music", "from": ["traditional burmese music", "burmese traditional music"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "sestamibi", "relation": "used_for", "merged_into": "nuclear medicine imaging", "from": ["nuclear medicine imaging", "nuclear imaging"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "siteswap", "relation": "used_for", "merged_into": "describe juggling patterns", "from": ["describe", "describe juggling patterns"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "sodar", "relation": "used_for", "merged_into": "air rather than", "from": ["air rather than", "air"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "stewpot", "relation": "used_for", "merged_into": "making stew", "from": ["making stew", "stewing"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua"]}
+{"entity": "straightedge", "relation": "used_for", "merged_into": "drawing straight lines", "from": ["drawing straight lines", "draw"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "strawboard", "relation": "made_of", "merged_into": "straw pulp", "from": ["straw", "straw pulp", "pulp of straw"], "domains": ["en.wiktionary.org", "gcide.gnu.org.ua", "wordnetweb.princeton.edu"]}
+{"entity": "sulfadiazine", "relation": "used_for", "merged_into": "treat meningococcal meningitis", "from": ["treat meningococcal meningitis", "treating meningitis"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "sulglicotide", "relation": "used_for", "merged_into": "treat peptic ulcer", "from": ["peptic ulcer", "treat peptic ulcer"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "syncword", "relation": "used_for", "merged_into": "synchronize a data transmission", "from": ["synchronize a data transmission", "synchronize a transmission"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "tebufenpyrad", "relation": "used_for", "merged_into": "commercial greenhouses", "from": ["greenhouses", "commercial greenhouses"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "thuthse", "relation": "made_of", "merged_into": "sticky rice", "from": ["sticky rice", "rice"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "tokamak", "relation": "used_for", "merged_into": "nuclear fusion research", "from": ["nuclear fusion research", "fusion research"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "tonalamatl", "relation": "used_for", "merged_into": "central mexico prior", "from": ["central mexico", "central mexico prior"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "towline", "relation": "used_for", "merged_into": "tow vessels", "from": ["towing", "tow vessels"], "domains": ["gcide.gnu.org.ua", "wordnetweb.princeton.edu"]}
+{"entity": "towrope", "relation": "used_for", "merged_into": "towing vessels", "from": ["towing", "towing vessels"], "domains": ["gcide.gnu.org.ua", "wordnetweb.princeton.edu"]}
+{"entity": "tromantadine", "relation": "used_for", "merged_into": "treat herpes simplex virus", "from": ["treat herpes simplex virus", "treat herpes simplex"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "truggy", "relation": "capable_of", "merged_into": "combine features", "from": ["combine features", "combine"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "upconverter", "relation": "capable_of", "merged_into": "consist of an upconverter", "from": ["consist of an upconverter", "upconvert"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "wallboard", "relation": "used_for", "merged_into": "cover walls", "from": ["walls", "cover walls"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}
+{"entity": "washtub", "relation": "capable_of", "merged_into": "clothe are washed", "from": ["clothe", "clothe are washed"], "domains": ["gcide.gnu.org.ua", "wordnetweb.princeton.edu"]}
+{"entity": "waywiser", "relation": "used_for", "merged_into": "measuring distance travelled", "from": ["measuring distance", "measuring distance travelled"], "domains": ["en.wikipedia.org", "en.wiktionary.org"]}
+{"entity": "wineskin", "relation": "used_for", "merged_into": "holding", "from": ["holding", "hold"], "domains": ["en.wiktionary.org", "wordnetweb.princeton.edu"]}

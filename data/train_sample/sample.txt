@@ -1,0 +1,1 @@
+ATANOR-Core dry-run sample text. GraphRAG uses KnowledgeGraph evidence. Guardrail reduces unsupported claims.

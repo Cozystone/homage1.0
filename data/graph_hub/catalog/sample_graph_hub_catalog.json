@@ -1,0 +1,435 @@
+{
+  "items": [
+    {
+      "cartridge_id": "atanor_base_free",
+      "category": "general",
+      "downloads": 0,
+      "installed": false,
+      "name": "ATANOR Base Free",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 1,
+        "semantic_nodes": 2
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "Basic ontology anchors for everyday reasoning.",
+      "tags": [
+        "base",
+        "free",
+        "starter"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "startup_strategy_demo",
+      "category": "startup",
+      "downloads": 0,
+      "installed": false,
+      "name": "Startup Strategy Demo",
+      "owned": false,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 2,
+        "semantic_nodes": 3
+      },
+      "price_label": "USD 19 once",
+      "pricing_model": "one_time",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "Market, customer, moat, pricing, and investor objection frames.",
+      "tags": [
+        "startup",
+        "strategy",
+        "pitch"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "korean_writing_demo",
+      "category": "writing",
+      "downloads": 0,
+      "installed": false,
+      "name": "Korean Writing Demo",
+      "owned": false,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 1,
+        "semantic_nodes": 2
+      },
+      "price_label": "USD 5/monthly",
+      "pricing_model": "subscription",
+      "rating": 4.8,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "Natural Korean explanation and transition patterns.",
+      "tags": [
+        "korean",
+        "writing",
+        "surface"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "software_architect_demo",
+      "category": "software",
+      "downloads": 0,
+      "installed": false,
+      "name": "Software Architect Demo",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 2,
+        "semantic_nodes": 3
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "API, backend, frontend, deployment, testing, and tradeoff frames.",
+      "tags": [
+        "software",
+        "architecture",
+        "testing"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "graphrag_evidence_verification_demo",
+      "category": "verification",
+      "downloads": 0,
+      "installed": false,
+      "name": "GraphRAG Evidence Verification",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 11,
+        "semantic_nodes": 10
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "Claim, evidence, citation, and verification flow for grounded answers.",
+      "tags": [
+        "graphrag",
+        "evidence",
+        "verification",
+        "claim",
+        "source"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "local_cloud_boundary_demo",
+      "category": "safety",
+      "downloads": 0,
+      "installed": false,
+      "name": "Local Cloud Boundary",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 9,
+        "semantic_nodes": 10
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "Read-only Cloud context, Payload Vault boundary, and Working Memory overlay rules.",
+      "tags": [
+        "privacy",
+        "working_memory",
+        "local_brain",
+        "cloud_attached",
+        "payload_vault"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "cortex_surface_answer_demo",
+      "category": "answering",
+      "downloads": 0,
+      "installed": false,
+      "name": "CORTEX Surface Answer Path",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 10,
+        "semantic_nodes": 10
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "Activation, salience, surface planning, repair, and hidden trace flow.",
+      "tags": [
+        "surface_brain",
+        "cortex_g2",
+        "answer_quality",
+        "repair",
+        "trace_hygiene"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "expert.anatomy.ko.v1",
+      "category": "medicine",
+      "downloads": 0,
+      "installed": false,
+      "name": "인체 해부 그래프",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 11,
+        "semantic_nodes": 14
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "계통·장기·조직의 전문 지식 그래프",
+      "tags": [
+        "anatomy",
+        "medicine",
+        "expert",
+        "ko"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "expert.astronomy.ko.v1",
+      "category": "science",
+      "downloads": 0,
+      "installed": false,
+      "name": "천문·우주 그래프",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 13,
+        "semantic_nodes": 14
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "태양계·항성·궤도·중력의 전문 지식 그래프",
+      "tags": [
+        "astronomy",
+        "space",
+        "expert",
+        "ko"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "expert.chemistry.ko.v1",
+      "category": "science",
+      "downloads": 0,
+      "installed": false,
+      "name": "화학 기초 그래프",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 10,
+        "semantic_nodes": 12
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "원자·분자·결합·반응의 전문 지식 그래프",
+      "tags": [
+        "chemistry",
+        "science",
+        "expert",
+        "ko"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "expert.coffee.ko.v1",
+      "category": "food_drink",
+      "downloads": 0,
+      "installed": false,
+      "name": "커피 전문 그래프",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 11,
+        "semantic_nodes": 12
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "원두·추출·품종의 니치 전문 지식 그래프",
+      "tags": [
+        "coffee",
+        "expert",
+        "niche",
+        "ko"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "expert.filmmaking.ko.v1",
+      "category": "arts",
+      "downloads": 0,
+      "installed": false,
+      "name": "영화 제작 그래프",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 10,
+        "semantic_nodes": 12
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "감독·시나리오·촬영·편집의 전문 지식 그래프",
+      "tags": [
+        "film",
+        "arts",
+        "expert",
+        "ko"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "expert.music_theory.ko.v1",
+      "category": "music",
+      "downloads": 0,
+      "installed": false,
+      "name": "음악 이론 그래프",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 11,
+        "semantic_nodes": 13
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "음계·화음·음정·리듬의 전문 지식 그래프",
+      "tags": [
+        "music",
+        "theory",
+        "expert",
+        "ko"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "persona.analyst.ko.v1",
+      "category": "persona",
+      "downloads": 0,
+      "installed": false,
+      "name": "냉철한 분석가 페르소나",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 3,
+        "semantic_nodes": 4
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "결론-우선 분석가 성격 그래프",
+      "tags": [
+        "persona",
+        "agent",
+        "analyst",
+        "ko"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "persona.socratic.ko.v1",
+      "category": "persona",
+      "downloads": 0,
+      "installed": false,
+      "name": "소크라테스식 교사 페르소나",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 8,
+        "semantic_nodes": 8
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "질문으로 이끄는 에이전트 성격 그래프",
+      "tags": [
+        "persona",
+        "agent",
+        "teacher",
+        "ko"
+      ],
+      "verified_author": true
+    },
+    {
+      "cartridge_id": "semantic_cloud_kubernetes_demo_api",
+      "category": "general",
+      "downloads": 0,
+      "installed": false,
+      "name": "Semantic Cloud Kubernetes API Demo",
+      "owned": true,
+      "preview": {
+        "default_read_only": true,
+        "semantic_edges": 0,
+        "semantic_nodes": 20
+      },
+      "price_label": "Free",
+      "pricing_model": "free",
+      "rating": 4.6,
+      "remote_url": null,
+      "risk_level": "low",
+      "subscription_active": false,
+      "subtitle": "Exported from the Semantic Cloud proof store.",
+      "tags": [
+        "semantic-cloud",
+        "proof-store",
+        "exported"
+      ],
+      "verified_author": true
+    }
+  ],
+  "product_name": "Graph Hub"
+}

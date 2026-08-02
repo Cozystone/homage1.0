@@ -1,0 +1,32 @@
+{
+  "schema": "atanor.remote-cloud-brain-proof.v1",
+  "proved_at": "2026-06-15T09:59:01Z",
+  "pass": false,
+  "result": "FAIL",
+  "statement": "ATANOR does not yet have a verified real remote Cloud Brain. Current Cloud Brain UI is local/proof/mirror only unless remote read-back passes.",
+  "endpoint_configured": true,
+  "endpoint": "https://atanor-cloud-brain-broker-dev.ntranet-store.workers.dev",
+  "status_success": false,
+  "fragment_submit_success": false,
+  "fragment_query_success": false,
+  "fragment_readback_success": false,
+  "remote_persistence": false,
+  "content_hash": "4ccbff4a964350e48f720095fa2c7b58af5c9ade1ce54e318a4fa2a351eb0e25",
+  "remote_status": null,
+  "remote_submit": null,
+  "remote_query": null,
+  "remote_readback": null,
+  "failures": [
+    "status failed: remote HTTP 422: {\"error\":\"KV get() limit exceeded for the day.\"}"
+  ],
+  "local_brain_state": {
+    "local_brain_initialized": false,
+    "local_total_nodes": 0,
+    "local_total_edges": 0,
+    "memory_db_path_known": true
+  },
+  "external_llm_used": false,
+  "external_sllm_used": false,
+  "rule_template_final_generation_claimed": false,
+  "writes_local_brain": false
+}

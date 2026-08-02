@@ -1,0 +1,111 @@
+{
+  "store": "data\\graph_scale\\kg_triples",
+  "by_n_concepts": {
+    "200": {
+      "n_concepts": 200,
+      "n_properties": 945,
+      "density": 0.07726454734802246,
+      "eff_dims": 1.84226280021006,
+      "eff_dims_shuffled": 157.263512889538
+    },
+    "500": {
+      "n_concepts": 500,
+      "n_properties": 1471,
+      "density": 0.02634534239768982,
+      "eff_dims": 3.1172120628576434,
+      "eff_dims_shuffled": 341.62077974088214
+    },
+    "1854": {
+      "n_concepts": 1854,
+      "n_properties": 2411,
+      "density": 0.006535131949931383,
+      "eff_dims": 6.773607595373119,
+      "eff_dims_shuffled": 865.4013807481255,
+      "leading_axes": [
+        [
+          "has_a:Testament",
+          "has_a:Eternal Flame",
+          "has_a:More Than a Feeling",
+          "has_a:Morning Has Broken",
+          "has_a:My Heart Will Go On"
+        ],
+        [
+          "has_a:AKT1",
+          "has_a:MAPK1",
+          "has_a:MAPK3",
+          "has_a:MAP2K1",
+          "has_a:RAF1"
+        ],
+        [
+          "has_a:On the Wings of a Nightingale",
+          "has_a:Poppa Joe",
+          "has_a:Block Buster!",
+          "has_a:She's Not There",
+          "has_a:Faith"
+        ],
+        [
+          "part_of:Expedition 19",
+          "part_of:Expedition 50",
+          "part_of:Expedition 18",
+          "part_of:Expedition 30",
+          "part_of:Expedition 37"
+        ],
+        [
+          "has_a:WNT1",
+          "has_a:WNT3A",
+          "has_a:WNT3",
+          "has_a:LOC101929777",
+          "has_a:WNT7B"
+        ],
+        [
+          "made_of:oil paint",
+          "made_of:canvas",
+          "made_of:paper",
+          "has_a:Akt1",
+          "has_a:Mapk1"
+        ],
+        [
+          "made_of:oil paint",
+          "made_of:canvas",
+          "made_of:paper",
+          "made_of:panel",
+          "made_of:wood"
+        ],
+        [
+          "has_a:NFKB1",
+          "has_a:TNF",
+          "has_a:MAPK8",
+          "has_a:MAPK9",
+          "has_a:RELA"
+        ]
+      ]
+    },
+    "5000": {
+      "n_concepts": 5000,
+      "n_properties": 3657,
+      "density": 0.002529669087380171,
+      "eff_dims": 15.934949705500655,
+      "eff_dims_shuffled": 1418.792672333259
+    },
+    "20000": {
+      "n_concepts": 20000,
+      "n_properties": 8324,
+      "density": 0.000674279173836112,
+      "eff_dims": 71.07934422312978,
+      "eff_dims_shuffled": 2345.728063852487
+    }
+  },
+  "attribute_predicates": [
+    "capable_of",
+    "causes",
+    "desires",
+    "has_a",
+    "has_property",
+    "has_subevent",
+    "made_of",
+    "part_of",
+    "used_for"
+  ],
+  "vision_reference_holdout": 5.13,
+  "human_reference": "49 (Hebart 2020), 66 later"
+}

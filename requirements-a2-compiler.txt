@@ -1,0 +1,4 @@
+# A2 local dependency parser. Installation may fetch these artifacts; runtime
+# loading is local-only and the compiler fails closed on any version mismatch.
+spacy==3.8.14
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl#sha256=1932429db727d4bff3deed6b34cfc05df17794f4a52eeb26cf8928f7c1a0fb85

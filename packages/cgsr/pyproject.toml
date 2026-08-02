@@ -1,0 +1,10 @@
+[project]
+name = "atanor-cgsr"
+version = "0.1.0"
+description = "ATANOR CGSR Stage 1 construction induction and Korean morphology proof package"
+requires-python = ">=3.11"
+dependencies = ["kiwipiepy>=0.23"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

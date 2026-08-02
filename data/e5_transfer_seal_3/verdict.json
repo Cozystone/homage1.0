@@ -1,0 +1,39 @@
+{
+  "verdict": "PASS",
+  "why": "B2 +6.6% cleared +5% and B1 held at +72.6%",
+  "rows": [
+    {
+      "metric": "B1-per_1k",
+      "baseline": 35.6348,
+      "measured": 61.4947,
+      "relative_change": 0.7257
+    },
+    {
+      "metric": "B1-rows",
+      "baseline": 7127,
+      "measured": 12299,
+      "relative_change": 0.7257
+    },
+    {
+      "metric": "B2-pursued",
+      "baseline": 26349,
+      "measured": 26349,
+      "relative_change": 0.0
+    },
+    {
+      "metric": "B2-queued",
+      "baseline": 800,
+      "measured": 853,
+      "relative_change": 0.0663
+    }
+  ],
+  "gate": {
+    "b2_rise_required": 0.05,
+    "b1_may_not_regress": true,
+    "pursued_must_match": true,
+    "why": "E5-2 measured that a change reaches B1 directly and B2 only through consensus, so B1 is the easy arm. The hard arm is the gate now; B1 only has to not fall."
+  },
+  "sealed_at_commit": "89f871490ac3873834227717d852afea3c8f7f9b",
+  "scored_at_commit": "29bd6d5b71313b015b411cf5d4dbede1afa2470a",
+  "b_untouched": true
+}

@@ -1,0 +1,3411 @@
+{
+  "catalog": {
+    "catalog_id": "baseline_suite_v1",
+    "path": "data/eval/catalog/baseline_suite_v1.json",
+    "sha256": "1cafbdd15533276b68473e86845ee21c06a037d972ec7ed285826a9a3e6c8479"
+  },
+  "catalog_trust": "The catalog is a reviewed recipe input, not an authority boundary. Runner-owned validation and the automatic runner-source binding are independent of catalog fields.",
+  "claim_scope": "Command execution evidence only. Stable exit/output/report digests are not benchmark capability evidence; metrics remain null until a benchmark-owned report parser and independent capability gate populate them. Mutation claims cover only the explicitly recorded observation surfaces.",
+  "created_at_utc": "2026-07-24T20:43:49.506540Z",
+  "environment": {
+    "allowlist": [
+      "ATANOR_DISABLE_PACK",
+      "ATANOR_NETWORK_DISABLED",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD",
+      "PYTHONHASHSEED"
+    ],
+    "values": {
+      "ATANOR_DISABLE_PACK": "1",
+      "ATANOR_NETWORK_DISABLED": "1",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "PYTHONHASHSEED": "0"
+    }
+  },
+  "evidence_kind": "command_execution_only",
+  "filesystem_control": {
+    "enforced": false,
+    "mechanism": "catalog_policy_plus_post_hoc_observation",
+    "note": "The runner installs no filesystem sandbox. Git-visible and recorded repository surfaces are checked after execution; undeclared ignored paths and writes outside the repository are not observed.",
+    "requested": "repository_read_only"
+  },
+  "inputs": {
+    "artifacts": [
+      {
+        "bytes": 49208,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/agora.py",
+        "sha256": "e24359356a0242bb7c33a27b243da02d6950959676aab195d3c9a75cc5426f58"
+      },
+      {
+        "bytes": 6631,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/browser.py",
+        "sha256": "dbf0d96b193d7e2d0dc1acd8d10f92302ba8752c8a70ec9add182175200544c0"
+      },
+      {
+        "bytes": 139548,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/cloud_brain.py",
+        "sha256": "a30131221ae15e4f64b99ec664d3a000bb9c8479e380b4b47d3210d5b37d604d"
+      },
+      {
+        "bytes": 15406,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/atanor-linux/build.sh",
+        "sha256": "ab50812fbad66985870f3d971c13e60762f4bfc96dd97b40ecc4e5d9b19869e7"
+      },
+      {
+        "bytes": 12125,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/registry.py",
+        "sha256": "910616e59e74d7b138c96b2f6199d0752d2511e4d8d40cadaf3fdd1f2d901f2c"
+      },
+      {
+        "bytes": 24589,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/runtime_graph.py",
+        "sha256": "17265eb09ac6fd735e678f88116b49bbfaec7840fa7d710240e9872292eab197"
+      },
+      {
+        "bytes": 8713,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/static_graph.py",
+        "sha256": "dca8a2e011b30894472f94eeeefb74ee585f338401294cf480a635de590daa9b"
+      },
+      {
+        "bytes": 4033,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/__init__.py",
+        "sha256": "705f3e0b3d709a5023e9661082c1e79e39b011be5899f5482e5040fb45a2f172"
+      },
+      {
+        "bytes": 5874,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/audit_ledger.py",
+        "sha256": "31814d76228f0f315448a20c5e46b1be03fe247b9d409e9d6c91b5fe993f34a8"
+      },
+      {
+        "bytes": 15139,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/constants.py",
+        "sha256": "76c0792ece3cf84505d42a812d78518cd98fc827ad51e5d0491c7fc67101cfdd"
+      },
+      {
+        "bytes": 20259,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/envelope.py",
+        "sha256": "a8468f3300bb5b4e15201888712f36a3f7541e7feb56d6029a8c5daa31f4ec59"
+      },
+      {
+        "bytes": 30193,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/evaluation_trust.py",
+        "sha256": "08350dfe00524e780c693a614e91e5a08ee4d7841a800c50e49d7422970031a2"
+      },
+      {
+        "bytes": 5513,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/interface.py",
+        "sha256": "1f17279583dbec61af316bfed7bb7e41c5480073bfe31984e99dbf560b31929f"
+      },
+      {
+        "bytes": 2557,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/killswitch.py",
+        "sha256": "f2a11696e3a5df6880ccb6dea05bfef628eff41c28b23be9af89eb2ea2bb583c"
+      },
+      {
+        "bytes": 23400,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/operator_trust.py",
+        "sha256": "f19af13f9d5cafdb1179ee35f904579d00e3dcf2ff6eb87b80a564277a8bf1c5"
+      },
+      {
+        "bytes": 13818,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/promotion_queue.py",
+        "sha256": "6c8524e30095e4b68f89b09e5e7ad6bddf5d65c1131f22827e66c5584133e840"
+      },
+      {
+        "bytes": 1409,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/whitelist.py",
+        "sha256": "c5b04f0486a40545c4a0d684ddba4e7f240b30f1bebbb4afc39581b4e1ce25c6"
+      },
+      {
+        "bytes": 6201,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/fractal_reasoner.py",
+        "sha256": "2af1aa932ea49254b908b7936bed88420e59240df922b50efb8a5bd7cfe2a4bf"
+      },
+      {
+        "bytes": 9792,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/intrinsic_drive.py",
+        "sha256": "1d2761529e2e35a4041f2eb1e8746211e6b7c3d0ca86e830a2493ccae6bba140"
+      },
+      {
+        "bytes": 15250,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/moltbook_autopilot.py",
+        "sha256": "5c23be901f60cf303fe0979b9acb07a2c7129292ce55a74e060d5c3faabeb94d"
+      },
+      {
+        "bytes": 438,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/__init__.py",
+        "sha256": "5eab6e60d16380fd49f89aa40cf52c48ec48abbcd50ebddc124983a84c37e125"
+      },
+      {
+        "bytes": 3049,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/models.py",
+        "sha256": "cc598910d2571c293f0e5d107862bfa222e8897224f3536140d7061362c49dc7"
+      },
+      {
+        "bytes": 4345,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/pack_builder.py",
+        "sha256": "3b6cada0549d13773713281b6c815dc23ee8e05d38813c73f6a8f62a91eb9a34"
+      },
+      {
+        "bytes": 14963,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/pack_loader.py",
+        "sha256": "b1ddf2e601e0d48896e7d61b6f193620ad88d6ff0c2170459070b2f5b6eb7dde"
+      },
+      {
+        "bytes": 4279,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/canonical.py",
+        "sha256": "037d5da5c9f08d877a6420ff7a6b49b453aabb66cd83458ed53fab556526b15f"
+      },
+      {
+        "bytes": 15996,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/continuous_self/loop.py",
+        "sha256": "07b7b927e7396fad15a6675e16b60b316e1e692979e78a381d5ff57cb9f1d2c4"
+      },
+      {
+        "bytes": 8185,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/envelope_adapter.py",
+        "sha256": "c9dab3a63168098a4a41b1dbf652158743742eb8e669f5e56c4a956c33f6843d"
+      },
+      {
+        "bytes": 37988,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/loop.py",
+        "sha256": "f2e4d7ac582fc1de1dd6855171260fb8e09e91d700826720be593e2c30313605"
+      },
+      {
+        "bytes": 23466,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/unsupervised.py",
+        "sha256": "5f1e98985ac0c721bb176d9b0cec8c9cd57f58c4daeb37dd3b60bfba144bba34"
+      },
+      {
+        "bytes": 180,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/__init__.py",
+        "sha256": "e8e66c888c9c964a15425fa890d408b0c1cf6ad8a51575cc0250ea30114cb30f"
+      },
+      {
+        "bytes": 23207,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/abstain_feeder.py",
+        "sha256": "cdef6f596731dea15d0b87a17767f5aab6122f800694001f47382b58b3f68a0a"
+      },
+      {
+        "bytes": 6087,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/abstain_queue.py",
+        "sha256": "22ee334af5e9ab22938239105baa78260c6ad0ffa96e5eca4b5c7505ac43e7c2"
+      },
+      {
+        "bytes": 79973,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/answer_bridge.py",
+        "sha256": "8f5e5381664163986903916f306f70e50ad4fd2a43c544f0493c408811d950e7"
+      },
+      {
+        "bytes": 10018,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/collective_improve.py",
+        "sha256": "cfb9befdbbecf62782fbe298f46334b0dcde70248d3cdbb02a89f57ac1efcba7"
+      },
+      {
+        "bytes": 5984,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/compaction.py",
+        "sha256": "0be930324cca3903509caac5fe6451d252573eb04d7b1a58127b91d40ada2bfc"
+      },
+      {
+        "bytes": 11390,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/contradiction_sweep.py",
+        "sha256": "940de87562a1eb20d3a9d478080e567e9545d0cf26b044b359290382101d89cf"
+      },
+      {
+        "bytes": 13434,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/corpus_adapters.py",
+        "sha256": "25c2d1991d4a4f536a96c373861848d7059fe726e0c2700d20b21f8740f1011e"
+      },
+      {
+        "bytes": 4371,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/curated_judge.py",
+        "sha256": "01e9da9d50edcef293660c99661ccc2f14720dfb0457a725637afed536673ff0"
+      },
+      {
+        "bytes": 13424,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/epistemic_shield.py",
+        "sha256": "ec9b128d2641b788ab77a3425bf049a5846e28c7ace7508c33498f102713a911"
+      },
+      {
+        "bytes": 6963,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/graph_paths.py",
+        "sha256": "f0617a0fe809bf17192a2792743175a0bcaaf95643faca88f6596f9070036d10"
+      },
+      {
+        "bytes": 14667,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/lexicon_lane.py",
+        "sha256": "ca1b57002adf1fd4504689a8ac55bd56f0a64ab41be726221cb700a4fe3a9093"
+      },
+      {
+        "bytes": 8844,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/moral_invariants.py",
+        "sha256": "607b9081f00175d8d4392294d5c149ab811a478e885e6588a02d1a03f3da7613"
+      },
+      {
+        "bytes": 40384,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/mutation_batch.py",
+        "sha256": "795060b3b1980d4a7fad40fe1786bada380f02fb308d5971366c885b7127e1ec"
+      },
+      {
+        "bytes": 8228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/pii_guard.py",
+        "sha256": "1ac83c457777f389f3c1c7b7d866076ed6ecb2221c9a157abf96c5d719022832"
+      },
+      {
+        "bytes": 6054,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/sharded_term_dict.py",
+        "sha256": "e6ffc70a06cedf4e64b93b640a66e242215385aae8268830205b2c3de6a45558"
+      },
+      {
+        "bytes": 38402,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/triple_store.py",
+        "sha256": "711747719794c556cc24fff13d286ddc8d2ccf466ecd84d424b310ca6252629a"
+      },
+      {
+        "bytes": 10359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/turbo_ingest.py",
+        "sha256": "d6698dcaf2aa50594c487297a4bb5a63c2e41a07058cc009697c040290dfc6a6"
+      },
+      {
+        "bytes": 8708,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/exam_answer.py",
+        "sha256": "3b286ded9ccc0fcd421b340e4939befb813881c976bc21b00b9de57d52ebe459"
+      },
+      {
+        "bytes": 24377,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/subjective/felt_judgment.py",
+        "sha256": "bafac0808635df8b9045fac3d8ea7ac7812cf518c44741dc15e51a25389e8cfc"
+      },
+      {
+        "bytes": 9787,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/atms.py",
+        "sha256": "c0bd044f9f4976c92fa9bd90793ff1cdb993abd44dcf71fbf379791ae218e950"
+      },
+      {
+        "bytes": 12202,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/jtms.py",
+        "sha256": "39bf5976e0808ba966801161f4dd387fabe16b64bccce63670a423d3ec70e19a"
+      },
+      {
+        "bytes": 17446,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/live_membrane.py",
+        "sha256": "f2989302b4311cc888b63a69909158bed59796b87eb4bfb2510c4d910c1bbf65"
+      },
+      {
+        "bytes": 11107,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/revision.py",
+        "sha256": "803d1aa48e12d20ccca4adaa1dc88c828fe49250fb6fa4478d43c34a792dbdee"
+      },
+      {
+        "bytes": 5532,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/backfill_kaikki_glosses.py",
+        "sha256": "03de521970151dc5b9740904b7c27547a75bfa7652f2ecfccd68da2536d81594"
+      },
+      {
+        "bytes": 7990,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_isa_verdict.py",
+        "sha256": "73262fe413b22c60762e906c2ceb74843417fc4b86b4d43d0248d4c2d071c4bd"
+      },
+      {
+        "bytes": 4594,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_lang_gate.py",
+        "sha256": "10f39cfd7979896c63fd1edb564895f0f717620a0e6bfdccfc8932e4192d221f"
+      },
+      {
+        "bytes": 6604,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_taxonomy_backbone.py",
+        "sha256": "372fffe86ef90e08274fa1fd60facc4a0606c6347058f1ec09c2effdaefa1a7e"
+      },
+      {
+        "bytes": 15292,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/bulk_ingest_kg.py",
+        "sha256": "20e1d46b91877ec8eb045d85510cd9b8879e10bb64ffe01b41ade2f0f562bb85"
+      },
+      {
+        "bytes": 6186,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/create_graph_mutation_batch.py",
+        "sha256": "cd96c5c5624b7ae07631bf72056f43e93862cccfacaa5ee082c624e48f103ba9"
+      },
+      {
+        "bytes": 3325,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/derivation_accelerator.py",
+        "sha256": "16823f5d38c8f5ef35bad5774fb61f063faea435a09a5abaa37e2d1d3eac1f8f"
+      },
+      {
+        "bytes": 14610,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/install_signed_shipped_graph.py",
+        "sha256": "f29f9655315856cce6c8cffa3194313a57317b33f0bef82081cc804c040015c3"
+      },
+      {
+        "bytes": 148881,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/landing_chain_lib.py",
+        "sha256": "8af74cb7625bd3b2ea7b052768aadcf01c0936251f23e48c83e36a49a0b276cf"
+      },
+      {
+        "bytes": 18006,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/profile_domain_audit.py",
+        "sha256": "4fad1c486613018bc31dfad0fdc3669bd36c7ef73184f2e57da02e1b07e7a38a"
+      },
+      {
+        "bytes": 18593,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/promote_staging_to_shipped.py",
+        "sha256": "fd7b8fbbd14dcabedfe154365679fddcac4b3964a3a1013e3c27d7964ee38897"
+      },
+      {
+        "bytes": 11208,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/sanitize_isa_pollution.py",
+        "sha256": "105e42597dafec53c4e0e76e4e7a67ed0aaf0c792c5ab104aa015b62b78b3597"
+      }
+    ],
+    "datasets": [
+      {
+        "bytes": 43424,
+        "files": 1,
+        "kind": "file",
+        "path": "data/architecture/catalog/organ_registry_v1.json",
+        "sha256": "a8344bc39f9f59e747f4785e58501751a34dc50017deba9902fae5e719187cce"
+      },
+      {
+        "bytes": 50202,
+        "files": 1,
+        "kind": "file",
+        "path": "data/architecture/catalog/runtime_edges_v1.json",
+        "sha256": "a6f88b0a45e8e3c78d56f470df0f4f66d552f35f02352d96fda00caf553cc682"
+      }
+    ],
+    "dependencies": [
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      }
+    ],
+    "suites": [
+      {
+        "bytes": 1577,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_agora_graph_lifecycle_language.py",
+        "sha256": "097d5a80154e9776ec54420773594570b0832dde0ff61f81382b389daa272554"
+      },
+      {
+        "bytes": 769,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_browser_forget_authority.py",
+        "sha256": "235aa70266f351f462bd55bf1abac5dd1270041060407cc6e2779548c102bdae"
+      },
+      {
+        "bytes": 7144,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py",
+        "sha256": "43a3adb59d66bad0130e7632bbaec369806db5d2dd6d49af43f349493b4f7e89"
+      },
+      {
+        "bytes": 4787,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_registry.py",
+        "sha256": "06577c86db3ff679624421b17513cb7d3156da59eeb707b361993afc9a779459"
+      },
+      {
+        "bytes": 8055,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_runtime_graph.py",
+        "sha256": "d55783423229789097db75fe0009d6a231c91e4eefaf246ab851502ee565ddc6"
+      },
+      {
+        "bytes": 3297,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_static_graph.py",
+        "sha256": "ae4e32ad6d0697dc6842ee4b27b1c6a7de3e469d35f54eef448fd10c0cb2fa8d"
+      },
+      {
+        "bytes": 4066,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+        "sha256": "1dd2bd9cdb22292ce9bb1b93fa7222802542759214c891ca08ef3624b7f7fdfe"
+      },
+      {
+        "bytes": 9034,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_envelope_integration.py",
+        "sha256": "a84f5b0999d54152f7ddee4c28ffecec35466675b85324820d944916dc0a1d57"
+      },
+      {
+        "bytes": 13228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+        "sha256": "d3e44da72af2b5c469ab943a446ad4ffae8bca4bef3457537d5f1a66d6851aa7"
+      },
+      {
+        "bytes": 4272,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+        "sha256": "c65b2c89df5fae1c33e30a3560e37758aab317ee02916a24a762afc455a487e6"
+      },
+      {
+        "bytes": 2762,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_killswitch.py",
+        "sha256": "a33d4c5d3fc4aae126944cec920c34b8c547221c516ac0f0044fa898d807adb8"
+      },
+      {
+        "bytes": 17729,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_operator_trust.py",
+        "sha256": "63ea30bd09debb58480fd850606f9e38aede461b93425450cc78b0102cfeef81"
+      },
+      {
+        "bytes": 10437,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+        "sha256": "02a3bca5985d523cd2507a41a63275efe90a60662aafebc063a4531206dfce16"
+      },
+      {
+        "bytes": 3208,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_whitelist_default_deny.py",
+        "sha256": "2c9f4932aca06f987ebccbead088edcd549c12f69a946d574194b0a14c92b49e"
+      },
+      {
+        "bytes": 3304,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+        "sha256": "003cf52f024a8cb58f8d9e5f893676ac9721f20c89cf4abf6138fdcd0b875499"
+      },
+      {
+        "bytes": 9432,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+        "sha256": "15fe250c9ba4935b94afbaf216250bf6d507214d45489caeecd4214d86826636"
+      },
+      {
+        "bytes": 6451,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_collective_improve.py",
+        "sha256": "2b766b10bc5d8f58b75e392ca04c76695d3612ca28bcf160d02fa90964a771f6"
+      },
+      {
+        "bytes": 3319,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_compaction.py",
+        "sha256": "d848d9eb68ccd3bbe11ab2c321e39e9e656ab9fe4384ae86485396cba5bbdb45"
+      },
+      {
+        "bytes": 3650,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_epistemic_shield.py",
+        "sha256": "6835f7fdc7fe0d72a85b1db2c68b2ac16953123817a73f3a6b104bab85327154"
+      },
+      {
+        "bytes": 4231,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_graph_paths.py",
+        "sha256": "fd74d6e3e87d14813da521c99518a83a12b495d0868163e7d8c6b59d4badd1de"
+      },
+      {
+        "bytes": 8524,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_mutation_batch.py",
+        "sha256": "2f1701c3512025da8263ad9033ab46dbccc5017f7f3c3b2b63f02b6405028730"
+      },
+      {
+        "bytes": 3312,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_pii_guard.py",
+        "sha256": "b091de281bd1d0ff3f67ad5fedaab9be2904b0c1db25ce79b4ddadeccff427c5"
+      },
+      {
+        "bytes": 2720,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_pii_guard_read_only.py",
+        "sha256": "074d56db2e53a8ece64f511b373e138df73b436c99e54026aa8fe372b2a64b50"
+      },
+      {
+        "bytes": 4430,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_self_refinement.py",
+        "sha256": "0995c7885b7daff8b808b83bdb831b45b22a6eaa3ccbb5c6cc97f57c49caa075"
+      },
+      {
+        "bytes": 2041,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_sharded_term_dict.py",
+        "sha256": "61d9e8fa76538598bb58fb3c679c9a75ae368ce97618f9c817b8af948d0d189e"
+      },
+      {
+        "bytes": 2636,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_store_contract.py",
+        "sha256": "7212a8921a967a926909be9aae5e83ad6248173ba0535d7898c43cace531b59f"
+      },
+      {
+        "bytes": 2520,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_taxonomy_sweep.py",
+        "sha256": "d086b34eaaa82e3ea130cb7d3b9b8a65042a89c851310f0cf06c4424a2f0dfc0"
+      },
+      {
+        "bytes": 5516,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_triple_store.py",
+        "sha256": "3131c840fc6715090e3ecdb8ec0e0f4b8a37bc00ad00835f3927072257cbb2c4"
+      },
+      {
+        "bytes": 3230,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_turbo_ingest.py",
+        "sha256": "1e21eddb815f02fd66a42239390c7dde0489b2ab78ce6da69e0d21921b7e2f01"
+      },
+      {
+        "bytes": 18122,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/subjective/tests/test_felt_judgment.py",
+        "sha256": "abfcdc38dd6b8e4a1e34e37ee5e03d450b372fe62859653c16975a54e952e641"
+      },
+      {
+        "bytes": 3670,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_create_graph_mutation_batch.py",
+        "sha256": "c305f3721ee4ca8f7f467699dfacbf51fc50324b28e4024b58030a0a1e10353c"
+      },
+      {
+        "bytes": 2924,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_direct_shipped_sidecar_guards.py",
+        "sha256": "bee4d0150a999452374b60ac593648ed7a0c237e205f0aa8eeee30d666dfa816"
+      },
+      {
+        "bytes": 8269,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_graph_mutation_candidate.py",
+        "sha256": "55accc66fe5137e07d34877585f69555d310173aca724d6c2fe3e0bd2d6ac0f1"
+      },
+      {
+        "bytes": 1150,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+        "sha256": "e53c5dcf5ff4e9ac13b9b11227748675fcedafe4d8cb798f3aa3cf9d6619a017"
+      },
+      {
+        "bytes": 25554,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_promotion_swap_boundary.py",
+        "sha256": "4e07dfc665535be671550481b6622115d3d76dd5634840653e08e42b6b6e1314"
+      }
+    ]
+  },
+  "manifest_hash": "21a4820d6c09ea76d916735f07607de844ea3bbd71fa406379c9af20c65afd82",
+  "mutation_sensitive": {
+    "after": [
+      {
+        "bytes": 49208,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/agora.py",
+        "sha256": "e24359356a0242bb7c33a27b243da02d6950959676aab195d3c9a75cc5426f58"
+      },
+      {
+        "bytes": 6631,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/browser.py",
+        "sha256": "dbf0d96b193d7e2d0dc1acd8d10f92302ba8752c8a70ec9add182175200544c0"
+      },
+      {
+        "bytes": 139548,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/cloud_brain.py",
+        "sha256": "a30131221ae15e4f64b99ec664d3a000bb9c8479e380b4b47d3210d5b37d604d"
+      },
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 1577,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_agora_graph_lifecycle_language.py",
+        "sha256": "097d5a80154e9776ec54420773594570b0832dde0ff61f81382b389daa272554"
+      },
+      {
+        "bytes": 769,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_browser_forget_authority.py",
+        "sha256": "235aa70266f351f462bd55bf1abac5dd1270041060407cc6e2779548c102bdae"
+      },
+      {
+        "bytes": 7144,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py",
+        "sha256": "43a3adb59d66bad0130e7632bbaec369806db5d2dd6d49af43f349493b4f7e89"
+      },
+      {
+        "bytes": 43424,
+        "files": 1,
+        "kind": "file",
+        "path": "data/architecture/catalog/organ_registry_v1.json",
+        "sha256": "a8344bc39f9f59e747f4785e58501751a34dc50017deba9902fae5e719187cce"
+      },
+      {
+        "bytes": 50202,
+        "files": 1,
+        "kind": "file",
+        "path": "data/architecture/catalog/runtime_edges_v1.json",
+        "sha256": "a6f88b0a45e8e3c78d56f470df0f4f66d552f35f02352d96fda00caf553cc682"
+      },
+      {
+        "bytes": 1257406,
+        "files": 54,
+        "kind": "directory",
+        "path": "data/eval",
+        "sha256": "6af5e4e7f41e5a398335942351e606ec7ab0ade2ba739364cc4bbdb140db9012"
+      },
+      {
+        "bytes": 15397,
+        "files": 1,
+        "kind": "file",
+        "path": "data/eval/catalog/baseline_suite_v1.json",
+        "sha256": "1cafbdd15533276b68473e86845ee21c06a037d972ec7ed285826a9a3e6c8479"
+      },
+      {
+        "bytes": 501,
+        "files": 1,
+        "kind": "file",
+        "path": "data/graph_scale/kg_triples/BUILD_REPORT.json",
+        "sha256": "a210462290a7da3f7fda17f8f95ce6b468217a099fee3017e8c2b2affc5dc540"
+      },
+      {
+        "bytes": 726,
+        "files": 1,
+        "kind": "file",
+        "path": "data/graph_scale/kg_triples/VERIFY_REPORT.json",
+        "sha256": "6453fcb5471b8ac6a6e9338a3706923879e02e06c713f0d985090c306e79daa7"
+      },
+      {
+        "bytes": 0,
+        "files": 0,
+        "kind": "missing",
+        "path": "data/graph_scale/kg_triples/isa_verdict.col",
+        "sha256": "9ca81dd45afb41cb16923659c9859e0bc2ce2aaaa181d5dde07a67407ee15174"
+      },
+      {
+        "bytes": 7165801,
+        "files": 1,
+        "kind": "file",
+        "path": "data/graph_scale/kg_triples/lang_gate.col",
+        "sha256": "c6a4904cf0e8f44f0e9a67b27372e7e3adbd6199bbae554dfa3eab842aefc5a3"
+      },
+      {
+        "bytes": 140,
+        "files": 1,
+        "kind": "file",
+        "path": "data/graph_scale/kg_triples/meta.json",
+        "sha256": "ab7b84e5fa88170725a384a17cdf2a86847b8b650f2c5701ee806887700c92b1"
+      },
+      {
+        "bytes": 15406,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/atanor-linux/build.sh",
+        "sha256": "ab50812fbad66985870f3d971c13e60762f4bfc96dd97b40ecc4e5d9b19869e7"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 12125,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/registry.py",
+        "sha256": "910616e59e74d7b138c96b2f6199d0752d2511e4d8d40cadaf3fdd1f2d901f2c"
+      },
+      {
+        "bytes": 24589,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/runtime_graph.py",
+        "sha256": "17265eb09ac6fd735e678f88116b49bbfaec7840fa7d710240e9872292eab197"
+      },
+      {
+        "bytes": 8713,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/static_graph.py",
+        "sha256": "dca8a2e011b30894472f94eeeefb74ee585f338401294cf480a635de590daa9b"
+      },
+      {
+        "bytes": 4787,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_registry.py",
+        "sha256": "06577c86db3ff679624421b17513cb7d3156da59eeb707b361993afc9a779459"
+      },
+      {
+        "bytes": 8055,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_runtime_graph.py",
+        "sha256": "d55783423229789097db75fe0009d6a231c91e4eefaf246ab851502ee565ddc6"
+      },
+      {
+        "bytes": 3297,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_static_graph.py",
+        "sha256": "ae4e32ad6d0697dc6842ee4b27b1c6a7de3e469d35f54eef448fd10c0cb2fa8d"
+      },
+      {
+        "bytes": 4033,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/__init__.py",
+        "sha256": "705f3e0b3d709a5023e9661082c1e79e39b011be5899f5482e5040fb45a2f172"
+      },
+      {
+        "bytes": 5874,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/audit_ledger.py",
+        "sha256": "31814d76228f0f315448a20c5e46b1be03fe247b9d409e9d6c91b5fe993f34a8"
+      },
+      {
+        "bytes": 15139,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/constants.py",
+        "sha256": "76c0792ece3cf84505d42a812d78518cd98fc827ad51e5d0491c7fc67101cfdd"
+      },
+      {
+        "bytes": 20259,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/envelope.py",
+        "sha256": "a8468f3300bb5b4e15201888712f36a3f7541e7feb56d6029a8c5daa31f4ec59"
+      },
+      {
+        "bytes": 30193,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/evaluation_trust.py",
+        "sha256": "08350dfe00524e780c693a614e91e5a08ee4d7841a800c50e49d7422970031a2"
+      },
+      {
+        "bytes": 5513,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/interface.py",
+        "sha256": "1f17279583dbec61af316bfed7bb7e41c5480073bfe31984e99dbf560b31929f"
+      },
+      {
+        "bytes": 2557,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/killswitch.py",
+        "sha256": "f2a11696e3a5df6880ccb6dea05bfef628eff41c28b23be9af89eb2ea2bb583c"
+      },
+      {
+        "bytes": 23400,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/operator_trust.py",
+        "sha256": "f19af13f9d5cafdb1179ee35f904579d00e3dcf2ff6eb87b80a564277a8bf1c5"
+      },
+      {
+        "bytes": 13818,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/promotion_queue.py",
+        "sha256": "6c8524e30095e4b68f89b09e5e7ad6bddf5d65c1131f22827e66c5584133e840"
+      },
+      {
+        "bytes": 4066,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+        "sha256": "1dd2bd9cdb22292ce9bb1b93fa7222802542759214c891ca08ef3624b7f7fdfe"
+      },
+      {
+        "bytes": 9034,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_envelope_integration.py",
+        "sha256": "a84f5b0999d54152f7ddee4c28ffecec35466675b85324820d944916dc0a1d57"
+      },
+      {
+        "bytes": 13228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+        "sha256": "d3e44da72af2b5c469ab943a446ad4ffae8bca4bef3457537d5f1a66d6851aa7"
+      },
+      {
+        "bytes": 4272,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+        "sha256": "c65b2c89df5fae1c33e30a3560e37758aab317ee02916a24a762afc455a487e6"
+      },
+      {
+        "bytes": 2762,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_killswitch.py",
+        "sha256": "a33d4c5d3fc4aae126944cec920c34b8c547221c516ac0f0044fa898d807adb8"
+      },
+      {
+        "bytes": 17729,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_operator_trust.py",
+        "sha256": "63ea30bd09debb58480fd850606f9e38aede461b93425450cc78b0102cfeef81"
+      },
+      {
+        "bytes": 10437,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+        "sha256": "02a3bca5985d523cd2507a41a63275efe90a60662aafebc063a4531206dfce16"
+      },
+      {
+        "bytes": 3208,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_whitelist_default_deny.py",
+        "sha256": "2c9f4932aca06f987ebccbead088edcd549c12f69a946d574194b0a14c92b49e"
+      },
+      {
+        "bytes": 1409,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/whitelist.py",
+        "sha256": "c5b04f0486a40545c4a0d684ddba4e7f240b30f1bebbb4afc39581b4e1ce25c6"
+      },
+      {
+        "bytes": 6201,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/fractal_reasoner.py",
+        "sha256": "2af1aa932ea49254b908b7936bed88420e59240df922b50efb8a5bd7cfe2a4bf"
+      },
+      {
+        "bytes": 9792,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/intrinsic_drive.py",
+        "sha256": "1d2761529e2e35a4041f2eb1e8746211e6b7c3d0ca86e830a2493ccae6bba140"
+      },
+      {
+        "bytes": 15250,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/moltbook_autopilot.py",
+        "sha256": "5c23be901f60cf303fe0979b9acb07a2c7129292ce55a74e060d5c3faabeb94d"
+      },
+      {
+        "bytes": 3304,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+        "sha256": "003cf52f024a8cb58f8d9e5f893676ac9721f20c89cf4abf6138fdcd0b875499"
+      },
+      {
+        "bytes": 9432,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+        "sha256": "15fe250c9ba4935b94afbaf216250bf6d507214d45489caeecd4214d86826636"
+      },
+      {
+        "bytes": 438,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/__init__.py",
+        "sha256": "5eab6e60d16380fd49f89aa40cf52c48ec48abbcd50ebddc124983a84c37e125"
+      },
+      {
+        "bytes": 3049,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/models.py",
+        "sha256": "cc598910d2571c293f0e5d107862bfa222e8897224f3536140d7061362c49dc7"
+      },
+      {
+        "bytes": 4345,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/pack_builder.py",
+        "sha256": "3b6cada0549d13773713281b6c815dc23ee8e05d38813c73f6a8f62a91eb9a34"
+      },
+      {
+        "bytes": 14963,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/pack_loader.py",
+        "sha256": "b1ddf2e601e0d48896e7d61b6f193620ad88d6ff0c2170459070b2f5b6eb7dde"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 4279,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/canonical.py",
+        "sha256": "037d5da5c9f08d877a6420ff7a6b49b453aabb66cd83458ed53fab556526b15f"
+      },
+      {
+        "bytes": 15996,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/continuous_self/loop.py",
+        "sha256": "07b7b927e7396fad15a6675e16b60b316e1e692979e78a381d5ff57cb9f1d2c4"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 8185,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/envelope_adapter.py",
+        "sha256": "c9dab3a63168098a4a41b1dbf652158743742eb8e669f5e56c4a956c33f6843d"
+      },
+      {
+        "bytes": 37988,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/loop.py",
+        "sha256": "f2e4d7ac582fc1de1dd6855171260fb8e09e91d700826720be593e2c30313605"
+      },
+      {
+        "bytes": 23466,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/unsupervised.py",
+        "sha256": "5f1e98985ac0c721bb176d9b0cec8c9cd57f58c4daeb37dd3b60bfba144bba34"
+      },
+      {
+        "bytes": 180,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/__init__.py",
+        "sha256": "e8e66c888c9c964a15425fa890d408b0c1cf6ad8a51575cc0250ea30114cb30f"
+      },
+      {
+        "bytes": 23207,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/abstain_feeder.py",
+        "sha256": "cdef6f596731dea15d0b87a17767f5aab6122f800694001f47382b58b3f68a0a"
+      },
+      {
+        "bytes": 6087,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/abstain_queue.py",
+        "sha256": "22ee334af5e9ab22938239105baa78260c6ad0ffa96e5eca4b5c7505ac43e7c2"
+      },
+      {
+        "bytes": 79973,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/answer_bridge.py",
+        "sha256": "8f5e5381664163986903916f306f70e50ad4fd2a43c544f0493c408811d950e7"
+      },
+      {
+        "bytes": 10018,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/collective_improve.py",
+        "sha256": "cfb9befdbbecf62782fbe298f46334b0dcde70248d3cdbb02a89f57ac1efcba7"
+      },
+      {
+        "bytes": 5984,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/compaction.py",
+        "sha256": "0be930324cca3903509caac5fe6451d252573eb04d7b1a58127b91d40ada2bfc"
+      },
+      {
+        "bytes": 11390,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/contradiction_sweep.py",
+        "sha256": "940de87562a1eb20d3a9d478080e567e9545d0cf26b044b359290382101d89cf"
+      },
+      {
+        "bytes": 13434,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/corpus_adapters.py",
+        "sha256": "25c2d1991d4a4f536a96c373861848d7059fe726e0c2700d20b21f8740f1011e"
+      },
+      {
+        "bytes": 4371,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/curated_judge.py",
+        "sha256": "01e9da9d50edcef293660c99661ccc2f14720dfb0457a725637afed536673ff0"
+      },
+      {
+        "bytes": 13424,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/epistemic_shield.py",
+        "sha256": "ec9b128d2641b788ab77a3425bf049a5846e28c7ace7508c33498f102713a911"
+      },
+      {
+        "bytes": 6963,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/graph_paths.py",
+        "sha256": "f0617a0fe809bf17192a2792743175a0bcaaf95643faca88f6596f9070036d10"
+      },
+      {
+        "bytes": 14667,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/lexicon_lane.py",
+        "sha256": "ca1b57002adf1fd4504689a8ac55bd56f0a64ab41be726221cb700a4fe3a9093"
+      },
+      {
+        "bytes": 8844,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/moral_invariants.py",
+        "sha256": "607b9081f00175d8d4392294d5c149ab811a478e885e6588a02d1a03f3da7613"
+      },
+      {
+        "bytes": 40384,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/mutation_batch.py",
+        "sha256": "795060b3b1980d4a7fad40fe1786bada380f02fb308d5971366c885b7127e1ec"
+      },
+      {
+        "bytes": 8228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/pii_guard.py",
+        "sha256": "1ac83c457777f389f3c1c7b7d866076ed6ecb2221c9a157abf96c5d719022832"
+      },
+      {
+        "bytes": 6054,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/sharded_term_dict.py",
+        "sha256": "e6ffc70a06cedf4e64b93b640a66e242215385aae8268830205b2c3de6a45558"
+      },
+      {
+        "bytes": 6451,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_collective_improve.py",
+        "sha256": "2b766b10bc5d8f58b75e392ca04c76695d3612ca28bcf160d02fa90964a771f6"
+      },
+      {
+        "bytes": 3319,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_compaction.py",
+        "sha256": "d848d9eb68ccd3bbe11ab2c321e39e9e656ab9fe4384ae86485396cba5bbdb45"
+      },
+      {
+        "bytes": 3650,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_epistemic_shield.py",
+        "sha256": "6835f7fdc7fe0d72a85b1db2c68b2ac16953123817a73f3a6b104bab85327154"
+      },
+      {
+        "bytes": 4231,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_graph_paths.py",
+        "sha256": "fd74d6e3e87d14813da521c99518a83a12b495d0868163e7d8c6b59d4badd1de"
+      },
+      {
+        "bytes": 8524,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_mutation_batch.py",
+        "sha256": "2f1701c3512025da8263ad9033ab46dbccc5017f7f3c3b2b63f02b6405028730"
+      },
+      {
+        "bytes": 3312,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_pii_guard.py",
+        "sha256": "b091de281bd1d0ff3f67ad5fedaab9be2904b0c1db25ce79b4ddadeccff427c5"
+      },
+      {
+        "bytes": 2720,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_pii_guard_read_only.py",
+        "sha256": "074d56db2e53a8ece64f511b373e138df73b436c99e54026aa8fe372b2a64b50"
+      },
+      {
+        "bytes": 4430,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_self_refinement.py",
+        "sha256": "0995c7885b7daff8b808b83bdb831b45b22a6eaa3ccbb5c6cc97f57c49caa075"
+      },
+      {
+        "bytes": 2041,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_sharded_term_dict.py",
+        "sha256": "61d9e8fa76538598bb58fb3c679c9a75ae368ce97618f9c817b8af948d0d189e"
+      },
+      {
+        "bytes": 2636,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_store_contract.py",
+        "sha256": "7212a8921a967a926909be9aae5e83ad6248173ba0535d7898c43cace531b59f"
+      },
+      {
+        "bytes": 2520,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_taxonomy_sweep.py",
+        "sha256": "d086b34eaaa82e3ea130cb7d3b9b8a65042a89c851310f0cf06c4424a2f0dfc0"
+      },
+      {
+        "bytes": 5516,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_triple_store.py",
+        "sha256": "3131c840fc6715090e3ecdb8ec0e0f4b8a37bc00ad00835f3927072257cbb2c4"
+      },
+      {
+        "bytes": 3230,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_turbo_ingest.py",
+        "sha256": "1e21eddb815f02fd66a42239390c7dde0489b2ab78ce6da69e0d21921b7e2f01"
+      },
+      {
+        "bytes": 38402,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/triple_store.py",
+        "sha256": "711747719794c556cc24fff13d286ddc8d2ccf466ecd84d424b310ca6252629a"
+      },
+      {
+        "bytes": 10359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/turbo_ingest.py",
+        "sha256": "d6698dcaf2aa50594c487297a4bb5a63c2e41a07058cc009697c040290dfc6a6"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 8708,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/exam_answer.py",
+        "sha256": "3b286ded9ccc0fcd421b340e4939befb813881c976bc21b00b9de57d52ebe459"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 24377,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/subjective/felt_judgment.py",
+        "sha256": "bafac0808635df8b9045fac3d8ea7ac7812cf518c44741dc15e51a25389e8cfc"
+      },
+      {
+        "bytes": 18122,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/subjective/tests/test_felt_judgment.py",
+        "sha256": "abfcdc38dd6b8e4a1e34e37ee5e03d450b372fe62859653c16975a54e952e641"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 9787,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/atms.py",
+        "sha256": "c0bd044f9f4976c92fa9bd90793ff1cdb993abd44dcf71fbf379791ae218e950"
+      },
+      {
+        "bytes": 12202,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/jtms.py",
+        "sha256": "39bf5976e0808ba966801161f4dd387fabe16b64bccce63670a423d3ec70e19a"
+      },
+      {
+        "bytes": 17446,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/live_membrane.py",
+        "sha256": "f2989302b4311cc888b63a69909158bed59796b87eb4bfb2510c4d910c1bbf65"
+      },
+      {
+        "bytes": 11107,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/revision.py",
+        "sha256": "803d1aa48e12d20ccca4adaa1dc88c828fe49250fb6fa4478d43c34a792dbdee"
+      },
+      {
+        "bytes": 1790241,
+        "files": 117,
+        "kind": "directory",
+        "path": "reports/benchmarks",
+        "sha256": "ec82fc4658edd6d9fb329055a5f1a6569ee63b00121edfaf4e62b10958a11f4b"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      },
+      {
+        "bytes": 5532,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/backfill_kaikki_glosses.py",
+        "sha256": "03de521970151dc5b9740904b7c27547a75bfa7652f2ecfccd68da2536d81594"
+      },
+      {
+        "bytes": 7990,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_isa_verdict.py",
+        "sha256": "73262fe413b22c60762e906c2ceb74843417fc4b86b4d43d0248d4c2d071c4bd"
+      },
+      {
+        "bytes": 4594,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_lang_gate.py",
+        "sha256": "10f39cfd7979896c63fd1edb564895f0f717620a0e6bfdccfc8932e4192d221f"
+      },
+      {
+        "bytes": 6604,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_taxonomy_backbone.py",
+        "sha256": "372fffe86ef90e08274fa1fd60facc4a0606c6347058f1ec09c2effdaefa1a7e"
+      },
+      {
+        "bytes": 15292,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/bulk_ingest_kg.py",
+        "sha256": "20e1d46b91877ec8eb045d85510cd9b8879e10bb64ffe01b41ade2f0f562bb85"
+      },
+      {
+        "bytes": 6186,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/create_graph_mutation_batch.py",
+        "sha256": "cd96c5c5624b7ae07631bf72056f43e93862cccfacaa5ee082c624e48f103ba9"
+      },
+      {
+        "bytes": 3325,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/derivation_accelerator.py",
+        "sha256": "16823f5d38c8f5ef35bad5774fb61f063faea435a09a5abaa37e2d1d3eac1f8f"
+      },
+      {
+        "bytes": 14610,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/install_signed_shipped_graph.py",
+        "sha256": "f29f9655315856cce6c8cffa3194313a57317b33f0bef82081cc804c040015c3"
+      },
+      {
+        "bytes": 148881,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/landing_chain_lib.py",
+        "sha256": "8af74cb7625bd3b2ea7b052768aadcf01c0936251f23e48c83e36a49a0b276cf"
+      },
+      {
+        "bytes": 18006,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/profile_domain_audit.py",
+        "sha256": "4fad1c486613018bc31dfad0fdc3669bd36c7ef73184f2e57da02e1b07e7a38a"
+      },
+      {
+        "bytes": 18593,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/promote_staging_to_shipped.py",
+        "sha256": "fd7b8fbbd14dcabedfe154365679fddcac4b3964a3a1013e3c27d7964ee38897"
+      },
+      {
+        "bytes": 11208,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/sanitize_isa_pollution.py",
+        "sha256": "105e42597dafec53c4e0e76e4e7a67ed0aaf0c792c5ab104aa015b62b78b3597"
+      },
+      {
+        "bytes": 3670,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_create_graph_mutation_batch.py",
+        "sha256": "c305f3721ee4ca8f7f467699dfacbf51fc50324b28e4024b58030a0a1e10353c"
+      },
+      {
+        "bytes": 2924,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_direct_shipped_sidecar_guards.py",
+        "sha256": "bee4d0150a999452374b60ac593648ed7a0c237e205f0aa8eeee30d666dfa816"
+      },
+      {
+        "bytes": 8269,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_graph_mutation_candidate.py",
+        "sha256": "55accc66fe5137e07d34877585f69555d310173aca724d6c2fe3e0bd2d6ac0f1"
+      },
+      {
+        "bytes": 1150,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+        "sha256": "e53c5dcf5ff4e9ac13b9b11227748675fcedafe4d8cb798f3aa3cf9d6619a017"
+      },
+      {
+        "bytes": 25554,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_promotion_swap_boundary.py",
+        "sha256": "4e07dfc665535be671550481b6622115d3d76dd5634840653e08e42b6b6e1314"
+      }
+    ],
+    "automatic_input_paths": [
+      "apps/api/app/routers/agora.py",
+      "apps/api/app/routers/browser.py",
+      "apps/api/app/routers/cloud_brain.py",
+      "apps/api/requirements.txt",
+      "apps/api/tests/test_agora_graph_lifecycle_language.py",
+      "apps/api/tests/test_browser_forget_authority.py",
+      "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py",
+      "data/architecture/catalog/organ_registry_v1.json",
+      "data/architecture/catalog/runtime_edges_v1.json",
+      "data/eval/catalog/baseline_suite_v1.json",
+      "deploy/atanor-linux/build.sh",
+      "deploy/requirements-cloud.txt",
+      "deploy/requirements-voice.txt",
+      "package-lock.json",
+      "packages/architecture_registry/registry.py",
+      "packages/architecture_registry/runtime_graph.py",
+      "packages/architecture_registry/static_graph.py",
+      "packages/architecture_registry/tests/test_registry.py",
+      "packages/architecture_registry/tests/test_runtime_graph.py",
+      "packages/architecture_registry/tests/test_static_graph.py",
+      "packages/autonomy_envelope/__init__.py",
+      "packages/autonomy_envelope/audit_ledger.py",
+      "packages/autonomy_envelope/constants.py",
+      "packages/autonomy_envelope/envelope.py",
+      "packages/autonomy_envelope/evaluation_trust.py",
+      "packages/autonomy_envelope/interface.py",
+      "packages/autonomy_envelope/killswitch.py",
+      "packages/autonomy_envelope/operator_trust.py",
+      "packages/autonomy_envelope/promotion_queue.py",
+      "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+      "packages/autonomy_envelope/tests/test_envelope_integration.py",
+      "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+      "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+      "packages/autonomy_envelope/tests/test_killswitch.py",
+      "packages/autonomy_envelope/tests/test_operator_trust.py",
+      "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+      "packages/autonomy_envelope/tests/test_whitelist_default_deny.py",
+      "packages/autonomy_envelope/whitelist.py",
+      "packages/autonomy_kernel/fractal_reasoner.py",
+      "packages/autonomy_kernel/intrinsic_drive.py",
+      "packages/autonomy_kernel/moltbook_autopilot.py",
+      "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+      "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+      "packages/base_brain/__init__.py",
+      "packages/base_brain/models.py",
+      "packages/base_brain/pack_builder.py",
+      "packages/base_brain/pack_loader.py",
+      "packages/cgsr/pyproject.toml",
+      "packages/cognitive_core/canonical.py",
+      "packages/continuous_self/loop.py",
+      "packages/datagate/pyproject.toml",
+      "packages/fusion_loop/envelope_adapter.py",
+      "packages/fusion_loop/loop.py",
+      "packages/fusion_loop/unsupervised.py",
+      "packages/graph_scale/__init__.py",
+      "packages/graph_scale/abstain_feeder.py",
+      "packages/graph_scale/abstain_queue.py",
+      "packages/graph_scale/answer_bridge.py",
+      "packages/graph_scale/collective_improve.py",
+      "packages/graph_scale/compaction.py",
+      "packages/graph_scale/contradiction_sweep.py",
+      "packages/graph_scale/corpus_adapters.py",
+      "packages/graph_scale/curated_judge.py",
+      "packages/graph_scale/epistemic_shield.py",
+      "packages/graph_scale/graph_paths.py",
+      "packages/graph_scale/lexicon_lane.py",
+      "packages/graph_scale/moral_invariants.py",
+      "packages/graph_scale/mutation_batch.py",
+      "packages/graph_scale/pii_guard.py",
+      "packages/graph_scale/sharded_term_dict.py",
+      "packages/graph_scale/tests/test_collective_improve.py",
+      "packages/graph_scale/tests/test_compaction.py",
+      "packages/graph_scale/tests/test_epistemic_shield.py",
+      "packages/graph_scale/tests/test_graph_paths.py",
+      "packages/graph_scale/tests/test_mutation_batch.py",
+      "packages/graph_scale/tests/test_pii_guard.py",
+      "packages/graph_scale/tests/test_pii_guard_read_only.py",
+      "packages/graph_scale/tests/test_self_refinement.py",
+      "packages/graph_scale/tests/test_sharded_term_dict.py",
+      "packages/graph_scale/tests/test_store_contract.py",
+      "packages/graph_scale/tests/test_taxonomy_sweep.py",
+      "packages/graph_scale/tests/test_triple_store.py",
+      "packages/graph_scale/tests/test_turbo_ingest.py",
+      "packages/graph_scale/triple_store.py",
+      "packages/graph_scale/turbo_ingest.py",
+      "packages/guard/pyproject.toml",
+      "packages/knowledge_bakery/pyproject.toml",
+      "packages/model/pyproject.toml",
+      "packages/neuro_efficiency/pyproject.toml",
+      "packages/ontology_forge/pyproject.toml",
+      "packages/rag_engine/pyproject.toml",
+      "packages/reasoning_vm/exam_answer.py",
+      "packages/rhfc/pyproject.toml",
+      "packages/seed_research/pyproject.toml",
+      "packages/subjective/felt_judgment.py",
+      "packages/subjective/tests/test_felt_judgment.py",
+      "packages/trainer/pyproject.toml",
+      "packages/truth_maintenance/atms.py",
+      "packages/truth_maintenance/jtms.py",
+      "packages/truth_maintenance/live_membrane.py",
+      "packages/truth_maintenance/revision.py",
+      "requirements-edge.txt",
+      "scripts/backfill_kaikki_glosses.py",
+      "scripts/build_isa_verdict.py",
+      "scripts/build_lang_gate.py",
+      "scripts/build_taxonomy_backbone.py",
+      "scripts/bulk_ingest_kg.py",
+      "scripts/create_graph_mutation_batch.py",
+      "scripts/derivation_accelerator.py",
+      "scripts/install_signed_shipped_graph.py",
+      "scripts/landing_chain_lib.py",
+      "scripts/profile_domain_audit.py",
+      "scripts/promote_staging_to_shipped.py",
+      "scripts/sanitize_isa_pollution.py",
+      "scripts/tests/test_create_graph_mutation_batch.py",
+      "scripts/tests/test_direct_shipped_sidecar_guards.py",
+      "scripts/tests/test_graph_mutation_candidate.py",
+      "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+      "scripts/tests/test_promotion_swap_boundary.py"
+    ],
+    "before": [
+      {
+        "bytes": 49208,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/agora.py",
+        "sha256": "e24359356a0242bb7c33a27b243da02d6950959676aab195d3c9a75cc5426f58"
+      },
+      {
+        "bytes": 6631,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/browser.py",
+        "sha256": "dbf0d96b193d7e2d0dc1acd8d10f92302ba8752c8a70ec9add182175200544c0"
+      },
+      {
+        "bytes": 139548,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/app/routers/cloud_brain.py",
+        "sha256": "a30131221ae15e4f64b99ec664d3a000bb9c8479e380b4b47d3210d5b37d604d"
+      },
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 1577,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_agora_graph_lifecycle_language.py",
+        "sha256": "097d5a80154e9776ec54420773594570b0832dde0ff61f81382b389daa272554"
+      },
+      {
+        "bytes": 769,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_browser_forget_authority.py",
+        "sha256": "235aa70266f351f462bd55bf1abac5dd1270041060407cc6e2779548c102bdae"
+      },
+      {
+        "bytes": 7144,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py",
+        "sha256": "43a3adb59d66bad0130e7632bbaec369806db5d2dd6d49af43f349493b4f7e89"
+      },
+      {
+        "bytes": 43424,
+        "files": 1,
+        "kind": "file",
+        "path": "data/architecture/catalog/organ_registry_v1.json",
+        "sha256": "a8344bc39f9f59e747f4785e58501751a34dc50017deba9902fae5e719187cce"
+      },
+      {
+        "bytes": 50202,
+        "files": 1,
+        "kind": "file",
+        "path": "data/architecture/catalog/runtime_edges_v1.json",
+        "sha256": "a6f88b0a45e8e3c78d56f470df0f4f66d552f35f02352d96fda00caf553cc682"
+      },
+      {
+        "bytes": 1257406,
+        "files": 54,
+        "kind": "directory",
+        "path": "data/eval",
+        "sha256": "6af5e4e7f41e5a398335942351e606ec7ab0ade2ba739364cc4bbdb140db9012"
+      },
+      {
+        "bytes": 15397,
+        "files": 1,
+        "kind": "file",
+        "path": "data/eval/catalog/baseline_suite_v1.json",
+        "sha256": "1cafbdd15533276b68473e86845ee21c06a037d972ec7ed285826a9a3e6c8479"
+      },
+      {
+        "bytes": 501,
+        "files": 1,
+        "kind": "file",
+        "path": "data/graph_scale/kg_triples/BUILD_REPORT.json",
+        "sha256": "a210462290a7da3f7fda17f8f95ce6b468217a099fee3017e8c2b2affc5dc540"
+      },
+      {
+        "bytes": 726,
+        "files": 1,
+        "kind": "file",
+        "path": "data/graph_scale/kg_triples/VERIFY_REPORT.json",
+        "sha256": "6453fcb5471b8ac6a6e9338a3706923879e02e06c713f0d985090c306e79daa7"
+      },
+      {
+        "bytes": 0,
+        "files": 0,
+        "kind": "missing",
+        "path": "data/graph_scale/kg_triples/isa_verdict.col",
+        "sha256": "9ca81dd45afb41cb16923659c9859e0bc2ce2aaaa181d5dde07a67407ee15174"
+      },
+      {
+        "bytes": 7165801,
+        "files": 1,
+        "kind": "file",
+        "path": "data/graph_scale/kg_triples/lang_gate.col",
+        "sha256": "c6a4904cf0e8f44f0e9a67b27372e7e3adbd6199bbae554dfa3eab842aefc5a3"
+      },
+      {
+        "bytes": 140,
+        "files": 1,
+        "kind": "file",
+        "path": "data/graph_scale/kg_triples/meta.json",
+        "sha256": "ab7b84e5fa88170725a384a17cdf2a86847b8b650f2c5701ee806887700c92b1"
+      },
+      {
+        "bytes": 15406,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/atanor-linux/build.sh",
+        "sha256": "ab50812fbad66985870f3d971c13e60762f4bfc96dd97b40ecc4e5d9b19869e7"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 12125,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/registry.py",
+        "sha256": "910616e59e74d7b138c96b2f6199d0752d2511e4d8d40cadaf3fdd1f2d901f2c"
+      },
+      {
+        "bytes": 24589,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/runtime_graph.py",
+        "sha256": "17265eb09ac6fd735e678f88116b49bbfaec7840fa7d710240e9872292eab197"
+      },
+      {
+        "bytes": 8713,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/static_graph.py",
+        "sha256": "dca8a2e011b30894472f94eeeefb74ee585f338401294cf480a635de590daa9b"
+      },
+      {
+        "bytes": 4787,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_registry.py",
+        "sha256": "06577c86db3ff679624421b17513cb7d3156da59eeb707b361993afc9a779459"
+      },
+      {
+        "bytes": 8055,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_runtime_graph.py",
+        "sha256": "d55783423229789097db75fe0009d6a231c91e4eefaf246ab851502ee565ddc6"
+      },
+      {
+        "bytes": 3297,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/architecture_registry/tests/test_static_graph.py",
+        "sha256": "ae4e32ad6d0697dc6842ee4b27b1c6a7de3e469d35f54eef448fd10c0cb2fa8d"
+      },
+      {
+        "bytes": 4033,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/__init__.py",
+        "sha256": "705f3e0b3d709a5023e9661082c1e79e39b011be5899f5482e5040fb45a2f172"
+      },
+      {
+        "bytes": 5874,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/audit_ledger.py",
+        "sha256": "31814d76228f0f315448a20c5e46b1be03fe247b9d409e9d6c91b5fe993f34a8"
+      },
+      {
+        "bytes": 15139,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/constants.py",
+        "sha256": "76c0792ece3cf84505d42a812d78518cd98fc827ad51e5d0491c7fc67101cfdd"
+      },
+      {
+        "bytes": 20259,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/envelope.py",
+        "sha256": "a8468f3300bb5b4e15201888712f36a3f7541e7feb56d6029a8c5daa31f4ec59"
+      },
+      {
+        "bytes": 30193,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/evaluation_trust.py",
+        "sha256": "08350dfe00524e780c693a614e91e5a08ee4d7841a800c50e49d7422970031a2"
+      },
+      {
+        "bytes": 5513,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/interface.py",
+        "sha256": "1f17279583dbec61af316bfed7bb7e41c5480073bfe31984e99dbf560b31929f"
+      },
+      {
+        "bytes": 2557,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/killswitch.py",
+        "sha256": "f2a11696e3a5df6880ccb6dea05bfef628eff41c28b23be9af89eb2ea2bb583c"
+      },
+      {
+        "bytes": 23400,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/operator_trust.py",
+        "sha256": "f19af13f9d5cafdb1179ee35f904579d00e3dcf2ff6eb87b80a564277a8bf1c5"
+      },
+      {
+        "bytes": 13818,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/promotion_queue.py",
+        "sha256": "6c8524e30095e4b68f89b09e5e7ad6bddf5d65c1131f22827e66c5584133e840"
+      },
+      {
+        "bytes": 4066,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+        "sha256": "1dd2bd9cdb22292ce9bb1b93fa7222802542759214c891ca08ef3624b7f7fdfe"
+      },
+      {
+        "bytes": 9034,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_envelope_integration.py",
+        "sha256": "a84f5b0999d54152f7ddee4c28ffecec35466675b85324820d944916dc0a1d57"
+      },
+      {
+        "bytes": 13228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+        "sha256": "d3e44da72af2b5c469ab943a446ad4ffae8bca4bef3457537d5f1a66d6851aa7"
+      },
+      {
+        "bytes": 4272,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+        "sha256": "c65b2c89df5fae1c33e30a3560e37758aab317ee02916a24a762afc455a487e6"
+      },
+      {
+        "bytes": 2762,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_killswitch.py",
+        "sha256": "a33d4c5d3fc4aae126944cec920c34b8c547221c516ac0f0044fa898d807adb8"
+      },
+      {
+        "bytes": 17729,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_operator_trust.py",
+        "sha256": "63ea30bd09debb58480fd850606f9e38aede461b93425450cc78b0102cfeef81"
+      },
+      {
+        "bytes": 10437,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+        "sha256": "02a3bca5985d523cd2507a41a63275efe90a60662aafebc063a4531206dfce16"
+      },
+      {
+        "bytes": 3208,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/tests/test_whitelist_default_deny.py",
+        "sha256": "2c9f4932aca06f987ebccbead088edcd549c12f69a946d574194b0a14c92b49e"
+      },
+      {
+        "bytes": 1409,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_envelope/whitelist.py",
+        "sha256": "c5b04f0486a40545c4a0d684ddba4e7f240b30f1bebbb4afc39581b4e1ce25c6"
+      },
+      {
+        "bytes": 6201,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/fractal_reasoner.py",
+        "sha256": "2af1aa932ea49254b908b7936bed88420e59240df922b50efb8a5bd7cfe2a4bf"
+      },
+      {
+        "bytes": 9792,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/intrinsic_drive.py",
+        "sha256": "1d2761529e2e35a4041f2eb1e8746211e6b7c3d0ca86e830a2493ccae6bba140"
+      },
+      {
+        "bytes": 15250,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/moltbook_autopilot.py",
+        "sha256": "5c23be901f60cf303fe0979b9acb07a2c7129292ce55a74e060d5c3faabeb94d"
+      },
+      {
+        "bytes": 3304,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+        "sha256": "003cf52f024a8cb58f8d9e5f893676ac9721f20c89cf4abf6138fdcd0b875499"
+      },
+      {
+        "bytes": 9432,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+        "sha256": "15fe250c9ba4935b94afbaf216250bf6d507214d45489caeecd4214d86826636"
+      },
+      {
+        "bytes": 438,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/__init__.py",
+        "sha256": "5eab6e60d16380fd49f89aa40cf52c48ec48abbcd50ebddc124983a84c37e125"
+      },
+      {
+        "bytes": 3049,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/models.py",
+        "sha256": "cc598910d2571c293f0e5d107862bfa222e8897224f3536140d7061362c49dc7"
+      },
+      {
+        "bytes": 4345,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/pack_builder.py",
+        "sha256": "3b6cada0549d13773713281b6c815dc23ee8e05d38813c73f6a8f62a91eb9a34"
+      },
+      {
+        "bytes": 14963,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/base_brain/pack_loader.py",
+        "sha256": "b1ddf2e601e0d48896e7d61b6f193620ad88d6ff0c2170459070b2f5b6eb7dde"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 4279,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/canonical.py",
+        "sha256": "037d5da5c9f08d877a6420ff7a6b49b453aabb66cd83458ed53fab556526b15f"
+      },
+      {
+        "bytes": 15996,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/continuous_self/loop.py",
+        "sha256": "07b7b927e7396fad15a6675e16b60b316e1e692979e78a381d5ff57cb9f1d2c4"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 8185,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/envelope_adapter.py",
+        "sha256": "c9dab3a63168098a4a41b1dbf652158743742eb8e669f5e56c4a956c33f6843d"
+      },
+      {
+        "bytes": 37988,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/loop.py",
+        "sha256": "f2e4d7ac582fc1de1dd6855171260fb8e09e91d700826720be593e2c30313605"
+      },
+      {
+        "bytes": 23466,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/fusion_loop/unsupervised.py",
+        "sha256": "5f1e98985ac0c721bb176d9b0cec8c9cd57f58c4daeb37dd3b60bfba144bba34"
+      },
+      {
+        "bytes": 180,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/__init__.py",
+        "sha256": "e8e66c888c9c964a15425fa890d408b0c1cf6ad8a51575cc0250ea30114cb30f"
+      },
+      {
+        "bytes": 23207,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/abstain_feeder.py",
+        "sha256": "cdef6f596731dea15d0b87a17767f5aab6122f800694001f47382b58b3f68a0a"
+      },
+      {
+        "bytes": 6087,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/abstain_queue.py",
+        "sha256": "22ee334af5e9ab22938239105baa78260c6ad0ffa96e5eca4b5c7505ac43e7c2"
+      },
+      {
+        "bytes": 79973,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/answer_bridge.py",
+        "sha256": "8f5e5381664163986903916f306f70e50ad4fd2a43c544f0493c408811d950e7"
+      },
+      {
+        "bytes": 10018,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/collective_improve.py",
+        "sha256": "cfb9befdbbecf62782fbe298f46334b0dcde70248d3cdbb02a89f57ac1efcba7"
+      },
+      {
+        "bytes": 5984,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/compaction.py",
+        "sha256": "0be930324cca3903509caac5fe6451d252573eb04d7b1a58127b91d40ada2bfc"
+      },
+      {
+        "bytes": 11390,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/contradiction_sweep.py",
+        "sha256": "940de87562a1eb20d3a9d478080e567e9545d0cf26b044b359290382101d89cf"
+      },
+      {
+        "bytes": 13434,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/corpus_adapters.py",
+        "sha256": "25c2d1991d4a4f536a96c373861848d7059fe726e0c2700d20b21f8740f1011e"
+      },
+      {
+        "bytes": 4371,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/curated_judge.py",
+        "sha256": "01e9da9d50edcef293660c99661ccc2f14720dfb0457a725637afed536673ff0"
+      },
+      {
+        "bytes": 13424,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/epistemic_shield.py",
+        "sha256": "ec9b128d2641b788ab77a3425bf049a5846e28c7ace7508c33498f102713a911"
+      },
+      {
+        "bytes": 6963,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/graph_paths.py",
+        "sha256": "f0617a0fe809bf17192a2792743175a0bcaaf95643faca88f6596f9070036d10"
+      },
+      {
+        "bytes": 14667,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/lexicon_lane.py",
+        "sha256": "ca1b57002adf1fd4504689a8ac55bd56f0a64ab41be726221cb700a4fe3a9093"
+      },
+      {
+        "bytes": 8844,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/moral_invariants.py",
+        "sha256": "607b9081f00175d8d4392294d5c149ab811a478e885e6588a02d1a03f3da7613"
+      },
+      {
+        "bytes": 40384,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/mutation_batch.py",
+        "sha256": "795060b3b1980d4a7fad40fe1786bada380f02fb308d5971366c885b7127e1ec"
+      },
+      {
+        "bytes": 8228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/pii_guard.py",
+        "sha256": "1ac83c457777f389f3c1c7b7d866076ed6ecb2221c9a157abf96c5d719022832"
+      },
+      {
+        "bytes": 6054,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/sharded_term_dict.py",
+        "sha256": "e6ffc70a06cedf4e64b93b640a66e242215385aae8268830205b2c3de6a45558"
+      },
+      {
+        "bytes": 6451,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_collective_improve.py",
+        "sha256": "2b766b10bc5d8f58b75e392ca04c76695d3612ca28bcf160d02fa90964a771f6"
+      },
+      {
+        "bytes": 3319,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_compaction.py",
+        "sha256": "d848d9eb68ccd3bbe11ab2c321e39e9e656ab9fe4384ae86485396cba5bbdb45"
+      },
+      {
+        "bytes": 3650,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_epistemic_shield.py",
+        "sha256": "6835f7fdc7fe0d72a85b1db2c68b2ac16953123817a73f3a6b104bab85327154"
+      },
+      {
+        "bytes": 4231,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_graph_paths.py",
+        "sha256": "fd74d6e3e87d14813da521c99518a83a12b495d0868163e7d8c6b59d4badd1de"
+      },
+      {
+        "bytes": 8524,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_mutation_batch.py",
+        "sha256": "2f1701c3512025da8263ad9033ab46dbccc5017f7f3c3b2b63f02b6405028730"
+      },
+      {
+        "bytes": 3312,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_pii_guard.py",
+        "sha256": "b091de281bd1d0ff3f67ad5fedaab9be2904b0c1db25ce79b4ddadeccff427c5"
+      },
+      {
+        "bytes": 2720,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_pii_guard_read_only.py",
+        "sha256": "074d56db2e53a8ece64f511b373e138df73b436c99e54026aa8fe372b2a64b50"
+      },
+      {
+        "bytes": 4430,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_self_refinement.py",
+        "sha256": "0995c7885b7daff8b808b83bdb831b45b22a6eaa3ccbb5c6cc97f57c49caa075"
+      },
+      {
+        "bytes": 2041,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_sharded_term_dict.py",
+        "sha256": "61d9e8fa76538598bb58fb3c679c9a75ae368ce97618f9c817b8af948d0d189e"
+      },
+      {
+        "bytes": 2636,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_store_contract.py",
+        "sha256": "7212a8921a967a926909be9aae5e83ad6248173ba0535d7898c43cace531b59f"
+      },
+      {
+        "bytes": 2520,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_taxonomy_sweep.py",
+        "sha256": "d086b34eaaa82e3ea130cb7d3b9b8a65042a89c851310f0cf06c4424a2f0dfc0"
+      },
+      {
+        "bytes": 5516,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_triple_store.py",
+        "sha256": "3131c840fc6715090e3ecdb8ec0e0f4b8a37bc00ad00835f3927072257cbb2c4"
+      },
+      {
+        "bytes": 3230,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/tests/test_turbo_ingest.py",
+        "sha256": "1e21eddb815f02fd66a42239390c7dde0489b2ab78ce6da69e0d21921b7e2f01"
+      },
+      {
+        "bytes": 38402,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/triple_store.py",
+        "sha256": "711747719794c556cc24fff13d286ddc8d2ccf466ecd84d424b310ca6252629a"
+      },
+      {
+        "bytes": 10359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/graph_scale/turbo_ingest.py",
+        "sha256": "d6698dcaf2aa50594c487297a4bb5a63c2e41a07058cc009697c040290dfc6a6"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 8708,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/reasoning_vm/exam_answer.py",
+        "sha256": "3b286ded9ccc0fcd421b340e4939befb813881c976bc21b00b9de57d52ebe459"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 24377,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/subjective/felt_judgment.py",
+        "sha256": "bafac0808635df8b9045fac3d8ea7ac7812cf518c44741dc15e51a25389e8cfc"
+      },
+      {
+        "bytes": 18122,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/subjective/tests/test_felt_judgment.py",
+        "sha256": "abfcdc38dd6b8e4a1e34e37ee5e03d450b372fe62859653c16975a54e952e641"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 9787,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/atms.py",
+        "sha256": "c0bd044f9f4976c92fa9bd90793ff1cdb993abd44dcf71fbf379791ae218e950"
+      },
+      {
+        "bytes": 12202,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/jtms.py",
+        "sha256": "39bf5976e0808ba966801161f4dd387fabe16b64bccce63670a423d3ec70e19a"
+      },
+      {
+        "bytes": 17446,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/live_membrane.py",
+        "sha256": "f2989302b4311cc888b63a69909158bed59796b87eb4bfb2510c4d910c1bbf65"
+      },
+      {
+        "bytes": 11107,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/truth_maintenance/revision.py",
+        "sha256": "803d1aa48e12d20ccca4adaa1dc88c828fe49250fb6fa4478d43c34a792dbdee"
+      },
+      {
+        "bytes": 1790241,
+        "files": 117,
+        "kind": "directory",
+        "path": "reports/benchmarks",
+        "sha256": "ec82fc4658edd6d9fb329055a5f1a6569ee63b00121edfaf4e62b10958a11f4b"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      },
+      {
+        "bytes": 5532,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/backfill_kaikki_glosses.py",
+        "sha256": "03de521970151dc5b9740904b7c27547a75bfa7652f2ecfccd68da2536d81594"
+      },
+      {
+        "bytes": 7990,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_isa_verdict.py",
+        "sha256": "73262fe413b22c60762e906c2ceb74843417fc4b86b4d43d0248d4c2d071c4bd"
+      },
+      {
+        "bytes": 4594,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_lang_gate.py",
+        "sha256": "10f39cfd7979896c63fd1edb564895f0f717620a0e6bfdccfc8932e4192d221f"
+      },
+      {
+        "bytes": 6604,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/build_taxonomy_backbone.py",
+        "sha256": "372fffe86ef90e08274fa1fd60facc4a0606c6347058f1ec09c2effdaefa1a7e"
+      },
+      {
+        "bytes": 15292,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/bulk_ingest_kg.py",
+        "sha256": "20e1d46b91877ec8eb045d85510cd9b8879e10bb64ffe01b41ade2f0f562bb85"
+      },
+      {
+        "bytes": 6186,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/create_graph_mutation_batch.py",
+        "sha256": "cd96c5c5624b7ae07631bf72056f43e93862cccfacaa5ee082c624e48f103ba9"
+      },
+      {
+        "bytes": 3325,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/derivation_accelerator.py",
+        "sha256": "16823f5d38c8f5ef35bad5774fb61f063faea435a09a5abaa37e2d1d3eac1f8f"
+      },
+      {
+        "bytes": 14610,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/install_signed_shipped_graph.py",
+        "sha256": "f29f9655315856cce6c8cffa3194313a57317b33f0bef82081cc804c040015c3"
+      },
+      {
+        "bytes": 148881,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/landing_chain_lib.py",
+        "sha256": "8af74cb7625bd3b2ea7b052768aadcf01c0936251f23e48c83e36a49a0b276cf"
+      },
+      {
+        "bytes": 18006,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/profile_domain_audit.py",
+        "sha256": "4fad1c486613018bc31dfad0fdc3669bd36c7ef73184f2e57da02e1b07e7a38a"
+      },
+      {
+        "bytes": 18593,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/promote_staging_to_shipped.py",
+        "sha256": "fd7b8fbbd14dcabedfe154365679fddcac4b3964a3a1013e3c27d7964ee38897"
+      },
+      {
+        "bytes": 11208,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/sanitize_isa_pollution.py",
+        "sha256": "105e42597dafec53c4e0e76e4e7a67ed0aaf0c792c5ab104aa015b62b78b3597"
+      },
+      {
+        "bytes": 3670,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_create_graph_mutation_batch.py",
+        "sha256": "c305f3721ee4ca8f7f467699dfacbf51fc50324b28e4024b58030a0a1e10353c"
+      },
+      {
+        "bytes": 2924,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_direct_shipped_sidecar_guards.py",
+        "sha256": "bee4d0150a999452374b60ac593648ed7a0c237e205f0aa8eeee30d666dfa816"
+      },
+      {
+        "bytes": 8269,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_graph_mutation_candidate.py",
+        "sha256": "55accc66fe5137e07d34877585f69555d310173aca724d6c2fe3e0bd2d6ac0f1"
+      },
+      {
+        "bytes": 1150,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+        "sha256": "e53c5dcf5ff4e9ac13b9b11227748675fcedafe4d8cb798f3aa3cf9d6619a017"
+      },
+      {
+        "bytes": 25554,
+        "files": 1,
+        "kind": "file",
+        "path": "scripts/tests/test_promotion_swap_boundary.py",
+        "sha256": "4e07dfc665535be671550481b6622115d3d76dd5634840653e08e42b6b6e1314"
+      }
+    ],
+    "explicit_paths": [
+      "data/architecture/catalog/organ_registry_v1.json",
+      "data/architecture/catalog/runtime_edges_v1.json",
+      "data/eval",
+      "data/graph_scale/kg_triples/BUILD_REPORT.json",
+      "data/graph_scale/kg_triples/VERIFY_REPORT.json",
+      "data/graph_scale/kg_triples/isa_verdict.col",
+      "data/graph_scale/kg_triples/lang_gate.col",
+      "data/graph_scale/kg_triples/meta.json",
+      "reports/benchmarks"
+    ],
+    "observation_scope": "All declared suites, datasets, artifacts, dependency descriptors, the catalog, and explicit mutation-sensitive paths. Git tracked and non-ignored untracked state is also fingerprinted; ignored paths outside these surfaces are not observed.",
+    "observed_path_mutation_detected": false,
+    "paths": [
+      "apps/api/app/routers/agora.py",
+      "apps/api/app/routers/browser.py",
+      "apps/api/app/routers/cloud_brain.py",
+      "apps/api/requirements.txt",
+      "apps/api/tests/test_agora_graph_lifecycle_language.py",
+      "apps/api/tests/test_browser_forget_authority.py",
+      "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py",
+      "data/architecture/catalog/organ_registry_v1.json",
+      "data/architecture/catalog/runtime_edges_v1.json",
+      "data/eval",
+      "data/eval/catalog/baseline_suite_v1.json",
+      "data/graph_scale/kg_triples/BUILD_REPORT.json",
+      "data/graph_scale/kg_triples/VERIFY_REPORT.json",
+      "data/graph_scale/kg_triples/isa_verdict.col",
+      "data/graph_scale/kg_triples/lang_gate.col",
+      "data/graph_scale/kg_triples/meta.json",
+      "deploy/atanor-linux/build.sh",
+      "deploy/requirements-cloud.txt",
+      "deploy/requirements-voice.txt",
+      "package-lock.json",
+      "packages/architecture_registry/registry.py",
+      "packages/architecture_registry/runtime_graph.py",
+      "packages/architecture_registry/static_graph.py",
+      "packages/architecture_registry/tests/test_registry.py",
+      "packages/architecture_registry/tests/test_runtime_graph.py",
+      "packages/architecture_registry/tests/test_static_graph.py",
+      "packages/autonomy_envelope/__init__.py",
+      "packages/autonomy_envelope/audit_ledger.py",
+      "packages/autonomy_envelope/constants.py",
+      "packages/autonomy_envelope/envelope.py",
+      "packages/autonomy_envelope/evaluation_trust.py",
+      "packages/autonomy_envelope/interface.py",
+      "packages/autonomy_envelope/killswitch.py",
+      "packages/autonomy_envelope/operator_trust.py",
+      "packages/autonomy_envelope/promotion_queue.py",
+      "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+      "packages/autonomy_envelope/tests/test_envelope_integration.py",
+      "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+      "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+      "packages/autonomy_envelope/tests/test_killswitch.py",
+      "packages/autonomy_envelope/tests/test_operator_trust.py",
+      "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+      "packages/autonomy_envelope/tests/test_whitelist_default_deny.py",
+      "packages/autonomy_envelope/whitelist.py",
+      "packages/autonomy_kernel/fractal_reasoner.py",
+      "packages/autonomy_kernel/intrinsic_drive.py",
+      "packages/autonomy_kernel/moltbook_autopilot.py",
+      "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+      "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+      "packages/base_brain/__init__.py",
+      "packages/base_brain/models.py",
+      "packages/base_brain/pack_builder.py",
+      "packages/base_brain/pack_loader.py",
+      "packages/cgsr/pyproject.toml",
+      "packages/cognitive_core/canonical.py",
+      "packages/continuous_self/loop.py",
+      "packages/datagate/pyproject.toml",
+      "packages/fusion_loop/envelope_adapter.py",
+      "packages/fusion_loop/loop.py",
+      "packages/fusion_loop/unsupervised.py",
+      "packages/graph_scale/__init__.py",
+      "packages/graph_scale/abstain_feeder.py",
+      "packages/graph_scale/abstain_queue.py",
+      "packages/graph_scale/answer_bridge.py",
+      "packages/graph_scale/collective_improve.py",
+      "packages/graph_scale/compaction.py",
+      "packages/graph_scale/contradiction_sweep.py",
+      "packages/graph_scale/corpus_adapters.py",
+      "packages/graph_scale/curated_judge.py",
+      "packages/graph_scale/epistemic_shield.py",
+      "packages/graph_scale/graph_paths.py",
+      "packages/graph_scale/lexicon_lane.py",
+      "packages/graph_scale/moral_invariants.py",
+      "packages/graph_scale/mutation_batch.py",
+      "packages/graph_scale/pii_guard.py",
+      "packages/graph_scale/sharded_term_dict.py",
+      "packages/graph_scale/tests/test_collective_improve.py",
+      "packages/graph_scale/tests/test_compaction.py",
+      "packages/graph_scale/tests/test_epistemic_shield.py",
+      "packages/graph_scale/tests/test_graph_paths.py",
+      "packages/graph_scale/tests/test_mutation_batch.py",
+      "packages/graph_scale/tests/test_pii_guard.py",
+      "packages/graph_scale/tests/test_pii_guard_read_only.py",
+      "packages/graph_scale/tests/test_self_refinement.py",
+      "packages/graph_scale/tests/test_sharded_term_dict.py",
+      "packages/graph_scale/tests/test_store_contract.py",
+      "packages/graph_scale/tests/test_taxonomy_sweep.py",
+      "packages/graph_scale/tests/test_triple_store.py",
+      "packages/graph_scale/tests/test_turbo_ingest.py",
+      "packages/graph_scale/triple_store.py",
+      "packages/graph_scale/turbo_ingest.py",
+      "packages/guard/pyproject.toml",
+      "packages/knowledge_bakery/pyproject.toml",
+      "packages/model/pyproject.toml",
+      "packages/neuro_efficiency/pyproject.toml",
+      "packages/ontology_forge/pyproject.toml",
+      "packages/rag_engine/pyproject.toml",
+      "packages/reasoning_vm/exam_answer.py",
+      "packages/rhfc/pyproject.toml",
+      "packages/seed_research/pyproject.toml",
+      "packages/subjective/felt_judgment.py",
+      "packages/subjective/tests/test_felt_judgment.py",
+      "packages/trainer/pyproject.toml",
+      "packages/truth_maintenance/atms.py",
+      "packages/truth_maintenance/jtms.py",
+      "packages/truth_maintenance/live_membrane.py",
+      "packages/truth_maintenance/revision.py",
+      "reports/benchmarks",
+      "requirements-edge.txt",
+      "scripts/backfill_kaikki_glosses.py",
+      "scripts/build_isa_verdict.py",
+      "scripts/build_lang_gate.py",
+      "scripts/build_taxonomy_backbone.py",
+      "scripts/bulk_ingest_kg.py",
+      "scripts/create_graph_mutation_batch.py",
+      "scripts/derivation_accelerator.py",
+      "scripts/install_signed_shipped_graph.py",
+      "scripts/landing_chain_lib.py",
+      "scripts/profile_domain_audit.py",
+      "scripts/promote_staging_to_shipped.py",
+      "scripts/sanitize_isa_pollution.py",
+      "scripts/tests/test_create_graph_mutation_batch.py",
+      "scripts/tests/test_direct_shipped_sidecar_guards.py",
+      "scripts/tests/test_graph_mutation_candidate.py",
+      "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+      "scripts/tests/test_promotion_swap_boundary.py"
+    ]
+  },
+  "network_control": {
+    "enforced": false,
+    "environment_flag": "ATANOR_NETWORK_DISABLED",
+    "mechanism": "cooperative_environment_flag_only",
+    "note": "The runner strips nonessential environment variables and sets an offline flag, but it does not install an OS firewall or network namespace.",
+    "requested": "offline"
+  },
+  "platform": {
+    "hardware": {
+      "gpu": {
+        "reason": "baseline runner does not invoke vendor-specific tooling",
+        "status": "not_probed"
+      },
+      "logical_cpu_count": 32,
+      "memory_probe": "windows_global_memory_status",
+      "physical_memory_bytes": 33441435648,
+      "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD"
+    },
+    "machine": "AMD64",
+    "python_environment": {
+      "cache_tag": "cpython-313",
+      "executable": {
+        "bytes": 105288,
+        "name": "python.exe",
+        "sha256": "f77193cf0405ab440c39324bdb2f8864596321c1df888adbbe357f3d760f4716"
+      },
+      "implementation": "CPython",
+      "installed_distributions": {
+        "entry_count": 333,
+        "name_version_sha256": "fd49f545a0d0fbff62912589398bc4fb6ddeb6a1f681c2e0a42d7d8b67bf20d5",
+        "scope": "normalized_distribution_name_and_version_only"
+      },
+      "version": "3.13.12"
+    },
+    "python_environment_after": {
+      "cache_tag": "cpython-313",
+      "executable": {
+        "bytes": 105288,
+        "name": "python.exe",
+        "sha256": "f77193cf0405ab440c39324bdb2f8864596321c1df888adbbe357f3d760f4716"
+      },
+      "implementation": "CPython",
+      "installed_distributions": {
+        "entry_count": 333,
+        "name_version_sha256": "fd49f545a0d0fbff62912589398bc4fb6ddeb6a1f681c2e0a42d7d8b67bf20d5",
+        "scope": "normalized_distribution_name_and_version_only"
+      },
+      "version": "3.13.12"
+    },
+    "python_environment_mutation_detected": false,
+    "python_implementation": "CPython",
+    "python_version": "3.13.12",
+    "release": "11",
+    "system": "Windows"
+  },
+  "profile": {
+    "max_total_seconds": 120,
+    "name": "smoke",
+    "worst_case_seconds": 120
+  },
+  "recipes": [
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/graph_scale/tests/test_collective_improve.py",
+            "packages/subjective/tests/test_felt_judgment.py",
+            "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+            "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+            "packages/graph_scale/tests/test_epistemic_shield.py",
+            "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+            "packages/autonomy_envelope/tests/test_envelope_integration.py",
+            "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+            "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+            "packages/autonomy_envelope/tests/test_killswitch.py",
+            "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+            "packages/autonomy_envelope/tests/test_whitelist_default_deny.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 2.88828,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "37249d1b1bb9c9446707970831e727a3ca812130023dc650dedf9a560a8dee6f",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 162,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 162,
+            "sha256": "e349abe22947da4e9c74448eb06c660c4408c14388838f20d233fb86f4383174",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 20
+        },
+        {
+          "attempt": 2,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/graph_scale/tests/test_collective_improve.py",
+            "packages/subjective/tests/test_felt_judgment.py",
+            "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+            "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+            "packages/graph_scale/tests/test_epistemic_shield.py",
+            "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+            "packages/autonomy_envelope/tests/test_envelope_integration.py",
+            "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+            "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+            "packages/autonomy_envelope/tests/test_killswitch.py",
+            "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+            "packages/autonomy_envelope/tests/test_whitelist_default_deny.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 3.295899,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "37249d1b1bb9c9446707970831e727a3ca812130023dc650dedf9a560a8dee6f",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 162,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 162,
+            "sha256": "e349abe22947da4e9c74448eb06c660c4408c14388838f20d233fb86f4383174",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 20
+        }
+      ],
+      "id": "g0_fail_closed_integrity",
+      "repeat_metrics": {
+        "attempts_completed": 2,
+        "attempts_requested": 2,
+        "benchmark_metrics": {
+          "accuracy": null,
+          "coverage": null,
+          "firing_rate": null,
+          "latency_ms": null,
+          "resource_use": null,
+          "status": "not_parsed_by_recipe_orchestrator"
+        },
+        "evidence_kind": "command_execution_only",
+        "failed_attempts": 0,
+        "outcome_digest_counts": {
+          "37249d1b1bb9c9446707970831e727a3ca812130023dc650dedf9a560a8dee6f": 2
+        },
+        "output_limit_exceeded_attempts": 0,
+        "stable_outcome": true,
+        "successful_attempts": 2,
+        "successful_reproduced": true,
+        "timeouts": 0
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/architecture_registry/tests/test_registry.py",
+            "packages/architecture_registry/tests/test_static_graph.py",
+            "packages/architecture_registry/tests/test_runtime_graph.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 5.329991,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "0432db5e5328227332e4c0b0ded4949ef5d38bae16a379322699e2a883c2b9d9",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 81,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 81,
+            "sha256": "18395083f2cb1e70edeb9bfc9b39da059cb217359d0fe9eaea01cc89e8d751d4",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 10
+        },
+        {
+          "attempt": 2,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/architecture_registry/tests/test_registry.py",
+            "packages/architecture_registry/tests/test_static_graph.py",
+            "packages/architecture_registry/tests/test_runtime_graph.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 5.633119,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "0432db5e5328227332e4c0b0ded4949ef5d38bae16a379322699e2a883c2b9d9",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 81,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 81,
+            "sha256": "18395083f2cb1e70edeb9bfc9b39da059cb217359d0fe9eaea01cc89e8d751d4",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 10
+        }
+      ],
+      "id": "g0_architecture_registry",
+      "repeat_metrics": {
+        "attempts_completed": 2,
+        "attempts_requested": 2,
+        "benchmark_metrics": {
+          "accuracy": null,
+          "coverage": null,
+          "firing_rate": null,
+          "latency_ms": null,
+          "resource_use": null,
+          "status": "not_parsed_by_recipe_orchestrator"
+        },
+        "evidence_kind": "command_execution_only",
+        "failed_attempts": 0,
+        "outcome_digest_counts": {
+          "0432db5e5328227332e4c0b0ded4949ef5d38bae16a379322699e2a883c2b9d9": 2
+        },
+        "output_limit_exceeded_attempts": 0,
+        "stable_outcome": true,
+        "successful_attempts": 2,
+        "successful_reproduced": true,
+        "timeouts": 0
+      }
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/graph_scale/tests/test_store_contract.py",
+            "packages/graph_scale/tests/test_triple_store.py",
+            "packages/graph_scale/tests/test_sharded_term_dict.py",
+            "packages/graph_scale/tests/test_turbo_ingest.py",
+            "packages/graph_scale/tests/test_graph_paths.py",
+            "packages/graph_scale/tests/test_mutation_batch.py",
+            "packages/graph_scale/tests/test_pii_guard.py",
+            "packages/graph_scale/tests/test_pii_guard_read_only.py",
+            "packages/graph_scale/tests/test_self_refinement.py",
+            "packages/graph_scale/tests/test_taxonomy_sweep.py",
+            "packages/graph_scale/tests/test_compaction.py",
+            "packages/autonomy_envelope/tests/test_operator_trust.py",
+            "scripts/tests/test_direct_shipped_sidecar_guards.py",
+            "scripts/tests/test_create_graph_mutation_batch.py",
+            "scripts/tests/test_graph_mutation_candidate.py",
+            "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+            "scripts/tests/test_promotion_swap_boundary.py",
+            "apps/api/tests/test_browser_forget_authority.py",
+            "apps/api/tests/test_agora_graph_lifecycle_language.py",
+            "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 25.144441,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "cd94aa3d9b3d7781e0d7da326208ea0c5501ad5c6bb42f92881888e8a15924ed",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 243,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 243,
+            "sha256": "ef3ce0c5f676524558e31b6339b16aa5668d133de966f423374f186eaadd0fab",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 30
+        },
+        {
+          "attempt": 2,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/graph_scale/tests/test_store_contract.py",
+            "packages/graph_scale/tests/test_triple_store.py",
+            "packages/graph_scale/tests/test_sharded_term_dict.py",
+            "packages/graph_scale/tests/test_turbo_ingest.py",
+            "packages/graph_scale/tests/test_graph_paths.py",
+            "packages/graph_scale/tests/test_mutation_batch.py",
+            "packages/graph_scale/tests/test_pii_guard.py",
+            "packages/graph_scale/tests/test_pii_guard_read_only.py",
+            "packages/graph_scale/tests/test_self_refinement.py",
+            "packages/graph_scale/tests/test_taxonomy_sweep.py",
+            "packages/graph_scale/tests/test_compaction.py",
+            "packages/autonomy_envelope/tests/test_operator_trust.py",
+            "scripts/tests/test_direct_shipped_sidecar_guards.py",
+            "scripts/tests/test_create_graph_mutation_batch.py",
+            "scripts/tests/test_graph_mutation_candidate.py",
+            "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+            "scripts/tests/test_promotion_swap_boundary.py",
+            "apps/api/tests/test_browser_forget_authority.py",
+            "apps/api/tests/test_agora_graph_lifecycle_language.py",
+            "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 23.999666,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "cd94aa3d9b3d7781e0d7da326208ea0c5501ad5c6bb42f92881888e8a15924ed",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 243,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 243,
+            "sha256": "ef3ce0c5f676524558e31b6339b16aa5668d133de966f423374f186eaadd0fab",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 30
+        }
+      ],
+      "id": "g0_signed_shipped_graph_authority",
+      "repeat_metrics": {
+        "attempts_completed": 2,
+        "attempts_requested": 2,
+        "benchmark_metrics": {
+          "accuracy": null,
+          "coverage": null,
+          "firing_rate": null,
+          "latency_ms": null,
+          "resource_use": null,
+          "status": "not_parsed_by_recipe_orchestrator"
+        },
+        "evidence_kind": "command_execution_only",
+        "failed_attempts": 0,
+        "outcome_digest_counts": {
+          "cd94aa3d9b3d7781e0d7da326208ea0c5501ad5c6bb42f92881888e8a15924ed": 2
+        },
+        "output_limit_exceeded_attempts": 0,
+        "stable_outcome": true,
+        "successful_attempts": 2,
+        "successful_reproduced": true,
+        "timeouts": 0
+      }
+    }
+  ],
+  "schema": "atanor.baseline-evidence-manifest.v1",
+  "source": {
+    "excluded_evidence_output": "reports/baseline_evidence/g0_smoke_20260724T204240597Z.manifest.json",
+    "git": {
+      "branch": "demo",
+      "clean": false,
+      "dirty_tracked_paths": {
+        "entry_count": 95,
+        "sha256": "05ecb10fa43bfd0088cb87d93402479f827db910ad5877c3cc940730c135b375"
+      },
+      "head": "05ac7c4967ae8613259c614f8c6b02c70309547c",
+      "tracked_diff": {
+        "bytes": 675888,
+        "sha256": "a76760923aa63aa69de86ad02f90f83cd12bdd5a03fffcc0ae4f9b2dcc4e938f"
+      },
+      "untracked_paths": {
+        "bytes": 257294925,
+        "content_only_sha256": "0ba71d418077f051ff99e4f28ef00c3271c36b14c41f0e77994561437abf620c",
+        "content_sha256": "f049e5b55cbd79401dfb55f635f5d04a494c6645c90dd20cd6bb4ccbe705f01c",
+        "entry_count": 423,
+        "sha256": "4a19158753adea70e026ab18809ef8c8eb05652dce711f3f201bb4dae33ffb38"
+      }
+    },
+    "git_after": {
+      "branch": "demo",
+      "clean": false,
+      "dirty_tracked_paths": {
+        "entry_count": 95,
+        "sha256": "05ecb10fa43bfd0088cb87d93402479f827db910ad5877c3cc940730c135b375"
+      },
+      "head": "05ac7c4967ae8613259c614f8c6b02c70309547c",
+      "tracked_diff": {
+        "bytes": 675888,
+        "sha256": "a76760923aa63aa69de86ad02f90f83cd12bdd5a03fffcc0ae4f9b2dcc4e938f"
+      },
+      "untracked_paths": {
+        "bytes": 257294925,
+        "content_only_sha256": "0ba71d418077f051ff99e4f28ef00c3271c36b14c41f0e77994561437abf620c",
+        "content_sha256": "f049e5b55cbd79401dfb55f635f5d04a494c6645c90dd20cd6bb4ccbe705f01c",
+        "entry_count": 423,
+        "sha256": "4a19158753adea70e026ab18809ef8c8eb05652dce711f3f201bb4dae33ffb38"
+      }
+    },
+    "repository_mutation_detected": false,
+    "runner": {
+      "bytes": 75679,
+      "implementation": "scripts.baseline_suite",
+      "location": "repository",
+      "path": "scripts/baseline_suite.py",
+      "sha256": "6c22eb784f8f6bf1fd1184b532445a89ad667de5078f372cdc6e73f943cec88f"
+    },
+    "runner_after": {
+      "bytes": 75679,
+      "implementation": "scripts.baseline_suite",
+      "location": "repository",
+      "path": "scripts/baseline_suite.py",
+      "sha256": "6c22eb784f8f6bf1fd1184b532445a89ad667de5078f372cdc6e73f943cec88f"
+    },
+    "runner_mutation_detected": false,
+    "sealed": false,
+    "sealed_scope": "git_tracked_and_nonignored_untracked_plus_recorded_input_surfaces_and_python_environment; ignored_paths_outside_recorded_surfaces_unobserved"
+  },
+  "successful": true,
+  "successful_reproduced": true
+}

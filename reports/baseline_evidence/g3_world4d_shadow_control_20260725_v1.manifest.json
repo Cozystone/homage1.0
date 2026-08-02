@@ -1,0 +1,1090 @@
+{
+  "catalog": {
+    "catalog_id": "baseline_suite_v1",
+    "path": "data/eval/catalog/baseline_suite_v1.json",
+    "sha256": "c6c5bf745b6a5f6875417b842764af862f0364512383d6f9164baee426790b5f"
+  },
+  "catalog_trust": "The catalog is a reviewed recipe input, not an authority boundary. Runner-owned validation and the automatic runner-source binding are independent of catalog fields.",
+  "claim_scope": "Command execution evidence only. Stable exit/output/report digests are not benchmark capability evidence; metrics remain null until a benchmark-owned report parser and independent capability gate populate them. Mutation claims cover only the explicitly recorded observation surfaces.",
+  "created_at_utc": "2026-07-25T00:27:01.114905Z",
+  "environment": {
+    "allowlist": [
+      "ATANOR_DISABLE_PACK",
+      "ATANOR_NETWORK_DISABLED",
+      "ATANOR_WORLD4D_SHADOW",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD",
+      "PYTHONHASHSEED"
+    ],
+    "values": {
+      "ATANOR_DISABLE_PACK": "1",
+      "ATANOR_NETWORK_DISABLED": "1",
+      "ATANOR_WORLD4D_SHADOW": "0",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "PYTHONHASHSEED": "0"
+    }
+  },
+  "evidence_kind": "command_execution_only",
+  "filesystem_control": {
+    "enforced": false,
+    "mechanism": "catalog_policy_plus_post_hoc_observation",
+    "note": "The runner installs no filesystem sandbox. Git-visible and recorded repository surfaces are checked after execution; undeclared ignored paths and writes outside the repository are not observed.",
+    "requested": "repository_read_only"
+  },
+  "inputs": {
+    "artifacts": [
+      {
+        "bytes": 5369704,
+        "files": 1,
+        "kind": "file",
+        "path": "data/temporal_reasoning/precedence_field.json",
+        "sha256": "53065e0bb97576b8980da45c597b354c655bd468fec66c2e33003845a442aac8"
+      },
+      {
+        "bytes": 40233,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/cgsr/response_workspace.py",
+        "sha256": "5bec2d433575a59abc4627fa67ba464714ba685ffd99d8574af8d12a651948f8"
+      },
+      {
+        "bytes": 4279,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/canonical.py",
+        "sha256": "037d5da5c9f08d877a6420ff7a6b49b453aabb66cd83458ed53fab556526b15f"
+      },
+      {
+        "bytes": 21631,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/contracts.py",
+        "sha256": "48b6bbf7d8eee722bee727ff7ecc729c1edee9ac03232ac382f361b8ce8ff5ae"
+      },
+      {
+        "bytes": 17768,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/temporal_reasoning/block_universe.py",
+        "sha256": "3b5d4f6848a318fd5ccec36bb3ed544497dd1b34d9c8b98b0d7bd41028190965"
+      },
+      {
+        "bytes": 9033,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/temporal_reasoning/unified_timeline.py",
+        "sha256": "1c13616f1330f2064b29155ec51394a608816784c5fb86f1299c0f4d4bf8e5c1"
+      },
+      {
+        "bytes": 1261,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/__init__.py",
+        "sha256": "5c58d5374414f6cffbbd8d91178430a35d889ac38e75ecf8b6067a6f81899413"
+      },
+      {
+        "bytes": 16140,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/block_universe_provider.py",
+        "sha256": "caae3f226210729243244755033665606fb4d171b777c3515da328378f1a7e2d"
+      },
+      {
+        "bytes": 35192,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/contracts.py",
+        "sha256": "e8b46c34cefc84478c1885a1a1af6bdf941eebf4cd33c69ade104528b57645aa"
+      },
+      {
+        "bytes": 930,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/provider.py",
+        "sha256": "48531ef7d8738f6071467ab66cd03904eb2280cacc4cf766a2e12ac48826cdd4"
+      },
+      {
+        "bytes": 20982,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/shadow.py",
+        "sha256": "a3e51e39854d2938ae41adca2ca127210ccc91b276fe86afff080b8778a08d02"
+      }
+    ],
+    "datasets": [],
+    "dependencies": [
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 108876,
+        "files": 1,
+        "kind": "file",
+        "path": "projects/realcity/package-lock.json",
+        "sha256": "eb207ade05b3040a318cd581b241fbd3d5be2bb0cf045c53d22f4798b6f38cf0"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      }
+    ],
+    "suites": [
+      {
+        "bytes": 9228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_block_universe_provider.py",
+        "sha256": "5eccfe7419d5cfee79e7e506080a69378ddbc4a95fc29ff4364137d04a08af79"
+      },
+      {
+        "bytes": 10369,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_contracts.py",
+        "sha256": "1f0770f7f0cf6f65574ff1e49df4a3a3beb0d5bcc9b3e67f8e23065d8a934d43"
+      },
+      {
+        "bytes": 6620,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_live_temporal_shadow.py",
+        "sha256": "7bfd430909d5c8eb8a998a45a8b8b62384bd569d5783f1ff3bad4323a2fdbaa4"
+      },
+      {
+        "bytes": 12528,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_shadow.py",
+        "sha256": "5a63241be323a6cbbc4e96f8c81c13ca686ca9fb98d992a98bbabdf3ea66f51b"
+      }
+    ]
+  },
+  "manifest_hash": "7d32ff00efc6277ce8fc026fe93e8369f2915096b5ea2ce4974904a1aa512da4",
+  "mutation_sensitive": {
+    "after": [
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 1263178,
+        "files": 55,
+        "kind": "directory",
+        "path": "data/eval",
+        "sha256": "5ba96d89c92a53d97addc9e2b45fd1910f4a24b9aecb5e0995c38f11e90aba8b"
+      },
+      {
+        "bytes": 20844,
+        "files": 1,
+        "kind": "file",
+        "path": "data/eval/catalog/baseline_suite_v1.json",
+        "sha256": "c6c5bf745b6a5f6875417b842764af862f0364512383d6f9164baee426790b5f"
+      },
+      {
+        "bytes": 5369704,
+        "files": 1,
+        "kind": "file",
+        "path": "data/temporal_reasoning/precedence_field.json",
+        "sha256": "53065e0bb97576b8980da45c597b354c655bd468fec66c2e33003845a442aac8"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 40233,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/cgsr/response_workspace.py",
+        "sha256": "5bec2d433575a59abc4627fa67ba464714ba685ffd99d8574af8d12a651948f8"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 4279,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/canonical.py",
+        "sha256": "037d5da5c9f08d877a6420ff7a6b49b453aabb66cd83458ed53fab556526b15f"
+      },
+      {
+        "bytes": 21631,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/contracts.py",
+        "sha256": "48b6bbf7d8eee722bee727ff7ecc729c1edee9ac03232ac382f361b8ce8ff5ae"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 17768,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/temporal_reasoning/block_universe.py",
+        "sha256": "3b5d4f6848a318fd5ccec36bb3ed544497dd1b34d9c8b98b0d7bd41028190965"
+      },
+      {
+        "bytes": 9033,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/temporal_reasoning/unified_timeline.py",
+        "sha256": "1c13616f1330f2064b29155ec51394a608816784c5fb86f1299c0f4d4bf8e5c1"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 1261,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/__init__.py",
+        "sha256": "5c58d5374414f6cffbbd8d91178430a35d889ac38e75ecf8b6067a6f81899413"
+      },
+      {
+        "bytes": 16140,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/block_universe_provider.py",
+        "sha256": "caae3f226210729243244755033665606fb4d171b777c3515da328378f1a7e2d"
+      },
+      {
+        "bytes": 35192,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/contracts.py",
+        "sha256": "e8b46c34cefc84478c1885a1a1af6bdf941eebf4cd33c69ade104528b57645aa"
+      },
+      {
+        "bytes": 930,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/provider.py",
+        "sha256": "48531ef7d8738f6071467ab66cd03904eb2280cacc4cf766a2e12ac48826cdd4"
+      },
+      {
+        "bytes": 20982,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/shadow.py",
+        "sha256": "a3e51e39854d2938ae41adca2ca127210ccc91b276fe86afff080b8778a08d02"
+      },
+      {
+        "bytes": 9228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_block_universe_provider.py",
+        "sha256": "5eccfe7419d5cfee79e7e506080a69378ddbc4a95fc29ff4364137d04a08af79"
+      },
+      {
+        "bytes": 10369,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_contracts.py",
+        "sha256": "1f0770f7f0cf6f65574ff1e49df4a3a3beb0d5bcc9b3e67f8e23065d8a934d43"
+      },
+      {
+        "bytes": 6620,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_live_temporal_shadow.py",
+        "sha256": "7bfd430909d5c8eb8a998a45a8b8b62384bd569d5783f1ff3bad4323a2fdbaa4"
+      },
+      {
+        "bytes": 12528,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_shadow.py",
+        "sha256": "5a63241be323a6cbbc4e96f8c81c13ca686ca9fb98d992a98bbabdf3ea66f51b"
+      },
+      {
+        "bytes": 108876,
+        "files": 1,
+        "kind": "file",
+        "path": "projects/realcity/package-lock.json",
+        "sha256": "eb207ade05b3040a318cd581b241fbd3d5be2bb0cf045c53d22f4798b6f38cf0"
+      },
+      {
+        "bytes": 16895624,
+        "files": 127,
+        "kind": "directory",
+        "path": "reports/benchmarks",
+        "sha256": "aaa0e3a07de304624e062d5bd98bee644ea15e4192d4ebfe8b7e8c66c9e01d9d"
+      },
+      {
+        "bytes": 0,
+        "files": 0,
+        "kind": "missing",
+        "path": "reports/world4d-shadow",
+        "sha256": "714d04d335048eb2cf5d5f3f07bf7b8255333160b97d2d511de2247867995e29"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      }
+    ],
+    "automatic_input_paths": [
+      "apps/api/requirements.txt",
+      "data/eval/catalog/baseline_suite_v1.json",
+      "data/temporal_reasoning/precedence_field.json",
+      "deploy/requirements-cloud.txt",
+      "deploy/requirements-voice.txt",
+      "package-lock.json",
+      "packages/cgsr/cgsr/response_workspace.py",
+      "packages/cgsr/pyproject.toml",
+      "packages/cognitive_core/canonical.py",
+      "packages/cognitive_core/contracts.py",
+      "packages/datagate/pyproject.toml",
+      "packages/guard/pyproject.toml",
+      "packages/knowledge_bakery/pyproject.toml",
+      "packages/model/pyproject.toml",
+      "packages/neuro_efficiency/pyproject.toml",
+      "packages/ontology_forge/pyproject.toml",
+      "packages/rag_engine/pyproject.toml",
+      "packages/rhfc/pyproject.toml",
+      "packages/seed_research/pyproject.toml",
+      "packages/temporal_reasoning/block_universe.py",
+      "packages/temporal_reasoning/unified_timeline.py",
+      "packages/trainer/pyproject.toml",
+      "packages/world4d/__init__.py",
+      "packages/world4d/block_universe_provider.py",
+      "packages/world4d/contracts.py",
+      "packages/world4d/provider.py",
+      "packages/world4d/shadow.py",
+      "packages/world4d/tests/test_block_universe_provider.py",
+      "packages/world4d/tests/test_contracts.py",
+      "packages/world4d/tests/test_live_temporal_shadow.py",
+      "packages/world4d/tests/test_shadow.py",
+      "projects/realcity/package-lock.json",
+      "requirements-edge.txt"
+    ],
+    "before": [
+      {
+        "bytes": 386,
+        "files": 1,
+        "kind": "file",
+        "path": "apps/api/requirements.txt",
+        "sha256": "c1fc69a38d2d7e365fd857c1e6d594eb2100245758fa62878c19b281cbaf9b70"
+      },
+      {
+        "bytes": 1263178,
+        "files": 55,
+        "kind": "directory",
+        "path": "data/eval",
+        "sha256": "5ba96d89c92a53d97addc9e2b45fd1910f4a24b9aecb5e0995c38f11e90aba8b"
+      },
+      {
+        "bytes": 20844,
+        "files": 1,
+        "kind": "file",
+        "path": "data/eval/catalog/baseline_suite_v1.json",
+        "sha256": "c6c5bf745b6a5f6875417b842764af862f0364512383d6f9164baee426790b5f"
+      },
+      {
+        "bytes": 5369704,
+        "files": 1,
+        "kind": "file",
+        "path": "data/temporal_reasoning/precedence_field.json",
+        "sha256": "53065e0bb97576b8980da45c597b354c655bd468fec66c2e33003845a442aac8"
+      },
+      {
+        "bytes": 565,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-cloud.txt",
+        "sha256": "0e4a189ff8b7fb582b6c1dda4f371344e9dabdfcbdd2950aaa78058ba8e51e93"
+      },
+      {
+        "bytes": 89,
+        "files": 1,
+        "kind": "file",
+        "path": "deploy/requirements-voice.txt",
+        "sha256": "ff487706f99718a714fe5e65e992ab9b70f8179136d0cfc33b6ef19fa704bc78"
+      },
+      {
+        "bytes": 58014,
+        "files": 1,
+        "kind": "file",
+        "path": "package-lock.json",
+        "sha256": "24b5c4f46dae5a531372d4b8b8ef13219edda561df00f83f46f79ce1615170f1"
+      },
+      {
+        "bytes": 40233,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/cgsr/response_workspace.py",
+        "sha256": "5bec2d433575a59abc4627fa67ba464714ba685ffd99d8574af8d12a651948f8"
+      },
+      {
+        "bytes": 274,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cgsr/pyproject.toml",
+        "sha256": "a887e6aee740a5d626d939cf253c2371b456c1f2a7df59bc2082bd02732991c6"
+      },
+      {
+        "bytes": 4279,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/canonical.py",
+        "sha256": "037d5da5c9f08d877a6420ff7a6b49b453aabb66cd83458ed53fab556526b15f"
+      },
+      {
+        "bytes": 21631,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/cognitive_core/contracts.py",
+        "sha256": "48b6bbf7d8eee722bee727ff7ecc729c1edee9ac03232ac382f361b8ce8ff5ae"
+      },
+      {
+        "bytes": 475,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/datagate/pyproject.toml",
+        "sha256": "b32466ee17ef4ad68f62176e71feb56ee3809610a34a61a765e76c94869b4396"
+      },
+      {
+        "bytes": 330,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/guard/pyproject.toml",
+        "sha256": "73afd83ef90a397834187bc18e81ca9510ec3ff9067926a44dd7ab9f987fae8f"
+      },
+      {
+        "bytes": 363,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/knowledge_bakery/pyproject.toml",
+        "sha256": "7481ec1e69e74b13f2871c22d1d0e89828cf723d132e0225eb31f463feaf18ee"
+      },
+      {
+        "bytes": 331,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/model/pyproject.toml",
+        "sha256": "186cc537db705b20606956fd5220c50f79327e1787fcd1bf8af0a2e20a3bffd4"
+      },
+      {
+        "bytes": 372,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/neuro_efficiency/pyproject.toml",
+        "sha256": "725ab65d41bb353b2ea44918adbacd0d1e7d95215e0973d9be91858c2ccf3bf5"
+      },
+      {
+        "bytes": 351,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/ontology_forge/pyproject.toml",
+        "sha256": "3a3d93b9b5c797508d625d39df45e9a2685fa8a3209776774f400b7b52aca58d"
+      },
+      {
+        "bytes": 332,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rag_engine/pyproject.toml",
+        "sha256": "e79dc6460c43cf8da860408268c16c3770de5c05c4a7e1f278b05e38cea5a921"
+      },
+      {
+        "bytes": 474,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/rhfc/pyproject.toml",
+        "sha256": "0ca5b5e903318f84a650f8c2d46ea5094b0175f28cbec61f4374454df280ee66"
+      },
+      {
+        "bytes": 346,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/seed_research/pyproject.toml",
+        "sha256": "9e198478680317bce2cc3da28dc86f9b63edc2b4d2e522218d88aafb820254b4"
+      },
+      {
+        "bytes": 17768,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/temporal_reasoning/block_universe.py",
+        "sha256": "3b5d4f6848a318fd5ccec36bb3ed544497dd1b34d9c8b98b0d7bd41028190965"
+      },
+      {
+        "bytes": 9033,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/temporal_reasoning/unified_timeline.py",
+        "sha256": "1c13616f1330f2064b29155ec51394a608816784c5fb86f1299c0f4d4bf8e5c1"
+      },
+      {
+        "bytes": 359,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/trainer/pyproject.toml",
+        "sha256": "c4189869fb6ab92830f455189bced201b836eb3b792fc2d15b7268abad526637"
+      },
+      {
+        "bytes": 1261,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/__init__.py",
+        "sha256": "5c58d5374414f6cffbbd8d91178430a35d889ac38e75ecf8b6067a6f81899413"
+      },
+      {
+        "bytes": 16140,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/block_universe_provider.py",
+        "sha256": "caae3f226210729243244755033665606fb4d171b777c3515da328378f1a7e2d"
+      },
+      {
+        "bytes": 35192,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/contracts.py",
+        "sha256": "e8b46c34cefc84478c1885a1a1af6bdf941eebf4cd33c69ade104528b57645aa"
+      },
+      {
+        "bytes": 930,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/provider.py",
+        "sha256": "48531ef7d8738f6071467ab66cd03904eb2280cacc4cf766a2e12ac48826cdd4"
+      },
+      {
+        "bytes": 20982,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/shadow.py",
+        "sha256": "a3e51e39854d2938ae41adca2ca127210ccc91b276fe86afff080b8778a08d02"
+      },
+      {
+        "bytes": 9228,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_block_universe_provider.py",
+        "sha256": "5eccfe7419d5cfee79e7e506080a69378ddbc4a95fc29ff4364137d04a08af79"
+      },
+      {
+        "bytes": 10369,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_contracts.py",
+        "sha256": "1f0770f7f0cf6f65574ff1e49df4a3a3beb0d5bcc9b3e67f8e23065d8a934d43"
+      },
+      {
+        "bytes": 6620,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_live_temporal_shadow.py",
+        "sha256": "7bfd430909d5c8eb8a998a45a8b8b62384bd569d5783f1ff3bad4323a2fdbaa4"
+      },
+      {
+        "bytes": 12528,
+        "files": 1,
+        "kind": "file",
+        "path": "packages/world4d/tests/test_shadow.py",
+        "sha256": "5a63241be323a6cbbc4e96f8c81c13ca686ca9fb98d992a98bbabdf3ea66f51b"
+      },
+      {
+        "bytes": 108876,
+        "files": 1,
+        "kind": "file",
+        "path": "projects/realcity/package-lock.json",
+        "sha256": "eb207ade05b3040a318cd581b241fbd3d5be2bb0cf045c53d22f4798b6f38cf0"
+      },
+      {
+        "bytes": 16895624,
+        "files": 127,
+        "kind": "directory",
+        "path": "reports/benchmarks",
+        "sha256": "aaa0e3a07de304624e062d5bd98bee644ea15e4192d4ebfe8b7e8c66c9e01d9d"
+      },
+      {
+        "bytes": 0,
+        "files": 0,
+        "kind": "missing",
+        "path": "reports/world4d-shadow",
+        "sha256": "714d04d335048eb2cf5d5f3f07bf7b8255333160b97d2d511de2247867995e29"
+      },
+      {
+        "bytes": 536,
+        "files": 1,
+        "kind": "file",
+        "path": "requirements-edge.txt",
+        "sha256": "c318182891ae06108fd169cff9b745e0280742faa29f7ca349a0d1f1c4f4851d"
+      }
+    ],
+    "explicit_paths": [
+      "data/eval",
+      "reports/benchmarks",
+      "reports/world4d-shadow"
+    ],
+    "observation_scope": "All declared suites, datasets, artifacts, dependency descriptors, the catalog, and explicit mutation-sensitive paths. Git tracked and non-ignored untracked state is also fingerprinted; ignored paths outside these surfaces are not observed.",
+    "observed_path_mutation_detected": false,
+    "paths": [
+      "apps/api/requirements.txt",
+      "data/eval",
+      "data/eval/catalog/baseline_suite_v1.json",
+      "data/temporal_reasoning/precedence_field.json",
+      "deploy/requirements-cloud.txt",
+      "deploy/requirements-voice.txt",
+      "package-lock.json",
+      "packages/cgsr/cgsr/response_workspace.py",
+      "packages/cgsr/pyproject.toml",
+      "packages/cognitive_core/canonical.py",
+      "packages/cognitive_core/contracts.py",
+      "packages/datagate/pyproject.toml",
+      "packages/guard/pyproject.toml",
+      "packages/knowledge_bakery/pyproject.toml",
+      "packages/model/pyproject.toml",
+      "packages/neuro_efficiency/pyproject.toml",
+      "packages/ontology_forge/pyproject.toml",
+      "packages/rag_engine/pyproject.toml",
+      "packages/rhfc/pyproject.toml",
+      "packages/seed_research/pyproject.toml",
+      "packages/temporal_reasoning/block_universe.py",
+      "packages/temporal_reasoning/unified_timeline.py",
+      "packages/trainer/pyproject.toml",
+      "packages/world4d/__init__.py",
+      "packages/world4d/block_universe_provider.py",
+      "packages/world4d/contracts.py",
+      "packages/world4d/provider.py",
+      "packages/world4d/shadow.py",
+      "packages/world4d/tests/test_block_universe_provider.py",
+      "packages/world4d/tests/test_contracts.py",
+      "packages/world4d/tests/test_live_temporal_shadow.py",
+      "packages/world4d/tests/test_shadow.py",
+      "projects/realcity/package-lock.json",
+      "reports/benchmarks",
+      "reports/world4d-shadow",
+      "requirements-edge.txt"
+    ]
+  },
+  "network_control": {
+    "enforced": false,
+    "environment_flag": "ATANOR_NETWORK_DISABLED",
+    "mechanism": "cooperative_environment_flag_only",
+    "note": "The runner strips nonessential environment variables and sets an offline flag, but it does not install an OS firewall or network namespace.",
+    "requested": "offline"
+  },
+  "platform": {
+    "hardware": {
+      "gpu": {
+        "reason": "baseline runner does not invoke vendor-specific tooling",
+        "status": "not_probed"
+      },
+      "logical_cpu_count": 32,
+      "memory_probe": "windows_global_memory_status",
+      "physical_memory_bytes": 33441435648,
+      "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD"
+    },
+    "machine": "AMD64",
+    "python_environment": {
+      "cache_tag": "cpython-313",
+      "executable": {
+        "bytes": 105288,
+        "name": "python.exe",
+        "sha256": "f77193cf0405ab440c39324bdb2f8864596321c1df888adbbe357f3d760f4716"
+      },
+      "implementation": "CPython",
+      "installed_distributions": {
+        "entry_count": 333,
+        "name_version_sha256": "fd49f545a0d0fbff62912589398bc4fb6ddeb6a1f681c2e0a42d7d8b67bf20d5",
+        "scope": "normalized_distribution_name_and_version_only"
+      },
+      "version": "3.13.12"
+    },
+    "python_environment_after": {
+      "cache_tag": "cpython-313",
+      "executable": {
+        "bytes": 105288,
+        "name": "python.exe",
+        "sha256": "f77193cf0405ab440c39324bdb2f8864596321c1df888adbbe357f3d760f4716"
+      },
+      "implementation": "CPython",
+      "installed_distributions": {
+        "entry_count": 333,
+        "name_version_sha256": "fd49f545a0d0fbff62912589398bc4fb6ddeb6a1f681c2e0a42d7d8b67bf20d5",
+        "scope": "normalized_distribution_name_and_version_only"
+      },
+      "version": "3.13.12"
+    },
+    "python_environment_mutation_detected": false,
+    "python_implementation": "CPython",
+    "python_version": "3.13.12",
+    "release": "11",
+    "system": "Windows"
+  },
+  "profile": {
+    "max_total_seconds": 20,
+    "name": "world4d_shadow_control",
+    "worst_case_seconds": 20
+  },
+  "recipes": [
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/world4d/tests",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 1.139286,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "35fb8e9856e241e8cd9e1e3e173d60c0e54f6c646c3c173bbe38a26f55ab3df2",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 81,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 81,
+            "sha256": "6ebed2952a4b894cf41fe3f033912ab2809f8670a405e433039e960465e4f5b8",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 10
+        },
+        {
+          "attempt": 2,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/world4d/tests",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "duration_seconds": 1.124654,
+          "exit_code": 0,
+          "launch_error": null,
+          "outcome_sha256": "35fb8e9856e241e8cd9e1e3e173d60c0e54f6c646c3c173bbe38a26f55ab3df2",
+          "output_capture_error": false,
+          "output_limit_exceeded": false,
+          "reports": [],
+          "stderr": {
+            "bytes": 0,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "truncated": false
+          },
+          "stdout": {
+            "bytes": 81,
+            "capture_error": null,
+            "limit_bytes": 2097152,
+            "observed_bytes": 81,
+            "sha256": "6ebed2952a4b894cf41fe3f033912ab2809f8670a405e433039e960465e4f5b8",
+            "truncated": false
+          },
+          "successful": true,
+          "timed_out": false,
+          "timeout_seconds": 10
+        }
+      ],
+      "id": "g3_world4d_sibling_shadow",
+      "repeat_metrics": {
+        "attempts_completed": 2,
+        "attempts_requested": 2,
+        "benchmark_metrics": {
+          "accuracy": null,
+          "coverage": null,
+          "firing_rate": null,
+          "latency_ms": null,
+          "resource_use": null,
+          "status": "not_parsed_by_recipe_orchestrator"
+        },
+        "evidence_kind": "command_execution_only",
+        "failed_attempts": 0,
+        "outcome_digest_counts": {
+          "35fb8e9856e241e8cd9e1e3e173d60c0e54f6c646c3c173bbe38a26f55ab3df2": 2
+        },
+        "output_limit_exceeded_attempts": 0,
+        "stable_outcome": true,
+        "successful_attempts": 2,
+        "successful_reproduced": true,
+        "timeouts": 0
+      }
+    }
+  ],
+  "schema": "atanor.baseline-evidence-manifest.v1",
+  "source": {
+    "excluded_evidence_output": "reports/baseline_evidence/g3_world4d_shadow_control_20260725_v1.manifest.json",
+    "git": {
+      "branch": "demo",
+      "clean": true,
+      "dirty_tracked_paths": {
+        "entry_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "head": "f512dff6176b9b8c08c073b7573ba2f60bbd861a",
+      "tracked_diff": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "untracked_paths": {
+        "bytes": 0,
+        "content_only_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "content_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "entry_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "git_after": {
+      "branch": "demo",
+      "clean": true,
+      "dirty_tracked_paths": {
+        "entry_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "head": "f512dff6176b9b8c08c073b7573ba2f60bbd861a",
+      "tracked_diff": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "untracked_paths": {
+        "bytes": 0,
+        "content_only_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "content_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "entry_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "repository_mutation_detected": false,
+    "runner": {
+      "bytes": 75794,
+      "implementation": "scripts.baseline_suite",
+      "location": "repository",
+      "path": "scripts/baseline_suite.py",
+      "sha256": "6ce35111ef693232f0c38b1720e724d5426c14f59b811d392f7181076a316002"
+    },
+    "runner_after": {
+      "bytes": 75794,
+      "implementation": "scripts.baseline_suite",
+      "location": "repository",
+      "path": "scripts/baseline_suite.py",
+      "sha256": "6ce35111ef693232f0c38b1720e724d5426c14f59b811d392f7181076a316002"
+    },
+    "runner_mutation_detected": false,
+    "sealed": true,
+    "sealed_scope": "git_tracked_and_nonignored_untracked_plus_recorded_input_surfaces_and_python_environment; ignored_paths_outside_recorded_surfaces_unobserved"
+  },
+  "successful": true,
+  "successful_reproduced": true
+}

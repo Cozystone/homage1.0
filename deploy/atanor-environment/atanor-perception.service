@@ -1,0 +1,19 @@
+# ATANOR Environment — perception stream daemon (OPT-IN).
+# Runs in the user's graphical session (where the active window is visible) and
+# posts app+window-title to the LOCAL engine, which distills to concepts and
+# discards the raw. Reads ONLY title+app — no contents, no keystrokes, no
+# screenshots — and nothing leaves 127.0.0.1. Disabled by default; enable with:
+#   systemctl --user enable --now atanor-perception
+[Unit]
+Description=ATANOR perception stream (local-only activity context)
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/atanor/deploy/atanor-environment/perception_probe.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target

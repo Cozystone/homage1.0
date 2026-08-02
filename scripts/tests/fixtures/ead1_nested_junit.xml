@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites name="pytest tests">
+  <testsuite name="lane-a" tests="2" failures="1" errors="0" skipped="0">
+    <testcase classname="synthetic" name="passes" />
+    <testcase classname="synthetic" name="fails">
+      <failure message="synthetic failure">expected</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="lane-b" tests="1" failures="0" errors="0" skipped="1">
+    <testcase classname="synthetic" name="skips">
+      <skipped message="synthetic skip" />
+    </testcase>
+  </testsuite>
+</testsuites>

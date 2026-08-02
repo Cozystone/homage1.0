@@ -1,0 +1,29 @@
+{
+  "pages_done": 200001,
+  "rows": 1004,
+  "totals": {
+    "capable_of": 3636,
+    "used_for": 2816,
+    "made_of": 316
+  },
+  "elapsed_h": 0.08649347484111786,
+  "agreement": {
+    "used_for": {
+      "checkable": 102,
+      "agreed": 48,
+      "agreement": 0.47058823529411764
+    },
+    "capable_of": {
+      "checkable": 83,
+      "agreed": 24,
+      "agreement": 0.2891566265060241
+    },
+    "made_of": {
+      "checkable": 14,
+      "agreed": 5,
+      "agreement": 0.35714285714285715
+    }
+  },
+  "tier": "candidate",
+  "promoted": 0
+}

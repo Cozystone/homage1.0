@@ -1,0 +1,20 @@
+{
+  "n_questions": 26544,
+  "n_keys": 396657,
+  "qps_batch": 487550.4389081816,
+  "qps_single": 137536.20146904513,
+  "qps_bm25": 501.7299096796111,
+  "answered": 6327,
+  "reaching_two_corpora": 1470,
+  "corpora": [
+    "wiktionary",
+    "wordnet",
+    "gcide",
+    "wiki"
+  ],
+  "relations": [
+    "used_for",
+    "capable_of",
+    "made_of"
+  ]
+}

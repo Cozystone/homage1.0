@@ -1,0 +1,35 @@
+name = "atanor-cloud-brain-broker-dev"
+main = "src/worker.ts"
+compatibility_date = "2026-06-15"
+workers_dev = true
+
+[vars]
+ATANOR_CLOUD_MODE = "dev"
+ATANOR_ALLOWED_ORIGINS = "http://127.0.0.1:3022,http://localhost:3022"
+
+[[kv_namespaces]]
+binding = "ATANOR_NODES"
+id = "replace-with-kv-namespace-id"
+
+[[kv_namespaces]]
+binding = "ATANOR_TASKS"
+id = "replace-with-kv-namespace-id"
+
+[[kv_namespaces]]
+binding = "ATANOR_CREDITS"
+id = "replace-with-kv-namespace-id"
+
+[[r2_buckets]]
+binding = "ATANOR_FRAGMENTS"
+bucket_name = "atanor-cloud-fragments-dev"
+
+# Optional D1 binding for SQL metadata once the broker needs relational queries.
+# [[d1_databases]]
+# binding = "ATANOR_DB"
+# database_name = "atanor-cloud-brain-dev"
+# database_id = "replace-with-d1-database-id"
+
+# Optional Queues binding for async contributor dispatch.
+# [[queues.producers]]
+# binding = "ATANOR_TASK_QUEUE"
+# queue = "atanor-public-tasks-dev"

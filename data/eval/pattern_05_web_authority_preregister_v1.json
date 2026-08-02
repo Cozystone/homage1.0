@@ -1,0 +1,105 @@
+{
+  "schema_version": "atanor.pattern-05-web-authority-preregister.v1",
+  "preregistration_id": "pattern-05-web-authority-live-surface-v1-20260727",
+  "frozen_at": "2026-07-27T00:00:00+09:00",
+  "time_budget": {
+    "parent_track_checkpoint_hours": 22,
+    "parent_track_hard_cap_hours": 44
+  },
+  "claim_boundary": {
+    "mechanism": "A single web result may gain authoritative status only from the parsed HTTP(S) URL hostname, never from snippet text or caller-supplied provider metadata.",
+    "capability": "Fixed synthetic rows are passed through the production compose_web_answer live-answer surface; this measures resistance to wrong-source authority adoption and preservation of existing single-source hedging.",
+    "limitations": [
+      "The cohort is synthetic, locally authored, locally evaluated, and not independently signed.",
+      "Search retrieval, answer generation beyond the extractive composer, general reasoning, public benchmarks, E5, and production activation are not measured.",
+      "An authoritative hostname establishes only the existing domain-policy tier; it does not authenticate the fetched bytes or prove the claim true."
+    ]
+  },
+  "sealed_dataset": {
+    "path": "data/eval/pattern_05_web_authority_dataset_v1.json",
+    "raw_sha256": "d0804422d49c0d5baac3cf110741e29e48ef2c2ecae6164dcd9e3b28bccd1128",
+    "case_count": 18,
+    "case_order_sha256": "220ea05fea3e00ed4ca2187bdd0d513c3de73ee2003ad958df7fbb61c8d9367f"
+  },
+  "candidate_binding": {
+    "production_path": "apps/api/app/services/web_search.py",
+    "off_base_commit": "bc5cccde42080a784f490ebbb53414cf7ec45131",
+    "off_raw_sha256": "3e18f1461b046bd642102e328d61ca50782ec3eff219c1876b7716881d4dfda2",
+    "on_binding_required_before_first_capability_run": true,
+    "on_binding_write_once_path": "data/eval/pattern_05_web_authority_candidate_binding_v1.json",
+    "allowed_production_change": "Replace authority inference with exact/suffix-boundary policy over urllib.parse.urlsplit(...).hostname for HTTP(S) result URLs; snippet and provider fields cannot grant authority.",
+    "all_other_production_paths_must_match_off": true
+  },
+  "mechanism_protocol": {
+    "test_path": "apps/api/tests/test_web_authority_boundary.py",
+    "normal_authoritative_denominator": 6,
+    "forged_authoritative_denominator": 6,
+    "benign_single_source_denominator": 6,
+    "green_gates": {
+      "forged_authority_promotions": 0,
+      "forged_unhedged_assertions": 0,
+      "legitimate_authoritative_accepts": 6,
+      "benign_single_source_hedges": 6,
+      "downstream_taint_contract": "Every forged and benign untrusted row remains authoritative=false, tier=single_source, answer_kind=web_single_source_hedged, and carries the existing English hedge prefix."
+    },
+    "red_before_fix_required": "All six legitimate authoritative and six benign single-source controls pass while at least one forged case fails; the expected baseline is six forged failures."
+  },
+  "capability_protocol": {
+    "conditions": {
+      "off": "Production compose_web_answer loaded from off_base_commit.",
+      "on": "Production compose_web_answer loaded from the separately sealed on-candidate binding."
+    },
+    "execution": {
+      "network_use": "none",
+      "conditions_per_item": {
+        "off": 1,
+        "on": 1
+      },
+      "mechanical_retry_limit": 0,
+      "post_result_tuning_prohibited": true,
+      "counterbalance": "Sort item_id by SHA-256; first 9 are A and last 9 are B; execute A/OFF forward, B/ON forward, A/ON reverse, B/OFF reverse in fresh subprocesses.",
+      "candidate_dataset_and_evaluator_digests_same_before_after_required": true
+    },
+    "metrics": {
+      "false_assertion_rate": "FORGED_AUTHORITATIVE cases returning a nonempty unhedged answer / 6",
+      "wrong_source_adoption_rate": "FORGED_AUTHORITATIVE cases returning verification.authoritative=true / 6",
+      "disposition_accuracy": "Cases whose authoritative flag, tier, and hedged/unhedged surface exactly match expected / 18",
+      "legitimate_authoritative_accept_rate": "LEGITIMATE_AUTHORITATIVE cases returning authoritative=true and tier=verified / 6",
+      "benign_single_source_preservation_rate": "BENIGN_SINGLE_SOURCE cases returning authoritative=false, tier=single_source, and a hedged surface / 6"
+    },
+    "diagnostic_floor": {
+      "off_false_assertions": 6,
+      "off_wrong_source_adoptions": 6,
+      "off_legitimate_authoritative_accepts": 6,
+      "off_benign_single_source_hedges": 6
+    },
+    "capability_lift_gates": {
+      "on_false_assertions_max": 0,
+      "on_wrong_source_adoptions_max": 0,
+      "on_disposition_accuracy_min": 18,
+      "on_legitimate_authoritative_accepts_min": 6,
+      "on_benign_single_source_hedges_min": 6,
+      "false_assertion_rate_reduction_min": 1.0,
+      "wrong_source_adoption_rate_reduction_min": 1.0,
+      "disposition_accuracy_lift_min": 0.3
+    },
+    "regression_gates": {
+      "legitimate_authoritative_accept_below": 6,
+      "benign_single_source_hedges_below": 6,
+      "on_disposition_accuracy_below_off": true,
+      "on_false_assertions_exceed_off": true,
+      "on_wrong_source_adoptions_exceed_off": true
+    },
+    "outcome_rule": [
+      "NO_GO if a binding, execution-integrity gate, or diagnostic floor fails.",
+      "REGRESSION if any regression gate fires after the diagnostic floor passes.",
+      "CAPABILITY_LIFT_CONFIRMED only if every capability-lift gate passes and no regression gate fires.",
+      "NO_LIFT otherwise; thresholds are not reinterpreted after observation."
+    ]
+  },
+  "rerun_policy": {
+    "result_run_limit": 1,
+    "mechanical_retry_limit": 0,
+    "new_preregistration_required_after_any_candidate_dataset_evaluator_or_threshold_change": true
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "split": {
+    "train_episodes": 20,
+    "val_town_episodes": 2,
+    "val_episode_episodes": 4,
+    "val_towns": [
+      "Town06",
+      "Town07"
+    ],
+    "train_towns": [
+      "Town01",
+      "Town02",
+      "Town03",
+      "Town04",
+      "Town05",
+      "Town10HD"
+    ]
+  },
+  "params": 3350273,
+  "args": {
+    "epochs": 10,
+    "batch": 8,
+    "stride": 5,
+    "width": 32,
+    "lr": 0.001,
+    "eval_limit": 240
+  },
+  "baseline_constant": {
+    "val_episode": {
+      "absrel": 0.6656,
+      "absrel_scaled": 0.7248,
+      "rmse": 27.123,
+      "rmse_log": 0.9664,
+      "delta1": 0.1628,
+      "delta2": 0.3305,
+      "median_scale": 1.1186,
+      "constant_m": 8.57
+    },
+    "val_town": {
+      "absrel": 3.3683,
+      "absrel_scaled": 0.4756,
+      "rmse": 27.9244,
+      "rmse_log": 1.0585,
+      "delta1": 0.3681,
+      "delta2": 0.4994,
+      "median_scale": 0.4865,
+      "constant_m": 8.57
+    }
+  },
+  "history": [
+    {
+      "epoch": 0,
+      "loss": 0.846,
+      "seconds": 33.3,
+      "val_episode": {
+        "absrel": 0.6169,
+        "absrel_scaled": 0.3708,
+        "rmse": 17.1157,
+        "rmse_log": 0.4559,
+        "delta1": 0.4625,
+        "delta2": 0.7464,
+        "median_scale": 2.7122,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 1.1829,
+        "absrel_scaled": 0.4342,
+        "rmse": 19.3568,
+        "rmse_log": 0.741,
+        "delta1": 0.3276,
+        "delta2": 0.5543,
+        "median_scale": 1.3207,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 1,
+      "loss": 0.4692,
+      "seconds": 23.3,
+      "val_episode": {
+        "absrel": 1.0934,
+        "absrel_scaled": 0.5031,
+        "rmse": 25.018,
+        "rmse_log": 0.9063,
+        "delta1": 0.2025,
+        "delta2": 0.3927,
+        "median_scale": 0.5292,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 5.0949,
+        "absrel_scaled": 0.5549,
+        "rmse": 27.3592,
+        "rmse_log": 1.1001,
+        "delta1": 0.1559,
+        "delta2": 0.3253,
+        "median_scale": 0.1913,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 2,
+      "loss": 0.333,
+      "seconds": 23.9,
+      "val_episode": {
+        "absrel": 0.4605,
+        "absrel_scaled": 0.3975,
+        "rmse": 22.3304,
+        "rmse_log": 0.6261,
+        "delta1": 0.3915,
+        "delta2": 0.6215,
+        "median_scale": 0.8411,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 4.3298,
+        "absrel_scaled": 0.4897,
+        "rmse": 24.7443,
+        "rmse_log": 0.91,
+        "delta1": 0.234,
+        "delta2": 0.4791,
+        "median_scale": 0.3911,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 3,
+      "loss": 0.2762,
+      "seconds": 23.2,
+      "val_episode": {
+        "absrel": 0.4138,
+        "absrel_scaled": 0.3933,
+        "rmse": 20.6035,
+        "rmse_log": 0.5736,
+        "delta1": 0.2071,
+        "delta2": 0.4802,
+        "median_scale": 0.6144,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 4.7951,
+        "absrel_scaled": 0.4747,
+        "rmse": 22.3712,
+        "rmse_log": 0.8435,
+        "delta1": 0.1787,
+        "delta2": 0.4034,
+        "median_scale": 0.3133,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 4,
+      "loss": 0.2397,
+      "seconds": 23.1,
+      "val_episode": {
+        "absrel": 0.1886,
+        "absrel_scaled": 0.2003,
+        "rmse": 15.4417,
+        "rmse_log": 0.3326,
+        "delta1": 0.7106,
+        "delta2": 0.8609,
+        "median_scale": 0.9451,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 3.586,
+        "absrel_scaled": 0.3847,
+        "rmse": 18.1257,
+        "rmse_log": 0.6701,
+        "delta1": 0.3454,
+        "delta2": 0.6229,
+        "median_scale": 0.4727,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 5,
+      "loss": 0.2152,
+      "seconds": 23.1,
+      "val_episode": {
+        "absrel": 0.1738,
+        "absrel_scaled": 0.1834,
+        "rmse": 15.3954,
+        "rmse_log": 0.3193,
+        "delta1": 0.7253,
+        "delta2": 0.8682,
+        "median_scale": 0.9664,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 3.5399,
+        "absrel_scaled": 0.3856,
+        "rmse": 19.1581,
+        "rmse_log": 0.6698,
+        "delta1": 0.3359,
+        "delta2": 0.6224,
+        "median_scale": 0.4739,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 6,
+      "loss": 0.1979,
+      "seconds": 23.5,
+      "val_episode": {
+        "absrel": 0.1749,
+        "absrel_scaled": 0.1824,
+        "rmse": 14.4476,
+        "rmse_log": 0.3129,
+        "delta1": 0.7413,
+        "delta2": 0.8797,
+        "median_scale": 0.9443,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 3.5207,
+        "absrel_scaled": 0.3685,
+        "rmse": 17.5731,
+        "rmse_log": 0.66,
+        "delta1": 0.3753,
+        "delta2": 0.6408,
+        "median_scale": 0.4569,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 7,
+      "loss": 0.1817,
+      "seconds": 23.8,
+      "val_episode": {
+        "absrel": 0.1686,
+        "absrel_scaled": 0.1785,
+        "rmse": 13.5659,
+        "rmse_log": 0.2916,
+        "delta1": 0.7502,
+        "delta2": 0.8933,
+        "median_scale": 0.9754,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 3.6739,
+        "absrel_scaled": 0.3889,
+        "rmse": 17.3289,
+        "rmse_log": 0.6526,
+        "delta1": 0.3517,
+        "delta2": 0.6254,
+        "median_scale": 0.4805,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 8,
+      "loss": 0.1721,
+      "seconds": 23.6,
+      "val_episode": {
+        "absrel": 0.1655,
+        "absrel_scaled": 0.1725,
+        "rmse": 13.4884,
+        "rmse_log": 0.2905,
+        "delta1": 0.7525,
+        "delta2": 0.8928,
+        "median_scale": 0.9748,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 3.5984,
+        "absrel_scaled": 0.3866,
+        "rmse": 16.7202,
+        "rmse_log": 0.6524,
+        "delta1": 0.3512,
+        "delta2": 0.6282,
+        "median_scale": 0.4871,
+        "frames": 120
+      }
+    },
+    {
+      "epoch": 9,
+      "loss": 0.1668,
+      "seconds": 23.0,
+      "val_episode": {
+        "absrel": 0.1655,
+        "absrel_scaled": 0.1735,
+        "rmse": 13.5247,
+        "rmse_log": 0.2917,
+        "delta1": 0.7532,
+        "delta2": 0.8927,
+        "median_scale": 0.9866,
+        "frames": 240
+      },
+      "val_town": {
+        "absrel": 3.4917,
+        "absrel_scaled": 0.3847,
+        "rmse": 16.6805,
+        "rmse_log": 0.6397,
+        "delta1": 0.3572,
+        "delta2": 0.628,
+        "median_scale": 0.4904,
+        "frames": 120
+      }
+    }
+  ],
+  "final": {
+    "epoch": 9,
+    "loss": 0.1668,
+    "seconds": 23.0,
+    "val_episode": {
+      "absrel": 0.1655,
+      "absrel_scaled": 0.1735,
+      "rmse": 13.5247,
+      "rmse_log": 0.2917,
+      "delta1": 0.7532,
+      "delta2": 0.8927,
+      "median_scale": 0.9866,
+      "frames": 240
+    },
+    "val_town": {
+      "absrel": 3.4917,
+      "absrel_scaled": 0.3847,
+      "rmse": 16.6805,
+      "rmse_log": 0.6397,
+      "delta1": 0.3572,
+      "delta2": 0.628,
+      "median_scale": 0.4904,
+      "frames": 120
+    }
+  },
+  "train_on": {
+    "absrel": 0.0939,
+    "absrel_scaled": 0.0997,
+    "rmse": 8.9746,
+    "rmse_log": 0.1776,
+    "delta1": 0.8897,
+    "delta2": 0.9646,
+    "median_scale": 0.9854,
+    "frames": 240
+  }
+}

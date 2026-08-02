@@ -1,0 +1,2604 @@
+{
+  "result": "PASS",
+  "proved_at": "2026-06-15T15:46:11Z",
+  "scenarios": {
+    "salience": {
+      "run_id": "qco_sal_4a3dd6d0cd5d00cc55",
+      "problem_type": "salience",
+      "solver_name": "simulated_annealing",
+      "input_count": 14,
+      "selected_count": 8,
+      "objective_value": -22.668099999999985,
+      "selected_items": [
+        {
+          "id": "seed.core.evidence",
+          "kind": "node",
+          "layer": "seed_anchor",
+          "query_relevance": 0.96,
+          "activation": 0.92,
+          "trust": 0.92,
+          "novelty": 0.25,
+          "user_goal_fit": 0.96,
+          "risk": 0.08,
+          "fatigue": 0.08,
+          "source_id": "seed",
+          "concept_id": "seed.core.evidence",
+          "temporary": false,
+          "qubo_variable": "node:seed.core.evidence",
+          "reward": 3.9666
+        },
+        {
+          "id": "seed.core.claim",
+          "kind": "node",
+          "layer": "seed_anchor",
+          "query_relevance": 0.92,
+          "activation": 0.89,
+          "trust": 0.9,
+          "novelty": 0.25,
+          "user_goal_fit": 0.92,
+          "risk": 0.09,
+          "fatigue": 0.08,
+          "source_id": "seed",
+          "concept_id": "seed.core.claim",
+          "temporary": false,
+          "qubo_variable": "node:seed.core.claim",
+          "reward": 3.8198
+        },
+        {
+          "id": "seed.core.source",
+          "kind": "node",
+          "layer": "seed_anchor",
+          "query_relevance": 0.78,
+          "activation": 0.72,
+          "trust": 0.86,
+          "novelty": 0.25,
+          "user_goal_fit": 0.78,
+          "risk": 0.08,
+          "fatigue": 0.08,
+          "source_id": "seed",
+          "concept_id": "seed.core.source",
+          "temporary": false,
+          "qubo_variable": "node:seed.core.source",
+          "reward": 3.322
+        },
+        {
+          "id": "seed.core.verification",
+          "kind": "node",
+          "layer": "seed_anchor",
+          "query_relevance": 0.8,
+          "activation": 0.74,
+          "trust": 0.88,
+          "novelty": 0.25,
+          "user_goal_fit": 0.8,
+          "risk": 0.08,
+          "fatigue": 0.08,
+          "source_id": "seed",
+          "concept_id": "seed.core.verification",
+          "temporary": false,
+          "qubo_variable": "node:seed.core.verification",
+          "reward": 3.4044
+        },
+        {
+          "id": "cloud.evidence.bundle",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.82,
+          "activation": 0.78,
+          "trust": 0.72,
+          "novelty": 0.25,
+          "user_goal_fit": 0.82,
+          "risk": 0.18,
+          "fatigue": 0.08,
+          "source_id": "contributor-001",
+          "concept_id": "cloud.evidence.bundle",
+          "temporary": true,
+          "qubo_variable": "node:cloud.evidence.bundle",
+          "reward": 2.9548
+        },
+        {
+          "id": "cloud.claim.bundle",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.77,
+          "activation": 0.73,
+          "trust": 0.7,
+          "novelty": 0.25,
+          "user_goal_fit": 0.77,
+          "risk": 0.16,
+          "fatigue": 0.08,
+          "source_id": "contributor-001",
+          "concept_id": "cloud.claim.bundle",
+          "temporary": true,
+          "qubo_variable": "node:cloud.claim.bundle",
+          "reward": 2.8058
+        },
+        {
+          "id": "cloud.source.bundle",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.7,
+          "activation": 0.64,
+          "trust": 0.68,
+          "novelty": 0.25,
+          "user_goal_fit": 0.7,
+          "risk": 0.2,
+          "fatigue": 0.08,
+          "source_id": "contributor-001",
+          "concept_id": "cloud.source.bundle",
+          "temporary": true,
+          "qubo_variable": "node:cloud.source.bundle",
+          "reward": 2.4904
+        },
+        {
+          "id": "cloud.verification.bundle",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.72,
+          "activation": 0.67,
+          "trust": 0.69,
+          "novelty": 0.25,
+          "user_goal_fit": 0.72,
+          "risk": 0.2,
+          "fatigue": 0.08,
+          "source_id": "contributor-001",
+          "concept_id": "cloud.verification.bundle",
+          "temporary": true,
+          "qubo_variable": "node:cloud.verification.bundle",
+          "reward": 2.5743
+        }
+      ],
+      "rejected_items": [
+        {
+          "id": "noise-0",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.08,
+          "activation": 0.12,
+          "trust": 0.18,
+          "novelty": 0.6,
+          "user_goal_fit": 0.05,
+          "risk": 0.88,
+          "fatigue": 0.4,
+          "source_id": "noisy-source",
+          "concept_id": "noise.0",
+          "temporary": true,
+          "qubo_variable": "node:noise-0",
+          "reward": -0.9684,
+          "reject_reason": "high_risk"
+        },
+        {
+          "id": "noise-1",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.08,
+          "activation": 0.12,
+          "trust": 0.18,
+          "novelty": 0.6,
+          "user_goal_fit": 0.05,
+          "risk": 0.88,
+          "fatigue": 0.4,
+          "source_id": "noisy-source",
+          "concept_id": "noise.1",
+          "temporary": true,
+          "qubo_variable": "node:noise-1",
+          "reward": -0.9684,
+          "reject_reason": "high_risk"
+        },
+        {
+          "id": "noise-2",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.08,
+          "activation": 0.12,
+          "trust": 0.18,
+          "novelty": 0.6,
+          "user_goal_fit": 0.05,
+          "risk": 0.88,
+          "fatigue": 0.4,
+          "source_id": "noisy-source",
+          "concept_id": "noise.2",
+          "temporary": true,
+          "qubo_variable": "node:noise-2",
+          "reward": -0.9684,
+          "reject_reason": "high_risk"
+        },
+        {
+          "id": "noise-3",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.08,
+          "activation": 0.12,
+          "trust": 0.18,
+          "novelty": 0.6,
+          "user_goal_fit": 0.05,
+          "risk": 0.88,
+          "fatigue": 0.4,
+          "source_id": "noisy-source",
+          "concept_id": "noise.3",
+          "temporary": true,
+          "qubo_variable": "node:noise-3",
+          "reward": -0.9684,
+          "reject_reason": "high_risk"
+        },
+        {
+          "id": "noise-4",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.08,
+          "activation": 0.12,
+          "trust": 0.18,
+          "novelty": 0.6,
+          "user_goal_fit": 0.05,
+          "risk": 0.88,
+          "fatigue": 0.4,
+          "source_id": "noisy-source",
+          "concept_id": "noise.4",
+          "temporary": true,
+          "qubo_variable": "node:noise-4",
+          "reward": -0.9684,
+          "reject_reason": "high_risk"
+        },
+        {
+          "id": "noise-5",
+          "kind": "node",
+          "layer": "cloud_attached",
+          "query_relevance": 0.08,
+          "activation": 0.12,
+          "trust": 0.18,
+          "novelty": 0.6,
+          "user_goal_fit": 0.05,
+          "risk": 0.88,
+          "fatigue": 0.4,
+          "source_id": "noisy-source",
+          "concept_id": "noise.5",
+          "temporary": true,
+          "qubo_variable": "node:noise-5",
+          "reward": -0.9684,
+          "reject_reason": "high_risk"
+        }
+      ],
+      "honesty": {
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "local_brain_write": false,
+        "external_llm_used": false,
+        "external_sllm_used": false
+      },
+      "trace": {
+        "problem": {
+          "problem_id": "qubo_b48e923595415e1884",
+          "problem_type": "salience",
+          "variables": [
+            {
+              "name": "node:seed.core.evidence",
+              "kind": "node",
+              "ref_id": "seed.core.evidence",
+              "metadata": {
+                "id": "seed.core.evidence",
+                "kind": "node",
+                "layer": "seed_anchor",
+                "query_relevance": 0.96,
+                "activation": 0.92,
+                "trust": 0.92,
+                "novelty": 0.25,
+                "user_goal_fit": 0.96,
+                "risk": 0.08,
+                "fatigue": 0.08,
+                "source_id": "seed",
+                "concept_id": "seed.core.evidence",
+                "temporary": false
+              }
+            },
+            {
+              "name": "node:seed.core.claim",
+              "kind": "node",
+              "ref_id": "seed.core.claim",
+              "metadata": {
+                "id": "seed.core.claim",
+                "kind": "node",
+                "layer": "seed_anchor",
+                "query_relevance": 0.92,
+                "activation": 0.89,
+                "trust": 0.9,
+                "novelty": 0.25,
+                "user_goal_fit": 0.92,
+                "risk": 0.09,
+                "fatigue": 0.08,
+                "source_id": "seed",
+                "concept_id": "seed.core.claim",
+                "temporary": false
+              }
+            },
+            {
+              "name": "node:seed.core.source",
+              "kind": "node",
+              "ref_id": "seed.core.source",
+              "metadata": {
+                "id": "seed.core.source",
+                "kind": "node",
+                "layer": "seed_anchor",
+                "query_relevance": 0.78,
+                "activation": 0.72,
+                "trust": 0.86,
+                "novelty": 0.25,
+                "user_goal_fit": 0.78,
+                "risk": 0.08,
+                "fatigue": 0.08,
+                "source_id": "seed",
+                "concept_id": "seed.core.source",
+                "temporary": false
+              }
+            },
+            {
+              "name": "node:seed.core.verification",
+              "kind": "node",
+              "ref_id": "seed.core.verification",
+              "metadata": {
+                "id": "seed.core.verification",
+                "kind": "node",
+                "layer": "seed_anchor",
+                "query_relevance": 0.8,
+                "activation": 0.74,
+                "trust": 0.88,
+                "novelty": 0.25,
+                "user_goal_fit": 0.8,
+                "risk": 0.08,
+                "fatigue": 0.08,
+                "source_id": "seed",
+                "concept_id": "seed.core.verification",
+                "temporary": false
+              }
+            },
+            {
+              "name": "node:cloud.evidence.bundle",
+              "kind": "node",
+              "ref_id": "cloud.evidence.bundle",
+              "metadata": {
+                "id": "cloud.evidence.bundle",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.82,
+                "activation": 0.78,
+                "trust": 0.72,
+                "novelty": 0.25,
+                "user_goal_fit": 0.82,
+                "risk": 0.18,
+                "fatigue": 0.08,
+                "source_id": "contributor-001",
+                "concept_id": "cloud.evidence.bundle",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:cloud.claim.bundle",
+              "kind": "node",
+              "ref_id": "cloud.claim.bundle",
+              "metadata": {
+                "id": "cloud.claim.bundle",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.77,
+                "activation": 0.73,
+                "trust": 0.7,
+                "novelty": 0.25,
+                "user_goal_fit": 0.77,
+                "risk": 0.16,
+                "fatigue": 0.08,
+                "source_id": "contributor-001",
+                "concept_id": "cloud.claim.bundle",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:cloud.source.bundle",
+              "kind": "node",
+              "ref_id": "cloud.source.bundle",
+              "metadata": {
+                "id": "cloud.source.bundle",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.7,
+                "activation": 0.64,
+                "trust": 0.68,
+                "novelty": 0.25,
+                "user_goal_fit": 0.7,
+                "risk": 0.2,
+                "fatigue": 0.08,
+                "source_id": "contributor-001",
+                "concept_id": "cloud.source.bundle",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:cloud.verification.bundle",
+              "kind": "node",
+              "ref_id": "cloud.verification.bundle",
+              "metadata": {
+                "id": "cloud.verification.bundle",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.72,
+                "activation": 0.67,
+                "trust": 0.69,
+                "novelty": 0.25,
+                "user_goal_fit": 0.72,
+                "risk": 0.2,
+                "fatigue": 0.08,
+                "source_id": "contributor-001",
+                "concept_id": "cloud.verification.bundle",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:noise-0",
+              "kind": "node",
+              "ref_id": "noise-0",
+              "metadata": {
+                "id": "noise-0",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.08,
+                "activation": 0.12,
+                "trust": 0.18,
+                "novelty": 0.6,
+                "user_goal_fit": 0.05,
+                "risk": 0.88,
+                "fatigue": 0.4,
+                "source_id": "noisy-source",
+                "concept_id": "noise.0",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:noise-1",
+              "kind": "node",
+              "ref_id": "noise-1",
+              "metadata": {
+                "id": "noise-1",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.08,
+                "activation": 0.12,
+                "trust": 0.18,
+                "novelty": 0.6,
+                "user_goal_fit": 0.05,
+                "risk": 0.88,
+                "fatigue": 0.4,
+                "source_id": "noisy-source",
+                "concept_id": "noise.1",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:noise-2",
+              "kind": "node",
+              "ref_id": "noise-2",
+              "metadata": {
+                "id": "noise-2",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.08,
+                "activation": 0.12,
+                "trust": 0.18,
+                "novelty": 0.6,
+                "user_goal_fit": 0.05,
+                "risk": 0.88,
+                "fatigue": 0.4,
+                "source_id": "noisy-source",
+                "concept_id": "noise.2",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:noise-3",
+              "kind": "node",
+              "ref_id": "noise-3",
+              "metadata": {
+                "id": "noise-3",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.08,
+                "activation": 0.12,
+                "trust": 0.18,
+                "novelty": 0.6,
+                "user_goal_fit": 0.05,
+                "risk": 0.88,
+                "fatigue": 0.4,
+                "source_id": "noisy-source",
+                "concept_id": "noise.3",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:noise-4",
+              "kind": "node",
+              "ref_id": "noise-4",
+              "metadata": {
+                "id": "noise-4",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.08,
+                "activation": 0.12,
+                "trust": 0.18,
+                "novelty": 0.6,
+                "user_goal_fit": 0.05,
+                "risk": 0.88,
+                "fatigue": 0.4,
+                "source_id": "noisy-source",
+                "concept_id": "noise.4",
+                "temporary": true
+              }
+            },
+            {
+              "name": "node:noise-5",
+              "kind": "node",
+              "ref_id": "noise-5",
+              "metadata": {
+                "id": "noise-5",
+                "kind": "node",
+                "layer": "cloud_attached",
+                "query_relevance": 0.08,
+                "activation": 0.12,
+                "trust": 0.18,
+                "novelty": 0.6,
+                "user_goal_fit": 0.05,
+                "risk": 0.88,
+                "fatigue": 0.4,
+                "source_id": "noisy-source",
+                "concept_id": "noise.5",
+                "temporary": true
+              }
+            }
+          ],
+          "linear_terms": [
+            {
+              "var_a": "node:cloud.claim.bundle",
+              "var_b": null,
+              "coefficient": -2.8057999999999996,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:cloud.evidence.bundle",
+              "var_b": null,
+              "coefficient": -2.9547999999999996,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:cloud.source.bundle",
+              "var_b": null,
+              "coefficient": -2.4904,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:cloud.verification.bundle",
+              "var_b": null,
+              "coefficient": -2.5743000000000005,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:noise-0",
+              "var_b": null,
+              "coefficient": 0.9684000000000001,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:noise-1",
+              "var_b": null,
+              "coefficient": 0.9684000000000001,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:noise-2",
+              "var_b": null,
+              "coefficient": 0.9684000000000001,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:noise-3",
+              "var_b": null,
+              "coefficient": 0.9684000000000001,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:noise-4",
+              "var_b": null,
+              "coefficient": 0.9684000000000001,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:noise-5",
+              "var_b": null,
+              "coefficient": 0.9684000000000001,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:seed.core.claim",
+              "var_b": null,
+              "coefficient": -3.8198,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:seed.core.evidence",
+              "var_b": null,
+              "coefficient": -3.9666000000000006,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:seed.core.source",
+              "var_b": null,
+              "coefficient": -3.322,
+              "reason": "reward"
+            },
+            {
+              "var_a": "node:seed.core.verification",
+              "var_b": null,
+              "coefficient": -3.4044000000000003,
+              "reason": "reward"
+            }
+          ],
+          "quadratic_terms": [
+            {
+              "var_a": "node:cloud.claim.bundle",
+              "var_b": "node:cloud.source.bundle",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:cloud.claim.bundle",
+              "var_b": "node:cloud.verification.bundle",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:cloud.evidence.bundle",
+              "var_b": "node:cloud.claim.bundle",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:cloud.evidence.bundle",
+              "var_b": "node:cloud.source.bundle",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:cloud.evidence.bundle",
+              "var_b": "node:cloud.verification.bundle",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:cloud.source.bundle",
+              "var_b": "node:cloud.verification.bundle",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-0",
+              "var_b": "node:noise-1",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-0",
+              "var_b": "node:noise-2",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-0",
+              "var_b": "node:noise-3",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-0",
+              "var_b": "node:noise-4",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-0",
+              "var_b": "node:noise-5",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-1",
+              "var_b": "node:noise-2",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-1",
+              "var_b": "node:noise-3",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-1",
+              "var_b": "node:noise-4",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-1",
+              "var_b": "node:noise-5",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-2",
+              "var_b": "node:noise-3",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-2",
+              "var_b": "node:noise-4",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-2",
+              "var_b": "node:noise-5",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-3",
+              "var_b": "node:noise-4",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-3",
+              "var_b": "node:noise-5",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:noise-4",
+              "var_b": "node:noise-5",
+              "coefficient": 0.12,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:seed.core.claim",
+              "var_b": "node:seed.core.source",
+              "coefficient": 0.08499999999999999,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:seed.core.claim",
+              "var_b": "node:seed.core.verification",
+              "coefficient": 0.08499999999999999,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:seed.core.evidence",
+              "var_b": "node:seed.core.claim",
+              "coefficient": 0.08499999999999999,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:seed.core.evidence",
+              "var_b": "node:seed.core.source",
+              "coefficient": 0.08499999999999999,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:seed.core.evidence",
+              "var_b": "node:seed.core.verification",
+              "coefficient": 0.08499999999999999,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "node:seed.core.source",
+              "var_b": "node:seed.core.verification",
+              "coefficient": 0.08499999999999999,
+              "reason": "pairwise_penalty_or_bonus"
+            }
+          ],
+          "constraints": {
+            "max_selected": 12,
+            "min_selected": 1,
+            "group_diversity_key": "source_id",
+            "group_penalty": 0.08,
+            "penalty_weight": 4.0,
+            "energy_convention": "Q-Cortex minimizes QUBO energy. Positive item rewards are represented as negative linear coefficients; risk, contradiction, budget, diversity, and dependency violations are positive penalties."
+          },
+          "metadata": {
+            "max_nodes": 8,
+            "max_edges": 4
+          }
+        },
+        "solution": {
+          "solution_id": "qsol_6b461a796b5ddf6c6c",
+          "problem_id": "qubo_b48e923595415e1884",
+          "selected_variables": [
+            "node:cloud.claim.bundle",
+            "node:cloud.evidence.bundle",
+            "node:cloud.source.bundle",
+            "node:cloud.verification.bundle",
+            "node:seed.core.claim",
+            "node:seed.core.evidence",
+            "node:seed.core.source",
+            "node:seed.core.verification"
+          ],
+          "objective_value": -22.668099999999985,
+          "solver_name": "simulated_annealing",
+          "iterations": 1200,
+          "temperature_schedule": [
+            2.0,
+            1.698331,
+            1.442164,
+            1.224637,
+            1.039919,
+            0.883064,
+            0.749867,
+            0.636762,
+            0.540716,
+            0.459157,
+            0.389901,
+            0.33109,
+            0.28115,
+            0.238743,
+            0.202733,
+            0.172154,
+            0.146187,
+            0.124137,
+            0.105413,
+            0.089513,
+            0.076011,
+            0.064546,
+            0.05481,
+            0.046543,
+            0.039523,
+            0.033561,
+            0.028499,
+            0.024201,
+            0.02055,
+            0.017451,
+            0.014818,
+            0.012583,
+            0.010685
+          ],
+          "seed": 101,
+          "runtime_ms": 7.083399978000671,
+          "trace": {
+            "accepted_moves": 86,
+            "rejected_moves": 1114,
+            "best_energy_by_iteration": [
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985,
+              -22.668099999999985
+            ],
+            "selected_count": 8,
+            "constraint_penalties": {
+              "group_diversity": 1.44
+            },
+            "greedy_baseline": {
+              "solution_id": "qsol_068bb04b0f18e32e53",
+              "problem_id": "qubo_b48e923595415e1884",
+              "selected_variables": [
+                "node:cloud.claim.bundle",
+                "node:cloud.evidence.bundle",
+                "node:cloud.source.bundle",
+                "node:cloud.verification.bundle",
+                "node:seed.core.claim",
+                "node:seed.core.evidence",
+                "node:seed.core.source",
+                "node:seed.core.verification"
+              ],
+              "objective_value": -22.668099999999985,
+              "solver_name": "greedy_baseline",
+              "iterations": 9,
+              "temperature_schedule": [],
+              "seed": 101,
+              "runtime_ms": 0.48129999777302146,
+              "trace": {
+                "selected_count": 8,
+                "constraint_penalties": {
+                  "group_diversity": 1.44
+                },
+                "best_energy_by_iteration": [
+                  -22.668099999999985
+                ]
+              }
+            }
+          }
+        },
+        "greedy_baseline_objective": -22.668099999999985,
+        "baseline_delta": 0.0
+      }
+    },
+    "evidence": {
+      "run_id": "qco_evi_1ed21ba303a66845a1",
+      "problem_type": "evidence_consistency",
+      "solver_name": "simulated_annealing",
+      "input_count": 5,
+      "selected_count": 3,
+      "objective_value": -8.634300000000001,
+      "selected_items": [
+        {
+          "id": "ev-support-main",
+          "claim_id": "claim-001",
+          "source_id": "paper-a",
+          "relation": "supports",
+          "trust": 0.92,
+          "recency": 0.8,
+          "specificity": 0.86,
+          "source_reputation": 0.9,
+          "independence": 0.9,
+          "conflicts_with": [
+            "ev-contradict-weak"
+          ],
+          "duplicates": [],
+          "seed_aligned": true
+        },
+        {
+          "id": "ev-support-independent",
+          "claim_id": "claim-001",
+          "source_id": "paper-b",
+          "relation": "supports",
+          "trust": 0.82,
+          "recency": 0.72,
+          "specificity": 0.74,
+          "source_reputation": 0.86,
+          "independence": 0.95,
+          "conflicts_with": [],
+          "duplicates": [],
+          "seed_aligned": true
+        },
+        {
+          "id": "ev-duplicate",
+          "claim_id": "claim-001",
+          "source_id": "paper-a",
+          "relation": "supports",
+          "trust": 0.74,
+          "recency": 0.7,
+          "specificity": 0.62,
+          "source_reputation": 0.84,
+          "independence": 0.2,
+          "conflicts_with": [],
+          "duplicates": [
+            "ev-support-main"
+          ],
+          "seed_aligned": true
+        }
+      ],
+      "rejected_items": [
+        {
+          "id": "ev-contradict-weak",
+          "claim_id": "claim-001",
+          "source_id": "blog-x",
+          "relation": "contradicts",
+          "trust": 0.22,
+          "recency": 0.55,
+          "specificity": 0.25,
+          "source_reputation": 0.18,
+          "independence": 0.4,
+          "conflicts_with": [
+            "ev-support-main"
+          ],
+          "duplicates": [],
+          "seed_aligned": false,
+          "reject_reason": "conflicts_with_selected"
+        },
+        {
+          "id": "ev-unknown",
+          "claim_id": "claim-001",
+          "source_id": "unknown",
+          "relation": "unknown",
+          "trust": 0.18,
+          "recency": 0.3,
+          "specificity": 0.2,
+          "source_reputation": 0.1,
+          "independence": 0.1,
+          "conflicts_with": [],
+          "duplicates": [],
+          "seed_aligned": false,
+          "reject_reason": "lower_consistency"
+        }
+      ],
+      "honesty": {
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "local_brain_write": false,
+        "external_llm_used": false,
+        "external_sllm_used": false
+      },
+      "trace": {
+        "claim_id": "claim-001",
+        "problem": {
+          "problem_id": "qubo_47c09d2671c6dc3904",
+          "problem_type": "evidence_consistency",
+          "variables": [
+            {
+              "name": "evidence:ev-support-main",
+              "kind": "evidence",
+              "ref_id": "ev-support-main",
+              "metadata": {
+                "id": "ev-support-main",
+                "claim_id": "claim-001",
+                "source_id": "paper-a",
+                "relation": "supports",
+                "trust": 0.92,
+                "recency": 0.8,
+                "specificity": 0.86,
+                "source_reputation": 0.9,
+                "independence": 0.9,
+                "conflicts_with": [
+                  "ev-contradict-weak"
+                ],
+                "duplicates": [],
+                "seed_aligned": true
+              }
+            },
+            {
+              "name": "evidence:ev-support-independent",
+              "kind": "evidence",
+              "ref_id": "ev-support-independent",
+              "metadata": {
+                "id": "ev-support-independent",
+                "claim_id": "claim-001",
+                "source_id": "paper-b",
+                "relation": "supports",
+                "trust": 0.82,
+                "recency": 0.72,
+                "specificity": 0.74,
+                "source_reputation": 0.86,
+                "independence": 0.95,
+                "conflicts_with": [],
+                "duplicates": [],
+                "seed_aligned": true
+              }
+            },
+            {
+              "name": "evidence:ev-duplicate",
+              "kind": "evidence",
+              "ref_id": "ev-duplicate",
+              "metadata": {
+                "id": "ev-duplicate",
+                "claim_id": "claim-001",
+                "source_id": "paper-a",
+                "relation": "supports",
+                "trust": 0.74,
+                "recency": 0.7,
+                "specificity": 0.62,
+                "source_reputation": 0.84,
+                "independence": 0.2,
+                "conflicts_with": [],
+                "duplicates": [
+                  "ev-support-main"
+                ],
+                "seed_aligned": true
+              }
+            },
+            {
+              "name": "evidence:ev-contradict-weak",
+              "kind": "evidence",
+              "ref_id": "ev-contradict-weak",
+              "metadata": {
+                "id": "ev-contradict-weak",
+                "claim_id": "claim-001",
+                "source_id": "blog-x",
+                "relation": "contradicts",
+                "trust": 0.22,
+                "recency": 0.55,
+                "specificity": 0.25,
+                "source_reputation": 0.18,
+                "independence": 0.4,
+                "conflicts_with": [
+                  "ev-support-main"
+                ],
+                "duplicates": [],
+                "seed_aligned": false
+              }
+            },
+            {
+              "name": "evidence:ev-unknown",
+              "kind": "evidence",
+              "ref_id": "ev-unknown",
+              "metadata": {
+                "id": "ev-unknown",
+                "claim_id": "claim-001",
+                "source_id": "unknown",
+                "relation": "unknown",
+                "trust": 0.18,
+                "recency": 0.3,
+                "specificity": 0.2,
+                "source_reputation": 0.1,
+                "independence": 0.1,
+                "conflicts_with": [],
+                "duplicates": [],
+                "seed_aligned": false
+              }
+            }
+          ],
+          "linear_terms": [
+            {
+              "var_a": "evidence:ev-contradict-weak",
+              "var_b": null,
+              "coefficient": -1.1059999999999999,
+              "reason": "reward"
+            },
+            {
+              "var_a": "evidence:ev-duplicate",
+              "var_b": null,
+              "coefficient": -3.0064,
+              "reason": "reward"
+            },
+            {
+              "var_a": "evidence:ev-support-independent",
+              "var_b": null,
+              "coefficient": -3.7786999999999997,
+              "reason": "reward"
+            },
+            {
+              "var_a": "evidence:ev-support-main",
+              "var_b": null,
+              "coefficient": -4.0192,
+              "reason": "reward"
+            },
+            {
+              "var_a": "evidence:ev-unknown",
+              "var_b": null,
+              "coefficient": -0.4759999999999999,
+              "reason": "reward"
+            }
+          ],
+          "quadratic_terms": [
+            {
+              "var_a": "evidence:ev-duplicate",
+              "var_b": "evidence:ev-contradict-weak",
+              "coefficient": 0.75,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "evidence:ev-support-independent",
+              "var_b": "evidence:ev-contradict-weak",
+              "coefficient": 0.75,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "evidence:ev-support-main",
+              "var_b": "evidence:ev-contradict-weak",
+              "coefficient": 4.25,
+              "reason": "pairwise_penalty_or_bonus"
+            },
+            {
+              "var_a": "evidence:ev-support-main",
+              "var_b": "evidence:ev-duplicate",
+              "coefficient": 2.05,
+              "reason": "pairwise_penalty_or_bonus"
+            }
+          ],
+          "constraints": {
+            "max_selected": 3,
+            "min_selected": 1,
+            "group_diversity_key": "source_id",
+            "group_penalty": 0.12,
+            "penalty_weight": 4.0,
+            "energy_convention": "Q-Cortex minimizes QUBO energy. Positive item rewards are represented as negative linear coefficients; risk, contradiction, budget, diversity, and dependency violations are positive penalties."
+          },
+          "metadata": {
+            "claim_id": "claim-001"
+          }
+        },
+        "solution": {
+          "solution_id": "qsol_267d8249acb1d8d23f",
+          "problem_id": "qubo_47c09d2671c6dc3904",
+          "selected_variables": [
+            "evidence:ev-duplicate",
+            "evidence:ev-support-independent",
+            "evidence:ev-support-main"
+          ],
+          "objective_value": -8.634300000000001,
+          "solver_name": "simulated_annealing",
+          "iterations": 1400,
+          "temperature_schedule": [
+            2.0,
+            1.699437,
+            1.444042,
+            1.227029,
+            1.042629,
+            0.885941,
+            0.752801,
+            0.639668,
+            0.543538,
+            0.461854,
+            0.392446,
+            0.333469,
+            0.283354,
+            0.240771,
+            0.204588,
+            0.173842,
+            0.147717,
+            0.125518,
+            0.106655,
+            0.090626,
+            0.077007,
+            0.065434,
+            0.055601,
+            0.047245,
+            0.040145,
+            0.034112,
+            0.028985,
+            0.024629,
+            0.020928,
+            0.017783,
+            0.015111,
+            0.01284,
+            0.01091
+          ],
+          "seed": 102,
+          "runtime_ms": 4.422200028784573,
+          "trace": {
+            "accepted_moves": 94,
+            "rejected_moves": 1306,
+            "best_energy_by_iteration": [
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001,
+              -8.634300000000001
+            ],
+            "selected_count": 3,
+            "constraint_penalties": {
+              "group_diversity": 0.12
+            },
+            "greedy_baseline": {
+              "solution_id": "qsol_4e49d3e8b66c9033c3",
+              "problem_id": "qubo_47c09d2671c6dc3904",
+              "selected_variables": [
+                "evidence:ev-duplicate",
+                "evidence:ev-support-independent",
+                "evidence:ev-support-main"
+              ],
+              "objective_value": -8.634300000000001,
+              "solver_name": "greedy_baseline",
+              "iterations": 4,
+              "temperature_schedule": [],
+              "seed": 102,
+              "runtime_ms": 0.05860003875568509,
+              "trace": {
+                "selected_count": 3,
+                "constraint_penalties": {
+                  "group_diversity": 0.12
+                },
+                "best_energy_by_iteration": [
+                  -8.634300000000001
+                ]
+              }
+            }
+          }
+        },
+        "greedy_baseline_objective": -8.634300000000001,
+        "baseline_delta": 0.0,
+        "consistency_score": 0.92,
+        "contradiction_score": 0.0,
+        "source_diversity_score": 0.6667,
+        "verification_route": "evidence_backed",
+        "known_ids": [
+          "ev-contradict-weak",
+          "ev-duplicate",
+          "ev-support-independent",
+          "ev-support-main",
+          "ev-unknown"
+        ]
+      }
+    },
+    "creative": {
+      "run_id": "qco_cre_dd8021576d5f965a2e",
+      "problem_type": "creative_sampling",
+      "solver_name": "simulated_annealing",
+      "input_count": 6,
+      "selected_count": 4,
+      "objective_value": -11.258500000000002,
+      "selected_items": [
+        {
+          "id": "mobile-hippocampus",
+          "nodes": [
+            "mobile",
+            "working_memory"
+          ],
+          "edges": [
+            "compresses"
+          ],
+          "domains": [
+            "mobile",
+            "memory"
+          ],
+          "distance": 0.62,
+          "novelty": 0.74,
+          "usefulness": 0.86,
+          "feasibility": 0.76,
+          "atanor_fit": 0.88,
+          "risk": 0.32,
+          "cost": 0.38,
+          "source_trace": [
+            "cortex_g2"
+          ],
+          "is_fact_claim": false,
+          "critic_score": 0.6959,
+          "stored_as_truth": false,
+          "stored_as_idea_candidate": true
+        },
+        {
+          "id": "contributor-network",
+          "nodes": [
+            "peer",
+            "public_fragment"
+          ],
+          "edges": [
+            "validates"
+          ],
+          "domains": [
+            "network",
+            "verification"
+          ],
+          "distance": 0.48,
+          "novelty": 0.68,
+          "usefulness": 0.92,
+          "feasibility": 0.72,
+          "atanor_fit": 0.9,
+          "risk": 0.38,
+          "cost": 0.52,
+          "source_trace": [
+            "cloud_brain"
+          ],
+          "is_fact_claim": false,
+          "critic_score": 0.6428,
+          "stored_as_truth": false,
+          "stored_as_idea_candidate": true
+        },
+        {
+          "id": "quantum-inspired-optimization",
+          "nodes": [
+            "qubo",
+            "salience"
+          ],
+          "edges": [
+            "routes"
+          ],
+          "domains": [
+            "optimization",
+            "cortex"
+          ],
+          "distance": 0.7,
+          "novelty": 0.88,
+          "usefulness": 0.84,
+          "feasibility": 0.82,
+          "atanor_fit": 0.94,
+          "risk": 0.25,
+          "cost": 0.42,
+          "source_trace": [
+            "q_cortex"
+          ],
+          "is_fact_claim": false,
+          "critic_score": 0.7698,
+          "stored_as_truth": false,
+          "stored_as_idea_candidate": true
+        },
+        {
+          "id": "privacy-gate",
+          "nodes": [
+            "vault",
+            "policy"
+          ],
+          "edges": [
+            "filters"
+          ],
+          "domains": [
+            "privacy",
+            "security"
+          ],
+          "distance": 0.36,
+          "novelty": 0.58,
+          "usefulness": 0.9,
+          "feasibility": 0.86,
+          "atanor_fit": 0.93,
+          "risk": 0.22,
+          "cost": 0.25,
+          "source_trace": [
+            "payload_vault"
+          ],
+          "is_fact_claim": false,
+          "critic_score": 0.7061,
+          "stored_as_truth": false,
+          "stored_as_idea_candidate": true
+        }
+      ],
+      "rejected_items": [
+        {
+          "id": "smart-glasses-cortex",
+          "nodes": [
+            "sensory",
+            "atlas"
+          ],
+          "edges": [
+            "streams"
+          ],
+          "domains": [
+            "wearable",
+            "sensor"
+          ],
+          "distance": 0.9,
+          "novelty": 0.92,
+          "usefulness": 0.64,
+          "feasibility": 0.34,
+          "atanor_fit": 0.7,
+          "risk": 0.78,
+          "cost": 0.86,
+          "source_trace": [
+            "roadmap"
+          ],
+          "is_fact_claim": false,
+          "critic_score": 0.4218,
+          "stored_as_truth": false,
+          "stored_as_idea_candidate": true,
+          "reject_reason": "lower_candidate_score"
+        },
+        {
+          "id": "unsupported-magic-claim",
+          "nodes": [
+            "quantum",
+            "mind"
+          ],
+          "edges": [
+            "proves"
+          ],
+          "domains": [
+            "speculative"
+          ],
+          "distance": 0.98,
+          "novelty": 0.99,
+          "usefulness": 0.1,
+          "feasibility": 0.02,
+          "atanor_fit": 0.05,
+          "risk": 0.96,
+          "cost": 0.9,
+          "source_trace": [],
+          "is_fact_claim": true,
+          "critic_score": 0.0,
+          "stored_as_truth": false,
+          "stored_as_idea_candidate": true,
+          "reject_reason": "fact_claim_not_allowed"
+        }
+      ],
+      "honesty": {
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "local_brain_write": false,
+        "external_llm_used": false,
+        "external_sllm_used": false
+      },
+      "trace": {
+        "mode": "far_walk",
+        "problem": {
+          "problem_id": "qubo_606bc644c560fe8eed",
+          "problem_type": "creative_sampling",
+          "variables": [
+            {
+              "name": "path:mobile-hippocampus",
+              "kind": "creative_path",
+              "ref_id": "mobile-hippocampus",
+              "metadata": {
+                "id": "mobile-hippocampus",
+                "nodes": [
+                  "mobile",
+                  "working_memory"
+                ],
+                "edges": [
+                  "compresses"
+                ],
+                "domains": [
+                  "mobile",
+                  "memory"
+                ],
+                "distance": 0.62,
+                "novelty": 0.74,
+                "usefulness": 0.86,
+                "feasibility": 0.76,
+                "atanor_fit": 0.88,
+                "risk": 0.32,
+                "cost": 0.38,
+                "source_trace": [
+                  "cortex_g2"
+                ],
+                "is_fact_claim": false
+              }
+            },
+            {
+              "name": "path:smart-glasses-cortex",
+              "kind": "creative_path",
+              "ref_id": "smart-glasses-cortex",
+              "metadata": {
+                "id": "smart-glasses-cortex",
+                "nodes": [
+                  "sensory",
+                  "atlas"
+                ],
+                "edges": [
+                  "streams"
+                ],
+                "domains": [
+                  "wearable",
+                  "sensor"
+                ],
+                "distance": 0.9,
+                "novelty": 0.92,
+                "usefulness": 0.64,
+                "feasibility": 0.34,
+                "atanor_fit": 0.7,
+                "risk": 0.78,
+                "cost": 0.86,
+                "source_trace": [
+                  "roadmap"
+                ],
+                "is_fact_claim": false
+              }
+            },
+            {
+              "name": "path:contributor-network",
+              "kind": "creative_path",
+              "ref_id": "contributor-network",
+              "metadata": {
+                "id": "contributor-network",
+                "nodes": [
+                  "peer",
+                  "public_fragment"
+                ],
+                "edges": [
+                  "validates"
+                ],
+                "domains": [
+                  "network",
+                  "verification"
+                ],
+                "distance": 0.48,
+                "novelty": 0.68,
+                "usefulness": 0.92,
+                "feasibility": 0.72,
+                "atanor_fit": 0.9,
+                "risk": 0.38,
+                "cost": 0.52,
+                "source_trace": [
+                  "cloud_brain"
+                ],
+                "is_fact_claim": false
+              }
+            },
+            {
+              "name": "path:quantum-inspired-optimization",
+              "kind": "creative_path",
+              "ref_id": "quantum-inspired-optimization",
+              "metadata": {
+                "id": "quantum-inspired-optimization",
+                "nodes": [
+                  "qubo",
+                  "salience"
+                ],
+                "edges": [
+                  "routes"
+                ],
+                "domains": [
+                  "optimization",
+                  "cortex"
+                ],
+                "distance": 0.7,
+                "novelty": 0.88,
+                "usefulness": 0.84,
+                "feasibility": 0.82,
+                "atanor_fit": 0.94,
+                "risk": 0.25,
+                "cost": 0.42,
+                "source_trace": [
+                  "q_cortex"
+                ],
+                "is_fact_claim": false
+              }
+            },
+            {
+              "name": "path:privacy-gate",
+              "kind": "creative_path",
+              "ref_id": "privacy-gate",
+              "metadata": {
+                "id": "privacy-gate",
+                "nodes": [
+                  "vault",
+                  "policy"
+                ],
+                "edges": [
+                  "filters"
+                ],
+                "domains": [
+                  "privacy",
+                  "security"
+                ],
+                "distance": 0.36,
+                "novelty": 0.58,
+                "usefulness": 0.9,
+                "feasibility": 0.86,
+                "atanor_fit": 0.93,
+                "risk": 0.22,
+                "cost": 0.25,
+                "source_trace": [
+                  "payload_vault"
+                ],
+                "is_fact_claim": false
+              }
+            },
+            {
+              "name": "path:unsupported-magic-claim",
+              "kind": "creative_path",
+              "ref_id": "unsupported-magic-claim",
+              "metadata": {
+                "id": "unsupported-magic-claim",
+                "nodes": [
+                  "quantum",
+                  "mind"
+                ],
+                "edges": [
+                  "proves"
+                ],
+                "domains": [
+                  "speculative"
+                ],
+                "distance": 0.98,
+                "novelty": 0.99,
+                "usefulness": 0.1,
+                "feasibility": 0.02,
+                "atanor_fit": 0.05,
+                "risk": 0.96,
+                "cost": 0.9,
+                "source_trace": [],
+                "is_fact_claim": true
+              }
+            }
+          ],
+          "linear_terms": [
+            {
+              "var_a": "path:contributor-network",
+              "var_b": null,
+              "coefficient": -2.5710000000000006,
+              "reason": "reward"
+            },
+            {
+              "var_a": "path:mobile-hippocampus",
+              "var_b": null,
+              "coefficient": -2.7836000000000003,
+              "reason": "reward"
+            },
+            {
+              "var_a": "path:privacy-gate",
+              "var_b": null,
+              "coefficient": -2.8245999999999998,
+              "reason": "reward"
+            },
+            {
+              "var_a": "path:quantum-inspired-optimization",
+              "var_b": null,
+              "coefficient": -3.0793,
+              "reason": "reward"
+            },
+            {
+              "var_a": "path:smart-glasses-cortex",
+              "var_b": null,
+              "coefficient": -1.687,
+              "reason": "reward"
+            },
+            {
+              "var_a": "path:unsupported-magic-claim",
+              "var_b": null,
+              "coefficient": 1.619,
+              "reason": "reward"
+            }
+          ],
+          "quadratic_terms": [],
+          "constraints": {
+            "max_selected": 4,
+            "min_selected": 1,
+            "penalty_weight": 4.0,
+            "energy_convention": "Q-Cortex minimizes QUBO energy. Positive item rewards are represented as negative linear coefficients; risk, contradiction, budget, diversity, and dependency violations are positive penalties."
+          },
+          "metadata": {
+            "prompt": "ATANOR future architecture",
+            "mode": "far_walk"
+          }
+        },
+        "solution": {
+          "solution_id": "qsol_7576cfcbd5dda05dd7",
+          "problem_id": "qubo_606bc644c560fe8eed",
+          "selected_variables": [
+            "path:contributor-network",
+            "path:mobile-hippocampus",
+            "path:privacy-gate",
+            "path:quantum-inspired-optimization"
+          ],
+          "objective_value": -11.258500000000002,
+          "solver_name": "simulated_annealing",
+          "iterations": 1200,
+          "temperature_schedule": [
+            2.0,
+            1.698331,
+            1.442164,
+            1.224637,
+            1.039919,
+            0.883064,
+            0.749867,
+            0.636762,
+            0.540716,
+            0.459157,
+            0.389901,
+            0.33109,
+            0.28115,
+            0.238743,
+            0.202733,
+            0.172154,
+            0.146187,
+            0.124137,
+            0.105413,
+            0.089513,
+            0.076011,
+            0.064546,
+            0.05481,
+            0.046543,
+            0.039523,
+            0.033561,
+            0.028499,
+            0.024201,
+            0.02055,
+            0.017451,
+            0.014818,
+            0.012583,
+            0.010685
+          ],
+          "seed": 103,
+          "runtime_ms": 2.229499979875982,
+          "trace": {
+            "accepted_moves": 46,
+            "rejected_moves": 1154,
+            "best_energy_by_iteration": [
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002,
+              -11.258500000000002
+            ],
+            "selected_count": 4,
+            "constraint_penalties": {},
+            "greedy_baseline": {
+              "solution_id": "qsol_f9ca038d0a93bb0580",
+              "problem_id": "qubo_606bc644c560fe8eed",
+              "selected_variables": [
+                "path:contributor-network",
+                "path:mobile-hippocampus",
+                "path:privacy-gate",
+                "path:quantum-inspired-optimization"
+              ],
+              "objective_value": -11.258500000000002,
+              "solver_name": "greedy_baseline",
+              "iterations": 5,
+              "temperature_schedule": [],
+              "seed": 103,
+              "runtime_ms": 0.04249997437000275,
+              "trace": {
+                "selected_count": 4,
+                "constraint_penalties": {},
+                "best_energy_by_iteration": [
+                  -11.258500000000002
+                ]
+              }
+            }
+          }
+        },
+        "greedy_baseline_objective": -11.258500000000002,
+        "baseline_delta": 0.0,
+        "novelty_score": 0.72,
+        "feasibility_score": 0.79,
+        "diversity_score": 2.0,
+        "stored_as_truth": false,
+        "stored_as_idea_candidate": true
+      }
+    },
+    "planning": {
+      "run_id": "qco_plan_5b9dcdbb0c882a708e",
+      "problem_type": "planning",
+      "solver_name": "simulated_annealing",
+      "input_count": 7,
+      "selected_count": 4,
+      "objective_value": -12.7841,
+      "selected_items": [
+        {
+          "id": "local-brain-ux-latency",
+          "title": "Local Brain UX latency fix",
+          "description": "Make overlay visible before graph payload.",
+          "user_value": 0.95,
+          "technical_proof_value": 0.82,
+          "strategic_value": 0.76,
+          "difficulty": 0.25,
+          "risk": 0.18,
+          "cost_points": 10,
+          "dependencies": [],
+          "conflicts_with": [],
+          "unblocks": [
+            "cortex-panel"
+          ],
+          "time_to_demo": 0.12,
+          "confidence": 0.92
+        },
+        {
+          "id": "remote-broker-verification",
+          "title": "Remote Broker verification",
+          "description": "Prove Cloudflare submit/readback.",
+          "user_value": 0.88,
+          "technical_proof_value": 0.9,
+          "strategic_value": 0.94,
+          "difficulty": 0.52,
+          "risk": 0.42,
+          "cost_points": 28,
+          "dependencies": [],
+          "conflicts_with": [],
+          "unblocks": [
+            "multi-peer-proof"
+          ],
+          "time_to_demo": 0.4,
+          "confidence": 0.72
+        },
+        {
+          "id": "cortex-activation-panel",
+          "title": "CORTEX-G2 activation panel",
+          "description": "Show active/inhibited/prediction traces.",
+          "user_value": 0.84,
+          "technical_proof_value": 0.88,
+          "strategic_value": 0.78,
+          "difficulty": 0.38,
+          "risk": 0.24,
+          "cost_points": 18,
+          "dependencies": [
+            "local-brain-ux-latency"
+          ],
+          "conflicts_with": [],
+          "unblocks": [
+            "q-cortex-salience"
+          ],
+          "time_to_demo": 0.22,
+          "confidence": 0.86
+        },
+        {
+          "id": "q-cortex-salience",
+          "title": "Q-Cortex salience optimizer",
+          "description": "QUBO routing for workspace selection.",
+          "user_value": 0.78,
+          "technical_proof_value": 0.94,
+          "strategic_value": 0.86,
+          "difficulty": 0.44,
+          "risk": 0.3,
+          "cost_points": 24,
+          "dependencies": [
+            "cortex-activation-panel"
+          ],
+          "conflicts_with": [],
+          "unblocks": [
+            "remote-broker-verification"
+          ],
+          "time_to_demo": 0.34,
+          "confidence": 0.82
+        }
+      ],
+      "rejected_items": [
+        {
+          "id": "multi-peer-proof",
+          "title": "multi-peer contributor proof",
+          "description": "Move beyond single local peer.",
+          "user_value": 0.8,
+          "technical_proof_value": 0.9,
+          "strategic_value": 0.92,
+          "difficulty": 0.72,
+          "risk": 0.58,
+          "cost_points": 42,
+          "dependencies": [
+            "remote-broker-verification"
+          ],
+          "conflicts_with": [
+            "mobile-brain-lite"
+          ],
+          "unblocks": [],
+          "time_to_demo": 0.68,
+          "confidence": 0.62,
+          "reject_reason": "dependency_or_ordering"
+        },
+        {
+          "id": "mobile-brain-lite",
+          "title": "mobile brain lite prototype",
+          "description": "Small local viewer/worker.",
+          "user_value": 0.7,
+          "technical_proof_value": 0.65,
+          "strategic_value": 0.78,
+          "difficulty": 0.64,
+          "risk": 0.5,
+          "cost_points": 38,
+          "dependencies": [
+            "remote-broker-verification"
+          ],
+          "conflicts_with": [
+            "multi-peer-proof"
+          ],
+          "unblocks": [],
+          "time_to_demo": 0.62,
+          "confidence": 0.66,
+          "reject_reason": "dependency_or_ordering"
+        },
+        {
+          "id": "smart-glasses-future",
+          "title": "smart glasses future concept",
+          "description": "Future sensory cortex concept.",
+          "user_value": 0.54,
+          "technical_proof_value": 0.38,
+          "strategic_value": 0.68,
+          "difficulty": 0.86,
+          "risk": 0.82,
+          "cost_points": 55,
+          "dependencies": [
+            "mobile-brain-lite"
+          ],
+          "conflicts_with": [],
+          "unblocks": [],
+          "time_to_demo": 0.92,
+          "confidence": 0.34,
+          "reject_reason": "dependency_or_ordering"
+        }
+      ],
+      "honesty": {
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "local_brain_write": false,
+        "external_llm_used": false,
+        "external_sllm_used": false
+      },
+      "trace": {
+        "problem": {
+          "problem_id": "qubo_e0c4f9112eb1fbe3dc",
+          "problem_type": "planning",
+          "variables": [
+            {
+              "name": "step:local-brain-ux-latency",
+              "kind": "plan_step",
+              "ref_id": "local-brain-ux-latency",
+              "metadata": {
+                "id": "local-brain-ux-latency",
+                "title": "Local Brain UX latency fix",
+                "description": "Make overlay visible before graph payload.",
+                "user_value": 0.95,
+                "technical_proof_value": 0.82,
+                "strategic_value": 0.76,
+                "difficulty": 0.25,
+                "risk": 0.18,
+                "cost_points": 10,
+                "dependencies": [],
+                "conflicts_with": [],
+                "unblocks": [
+                  "cortex-panel"
+                ],
+                "time_to_demo": 0.12,
+                "confidence": 0.92
+              }
+            },
+            {
+              "name": "step:cortex-activation-panel",
+              "kind": "plan_step",
+              "ref_id": "cortex-activation-panel",
+              "metadata": {
+                "id": "cortex-activation-panel",
+                "title": "CORTEX-G2 activation panel",
+                "description": "Show active/inhibited/prediction traces.",
+                "user_value": 0.84,
+                "technical_proof_value": 0.88,
+                "strategic_value": 0.78,
+                "difficulty": 0.38,
+                "risk": 0.24,
+                "cost_points": 18,
+                "dependencies": [
+                  "local-brain-ux-latency"
+                ],
+                "conflicts_with": [],
+                "unblocks": [
+                  "q-cortex-salience"
+                ],
+                "time_to_demo": 0.22,
+                "confidence": 0.86
+              }
+            },
+            {
+              "name": "step:q-cortex-salience",
+              "kind": "plan_step",
+              "ref_id": "q-cortex-salience",
+              "metadata": {
+                "id": "q-cortex-salience",
+                "title": "Q-Cortex salience optimizer",
+                "description": "QUBO routing for workspace selection.",
+                "user_value": 0.78,
+                "technical_proof_value": 0.94,
+                "strategic_value": 0.86,
+                "difficulty": 0.44,
+                "risk": 0.3,
+                "cost_points": 24,
+                "dependencies": [
+                  "cortex-activation-panel"
+                ],
+                "conflicts_with": [],
+                "unblocks": [
+                  "remote-broker-verification"
+                ],
+                "time_to_demo": 0.34,
+                "confidence": 0.82
+              }
+            },
+            {
+              "name": "step:remote-broker-verification",
+              "kind": "plan_step",
+              "ref_id": "remote-broker-verification",
+              "metadata": {
+                "id": "remote-broker-verification",
+                "title": "Remote Broker verification",
+                "description": "Prove Cloudflare submit/readback.",
+                "user_value": 0.88,
+                "technical_proof_value": 0.9,
+                "strategic_value": 0.94,
+                "difficulty": 0.52,
+                "risk": 0.42,
+                "cost_points": 28,
+                "dependencies": [],
+                "conflicts_with": [],
+                "unblocks": [
+                  "multi-peer-proof"
+                ],
+                "time_to_demo": 0.4,
+                "confidence": 0.72
+              }
+            },
+            {
+              "name": "step:multi-peer-proof",
+              "kind": "plan_step",
+              "ref_id": "multi-peer-proof",
+              "metadata": {
+                "id": "multi-peer-proof",
+                "title": "multi-peer contributor proof",
+                "description": "Move beyond single local peer.",
+                "user_value": 0.8,
+                "technical_proof_value": 0.9,
+                "strategic_value": 0.92,
+                "difficulty": 0.72,
+                "risk": 0.58,
+                "cost_points": 42,
+                "dependencies": [
+                  "remote-broker-verification"
+                ],
+                "conflicts_with": [
+                  "mobile-brain-lite"
+                ],
+                "unblocks": [],
+                "time_to_demo": 0.68,
+                "confidence": 0.62
+              }
+            },
+            {
+              "name": "step:mobile-brain-lite",
+              "kind": "plan_step",
+              "ref_id": "mobile-brain-lite",
+              "metadata": {
+                "id": "mobile-brain-lite",
+                "title": "mobile brain lite prototype",
+                "description": "Small local viewer/worker.",
+                "user_value": 0.7,
+                "technical_proof_value": 0.65,
+                "strategic_value": 0.78,
+                "difficulty": 0.64,
+                "risk": 0.5,
+                "cost_points": 38,
+                "dependencies": [
+                  "remote-broker-verification"
+                ],
+                "conflicts_with": [
+                  "multi-peer-proof"
+                ],
+                "unblocks": [],
+                "time_to_demo": 0.62,
+                "confidence": 0.66
+              }
+            },
+            {
+              "name": "step:smart-glasses-future",
+              "kind": "plan_step",
+              "ref_id": "smart-glasses-future",
+              "metadata": {
+                "id": "smart-glasses-future",
+                "title": "smart glasses future concept",
+                "description": "Future sensory cortex concept.",
+                "user_value": 0.54,
+                "technical_proof_value": 0.38,
+                "strategic_value": 0.68,
+                "difficulty": 0.86,
+                "risk": 0.82,
+                "cost_points": 55,
+                "dependencies": [
+                  "mobile-brain-lite"
+                ],
+                "conflicts_with": [],
+                "unblocks": [],
+                "time_to_demo": 0.92,
+                "confidence": 0.34
+              }
+            }
+          ],
+          "linear_terms": [
+            {
+              "var_a": "step:cortex-activation-panel",
+              "var_b": null,
+              "coefficient": -3.2314,
+              "reason": "reward"
+            },
+            {
+              "var_a": "step:local-brain-ux-latency",
+              "var_b": null,
+              "coefficient": -3.5971,
+              "reason": "reward"
+            },
+            {
+              "var_a": "step:mobile-brain-lite",
+              "var_b": null,
+              "coefficient": -1.7197000000000002,
+              "reason": "reward"
+            },
+            {
+              "var_a": "step:multi-peer-proof",
+              "var_b": null,
+              "coefficient": -2.0036000000000005,
+              "reason": "reward"
+            },
+            {
+              "var_a": "step:q-cortex-salience",
+              "var_b": null,
+              "coefficient": -3.060600000000001,
+              "reason": "reward"
+            },
+            {
+              "var_a": "step:remote-broker-verification",
+              "var_b": null,
+              "coefficient": -2.895,
+              "reason": "reward"
+            },
+            {
+              "var_a": "step:smart-glasses-future",
+              "var_b": null,
+              "coefficient": -0.14240000000000036,
+              "reason": "reward"
+            }
+          ],
+          "quadratic_terms": [
+            {
+              "var_a": "step:mobile-brain-lite",
+              "var_b": "step:multi-peer-proof",
+              "coefficient": 2.4,
+              "reason": "pairwise_penalty_or_bonus"
+            }
+          ],
+          "constraints": {
+            "max_selected": 4,
+            "min_selected": 1,
+            "budget_points": 80,
+            "budget_penalty": 0.08,
+            "dependencies": {
+              "step:cortex-activation-panel": [
+                "step:local-brain-ux-latency"
+              ],
+              "step:q-cortex-salience": [
+                "step:cortex-activation-panel"
+              ],
+              "step:multi-peer-proof": [
+                "step:remote-broker-verification"
+              ],
+              "step:mobile-brain-lite": [
+                "step:remote-broker-verification"
+              ],
+              "step:smart-glasses-future": [
+                "step:mobile-brain-lite"
+              ]
+            },
+            "dependency_penalty": 2.5,
+            "penalty_weight": 4.0,
+            "energy_convention": "Q-Cortex minimizes QUBO energy. Positive item rewards are represented as negative linear coefficients; risk, contradiction, budget, diversity, and dependency violations are positive penalties."
+          },
+          "metadata": {
+            "budget_points": 80,
+            "max_steps": 4
+          }
+        },
+        "solution": {
+          "solution_id": "qsol_aae4fa2172f17cc9e4",
+          "problem_id": "qubo_e0c4f9112eb1fbe3dc",
+          "selected_variables": [
+            "step:cortex-activation-panel",
+            "step:local-brain-ux-latency",
+            "step:q-cortex-salience",
+            "step:remote-broker-verification"
+          ],
+          "objective_value": -12.7841,
+          "solver_name": "simulated_annealing",
+          "iterations": 1500,
+          "temperature_schedule": [
+            2.0,
+            1.699879,
+            1.444794,
+            1.227988,
+            1.043715,
+            0.887095,
+            0.753977,
+            0.640835,
+            0.544671,
+            0.462937,
+            0.393469,
+            0.334424,
+            0.284241,
+            0.241587,
+            0.205335,
+            0.174522,
+            0.148333,
+            0.126074,
+            0.107155,
+            0.091076,
+            0.077409,
+            0.065793,
+            0.05592,
+            0.047529,
+            0.040396,
+            0.034334,
+            0.029182,
+            0.024803,
+            0.021081,
+            0.017918,
+            0.015229,
+            0.012944,
+            0.011001
+          ],
+          "seed": 104,
+          "runtime_ms": 5.062200012616813,
+          "trace": {
+            "accepted_moves": 14,
+            "rejected_moves": 1486,
+            "best_energy_by_iteration": [
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841,
+              -12.7841
+            ],
+            "selected_count": 4,
+            "constraint_penalties": {},
+            "greedy_baseline": {
+              "solution_id": "qsol_d23f0a17e6f661d0c4",
+              "problem_id": "qubo_e0c4f9112eb1fbe3dc",
+              "selected_variables": [
+                "step:cortex-activation-panel",
+                "step:local-brain-ux-latency",
+                "step:q-cortex-salience",
+                "step:remote-broker-verification"
+              ],
+              "objective_value": -12.7841,
+              "solver_name": "greedy_baseline",
+              "iterations": 5,
+              "temperature_schedule": [],
+              "seed": 104,
+              "runtime_ms": 0.09410001803189516,
+              "trace": {
+                "selected_count": 4,
+                "constraint_penalties": {},
+                "best_energy_by_iteration": [
+                  -12.7841
+                ]
+              }
+            }
+          }
+        },
+        "greedy_baseline_objective": -12.7841,
+        "baseline_delta": 0.0,
+        "budget_used": 80,
+        "risk_score": 0.285,
+        "order_suggestion": [
+          "local-brain-ux-latency",
+          "remote-broker-verification",
+          "cortex-activation-panel",
+          "q-cortex-salience"
+        ],
+        "next_single_recommended_step": {
+          "id": "local-brain-ux-latency",
+          "title": "Local Brain UX latency fix",
+          "description": "Make overlay visible before graph payload.",
+          "user_value": 0.95,
+          "technical_proof_value": 0.82,
+          "strategic_value": 0.76,
+          "difficulty": 0.25,
+          "risk": 0.18,
+          "cost_points": 10,
+          "dependencies": [],
+          "conflicts_with": [],
+          "unblocks": [
+            "cortex-panel"
+          ],
+          "time_to_demo": 0.12,
+          "confidence": 0.92
+        },
+        "autonomous_code_changes": false
+      }
+    }
+  },
+  "claims": [
+    "ATANOR can use quantum-inspired optimization to select better candidate graph circuits.",
+    "Q-Cortex can optimize salience, evidence consistency, creative path sampling, and planning.",
+    "Q-Cortex is classical and local by default.",
+    "Q-Cortex does not write to Local Brain.",
+    "Q-Cortex can fall back to non-quantum heuristic solvers."
+  ],
+  "does_not_claim": [
+    "real quantum hardware usage",
+    "quantum speedup",
+    "consciousness",
+    "human-level reasoning",
+    "LLM replacement",
+    "final answer superiority",
+    "global Cloud Brain",
+    "autonomous self-learning"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "kind_prediction",
+  "surface": [
+    "packages/kind_prediction"
+  ],
+  "eval_entry": "packages.kind_prediction.eval:evaluate",
+  "metrics": [
+    {
+      "name": "coverage",
+      "baseline": 0.261905,
+      "direction": "higher_is_better",
+      "note": "the metric with real headroom"
+    },
+    {
+      "name": "accuracy_on_placed",
+      "baseline": 0.909091,
+      "direction": "higher_is_better",
+      "note": "near ceiling; mainly a guard"
+    },
+    {
+      "name": "abstention_rate",
+      "baseline": 0.738095,
+      "direction": "lower_is_better",
+      "note": "complement of coverage; double entry"
+    },
+    {
+      "name": "correct",
+      "baseline": 20.0,
+      "direction": "higher_is_better",
+      "note": ""
+    },
+    {
+      "name": "wrong",
+      "baseline": 2.0,
+      "direction": "lower_is_better",
+      "note": "REGRESSION GUARD"
+    }
+  ],
+  "surface_hash": "c827db3c660710b586f2d359cca5f086c755ce67d1f8418d7546bfedd882486d",
+  "frozen_at": "2026-07-28T15:52:55+00:00",
+  "rationale": "B = kind_prediction. Selected under the CHANNEL CRITERION that plan v6 §6 made mandatory after the fluency seal was found to have no mechanistic path to the intervention: `evaluate` calls `packages.substrate.decisive_kind` directly, so the channel is the call stack rather than a plausibility argument. It shares the substrate (required, or no transfer is possible) and differs in everything else (required, or it is the same test as A): whole-entity classification against all eight profiled kinds, ground truth taken from the graph's own `is_a` with `is_a` STRIPPED from the input, scored by accuracy and coverage -- where A1c attributes single EDGES of one merged node to the kinds that node declares, has no labels, and is scored per placement. HEADROOM: accuracy_on_placed is 0.909 and near ceiling; COVERAGE at 0.262 is the metric with real room, and it is the one substrate work should move -- a better behaviour representation should let more entities be decided WITHOUT accuracy falling. A coverage rise with accuracy intact is the predicted signature of transfer; a coverage rise with accuracy falling is the gate catching a loosened threshold, which is why both are registered.",
+  "seal": "2a9b8bd6ab9dd75f8a9aa0a5de1d7d16b85e24809e83fd9b7bbc216fd97aa8ee"
+}

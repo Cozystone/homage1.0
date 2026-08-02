@@ -1,0 +1,9 @@
+{
+  "candidate_source_sha256": "ba7d855b6c5abf6b20ca1b8d87fe74a8364cf113ed944c9ab93c1665518b4c96",
+  "designated_local_attempt_claimed": true,
+  "evaluator_source_sha256": "e60b126754d72b76522c1904dfaf7ed80e25031df555ada83d8b34f265ed413d",
+  "run_lease_plan_raw_sha256": "80e0409aca3646d0e7459205f1e00d54562e24ff27fce184af9af90b665a07d4",
+  "schema_version": "atanor.gwip-mechanism-attempt.v1",
+  "seed_manifest_commit": "ebf40a5cfc2f99413c2f276f6365d4409a263807",
+  "seed_manifest_raw_sha256": "2339ad756449602ba0e6d5a3375386423b3b73cbe90bf79ae63410eaa4733110"
+}

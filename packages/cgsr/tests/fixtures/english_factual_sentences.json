@@ -1,0 +1,42 @@
+[
+  {
+    "sentence": "Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.",
+    "expected_subject": "Kubernetes",
+    "expected_predicate": "is",
+    "expected_object": "open-source system",
+    "expected_relation_type": "definition",
+    "expected_no_unsupported_claims": true
+  },
+  {
+    "sentence": "Docker packages applications into containers.",
+    "expected_subject": "Docker",
+    "expected_predicate": "packages",
+    "expected_object": "applications",
+    "expected_relation_type": "svo_fact",
+    "expected_no_unsupported_claims": true
+  },
+  {
+    "sentence": "Spring Boot provides more built-in enterprise conventions than Express.",
+    "expected_subject": "Spring Boot",
+    "expected_predicate": "provides_more_than",
+    "expected_object": "built-in enterprise conventions",
+    "expected_relation_type": "comparison",
+    "expected_no_unsupported_claims": true
+  },
+  {
+    "sentence": "Caching reduces latency by avoiding repeated computation.",
+    "expected_subject": "Caching",
+    "expected_predicate": "reduces",
+    "expected_object": "latency",
+    "expected_relation_type": "cause_effect",
+    "expected_no_unsupported_claims": true
+  },
+  {
+    "sentence": "Python 3.11 introduced performance improvements.",
+    "expected_subject": "Python 3.11",
+    "expected_predicate": "introduced",
+    "expected_object": "performance improvements",
+    "expected_relation_type": "temporal_fact",
+    "expected_no_unsupported_claims": true
+  }
+]

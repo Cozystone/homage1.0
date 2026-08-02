@@ -1,0 +1,57 @@
+{
+  "question": "can knowing you moved separate self-caused change from the world's?",
+  "status": "PARTIAL — works for rotation, not for forward motion",
+  "measured_shift_over_0.45s": {
+    "capture_1_mouse260_per_50ms": {
+      "still": 0.0,
+      "travel": 0.01,
+      "turn_left": 0.02,
+      "turn_right": 0.01
+    },
+    "capture_2_mouse45_per_100ms": {
+      "still": -0.0,
+      "travel": -0.04,
+      "turn_left": 0.07,
+      "turn_right": -0.02
+    },
+    "note": "turn_left and turn_right should be large and opposite; phase-correlation confidence during turns 0.25-0.29 vs 0.998 standing still"
+  },
+  "why": "the camera spins far enough in 0.45s (~200 mouse counts) that the two views are unrelated; no shift model bridges unrelated images",
+  "calibration_behaviour": "honest — it reports gain 0 (cancelling does not help) rather than pretending; the one nonzero gain (mouse+x 8.0, top of grid) made the residual worse, 0.0217 -> 0.0247",
+  "boundary_scores_both_captures": "1.5x chance, unchanged by compensation",
+  "eye_defect_found": "85% of frames the eye reported FRESH were pixel-identical duplicates (21,156 of ~24,800). Desktop Duplication reports desktop change, not window change. Every frame rate quoted through that flag this session is inflated.",
+  "next": "capture with total rotation per sample interval small enough to stay the same scene (order 10-20 mouse counts per 0.45s), then re-run",
+  "clear_capture": {
+    "footage": "clear_170306: 5,166 usable frames, 183s, 51 recorded boundaries; 32,378 frames dropped as OCCLUDED and 14,718 as duplicates — the earlier captures had no such filter",
+    "trackability": "turn_left +0.62px, turn_right -0.71px (large and OPPOSITE), confidence 0.85; travel -0.04 at confidence 0.463 (expansion, as expected); still 0.00",
+    "gains_found_by_trying": {
+      "mouse+x": 1.0,
+      "mouse-x": 0.5,
+      "w": 0.0
+    },
+    "apparent_world_change_reattributed_to_self": {
+      "mouse+x": "12.9%",
+      "mouse-x": "7.1%",
+      "w": "0.0%"
+    },
+    "boundary_detection": {
+      "one_eye_body_ignored": {
+        "recall": 0.5,
+        "chance": 0.311,
+        "ratio": 1.6,
+        "found": 29,
+        "p": 0.005
+      },
+      "one_eye_with_body": {
+        "recall": 0.286,
+        "chance": 0.129,
+        "ratio": 2.2,
+        "found": 11,
+        "p": 0.005
+      }
+    },
+    "verdict": "the body input raises signal-to-chance 1.6x -> 2.2x (+38%) while suppressing recall. Real but modest, and the first time it has helped on real footage.",
+    "why_travel_fails": "a shift model represents rotation; forward motion is radial expansion and the crude scale approximation (1 + 0.01*div*g) does not capture it — the calibrator honestly returns gain 0 rather than pretending"
+  },
+  "supersedes": "the earlier UNTESTED verdict; all four prior captures were occluded and are withdrawn"
+}

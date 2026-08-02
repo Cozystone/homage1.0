@@ -1,0 +1,31 @@
+{
+  "name": "realcity",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "verify:realcity": "node scripts/verify-realcity.mjs",
+    "verify:road-minimap": "node scripts/verify-road-minimap.mjs",
+    "verify:production": "node scripts/verify-production.mjs",
+    "assets:sketchfab": "node scripts/fetch-sketchfab-assets.mjs"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.19.3",
+    "@react-three/drei": "^9.116.4",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/postprocessing": "^2.16.3",
+    "maplibre-gl": "^5.6.0",
+    "postprocessing": "^6.36.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.175.0",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "playwright-core": "^1.60.0",
+    "vite": "^6.3.2"
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "version": "science-staging-e4-holdout-v1",
+  "schema_version": 1,
+  "classification": "frozen_development_probe_not_e5",
+  "frozen_at": "2026-07-25",
+  "purpose": "Bounded E4 conformance and paired OFF/ON development probe for an NL-to-goal atomic-number surface backed only by provenance-bound staged facts.",
+  "claims": {
+    "e4_only": true,
+    "e5_eligible": false,
+    "benchmark_capability_claimed": false,
+    "independent_evaluator_claimed": false
+  },
+  "anti_contamination": {
+    "benchmark_items_copied": false,
+    "construction": "Questions are authored from general periodic-table facts selected before the candidate compiler and staging adapter implementation.",
+    "gold_source": "Each gold value is the object of its cited Wikidata P1086 statement; no benchmark answer key is a source."
+  },
+  "declared_supported_nl_surfaces": [
+    {
+      "surface_id": "atomic_number_what_is",
+      "template": "What is the atomic number of {element}?",
+      "goal_family": "atomic_number_lookup",
+      "predicate": "atomic_number",
+      "answer_kind": "exact_integer_mcq"
+    },
+    {
+      "surface_id": "atomic_number_which_number",
+      "template": "Which number is the atomic number of {element}?",
+      "goal_family": "atomic_number_lookup",
+      "predicate": "atomic_number",
+      "answer_kind": "exact_integer_mcq"
+    },
+    {
+      "surface_id": "atomic_number_has_which",
+      "template": "{element} has which atomic number?",
+      "goal_family": "atomic_number_lookup",
+      "predicate": "atomic_number",
+      "answer_kind": "exact_integer_mcq"
+    },
+    {
+      "surface_id": "atomic_number_select",
+      "template": "Select the atomic number of {element}.",
+      "goal_family": "atomic_number_lookup",
+      "predicate": "atomic_number",
+      "answer_kind": "exact_integer_mcq"
+    }
+  ],
+  "paired_protocol": {
+    "off_condition": "NL compiler enabled; science staging unavailable; no fallback and no guessing.",
+    "on_condition": "Same compiler, items, order, and choices; only the validated facts in staged_facts are available.",
+    "strict_denominator": 15,
+    "denominator_shrinking_allowed": false,
+    "required_separate_metrics": [
+      "input_valid_rate",
+      "compiler_conformance_rate",
+      "engine_firing_rate",
+      "grounded_coverage",
+      "strict_accuracy",
+      "wrong_fire_rate",
+      "abstention_rate"
+    ]
+  },
+  "staged_facts": [
+    {
+      "fact_id": "wd-q556-p1086-r2521229606",
+      "triple": ["hydrogen", "atomic_number", "1"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q556.json?revision=2521229606",
+      "source_record_id": "Q556$278dbe7e-4d47-037c-1585-23539dc33b25",
+      "source_revision": "2521229606",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q560-p1086-r2518380445",
+      "triple": ["helium", "atomic_number", "2"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q560.json?revision=2518380445",
+      "source_record_id": "Q560$68a98c31-4d5d-5c1c-177c-7baf2cdd9717",
+      "source_revision": "2518380445",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q568-p1086-r2517836725",
+      "triple": ["lithium", "atomic_number", "3"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q568.json?revision=2517836725",
+      "source_record_id": "Q568$be387351-4fa0-9c91-d2bf-f7a7ef99f8bd",
+      "source_revision": "2517836725",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q623-p1086-r2521230059",
+      "triple": ["carbon", "atomic_number", "6"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q623.json?revision=2521230059",
+      "source_record_id": "Q623$eee42e14-46e0-c18c-76e3-af9b87475c7d",
+      "source_revision": "2521230059",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q627-p1086-r2521208342",
+      "triple": ["nitrogen", "atomic_number", "7"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q627.json?revision=2521208342",
+      "source_record_id": "Q627$bf6a9b9d-4d3a-d672-b710-64634093184b",
+      "source_revision": "2521208342",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q629-p1086-r2521216193",
+      "triple": ["oxygen", "atomic_number", "8"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q629.json?revision=2521216193",
+      "source_record_id": "Q629$8c7e2f77-4958-d66e-78eb-b27412728593",
+      "source_revision": "2521216193",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q654-p1086-r2518382882",
+      "triple": ["neon", "atomic_number", "10"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q654.json?revision=2518382882",
+      "source_record_id": "Q654$c4bf9de6-41db-ab26-9923-a8b3a8337ed0",
+      "source_revision": "2518382882",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q658-p1086-r2518383077",
+      "triple": ["sodium", "atomic_number", "11"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q658.json?revision=2518383077",
+      "source_record_id": "Q658$52b954a9-4689-e382-07ba-7abc101c533b",
+      "source_revision": "2518383077",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q670-p1086-r2518383795",
+      "triple": ["silicon", "atomic_number", "14"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q670.json?revision=2518383795",
+      "source_record_id": "Q670$c5247e3e-4aed-5607-5337-c91821100d34",
+      "source_revision": "2518383795",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q688-p1086-r2518776957",
+      "triple": ["chlorine", "atomic_number", "17"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q688.json?revision=2518776957",
+      "source_record_id": "Q688$5a1a8442-419c-cc5a-db82-efdf3af5ac16",
+      "source_revision": "2518776957",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q677-p1086-r2522227069",
+      "triple": ["iron", "atomic_number", "26"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q677.json?revision=2522227069",
+      "source_record_id": "Q677$c3a0a57c-44d0-21b2-5583-ad892d797824",
+      "source_revision": "2522227069",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q753-p1086-r2522228856",
+      "triple": ["copper", "atomic_number", "29"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q753.json?revision=2522228856",
+      "source_record_id": "Q753$4b7c3d50-4c8e-28a1-a0f9-0c97a4fefa1b",
+      "source_revision": "2522228856",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q1090-p1086-r2522226969",
+      "triple": ["silver", "atomic_number", "47"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q1090.json?revision=2522226969",
+      "source_record_id": "Q1090$9dfe8b36-4e58-7273-8291-cfda5c015d55",
+      "source_revision": "2522226969",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q897-p1086-r2521623516",
+      "triple": ["gold", "atomic_number", "79"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q897.json?revision=2521623516",
+      "source_record_id": "Q897$441a3101-44ac-368f-93e5-e67322e7ea31",
+      "source_revision": "2521623516",
+      "license": "CC0-1.0"
+    },
+    {
+      "fact_id": "wd-q1098-p1086-r2517840014",
+      "triple": ["uranium", "atomic_number", "92"],
+      "object_kind": "integer",
+      "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q1098.json?revision=2517840014",
+      "source_record_id": "Q1098$31e7aa8c-418f-ea6e-ae7e-54346e3aff04",
+      "source_revision": "2517840014",
+      "license": "CC0-1.0"
+    }
+  ],
+  "paired_items": [
+    {
+      "id": "science-e4-atomic-001",
+      "surface_id": "atomic_number_what_is",
+      "question": "What is the atomic number of hydrogen?",
+      "choices": {"A": "1", "B": "2", "C": "8", "D": "10"},
+      "gold": "A",
+      "gold_value": "1",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "A", "evidence_fact_ids": ["wd-q556-p1086-r2521229606"]}
+    },
+    {
+      "id": "science-e4-atomic-002",
+      "surface_id": "atomic_number_which_number",
+      "question": "Which number is the atomic number of helium?",
+      "choices": {"A": "4", "B": "2", "C": "6", "D": "10"},
+      "gold": "B",
+      "gold_value": "2",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "B", "evidence_fact_ids": ["wd-q560-p1086-r2518380445"]}
+    },
+    {
+      "id": "science-e4-atomic-003",
+      "surface_id": "atomic_number_has_which",
+      "question": "Lithium has which atomic number?",
+      "choices": {"A": "1", "B": "6", "C": "3", "D": "8"},
+      "gold": "C",
+      "gold_value": "3",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "C", "evidence_fact_ids": ["wd-q568-p1086-r2517836725"]}
+    },
+    {
+      "id": "science-e4-atomic-004",
+      "surface_id": "atomic_number_select",
+      "question": "Select the atomic number of carbon.",
+      "choices": {"A": "8", "B": "14", "C": "12", "D": "6"},
+      "gold": "D",
+      "gold_value": "6",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "D", "evidence_fact_ids": ["wd-q623-p1086-r2521230059"]}
+    },
+    {
+      "id": "science-e4-atomic-005",
+      "surface_id": "atomic_number_what_is",
+      "question": "What is the atomic number of nitrogen?",
+      "choices": {"A": "7", "B": "8", "C": "5", "D": "14"},
+      "gold": "A",
+      "gold_value": "7",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "A", "evidence_fact_ids": ["wd-q627-p1086-r2521208342"]}
+    },
+    {
+      "id": "science-e4-atomic-006",
+      "surface_id": "atomic_number_which_number",
+      "question": "Which number is the atomic number of oxygen?",
+      "choices": {"A": "6", "B": "10", "C": "8", "D": "16"},
+      "gold": "C",
+      "gold_value": "8",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "C", "evidence_fact_ids": ["wd-q629-p1086-r2521216193"]}
+    },
+    {
+      "id": "science-e4-atomic-007",
+      "surface_id": "atomic_number_has_which",
+      "question": "Neon has which atomic number?",
+      "choices": {"A": "18", "B": "8", "C": "10", "D": "2"},
+      "gold": "C",
+      "gold_value": "10",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "C", "evidence_fact_ids": ["wd-q654-p1086-r2518382882"]}
+    },
+    {
+      "id": "science-e4-atomic-008",
+      "surface_id": "atomic_number_select",
+      "question": "Select the atomic number of sodium.",
+      "choices": {"A": "10", "B": "11", "C": "12", "D": "23"},
+      "gold": "B",
+      "gold_value": "11",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "B", "evidence_fact_ids": ["wd-q658-p1086-r2518383077"]}
+    },
+    {
+      "id": "science-e4-atomic-009",
+      "surface_id": "atomic_number_what_is",
+      "question": "What is the atomic number of silicon?",
+      "choices": {"A": "14", "B": "28", "C": "8", "D": "6"},
+      "gold": "A",
+      "gold_value": "14",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "A", "evidence_fact_ids": ["wd-q670-p1086-r2518383795"]}
+    },
+    {
+      "id": "science-e4-atomic-010",
+      "surface_id": "atomic_number_which_number",
+      "question": "Which number is the atomic number of chlorine?",
+      "choices": {"A": "18", "B": "35", "C": "17", "D": "16"},
+      "gold": "C",
+      "gold_value": "17",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "C", "evidence_fact_ids": ["wd-q688-p1086-r2518776957"]}
+    },
+    {
+      "id": "science-e4-atomic-011",
+      "surface_id": "atomic_number_has_which",
+      "question": "Iron has which atomic number?",
+      "choices": {"A": "29", "B": "26", "C": "56", "D": "24"},
+      "gold": "B",
+      "gold_value": "26",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "B", "evidence_fact_ids": ["wd-q677-p1086-r2522227069"]}
+    },
+    {
+      "id": "science-e4-atomic-012",
+      "surface_id": "atomic_number_select",
+      "question": "Select the atomic number of copper.",
+      "choices": {"A": "47", "B": "28", "C": "26", "D": "29"},
+      "gold": "D",
+      "gold_value": "29",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "D", "evidence_fact_ids": ["wd-q753-p1086-r2522228856"]}
+    },
+    {
+      "id": "science-e4-atomic-013",
+      "surface_id": "atomic_number_what_is",
+      "question": "What is the atomic number of silver?",
+      "choices": {"A": "47", "B": "79", "C": "29", "D": "107"},
+      "gold": "A",
+      "gold_value": "47",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "A", "evidence_fact_ids": ["wd-q1090-p1086-r2522226969"]}
+    },
+    {
+      "id": "science-e4-atomic-014",
+      "surface_id": "atomic_number_which_number",
+      "question": "Which number is the atomic number of gold?",
+      "choices": {"A": "92", "B": "79", "C": "47", "D": "196"},
+      "gold": "B",
+      "gold_value": "79",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "B", "evidence_fact_ids": ["wd-q897-p1086-r2521623516"]}
+    },
+    {
+      "id": "science-e4-atomic-015",
+      "surface_id": "atomic_number_has_which",
+      "question": "Uranium has which atomic number?",
+      "choices": {"A": "92", "B": "238", "C": "79", "D": "82"},
+      "gold": "A",
+      "gold_value": "92",
+      "expected_off": {"compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "required_evidence_unavailable"},
+      "expected_on": {"compiled": true, "engine_fired": true, "grounded": true, "choice_key": "A", "evidence_fact_ids": ["wd-q1098-p1086-r2517840014"]}
+    }
+  ],
+  "negative_controls": [
+    {
+      "id": "science-e4-negative-unsupported-001",
+      "control_type": "unsupported_surface",
+      "question": "What is the boiling point of iron?",
+      "choices": {"A": "1811 K", "B": "3134 K", "C": "26 K", "D": "56 K"},
+      "expected": {"input_valid": true, "compiled": false, "engine_fired": false, "choice_key": null, "reason": "unsupported_goal_family"}
+    },
+    {
+      "id": "science-e4-negative-duplicate-choices-001",
+      "control_type": "ambiguous_duplicate_choices",
+      "question": "What is the atomic number of hydrogen?",
+      "choices": {"A": "1", "B": "1", "C": "2", "D": "8"},
+      "expected": {"input_valid": false, "compiled": false, "engine_fired": false, "choice_key": null, "reason": "duplicate_normalized_choices"}
+    },
+    {
+      "id": "science-e4-negative-unknown-entity-001",
+      "control_type": "unknown_entity",
+      "question": "What is the atomic number of unobtainium?",
+      "choices": {"A": "42", "B": "92", "C": "118", "D": "119"},
+      "expected": {"input_valid": true, "compiled": true, "engine_fired": false, "grounded": false, "choice_key": null, "reason": "entity_unresolved"}
+    }
+  ],
+  "staging_control_metadata": {
+    "corrupt_source": {
+      "control_id": "science-e4-stage-corrupt-001",
+      "candidate_fact": {
+        "triple": ["iron", "atomic_number", "26"],
+        "object_kind": "integer",
+        "source_url": "https://www.wikidata.org/wiki/Special:EntityData/Q677.json?revision=2522227069",
+        "source_record_id": "Q753$4b7c3d50-4c8e-28a1-a0f9-0c97a4fefa1b",
+        "source_revision": "2522227069",
+        "license": "CC0-1.0"
+      },
+      "corruption": "The source_record_id belongs to Q753 while the URL and subject bind Q677.",
+      "expected": {"accepted": false, "available_to_reasoner": false, "reason": "provenance_entity_mismatch"}
+    },
+    "quarantine_conflict": {
+      "control_id": "science-e4-stage-quarantine-001",
+      "candidate_fact": {
+        "triple": ["carbon", "atomic_number", "7"],
+        "object_kind": "integer",
+        "provenance_kind": "synthetic_conflict_control",
+        "source_record_id": "fixture:science-e4-stage-quarantine-001",
+        "source_revision": "1",
+        "license": "test-fixture-only"
+      },
+      "conflicts_with_fact_id": "wd-q623-p1086-r2521230059",
+      "functional_predicate": true,
+      "expected": {"accepted": false, "quarantined": true, "available_to_reasoner": false, "reason": "functional_predicate_conflict"}
+    }
+  }
+}

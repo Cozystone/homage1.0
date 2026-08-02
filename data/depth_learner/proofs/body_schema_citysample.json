@@ -1,0 +1,118 @@
+{
+  "still_baseline": {
+    "dx": 0.0,
+    "dy": 0.0,
+    "div": 0.0,
+    "mag": 0.0
+  },
+  "moves": {
+    "a": {
+      "dx": 1.25,
+      "dy": 0.18,
+      "div": -0.157,
+      "mag": 1.671,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.425
+    },
+    "d": {
+      "dx": -0.598,
+      "dy": -0.014,
+      "div": 0.14,
+      "mag": 1.356,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.173
+    },
+    "e": {
+      "dx": -0.028,
+      "dy": 0.875,
+      "div": 0.478,
+      "mag": 1.127,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.119
+    },
+    "lshift+w": {
+      "dx": 0.291,
+      "dy": 0.194,
+      "div": 0.532,
+      "mag": 1.084,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.282
+    },
+    "mouse+x": {
+      "dx": -0.43,
+      "dy": 0.348,
+      "div": 0.334,
+      "mag": 2.726,
+      "over_still": null,
+      "n": 4,
+      "spread": 1.359
+    },
+    "mouse+y": {
+      "dx": -0.264,
+      "dy": -1.944,
+      "div": -0.375,
+      "mag": 2.669,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.073
+    },
+    "mouse-x": {
+      "dx": 1.43,
+      "dy": 0.57,
+      "div": -0.386,
+      "mag": 2.76,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.388
+    },
+    "mouse-y": {
+      "dx": 0.139,
+      "dy": 2.653,
+      "div": -0.316,
+      "mag": 3.018,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.098
+    },
+    "q": {
+      "dx": -0.291,
+      "dy": -0.945,
+      "div": -0.461,
+      "mag": 1.543,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.252
+    },
+    "s": {
+      "dx": 0.056,
+      "dy": 0.07,
+      "div": -0.275,
+      "mag": 0.781,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.518
+    },
+    "space": {
+      "dx": 0.056,
+      "dy": 0.167,
+      "div": 0.09,
+      "mag": 0.209,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.076
+    },
+    "w": {
+      "dx": 0.472,
+      "dy": 0.25,
+      "div": 0.647,
+      "mag": 1.277,
+      "over_still": null,
+      "n": 4,
+      "spread": 0.2
+    }
+  }
+}

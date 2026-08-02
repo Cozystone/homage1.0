@@ -1,0 +1,46 @@
+{
+  "schema": "atanor.depth.e4.verdict.v1",
+  "pass": true,
+  "attestation": false,
+  "seal_spent_before_this_run": true,
+  "exam": "001-diagnostic",
+  "note": "DIAGNOSTIC ONLY. Run after exam 001's FAIL was read, on the same spent seal, with the units bug fixed. All four registered conditions hold, and this is still NOT an E4 attestation: feedback had already flowed from this seal. See docs/ATANOR_depth_E4_prereg.md 10.",
+  "conditions": {
+    "net_p10_beats_constant_p90": true,
+    "absrel_agrees": true,
+    "net_p10_beats_shuffled_p90": true,
+    "preflight": true
+  },
+  "delta125": {
+    "net": {
+      "p10": 0.5549,
+      "median": 0.6103,
+      "p90": 0.654
+    },
+    "constant": {
+      "p10": 0.1708,
+      "median": 0.1924,
+      "p90": 0.2131
+    },
+    "shuffled": {
+      "p10": 0.3223,
+      "median": 0.3458,
+      "p90": 0.4032
+    },
+    "true": {
+      "p10": 1.0,
+      "median": 1.0,
+      "p90": 1.0
+    }
+  },
+  "absrel_median": {
+    "net": 0.2933,
+    "constant": 0.9108,
+    "shuffled": 0.7484
+  },
+  "preflight_resolution": "8.15x the unit",
+  "discriminator_lift": 0.4179,
+  "answers_sha256": "7e373287145b18bb121a0c5a87af6017f18fa8fed2b0fe2490d785151ad25254",
+  "pred_sha256": "36f84c26d8c92927",
+  "examiner": "사장님 (DIAGNOSTIC — spent seal, not an E4 attestation)"
+}

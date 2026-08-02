@@ -1,0 +1,60 @@
+{"id": "holdout_v2_000", "question": "차수란?", "term": "차수", "expect_grounded_in": "차수가 n 인 다항식으로 이루어진 다항 방정식을 n차 방정식이라고 한다."}
+{"id": "holdout_v2_001", "question": "오션란?", "term": "오션", "expect_grounded_in": "오션은 다음과 같은 뜻이 있다.오션은 대양을 의미하는 영어 낱말이다."}
+{"id": "holdout_v2_002", "question": "광합성란?", "term": "광합성", "expect_grounded_in": "광합성은 식물이 빛 에너지를 화학 에너지로 바꾸는 과정이다."}
+{"id": "holdout_v2_003", "question": "사랑란?", "term": "사랑", "expect_grounded_in": "사랑은 깊은 상호 인격적인 애정에서 단순한 즐거움까지를 아울러서 강하며 긍정적으로 경험된 감정적 정신적 상태이다."}
+{"id": "holdout_v2_004", "question": "통계학란?", "term": "통계학", "expect_grounded_in": "통계학은 산술적 방법을 기초로 하여, 주로 다량의 데이터를 관찰하고 정리 및 분석하는 방법을 연구하는 수학의 한 분야이다."}
+{"id": "holdout_v2_005", "question": "매직란?", "term": "매직", "expect_grounded_in": "매직은 해발 약 2200m의 카나리아 제도 중 하나인 라팔마섬의 로크 데 로스 무차초스 천문대에 위치한 두 대의 대기 감마 이미징 체렌코프 망원경으로 구성된 시스템이다."}
+{"id": "holdout_v2_006", "question": "소득세란?", "term": "소득세", "expect_grounded_in": "소득세는 총 지급액의 3%, 지방 소득세는 소득세의 10%로 4,116원이다."}
+{"id": "holdout_v2_007", "question": "대기란?", "term": "대기", "expect_grounded_in": "대기는 천체의 주위를 대체로 일정하게 둘러싸고 있는 기체층을 말한다."}
+{"id": "holdout_v2_008", "question": "주연란?", "term": "주연", "expect_grounded_in": "주연 은 대한민국의 가수이자 대한민국의 보이 그룹 더 보이즈 의 일원이다."}
+{"id": "holdout_v2_009", "question": "코레일란?", "term": "코레일", "expect_grounded_in": "코레일은 이번 정상화 조치로 디폴트 문제를 해결한 만큼 별도의 증자는 고려하고 있지 않다는 입장이다."}
+{"id": "holdout_v2_010", "question": "솔루나리빙란?", "term": "솔루나리빙", "expect_grounded_in": "솔루나리빙은 홍콩, 서울을 기점으로 아시아, 미주,유럽을 대상으로 아시아 컨템포러리 아트&생활용품을 소개하는 브랜드 입니다."}
+{"id": "holdout_v2_011", "question": "그래프란?", "term": "그래프", "expect_grounded_in": "그래프 는 수학에서 꼭짓점의 집합과 변의 집합을 이루는 순서쌍이다."}
+{"id": "holdout_v2_012", "question": "신경란?", "term": "신경", "expect_grounded_in": "신경은 생물이 주위의 환경과 자극을 감지하고 이에 대처하는 기관이다."}
+{"id": "holdout_v2_013", "question": "프레임워크란?", "term": "프레임워크", "expect_grounded_in": "프레임워크 는 영어 단어 그대로 Frame 과 Work 의 합성어입니다."}
+{"id": "holdout_v2_014", "question": "표준란?", "term": "표준", "expect_grounded_in": "표준 은 사회적 합의를 통해 이루어진 통일 규격을 가리킨다."}
+{"id": "holdout_v2_015", "question": "스프링란?", "term": "스프링", "expect_grounded_in": "스프링은 Java 백엔드 개발에 있어 떼어놓을 수 없는 프레임워크입니다."}
+{"id": "holdout_v2_016", "question": "노스탤지어란?", "term": "노스탤지어", "expect_grounded_in": "노스탤지어 는 과거를 생각하며 그리워하는 슬픈 감정이다."}
+{"id": "holdout_v2_017", "question": "서울이문초등학교란?", "term": "서울이문초등학교", "expect_grounded_in": "서울이문초등학교는 대한민국 서울특별시 동대문구 이문동에 있는 공립 초등학교이다."}
+{"id": "holdout_v2_018", "question": "탄소란?", "term": "탄소", "expect_grounded_in": "탄소는 비금속인 화학 원소로, 기호는 C이고 원자번호는 6이다."}
+{"id": "holdout_v2_019", "question": "진원란?", "term": "진원", "expect_grounded_in": "진원이 매우 얉아 게타카군 고야마촌에서 일본 기상청 진도 계급 기준 진도6을 관측했고, 멀리 세토 내해에 인접한 오카야마현 오카야마시에선 진도5를 기록하였다."}
+{"id": "holdout_v2_020", "question": "에너지란?", "term": "에너지", "expect_grounded_in": "에너지는 물리학에서 일을 할 수 있는 능력을 뜻한다."}
+{"id": "holdout_v2_021", "question": "호르몬란?", "term": "호르몬", "expect_grounded_in": "호르몬은 일반적으로 신체의 내분비기관에서 생성되는 화학물질들을 통틀어 일컫는다."}
+{"id": "holdout_v2_022", "question": "질량란?", "term": "질량", "expect_grounded_in": "질량은 물리학에서 물질이 가지고 있는 고유한 양을 일컫는 말이다."}
+{"id": "holdout_v2_023", "question": "박진영란?", "term": "박진영", "expect_grounded_in": "박진영 은 대한민국 의 가수 이자 배우 로 보이 그룹 GOT7 의 멤버이다."}
+{"id": "holdout_v2_024", "question": "중력란?", "term": "중력", "expect_grounded_in": "중력 은 모든 물질이 서로를 향해 끌어당기는 상호 작용이다."}
+{"id": "holdout_v2_025", "question": "퀴리란?", "term": "퀴리", "expect_grounded_in": "퀴리는 핵분열을 발견한 사람 가운데 하나이다."}
+{"id": "holdout_v2_026", "question": "전류란?", "term": "전류", "expect_grounded_in": "전류 는 한마디로 전하 의 흐름입니다."}
+{"id": "holdout_v2_027", "question": "정답란?", "term": "정답", "expect_grounded_in": "정답은 \"그들의 졸업 연도가 달라.\"입니다."}
+{"id": "holdout_v2_028", "question": "도커란?", "term": "도커", "expect_grounded_in": "도커는 2013년 등장한 컨테이너 기반 가상화 도구입니다."}
+{"id": "holdout_v2_029", "question": "원인란?", "term": "원인", "expect_grounded_in": "원인은 간단한데 한국에서는 전기 직종이 공급과잉 상태라서 대우가 소홀할 수밖에 없는 반면 해외에서는 공급이 항상 요구되는 직종이기 때문이다."}
+{"id": "holdout_v2_030", "question": "무주택자란?", "term": "무주택자", "expect_grounded_in": "무주택자는 본인명의의 주택 또는 분양권을 소유하고 있지 않은 사람을 말합니다."}
+{"id": "holdout_v2_031", "question": "킬페리크란?", "term": "킬페리크", "expect_grounded_in": "킬페리크는 715년부터 네우스트리아의 왕으로, 그리고 718년부터는 단독 프랑크인의 왕으로 사망할 때까지 재위하였다."}
+{"id": "holdout_v2_032", "question": "모두란?", "term": "모두", "expect_grounded_in": "모두가 Copilot을 사용하더라도 로컬 GPU 성능을 갖는 것은 여전히 엄청난 이점입니다."}
+{"id": "holdout_v2_033", "question": "티타노사우루스란?", "term": "티타노사우루스", "expect_grounded_in": "티타노사우루스는 백악기 후기 인도에서 살았던 용각류이다."}
+{"id": "holdout_v2_034", "question": "군량리란?", "term": "군량리", "expect_grounded_in": "군량리는 양화천 서쪽 평야에 자리한 농촌마을이다."}
+{"id": "holdout_v2_035", "question": "공세초등학교란?", "term": "공세초등학교", "expect_grounded_in": "공세초등학교는 대한민국 경기도 용인시 기흥구에 있는 공립 초등학교이다."}
+{"id": "holdout_v2_036", "question": "의암호란?", "term": "의암호", "expect_grounded_in": "의암호는 강원 춘천시 서쪽을 둘러싼 인공호입니다."}
+{"id": "holdout_v2_037", "question": "운영체제란?", "term": "운영체제", "expect_grounded_in": "운영체제 는 컴퓨터, 스마트폰 등의 하드웨어와 소프트웨어를 관리하고, 사용자와 기기 간의 인터페이스 역할을 수행하는 필수 시스템 소프트웨어입니다."}
+{"id": "holdout_v2_038", "question": "가격란?", "term": "가격", "expect_grounded_in": "가격은 커피가 5천원, 라떼는 5,500원 이고, 딸기소금빵은 6,800원이다."}
+{"id": "holdout_v2_039", "question": "워커란?", "term": "워커", "expect_grounded_in": "워커가 의도적으로 종료되었으며, 시스템이 이를 인식하고 있는 상황이다."}
+{"id": "holdout_v2_040", "question": "인구란?", "term": "인구", "expect_grounded_in": "인구는 2025년 유엔 인구조사 기준 84,075,075명으로 유럽에서 러시아, 튀르키예 다음으로 인구가 많은 국가로 유럽 연합 회원국 중 인구가 가장 많은 국가이다."}
+{"id": "holdout_v2_041", "question": "대륙란?", "term": "대륙", "expect_grounded_in": "대륙은 지구 표면에 거대한 면적을 가진 육지를 말한다."}
+{"id": "holdout_v2_042", "question": "어썸이엔티란?", "term": "어썸이엔티", "expect_grounded_in": "어썸이엔티는 대한민국의 연예 기획사이다."}
+{"id": "holdout_v2_043", "question": "교종란?", "term": "교종", "expect_grounded_in": "교종은 구체적으로 《법화경》에 의거한 천태종이나 《화엄경》을 소의로 하는 화엄종을 가리키는데, 이들이 중국에 있어서의 대표적 교종이었기 때문이다."}
+{"id": "holdout_v2_044", "question": "구립응암도서관란?", "term": "구립응암도서관", "expect_grounded_in": "구립응암도서관은 서울특별시 은평구에 있는 도서관이다."}
+{"id": "holdout_v2_045", "question": "장동란?", "term": "장동", "expect_grounded_in": "장동 은 회전하고 있는 물체의 회전축이 끄떡이는 현상이며 두 번째 오일러각이 변하는 현상이다."}
+{"id": "holdout_v2_046", "question": "오수항란?", "term": "오수항", "expect_grounded_in": "오수항은 경상남도 거제시 거제면 오수리에 있는 어항이다."}
+{"id": "holdout_v2_047", "question": "검은콜로부스란?", "term": "검은콜로부스", "expect_grounded_in": "검은콜로부스는 가장 멸종 위기에 처한 10종의 아프리카 영장류 중 하나이다."}
+{"id": "holdout_v2_048", "question": "조플린란?", "term": "조플린", "expect_grounded_in": "조플린은 미국 미주리주 남서부 모퉁이 뉴턴 카운티 북부, 재스퍼 카운티 남부에 위치한 도시이다."}
+{"id": "holdout_v2_049", "question": "은하란?", "term": "은하", "expect_grounded_in": "은하는 항성, 밀집성, 성간 물질, 암흑 물질 등이 중력에 의해 묶여져서 이루는 거대한 천체들의 무리이다."}
+{"id": "holdout_v2_050", "question": "삼산초등학교란?", "term": "삼산초등학교", "expect_grounded_in": "삼산초등학교는 대한민국 경상남도 합천군 대병면 장단리 755에 있었던 공립 초등학교이다."}
+{"id": "holdout_v2_051", "question": "신라란?", "term": "신라", "expect_grounded_in": "신라는 기원전 57년부터 기원후 935년까지 고구려, 백제와 함께 고대 한반도의 삼국 시대를 이끌고 발해와 함께 남북국 시대를 구성하였던 국가로, 세계적으로 오랫동안 지속된 왕국 중 하나이다."}
+{"id": "holdout_v2_052", "question": "남진란?", "term": "남진", "expect_grounded_in": "남진 은 대한민국의 트로트 가수 이다."}
+{"id": "holdout_v2_053", "question": "길이란?", "term": "길이", "expect_grounded_in": "길이는 대략 6m로 가장 많이 찾는 사이즈 중 하나입니다."}
+{"id": "holdout_v2_054", "question": "속도란?", "term": "속도", "expect_grounded_in": "속도는 어떠한 물체의 위치 변화를 뜻하는 변위를 변화가 일어난 시간 간격을 나눈 값이다."}
+{"id": "holdout_v2_055", "question": "순서란?", "term": "순서", "expect_grounded_in": "순서는 수학 용어이며, 다음 개념들을 일컫는다."}
+{"id": "holdout_v2_056", "question": "특이점란?", "term": "특이점", "expect_grounded_in": "특이점은 어떤 값이 무한대로 가는 수학적 객체입니다."}
+{"id": "holdout_v2_057", "question": "대왕암공원란?", "term": "대왕암공원", "expect_grounded_in": "대왕암공원은 울산광역시 동구 일산동 해안에 있는 공원이다."}
+{"id": "holdout_v2_058", "question": "고구려란?", "term": "고구려", "expect_grounded_in": "고구려는 한국의 고대 왕조국가 중 하나이다."}
+{"id": "holdout_v2_059", "question": "데이터란?", "term": "데이터", "expect_grounded_in": "데이터가 자주 변경되고, 협업이 필요한 환경이라면 FineBI가 정답입니다."}

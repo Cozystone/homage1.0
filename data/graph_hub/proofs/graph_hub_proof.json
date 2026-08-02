@@ -1,0 +1,114 @@
+{
+  "attachment": {
+    "detach": {
+      "cartridge_id": "startup_strategy_demo",
+      "local_brain_write": false,
+      "status": "detached"
+    },
+    "startup_attach": {
+      "attached_at": "2026-06-16T05:59:08Z",
+      "attachment_id": "gha_37c73eba86bfc6fff8",
+      "cartridge_id": "startup_strategy_demo",
+      "local_brain_write": false,
+      "read_only": true,
+      "scope": "session",
+      "status": "attached",
+      "temporary": true,
+      "working_memory_edges": 2,
+      "working_memory_nodes": 3
+    },
+    "writing_after_expiry": [
+      {
+        "attached_at": "2026-06-16T05:59:08Z",
+        "attachment_id": "gha_bb6b71b6fcac0d8a2d",
+        "cartridge_id": "korean_writing_demo",
+        "local_brain_write": false,
+        "read_only": true,
+        "scope": "session",
+        "status": "expired",
+        "temporary": true,
+        "working_memory_edges": 1,
+        "working_memory_nodes": 2
+      }
+    ]
+  },
+  "checks": {
+    "audit_events_written": true,
+    "catalog_has_three_pricing_models": true,
+    "free_install_no_local_write": true,
+    "graph_hub_name_used": true,
+    "one_time_purchase_attach_read_only": true,
+    "sandbox_safe_or_warns": true,
+    "semantic_export_from_proof_store": true,
+    "semantic_handoff_exists": true,
+    "subscription_expiry_disables_attachment": true
+  },
+  "does_not_claim": [
+    "real payment processing",
+    "real marketplace backend",
+    "DRM enforcement",
+    "legal commercial licensing readiness",
+    "global cartridge marketplace",
+    "automatic trust of third-party packs",
+    "production billing",
+    "old mirror snapshot as live cloud"
+  ],
+  "export": {
+    "edges": 4,
+    "nodes": 5,
+    "old_mirror_snapshot_used": false,
+    "path": "data/graph_hub/exported/semantic_cloud_kubernetes_demo.graphpack.json",
+    "source_type": "semantic_cloud_proof_store",
+    "write_local_brain": false
+  },
+  "generated_at": "2026-06-16T05:59:08Z",
+  "passed": true,
+  "pricing": {
+    "free": "free",
+    "one_time": "owned",
+    "subscription": "expired_subscription"
+  },
+  "proof_id": "graph_hub_proof",
+  "semantic_handoff": {
+    "concepts": 5,
+    "evidence": 4,
+    "old_mirror_snapshot_used_as_live_cloud": false,
+    "path": "data/cloud_brain/store",
+    "relations": 4
+  },
+  "status": {
+    "active_attachments": 0,
+    "billing_mode": "local_mock",
+    "catalog_items": 7,
+    "external_llm_used": false,
+    "external_sllm_used": false,
+    "installed_cartridges": 4,
+    "local_brain_write": false,
+    "old_mirror_snapshot_used_as_live_cloud": false,
+    "product_name": "Graph Hub",
+    "semantic_cloud": {
+      "concepts": 5,
+      "evidence": 4,
+      "external_llm_used": false,
+      "external_sllm_used": false,
+      "global_cloud_claim": false,
+      "last_growth_run": {
+        "concepts_created": 0,
+        "concepts_merged": 5,
+        "evidence_added": 0,
+        "relations_created": 0,
+        "relations_strengthened": 4,
+        "run_id": "scg_bed4caada8b21a7248",
+        "sentences_processed": 1
+      },
+      "local_brain_write": false,
+      "old_mirror_snapshot_used_as_live_cloud": false,
+      "proof_store_only": true,
+      "proof_store_path": "data/cloud_brain/store",
+      "relations": 4,
+      "store_backend": "local_semantic_proof_store",
+      "store_path": "data/cloud_brain/store"
+    },
+    "technical_object": "Graph Cartridge"
+  }
+}

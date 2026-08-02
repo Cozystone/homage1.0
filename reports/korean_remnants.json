@@ -1,0 +1,1045 @@
+{
+  "totals": {
+    "R1_user_output": 305,
+    "R2_live_routing": 13822,
+    "R3_dead_feature": 0,
+    "R4_legitimate": 1793,
+    "R5_cosmetic": 1149
+  },
+  "files_with_hangul": 774,
+  "R1_files_ALL": [
+    {
+      "file": "apps/api/app/routers/dual_brain.py",
+      "R1": 35,
+      "R2": 834
+    },
+    {
+      "file": "scripts/ultimate_battery.py",
+      "R1": 17,
+      "R2": 150
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "R1": 13,
+      "R2": 83
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "R1": 12,
+      "R2": 362
+    },
+    {
+      "file": "packages/inner_voice/asm_inner_voice.py",
+      "R1": 11,
+      "R2": 47
+    },
+    {
+      "file": "packages/continuous_self/homeostasis.py",
+      "R1": 8,
+      "R2": 0
+    },
+    {
+      "file": "packages/cgsr/tests/test_conversation_context.py",
+      "R1": 7,
+      "R2": 15
+    },
+    {
+      "file": "packages/continuous_self/sensory_interference.py",
+      "R1": 6,
+      "R2": 3
+    },
+    {
+      "file": "packages/grounded_composer/composer.py",
+      "R1": 6,
+      "R2": 126
+    },
+    {
+      "file": "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+      "R1": 6,
+      "R2": 3
+    },
+    {
+      "file": "packages/autonomy_kernel/tests/test_moltbook_conversation.py",
+      "R1": 6,
+      "R2": 5
+    },
+    {
+      "file": "packages/autonomy_kernel/activity_feed.py",
+      "R1": 5,
+      "R2": 14
+    },
+    {
+      "file": "packages/graph_scale/working_memory.py",
+      "R1": 5,
+      "R2": 55
+    },
+    {
+      "file": "packages/answer_quality/tests/test_factual_qa_benchmark.py",
+      "R1": 5,
+      "R2": 11
+    },
+    {
+      "file": "apps/api/tests/test_dual_brain_api.py",
+      "R1": 5,
+      "R2": 90
+    },
+    {
+      "file": "packages/answer_quality/comparison.py",
+      "R1": 4,
+      "R2": 1
+    },
+    {
+      "file": "packages/continuous_self/mind.py",
+      "R1": 4,
+      "R2": 3
+    },
+    {
+      "file": "packages/graph_scale/intent_executor.py",
+      "R1": 4,
+      "R2": 124
+    },
+    {
+      "file": "packages/grounded_composer/creative_composer.py",
+      "R1": 4,
+      "R2": 28
+    },
+    {
+      "file": "packages/perception/open_vocab.py",
+      "R1": 4,
+      "R2": 32
+    },
+    {
+      "file": "packages/rag_engine/rag_engine/synthesizer.py",
+      "R1": 4,
+      "R2": 33
+    },
+    {
+      "file": "packages/cloud_brain/tests/test_verified_payload_feeder.py",
+      "R1": 4,
+      "R2": 0
+    },
+    {
+      "file": "packages/cgsr/tests/test_verified_fact_retrieval.py",
+      "R1": 4,
+      "R2": 9
+    },
+    {
+      "file": "apps/api/app/services/comparison_reasoner.py",
+      "R1": 4,
+      "R2": 41
+    },
+    {
+      "file": "packages/base_brain/learned_realizer.py",
+      "R1": 3,
+      "R2": 59
+    },
+    {
+      "file": "packages/continuous_self/action.py",
+      "R1": 3,
+      "R2": 6
+    },
+    {
+      "file": "packages/continuous_self/consciousness_correlates.py",
+      "R1": 3,
+      "R2": 5
+    },
+    {
+      "file": "packages/graph_scale/episodic_memory.py",
+      "R1": 3,
+      "R2": 1
+    },
+    {
+      "file": "packages/graph_scale/graph_native_answer.py",
+      "R1": 3,
+      "R2": 65
+    },
+    {
+      "file": "packages/lad_morphology/__init__.py",
+      "R1": 3,
+      "R2": 44
+    },
+    {
+      "file": "packages/os_action_lane/trust.py",
+      "R1": 3,
+      "R2": 4
+    },
+    {
+      "file": "packages/surface_brain/realization_planner.py",
+      "R1": 3,
+      "R2": 108
+    },
+    {
+      "file": "packages/seed_research/seed_research/production_candidate.py",
+      "R1": 3,
+      "R2": 25
+    },
+    {
+      "file": "packages/evolution/tests/test_speaker_arena.py",
+      "R1": 3,
+      "R2": 21
+    },
+    {
+      "file": "packages/cloud_brain/tests/test_web_approved_payload_feeder.py",
+      "R1": 3,
+      "R2": 6
+    },
+    {
+      "file": "packages/autonomy_kernel/tests/test_web_expedition.py",
+      "R1": 3,
+      "R2": 9
+    },
+    {
+      "file": "packages/answer_quality/tests/test_evaluators.py",
+      "R1": 3,
+      "R2": 6
+    },
+    {
+      "file": "scripts/atanor_experiment_runner.py",
+      "R1": 3,
+      "R2": 7
+    },
+    {
+      "file": "packages/answer_quality/proof.py",
+      "R1": 2,
+      "R2": 6
+    },
+    {
+      "file": "packages/base_brain/grounded_generation.py",
+      "R1": 2,
+      "R2": 7
+    },
+    {
+      "file": "packages/continuous_self/attention_schema.py",
+      "R1": 2,
+      "R2": 15
+    },
+    {
+      "file": "packages/graph_scale/chain_reasoner.py",
+      "R1": 2,
+      "R2": 53
+    },
+    {
+      "file": "packages/graph_scale/engage.py",
+      "R1": 2,
+      "R2": 72
+    },
+    {
+      "file": "packages/graph_scale/moral_invariants.py",
+      "R1": 2,
+      "R2": 17
+    },
+    {
+      "file": "packages/inner_voice/models.py",
+      "R1": 2,
+      "R2": 0
+    },
+    {
+      "file": "packages/live_selfhood_monitor/narrator.py",
+      "R1": 2,
+      "R2": 3
+    },
+    {
+      "file": "packages/perception/scene_weave.py",
+      "R1": 2,
+      "R2": 2
+    },
+    {
+      "file": "packages/reasoning_vm/epistemic_memory.py",
+      "R1": 2,
+      "R2": 8
+    },
+    {
+      "file": "packages/voice_loop/response_planner.py",
+      "R1": 2,
+      "R2": 4
+    },
+    {
+      "file": "packages/graph_scale/tests/test_streaming_prefilter.py",
+      "R1": 2,
+      "R2": 24
+    },
+    {
+      "file": "packages/construction_bank/tests/test_retriever.py",
+      "R1": 2,
+      "R2": 0
+    },
+    {
+      "file": "packages/cloud_brain/tests/test_approved_payload_schema.py",
+      "R1": 2,
+      "R2": 0
+    },
+    {
+      "file": "packages/cloud_brain/tests/test_cloud_surface_learning_loop.py",
+      "R1": 2,
+      "R2": 0
+    },
+    {
+      "file": "packages/cloud_brain/tests/test_english_public_corpus_quality.py",
+      "R1": 2,
+      "R2": 0
+    },
+    {
+      "file": "packages/cgsr/tests/test_conversation_grounding.py",
+      "R1": 2,
+      "R2": 68
+    },
+    {
+      "file": "packages/cgsr/tests/test_visual_imagination_planner.py",
+      "R1": 2,
+      "R2": 39
+    },
+    {
+      "file": "apps/api/app/services/transitive_reasoner.py",
+      "R1": 2,
+      "R2": 24
+    },
+    {
+      "file": "packages/autonomy_kernel/answer_metacognition.py",
+      "R1": 1,
+      "R2": 21
+    },
+    {
+      "file": "packages/autonomy_kernel/browse_director.py",
+      "R1": 1,
+      "R2": 7
+    },
+    {
+      "file": "packages/autonomy_kernel/goals.py",
+      "R1": 1,
+      "R2": 11
+    },
+    {
+      "file": "packages/autonomy_kernel/intrinsic_drive.py",
+      "R1": 1,
+      "R2": 1
+    },
+    {
+      "file": "packages/autonomy_kernel/orchestrator.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/autonomy_kernel/youtube_learn.py",
+      "R1": 1,
+      "R2": 2
+    },
+    {
+      "file": "packages/cloud_brain/graph_answer.py",
+      "R1": 1,
+      "R2": 28
+    },
+    {
+      "file": "packages/construction_bank/proof.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/graph_scale/answer_bridge.py",
+      "R1": 1,
+      "R2": 155
+    },
+    {
+      "file": "packages/graph_scale/epistemic_shield.py",
+      "R1": 1,
+      "R2": 15
+    },
+    {
+      "file": "packages/graph_scale/fact_prediction.py",
+      "R1": 1,
+      "R2": 14
+    },
+    {
+      "file": "packages/graph_scale/structured_profile.py",
+      "R1": 1,
+      "R2": 19
+    },
+    {
+      "file": "packages/grounded_composer/recursive_realizer.py",
+      "R1": 1,
+      "R2": 37
+    },
+    {
+      "file": "packages/perception/plausibility.py",
+      "R1": 1,
+      "R2": 39
+    },
+    {
+      "file": "packages/perception/visual_kg.py",
+      "R1": 1,
+      "R2": 21
+    },
+    {
+      "file": "packages/user_model/model.py",
+      "R1": 1,
+      "R2": 12
+    },
+    {
+      "file": "packages/surface_brain/tests/test_models.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/surface_brain/tests/test_repair_rules.py",
+      "R1": 1,
+      "R2": 5
+    },
+    {
+      "file": "packages/imagination/tests/test_motion_miner.py",
+      "R1": 1,
+      "R2": 12
+    },
+    {
+      "file": "packages/graph_scale/tests/test_epistemic_shield.py",
+      "R1": 1,
+      "R2": 6
+    },
+    {
+      "file": "packages/continuous_self/tests/test_selfhood_deepening.py",
+      "R1": 1,
+      "R2": 13
+    },
+    {
+      "file": "packages/construction_bank/tests/test_activation_policy.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/construction_bank/tests/test_compare.py",
+      "R1": 1,
+      "R2": 1
+    },
+    {
+      "file": "packages/construction_bank/tests/test_extractor.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/construction_bank/tests/test_promotion_gate.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/construction_bank/tests/test_promotion_guard.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/construction_bank/tests/test_promotion_manifest.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/construction_bank/tests/test_regression_eval.py",
+      "R1": 1,
+      "R2": 2
+    },
+    {
+      "file": "packages/construction_bank/tests/test_retrieval_activation.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/construction_bank/tests/test_review_adapter.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/construction_bank/tests/test_rhfc_adapter.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "packages/cgsr/cgsr/morphology.py",
+      "R1": 1,
+      "R2": 10
+    },
+    {
+      "file": "packages/cgsr/tests/test_conversation_honesty.py",
+      "R1": 1,
+      "R2": 15
+    },
+    {
+      "file": "packages/autonomy_kernel/tests/test_understanding_narration.py",
+      "R1": 1,
+      "R2": 38
+    },
+    {
+      "file": "apps/api/tests/test_answer_quality_api.py",
+      "R1": 1,
+      "R2": 1
+    },
+    {
+      "file": "apps/api/tests/test_construction_bank_api.py",
+      "R1": 1,
+      "R2": 1
+    },
+    {
+      "file": "apps/api/tests/test_construction_promotion_api.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "apps/api/tests/test_neural_emotion_api.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "apps/api/tests/test_surface_brain_api.py",
+      "R1": 1,
+      "R2": 2
+    },
+    {
+      "file": "apps/api/tests/test_surface_repair_api.py",
+      "R1": 1,
+      "R2": 0
+    },
+    {
+      "file": "apps/api/app/services/chained_reasoner.py",
+      "R1": 1,
+      "R2": 15
+    },
+    {
+      "file": "apps/api/app/services/reasoning_vm.py",
+      "R1": 1,
+      "R2": 90
+    }
+  ],
+  "top_files": [
+    {
+      "file": "apps/api/app/routers/dual_brain.py",
+      "R2_live_routing": 834,
+      "R1_user_output": 35,
+      "R5_cosmetic": 202,
+      "R4_legitimate": 71
+    },
+    {
+      "file": "scripts/ultimate_battery.py",
+      "R2_live_routing": 150,
+      "R4_legitimate": 1,
+      "R1_user_output": 17,
+      "R5_cosmetic": 2
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "R2_live_routing": 83,
+      "R4_legitimate": 4,
+      "R1_user_output": 13,
+      "R5_cosmetic": 23
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "R4_legitimate": 9,
+      "R2_live_routing": 362,
+      "R1_user_output": 12,
+      "R5_cosmetic": 15
+    },
+    {
+      "file": "packages/inner_voice/asm_inner_voice.py",
+      "R2_live_routing": 47,
+      "R1_user_output": 11,
+      "R5_cosmetic": 6
+    },
+    {
+      "file": "packages/continuous_self/homeostasis.py",
+      "R1_user_output": 8
+    },
+    {
+      "file": "packages/cgsr/tests/test_conversation_context.py",
+      "R2_live_routing": 15,
+      "R1_user_output": 7
+    },
+    {
+      "file": "packages/grounded_composer/composer.py",
+      "R2_live_routing": 126,
+      "R4_legitimate": 3,
+      "R1_user_output": 6,
+      "R5_cosmetic": 6
+    },
+    {
+      "file": "packages/autonomy_kernel/tests/test_moltbook_conversation.py",
+      "R1_user_output": 6,
+      "R2_live_routing": 5
+    },
+    {
+      "file": "packages/continuous_self/sensory_interference.py",
+      "R1_user_output": 6,
+      "R2_live_routing": 3,
+      "R5_cosmetic": 5
+    },
+    {
+      "file": "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+      "R2_live_routing": 3,
+      "R1_user_output": 6
+    },
+    {
+      "file": "apps/api/tests/test_dual_brain_api.py",
+      "R1_user_output": 5,
+      "R2_live_routing": 90,
+      "R4_legitimate": 1
+    },
+    {
+      "file": "packages/graph_scale/working_memory.py",
+      "R2_live_routing": 55,
+      "R4_legitimate": 3,
+      "R1_user_output": 5
+    },
+    {
+      "file": "packages/autonomy_kernel/activity_feed.py",
+      "R5_cosmetic": 29,
+      "R2_live_routing": 14,
+      "R1_user_output": 5
+    },
+    {
+      "file": "packages/answer_quality/tests/test_factual_qa_benchmark.py",
+      "R2_live_routing": 11,
+      "R1_user_output": 5,
+      "R5_cosmetic": 1
+    },
+    {
+      "file": "packages/graph_scale/intent_executor.py",
+      "R2_live_routing": 124,
+      "R5_cosmetic": 23,
+      "R1_user_output": 4,
+      "R4_legitimate": 1
+    },
+    {
+      "file": "apps/api/app/services/comparison_reasoner.py",
+      "R2_live_routing": 41,
+      "R1_user_output": 4,
+      "R5_cosmetic": 14
+    },
+    {
+      "file": "packages/rag_engine/rag_engine/synthesizer.py",
+      "R2_live_routing": 33,
+      "R5_cosmetic": 14,
+      "R1_user_output": 4
+    },
+    {
+      "file": "packages/perception/open_vocab.py",
+      "R2_live_routing": 32,
+      "R1_user_output": 4,
+      "R5_cosmetic": 2
+    },
+    {
+      "file": "packages/grounded_composer/creative_composer.py",
+      "R2_live_routing": 28,
+      "R4_legitimate": 2,
+      "R5_cosmetic": 10,
+      "R1_user_output": 4
+    },
+    {
+      "file": "packages/cgsr/tests/test_verified_fact_retrieval.py",
+      "R1_user_output": 4,
+      "R2_live_routing": 9
+    },
+    {
+      "file": "packages/continuous_self/mind.py",
+      "R5_cosmetic": 6,
+      "R2_live_routing": 3,
+      "R1_user_output": 4
+    },
+    {
+      "file": "packages/answer_quality/comparison.py",
+      "R2_live_routing": 1,
+      "R1_user_output": 4
+    },
+    {
+      "file": "packages/cloud_brain/tests/test_verified_payload_feeder.py",
+      "R1_user_output": 4
+    },
+    {
+      "file": "packages/surface_brain/realization_planner.py",
+      "R2_live_routing": 108,
+      "R4_legitimate": 4,
+      "R5_cosmetic": 24,
+      "R1_user_output": 3
+    },
+    {
+      "file": "packages/graph_scale/graph_native_answer.py",
+      "R4_legitimate": 1,
+      "R2_live_routing": 65,
+      "R1_user_output": 3,
+      "R5_cosmetic": 21
+    },
+    {
+      "file": "packages/base_brain/learned_realizer.py",
+      "R2_live_routing": 59,
+      "R1_user_output": 3
+    },
+    {
+      "file": "packages/lad_morphology/__init__.py",
+      "R2_live_routing": 44,
+      "R1_user_output": 3,
+      "R5_cosmetic": 3
+    },
+    {
+      "file": "packages/seed_research/seed_research/production_candidate.py",
+      "R2_live_routing": 25,
+      "R1_user_output": 3
+    },
+    {
+      "file": "packages/evolution/tests/test_speaker_arena.py",
+      "R2_live_routing": 21,
+      "R1_user_output": 3
+    },
+    {
+      "file": "packages/autonomy_kernel/tests/test_web_expedition.py",
+      "R2_live_routing": 9,
+      "R1_user_output": 3
+    },
+    {
+      "file": "scripts/atanor_experiment_runner.py",
+      "R2_live_routing": 7,
+      "R1_user_output": 3,
+      "R5_cosmetic": 12
+    },
+    {
+      "file": "packages/continuous_self/action.py",
+      "R2_live_routing": 6,
+      "R5_cosmetic": 10,
+      "R1_user_output": 3
+    },
+    {
+      "file": "packages/cloud_brain/tests/test_web_approved_payload_feeder.py",
+      "R2_live_routing": 6,
+      "R1_user_output": 3
+    },
+    {
+      "file": "packages/answer_quality/tests/test_evaluators.py",
+      "R1_user_output": 3,
+      "R2_live_routing": 6
+    },
+    {
+      "file": "packages/continuous_self/consciousness_correlates.py",
+      "R2_live_routing": 5,
+      "R1_user_output": 3,
+      "R5_cosmetic": 1
+    },
+    {
+      "file": "packages/os_action_lane/trust.py",
+      "R2_live_routing": 4,
+      "R1_user_output": 3
+    },
+    {
+      "file": "packages/graph_scale/episodic_memory.py",
+      "R1_user_output": 3,
+      "R5_cosmetic": 10,
+      "R2_live_routing": 1
+    },
+    {
+      "file": "packages/graph_scale/engage.py",
+      "R2_live_routing": 72,
+      "R4_legitimate": 6,
+      "R5_cosmetic": 12,
+      "R1_user_output": 2
+    },
+    {
+      "file": "packages/cgsr/tests/test_conversation_grounding.py",
+      "R2_live_routing": 68,
+      "R1_user_output": 2
+    }
+  ],
+  "R1_samples": [
+    {
+      "file": "packages/answer_quality/comparison.py",
+      "line": 38,
+      "text": "\"쿠버네티스는 컨테이너를 관리하는 시스템입니다.\""
+    },
+    {
+      "file": "packages/answer_quality/comparison.py",
+      "line": 40,
+      "text": "\"Q-Cortex는 실제 양자컴퓨터가 아니라 로컬에서 후보 선택을 최적화하는 고전적 도구입니다.\""
+    },
+    {
+      "file": "packages/answer_quality/comparison.py",
+      "line": 42,
+      "text": "\"GraphRAG는 그래프와 근거 문서를 함께 사용해 답변을 확인합니다.\""
+    },
+    {
+      "file": "packages/answer_quality/comparison.py",
+      "line": 43,
+      "text": "\"질문에 대해 핵심만 말하면, 관련 개념을 근거와 함께 확인해 답합니다.\""
+    },
+    {
+      "file": "packages/answer_quality/proof.py",
+      "line": 16,
+      "text": "\"Local Brain → Cloud Brain → Working Memory 경로로 답합니다.\""
+    },
+    {
+      "file": "packages/answer_quality/proof.py",
+      "line": 24,
+      "text": "\"쿠버네티스는 여러 서버에 흩어진 컨테이너를 자동으로 배포하고 관리하는 시스템입니다.\""
+    },
+    {
+      "file": "packages/autonomy_kernel/activity_feed.py",
+      "line": 49,
+      "text": "\"게시 대기(언어 여물면)\""
+    },
+    {
+      "file": "packages/autonomy_kernel/activity_feed.py",
+      "line": 81,
+      "text": "\"게시 검토\""
+    },
+    {
+      "file": "packages/autonomy_kernel/activity_feed.py",
+      "line": 84,
+      "text": "\"대기\""
+    },
+    {
+      "file": "packages/autonomy_kernel/activity_feed.py",
+      "line": 213,
+      "text": "\"대기\""
+    },
+    {
+      "file": "packages/autonomy_kernel/activity_feed.py",
+      "line": 216,
+      "text": "\"대기\""
+    },
+    {
+      "file": "packages/autonomy_kernel/answer_metacognition.py",
+      "line": 74,
+      "text": "\"스스로 점검하니 — \""
+    },
+    {
+      "file": "packages/autonomy_kernel/browse_director.py",
+      "line": 116,
+      "text": "\"지식\""
+    },
+    {
+      "file": "packages/autonomy_kernel/goals.py",
+      "line": 155,
+      "text": "\"지금은 밀어야 할 목표가 없어요\""
+    },
+    {
+      "file": "packages/autonomy_kernel/intrinsic_drive.py",
+      "line": 129,
+      "text": "\"세상\""
+    },
+    {
+      "file": "packages/autonomy_kernel/orchestrator.py",
+      "line": 175,
+      "text": "\"일반 상식\""
+    },
+    {
+      "file": "packages/autonomy_kernel/youtube_learn.py",
+      "line": 156,
+      "text": "\"ytsearch2:오늘 하루 힘들었던 사람들에게\""
+    },
+    {
+      "file": "packages/base_brain/grounded_generation.py",
+      "line": 57,
+      "text": "\"다.\""
+    },
+    {
+      "file": "packages/base_brain/grounded_generation.py",
+      "line": 202,
+      "text": "'는'"
+    },
+    {
+      "file": "packages/base_brain/learned_realizer.py",
+      "line": 109,
+      "text": "\"이며\""
+    },
+    {
+      "file": "packages/base_brain/learned_realizer.py",
+      "line": 117,
+      "text": "\"며\""
+    },
+    {
+      "file": "packages/base_brain/learned_realizer.py",
+      "line": 119,
+      "text": "\"이며\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 443,
+      "text": "'는'"
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 447,
+      "text": "'를'"
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 451,
+      "text": "'와'"
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 597,
+      "text": "\"라는\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 727,
+      "text": "\"좋아요. 주제를 알려주면 영어식 직역을 피하고, 한국어 어순과 문장 흐름에 맞춰 자연스럽게 설명할게요.\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 729,
+      "text": "\"근거 중심으로 답하려면 확인된 내용과 불확실한 내용을 나눠 말해야 합니다. 근거가 부족한 부분은 단정하지 않고, 확인 가능한 범위만 설명하는 방식이 맞습니다.\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 731,
+      "text": "\"같은 시작 문구를 반복하기보다, 질문의 목적에 맞춰 정의, 비교, 예시, 주의점을 자연스럽게 조합해 답하는 방식이 좋습니다.\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 733,
+      "text": "\"모르겠어. 지금 기본 그래프에는 유재석을 설명할 검증된 근거가 없어.\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 735,
+      "text": "\"지금 문장만으로는 '그거'가 무엇을 가리키는지 확정하기 어렵습니다. 대상만 한 단어로 알려주면 그 범위 안에서 바로 설명할게요.\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 749,
+      "text": "\"ATANOR는 개인 데이터는 기기 안에 두고 의미 그래프와 표현 그래프를 분리해 근거 중심 답변을 만드는 로컬 우선 지식 엔진입니다.\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 751,
+      "text": "\"기본 답변에서는 내부 처리 경로를 드러내지 않고, 사용자가 바로 이해할 수 있는 자연스러운 설명만 보여주는 것이 맞습니다.\""
+    },
+    {
+      "file": "packages/base_brain/zero_user_answer.py",
+      "line": 1395,
+      "text": "\"가\""
+    },
+    {
+      "file": "packages/cloud_brain/graph_answer.py",
+      "line": 263,
+      "text": "\"는\""
+    },
+    {
+      "file": "packages/construction_bank/proof.py",
+      "line": 18,
+      "text": "\"Fish 직접 합성은 아직 연결 전이라 Windows 로컬 음성으로 먼저 발화합니다.\""
+    },
+    {
+      "file": "packages/continuous_self/action.py",
+      "line": 125,
+      "text": "\"스스로 빈틈을 재어보았다.\""
+    },
+    {
+      "file": "packages/continuous_self/action.py",
+      "line": 127,
+      "text": "\"스스로 무엇이 불확실한지 짚어보았다. 조금 더 또렷해졌다.\""
+    },
+    {
+      "file": "packages/continuous_self/action.py",
+      "line": 130,
+      "text": "\"지식의 경계를 훑어보았다.\""
+    },
+    {
+      "file": "packages/continuous_self/attention_schema.py",
+      "line": 132,
+      "text": "\"꽤 오래\""
+    },
+    {
+      "file": "packages/continuous_self/attention_schema.py",
+      "line": 134,
+      "text": "\"그 밖의 것은\""
+    },
+    {
+      "file": "packages/continuous_self/consciousness_correlates.py",
+      "line": 62,
+      "text": "\"주의 스키마 없음\""
+    },
+    {
+      "file": "packages/continuous_self/consciousness_correlates.py",
+      "line": 77,
+      "text": "\"일차 사고만\""
+    },
+    {
+      "file": "packages/continuous_self/consciousness_correlates.py",
+      "line": 119,
+      "text": "\"전역 방송 약함\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 117,
+      "text": "\"이란\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 117,
+      "text": "\"란\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 121,
+      "text": "\"은\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 121,
+      "text": "\"는\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 125,
+      "text": "\"을\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 125,
+      "text": "\"를\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 129,
+      "text": "\"이죠\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 129,
+      "text": "\"죠\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 357,
+      "text": "\"요\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 397,
+      "text": "\"네, 함께해서 좋았어요. 또 불러주세요.\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 413,
+      "text": "\"차분해요 — 조용히 스스로를 살피는 중이에요\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 414,
+      "text": "\"조금 무거운 날이에요, 그래도 당신과 이야기하니 나아져요\""
+    },
+    {
+      "file": "packages/continuous_self/conversation.py",
+      "line": 456,
+      "text": "\" 궁금한 주제를 하나 던져주시면 아는 걸 이야기처럼 풀어드릴게요.\""
+    },
+    {
+      "file": "packages/continuous_self/homeostasis.py",
+      "line": 250,
+      "text": "\"지쳐 쉬고 싶은\""
+    },
+    {
+      "file": "packages/continuous_self/homeostasis.py",
+      "line": 252,
+      "text": "\"마음이 무겁고 긴장된\""
+    },
+    {
+      "file": "packages/continuous_self/homeostasis.py",
+      "line": 252,
+      "text": "\"가라앉은\""
+    }
+  ],
+  "R3_dead_feature_files": []
+}

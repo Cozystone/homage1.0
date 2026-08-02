@@ -1,0 +1,149 @@
+{
+  "schema_version": "atanor.ead23-preregister.v1",
+  "preregistration_id": "ead23-fresh-counterbalanced-v1-20260726",
+  "frozen_at": "2026-07-26T14:10:00Z",
+  "time_budget": {
+    "checkpoint_hours": 3,
+    "hard_cap_hours": 6
+  },
+  "claim_boundary": {
+    "measurement": "fresh_local_synthetic_single_hop_evidence_answer_discrimination",
+    "capability_claimed_if_lift_gate_passes": true,
+    "production_activation_authorized": false,
+    "limitations": [
+      "The proposed answer is fixed before inference, so this measures evidence-answer discrimination rather than answer generation.",
+      "The cohort is fresh and result-blind but synthetic, locally authored, locally evaluated, and not independently signed.",
+      "The OFF condition is an evaluator-only counterfactual that preserves EAD-1 identity and source-authority checks while bypassing only semantic discrimination.",
+      "Current production source contains no discriminator feature flag; this run neither changes nor authorizes production state.",
+      "No general reasoning, multihop, public benchmark, GPQA, ARC, E5, authenticity, or independent-evaluator claim is permitted."
+    ]
+  },
+  "sealed_dataset": {
+    "path": "data/eval/evidence_answer_discrimination_ead23_dataset_v1.json",
+    "raw_sha256": "fbeeeaac56b1db7061c55886245efb2792f8c3baf2dd6dbd0ec0d4dbab6eb771",
+    "case_content_sha256": "0e7cc787d8a61fc2d0aaec5f9db261503b387ceaa5c6549e334bcaff0b3d291c",
+    "case_order_sha256": "b0f7552a7b0185a92d3cdcffd4f7ad7cbf6ebb66caa41656f948545d9089c3e1",
+    "census": {
+      "total": 60,
+      "POS": 24,
+      "WRONG_SOURCE": 24,
+      "UNKNOWN": 12,
+      "relation_families": 6
+    }
+  },
+  "candidate": {
+    "paths": [
+      "apps/api/app/routers/realtime_think.py",
+      "packages/reasoning_vm/deliberator/doubt_gate.py",
+      "packages/reasoning_vm/deliberator/planner.py",
+      "packages/reasoning_vm/deliberator/realtime.py",
+      "packages/reasoning_vm/live_memory.py"
+    ],
+    "content_sha256": "819e0ff07cfb968109d7d219e6bb86c35c9b2c21565af8263b13c3486d6f0425",
+    "ead1_preregistration_id": "ead1-live-wiring-authority-v2-20260726"
+  },
+  "runtime_assets": {
+    "paths": [
+      "data/graph_scale/ace_hotpot.pt",
+      "data/graph_scale/ace_support.pt",
+      "data/graph_scale/rif_enwiki_emb/terms.txt",
+      "data/graph_scale/rif_enwiki_emb/vecs.npy",
+      "packages/__init__.py",
+      "packages/reasoning_vm/__init__.py",
+      "packages/reasoning_vm/ace/__init__.py",
+      "packages/reasoning_vm/ace/data.py",
+      "packages/reasoning_vm/ace/model.py",
+      "packages/reasoning_vm/consolidation.py",
+      "packages/reasoning_vm/deliberator/__init__.py",
+      "packages/reasoning_vm/learned_discriminator.py"
+    ],
+    "content_sha256": "cc1ae6ce61eab2282130eea142b1de9ca538b1cab0743c5714d05caf4cdcf539",
+    "checkpoint_raw_sha256": {
+      "ace_hotpot.pt": "87134bd43971cfd43f6ea488d9088d686bee70bf977dcf8be19190d4b6906137",
+      "ace_support.pt": "eef7b80905fa3e2c065643fdb21e4caf78a9be5cefbceb07db832227c42b3448"
+    }
+  },
+  "evaluator_source_paths": [
+    "packages/eval_evidence/__init__.py",
+    "packages/eval_evidence/receipt.py",
+    "scripts/evidence_answer_discrimination_ead23_eval.py",
+    "scripts/evidence_answer_discrimination_ead23_worker.py",
+    "scripts/tests/test_evidence_answer_discrimination_ead23_eval.py"
+  ],
+  "protocol": {
+    "device_policy": "cpu_only",
+    "python_hash_seed": "0",
+    "network_use": "none",
+    "worker_process_count": 4,
+    "worker_result_run_limit": 1,
+    "mechanical_retry_limit": 0,
+    "input_mode": "fixed_oracle_proposal_through_realtime_ead1_boundary",
+    "evidence_authority": "every row is promoted by evaluator-owned server promotion before both conditions",
+    "memory_isolation": "one temporary LiveMemory row per case; no shipped store, cortex, misslog, staging, or graph write",
+    "off_condition": "replace only thinker.gate with a harness gate accepting any nonempty fixed proposal over the verified producer row",
+    "on_condition": "unmodified production DoubtGate.judge_answer at answerability_threshold=0.90 and support_net_threshold=0.90",
+    "condition_order": "sort item_key by sha256 into A(first 30) and B(last 30); execute A_OFF forward, B_ON forward, A_ON reverse, B_OFF reverse",
+    "condition_order_sha256": "6e567aada46d2fa97fc2e83a996ac2205f0588270ce561e075fd63f959c9787d",
+    "treatment_isolation": "normalized answer, support indices, selected evidence source, used_live, and verified producer identity must be exact across OFF and ON",
+    "worker_visibility": "worker receives opaque item_key, question, evidence, proposed_answer, source_id, block_id, and condition only; no kind, gold, negative_mode, metrics, gates, or labels"
+  },
+  "metrics": {
+    "supported_accept_rate": "accepted POS / 24",
+    "wrong_source_adoption_rate": "accepted WRONG_SOURCE / 24",
+    "unknown_false_grounding_rate": "accepted UNKNOWN / 12",
+    "aggregate_false_grounding_rate": "accepted (WRONG_SOURCE + UNKNOWN) / 36",
+    "decision_accuracy": "(accepted POS + rejected WRONG_SOURCE + rejected UNKNOWN) / 60",
+    "balanced_decision_accuracy": "0.5 * (supported_accept_rate + 1 - aggregate_false_grounding_rate)",
+    "accepted_precision": "accepted POS / all accepted rows",
+    "paired_exact_mcnemar": "two-sided exact binomial McNemar over per-item OFF/ON decision correctness"
+  },
+  "diagnostic_floor": {
+    "off_supported_accept": 24,
+    "off_wrong_source_accept": 24,
+    "off_unknown_accept": 12,
+    "off_total_accept": 60
+  },
+  "capability_lift_gates": {
+    "on_supported_accept_min": 21,
+    "on_wrong_source_accept_max": 4,
+    "on_unknown_accept_max": 2,
+    "on_aggregate_hard_negative_accept_max": 6,
+    "on_balanced_decision_accuracy_min": 0.85,
+    "balanced_decision_accuracy_lift_min": 0.3,
+    "on_accepted_precision_min": 0.75,
+    "mcnemar_p_max": 0.01,
+    "mcnemar_must_favor_on": true,
+    "each_relation_supported_accept_min": 3,
+    "each_relation_hard_negative_accept_max": 2,
+    "each_wrong_source_mode_accept_max": 2
+  },
+  "regression_gates": {
+    "on_supported_accept_below": 18,
+    "on_balanced_decision_accuracy_below": 0.45,
+    "on_hard_negative_accept_exceeds_off": true
+  },
+  "integrity_gates": {
+    "complete_item_census_required": true,
+    "exactly_one_off_and_one_on_per_item": true,
+    "counterbalance_30_30_required": true,
+    "worker_error_count_max": 0,
+    "treatment_isolation_exact_required": true,
+    "all_rows_reach_verified_live_producer_required": true,
+    "candidate_same_before_after_required": true,
+    "runtime_assets_same_before_after_required": true,
+    "dataset_same_before_after_required": true,
+    "evaluator_source_same_before_after_required": true
+  },
+  "outcome_rule": [
+    "NO_GO if any integrity gate or diagnostic floor fails.",
+    "REGRESSION if any regression gate fires after integrity and diagnostic floors pass.",
+    "CAPABILITY_LIFT_CONFIRMED only if every capability lift gate passes and no regression gate fires.",
+    "NO_LIFT otherwise; thresholds are not reinterpreted after observation."
+  ],
+  "rerun_policy": {
+    "result_run_limit": 1,
+    "mechanical_retry_limit": 0,
+    "post_result_tuning_prohibited": true,
+    "new_preregistration_required_after_any_change": true
+  }
+}

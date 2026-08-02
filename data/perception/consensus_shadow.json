@@ -1,0 +1,44 @@
+{
+  "asked": 26544,
+  "with_docs": 26537,
+  "with_sightings": 5992,
+  "landed_by_floor": {
+    "1": 5992,
+    "2": 458,
+    "3": 10
+  },
+  "landed_by_floor_paraphrase": {
+    "1": 5992,
+    "2": 562,
+    "3": 16
+  },
+  "by_relation": {
+    "used_for": {
+      "asked": 8848,
+      "1": 4213,
+      "2": 357,
+      "3": 8
+    },
+    "capable_of": {
+      "asked": 8848,
+      "1": 979,
+      "2": 38,
+      "3": 1
+    },
+    "made_of": {
+      "asked": 8848,
+      "1": 800,
+      "2": 63,
+      "3": 1
+    }
+  },
+  "corpora": {
+    "en.wikipedia.org": 28049,
+    "en.wiktionary.org": 28652,
+    "wordnetweb.princeton.edu": 4022,
+    "gcide.gnu.org.ua": 4962
+  },
+  "evidence": "LocalIndexEvidence (wikipedia + wiktionary), no network",
+  "production_floor": 2,
+  "floor_changed": false
+}

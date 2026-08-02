@@ -1,0 +1,14 @@
+{
+ "battery": "holdout_v2.jsonl",
+ "sha256": "b076f8fb54e8f613d9b39f982c0b58f1e17071055105df242747c024640ce0fd",
+ "items": 60,
+ "rng_seed": 20260705,
+ "sealed_at": "2026-07-04T11:31:33+00:00",
+ "kind": "should-answer: concepts with an unambiguous bare-subject definition",
+ "rule": "NEVER seed these terms; answer-rate here IS the coverage metric (v1 is the raw-store baseline)",
+ "retired": {
+  "at": "2026-07-17",
+  "reason": "Korean answer surfaces are contained (owner directive: no Korean in extraction or answers). The battery file and its seal stay intact for the record; scoring it against a contained engine measures the containment, not knowledge.",
+  "supersededBy": "seal_{knowledge,conversation,honesty,speed}_{dev,holdout} (English)"
+ }
+}

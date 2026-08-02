@@ -1,0 +1,6 @@
+# ATANOR edge-brain (Radxa Dragon Q6A, aarch64, CPU-only) — minimal deps for the Brain Link peer +
+# situation-model organs. NO torch, NO GPU, NO heavy ML: the edge READS a graph slice and runs the
+# comprehension/state/brain-link organs; the PC stays the heavy brain.
+cryptography>=42      # ed25519 signing for brain_link handshakes (falls back to HMAC if absent)
+numpy>=1.26           # pulled by brain_link_pool siblings; light aarch64 wheel, not torch
+pytest>=8             # to run the loopback twin on the edge as a smoke test

@@ -1,0 +1,43 @@
+# ATANOR self-hosted metasearch — the open-web intake source (owner: 입구 대역폭 폭발).
+# JSON format must be enabled for the engine's searxng_search() (web_search.py:902).
+#
+# 2026-07-16 (owner: "진짜 웹 전체를 탐색" — SearXNG was effectively DuckDuckGo-only; google absent,
+# brave suspended). Explicit multi-engine roster so one blocked engine never collapses coverage:
+# google + bing + duckduckgo + brave + qwant + mojeek + wikipedia, generous timeouts, retries.
+use_default_settings: true
+server:
+  secret_key: "8f08a375ad6ee22a3e0a6ac6c070b826bb6e9daa0aaa1b15898027f292e8867f"
+  limiter: false
+search:
+  formats:
+    - html
+    - json
+outgoing:
+  request_timeout: 6.0
+  max_request_timeout: 12.0
+  pool_connections: 20
+  retries: 1
+engines:
+  - name: google
+    disabled: false
+    timeout: 8.0
+  - name: bing
+    disabled: false
+    timeout: 8.0
+  - name: duckduckgo
+    disabled: false
+    timeout: 8.0
+  - name: brave
+    disabled: false
+    timeout: 8.0
+  - name: qwant
+    disabled: false
+    timeout: 8.0
+  - name: mojeek
+    disabled: false
+    timeout: 8.0
+  - name: wikipedia
+    disabled: false
+    timeout: 6.0
+  - name: startpage
+    disabled: true

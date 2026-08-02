@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ATANOR Surfer",
+  "version": "0.8.5",
+  "description": "ATANOR가 사장님이 보는 웹 페이지를 읽고(읽기 전용), shield로 걸러 후보 지식으로 학습합니다. 프로덕션엔 절대 쓰지 않음.",
+  "permissions": ["activeTab", "scripting", "storage", "tabs", "alarms"],
+  "host_permissions": ["http://127.0.0.1:8502/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js", "orb.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    { "resources": ["vendor/*"], "matches": ["http://*/*", "https://*/*"] }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "ATANOR Surfer" }
+}

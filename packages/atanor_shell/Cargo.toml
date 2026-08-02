@@ -1,0 +1,28 @@
+[package]
+name = "atanor-shell"
+version = "0.1.0"
+edition = "2021"
+description = "ATANOR's own compositor — the particle field is the desktop, drawn natively (stage 2b, M1: real wayland compositor, kiosk policy)"
+license = "UNLICENSED"
+
+[dependencies]
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dependencies.smithay]
+version = "0.7"
+default-features = false
+features = [
+    "backend_winit",
+    "wayland_frontend",
+    "desktop",
+    # M1b: the metal path — DRM/KMS output, libinput via libseat, software
+    # render through pixman into dumb buffers (the VM has no GL). backend_gbm
+    # is only for the GbmDevice type parameter (we pass None).
+    "backend_drm",
+    "backend_udev",
+    "backend_libinput",
+    "backend_session_libseat",
+    "backend_gbm",
+    "renderer_pixman",
+]

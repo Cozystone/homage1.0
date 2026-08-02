@@ -1,0 +1,1056 @@
+{
+  "candidate_commit": "51de7aadf188f9889ff1ea051012693e5aa529e2",
+  "candidate_domain_audit": {
+    "direct_paths": [
+      "packages/fusion_loop/interactive.py",
+      "packages/fusion_loop/interactive_organs.py"
+    ],
+    "findings": [],
+    "import_names": [
+      "__future__",
+      "__future__.annotations",
+      "base64",
+      "binascii",
+      "collections",
+      "collections.Counter",
+      "collections.abc",
+      "collections.abc.Callable",
+      "collections.abc.Iterable",
+      "collections.abc.Iterator",
+      "collections.abc.Mapping",
+      "collections.abc.Sequence",
+      "collections.deque",
+      "contextlib",
+      "contextlib.contextmanager",
+      "contextvars",
+      "copy",
+      "copy.deepcopy",
+      "cryptography.exceptions",
+      "cryptography.exceptions.InvalidSignature",
+      "cryptography.hazmat.primitives",
+      "cryptography.hazmat.primitives.asymmetric.ed25519",
+      "cryptography.hazmat.primitives.asymmetric.ed25519.Ed25519PublicKey",
+      "cryptography.hazmat.primitives.serialization",
+      "dataclasses",
+      "dataclasses.asdict",
+      "dataclasses.dataclass",
+      "dataclasses.field",
+      "dataclasses.fields",
+      "datetime",
+      "datetime.datetime",
+      "datetime.timezone",
+      "enum",
+      "enum.Enum",
+      "enum.IntEnum",
+      "fcntl",
+      "fractions",
+      "fractions.Fraction",
+      "hashlib",
+      "hashlib.sha256",
+      "json",
+      "math",
+      "msvcrt",
+      "numpy",
+      "operator",
+      "os",
+      "packages.affordance.context_affordance",
+      "packages.affordance.context_affordance.resonance",
+      "packages.autonomy_envelope.operator_trust",
+      "packages.autonomy_envelope.operator_trust.ED25519_SCHEME",
+      "packages.autonomy_envelope.operator_trust.OperatorTrustRoot",
+      "packages.autonomy_envelope.operator_trust.SIGNATURE_FIELD",
+      "packages.autonomy_envelope.operator_trust.payload_sha256",
+      "packages.autonomy_envelope.run_lease",
+      "packages.autonomy_envelope.run_lease.GENERAL_INTERACTION_RUNNER_ID",
+      "packages.autonomy_envelope.run_lease.RunLeaseStore",
+      "packages.base_brain.benchmark",
+      "packages.base_brain.benchmark.build_zero_user_benchmark_v0",
+      "packages.base_brain.korean_orthography",
+      "packages.base_brain.korean_orthography.josa",
+      "packages.base_brain.models",
+      "packages.base_brain.models.BENCHMARK_PATH",
+      "packages.base_brain.models.BaseBrainPack",
+      "packages.base_brain.models.PACK_PATH",
+      "packages.base_brain.models.SEED_PATH",
+      "packages.base_brain.models.SEMANTIC_PATH",
+      "packages.base_brain.models.SURFACE_PATH",
+      "packages.base_brain.models.SemanticConcept",
+      "packages.base_brain.models.SemanticRelation",
+      "packages.base_brain.models.SurfaceConstruction",
+      "packages.base_brain.models.ensure_base_dirs",
+      "packages.base_brain.models.utc_now_iso",
+      "packages.base_brain.neighborhood",
+      "packages.base_brain.neighborhood._kiwi",
+      "packages.base_brain.neighborhood.gather_neighborhood",
+      "packages.base_brain.pack_builder",
+      "packages.base_brain.pack_builder.build_base_brain_pack_v0",
+      "packages.base_brain.pack_loader",
+      "packages.base_brain.pack_loader._concept_score",
+      "packages.base_brain.pack_loader._norm",
+      "packages.base_brain.pack_loader._tokens",
+      "packages.base_brain.pack_loader.load_base_brain_pack",
+      "packages.base_brain.seed_extension",
+      "packages.base_brain.seed_extension.build_seed_graph_v2",
+      "packages.base_brain.semantic_pack",
+      "packages.base_brain.semantic_pack.build_general_semantic_pack_v0",
+      "packages.base_brain.semantic_store",
+      "packages.base_brain.semantic_store.SemanticConceptStore",
+      "packages.base_brain.surface_pack",
+      "packages.base_brain.surface_pack.build_general_surface_pack_v0",
+      "packages.cognitive_core",
+      "packages.cognitive_core.CanonicalEntityRef",
+      "packages.cognitive_core.ClaimEnvelope",
+      "packages.cognitive_core.CognitiveEnvelope",
+      "packages.cognitive_core.CognitiveMoment",
+      "packages.cognitive_core.CycleEvent",
+      "packages.cognitive_core.CyclePhase",
+      "packages.cognitive_core.CycleReceipt",
+      "packages.cognitive_core.CycleStatus",
+      "packages.cognitive_core.DecisionReceipt",
+      "packages.cognitive_core.EntityKind",
+      "packages.cognitive_core.EpistemicTier",
+      "packages.cognitive_core.FrozenMap",
+      "packages.cognitive_core.GoalIR",
+      "packages.cognitive_core.ProofCandidate",
+      "packages.cognitive_core.ReceiptMode",
+      "packages.cognitive_core.RequestCycle",
+      "packages.cognitive_core.WorldSnapshot",
+      "packages.cognitive_core.adapters",
+      "packages.cognitive_core.adapters.adapt_canonical_entity_ref",
+      "packages.cognitive_core.adapters.adapt_claim_envelope",
+      "packages.cognitive_core.adapters.adapt_cognitive_envelope",
+      "packages.cognitive_core.adapters.adapt_cognitive_moment",
+      "packages.cognitive_core.adapters.adapt_contract",
+      "packages.cognitive_core.adapters.adapt_cycle_event",
+      "packages.cognitive_core.adapters.adapt_cycle_receipt",
+      "packages.cognitive_core.adapters.adapt_decision_receipt",
+      "packages.cognitive_core.adapters.adapt_goal_ir",
+      "packages.cognitive_core.adapters.adapt_proof_candidate",
+      "packages.cognitive_core.adapters.adapt_request_cycle",
+      "packages.cognitive_core.adapters.adapt_world_snapshot",
+      "packages.cognitive_core.canonical",
+      "packages.cognitive_core.canonical.FrozenMap",
+      "packages.cognitive_core.canonical.SCHEMA_VERSION",
+      "packages.cognitive_core.canonical.canonical_digest",
+      "packages.cognitive_core.canonical.canonical_id",
+      "packages.cognitive_core.canonical.canonical_json",
+      "packages.cognitive_core.canonical.freeze_json",
+      "packages.cognitive_core.canonical.thaw_json",
+      "packages.cognitive_core.chat_shadow",
+      "packages.cognitive_core.chat_shadow.SHADOW_ENV",
+      "packages.cognitive_core.chat_shadow.begin_chat_cycle_shadow",
+      "packages.cognitive_core.chat_shadow.shadow_enabled",
+      "packages.cognitive_core.co_profile",
+      "packages.cognitive_core.co_profile.CO_F1_PROFILE_SCHEMA",
+      "packages.cognitive_core.co_profile.adapt_co_f1_profile_receipt",
+      "packages.cognitive_core.co_profile.build_co_f1_profile",
+      "packages.cognitive_core.contracts",
+      "packages.cognitive_core.contracts.ClaimEnvelope",
+      "packages.cognitive_core.contracts.CognitiveEnvelope",
+      "packages.cognitive_core.contracts.CognitiveMoment",
+      "packages.cognitive_core.contracts.DecisionReceipt",
+      "packages.cognitive_core.contracts.EpistemicTier",
+      "packages.cognitive_core.contracts.GoalIR",
+      "packages.cognitive_core.contracts.GoalOrigin",
+      "packages.cognitive_core.contracts.ProofCandidate",
+      "packages.cognitive_core.contracts.ReceiptMode",
+      "packages.cognitive_core.contracts.WorldSnapshot",
+      "packages.cognitive_core.contracts.order_goals_for_deliberation",
+      "packages.cognitive_core.cycle",
+      "packages.cognitive_core.cycle.CanonicalEntityRef",
+      "packages.cognitive_core.cycle.CycleEvent",
+      "packages.cognitive_core.cycle.CyclePhase",
+      "packages.cognitive_core.cycle.CycleReceipt",
+      "packages.cognitive_core.cycle.CycleStatus",
+      "packages.cognitive_core.cycle.EntityKind",
+      "packages.cognitive_core.cycle.RequestCycle",
+      "packages.cognitive_core.cycle.apply_state_patch",
+      "packages.cognitive_core.cycle_ledger",
+      "packages.cognitive_core.cycle_ledger.CycleLedger",
+      "packages.cognitive_core.replay",
+      "packages.cognitive_core.replay.SharedCognitiveStateView",
+      "packages.cognitive_core.replay.replay_cycle",
+      "packages.cognitive_core.replay_cycle",
+      "packages.cognitive_core.shadow",
+      "packages.cognitive_core.shadow.ShadowLedger",
+      "packages.cognitive_core.shadow.ShadowObserver",
+      "packages.evolution",
+      "packages.evolution.code_evolver",
+      "packages.evolution.rational_evolver",
+      "packages.evolution.rational_evolver.parse_value",
+      "packages.fusion_loop.interactive_organs",
+      "packages.fusion_loop.interactive_organs.ActionOption",
+      "packages.fusion_loop.interactive_organs.ActionProposal",
+      "packages.fusion_loop.interactive_organs.AtanorInteractivePolicy",
+      "packages.fusion_loop.interactive_organs.PerceptionBundle",
+      "packages.fusion_loop.interactive_organs.action_payload_signature",
+      "packages.fusion_loop.interactive_organs.bounded_mapping",
+      "packages.fusion_loop.interactive_organs.normalize_valid_actions",
+      "packages.fusion_loop.interactive_organs.opaque_digest",
+      "packages.fusion_loop.interactive_organs.perceive_observation",
+      "packages.fusion_loop.interactive_organs.verify_learning_proof",
+      "packages.fusion_loop.interactive_organs.verify_rule_plan_proof",
+      "packages.graph_scale.graph_paths",
+      "packages.graph_scale.graph_paths.SHIPPED_GRAPH_ROOT",
+      "packages.graph_scale.graph_paths.same_graph_path",
+      "packages.graph_scale.lexicon_lane",
+      "packages.graph_scale.lexicon_lane._FUNCTION_WORDS",
+      "packages.graph_scale.query_frame",
+      "packages.graph_scale.query_frame.parse",
+      "packages.graph_scale.sharded_term_dict",
+      "packages.graph_scale.sharded_term_dict.ShardedTermDict",
+      "packages.graph_scale.triple_store",
+      "packages.graph_scale.triple_store.TripleStore",
+      "packages.lad_morphology",
+      "packages.lad_morphology.JOSA_TAILS",
+      "packages.neural_emotion.agentic_bridge",
+      "packages.neural_emotion.agentic_bridge.agentic_controls",
+      "packages.neural_emotion.decay",
+      "packages.neural_emotion.decay.decay_toward_baseline",
+      "packages.neural_emotion.engine",
+      "packages.neural_emotion.engine.EmotionEngine",
+      "packages.neural_emotion.event_bus",
+      "packages.neural_emotion.event_bus.EVENT_BUS",
+      "packages.neural_emotion.models",
+      "packages.neural_emotion.models.EmotionEvent",
+      "packages.neural_emotion.models.EmotionSnapshot",
+      "packages.neural_emotion.models.EmotionVector",
+      "packages.neural_emotion.models.PersonalityProfile",
+      "packages.neural_emotion.models.clamp",
+      "packages.neural_emotion.models.safety_flags",
+      "packages.neural_emotion.personality",
+      "packages.neural_emotion.personality.default_profile",
+      "packages.neural_emotion.splatra_bridge",
+      "packages.neural_emotion.splatra_bridge.splatra_controls",
+      "packages.neural_emotion.stimulus",
+      "packages.neural_emotion.stimulus.infer_event_from_agent_event",
+      "packages.neural_emotion.stimulus.infer_event_from_user_input",
+      "packages.neural_emotion.surface_bridge",
+      "packages.neural_emotion.surface_bridge.surface_bias",
+      "packages.neural_emotion.voice_bridge",
+      "packages.neural_emotion.voice_bridge.voice_controls",
+      "packages.os_action_lane.models",
+      "packages.os_action_lane.models.GateOutcome",
+      "packages.os_action_lane.models.RiskLevel",
+      "packages.os_action_lane.models.TrustTier",
+      "packages.perception.scene_graph",
+      "packages.perception.scene_graph.build_scene_graph",
+      "packages.reasoning_vm",
+      "packages.reasoning_vm.deduction",
+      "packages.reasoning_vm.deliberator",
+      "packages.reasoning_vm.deliberator.back_chain",
+      "packages.reasoning_vm.deliberator.back_chain.BackChainer",
+      "packages.reasoning_vm.deliberator.back_chain.KernelBinding",
+      "packages.reasoning_vm.deliberator.back_chain.Rule",
+      "packages.reasoning_vm.deliberator.back_chain.Step",
+      "packages.reasoning_vm.deliberator.back_chain._norm",
+      "packages.reasoning_vm.deliberator.back_chain._walk",
+      "packages.reasoning_vm.deliberator.back_chain.verify_proof",
+      "packages.reasoning_vm.deliberator.kernel_forge",
+      "packages.reasoning_vm.deliberator.reasoner",
+      "packages.reasoning_vm.deliberator.reasoner.Deliberator",
+      "packages.reasoning_vm.quantity",
+      "packages.reasoning_vm.quantity.parse_number",
+      "packages.reasoning_vm.quantity.parse_quantity",
+      "packages.situation_model.state_tracker",
+      "packages.situation_model.state_tracker.StateTracker",
+      "packages.situation_model.text_normalizer",
+      "packages.situation_model.text_normalizer.repair_function_words",
+      "packages.situation_model.text_normalizer.snap_to_frame_vocab",
+      "packages.temporal_reasoning.precedence_field",
+      "packages.temporal_reasoning.precedence_field.MARKUP_STOP",
+      "packages.temporal_reasoning.precedence_field.posterior_direction",
+      "packages.temporal_reasoning.transition_graph",
+      "packages.temporal_reasoning.transition_graph.EventTransitionGraph",
+      "pathlib",
+      "pathlib.Path",
+      "random",
+      "re",
+      "sqlite3",
+      "struct",
+      "sys",
+      "tempfile",
+      "threading",
+      "time",
+      "time.monotonic",
+      "time.time",
+      "typing",
+      "typing.Any",
+      "typing.BinaryIO",
+      "typing.Callable",
+      "typing.ClassVar",
+      "typing.Iterable",
+      "typing.Iterator",
+      "typing.Literal",
+      "typing.Mapping",
+      "typing.Optional",
+      "typing.Protocol",
+      "typing.TypeVar",
+      "typing.runtime_checkable",
+      "urllib.parse",
+      "uuid",
+      "zlib"
+    ],
+    "local_closure_paths": [
+      "packages/affordance/context_affordance.py",
+      "packages/autonomy_envelope/operator_trust.py",
+      "packages/autonomy_envelope/run_lease.py",
+      "packages/base_brain/benchmark.py",
+      "packages/base_brain/korean_orthography.py",
+      "packages/base_brain/models.py",
+      "packages/base_brain/neighborhood.py",
+      "packages/base_brain/pack_builder.py",
+      "packages/base_brain/pack_loader.py",
+      "packages/base_brain/seed_extension.py",
+      "packages/base_brain/semantic_pack.py",
+      "packages/base_brain/semantic_store.py",
+      "packages/base_brain/surface_pack.py",
+      "packages/cognitive_core/__init__.py",
+      "packages/cognitive_core/adapters.py",
+      "packages/cognitive_core/canonical.py",
+      "packages/cognitive_core/chat_shadow.py",
+      "packages/cognitive_core/co_profile.py",
+      "packages/cognitive_core/contracts.py",
+      "packages/cognitive_core/cycle.py",
+      "packages/cognitive_core/cycle_ledger.py",
+      "packages/cognitive_core/replay.py",
+      "packages/cognitive_core/shadow.py",
+      "packages/evolution/code_evolver.py",
+      "packages/evolution/rational_evolver.py",
+      "packages/fusion_loop/interactive.py",
+      "packages/fusion_loop/interactive_organs.py",
+      "packages/graph_scale/graph_paths.py",
+      "packages/graph_scale/lexicon_lane.py",
+      "packages/graph_scale/query_frame.py",
+      "packages/graph_scale/sharded_term_dict.py",
+      "packages/graph_scale/triple_store.py",
+      "packages/lad_morphology/__init__.py",
+      "packages/neural_emotion/agentic_bridge.py",
+      "packages/neural_emotion/decay.py",
+      "packages/neural_emotion/engine.py",
+      "packages/neural_emotion/event_bus.py",
+      "packages/neural_emotion/models.py",
+      "packages/neural_emotion/personality.py",
+      "packages/neural_emotion/splatra_bridge.py",
+      "packages/neural_emotion/stimulus.py",
+      "packages/neural_emotion/surface_bridge.py",
+      "packages/neural_emotion/voice_bridge.py",
+      "packages/os_action_lane/models.py",
+      "packages/perception/scene_graph.py",
+      "packages/reasoning_vm/__init__.py",
+      "packages/reasoning_vm/deduction.py",
+      "packages/reasoning_vm/deliberator/__init__.py",
+      "packages/reasoning_vm/deliberator/back_chain.py",
+      "packages/reasoning_vm/deliberator/kernel_forge.py",
+      "packages/reasoning_vm/deliberator/reasoner.py",
+      "packages/reasoning_vm/quantity.py",
+      "packages/situation_model/state_tracker.py",
+      "packages/situation_model/text_normalizer.py",
+      "packages/temporal_reasoning/precedence_field.py",
+      "packages/temporal_reasoning/transition_graph.py"
+    ],
+    "passed": true,
+    "schema_version": "atanor.gwip-candidate-domain-audit.v1"
+  },
+  "candidate_policy_seed": 0,
+  "candidate_restricted_diff": {
+    "allowed_paths": [
+      "packages/fusion_loop/interactive.py",
+      "packages/fusion_loop/interactive_organs.py",
+      "packages/fusion_loop/tests/test_interactive_loop.py",
+      "packages/fusion_loop/tests/test_interactive_rule_transfer.py"
+    ],
+    "base_commit": "84e63520a2f59df62faaa5dbc74e0bfbb99deabd",
+    "candidate_commit": "51de7aadf188f9889ff1ea051012693e5aa529e2",
+    "changed_paths": [
+      "packages/fusion_loop/interactive.py",
+      "packages/fusion_loop/interactive_organs.py",
+      "packages/fusion_loop/tests/test_interactive_loop.py",
+      "packages/fusion_loop/tests/test_interactive_rule_transfer.py"
+    ],
+    "missing_direct_paths": [],
+    "passed": true,
+    "unexpected_paths": []
+  },
+  "candidate_source_sha256": "b5709ea5852b56f447d20238a816fa88d1f7b74128daaf77bb7cfa6c833f30ce",
+  "environment_seed_rule": "support_episode_or_target_start_index",
+  "evaluator_commit": "9c751107407f8238d39d6eaed7320523a895a358",
+  "evaluator_source_sha256": "6d496951f5e645c6e5d5a8b8327ec99723b0233f4904e06c4a87b7434034d057",
+  "generator_nonce": "zcNxT7lOs_GOFn5nN1wM3oUQq6dYwsBTA2TYGq0mpoo",
+  "generator_seed": "86a1af72085e46377a73a9eaea5ddd46dd4e97a6ece3f922864b9be709b2f1a8",
+  "nonoverlap_audit": {
+    "capability_pair_count": 64,
+    "findings": [],
+    "passed": true,
+    "prior_cohort_binding": "6ffe4d1f49c034c7d4634de3df41a4df8a82e845972fcd68bbf35910e9ba3f78",
+    "prior_mechanic_count": 48,
+    "schema_version": "atanor.gwip-capability-nonoverlap-audit.v1",
+    "state_count_overlap": [],
+    "token_overlap": [],
+    "transition_tuple_digest_overlap": []
+  },
+  "preregistration_binding": {
+    "binding_sha256": "a177cdda14fcb0d2d58e1be2834ecb1b16ba30dd2052514b4b1060e5d059a388",
+    "commit": "673de62994f54d553ee4e40ea7a2b1de2875d906",
+    "files": [
+      {
+        "path": "data/eval/gwip_capability_prereg_v3.json",
+        "raw_sha256": "12d9bd9f7a22d6463ddae53ac543507fa2e102dea4ce4cd7f8835547d63155da",
+        "size_bytes": 2523
+      },
+      {
+        "path": "docs/ATANOR_GWIP_CAPABILITY_RESEAL_PREREG_V3_2026-07-27.md",
+        "raw_sha256": "aece9212ad6813b0e9983751a2e09a52309b3445cfbe4c5c9646bcb8e4c9cafa",
+        "size_bytes": 5227
+      }
+    ],
+    "json_raw_sha256": "12d9bd9f7a22d6463ddae53ac543507fa2e102dea4ce4cd7f8835547d63155da",
+    "validated_pair_count": 64
+  },
+  "preregistration_commit": "673de62994f54d553ee4e40ea7a2b1de2875d906",
+  "preregistration_raw_sha256": "12d9bd9f7a22d6463ddae53ac543507fa2e102dea4ce4cd7f8835547d63155da",
+  "prior_mechanism_binding": {
+    "evidence_commit": "1ebad766b28b242475b1286b7757b1b5a9e92808",
+    "mechanic_count": 48,
+    "observation_token_count": 470,
+    "private_cohort_sha256": "6ffe4d1f49c034c7d4634de3df41a4df8a82e845972fcd68bbf35910e9ba3f78",
+    "receipt_checksum_sha256": "101c641ba305236899cb3b24fad7dad73abc0128025b84efd41e0aff97939f4b",
+    "receipt_raw_sha256": "155a210750ec311c07e7be20c195e05e3eebc8e37f11c86a47183c58774c8a41",
+    "seed_manifest_raw_sha256": "2339ad756449602ba0e6d5a3375386423b3b73cbe90bf79ae63410eaa4733110",
+    "transition_edge_token_count": 1620
+  },
+  "private_cohort_sha256": "31d343f80960ebbef860fc75cda46f852ea7fc87dfa579b4461c602c68d30a0b",
+  "production_default_on": false,
+  "public_benchmark_claim": false,
+  "runtime_dependency_binding": {
+    "approved_dependencies": [
+      "_cffi_backend",
+      "cryptography"
+    ],
+    "files": [
+      {
+        "dependency": "_cffi_backend",
+        "path": "_cffi_backend.cp313-win_amd64.pyd",
+        "sha256": "bb7b1bf72732769a38d2871e0e8b26fbeb2d0b8ef63b8d6fc54cd55d80581c27",
+        "size_bytes": 196936
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/__about__.py",
+        "sha256": "196838340c60e2fb12294c260f2d478d47803a1a93038eb0221898ea2d373525",
+        "size_bytes": 445
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/__init__.py",
+        "sha256": "9ad86e52b4dde0544e0a9518ad322a863cfab3a4fd763019ad5ee7675a0c9b6a",
+        "size_bytes": 364
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/exceptions.py",
+        "sha256": "f37e445882dcd9fc31c3e83214cae27220b64aa8558844c1d742c14b2b670c87",
+        "size_bytes": 1087
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/fernet.py",
+        "sha256": "dc2bf1921d0a2526d7f076e7087bb8c1f096ed4d0681f500deffea43c6bc8967",
+        "size_bytes": 6963
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/__init__.py",
+        "sha256": "e48c2b2d6ad5a7402312bff815d586fd5d39ecd489198fd6e1e80d36cb9cb748",
+        "size_bytes": 455
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/_oid.py",
+        "sha256": "a7c4e18f0241e7a0a2feb008ae3c89d5ff158e00fa7b7f5eb36761f0921404ec",
+        "size_bytes": 17240
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/asn1/__init__.py",
+        "sha256": "852fc45b1df056f6737db09c355f21cdc0e7c8c33c1fe0612284b54e2a54a2c9",
+        "size_bytes": 293
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/asn1/asn1.py",
+        "sha256": "78c1138445dad7d2d08dcc95a1f807b16eadb199e3a7775d1fb6d69247317cb3",
+        "size_bytes": 3860
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/backends/__init__.py",
+        "sha256": "3b98ef28541d6675e129ea89f87b6e95a10bf4d8bb9abd660f3658e641e56212",
+        "size_bytes": 361
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/backends/openssl/__init__.py",
+        "sha256": "a778e625f9c26a0f62139b1d32b37a56f544bb9e6ee3ac5a4bf223a08d12ae60",
+        "size_bytes": 305
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/backends/openssl/backend.py",
+        "sha256": "b55e40c41a0527619f0340cc59263ed13c5026ba50a1ec7323d4782b26dbfbee",
+        "size_bytes": 10215
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/__init__.py",
+        "sha256": "b3da0a090db2705757a0445d4b58a669fb9e4a406c2fd92f6f27e085a6ae67d6",
+        "size_bytes": 180
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust.pyd",
+        "sha256": "d48d31751f4f52724fb6429136e7bec7caa540353a309ccfde02af7077b5bafb",
+        "size_bytes": 4041544
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/__init__.pyi",
+        "sha256": "2a1a8b85714f02b3f3cc9ec360ef4597c1685c1fc16a001dfebe039bf65ef57a",
+        "size_bytes": 1257
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/_openssl.pyi",
+        "sha256": "9a93492ee60b6c256b7798b7dc5053996c0bff9e43c3b24f9122e5497f50ee82",
+        "size_bytes": 230
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/asn1.pyi",
+        "sha256": "06b1a30bc27a9f0b92fabdc455c757241f27768b5f63d99b41839fa5b3c6d070",
+        "size_bytes": 354
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/declarative_asn1.pyi",
+        "sha256": "d84085998b9ed443e41c4136066eda2f0923074992513a6bdb7bfd30de29ae2e",
+        "size_bytes": 892
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/exceptions.pyi",
+        "sha256": "7b15ebdb1c3fd29075924f777186ccdcca216f3a149233a6b3564c522d2e4191",
+        "size_bytes": 640
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/ocsp.pyi",
+        "sha256": "54f556b8a1c8f4432cd3d64b458006bd1d08cf49823261335c0920247a2fa683",
+        "size_bytes": 4020
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/__init__.pyi",
+        "sha256": "88e00c0f21e8370c024997d9cee5c3afae20e06a4651e0e010df8b8d7a9dac13",
+        "size_bytes": 1522
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/aead.pyi",
+        "sha256": "e0d75dc3afb29f3201df0d96f3a5af9062932e54c393fe85e65e784470aecb71",
+        "size_bytes": 2688
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/ciphers.pyi",
+        "sha256": "2e13f31d649726ae20ac02579facd2bd249d57e698208b1c1c3c083e524618fb",
+        "size_bytes": 1315
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/cmac.pyi",
+        "sha256": "9cf1f45f9ed1629b00911a305698d0887139eba4e1513c7b617aec69d9ab9879",
+        "size_bytes": 564
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/dh.pyi",
+        "sha256": "6774c2f86d38f931ed49d00e3cb3358761bb9a5e5b75ad4495951c9f9c29ba19",
+        "size_bytes": 1564
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/dsa.pyi",
+        "sha256": "a81b64823d9a95bb76a8572767d503ae1ce83610953bb1d36f2e5549fd445cc2",
+        "size_bytes": 1299
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/ec.pyi",
+        "sha256": "cc9cb4a516b99fefe9d9d9b8e4fc44081ffe07a49567234a7e3c450e93ea4f7f",
+        "size_bytes": 1691
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/ed25519.pyi",
+        "sha256": "5577d77791ba8548af837f7d4750d87665b77936f411e6f30d3aa3442da0691c",
+        "size_bytes": 532
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/ed448.pyi",
+        "sha256": "631e3d96a7678ec0fb6f188357591c68cac392dba0e5ebe2e5aeb37ab322cb6b",
+        "size_bytes": 514
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/hashes.pyi",
+        "sha256": "39666f071ef17e8fc7265e3535cfbe0ee815c8254f229ad9dc794e3d34961fd8",
+        "size_bytes": 984
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/hmac.pyi",
+        "sha256": "057667ecd0e32f72406d85b4490f298358b20b90db4175615008b0b22f03151f",
+        "size_bytes": 702
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/kdf.pyi",
+        "sha256": "c577c505bf507a11df0ed11ac55ffae59d182bb36ab8e5480a1a532e4800b3f9",
+        "size_bytes": 2029
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/keys.pyi",
+        "sha256": "b5e22df0ce9910c26b9f8b375b45275b40d9fb7d0977af169d2b0a286d76e25d",
+        "size_bytes": 912
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/poly1305.pyi",
+        "sha256": "fd25bd36d4391439406dd72516d5a94f89469b1288287a4dfb88fc27607361f4",
+        "size_bytes": 585
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/rsa.pyi",
+        "sha256": "d8e4023525e4c6073edeec35c620829682104d5ea9f7f90aefd62ed2b85980f7",
+        "size_bytes": 1364
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/x25519.pyi",
+        "sha256": "7b09f81a94326fbccfc04fa78bb1adc9080c0b403598bbaa62c4b2aafea723fb",
+        "size_bytes": 523
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/openssl/x448.pyi",
+        "sha256": "8ee4d94e6962f233bfe5572e7e0faf1efc7fb42c9ece648b221ffd3d4dd37332",
+        "size_bytes": 505
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/pkcs12.pyi",
+        "sha256": "bc411de700e266f6fc64615ace22c26962f3030a06fedbcf5312d0c39fee3a5f",
+        "size_bytes": 1605
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/pkcs7.pyi",
+        "sha256": "b711812628ea66c84472aadae9bc8f35b9e2b08765c733922073f6865f5aacfb",
+        "size_bytes": 1601
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/test_support.pyi",
+        "sha256": "3cf86577e5a43bbe3789714f79b786d0bb602b4693cc6763708b1acb51a6e461",
+        "size_bytes": 757
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/_rust/x509.pyi",
+        "sha256": "9fd5f4210e8809b7488be131742159a0181e63a9e39b740e540559c0341d9db9",
+        "size_bytes": 9784
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/openssl/__init__.py",
+        "sha256": "b3da0a090db2705757a0445d4b58a669fb9e4a406c2fd92f6f27e085a6ae67d6",
+        "size_bytes": 180
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/openssl/_conditional.py",
+        "sha256": "0cc3a903f5cde25ef4cd3739fc9f43a7095b41e5014535a97c8278c91227d7e5",
+        "size_bytes": 5791
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/bindings/openssl/binding.py",
+        "sha256": "c7c7a87049ae90ee1c9bb707a9f5663a8618ec2097768175bf55a1650b7d9dea",
+        "size_bytes": 4610
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/decrepit/__init__.py",
+        "sha256": "c0709b59f69e7daf9f93a4c74b0f6d87d7c952c4ad268ef6e39c1f141aa676e0",
+        "size_bytes": 216
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/decrepit/ciphers/__init__.py",
+        "sha256": "c0709b59f69e7daf9f93a4c74b0f6d87d7c952c4ad268ef6e39c1f141aa676e0",
+        "size_bytes": 216
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/decrepit/ciphers/algorithms.py",
+        "sha256": "62b2a01d2e0c7f059a3263c1611ca6451942d298705a9f727080857b37893c69",
+        "size_bytes": 2595
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/__init__.py",
+        "sha256": "b3da0a090db2705757a0445d4b58a669fb9e4a406c2fd92f6f27e085a6ae67d6",
+        "size_bytes": 180
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/_asymmetric.py",
+        "sha256": "46181ca2e501e874e214306b4752f1aa4323a54c4888dbd0d6bff3263446eaa4",
+        "size_bytes": 532
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/_cipheralgorithm.py",
+        "sha256": "121de2ee5c1e7477e2d1e2d2b07f773d9c502b363d23a9642baeef2f8579b4e7",
+        "size_bytes": 1522
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/_serialization.py",
+        "sha256": "72180f0921768f12360abe6007ea9b5973af39fba9061e020114b428086ff403",
+        "size_bytes": 5123
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/__init__.py",
+        "sha256": "b3da0a090db2705757a0445d4b58a669fb9e4a406c2fd92f6f27e085a6ae67d6",
+        "size_bytes": 180
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/dh.py",
+        "sha256": "d2ffef105173e69435406f859160f2be0bfb21fb956521f943a2f2148e40f2b8",
+        "size_bytes": 3645
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/dsa.py",
+        "sha256": "2ddfdb6dba90173d7674e6c7c48933110cd7d125963f8d512d25a461268a86a1",
+        "size_bytes": 4213
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/ec.py",
+        "sha256": "763d1947f8d3548d70a238e2a636d735571c3d221139b5b14997131902866c77",
+        "size_bytes": 13437
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/ed25519.py",
+        "sha256": "8d95b972ce3bdb05d7577781d2c1356fcc3ae2075acf0c14d3f313e54393897b",
+        "size_bytes": 3700
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/ed448.py",
+        "sha256": "c807ad827d9fd8961fd013bc31aa46cd779386cbd2306e4b9940abc553a27400",
+        "size_bytes": 3729
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/padding.py",
+        "sha256": "bd0ea5ea03a0f47a9c6ceb2f1eb4a225154b7448fd2f89b81e4446633893c850",
+        "size_bytes": 2854
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/rsa.py",
+        "sha256": "66728ea367f7e0c0823aea42d37635b91fbf8e2486e48ade947126c5a304dc3e",
+        "size_bytes": 8303
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/types.py",
+        "sha256": "2e7b0e2729bec263d427b2a7bbfedb08d5379088842c277a92b39a5bf254d3c2",
+        "size_bytes": 2996
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/utils.py",
+        "sha256": "0cf4ece93e05f94870cc541387ed5f484a50cdacc7da37f6c6922ba3722d178a",
+        "size_bytes": 790
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/x25519.py",
+        "sha256": "ff89d0799df22772e0d11a579daa80fb5cadeaf6f1d45fb0ccb71a647c12a5e1",
+        "size_bytes": 3613
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/asymmetric/x448.py",
+        "sha256": "58a04bb6e55f26a88146ba3ae787c6690025bec29ba9b3642bb73803f642755d",
+        "size_bytes": 3642
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/ciphers/__init__.py",
+        "sha256": "7b21179a393afc265768e3d80ebeef018197af6f50bf38162f6fb8092a252c5b",
+        "size_bytes": 680
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/ciphers/aead.py",
+        "sha256": "173972c7bc3c29841a9330e9d735a026722beb6ce066b815875bb68787b1079e",
+        "size_bytes": 634
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/ciphers/algorithms.py",
+        "sha256": "43b649c1cb31f37320c6fe72eebe82c8929276c3b00be9b2fb903aefe99adafc",
+        "size_bytes": 3407
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/ciphers/base.py",
+        "sha256": "6810bb1c7041a22c5e6e6a5aad5af4525383b37543d00ec1ea8cff01a4630eff",
+        "size_bytes": 4253
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/ciphers/modes.py",
+        "sha256": "db4b2da70843b5b02fa47d1231ff440c721c8b099317e24c054399f5b53c5a24",
+        "size_bytes": 8318
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/cmac.py",
+        "sha256": "b33fece87fdc6273afc7e54d59d20a85185edd89a9f33f09d03dc206a397de08",
+        "size_bytes": 338
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/constant_time.py",
+        "sha256": "c5dba7593d277fc3af29d72a52186514a6b21a9e3f3e0549454d96d702d2aff0",
+        "size_bytes": 422
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/hashes.py",
+        "sha256": "33c06b94a07753a0c4b47bd64d5e55463a6d787bf5912dd9c66fc1b24d3872bf",
+        "size_bytes": 5184
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/hmac.py",
+        "sha256": "469077cfdcf9b248ab090ae6ef341bb67a7da4b327023ae54d4bcaa85e5a0c37",
+        "size_bytes": 423
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/kdf/__init__.py",
+        "sha256": "e1789b667ad8ab8861e710635a2217cda616e852b1f213db55a6bf701f734bae",
+        "size_bytes": 750
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/kdf/argon2.py",
+        "sha256": "5050cd5c6d2ffabc370ea0104c1d54400b100b633912383493fe8e0b284b2aeb",
+        "size_bytes": 460
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/kdf/concatkdf.py",
+        "sha256": "51af0aa0b5d79f382cac05261e9c8aca668fb7c68f44fd041c4681cfb40243d2",
+        "size_bytes": 3737
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/kdf/hkdf.py",
+        "sha256": "33494011f468738929a78fa7c038fdc81faf359ba420e60442b5255ac04d9fda",
+        "size_bytes": 543
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/kdf/kbkdf.py",
+        "sha256": "a197a9be8e1ebe12a4909416443c1a3e821bc9368598373934f8a6c60ea57ca8",
+        "size_bytes": 9165
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/kdf/pbkdf2.py",
+        "sha256": "d562308442d1d30f33b53a53bbc06b16261698ade151f26ad3c23bf53c7089e1",
+        "size_bytes": 1957
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/kdf/scrypt.py",
+        "sha256": "5f259475452686e23d57a4ea00f3afba3092306bf55d0760d1adb52160a63be5",
+        "size_bytes": 590
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/kdf/x963kdf.py",
+        "sha256": "ccb4dc17aeb9405bd75f67fc4d2edf981653b5e5e916329a8737e38d0702272c",
+        "size_bytes": 1999
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/keywrap.py",
+        "sha256": "5d5e0f8f67ea49e0fe46a655bd8d9c0378f9ffb470252172818b8b7e4dae8c2a",
+        "size_bytes": 5650
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/padding.py",
+        "sha256": "413f94f8dbd5d9e4063b5c153db0e234635273d91e4434be8a0e5c40eacbcf41",
+        "size_bytes": 1865
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/poly1305.py",
+        "sha256": "3f910f415f9107f1493da869834d6ed13b384bf3e7026b2ba312065db19e451a",
+        "size_bytes": 355
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/serialization/__init__.py",
+        "sha256": "43bb9380396dee7dd67ec313ea3630bad0ba0c883fed211ea009b51876790791",
+        "size_bytes": 1705
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/serialization/base.py",
+        "sha256": "8a4ab9309230a7fa149e389a05ca3f3e643039362e1a2f979185181cacbc568d",
+        "size_bytes": 615
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/serialization/pkcs12.py",
+        "sha256": "992f5c14d1b869fcefb1ea1ce5ed4c5a863656c91f2fc37c63f3858e5ebb96e6",
+        "size_bytes": 5104
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/serialization/pkcs7.py",
+        "sha256": "e4e47f4e4cacc5aa6b9f815e82f2487db7a9f6b27dc2893a14b5af5b0439f8c8",
+        "size_bytes": 13943
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/serialization/ssh.py",
+        "sha256": "84f579a1b1739f3d108457d714f39e43ccba32cbab034c5531088b9cb11212cf",
+        "size_bytes": 53700
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/twofactor/__init__.py",
+        "sha256": "b66319181fa0e08535afb94816a012534d7dcebd2e3e9ff010161cc1d0c22820",
+        "size_bytes": 258
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/twofactor/hotp.py",
+        "sha256": "8af668e41adc08658bb2aaa5e27655d175c28f218f8bf8877c3165b4694e2709",
+        "size_bytes": 3256
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/hazmat/primitives/twofactor/totp.py",
+        "sha256": "9b92cfa512f4d24a78cd8f204e3af9e477f3f5a3253d2e7790799591240299d6",
+        "size_bytes": 1652
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/py.typed",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/utils.py",
+        "sha256": "9c51e43d067270e406781b414645920385a3387168ee9c2e9a642df8f3d29197",
+        "size_bytes": 4349
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/__init__.py",
+        "sha256": "c65a0dd2cc2c78dc7e9b6585666080d7b80ea31416a9e53cd9456311d24178f4",
+        "size_bytes": 8257
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/base.py",
+        "sha256": "3ab993c37cbc07a004fe719740f37cc7d92af9deeb0d6787d77802aba4fa0fa5",
+        "size_bytes": 27997
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/certificate_transparency.py",
+        "sha256": "26aa0e203865c089eb60c156e88167efb589d2f885f8f07fae5655defb3d3187",
+        "size_bytes": 797
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/extensions.py",
+        "sha256": "43162ba91e92175ab347d66b68ff300e221cce511594016ec03455725b41e939",
+        "size_bytes": 77724
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/general_name.py",
+        "sha256": "b0ffeb575d50969b24e31dd75c6258fccbf443fb3d76d8de2dc907b23a4b4284",
+        "size_bytes": 7836
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/name.py",
+        "sha256": "b72d3fc5fd0b9c7c1901d11ff9df052ced4ae211aac7fec3b03dc21f0a0b2626",
+        "size_bytes": 15101
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/ocsp.py",
+        "sha256": "61ecba35d155d4c3e3a29db8323fd57a78c4a60de451a328a5258e2b401b781b",
+        "size_bytes": 12699
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/oid.py",
+        "sha256": "054ce05d71955a296406474a3d39bd478a84944f600061e07583cc640a7b3c9a",
+        "size_bytes": 931
+      },
+      {
+        "dependency": "cryptography",
+        "path": "cryptography/x509/verification.py",
+        "sha256": "811d82d9cf97650b5b959853e53e6f8d228eb426fbe1e7f66a53d59847301653",
+        "size_bytes": 958
+      }
+    ],
+    "python_runtime": {
+      "cache_tag": "cpython-313",
+      "implementation": "cpython",
+      "machine": "AMD64",
+      "platform": "win32",
+      "version": "3.13.12"
+    },
+    "schema_version": "atanor.gwip-capability-runtime-dependency-binding.v1",
+    "tree_sha256": "0e61166616b69132a2269c582d0bbaa7158423e06d0739ae8494b717999df513"
+  },
+  "schema_version": "atanor.gwip-capability-seed-manifest.v3",
+  "target_arm_schedule": "fixed_six_permutation_latin"
+}

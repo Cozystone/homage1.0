@@ -1,0 +1,18 @@
+{
+  "attests_code_commit": "a7406eefdea07b2c3c6e8d3e2ac426cdcd0d9e96",
+  "note": "This attestation lives in a CHILD commit of the code it certifies (audit #6: a verdict cannot sign its own commit). Reproduce: git checkout a7406eefdea07b2c3c6e8d3e2ac426cdcd0d9e96 && PYTHONHASHSEED=0 python -m packages.b5_missions.run_all_e2e",
+  "report_sha256": {
+    "b5_1_e2e_report.json": "ef4056fe3dd8ae6338aac79d71e016854a47708f74be9e2da4dfaad8dfa1a02c",
+    "b5_2_e2e_report.json": "9405393d26f95e80abbe439358e0693f271ab3a27f4c306db10fad7aea3d7842",
+    "b5_3_e2e_report.json": "d6f896634bc133a1505304bcbdfa87eced8f355becab32d399af503eb95ff6d0",
+    "b5_e2e_verdict.json": "b46380879c21c50699f9ef1bc740063fee1c649e6e0bc27689edb7a326a4a2d0"
+  },
+  "verdict": "B5-E2E PASS (measured gates): B5-1 real composer, B5-2 out-of-proc oracle, B5-3 process-sealed raw-triple planner. Answer keys physically absent from executor processes.",
+  "still_not_run": [
+    "live_:8502_integration_of_promoted_organs",
+    "141M_retrieval",
+    "3B_8B_baseline",
+    "human_blind_fluency",
+    "sealed_private_holdout"
+  ]
+}

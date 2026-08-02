@@ -1,0 +1,1981 @@
+{
+  "schema_version": 1,
+  "schema": "atanor.architecture.runtime-edge-manifest.v1",
+  "claim_scope": "Selected source-bound critical runtime paths and explicitly named unresolved handoffs only. This mechanism census includes nine narrowly scoped M3 controlled-test edges and otherwise M1/V0 evidence; it establishes conditional source reachability, not process activation, a completed operator workflow, production exercise, atomic post-COMMITTED lifecycle recording, external trust provisioning, integration quality, benchmark lift, GPQA or ARC-AGI capability, consciousness, AGI, or E5/E6.",
+  "definitions": {
+    "static_import": "A literal import observed in a source-bound file. It never establishes runtime reachability.",
+    "reachable_call": "A call path confirmed by source control flow. It never establishes that a deployed process exercised the path.",
+    "exercised_trace": "An immutable execution receipt bound to the exercised code and inputs. Test definitions and green console output alone are not traces.",
+    "authority": "The source-attested scope allowed to affect a decision or side effect. An external-signature requirement is a mechanism claim, not proof that deployed trust provisioning exists.",
+    "unknown": "The repository evidence inspected here cannot establish the claim. Unknown is preserved and never promoted from adjacent evidence."
+  },
+  "enums": {
+    "static_import": [
+      "observed",
+      "not_observed_in_bound_source",
+      "unknown"
+    ],
+    "reachable_call": [
+      "source_confirmed",
+      "not_observed_in_bound_source",
+      "not_applicable",
+      "unknown"
+    ],
+    "exercised_trace": [
+      "production_trace",
+      "controlled_test",
+      "not_recorded",
+      "unknown"
+    ],
+    "authority": [
+      "unattested",
+      "bounded_guard",
+      "conditional_decider",
+      "staging_only",
+      "external_signature_required",
+      "unknown"
+    ],
+    "enablement": [
+      "default",
+      "conditional",
+      "controlled_only",
+      "external_invocation",
+      "unknown"
+    ],
+    "relation": [
+      "python_call",
+      "artifact_flow",
+      "side_effect_boundary"
+    ],
+    "binding_kind": [
+      "live_source",
+      "test_source",
+      "evidence_report"
+    ],
+    "mechanism_stage": [
+      "V0",
+      "M1",
+      "M2",
+      "M3"
+    ]
+  },
+  "maturity": {
+    "census_stage": "M1",
+    "capability_claims": [],
+    "e5_claimed": false,
+    "benchmark_lift_claimed": false
+  },
+  "bindings": [
+    {
+      "id": "autonomy_envelope_core",
+      "path": "packages/autonomy_envelope/envelope.py",
+      "kind": "live_source",
+      "sha256": "a8468f3300bb5b4e15201888712f36a3f7541e7feb56d6029a8c5daa31f4ec59",
+      "anchors": [
+        "class AutonomyEnvelope:",
+        "def check(self, action: EnvelopeAction) -> EnvelopeDecision:"
+      ]
+    },
+    {
+      "id": "autonomy_envelope_operator_trust",
+      "path": "packages/autonomy_envelope/operator_trust.py",
+      "kind": "live_source",
+      "sha256": "f19af13f9d5cafdb1179ee35f904579d00e3dcf2ff6eb87b80a564277a8bf1c5",
+      "anchors": [
+        "def verify_shipped_graph_promotion(",
+        "def verify_shipped_graph_promotion_historical("
+      ]
+    },
+    {
+      "id": "autonomy_envelope_promotion_queue",
+      "path": "packages/autonomy_envelope/promotion_queue.py",
+      "kind": "live_source",
+      "sha256": "6c8524e30095e4b68f89b09e5e7ad6bddf5d65c1131f22827e66c5584133e840",
+      "anchors": [
+        "class NightlyPromotionQueue:",
+        "def sign_batch("
+      ]
+    },
+    {
+      "id": "autonomy_kernel_intrinsic_drive",
+      "path": "packages/autonomy_kernel/intrinsic_drive.py",
+      "kind": "live_source",
+      "sha256": "1d2761529e2e35a4041f2eb1e8746211e6b7c3d0ca86e830a2493ccae6bba140",
+      "anchors": [
+        "from packages.autonomy_kernel.moltbook_autopilot import autopilot_tick",
+        "result = autopilot_tick(now=now, state=state)"
+      ]
+    },
+    {
+      "id": "autonomy_kernel_moltbook_autopilot",
+      "path": "packages/autonomy_kernel/moltbook_autopilot.py",
+      "kind": "live_source",
+      "sha256": "5c23be901f60cf303fe0979b9acb07a2c7129292ce55a74e060d5c3faabeb94d",
+      "anchors": [
+        "from packages.autonomy_envelope import (",
+        "membrane = envelope.check("
+      ]
+    },
+    {
+      "id": "cgsr_response_workspace_world4d_shadow",
+      "path": "packages/cgsr/cgsr/response_workspace.py",
+      "kind": "live_source",
+      "sha256": "5bec2d433575a59abc4627fa67ba464714ba685ffd99d8574af8d12a651948f8",
+      "anchors": [
+        "def _observe_world4d_shadow(ask: _TemporalAsk, raw_question: str) -> bool:",
+        "_observe_world4d_shadow(ask, raw_question)",
+        "bu = _shared_block_universe(raw_question)"
+      ]
+    },
+    {
+      "id": "cognitive_core_chat_shadow",
+      "path": "packages/cognitive_core/chat_shadow.py",
+      "kind": "live_source",
+      "sha256": "d6bbc3e5c74230306e9424d4c6dae5812e99d494b57bea1bdc73c8d7658daad6",
+      "anchors": [
+        "def begin_chat_cycle_shadow(",
+        "if not shadow_enabled():",
+        "CycleLedger(self._project_root / SHADOW_LEDGER_RELATIVE).append(receipt)"
+      ]
+    },
+    {
+      "id": "cognitive_core_cycle_ledger",
+      "path": "packages/cognitive_core/cycle_ledger.py",
+      "kind": "live_source",
+      "sha256": "10b1b202d38105978e47762a3fb2517566a658dc088292a5d17cb7dec965e077",
+      "anchors": [
+        "class CycleLedgerCapacityError(ValueError):",
+        "class CycleLedger:",
+        "def append(self, value: CycleReceipt | Mapping[str, Any]) -> dict[str, Any]:"
+      ]
+    },
+    {
+      "id": "cognitive_cycle_shadow_control_test",
+      "path": "apps/api/tests/test_cognitive_cycle_shadow.py",
+      "kind": "test_source",
+      "sha256": "0b66229fc5f014b10caf138a7ee62911e727312195b036fdd77a14923bc66469",
+      "anchors": [
+        "def test_default_off_live_chat_response_is_byte_shape_equivalent_and_no_ledger(",
+        "def test_enabled_live_chat_keeps_response_identical_and_emits_one_receipt(",
+        "def test_live_chat_exception_is_reraised_after_non_authoritative_failure_receipt("
+      ]
+    },
+    {
+      "id": "cognitive_spine_control_evidence",
+      "path": "reports/baseline_evidence/baseline_20260724T232815.306610Z_42f21ef3d6f0.manifest.json",
+      "kind": "evidence_report",
+      "sha256": "a5b3443918a29dde763dd0af803804b653ace9861c8eb3589b41637cd89c96a5",
+      "anchors": [
+        "\"name\": \"cognitive_spine_control\",",
+        "\"id\": \"g1_canonical_cycle_shadow\",",
+        "\"manifest_hash\": \"2a3d1a0cc7079797f093fcc8551f9a4d77f1638f029164b13cb626f774bc0f1a\""
+      ]
+    },
+    {
+      "id": "continuous_self_api_runtime",
+      "path": "apps/api/app/routers/continuous_self.py",
+      "kind": "live_source",
+      "sha256": "916d4153f22f540dc13b275bfaf4120bb2e15eab94408cc100729567bea19396",
+      "anchors": [
+        "_CONTINUOUS_SELF_SHADOW_LEDGER = (",
+        "_SELF = ContinuousSelf(",
+        "research_every=30, shadow_ledger_path=_CONTINUOUS_SELF_SHADOW_LEDGER,",
+        "# Begin living as soon as the API imports this router"
+      ]
+    },
+    {
+      "id": "continuous_self_cycle_shadow",
+      "path": "packages/cognitive_core/continuous_self_shadow.py",
+      "kind": "live_source",
+      "sha256": "4b4046f06d1c3d28f0abf09a31f287d47a9fe6509ac0e97e479f98230844be54",
+      "anchors": [
+        "def continuous_self_shadow_enabled() -> bool:",
+        "class ContinuousSelfReceiptDispatcher:",
+        "class ContinuousSelfCycleSpan:",
+        "def begin_continuous_self_cycle_shadow("
+      ]
+    },
+    {
+      "id": "continuous_self_cycle_shadow_control_test",
+      "path": "packages/cognitive_core/tests/test_continuous_self_shadow.py",
+      "kind": "test_source",
+      "sha256": "394a2121cd100a332a437961e59227e1cd7dd50fc2b968d6364e399d5031663e",
+      "anchors": [
+        "def test_exact_flags_and_disabled_span_never_call_path_factory(monkeypatch):",
+        "def test_sampled_step_records_digest_only_replayable_receipt(monkeypatch, tmp_path):",
+        "def test_original_exception_object_and_traceback_survive_observer(monkeypatch, tmp_path):",
+        "def test_ledger_append_is_async_and_outside_self_lock(monkeypatch, tmp_path):",
+        "def test_bounded_dispatcher_drops_when_writer_is_stalled(monkeypatch, tmp_path):"
+      ]
+    },
+    {
+      "id": "continuous_self_loop",
+      "path": "packages/continuous_self/loop.py",
+      "kind": "live_source",
+      "sha256": "065540412e482ccd473d648439ae330134c5997cb2847ff438a98cfc3200bda2",
+      "anchors": [
+        "def _continuous_self_step_lock(lock, span, state, observation):",
+        "shadow_span = begin_continuous_self_cycle_shadow(",
+        "with _continuous_self_step_lock(",
+        "from packages.autonomy_kernel.intrinsic_drive import act as _drive_act",
+        "threading.Thread(target=lambda: _drive_act(_st), daemon=True).start()"
+      ]
+    },
+    {
+      "id": "deployment_linux_build",
+      "path": "deploy/atanor-linux/build.sh",
+      "kind": "live_source",
+      "sha256": "ab50812fbad66985870f3d971c13e60762f4bfc96dd97b40ecc4e5d9b19869e7",
+      "anchors": [
+        "KG_PROMOTION_DOCUMENT=${ATANOR_KG_PROMOTION_DOCUMENT:-}",
+        "python3 \"$BUILD_REPO_ROOT/scripts/install_signed_shipped_graph.py\" install",
+        "python3 \"$BUILD_REPO_ROOT/scripts/install_signed_shipped_graph.py\" verify-copy"
+      ]
+    },
+    {
+      "id": "dual_brain_chat_cycle_boundary",
+      "path": "apps/api/app/routers/dual_brain.py",
+      "kind": "live_source",
+      "sha256": "4bad870de1d4e0084a90f51fcfa77a3eeb866201e2001555755ee2e0e8a53a43",
+      "anchors": [
+        "async def chat_atanor(request: AtanorChatRequest) -> dict[str, Any]:",
+        "begin_chat_cycle_shadow(request, project_root=PROJECT_ROOT)",
+        "_cycle_shadow.complete(response)"
+      ]
+    },
+    {
+      "id": "fusion_loop_adapter",
+      "path": "packages/fusion_loop/envelope_adapter.py",
+      "kind": "live_source",
+      "sha256": "c9dab3a63168098a4a41b1dbf652158743742eb8e669f5e56c4a956c33f6843d",
+      "anchors": [
+        "from packages.autonomy_envelope.interface import (",
+        "verdict = self.inner.check(f5_action)"
+      ]
+    },
+    {
+      "id": "fusion_loop_core",
+      "path": "packages/fusion_loop/loop.py",
+      "kind": "live_source",
+      "sha256": "f2e4d7ac582fc1de1dd6855171260fb8e09e91d700826720be593e2c30313605",
+      "anchors": [
+        "decision = self.envelope.authorize(action)"
+      ]
+    },
+    {
+      "id": "fusion_loop_unsupervised",
+      "path": "packages/fusion_loop/unsupervised.py",
+      "kind": "live_source",
+      "sha256": "a809c627ccfc19e3d3d476133469ccca8a5be442e88e9aa16506a36b8048aaa8",
+      "anchors": [
+        "env = AutonomyEnvelope(scratch / \"envelope\", whitelist=wl, baseline_score=0.0)",
+        "adapter = EnvelopeAdapter(env)"
+      ]
+    },
+    {
+      "id": "graph_scale_mutation_batch",
+      "path": "packages/graph_scale/mutation_batch.py",
+      "kind": "live_source",
+      "sha256": "795060b3b1980d4a7fad40fe1786bada380f02fb308d5971366c885b7127e1ec",
+      "anchors": [
+        "MANIFEST_SCHEMA_VERSION = \"atanor.graph-scale.mutation-batch.v1\"",
+        "def create_mutation_batch(",
+        "def load_validated_mutation_batch(",
+        "def record_lifecycle_receipt(",
+        "def record_applied_receipt("
+      ]
+    },
+    {
+      "id": "mutation_batch_compiler",
+      "path": "scripts/create_graph_mutation_batch.py",
+      "kind": "live_source",
+      "sha256": "cd96c5c5624b7ae07631bf72056f43e93862cccfacaa5ee082c624e48f103ba9",
+      "anchors": [
+        "def compile_proposal(",
+        "reference = create_mutation_batch(",
+        "detected_receipt = record_lifecycle_receipt(",
+        "proposed_receipt = record_lifecycle_receipt("
+      ]
+    },
+    {
+      "id": "promotion_landing_chain",
+      "path": "scripts/landing_chain_lib.py",
+      "kind": "live_source",
+      "sha256": "8af74cb7625bd3b2ea7b052768aadcf01c0936251f23e48c83e36a49a0b276cf",
+      "anchors": [
+        "def swap(",
+        "def load_system_shipped_graph_operator_boundary(",
+        "def _assert_no_unresolved_swap_transactions(",
+        "nonce_receipt = _consume_promotion_nonce(",
+        "live.rename(previous)",
+        "sealed.rename(live)"
+      ]
+    },
+    {
+      "id": "promotion_script",
+      "path": "scripts/promote_staging_to_shipped.py",
+      "kind": "live_source",
+      "sha256": "fd7b8fbbd14dcabedfe154365679fddcac4b3964a3a1013e3c27d7964ee38897",
+      "anchors": [
+        "import landing_chain_lib as L",
+        "document = L._strict_json_object(",
+        "payload = L.StoreMerger.staging_receipt_payload(",
+        "context = L.StoreMerger.promotion_context(",
+        "res = L.StoreMerger.swap("
+      ]
+    },
+    {
+      "id": "reasoning_exam_answer",
+      "path": "packages/reasoning_vm/exam_answer.py",
+      "kind": "live_source",
+      "sha256": "3b286ded9ccc0fcd421b340e4939befb813881c976bc21b00b9de57d52ebe459",
+      "anchors": [
+        "from .deliberator.mcq_adapter import engine_pick",
+        "ep = engine_pick(stem, choices, facts_about)"
+      ]
+    },
+    {
+      "id": "shipped_graph_installer",
+      "path": "scripts/install_signed_shipped_graph.py",
+      "kind": "live_source",
+      "sha256": "f29f9655315856cce6c8cffa3194313a57317b33f0bef82081cc804c040015c3",
+      "anchors": [
+        "def verify_deployment_evidence(",
+        "verified = verify_shipped_graph_promotion_historical(",
+        "def install(",
+        "temporary.rename(destination)",
+        "def verify_copy("
+      ]
+    },
+    {
+      "id": "temporal_reasoning_block_universe",
+      "path": "packages/temporal_reasoning/block_universe.py",
+      "kind": "live_source",
+      "sha256": "3b5d4f6848a318fd5ccec36bb3ed544497dd1b34d9c8b98b0d7bd41028190965",
+      "anchors": [
+        "class BlockUniverse:",
+        "def project_forward(self, k: int = 3, horizon: int = 3)",
+        "def infer_backward(self, event_token: str, k: int = 3)"
+      ]
+    },
+    {
+      "id": "world4d_block_universe_provider",
+      "path": "packages/world4d/block_universe_provider.py",
+      "kind": "live_source",
+      "sha256": "caae3f226210729243244755033665606fb4d171b777c3515da328378f1a7e2d",
+      "anchors": [
+        "from packages.temporal_reasoning.block_universe import BlockUniverse",
+        "class BlockUniverseShadowProvider:",
+        "def propose("
+      ]
+    },
+    {
+      "id": "world4d_shadow_adapter",
+      "path": "packages/world4d/shadow.py",
+      "kind": "live_source",
+      "sha256": "a3e51e39854d2938ae41adca2ca127210ccc91b276fe86afff080b8778a08d02",
+      "anchors": [
+        "class JsonlReceiptSink:",
+        "class World4DShadowAdapter:",
+        "class World4DShadowDispatcher:",
+        "def submit_temporal_query_shadow("
+      ]
+    },
+    {
+      "id": "world4d_shadow_control_evidence",
+      "path": "reports/baseline_evidence/baseline_20260724T225531.739793Z_45bfaf0d04c9.manifest.json",
+      "kind": "evidence_report",
+      "sha256": "8b9f4421cfa6d426da80f4f34fe99a19bd2cff9a8974bed43fd147cd29c13bf8",
+      "anchors": [
+        "\"name\": \"world4d_shadow_control\",",
+        "\"id\": \"g3_world4d_sibling_shadow\",",
+        "\"manifest_hash\": \"86cbf9d3cebf0b0b7614771da7f0b6008fa1d5a585365f71b4c93cb8eb6767c7\""
+      ]
+    },
+    {
+      "id": "world4d_shadow_control_test",
+      "path": "packages/world4d/tests/test_live_temporal_shadow.py",
+      "kind": "test_source",
+      "sha256": "7bfd430909d5c8eb8a998a45a8b8b62384bd569d5783f1ff3bad4323a2fdbaa4",
+      "anchors": [
+        "def test_default_off_preserves_answer_and_creates_no_world4d_ledger(",
+        "def test_enabled_sibling_shadow_preserves_exact_answer_and_adds_one_receipt(",
+        "def test_live_submission_does_not_wait_for_stalled_observer(",
+        "def test_async_live_path_binds_repository_artifact_digest("
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "chat_boundary_to_cognitive_shadow",
+      "relation": "python_call",
+      "caller": {
+        "owner": "apps.api.app.routers.dual_brain",
+        "symbol": "chat_atanor"
+      },
+      "callee": {
+        "owner": "packages.cognitive_core",
+        "symbol": "chat_shadow.begin_chat_cycle_shadow"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "dual_brain_chat_cycle_boundary"
+        ],
+        "note": "The outer chat boundary imports the observer helper inside an exception-isolated block."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "cognitive_core_chat_shadow",
+          "dual_brain_chat_cycle_boundary"
+        ],
+        "note": "Every chat request reaches begin_chat_cycle_shadow, whose exact server-side flag check returns before request access when disabled; normal and exception terminals are observed outside the answer pipeline."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "cognitive_cycle_shadow_control_test",
+          "cognitive_spine_control_evidence"
+        ],
+        "note": "The source-bound repeated control profile records default-off response equality, no ledger access, enabled receipt emission, and exception preservation."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "cognitive_core_chat_shadow",
+          "dual_brain_chat_cycle_boundary"
+        ],
+        "note": "The observer is constrained to non-authoritative receipts and its failures are contained; it cannot alter response, route, truth, permission, action, safety, or promotion state."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "Only the exact server-side ATANOR_COGNITIVE_SHADOW=1 flag enables request observation; clients cannot enable it."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The enabled receipt stores content hashes and bounded structure, not a lossless encrypted prompt/answer payload.",
+        "A controlled test receipt is not a production trace, E4 conformance, shared-state authority, or capability lift."
+      ]
+    },
+    {
+      "id": "cognitive_shadow_to_cycle_ledger",
+      "relation": "side_effect_boundary",
+      "caller": {
+        "owner": "packages.cognitive_core",
+        "symbol": "chat_shadow.ChatCycleSpan._write_terminal"
+      },
+      "callee": {
+        "owner": "packages.cognitive_core",
+        "symbol": "cycle_ledger.CycleLedger.append"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "cognitive_core_chat_shadow"
+        ],
+        "note": "chat_shadow imports CycleLedger and calls append only from the enabled terminal observer."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "cognitive_core_chat_shadow",
+          "cognitive_core_cycle_ledger"
+        ],
+        "note": "Successful enabled completion or failure observation constructs a terminal receipt and appends it through the validated hash-chain boundary."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "cognitive_cycle_shadow_control_test",
+          "cognitive_spine_control_evidence"
+        ],
+        "note": "The repeated control profile exercises append, reopen, replay, privacy, enabled chat, and failure receipt behavior."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "cognitive_core_chat_shadow",
+          "cognitive_core_cycle_ledger"
+        ],
+        "note": "The only side effect is the observer JSONL ledger; receipt flags fix action authorization, truth mutation, permission mutation, and promotion mutation to false."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "The append is unreachable through the disabled observer branch and occurs only after an enabled request reaches a terminal observation."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The local file lock and fsync mechanism do not prove external append-only ACLs, remote durability, or production exercise.",
+        "Hash-only content supports structural replay but not complete private payload replay."
+      ]
+    },
+    {
+      "id": "continuous_self_shadow_to_cycle_ledger",
+      "relation": "side_effect_boundary",
+      "caller": {
+        "owner": "packages.cognitive_core",
+        "symbol": "continuous_self_shadow.ContinuousSelfReceiptDispatcher._run"
+      },
+      "callee": {
+        "owner": "packages.cognitive_core",
+        "symbol": "cycle_ledger.CycleLedger.append"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "continuous_self_cycle_shadow"
+        ],
+        "note": "The dedicated asynchronous dispatcher imports CycleLedger and its configured-capacity error."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "cognitive_core_cycle_ledger",
+          "continuous_self_cycle_shadow"
+        ],
+        "note": "One bounded daemon worker per process and resolved ledger path appends immutable observer receipts to the dedicated ContinuousSelf ledger through exact reconstruction, replay, a local cross-process lock, and configured 256-record/4-MiB writer caps; multiple processes can each have a worker."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "cognitive_spine_control_evidence",
+          "continuous_self_cycle_shadow_control_test"
+        ],
+        "note": "The repeated control profile exercises exact receipt reconstruction, literal record indexes, atomic configured caps, asynchronous append outside the self lock, stalled-writer queue bounds, and telemetry drop behavior."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "cognitive_core_cycle_ledger",
+          "continuous_self_cycle_shadow"
+        ],
+        "note": "This edge authorizes no legacy action. Its only declared observer effect is a local ledger append; the receipt route and limitations explicitly leave the legacy step's effects, truth, permission, promotion, and action authority unattested."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "Receipts are submitted only after both exact server flags enable the observer and the pre-step tick passes fixed one-in-thirty sampling; queue overload or configured quota drops telemetry."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The configured caps are enforced by the audited writer under the local cross-process lock; they do not establish external ACLs, an immutable witness, remote durability, or production exercise.",
+        "Dispatcher single-worker scope is process-local per resolved ledger path; multiple API processes may each create a worker for the shared ledger.",
+        "The audited constructor excludes raw thoughts, questions, timestamps, goals, action payloads, URLs, narrative items, and hormone dictionaries, but deterministic low-entropy projection digests retain inference and linkability risk."
+      ]
+    },
+    {
+      "id": "continuous_self_step_to_cognitive_shadow",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.continuous_self",
+        "symbol": "loop.ContinuousSelf.step"
+      },
+      "callee": {
+        "owner": "packages.cognitive_core",
+        "symbol": "continuous_self_shadow.begin_continuous_self_cycle_shadow"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "continuous_self_loop"
+        ],
+        "note": "The legacy step imports the observer helper after its existing sensor and metabolism preparation."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "continuous_self_api_runtime",
+          "continuous_self_cycle_shadow",
+          "continuous_self_loop"
+        ],
+        "note": "The live API constructor supplies a dedicated ledger path; the step lazily begins the observer, captures exact-type primitive projections under the existing lock, executes the legacy body once, and finishes after lock release."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "cognitive_spine_control_evidence",
+          "continuous_self_cycle_shadow_control_test"
+        ],
+        "note": "The repeated control profile exercises exact OFF flags, deterministic sampling, return identity, one legacy invocation, original exception preservation, projection exclusion, observer faults, and nonblocking stalled-ledger behavior."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "continuous_self_cycle_shadow",
+          "continuous_self_loop"
+        ],
+        "note": "The bounded guard applies only to the observer projection and queue submission. It does not authorize, block, isolate, enumerate, or make safe the legacy step's persistent, network, self-modification, training, or background effects."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "The master cognitive flag and ATANOR_CONTINUOUS_SELF_CYCLE_SHADOW must both equal the exact string 1; only pre-step ticks divisible by thirty are sampled."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "A completed receipt means only that the legacy method returned; swallowed internal faults, state persistence, and background-effect completion remain unobserved.",
+        "Cross-process self-state ownership, daemon-thread mutation outside the self lock, legacy seed control, parent-cycle linkage, shared-state authority, E4, E5, consciousness, and capability lift remain unestablished."
+      ]
+    },
+    {
+      "id": "continuous_self_to_intrinsic_drive",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.continuous_self",
+        "symbol": "loop.ContinuousSelf.step"
+      },
+      "callee": {
+        "owner": "packages.autonomy_kernel",
+        "symbol": "intrinsic_drive.act"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "continuous_self_loop"
+        ],
+        "note": "The import is inside the guarded tick branch."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "continuous_self_loop"
+        ],
+        "note": "Every tenth loop tick can start a daemon thread whose target calls intrinsic_drive.act."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable production or controlled execution receipt is bound to this edge."
+      },
+      "authority": {
+        "state": "unattested",
+        "binding_refs": [],
+        "note": "This census does not attest decision authority for the loop-to-drive trigger."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "The enclosing ContinuousSelf loop must be running and ticks must be divisible by ten; exceptions are swallowed and the call is asynchronous."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The modulo-ten trigger is metronomic even though action selection inside the drive uses state.",
+        "Source reachability does not establish that a deployed ContinuousSelf process is active."
+      ]
+    },
+    {
+      "id": "deployment_build_to_signed_graph_installer",
+      "relation": "side_effect_boundary",
+      "caller": {
+        "owner": "deploy.atanor_linux",
+        "symbol": "build.phase_atanor_and_image"
+      },
+      "callee": {
+        "owner": "scripts",
+        "symbol": "install_signed_shipped_graph.main"
+      },
+      "static_import": {
+        "state": "not_observed_in_bound_source",
+        "binding_refs": [
+          "deployment_linux_build"
+        ],
+        "note": "The shell build invokes the installer as a Python subprocess rather than importing it."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "deployment_linux_build",
+          "shipped_graph_installer"
+        ],
+        "note": "The atanor/all phase requires a promotion document and invokes install; the image/all phase invokes verify-copy after rsync."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable completed image-build receipt is bound to this edge."
+      },
+      "authority": {
+        "state": "external_signature_required",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "deployment_linux_build",
+          "promotion_landing_chain",
+          "shipped_graph_installer"
+        ],
+        "note": "The build refuses an absent document and delegates acceptance to the fixed-boundary signed-evidence verifier."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "A root build must select atanor/all or image/all and supply ATANOR_KG_PROMOTION_DOCUMENT."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Source wiring does not prove that a deployment build ran or that the external boundary artifacts were provisioned.",
+        "The host installer source and the repository cloned inside the rootfs are not revision-bound to each other; path pinning is not a complete release manifest."
+      ]
+    },
+    {
+      "id": "exam_answer_to_deliberator",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.reasoning_vm",
+        "symbol": "exam_answer.answer_exam"
+      },
+      "callee": {
+        "owner": "packages.reasoning_vm",
+        "symbol": "deliberator.mcq_adapter.engine_pick"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "reasoning_exam_answer"
+        ],
+        "note": "answer_exam imports engine_pick inside its System-2 fallback block."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "reasoning_exam_answer"
+        ],
+        "note": "The call is reached only after the earlier factual discriminator does not return a grounded answer."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable trace binds the public answer_exam entry to a DELIBERATOR firing."
+      },
+      "authority": {
+        "state": "conditional_decider",
+        "binding_refs": [
+          "reasoning_exam_answer"
+        ],
+        "note": "A non-null engine choice is returned by answer_exam; otherwise the existing cascade continues."
+      },
+      "enablement": {
+        "state": "default",
+        "note": "The source calls the adapter by default, while the adapter can still disable itself or abstain."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The call is wrapped in a broad exception handler, so failures fall through silently.",
+        "The source path does not prove DELIBERATOR firing rate, accuracy lift, GPQA lift, or paired E5 evidence."
+      ]
+    },
+    {
+      "id": "fusion_adapter_to_autonomy_envelope",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.fusion_loop",
+        "symbol": "envelope_adapter.EnvelopeAdapter.authorize"
+      },
+      "callee": {
+        "owner": "packages.autonomy_envelope",
+        "symbol": "envelope.AutonomyEnvelope.check"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "fusion_loop_adapter"
+        ],
+        "note": "The adapter imports the autonomy-envelope interface and calls a structurally compatible checker."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "autonomy_envelope_core",
+          "fusion_loop_adapter",
+          "fusion_loop_unsupervised"
+        ],
+        "note": "The controlled unsupervised constructor injects a concrete AutonomyEnvelope into the adapter, whose authorize method calls inner.check."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Controlled test definitions exist, but no immutable execution receipt is bound here."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "autonomy_envelope_core",
+          "fusion_loop_adapter"
+        ],
+        "note": "The adapter forwards the inner guard verdict for the mapped action; this is bounded to calls routed through this adapter."
+      },
+      "enablement": {
+        "state": "controlled_only",
+        "note": "The concrete binding identified here is constructed by fusion_loop.unsupervised, which declares itself a bounded controlled run rather than a live overnight process."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "A protocol-compatible fake can also be injected, so the adapter source alone does not prove the concrete guard.",
+        "No production process trace or external evaluator receipt is bound."
+      ]
+    },
+    {
+      "id": "fusion_loop_to_envelope_adapter",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.fusion_loop",
+        "symbol": "loop.FusionLoop._authorize"
+      },
+      "callee": {
+        "owner": "packages.fusion_loop",
+        "symbol": "envelope_adapter.EnvelopeAdapter.authorize"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "fusion_loop_unsupervised"
+        ],
+        "note": "The controlled runner imports the adapter and injects it into FusionLoop."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "fusion_loop_adapter",
+          "fusion_loop_core",
+          "fusion_loop_unsupervised"
+        ],
+        "note": "FusionLoop._authorize calls the injected envelope hook, and the controlled runner supplies EnvelopeAdapter."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable execution receipt is bound to the injected FusionLoop-to-adapter call."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "fusion_loop_adapter",
+          "fusion_loop_core",
+          "fusion_loop_unsupervised"
+        ],
+        "note": "Within the controlled construction, sanctioned FusionLoop actions consult the adapter before their modeled side effects."
+      },
+      "enablement": {
+        "state": "controlled_only",
+        "note": "The concrete wiring is established in run_unsupervised, not as a production daemon or default FusionLoop constructor."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "FusionLoop defaults to PermissiveEnvelope when no hook is supplied.",
+        "The controlled path is not evidence that every other FusionLoop construction uses AutonomyEnvelope."
+      ]
+    },
+    {
+      "id": "installer_to_historical_operator_trust",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts",
+        "symbol": "install_signed_shipped_graph.verify_deployment_evidence"
+      },
+      "callee": {
+        "owner": "packages.autonomy_envelope",
+        "symbol": "operator_trust.verify_shipped_graph_promotion_historical"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "shipped_graph_installer"
+        ],
+        "note": "The installer imports the historical shipped-graph verifier."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "shipped_graph_installer"
+        ],
+        "note": "verify_deployment_evidence reconstructs the fixed-boundary context and verifies the signed document at the durable nonce-receipt consumption time."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Tests exercise this call, but no immutable production deployment receipt is bound."
+      },
+      "authority": {
+        "state": "external_signature_required",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "promotion_landing_chain",
+          "shipped_graph_installer"
+        ],
+        "note": "An expired document is accepted only as historical evidence when the fixed replay receipt proves consumption inside its signed window and the bound transaction is COMMITTED."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "The installer or verify-copy command must be explicitly invoked with a promotion document and a provisioned fixed boundary."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Historical verification is source-attested evidence checking, not proof that a deployment occurred.",
+        "Historical deployment verification deliberately supports committed v2 evidence without a mutation-batch field; only v3 binds mutation_batch_manifest_sha256 for new live mutation authority.",
+        "The repository cannot attest the operator ownership or append-only ACL of the external config, key, and replay ledger."
+      ]
+    },
+    {
+      "id": "installer_to_rootfs_shipped_rename",
+      "relation": "side_effect_boundary",
+      "caller": {
+        "owner": "scripts",
+        "symbol": "install_signed_shipped_graph.install"
+      },
+      "callee": {
+        "owner": "filesystem",
+        "symbol": "rootfs_shipped_store.rename"
+      },
+      "static_import": {
+        "state": "not_observed_in_bound_source",
+        "binding_refs": [
+          "shipped_graph_installer"
+        ],
+        "note": "The destination mutation uses Path.rename calls rather than an imported deployment primitive."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "shipped_graph_installer"
+        ],
+        "note": "After signed COMMITTED evidence verification and a byte-identical copy check, install renames the temporary copy into the rootfs destination and re-hashes it."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable production rootfs mutation or boot receipt is bound."
+      },
+      "authority": {
+        "state": "external_signature_required",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "promotion_landing_chain",
+          "shipped_graph_installer"
+        ],
+        "note": "The rootfs rename is reachable only after historical signature, nonce receipt, transaction journal, and current canonical-source digest checks succeed."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "The installer must be explicitly invoked with an absolute rootfs and promotion document."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The caller chooses the rootfs container, although the graph destination within it is fixed.",
+        "Read-only modes and root ownership do not make the deployed bytes immutable to a privileged administrator."
+      ]
+    },
+    {
+      "id": "intrinsic_drive_to_moltbook_autopilot",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.autonomy_kernel",
+        "symbol": "intrinsic_drive.act"
+      },
+      "callee": {
+        "owner": "packages.autonomy_kernel",
+        "symbol": "moltbook_autopilot.autopilot_tick"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "autonomy_kernel_intrinsic_drive"
+        ],
+        "note": "The import occurs inside the express branch."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "autonomy_kernel_intrinsic_drive"
+        ],
+        "note": "After state-based action selection and a rate floor, the express branch calls autopilot_tick with the current self state."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable trace records the drive selecting express and entering autopilot."
+      },
+      "authority": {
+        "state": "conditional_decider",
+        "binding_refs": [
+          "autonomy_kernel_intrinsic_drive"
+        ],
+        "note": "The drive's selected action determines whether this call is attempted; downstream side-effect authority remains separate."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "The selected action must be express and the persistent minimum interval must have elapsed."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Current drive tests cover selection and rate-floor behavior but do not bind an immutable end-to-end express trace.",
+        "A selected branch does not imply a post; autopilot can fail closed or abstain."
+      ]
+    },
+    {
+      "id": "moltbook_autopilot_to_autonomy_envelope",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.autonomy_kernel",
+        "symbol": "moltbook_autopilot.autopilot_tick"
+      },
+      "callee": {
+        "owner": "packages.autonomy_envelope",
+        "symbol": "envelope.AutonomyEnvelope.check"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "autonomy_kernel_moltbook_autopilot"
+        ],
+        "note": "Autopilot imports AutonomyEnvelope and its public-post action types before the side-effect boundary."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "autonomy_envelope_core",
+          "autonomy_kernel_moltbook_autopilot"
+        ],
+        "note": "After config, event, rate, moral, and language gates, autopilot constructs a dedicated envelope and calls check for PUBLIC_POST."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Tests exercise injected publishers, but no immutable production network trace is bound."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "autonomy_envelope_core",
+          "autonomy_kernel_moltbook_autopilot"
+        ],
+        "note": "A literal allow from the dedicated PUBLIC_POST envelope is required before the publisher is called."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "Autopilot must be explicitly enabled and all preceding gates must pass; the source otherwise returns without publishing."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The source binding proves a guard call, not that the deployed publisher or credential path is active.",
+        "An allowed test publisher does not establish safe or useful real-world autonomous communication."
+      ]
+    },
+    {
+      "id": "mutation_candidate_builder_to_staged_receipt",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.landing_chain_lib",
+        "symbol": "StoreMerger.build_mutation_candidate"
+      },
+      "callee": {
+        "owner": "packages.graph_scale",
+        "symbol": "mutation_batch.record_lifecycle_receipt"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "promotion_landing_chain"
+        ],
+        "note": "landing_chain_lib imports mutation-batch validation and lifecycle receipt helpers."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain"
+        ],
+        "note": "After validating the proposed batch, exact base digest, candidate bytes, and fresh verification report, the candidate builder records the staged lifecycle receipt."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Focused tests exercise staging, but no immutable production or operator-workflow trace is bound."
+      },
+      "authority": {
+        "state": "staging_only",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain"
+        ],
+        "note": "The receipt can describe only a verified candidate stage and grants no permission to replace the shipped graph."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "A valid proposed batch, matching live base, successful candidate build, and fresh verifier report are required."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Candidate publication precedes staged receipt persistence, so a receipt failure can leave an orphan candidate that has no production authority.",
+        "A staged candidate is not a shipped graph change or benchmark-capability result."
+      ]
+    },
+    {
+      "id": "mutation_compiler_to_batch_creation",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.create_graph_mutation_batch",
+        "symbol": "compile_proposal"
+      },
+      "callee": {
+        "owner": "packages.graph_scale",
+        "symbol": "mutation_batch.create_mutation_batch"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "mutation_batch_compiler"
+        ],
+        "note": "The compiler imports the immutable mutation-batch constructor."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "mutation_batch_compiler"
+        ],
+        "note": "compile_proposal validates the strict reviewed-proposal schema and exact current base digest before creating the sealed batch."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Focused tests are not immutable workflow receipts and no production trace is bound."
+      },
+      "authority": {
+        "state": "staging_only",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "mutation_batch_compiler"
+        ],
+        "note": "Batch creation writes only an immutable proposal artifact and cannot mutate the shipped graph."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "An external reviewer or operator must supply an exact strict proposal and expected live-base digest."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Schema validity and base freshness do not attest that a human genuinely reviewed the proposal.",
+        "The compiler is a proposal-to-batch mechanism, not detector-to-evaluator wiring or capability evidence."
+      ]
+    },
+    {
+      "id": "mutation_compiler_to_proposed_receipt",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.create_graph_mutation_batch",
+        "symbol": "compile_proposal"
+      },
+      "callee": {
+        "owner": "packages.graph_scale",
+        "symbol": "mutation_batch.record_lifecycle_receipt"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "mutation_batch_compiler"
+        ],
+        "note": "The compiler imports the lifecycle receipt writer alongside the batch constructor."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "mutation_batch_compiler"
+        ],
+        "note": "After immutable batch creation, compile_proposal records detected and then proposed receipts for the exact batch manifest."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable production workflow trace is bound to these source-confirmed calls."
+      },
+      "authority": {
+        "state": "staging_only",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "mutation_batch_compiler"
+        ],
+        "note": "Detected and proposed receipts document candidate lifecycle only; they confer no live mutation authority."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "The strict proposal must validate and immutable batch creation must succeed first."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Receipt ordering does not prove independent evaluator review or operator identity.",
+        "Proposal lifecycle activity leaves production unchanged and is not E4/E5 evidence."
+      ]
+    },
+    {
+      "id": "promotion_script_to_applied_receipt",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.promote_staging_to_shipped",
+        "symbol": "do_swap"
+      },
+      "callee": {
+        "owner": "packages.graph_scale",
+        "symbol": "mutation_batch.record_applied_receipt"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "promotion_script"
+        ],
+        "note": "The promotion script imports the applied-receipt helper."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain",
+          "promotion_script"
+        ],
+        "note": "After StoreMerger.swap returns a COMMITTED transaction, do_swap records the applied lifecycle receipt for the exact supplied batch and committed journal."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Focused tests are not a production promotion trace and no immutable external workflow receipt is bound here."
+      },
+      "authority": {
+        "state": "external_signature_required",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain",
+          "promotion_script"
+        ],
+        "note": "The applied receipt is reachable only after the v3 signed promotion context and COMMITTED swap have succeeded."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "An explicit swap with the exact staged batch, signed v3 document, fixed boundary, and engine-stop precondition is required."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Applied receipt persistence is post-COMMITTED and non-atomic with the live rename; failure requires journal reconciliation and must not trigger replay of the swap.",
+        "The repository has no immutable production trace proving that external reconciliation or operator workflow is provisioned."
+      ]
+    },
+    {
+      "id": "promotion_script_to_mutation_candidate_builder",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.promote_staging_to_shipped",
+        "symbol": "do_promote"
+      },
+      "callee": {
+        "owner": "scripts.landing_chain_lib",
+        "symbol": "StoreMerger.build_mutation_candidate"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "promotion_script"
+        ],
+        "note": "The promotion script imports landing_chain_lib and calls its mutation-candidate builder."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain",
+          "promotion_script"
+        ],
+        "note": "do_promote requires an exact proposed mutation batch, validates its base, and calls the candidate builder instead of treating legacy staging as authority."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Focused CLI tests do not constitute an immutable production workflow trace."
+      },
+      "authority": {
+        "state": "staging_only",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain",
+          "promotion_script"
+        ],
+        "note": "This path can build and verify a candidate only; the CLI operator-presence gesture is not production mutation authority."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "A caller must explicitly invoke promote with the exact proposed batch and current live graph."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The presence gesture does not authenticate an operator or replace the later external signature boundary.",
+        "Candidate construction and verification do not establish benchmark lift or safe deployment."
+      ]
+    },
+    {
+      "id": "promotion_script_to_nightly_queue",
+      "relation": "artifact_flow",
+      "caller": {
+        "owner": "scripts.promote_staging_to_shipped",
+        "symbol": "do_receipt_payload"
+      },
+      "callee": {
+        "owner": "packages.autonomy_envelope",
+        "symbol": "promotion_queue.NightlyPromotionQueue"
+      },
+      "static_import": {
+        "state": "not_observed_in_bound_source",
+        "binding_refs": [
+          "promotion_script"
+        ],
+        "note": "The promotion script does not import NightlyPromotionQueue; it only prints a payload intended for an external queue step."
+      },
+      "reachable_call": {
+        "state": "unknown",
+        "binding_refs": [],
+        "note": "No source-bound direct call or deployed artifact handoff from the script into NightlyPromotionQueue is established."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable trace binds printed payload bytes to a queue receipt in an operator workflow."
+      },
+      "authority": {
+        "state": "staging_only",
+        "binding_refs": [
+          "autonomy_envelope_promotion_queue",
+          "promotion_script"
+        ],
+        "note": "The queue contract creates only an unsigned staging receipt and explicitly grants no merge authority."
+      },
+      "enablement": {
+        "state": "unknown",
+        "note": "The script-to-queue handoff, queue service, and operator identity channel are not attested; the separate signed deployment-installer path is source-bound by other edges."
+      },
+      "capability": {
+        "mechanism_stage": "V0",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "This is a documented but unwired artifact boundary, not a live call edge.",
+        "Tests can construct a queue manually without proving the real operator workflow."
+      ]
+    },
+    {
+      "id": "promotion_script_to_store_merger",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.promote_staging_to_shipped",
+        "symbol": "do_swap"
+      },
+      "callee": {
+        "owner": "scripts.landing_chain_lib",
+        "symbol": "StoreMerger.swap"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "promotion_script"
+        ],
+        "note": "The script imports landing_chain_lib; key, pin, and replay-domain provisioning are not caller imports."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain",
+          "promotion_script"
+        ],
+        "note": "do_swap requires the exact STAGED mutation batch, prechecks its manifest digest against the signed v3 document, and calls StoreMerger.swap with the staging receipt; StoreMerger loads the installation-fixed boundary internally."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Adversarial tests exist, but no immutable production promotion receipt is bound to this census."
+      },
+      "authority": {
+        "state": "external_signature_required",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain",
+          "promotion_script"
+        ],
+        "note": "The source requires an externally signed v3 context binding mutation_batch_manifest_sha256; key pin and replay domain come from the installation-fixed system boundary, not CLI-selectable trust inputs."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "A caller must explicitly invoke --swap with the signed document and staging receipt while the fixed boundary is provisioned; engine stop remains an operational precondition."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The repository cannot prove that the fixed boundary config, public-key pin, replay ledger, or their ACLs were operator provisioned.",
+        "A source-attested signature requirement is not itself production authority."
+      ]
+    },
+    {
+      "id": "response_workspace_to_block_universe_bidder",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.cgsr.cgsr.response_workspace",
+        "symbol": "_temporal_candidate"
+      },
+      "callee": {
+        "owner": "packages.temporal_reasoning",
+        "symbol": "BlockUniverse.project_forward_or_infer_backward"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "cgsr_response_workspace_world4d_shadow"
+        ],
+        "note": "The response workspace imports BlockUniverse inside the existing contextual temporal bidder."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "cgsr_response_workspace_world4d_shadow",
+          "temporal_reasoning_block_universe"
+        ],
+        "note": "A temporal inference request with a learned-field substrate can reach project_forward or infer_backward before emitting a strictly hedged low-grounding candidate."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "world4d_shadow_control_evidence",
+          "world4d_shadow_control_test"
+        ],
+        "note": "The repeated control profile exercises one covered forward legacy temporal answer and preserves it byte-for-byte across observer OFF/ON; it does not receipt-bind full legacy backward or abstention coverage."
+      },
+      "authority": {
+        "state": "conditional_decider",
+        "binding_refs": [
+          "cgsr_response_workspace_world4d_shadow",
+          "temporal_reasoning_block_universe"
+        ],
+        "note": "This legacy path can bid into answer arbitration at capped grounding 0.45; every surfaced projection remains hypothesis-tagged and it cannot outrank a verified higher-grounding lane."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "Only a temporal inference grammar with a covered, confidence-clearing learned-field anchor can produce a candidate."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "This legacy conditional bidder is separate from the new observer-only World4D adapter and retains bounded answer influence.",
+        "Learned ordering, controlled tests, and hypothesis hedges are not a production trace, physical world model, E4 conformance, or E5 capability lift."
+      ]
+    },
+    {
+      "id": "response_workspace_to_world4d_shadow_adapter",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.cgsr.cgsr.response_workspace",
+        "symbol": "_observe_world4d_shadow"
+      },
+      "callee": {
+        "owner": "packages.world4d",
+        "symbol": "shadow.submit_temporal_query_shadow"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "cgsr_response_workspace_world4d_shadow"
+        ],
+        "note": "The helper imports the bounded World4D dispatcher only after the exact server flag is enabled."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "cgsr_response_workspace_world4d_shadow",
+          "world4d_shadow_adapter"
+        ],
+        "note": "After temporal grammar succeeds, the exact default-off flag performs a bounded non-blocking queue submission whose return value is ignored before the legacy bidder runs independently; overload drops telemetry rather than delaying the answer."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "world4d_shadow_control_evidence",
+          "world4d_shadow_control_test"
+        ],
+        "note": "The repeated profile records OFF/ON answer equality, no OFF ledger, exact flag behavior, privacy, bounded backlog, actual artifact-to-receipt binding, and answer return while the observer worker is deliberately stalled."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "cgsr_response_workspace_world4d_shadow",
+          "world4d_shadow_adapter"
+        ],
+        "note": "Submitted provider output never enters answer arbitration. Receipts fix adapter answer influence and output application to false while explicitly leaving provider effects unattested and provider isolation unenforced."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "Only exact server-side ATANOR_WORLD4D_SHADOW=1 after a temporal ask enables the observer; non-temporal requests and other truthy strings do not."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The bounded daemon queue has no provider process timeout or isolation; a stalled worker can lose later telemetry but cannot block the answer path.",
+        "The observer uses a separately loaded unsigned precedence artifact and does not fuse with shared cognitive state or replace the legacy bidder; controlled observation is not E4, benchmark lift, or E5."
+      ]
+    },
+    {
+      "id": "store_merger_to_embedded_mutation_validation",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.landing_chain_lib",
+        "symbol": "StoreMerger._embedded_mutation_material"
+      },
+      "callee": {
+        "owner": "packages.graph_scale",
+        "symbol": "mutation_batch.validate_sealed_manifest_bytes"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "promotion_landing_chain"
+        ],
+        "note": "landing_chain_lib imports the sealed mutation-manifest validator."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain"
+        ],
+        "note": "The candidate verification path reads the embedded manifest and seal, validates their exact bytes, and checks the declared base and mutations before accepting fresh verification."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "Focused validation tests are not immutable production execution receipts."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain"
+        ],
+        "note": "Malformed, mismatched, or stale embedded batch material fails the candidate boundary before signed promotion."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "A mutation candidate containing the required embedded manifest and seal must enter fresh verification."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Embedded byte validation does not attest operator identity, external trust provisioning, or genuine proposal review.",
+        "A validated candidate artifact is not evidence of production exercise or capability lift."
+      ]
+    },
+    {
+      "id": "store_merger_to_fixed_operator_boundary",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.landing_chain_lib",
+        "symbol": "StoreMerger.swap"
+      },
+      "callee": {
+        "owner": "scripts.landing_chain_lib",
+        "symbol": "load_system_shipped_graph_operator_boundary"
+      },
+      "static_import": {
+        "state": "not_observed_in_bound_source",
+        "binding_refs": [
+          "promotion_landing_chain"
+        ],
+        "note": "The boundary loader is a same-module call, not an import."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "promotion_landing_chain"
+        ],
+        "note": "promotion_context and swap load the single code-pinned system config; swap then locks its resolved replay domain before entering _swap_locked."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable production boundary-load receipt or OS-policy attestation is bound."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "promotion_landing_chain"
+        ],
+        "note": "The loader rejects caller-selected paths and requires an exact external config binding the approved target, key pin, boundary id, and replay-ledger id."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "The fixed config, public key, lock, identity manifest, and claims directory must already exist at the installation-owned location."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Source pinning cannot prove that filesystem ACLs make the fixed config and replay domain operator controlled.",
+        "Tests can monkeypatch the module constant; this is controlled-test substitution, not a production caller parameter."
+      ]
+    },
+    {
+      "id": "store_merger_to_operator_trust",
+      "relation": "python_call",
+      "caller": {
+        "owner": "scripts.landing_chain_lib",
+        "symbol": "StoreMerger.swap"
+      },
+      "callee": {
+        "owner": "packages.autonomy_envelope",
+        "symbol": "operator_trust.verify_shipped_graph_promotion"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "promotion_landing_chain"
+        ],
+        "note": "landing_chain_lib imports the shipped-graph verifier from operator_trust."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain"
+        ],
+        "note": "StoreMerger._swap_locked verifies the fresh live context before sealing, then revalidates the fixed boundary and verifies again immediately before nonce consumption."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "No immutable production verifier receipt or operator-channel attestation is bound."
+      },
+      "authority": {
+        "state": "external_signature_required",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain"
+        ],
+        "note": "The live v3 verifier binds the external signature to the fixed boundary id/config digest, replay domain, staging receipt, candidate/base bytes, exact immutable mutation-batch manifest digest, purpose, and expiry."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "The path is entered by an explicit swap; key, pin, and replay-domain selection come only from the installation-fixed system config loaded inside StoreMerger."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The verifier cannot prove that the deployment channel and filesystem permissions are operator-controlled.",
+        "This is a cryptographic mechanism boundary, not an E5 capability result."
+      ]
+    },
+    {
+      "id": "store_merger_to_shipped_rename",
+      "relation": "side_effect_boundary",
+      "caller": {
+        "owner": "scripts.landing_chain_lib",
+        "symbol": "StoreMerger.swap"
+      },
+      "callee": {
+        "owner": "filesystem",
+        "symbol": "canonical_shipped_store.rename"
+      },
+      "static_import": {
+        "state": "not_observed_in_bound_source",
+        "binding_refs": [
+          "promotion_landing_chain"
+        ],
+        "note": "The mutation uses Path.rename method calls rather than an imported promotion primitive."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain"
+        ],
+        "note": "After fresh embedded manifest/seal/base validation, sealed-copy digest/fsync checks, fixed-boundary revalidation, a second v3 signature check, durable nonce consumption, and ARMED journaling, the live directory is renamed and the sealed snapshot takes its place."
+      },
+      "exercised_trace": {
+        "state": "not_recorded",
+        "binding_refs": [],
+        "note": "The mechanism writes nonce and COMMITTED journal evidence, but no immutable production receipt is bound into this census."
+      },
+      "authority": {
+        "state": "external_signature_required",
+        "binding_refs": [
+          "autonomy_envelope_operator_trust",
+          "graph_scale_mutation_batch",
+          "promotion_landing_chain",
+          "promotion_script"
+        ],
+        "note": "The source reaches rename only after the externally signed v3 context, including the immutable mutation-batch manifest digest, verifies and the nonce is durably consumed."
+      },
+      "enablement": {
+        "state": "external_invocation",
+        "note": "StoreMerger.swap must be explicitly invoked with a signed document and staging receipt; engine stop/single-writer status is an operational condition the code does not attest."
+      },
+      "capability": {
+        "mechanism_stage": "M1",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The code cannot enforce or attest that every reader process is stopped before the rename.",
+        "Rollback uses an external recovery service because no distinct signed rollback schema is wired in-process."
+      ]
+    },
+    {
+      "id": "world4d_block_universe_provider_to_block_universe",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.world4d",
+        "symbol": "block_universe_provider.BlockUniverseShadowProvider.propose"
+      },
+      "callee": {
+        "owner": "packages.temporal_reasoning",
+        "symbol": "BlockUniverse.project_forward_or_infer_backward"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "world4d_block_universe_provider"
+        ],
+        "note": "The provider imports BlockUniverse and the in-memory Timeline directly."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "temporal_reasoning_block_universe",
+          "world4d_block_universe_provider"
+        ],
+        "note": "The provider constructs a private pathless Timeline, loads the unsigned local precedence artifact without fitting, binds its byte digest, caps forward chains at three steps, and represents backward rows as separate one-step alternatives."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "world4d_shadow_control_evidence",
+          "world4d_shadow_control_test"
+        ],
+        "note": "The repeated control profile exercises the repository precedence artifact, byte-digest binding, strict artifact parsing, forward/backward bounds, abstention, direction-tier matching, hypothesis-marker refusal, and shared-timeline non-mutation."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "temporal_reasoning_block_universe",
+          "world4d_block_universe_provider"
+        ],
+        "note": "Provider outputs are contract-fixed hypotheses, ineligible for live use, and returned only to the sibling observer adapter."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "The call exists only in the bounded worker reached from exact-flag submission and requires a temporal request plus a strict readable precedence artifact."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "The runtime result and receipt bind the local precedence bytes, but that artifact is unsigned, unsealed, externally unattested, and does not establish equality with the legacy causal-overlay field.",
+        "The provider has no calibrated physical checks, real-video training, JEPA checkpoint, SPLATRA inference state, E4 conformance, or E5 lift."
+      ]
+    },
+    {
+      "id": "world4d_shadow_adapter_to_block_universe_provider",
+      "relation": "python_call",
+      "caller": {
+        "owner": "packages.world4d",
+        "symbol": "shadow.World4DShadowAdapter.observe"
+      },
+      "callee": {
+        "owner": "packages.world4d",
+        "symbol": "block_universe_provider.BlockUniverseShadowProvider.propose"
+      },
+      "static_import": {
+        "state": "observed",
+        "binding_refs": [
+          "world4d_shadow_adapter"
+        ],
+        "note": "The async worker supplies BlockUniverseShadowProvider as the adapter provider factory."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "world4d_block_universe_provider",
+          "world4d_shadow_adapter"
+        ],
+        "note": "The worker lazily constructs the request, audited provider, and payload, validates descriptor identity, result status, bounds, and direction-tier agreement, summarizes the result by digest, and never returns provider output to answer arbitration."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "world4d_shadow_control_evidence",
+          "world4d_shadow_control_test"
+        ],
+        "note": "The repeated profile exercises lazy OFF behavior, proposal and abstention, quarantine/status invariants, direction-tier matching, frozen privacy codes, bounds, and sanitized provider failure."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "world4d_block_universe_provider",
+          "world4d_shadow_adapter"
+        ],
+        "note": "The adapter does not accept a fact, select an answer, apply provider output, or claim E4/E5. It explicitly does not attest arbitrary provider effects or enforce provider isolation."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "Literal boolean enablement is required internally, and the audited provider factory is reached only by the bounded worker after exact server-side ATANOR_WORLD4D_SHADOW=1 submission."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Only the source-reviewed BlockUniverse provider is live-bound; the generic protocol is not a sandbox, and no JEPA or SPLATRA provider is bound.",
+        "The sibling observer is deliberately unable to demonstrate task lift because its output cannot influence the answer."
+      ]
+    },
+    {
+      "id": "world4d_shadow_adapter_to_receipt_sink",
+      "relation": "side_effect_boundary",
+      "caller": {
+        "owner": "packages.world4d",
+        "symbol": "shadow.World4DShadowAdapter.observe"
+      },
+      "callee": {
+        "owner": "packages.world4d",
+        "symbol": "shadow.JsonlReceiptSink.append"
+      },
+      "static_import": {
+        "state": "not_observed_in_bound_source",
+        "binding_refs": [
+          "world4d_shadow_adapter"
+        ],
+        "note": "Adapter and sink are defined in the same bound module, so this is a reachable same-module call rather than an import edge."
+      },
+      "reachable_call": {
+        "state": "source_confirmed",
+        "binding_refs": [
+          "world4d_shadow_adapter"
+        ],
+        "note": "After worker observation, the adapter appends only an 8 KiB-capped exact-schema digest summary with frozen privacy codes to a strict hash-chained JSONL observer ledger."
+      },
+      "exercised_trace": {
+        "state": "controlled_test",
+        "binding_refs": [
+          "world4d_shadow_control_evidence",
+          "world4d_shadow_control_test"
+        ],
+        "note": "The repeated profile exercises enabled append, OFF no-ledger behavior, exact-key/schema validation and reconstruction, rehashed-forgery refusal, raw-size enforcement, raw-payload exclusion, and sink-failure containment."
+      },
+      "authority": {
+        "state": "bounded_guard",
+        "binding_refs": [
+          "world4d_shadow_adapter"
+        ],
+        "note": "The adapter's declared side effect is the local observer ledger; receipts deny adapter answer influence/output application and E4/E5 while marking provider effects and isolation as unattested."
+      },
+      "enablement": {
+        "state": "conditional",
+        "note": "No sink is constructed or accessed on the disabled branch; worker sink errors are counted as failed observations and cannot alter or delay the legacy result."
+      },
+      "capability": {
+        "mechanism_stage": "M3",
+        "capability_claims": [],
+        "e5_claimed": false
+      },
+      "limitations": [
+        "Local file locking, hash chaining, and fsync do not prove external ACLs, immutable witnesses, remote durability, or production exercise.",
+        "The audited live constructor excludes raw payloads from persistence and emits only digests plus frozen codes; low-entropy digest privacy is not independently established, and raw prompts, event tokens, latent arrays, or particle states cannot be replayed."
+      ]
+    }
+  ],
+  "canonical_hash": "9688d03085cd3722bb0adcc2383f871ed11e45e49fa689b561b65bee0f64bedc"
+}

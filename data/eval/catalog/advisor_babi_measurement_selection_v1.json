@@ -1,0 +1,6 @@
+{
+  "schema": "atanor.advisor-babi-measurement-selection.v1",
+  "receipt_path": "reports/benchmarks/babi_external_20260724T212718Z.babi.86c3d2972d00.json",
+  "receipt_checksum_sha256": "e687183d640a8e11d9a69e5d84946c375ac5ddb70942b08742536f1cbb628b6a",
+  "claim_scope": "unsigned_public_validation_residual_selection_only"
+}

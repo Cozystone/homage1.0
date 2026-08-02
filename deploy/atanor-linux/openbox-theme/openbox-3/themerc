@@ -1,0 +1,65 @@
+# ATANOR openbox theme — Windows-like dark titlebars, one accent (#d2521f).
+# Flat, restrained: Apple restraint x Palantir truth applies to window chrome too.
+
+border.width: 1
+padding.width: 8
+padding.height: 5
+window.handle.width: 0
+window.client.padding.width: 0
+
+window.active.border.color: #2a2f3a
+window.inactive.border.color: #14171e
+
+window.active.title.bg: flat solid
+window.active.title.bg.color: #0b0d12
+window.inactive.title.bg: flat solid
+window.inactive.title.bg.color: #0b0d12
+
+window.active.label.bg: parentrelative
+window.active.label.text.color: #f4f6f9
+window.inactive.label.bg: parentrelative
+window.inactive.label.text.color: #7a828e
+window.label.text.justify: left
+
+window.active.button.unpressed.bg: parentrelative
+window.active.button.unpressed.image.color: #c9cfd8
+window.active.button.pressed.bg: flat solid
+window.active.button.pressed.bg.color: #d2521f
+window.active.button.pressed.image.color: #ffffff
+window.active.button.hover.bg: flat solid
+window.active.button.hover.bg.color: #1a1e26
+window.active.button.hover.image.color: #ffffff
+window.active.button.disabled.bg: parentrelative
+window.active.button.disabled.image.color: #3a4048
+
+window.inactive.button.unpressed.bg: parentrelative
+window.inactive.button.unpressed.image.color: #5a626e
+window.inactive.button.pressed.bg: flat solid
+window.inactive.button.pressed.bg.color: #d2521f
+window.inactive.button.pressed.image.color: #ffffff
+window.inactive.button.hover.bg: flat solid
+window.inactive.button.hover.bg.color: #1a1e26
+window.inactive.button.hover.image.color: #dfe4ea
+window.inactive.button.disabled.bg: parentrelative
+window.inactive.button.disabled.image.color: #2a2f3a
+
+menu.border.width: 1
+menu.border.color: #2a2f3a
+menu.title.bg: flat solid
+menu.title.bg.color: #0b0d12
+menu.title.text.color: #f4f6f9
+menu.items.bg: flat solid
+menu.items.bg.color: #0f1218
+menu.items.text.color: #dfe4ea
+menu.items.disabled.text.color: #5a626e
+menu.items.active.bg: flat solid
+menu.items.active.bg.color: #d2521f
+menu.items.active.text.color: #ffffff
+
+osd.border.width: 1
+osd.border.color: #2a2f3a
+osd.bg: flat solid
+osd.bg.color: #0b0d12
+osd.label.text.color: #f4f6f9
+osd.hilight.bg: flat solid
+osd.hilight.bg.color: #d2521f

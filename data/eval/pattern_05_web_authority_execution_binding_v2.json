@@ -1,0 +1,63 @@
+{
+  "schema_version": "atanor.pattern-05-web-authority-execution-binding.v2",
+  "binding_id": "pattern-05-web-authority-clean-git-roots-v2-20260727",
+  "created_at": "2026-07-27T01:28:00.0136837+09:00",
+  "supersedes_for_execution": {
+    "path": "data/eval/pattern_05_web_authority_candidate_binding_v1.json",
+    "raw_sha256": "ae248243bf77a7b2d015aae09e29c5765b76e1f63639f1d8cfbac56b1ce2ef9b",
+    "immutable": true,
+    "reason": "v1 bound platform checkout bytes: OFF was CRLF-normalized and ON had mixed line endings. Those hashes identify the historical checkout but not clean Git roots, so they remain evidence and are not rewritten."
+  },
+  "execution_policy": {
+    "off_source": "git show <off.commit>:<off.path>",
+    "on_source": "git show <on.commit>:<on.path>",
+    "working_tree_source_execution": false,
+    "canonical_git_blob_must_match_before_attempt": true,
+    "git_object_id_must_match_before_attempt": true,
+    "line_endings_are_not_a_treatment": true
+  },
+  "root_isolation": {
+    "materialization": "git archive of each bound commit into a fresh temporary root after the write-once attempt marker",
+    "archive_paths": [
+      "apps/api/app/services/web_search.py",
+      "packages/__init__.py",
+      "packages/base_brain",
+      "packages/cgsr"
+    ],
+    "working_directory": "the matching temporary root",
+    "sys_path_policy": "remove current-repository paths; prepend only matching temporary root and its apps/api",
+    "local_env_policy": "archive excludes ignored .env/.env.local; ATANOR, web-provider, and API-key environment variables are removed",
+    "network_policy": "urllib and socket connection entry points fail closed in the worker",
+    "required_repo_import": {
+      "path": "packages/cgsr/cgsr/referent_resonance.py",
+      "off_git_object_id_sha1": "689d4e7a03a4e456f41625ea99f45942dc9e6036",
+      "on_git_object_id_sha1": "689d4e7a03a4e456f41625ea99f45942dc9e6036",
+      "off_git_blob_sha256": "86b0d8aebb0ef96db3050d14e6576e4136030db9d32ea94eb1d6de1f217bee3b",
+      "on_git_blob_sha256": "86b0d8aebb0ef96db3050d14e6576e4136030db9d32ea94eb1d6de1f217bee3b"
+    }
+  },
+  "off": {
+    "commit": "bc5cccde42080a784f490ebbb53414cf7ec45131",
+    "path": "apps/api/app/services/web_search.py",
+    "git_object_id_sha1": "9a132f61d17d0820c8f67a198750572872c48c5d",
+    "git_blob_sha256": "cca015ab8e4f39bbdff60c7533b68cd992941e93fd7fee219a53d6a89c75ef8d",
+    "checkout_lf_normalized_sha256": "cca015ab8e4f39bbdff60c7533b68cd992941e93fd7fee219a53d6a89c75ef8d",
+    "checkout_crlf_normalized_sha256": "3e18f1461b046bd642102e328d61ca50782ec3eff219c1876b7716881d4dfda2"
+  },
+  "on": {
+    "commit": "e94d1c1e934554fad7ed4cb54a0d0fcdccb6ff0a",
+    "path": "apps/api/app/services/web_search.py",
+    "git_object_id_sha1": "9c4d16b6df09c2df55c360677a24ad0f02a7ccfd",
+    "git_blob_sha256": "c9385021fb047a05ff0156849a631274885785bae1a8de53c32850095c19a386",
+    "checkout_lf_normalized_sha256": "c9385021fb047a05ff0156849a631274885785bae1a8de53c32850095c19a386",
+    "checkout_crlf_normalized_sha256": "caf96ad234c8b17f2ad3e6b8cf93b450eb932c7fd92dadde5f7b947f0a83f292",
+    "historical_v1_mixed_checkout_sha256": "948b029b7d133eb9d37b4cd1d8cc3bb5fb0a999dd6b6ea5e9c3416ea43362e70"
+  },
+  "unchanged_seals": {
+    "preregistration_raw_sha256": "0c2eef67b43b039ccc9664f6666fb5f293ecca56375061968c728442beb6b425",
+    "dataset_raw_sha256": "d0804422d49c0d5baac3cf110741e29e48ef2c2ecae6164dcd9e3b28bccd1128",
+    "thresholds_changed": false,
+    "dataset_changed": false,
+    "candidate_semantics_changed": false
+  }
+}

@@ -1,0 +1,29 @@
+﻿{
+  "concepts_created": 0,
+  "concepts_merged": 5,
+  "evidence_added": 0,
+  "honesty": {
+    "external_llm_used": false,
+    "external_sllm_used": false,
+    "global_cloud_claim": false,
+    "local_brain_write": false,
+    "proof_store_only": true
+  },
+  "relations_created": 0,
+  "relations_strengthened": 4,
+  "run_id": "scg_ce19a3ae3b0ddc5b89",
+  "sentences_processed": 1,
+  "status": {
+    "concepts": 5,
+    "evidence": 1,
+    "external_llm_used": false,
+    "external_sllm_used": false,
+    "global_cloud_claim": false,
+    "local_brain_write": false,
+    "proof_store_only": true,
+    "relations": 4,
+    "store_backend": "local_semantic_proof_store",
+    "store_path": "data/cloud_brain/proofs/semantic_growth_scratch_20260616_023954/store"
+  },
+  "store_path": "data/cloud_brain/proofs/semantic_growth_scratch_20260616_023954/store"
+}

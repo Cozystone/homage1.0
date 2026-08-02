@@ -1,0 +1,37 @@
+{
+  "name": "kind_prediction_v2",
+  "surface": [
+    "packages/kind_prediction"
+  ],
+  "eval_entry": "packages.kind_prediction.eval:evaluate",
+  "metrics": [
+    {
+      "name": "correct",
+      "baseline": 28.0,
+      "direction": "higher_is_better",
+      "note": "the signature: more right decisions"
+    },
+    {
+      "name": "wrong",
+      "baseline": 3.0,
+      "direction": "lower_is_better",
+      "note": "HARD GUARD - must not rise"
+    },
+    {
+      "name": "coverage",
+      "baseline": 0.369048,
+      "direction": "higher_is_better",
+      "note": "guard against shrinking to look precise"
+    },
+    {
+      "name": "accuracy_on_placed",
+      "baseline": 0.903226,
+      "direction": "higher_is_better",
+      "note": "read at tolerance 0.035 = one error on ~31 placements"
+    }
+  ],
+  "surface_hash": "c827db3c660710b586f2d359cca5f086c755ce67d1f8418d7546bfedd882486d",
+  "frozen_at": "2026-07-28T16:00:20+00:00",
+  "rationale": "SEAL 3 on domain B. NOT a re-cut of `kind_prediction`: that seal and its REGRESSED verdict stand permanently, and the lift-weighting change is NOT retroactively re-judged by this one. Baseline here is the CURRENT post-lift state, so this seal judges FUTURE substrate work only. WHY A SECOND SEAL WAS NEEDED: the first registered `accuracy_on_placed` at tolerance 0, and that metric is MECHANICALLY COUPLED to coverage -- going from 22 placements to 31 while holding `wrong` at exactly 2 is near impossible, so the seal was structurally hostile to the improvement it was written to detect. That was a fault in how I registered it, of the same class as V7-2's absolute bar sitting below chance: a threshold set without knowing the measurement's natural variance. THE TOLERANCE IS DERIVED, NOT CHOSEN: on ~31 placements a single wrong answer moves accuracy by 1/31 = 0.032, so measurements of this seal are to be taken at tolerance 0.035 -- exactly one error's worth of movement and no more. HARNESS GAP, stated because it is real: `measure()` takes the tolerance as an argument and the seal does not store it, so this figure is sealed only in this text. A future harness should carry it in the manifest. THE SIGNATURE THIS SEAL LOOKS FOR: `correct` RISES WHILE `wrong` DOES NOT. That is 'better, not merely looser', and it is deliberately strict enough that the change which produced this baseline (correct 20->28, wrong 2->3) would ALSO have failed it -- so nothing here is arranged to rescue work already measured.",
+  "seal": "aaa7b7c01db2fcf8e4f90de6ad83e0688c81b9c605187703caf533faaf25b0eb"
+}

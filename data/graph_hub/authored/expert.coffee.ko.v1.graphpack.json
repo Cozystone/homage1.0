@@ -1,0 +1,252 @@
+{
+  "author": {
+    "id": "atanor",
+    "name": "ATANOR",
+    "verified": true
+  },
+  "cartridge_id": "expert.coffee.ko.v1",
+  "category": "food_drink",
+  "contents": {
+    "evaluation_prompts": [],
+    "reasoning_patterns": [
+      {
+        "id": "domain_specialist_lookup",
+        "name": "커피 도메인 개념·관계 우선 조회"
+      }
+    ],
+    "repair_rules": [],
+    "seed_extensions": [],
+    "semantic_graph": {
+      "edges": [
+        {
+          "confidence": 0.9,
+          "relation": "is_a",
+          "source": "espresso",
+          "target": "coffee"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "is_a",
+          "source": "drip",
+          "target": "coffee"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "is_a",
+          "source": "coldbrew",
+          "target": "coffee"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "is_a",
+          "source": "arabica",
+          "target": "bean"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "is_a",
+          "source": "robusta",
+          "target": "bean"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "produced_by",
+          "source": "bean",
+          "target": "roasting"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "contains",
+          "source": "coffee",
+          "target": "caffeine"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "has_more",
+          "source": "robusta",
+          "target": "caffeine"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "has",
+          "source": "espresso",
+          "target": "crema"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "contains",
+          "source": "latte",
+          "target": "espresso"
+        },
+        {
+          "confidence": 0.9,
+          "relation": "makes",
+          "source": "barista",
+          "target": "espresso"
+        }
+      ],
+      "nodes": [
+        {
+          "aliases": [
+            "coffee"
+          ],
+          "id": "coffee",
+          "label": "커피",
+          "short_description": "볶은 커피 원두를 우려낸 음료."
+        },
+        {
+          "aliases": [
+            "espresso"
+          ],
+          "id": "espresso",
+          "label": "에스프레소",
+          "short_description": "곱게 간 원두에 고압의 물을 통과시켜 추출한 진한 커피."
+        },
+        {
+          "aliases": [
+            "arabica"
+          ],
+          "id": "arabica",
+          "label": "아라비카",
+          "short_description": "향미가 풍부한 대표 커피 품종."
+        },
+        {
+          "aliases": [
+            "robusta"
+          ],
+          "id": "robusta",
+          "label": "로부스타",
+          "short_description": "카페인이 높고 쓴맛이 강한 커피 품종."
+        },
+        {
+          "aliases": [
+            "coffee bean"
+          ],
+          "id": "bean",
+          "label": "원두",
+          "short_description": "커피나무 열매의 씨앗을 볶은 것."
+        },
+        {
+          "aliases": [
+            "roasting",
+            "배전"
+          ],
+          "id": "roasting",
+          "label": "로스팅",
+          "short_description": "생두를 볶아 향미를 끌어내는 과정."
+        },
+        {
+          "aliases": [
+            "drip",
+            "핸드드립"
+          ],
+          "id": "drip",
+          "label": "드립커피",
+          "short_description": "물을 원두에 부어 여과 추출하는 방식."
+        },
+        {
+          "aliases": [
+            "cold brew"
+          ],
+          "id": "coldbrew",
+          "label": "콜드브루",
+          "short_description": "찬물로 장시간 우려낸 커피."
+        },
+        {
+          "aliases": [
+            "caffeine"
+          ],
+          "id": "caffeine",
+          "label": "카페인",
+          "short_description": "각성 효과가 있는 알칼로이드."
+        },
+        {
+          "aliases": [
+            "crema"
+          ],
+          "id": "crema",
+          "label": "크레마",
+          "short_description": "에스프레소 위에 형성되는 황금빛 거품층."
+        },
+        {
+          "aliases": [
+            "latte",
+            "카페라떼"
+          ],
+          "id": "latte",
+          "label": "라떼",
+          "short_description": "에스프레소에 데운 우유를 섞은 음료."
+        },
+        {
+          "aliases": [
+            "barista"
+          ],
+          "id": "barista",
+          "label": "바리스타",
+          "short_description": "커피를 전문적으로 추출하는 사람."
+        }
+      ]
+    },
+    "surface_graph": {
+      "constructions": [],
+      "discourse_moves": [],
+      "lemma_choices": [],
+      "style_profiles": []
+    }
+  },
+  "description": "에스프레소/드립/콜드브루, 아라비카/로부스타, 로스팅·크레마 등 커피 도메인 전문 개념과 관계.",
+  "license": {
+    "offline_allowed": true,
+    "redistribution_allowed": false,
+    "terms_url": null,
+    "type": "free"
+  },
+  "metadata": {
+    "checksum": "7c5af82d74916c8e9634a9d1b648b57dc6daff254eea9b12ca0312b7da78384b",
+    "created_at": "2026-07-01T10:56:14Z",
+    "language": [
+      "ko",
+      "en"
+    ],
+    "size_bytes": 4357,
+    "source": "authored_expert_graph",
+    "tags": [
+      "coffee",
+      "expert",
+      "niche",
+      "ko"
+    ],
+    "updated_at": "2026-07-01T10:56:14Z"
+  },
+  "name": "커피 전문 그래프",
+  "permissions": {
+    "attach_to_working_memory": true,
+    "export_allowed": true,
+    "read_local_brain": false,
+    "use_cloud_context": true,
+    "write_local_brain": false
+  },
+  "pricing": {
+    "billing_period": "none",
+    "currency": "none",
+    "model": "free",
+    "price": null,
+    "trial_days": null
+  },
+  "provenance": {
+    "exported_from_run_id": null,
+    "old_mirror_snapshot_used": false,
+    "proof_store_only": true,
+    "source_paths": [],
+    "source_type": "authored_expert_graph"
+  },
+  "safety": {
+    "default_read_only": true,
+    "pii_safe": true,
+    "requires_user_approval_for_local_write": true,
+    "risk_level": "low",
+    "trusted": true
+  },
+  "subtitle": "원두·추출·품종의 니치 전문 지식 그래프",
+  "version": "0.1.0"
+}

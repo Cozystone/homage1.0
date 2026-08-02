@@ -1,0 +1,18 @@
+{
+  "measured": "2026-07-31",
+  "encoder": "D:/carla/depth_model/signature_net.pt (103 KB)",
+  "declared_dim": 32,
+  "participation_ratio": 3.9,
+  "dims_for_90pct_variance": 6,
+  "dims_for_99pct_variance": 12,
+  "top2_variance_share": 0.679,
+  "human_reference": {
+    "source": "Hebart et al. 2020, THINGS odd-one-out similarity",
+    "dims": "~49, later work ~66"
+  },
+  "question": "Would learning 20,000-50,000 object names be enough for human-like recognition?",
+  "answer": "Not with this encoder. A space using ~4 effective dimensions cannot hold tens of thousands of distinguishable clusters; it holds tens. The measured behaviour matches: six classes at 0.789 precision with 45% coverage, and building vs vegetation colliding at cosine 0.841.",
+  "diagnosis": "The training objective does not demand dimensionality. Triplet loss on same-track vs different-track is satisfiable in very few dimensions, so the encoder never had a reason to use the 32 it was given.",
+  "target": "Raise effective dimensionality from 3.9 toward the human 49-66. That is now the named constraint on vocabulary size, and it is measurable by participation ratio on any encoder.",
+  "note": "Vocabulary is cheap once the space is good: naming costs 3-5 anchors per class, so 30,000 classes is ~100k anchor patches. The gate is the space, not the word count."
+}

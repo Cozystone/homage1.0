@@ -1,0 +1,25 @@
+{
+  "name": "atanor",
+  "private": true,
+  "version": "0.1.2",
+  "description": "ATANOR monorepo for a Transparent Anomy neuro-symbolic local AI engine.",
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "api:dev": "python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000 --app-dir apps/api",
+    "web:dev": "npm --workspace apps/web run dev",
+    "dev": "concurrently \"npm run api:dev\" \"npm run web:dev\"",
+    "desktop:sidecar": "python scripts/build_sidecar.py",
+    "tauri": "tauri",
+    "desktop:signing:prepare": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prepare_windows_signing.ps1",
+    "desktop:build": "npm run desktop:sidecar && tauri build",
+    "experiment:atanor": "python scripts/atanor_experiment_runner.py",
+    "store:msix": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build_store_msix.ps1",
+    "audit:ui": "python scripts/audit_ui_quality.py"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "concurrently": "^9.2.1"
+  }
+}

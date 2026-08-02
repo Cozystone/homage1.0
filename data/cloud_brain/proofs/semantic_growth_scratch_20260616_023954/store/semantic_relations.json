@@ -1,0 +1,78 @@
+{
+  "scr_275f3b32d23f259b3f": {
+    "confidence": 0.78,
+    "created_at": "2026-06-16T02:39:54Z",
+    "metadata": {
+      "merge_policy": "bounded_seen_count_strengthening_v0"
+    },
+    "relation": "is_a",
+    "relation_id": "scr_275f3b32d23f259b3f",
+    "seen_count": 3,
+    "source_concept_id": "scc_94abcb2d2773df65",
+    "source_hashes": [
+      "3d06f9e6c69cdfe3dec411a914f1c357a16a3d58020ea1204059e2af5f79cda3",
+      "2d7b4d5f591458f7231fb70a45b9a14335a7f1866aeffcd279bff0fe7702ebe9"
+    ],
+    "target_concept_id": "scc_b02f6654034e2c89",
+    "trust": 0.62,
+    "updated_at": "2026-06-16T02:39:54Z",
+    "weight": 0.94
+  },
+  "scr_2c558094cda77ca1ad": {
+    "confidence": 0.84,
+    "created_at": "2026-06-16T02:39:54Z",
+    "metadata": {
+      "merge_policy": "bounded_seen_count_strengthening_v0"
+    },
+    "relation": "manages",
+    "relation_id": "scr_2c558094cda77ca1ad",
+    "seen_count": 3,
+    "source_concept_id": "scc_94abcb2d2773df65",
+    "source_hashes": [
+      "3d06f9e6c69cdfe3dec411a914f1c357a16a3d58020ea1204059e2af5f79cda3",
+      "2d7b4d5f591458f7231fb70a45b9a14335a7f1866aeffcd279bff0fe7702ebe9"
+    ],
+    "target_concept_id": "scc_0013d70d942ed5a4",
+    "trust": 0.62,
+    "updated_at": "2026-06-16T02:39:54Z",
+    "weight": 1.0
+  },
+  "scr_3e42c4537eca5dc2ce": {
+    "confidence": 0.72,
+    "created_at": "2026-06-16T02:39:54Z",
+    "metadata": {
+      "merge_policy": "bounded_seen_count_strengthening_v0"
+    },
+    "relation": "used_for",
+    "relation_id": "scr_3e42c4537eca5dc2ce",
+    "seen_count": 3,
+    "source_concept_id": "scc_94abcb2d2773df65",
+    "source_hashes": [
+      "3d06f9e6c69cdfe3dec411a914f1c357a16a3d58020ea1204059e2af5f79cda3",
+      "2d7b4d5f591458f7231fb70a45b9a14335a7f1866aeffcd279bff0fe7702ebe9"
+    ],
+    "target_concept_id": "scc_288965a1f2c883c7",
+    "trust": 0.62,
+    "updated_at": "2026-06-16T02:39:54Z",
+    "weight": 0.88
+  },
+  "scr_a2e44a82c8dfd43043": {
+    "confidence": 0.78,
+    "created_at": "2026-06-16T02:39:54Z",
+    "metadata": {
+      "merge_policy": "bounded_seen_count_strengthening_v0"
+    },
+    "relation": "performs",
+    "relation_id": "scr_a2e44a82c8dfd43043",
+    "seen_count": 3,
+    "source_concept_id": "scc_94abcb2d2773df65",
+    "source_hashes": [
+      "3d06f9e6c69cdfe3dec411a914f1c357a16a3d58020ea1204059e2af5f79cda3",
+      "2d7b4d5f591458f7231fb70a45b9a14335a7f1866aeffcd279bff0fe7702ebe9"
+    ],
+    "target_concept_id": "scc_e1fa734ceafb2dd0",
+    "trust": 0.62,
+    "updated_at": "2026-06-16T02:39:54Z",
+    "weight": 0.94
+  }
+}

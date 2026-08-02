@@ -1,0 +1,67 @@
+{
+  "train_episodes": [
+    "ep441",
+    "ep443",
+    "ep444",
+    "ep446"
+  ],
+  "calibration_town": "ep050",
+  "test_towns": [
+    "ep100",
+    "ep112"
+  ],
+  "classes": [
+    "building",
+    "road",
+    "vegetation"
+  ],
+  "alpha": 0.1,
+  "epochs": 16,
+  "dim": 32,
+  "patch_radius": 20,
+  "n_train_patches": 9803,
+  "n_tracks": 871,
+  "recipes": {
+    "triplet + pool 1": {
+      "loss": "triplet",
+      "pool": 1,
+      "eff_dims_holdout": 2.6850620464967547,
+      "coverage": 0.20090946672178586,
+      "precision": 0.6069958847736625,
+      "false_accept_given_wrong": 0.1397220190197513,
+      "promise_kept": false,
+      "cosine_cut": 0.9445395469665527
+    },
+    "triplet + pool 2": {
+      "loss": "triplet",
+      "pool": 2,
+      "eff_dims_holdout": 2.9459143810062405,
+      "coverage": 0.48739148408433236,
+      "precision": 0.5555555555555556,
+      "false_accept_given_wrong": 0.6143024618991794,
+      "promise_kept": false,
+      "cosine_cut": 0.9065887928009033
+    },
+    "InfoNCE + pool 1": {
+      "loss": "infonce",
+      "pool": 1,
+      "eff_dims_holdout": 2.8902971155060384,
+      "coverage": 0.5117817279867714,
+      "precision": 0.5379644588045234,
+      "false_accept_given_wrong": 0.6589861751152074,
+      "promise_kept": false,
+      "cosine_cut": 0.9164391756057739
+    },
+    "InfoNCE + pool 2": {
+      "loss": "infonce",
+      "pool": 2,
+      "eff_dims_holdout": 5.127985860470804,
+      "coverage": 0.36089293096320796,
+      "precision": 0.6689576174112257,
+      "false_accept_given_wrong": 0.35072815533980584,
+      "promise_kept": false,
+      "cosine_cut": 0.8729697465896606
+    }
+  },
+  "note": "all four trained from scratch on identical patches, tracks, epochs and seed; scored where none of them trained. Threshold calibrated in one town and applied in the others."
+}

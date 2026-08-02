@@ -1,0 +1,25 @@
+{
+  "_note": "Relational lexicon for the reasoners — NOT hand-coded in reasoner code. Authoritative source, extensible by the learner (see ko_lexicon.add_*) or an external lexical resource. 'antonyms' maps a first-syllable stem to its positive-scale twin (polarity flip); 'causal_verbs' are surface stems of X⇒Y causation.",
+  "antonyms": {
+    "작": "크",
+    "적": "많",
+    "낮": "높",
+    "느": "빠",
+    "짧": "길",
+    "어": "많",
+    "좁": "넓",
+    "얕": "깊",
+    "약": "강",
+    "가벼": "무거",
+    "싸": "비싸",
+    "쉬": "어려"
+  },
+  "causal_verbs": [
+    "일으키", "일으켜", "일으킨",
+    "유발", "초래", "야기",
+    "불러", "부른", "부르",
+    "이끌", "이끈",
+    "이어지", "이어진", "이어져",
+    "낳", "만들", "가져오", "가져와", "촉발", "유도"
+  ]
+}

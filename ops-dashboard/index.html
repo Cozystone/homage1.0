@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATANOR OPS</title>
+<style>
+  :root{--bg:#0b0e14;--panel:#121722;--line:#1e2633;--tx:#dbe4f0;--dim:#7d8aa0;
+        --ok:#3ddc84;--warn:#ffb454;--bad:#ff6b6b;--cy:#20f4ff;--mono:'Cascadia Code',ui-monospace,Consolas,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--tx);font:14px/1.5 -apple-system,'Segoe UI',sans-serif;padding:18px}
+  header{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  h1{font-size:16px;font-weight:600;letter-spacing:.06em}
+  #stamp{color:var(--dim);font:12px var(--mono)}
+  #conn{font:12px var(--mono)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .card h2{font-size:11px;font-weight:600;color:var(--dim);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+  .kv{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px dotted var(--line);font:13px var(--mono)}
+  .kv:last-child{border-bottom:0}
+  .kv b{font-weight:500;color:var(--tx)}
+  .kv span{color:var(--dim)}
+  .big{font:600 26px var(--mono);margin:2px 0 6px}
+  .ok{color:var(--ok)} .warn{color:var(--warn)} .bad{color:var(--bad)} .cy{color:var(--cy)}
+  .ticker{font:13px var(--mono);color:var(--cy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .voice{font-size:13px;color:var(--tx);margin-top:6px;min-height:18px}
+  ul{list-style:none}
+  li{font:12px var(--mono);color:var(--dim);padding:2px 0;border-bottom:1px dotted var(--line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  li b{color:var(--tx);font-weight:500}
+  .titles li{color:var(--tx)}
+  footer{margin-top:14px;color:var(--dim);font:11px var(--mono)}
+  #refresh{margin-left:auto;background:var(--panel);border:1px solid var(--line);color:var(--tx);
+           border-radius:8px;padding:5px 12px;font:12px var(--mono);cursor:pointer}
+  #refresh:hover{border-color:var(--cy);color:var(--cy)}
+  #dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--dim);vertical-align:baseline}
+  #dot.pulse{background:var(--ok);animation:pulse 1.2s ease-out}
+  #dot.dead{background:var(--bad)}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.7)}100%{box-shadow:0 0 0 10px rgba(61,220,132,0)}}
+</style>
+</head>
+<body>
+<header>
+  <h1>ATANOR OPS</h1>
+  <span id="live" title="라이브 폴링"><span id="dot"></span></span>
+  <span id="conn" class="warn">connecting…</span>
+  <span id="stamp"></span>
+  <button id="refresh" title="지금 새로고침">↻ 새로고침</button>
+</header>
+<div class="grid">
+  <div class="card"><h2>완성 게이트 (궁극 배터리)</h2>
+    <div class="big" id="verdict">—</div>
+    <div class="kv"><span>P0</span><b id="p0">—</b></div>
+    <div class="kv"><span>P1</span><b id="p1">—</b></div>
+    <div class="kv"><span>P2 프런티어 (비게이트)</span><b id="p2">—</b></div>
+    <div class="kv"><span>p50 / p95</span><b id="lat">—</b></div>
+    <div class="kv"><span>run</span><b id="run">—</b></div>
+  </div>
+  <div class="card"><h2>T-프레임워크 5단계</h2>
+    <ul id="levels"></ul>
+  </div>
+  <div class="card"><h2>P0 파수꾼 (무인 품질 감시)</h2>
+    <div class="big" id="sentinel">—</div>
+    <div class="kv"><span>카나리아</span><b id="sentcnt">—</b></div>
+    <div class="kv"><span>학습 동결</span><b id="frozen">—</b></div>
+    <div class="kv"><span>마지막 점검</span><b id="sentat">—</b></div>
+  </div>
+  <div class="card"><h2>실시간 사고</h2>
+    <div class="ticker" id="ticker">—</div>
+    <div class="voice" id="voice"></div>
+    <ul id="recent"></ul>
+  </div>
+  <div class="card"><h2>문장 수집 (학습기 사이드카)</h2>
+    <div class="kv"><span>상태</span><b id="lrun">—</b></div>
+    <div class="kv"><span>tick / fed / accepted</span><b id="lcnt">—</b></div>
+    <div class="kv"><span>개념+ / 관계+</span><b id="ladd">—</b></div>
+    <div class="kv"><span>파이어호스 /s · 고유</span><b id="fh">—</b></div>
+    <div class="kv"><span>관계발견 검사·연결</span><b id="rd">—</b></div>
+    <div class="kv"><span>브라우즈 스풀(페이지)</span><b id="spool">—</b></div>
+    <ul class="titles" id="titles"></ul>
+  </div>
+  <div class="card"><h2>목소리 식단</h2>
+    <div class="big cy" id="diet">—</div>
+    <ul id="dietsrc"></ul>
+    <div class="kv"><span>대화체 비율 (voice share)</span><b id="vshare">—</b></div>
+    <div class="kv"><span>레지스터</span><b id="registers">—</b></div>
+    <div class="kv"><span>이야기 TTR / distinct-2</span><b id="fluency">—</b></div>
+    <div class="kv"><span>감정 꼬리</span><b id="felt">—</b></div>
+  </div>
+  <div class="card"><h2>플라이휠</h2>
+    <ul id="fly"></ul>
+  </div>
+</div>
+<footer>read-only telemetry · data stays on this machine (browser → local engine) · ?engine=http://127.0.0.1:8502</footer>
+<script>
+const qs = new URLSearchParams(location.search);
+// same-origin when served by the engine (:8502) OR the phone LAN relay (:8510);
+// hard-coding 127.0.0.1 here is exactly what broke the phone (its localhost ≠ the PC)
+const SAME = ["8502", "8510"].includes(location.port);
+const BASE = qs.get("engine") || (SAME ? "" : "http://127.0.0.1:8502");
+const $ = (id) => document.getElementById(id);
+async function j(path){
+  const ac = new AbortController();                       // no timeout = eternal "connecting…"
+  const t = setTimeout(() => ac.abort(), 5000);
+  try{
+    const r = await fetch(BASE + path, {signal: ac.signal});
+    if(!r.ok) throw new Error("http " + r.status);
+    return await r.json();
+  } finally { clearTimeout(t); }
+}
+function cls(el, c){ el.className = c; }
+function frac(s){ const m = /^(\d+)\s*\/\s*(\d+)$/.exec(String(s||"")); return m ? [+m[1], +m[2]] : null; }
+function levels(b, diet){
+  // T-프레임워크 5단계 (BINDING 2026-07-11) — 락 조건은 전부 실측 숫자에서 계산
+  const p0 = frac(b.p0), p1r = +(b.p1_rate||0), p2 = frac(b.p2);
+  const lv5 = b.verdict === "완성";
+  const p2n = p2 ? p2[0] : 0, p2d = p2 ? p2[1] : 10;
+  const dietTotal = +(diet.total||0);
+  const ROUTER = 83.2;  // 레인-증류 홀드아웃 실측 2026-07-11 (재훈련 시 갱신)
+  return [
+    {name:"Lv.5 기반 배관", cond:"배터리 완성 유지", on:lv5,
+     txt: lv5 ? `PASS — P0 ${b.p0||"?"} · P1 ${Math.round(p1r*1000)/10}%` : `미달 — ${b.verdict||"미실행"}`},
+    {name:"Lv.4 의미 굴절", cond:"P2 10문항 + 라우터 85%", on:false,
+     txt:`${Math.round(p2n/p2d*100)}% — P2 ${b.p2||"0/10"} · 라우터 ${ROUTER}%`},
+    {name:"Lv.3 보조바퀴 처형", cond:"정규식 삭제 + 라우터 95%", on:false,
+     txt:`대기 — 증류 플라이휠 가동 중 (${ROUTER}%→95%)`},
+    {name:"Lv.2 유창성 개화", cond:"청정 식단 50,000줄", on:false,
+     txt:`${Math.round(dietTotal/50000*1000)/10}% — ${dietTotal.toLocaleString()}줄 / 50,000줄`},
+    {name:"Lv.1 그랜드 슬램", cond:"승격 계측기 + 자율 진화", on:false, txt:"대기"},
+  ];
+}
+async function tick(){
+  try{
+    const o = await j("/api/ops/overview");
+    cls($("conn"), "ok"); $("conn").textContent = "engine ok";
+    $("stamp").textContent = o.at || "";
+    const b = o.battery || {};
+    $("verdict").textContent = b.verdict || "—";
+    cls($("verdict"), "big " + (b.verdict === "완성" ? "ok" : "warn"));
+    $("p0").textContent = b.p0 || "—"; $("p1").textContent = b.p1 || "—";
+    $("p2").textContent = b.p2 || "—";
+    $("lat").textContent = (b.p50_ms||"—") + "ms / " + (b.p95_ms||"—") + "ms";
+    $("run").textContent = b.run || "—";
+    const sn = o.sentinel || {};
+    const sst = sn.state || "—";
+    $("sentinel").textContent = sst === "GREEN" ? "🟢 GREEN" : sst === "RED" ? "🔴 RED" : sst;
+    cls($("sentinel"), "big " + (sst === "GREEN" ? "ok" : sst === "RED" ? "bad" : "warn"));
+    $("sentcnt").textContent = (sn.passed != null) ? `${sn.passed}/${sn.total}` + (sn.fails&&sn.fails.length?` (${sn.fails.join(", ").slice(0,40)})`:"") : "—";
+    $("frozen").textContent = sn.frozen ? "동결됨 (회귀 감지)" : "정상 학습 중";
+    cls($("frozen"), sn.frozen ? "bad" : "ok");
+    $("sentat").textContent = sn.at ? sn.at.slice(11) : "—";
+    const t = o.thinking || {};
+    $("ticker").textContent = t.ticker || "—";
+    $("voice").textContent = t.voice ? "🗣 " + t.voice : "(침묵 — 생성이 여물면 말합니다)";
+    $("recent").innerHTML = (t.recent||[]).slice(0,8).map(r=>`<li><b>${r.kind}</b> ${r.at?.slice(11)||""} · ${r.summary||""}</li>`).join("");
+    const l = o.learner || {};
+    $("lrun").textContent = l.running ? "RUNNING (pid "+(l.pid||"?")+")" : "STOPPED";
+    cls($("lrun"), l.running ? "ok" : "bad");
+    $("lcnt").textContent = `${l.ticks||0} / ${l.sentences_fed||0} / ${l.sentences_accepted||0}`;
+    $("ladd").textContent = `${l.concepts_added||0} / ${l.relations_added||0}`;
+    $("fh").textContent = `${l.firehose_per_second||0}/s · ${l.firehose_unique||0}`;
+    $("rd").textContent = `${l.reldisc_checks||0} · ${l.reldisc_linked||0}`;
+    $("spool").textContent = o.browse_spool_pages ?? "—";
+    $("titles").innerHTML = (l.last_titles||[]).map(x=>`<li>${x}</li>`).join("");
+    const vd = o.voice_diet || {};
+    $("diet").textContent = (vd.total ?? "—") + "줄";
+    $("dietsrc").innerHTML = Object.entries(vd.by_source||{}).map(([k,v])=>`<li><b>${k}</b> ${v}</li>`).join("");
+    const vs = vd.voice_share;
+    $("vshare").textContent = (vs != null) ? (Math.round(vs*1000)/10 + "%") : "—";
+    cls($("vshare"), (vs != null && vs >= 0.30) ? "ok" : (vs != null ? "warn" : ""));
+    $("registers").textContent = Object.entries(vd.by_register||{})
+      .sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${k} ${v}`).join(" · ") || "—";
+    $("levels").innerHTML = levels(b, vd).map(x=>
+      `<li><b class="${x.on?"ok":""}">${x.on?"🟢":"🟡"} ${x.name}</b> · ${x.txt}<br>&nbsp;&nbsp;&nbsp;<span style="color:var(--dim)">락: ${x.cond}</span></li>`).join("");
+    const sf = o.story_fluency || {};
+    $("fluency").textContent = sf.avg_ttr ? `${sf.avg_ttr} / ${sf.avg_distinct2} (${sf.samples}편)` : "—";
+    $("felt").textContent = (o.felt_tail||[]).map(f=>`${f.valence>0?"+":""}${f.valence}`).join(" ") || "—";
+    $("fly").innerHTML = Object.entries(o.flywheel||{}).slice(0,8).map(([k,v])=>`<li><b>${k}</b> ${typeof v==="object"?JSON.stringify(v).slice(0,60):v}</li>`).join("");
+    // LIVE PULSE: one green heartbeat per successful poll — 살아있음이 눈에 보인다
+    const dotEl = $("dot"); dotEl.classList.remove("dead","pulse"); void dotEl.offsetWidth; dotEl.classList.add("pulse");
+  }catch(e){
+    cls($("conn"), "bad");
+    $("conn").textContent = "engine unreachable → " + (BASE || location.origin);
+    const dotEl = $("dot"); dotEl.classList.remove("pulse"); dotEl.classList.add("dead");
+  }
+}
+$("refresh").addEventListener("click", tick);
+tick(); setInterval(tick, 3000);
+</script>
+</body>
+</html>

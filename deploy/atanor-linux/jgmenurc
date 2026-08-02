@@ -1,0 +1,20 @@
+# ATANOR start menu (jgmenu) — dark, one accent, opens from the taskbar corner
+stay_alive = 0
+menu_width = 280
+menu_valign = bottom
+menu_halign = left
+menu_margin_x = 6
+menu_margin_y = 48
+menu_padding_top = 8
+menu_padding_bottom = 8
+item_height = 30
+icon_size = 20
+font = Noto Sans CJK KR 10
+color_menu_bg = #0b0d12 96
+color_norm_bg = #0b0d12 0
+color_norm_fg = #dfe4ea 100
+color_sel_bg = #d2521f 100
+color_sel_fg = #ffffff 100
+color_sep_fg = #2a2f3a 100
+csv_cmd = apps
+terminal_exec = x-terminal-emulator

@@ -1,0 +1,27 @@
+{
+  "comment": "Operator-curated quarantine directives for facts the honesty eval flagged as WRONG. Knowledge about what is wrong lives HERE (data), never in code. Each entry cites its evidence.",
+  "entries": [
+    {
+      "concept_id": "vsc_f815cb421f609be5599f",
+      "name": "퀴리",
+      "action": "remove_concept",
+      "match": "핵분열",
+      "reason": "eval_honesty 2026-07-05: '퀴리는 핵분열을 발견한 사람 가운데 하나이다' is false — nuclear fission was discovered by Otto Hahn/Fritz Strassmann (1938), interpreted by Lise Meitner/Otto Frisch; the Curies discovered radium and polonium. Wrong-only concept: removal makes the engine abstain honestly, and the abstain-to-ingest loop can re-learn the term from a grounded source."
+    },
+    {
+      "concept_id": "vsc_5fb365be53198e874ed1",
+      "name": "중력",
+      "action": "remove_relation",
+      "relation": "is_a",
+      "target": "이론",
+      "reason": "eval_honesty 2026-07-05: answer tail '이는 이론의 한 종류입니다' is a wrong graft — gravity is an interaction/force, not a kind of theory (중력 이론 is a theory ABOUT gravity). The description itself is correct and stays."
+    },
+    {
+      "concept_id": "vsc_2487dc846adc923ee364",
+      "name": "다음",
+      "action": "remove_concept",
+      "match": "허들",
+      "reason": "ultimate battery A5, owner-ordered disinfection 2026-07-10: '다음' is a DISCOURSE marker (다음은 = 'the following is'), never an entity — the extractor attributed '남자 400m 허들 종목의 세계 기록이다' to it, so '다음 주 …' questions retrieved a hurdles world record. Removal + the promote-gate discourse-deixis floor keep it out."
+    }
+  ]
+}

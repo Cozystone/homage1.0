@@ -1,0 +1,14 @@
+# Runtime deps for the Cloud Brain server image.
+# The base API stack:
+fastapi==0.124.0
+httpx==0.28.1
+uvicorn[standard]==0.38.0
+# Engine numerics (used unguarded across packages):
+numpy>=1.24,<3
+networkx>=3.0
+scipy>=1.10
+# NOTE: torch / sentence_transformers are intentionally OMITTED — every import of
+# them in the engine is try/except-guarded and disabled via HOMAGE_DISABLE_BGE_M3
+# in the Dockerfile, so the cloud brain runs fine without those multi-GB wheels.
+# If `docker build`/startup ever fails on a missing module, add it here.
+python-multipart>=0.0.9

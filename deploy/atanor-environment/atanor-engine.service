@@ -1,0 +1,26 @@
+# ATANOR Environment — the resident mind (FastAPI engine + learning/selfhood loops).
+# Installed by install.sh to /etc/systemd/system/atanor-engine.service
+[Unit]
+Description=ATANOR engine (local no-LLM answer engine, learning + selfhood loops)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=atanor
+Group=atanor
+WorkingDirectory=/opt/atanor
+Environment=PYTHONIOENCODING=utf-8
+Environment=ATANOR_DATA_ROOT=/var/lib/atanor
+ExecStart=/opt/atanor/.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8502 --app-dir apps/api
+Restart=always
+RestartSec=3
+# OS-level bound on the learning loops — the 1GB-VM OOM lesson, enforced by systemd.
+MemoryMax=1536M
+MemoryHigh=1200M
+NoNewPrivileges=true
+ProtectHome=true
+ReadWritePaths=/opt/atanor /var/lib/atanor
+
+[Install]
+WantedBy=multi-user.target

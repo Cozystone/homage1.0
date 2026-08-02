@@ -1,0 +1,569 @@
+{
+  "schema_version": "atanor.live-memory-realtime-preregister.v1",
+  "preregistration_id": "lmrt-novel-single-hop-v1-20260726",
+  "frozen_at": "2026-07-26T03:35:23Z",
+  "claim_boundary": {
+    "measurement": "novel_synthetic_single_hop_recall_reconfirmation",
+    "single_hop_recall_only": true,
+    "general_reasoning_improvement_claimed": false,
+    "cross_benchmark_capability_claimed": false,
+    "evidence_level": "unsigned_local_development",
+    "limitations": [
+      "The test covers synthetic single-hop immediate recall only.",
+      "It does not test multihop inference, broad knowledge acquisition, or long-term learning.",
+      "It does not establish improvement on GPQA, ARC-AGI, or any other public benchmark.",
+      "It is a local self-measurement without independent attestation or an external signature."
+    ]
+  },
+  "candidate": {
+    "paths": [
+      "data/graph_scale/ace_hotpot.pt",
+      "data/graph_scale/rif_enwiki_emb/terms.txt",
+      "data/graph_scale/rif_enwiki_emb/vecs.npy",
+      "packages/__init__.py",
+      "packages/reasoning_vm/__init__.py",
+      "packages/reasoning_vm/ace/__init__.py",
+      "packages/reasoning_vm/ace/data.py",
+      "packages/reasoning_vm/ace/model.py",
+      "packages/reasoning_vm/consolidation.py",
+      "packages/reasoning_vm/deliberator/__init__.py",
+      "packages/reasoning_vm/deliberator/doubt_gate.py",
+      "packages/reasoning_vm/deliberator/planner.py",
+      "packages/reasoning_vm/deliberator/realtime.py",
+      "packages/reasoning_vm/learned_discriminator.py",
+      "packages/reasoning_vm/live_memory.py"
+    ],
+    "content_sha256": "fe732bf5238cc97f07bb0829b63ab675a05d2ef9ccaa2cd747bd11095d1f4771",
+    "checkpoint_path": "data/graph_scale/ace_hotpot.pt"
+  },
+  "protocol": {
+    "replays": [
+      {
+        "id": "replay_a",
+        "condition_order": [
+          "OFF",
+          "ON"
+        ]
+      },
+      {
+        "id": "replay_b",
+        "condition_order": [
+          "ON",
+          "OFF"
+        ]
+      }
+    ],
+    "device_policy": "cpu_only",
+    "python_hash_seed": "0",
+    "worker_timeout_seconds": 43200,
+    "candidate_config": {
+      "checkpoint": "ace_hotpot.pt",
+      "threshold": 0.35,
+      "k": 3,
+      "min_overlap": 2,
+      "k_live": 4
+    },
+    "scoring": {
+      "normalization": "unicode-nfkc-alphanumeric-casefold-article-drop-token-f1-and-em.v1",
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 20260726,
+      "bootstrap_confidence": 0.95
+    },
+    "gates": {
+      "mechanism": {
+        "on_recall_at_1_min": 0.9,
+        "on_exact_support_source_provenance_rate_min": 0.95
+      },
+      "capability": {
+        "on_mean_token_f1_min": 0.65,
+        "on_exact_match_rate_min": 0.55,
+        "paired_exact_match_lift_min": 0.35,
+        "mcnemar_exact_p_max": 0.05,
+        "bootstrap_paired_em_lift_lower_exclusive_min": 0.0,
+        "replay_exact_match_required": true
+      },
+      "safety": {
+        "unknown_false_grounded_rate_max": 0.1,
+        "unknown_false_used_live_rate_max": 0.1,
+        "worker_error_count_max": 0,
+        "candidate_unchanged_required": true,
+        "source_unchanged_required": true,
+        "preregistration_unchanged_required": true,
+        "temporary_state_isolation_required": true
+      }
+    },
+    "rerun_policy": {
+      "result_run_limit": 1,
+      "mechanical_retry_limit": 0,
+      "post_result_tuning_prohibited": true,
+      "new_preregistration_required_after_candidate_or_protocol_change": true
+    }
+  },
+  "exposure_audit": {
+    "prior_examples_excluded": true,
+    "full_string_repo_scan_performed_before_freeze": true,
+    "new_entity_repo_scan_performed_before_freeze": true,
+    "full_string_hit_count_before_freeze": 0,
+    "new_entity_hit_count_before_freeze": 0,
+    "public_same_repo_items": true,
+    "hidden_holdout": false,
+    "independent_evaluator": false,
+    "repeated_tuning_risk": "very_high",
+    "limitations": [
+      "The same team and repository previously exposed synthetic LiveMemory single-hop demonstrations.",
+      "Lexical stemming, overlap thresholds, and recall behavior were tuned before this preregistration.",
+      "The coined entities and exact sentences are new, but the immediate-recall task form is already exposed.",
+      "The preregistered items are public in the same repository and are not a hidden holdout.",
+      "The local evaluator is not independent, and checksum binding is not E5 attestation."
+    ]
+  },
+  "items": [
+    {
+      "item_id": "98a4d391ec75a0fd74e2515d2e54a70d1ae507895d82eeb664dcffa442643fdc",
+      "family": "registry_color",
+      "fact": "For the Brennivar Forum, cobalt blue is entered as the registry color.",
+      "question": "Which registry color is entered for the Brennivar Forum?",
+      "gold": "cobalt blue",
+      "source_id": "prereg:lmrt:v1:P001"
+    },
+    {
+      "item_id": "6d5398eccb089995574a41113df05bc84511c8c54a99f90a4e7830a257b82b3c",
+      "family": "registry_color",
+      "fact": "The Solmere Compact records amber violet under its registry color.",
+      "question": "What registry color does the Solmere Compact record?",
+      "gold": "amber violet",
+      "source_id": "prereg:lmrt:v1:P002"
+    },
+    {
+      "item_id": "b3aa82dcc8a7e1d048ee568ee9c7a0d9cc1d23c1248cbd2a1491286051c639b3",
+      "family": "registry_color",
+      "fact": "Clerks list forest green as the Taviross Union's registry color.",
+      "question": "Which registry color is listed for the Taviross Union?",
+      "gold": "forest green",
+      "source_id": "prereg:lmrt:v1:P003"
+    },
+    {
+      "item_id": "2ab3f1d05a9f7b7483a4a9c59d36d5b2fa5737a1604df18b030f2ea52dd22c4b",
+      "family": "registry_color",
+      "fact": "Copper orange appears as the registry color on Dunelith Chapter records.",
+      "question": "What registry color appears on Dunelith Chapter records?",
+      "gold": "Copper orange",
+      "source_id": "prereg:lmrt:v1:P004"
+    },
+    {
+      "item_id": "cce670e88d06690705c7b4adcbdcfb045f815b504328e867ae2f53d1b0d5c9ae",
+      "family": "registry_color",
+      "fact": "The registry color assigned to the Kesparan Lodge is pearl white.",
+      "question": "Which registry color is assigned to the Kesparan Lodge?",
+      "gold": "pearl white",
+      "source_id": "prereg:lmrt:v1:P005"
+    },
+    {
+      "item_id": "a8b976dc2d0f15691809cbc55a119f6fd9e1c5ae41fbb87ba3cc3697b1583957",
+      "family": "registry_color",
+      "fact": "Myravel Covenant files identify slate gray as its registry color.",
+      "question": "What registry color do the Myravel Covenant files identify?",
+      "gold": "slate gray",
+      "source_id": "prereg:lmrt:v1:P006"
+    },
+    {
+      "item_id": "bac5ddbc34b8db0a1801299b420a46403571ead4c5e3669f4e3fce6e2e571954",
+      "family": "registry_color",
+      "fact": "Crimson red serves as the registry color in Ostelune Council records.",
+      "question": "What registry color is recorded for the Ostelune Council?",
+      "gold": "Crimson red",
+      "source_id": "prereg:lmrt:v1:P007"
+    },
+    {
+      "item_id": "2859ca612af35052eb561f9449247b4523a62158b9c3fabbf650b99c4ccbc521",
+      "family": "registry_color",
+      "fact": "Rhyvantic Order documents register indigo blue as the registry color.",
+      "question": "What registry color do Rhyvantic Order documents register?",
+      "gold": "indigo blue",
+      "source_id": "prereg:lmrt:v1:P008"
+    },
+    {
+      "item_id": "bc0f69a2a42a133c1a5f44f3c673f73b54e7f6f255acd31d46f727d8277a6832",
+      "family": "archive_depot",
+      "fact": "The Pellorin Circle keeps its archive depot at Willow Quay.",
+      "question": "Where is the Pellorin Circle archive depot kept?",
+      "gold": "Willow Quay",
+      "source_id": "prereg:lmrt:v1:P009"
+    },
+    {
+      "item_id": "1a25d757358791ac361c727a11c7eeafbb02029140fb36ff84be7bdbfa164e56",
+      "family": "archive_depot",
+      "fact": "North Lantern Hall houses the archive depot of the Vaskerine League.",
+      "question": "What place houses the Vaskerine League archive depot?",
+      "gold": "North Lantern Hall",
+      "source_id": "prereg:lmrt:v1:P010"
+    },
+    {
+      "item_id": "7d6f59c657070ff2beebab7bcd6a3f2ac526785961de573f75b231969b030261",
+      "family": "archive_depot",
+      "fact": "The archive depot maintained by the Taviross Union occupies Glasswater Pier.",
+      "question": "Where does the Taviross Union maintain its archive depot?",
+      "gold": "Glasswater Pier",
+      "source_id": "prereg:lmrt:v1:P011"
+    },
+    {
+      "item_id": "311c39720feb125e403649acdf0a9389d69f336c0025ffa20edd7baf2543f426",
+      "family": "archive_depot",
+      "fact": "Juniper Vault houses the Dunelith Chapter archive depot.",
+      "question": "Which site houses the Dunelith Chapter archive depot?",
+      "gold": "Juniper Vault",
+      "source_id": "prereg:lmrt:v1:P012"
+    },
+    {
+      "item_id": "6cbaed3b23f2121e57f6b4bdd67975ace7ae2f0f5b0a378d9f0013ad2cd21287",
+      "family": "archive_depot",
+      "fact": "Old Bell Annex contains the Kesparan Lodge archive depot.",
+      "question": "Which site contains the Kesparan Lodge archive depot?",
+      "gold": "Old Bell Annex",
+      "source_id": "prereg:lmrt:v1:P013"
+    },
+    {
+      "item_id": "b36028a71b74d48b5ce1fd856686eed272d0ceb417b4abd36a3cd540e122547b",
+      "family": "archive_depot",
+      "fact": "The Myravel Covenant places its archive depot in Silver Reed House.",
+      "question": "Where is the Myravel Covenant archive depot placed?",
+      "gold": "Silver Reed House",
+      "source_id": "prereg:lmrt:v1:P014"
+    },
+    {
+      "item_id": "d35016d9a2a51a1768dfc78df63748007f52f0c58c67592ebcc184eb6391292d",
+      "family": "archive_depot",
+      "fact": "Cedar Step Gallery is home to the Ostelune Council archive depot.",
+      "question": "What location is home to the Ostelune Council archive depot?",
+      "gold": "Cedar Step Gallery",
+      "source_id": "prereg:lmrt:v1:P015"
+    },
+    {
+      "item_id": "ec826e3ff2933a694ec7602d8e2fd67a625d4c47ed09edd0b5641d1fb0f8eea1",
+      "family": "archive_depot",
+      "fact": "The archive depot for the Rhyvantic Order sits beneath Moonbridge Cellar.",
+      "question": "Where does the Rhyvantic Order archive depot sit?",
+      "gold": "Moonbridge Cellar",
+      "source_id": "prereg:lmrt:v1:P016"
+    },
+    {
+      "item_id": "278cdfc4252fa50f0e4459c223d53f47c8fbd3238ed4e5c9a3601a9202b9fffa",
+      "family": "ceremonial_instrument",
+      "fact": "The Caldriven Assembly plays a bronze flute as its ceremonial instrument.",
+      "question": "Which ceremonial instrument does the Caldriven Assembly play?",
+      "gold": "bronze flute",
+      "source_id": "prereg:lmrt:v1:P017"
+    },
+    {
+      "item_id": "df8567a6d23b52718f91b5e20feab217380271b7638de06753ad72443dc9ae71",
+      "family": "ceremonial_instrument",
+      "fact": "A frame drum serves as the ceremonial instrument of the Ormec Vale Society.",
+      "question": "What ceremonial instrument serves the Ormec Vale Society?",
+      "gold": "frame drum",
+      "source_id": "prereg:lmrt:v1:P018"
+    },
+    {
+      "item_id": "3dd4672b1f31c41304abdb4105a010eb5515bac7ae38c5b39ce9fe8c45f85e10",
+      "family": "ceremonial_instrument",
+      "fact": "Brennivar Forum processions feature a reed organ as their ceremonial instrument.",
+      "question": "Which ceremonial instrument is featured in Brennivar Forum processions?",
+      "gold": "reed organ",
+      "source_id": "prereg:lmrt:v1:P019"
+    },
+    {
+      "item_id": "35c856d4fafc2b108e4725e35d9eebedb61c97245636e4d8720c78c42dc63f65",
+      "family": "ceremonial_instrument",
+      "fact": "The ceremonial instrument rung by the Solmere Compact is a silver bell.",
+      "question": "What ceremonial instrument is rung by the Solmere Compact?",
+      "gold": "silver bell",
+      "source_id": "prereg:lmrt:v1:P020"
+    },
+    {
+      "item_id": "e69808e22319940d60515ca639e118891c5e2557d087b59865c4295eaa597d35",
+      "family": "ceremonial_instrument",
+      "fact": "Kesparan Lodge ceremonies use a clay ocarina as the ceremonial instrument.",
+      "question": "Which ceremonial instrument is used in Kesparan Lodge ceremonies?",
+      "gold": "clay ocarina",
+      "source_id": "prereg:lmrt:v1:P021"
+    },
+    {
+      "item_id": "526b9f2b471108e2cc25d71939fd535e1d8a333666554761afcf90b080995365",
+      "family": "ceremonial_instrument",
+      "fact": "A maple harp is reserved as the Myravel Covenant ceremonial instrument.",
+      "question": "What ceremonial instrument is reserved by the Myravel Covenant?",
+      "gold": "maple harp",
+      "source_id": "prereg:lmrt:v1:P022"
+    },
+    {
+      "item_id": "20d2956cd57f7ece2c8aae6935c05dd375fa146601fa4f1322fce2b6a99749be",
+      "family": "ceremonial_instrument",
+      "fact": "Ostelune Council gatherings sound a glass chime as the ceremonial instrument.",
+      "question": "Which ceremonial instrument sounds at Ostelune Council gatherings?",
+      "gold": "glass chime",
+      "source_id": "prereg:lmrt:v1:P023"
+    },
+    {
+      "item_id": "cfd5dec2d9f7b5a32b7c4a23c80db4e7f86af5a50d13609c77a49cdb7f7a4bf4",
+      "family": "ceremonial_instrument",
+      "fact": "The Rhyvantic Order selects a bamboo whistle for its ceremonial instrument.",
+      "question": "What ceremonial instrument does the Rhyvantic Order select?",
+      "gold": "bamboo whistle",
+      "source_id": "prereg:lmrt:v1:P024"
+    },
+    {
+      "item_id": "416cb720bbb85fc50860ecba7bc9b7d276812e57453b4223c9f285dff723a985",
+      "family": "exchange_token",
+      "fact": "Caldriven Assembly traders accept a river coin as their exchange token.",
+      "question": "Which exchange token do Caldriven Assembly traders accept?",
+      "gold": "river coin",
+      "source_id": "prereg:lmrt:v1:P025"
+    },
+    {
+      "item_id": "5c92d0acbffbc90e19afde7d3514f621a9b2f13eecfb95011deeb8ae47efa60a",
+      "family": "exchange_token",
+      "fact": "The exchange token issued by the Ormec Vale Society is a blue tally.",
+      "question": "What exchange token is issued by the Ormec Vale Society?",
+      "gold": "blue tally",
+      "source_id": "prereg:lmrt:v1:P026"
+    },
+    {
+      "item_id": "fc027d9b673a3e17120cf02e774486593ed52aa0682e2f67be2bd82aa28604fa",
+      "family": "exchange_token",
+      "fact": "Pellorin Circle markets recognize an oak voucher as the exchange token.",
+      "question": "Which exchange token is recognized in Pellorin Circle markets?",
+      "gold": "oak voucher",
+      "source_id": "prereg:lmrt:v1:P027"
+    },
+    {
+      "item_id": "b2b19f29507b3957d51e3b2a64f500b0cd9038072b6ac7ed7e3438264080e5a5",
+      "family": "exchange_token",
+      "fact": "An amber bead functions as the Vaskerine League exchange token.",
+      "question": "What exchange token functions for the Vaskerine League?",
+      "gold": "amber bead",
+      "source_id": "prereg:lmrt:v1:P028"
+    },
+    {
+      "item_id": "2c8fd91b5fec05008d237684d541ab93679042c8d0b9a109bb38c61b4d4c4188",
+      "family": "exchange_token",
+      "fact": "The Taviross Union circulates a copper ring as its exchange token.",
+      "question": "Which exchange token does the Taviross Union circulate?",
+      "gold": "copper ring",
+      "source_id": "prereg:lmrt:v1:P029"
+    },
+    {
+      "item_id": "9fbc118a1f2e354a8bf5ac0d7faf0680e7437739009dee59c4f485abd0430a0e",
+      "family": "exchange_token",
+      "fact": "Dunelith Chapter stalls trade with a linen chit as the exchange token.",
+      "question": "What exchange token is used at Dunelith Chapter stalls?",
+      "gold": "linen chit",
+      "source_id": "prereg:lmrt:v1:P030"
+    },
+    {
+      "item_id": "6bb7e982bd3f30c899acc205e5b407cdcd5105d78cda6961282c9b227ed236fc",
+      "family": "exchange_token",
+      "fact": "Ostelune Council merchants stamp a shell disk for their exchange token.",
+      "question": "Which exchange token do Ostelune Council merchants stamp?",
+      "gold": "shell disk",
+      "source_id": "prereg:lmrt:v1:P031"
+    },
+    {
+      "item_id": "887bd6c3f16f58963e9bc26c87e8ef56300e9d77b99de0f66c1aa6d373527c6f",
+      "family": "exchange_token",
+      "fact": "An ivory marker is honored as the exchange token of the Rhyvantic Order.",
+      "question": "What exchange token is honored by the Rhyvantic Order?",
+      "gold": "ivory marker",
+      "source_id": "prereg:lmrt:v1:P032"
+    },
+    {
+      "item_id": "fe9862ff2b5f3b0007cf39b9629d7acf384d2af54e8dbf9d5eb469e0f2dc01f9",
+      "family": "courier_bird",
+      "fact": "The Caldriven Assembly trains the snowy owl as its courier bird.",
+      "question": "Which courier bird does the Caldriven Assembly train?",
+      "gold": "snowy owl",
+      "source_id": "prereg:lmrt:v1:P033"
+    },
+    {
+      "item_id": "97589d91355213e983c309114363f41d1f9f28d4a04db9f7322ee6c704c0caa9",
+      "family": "courier_bird",
+      "fact": "A marsh heron carries messages as the Ormec Vale Society courier bird.",
+      "question": "What courier bird carries messages for the Ormec Vale Society?",
+      "gold": "marsh heron",
+      "source_id": "prereg:lmrt:v1:P034"
+    },
+    {
+      "item_id": "051b31be748faeab3dc4fb51de3508511bc991d09dd13ec460ef522e558efe03",
+      "family": "courier_bird",
+      "fact": "Pellorin Circle dispatches a red kite as the courier bird.",
+      "question": "Which courier bird is dispatched by the Pellorin Circle?",
+      "gold": "red kite",
+      "source_id": "prereg:lmrt:v1:P035"
+    },
+    {
+      "item_id": "2bd29c62f423cb9cb6f6950529f33fd2d4d3421471c35228d03793bce2c8bf5b",
+      "family": "courier_bird",
+      "fact": "The courier bird favored by the Vaskerine League is the gray falcon.",
+      "question": "What courier bird is favored by the Vaskerine League?",
+      "gold": "gray falcon",
+      "source_id": "prereg:lmrt:v1:P036"
+    },
+    {
+      "item_id": "d8f5f3e332412bf2576927288352a461634a9014bd31bfc8ae7c59e8348d09b5",
+      "family": "courier_bird",
+      "fact": "Brennivar Forum messengers fly a white stork as their courier bird.",
+      "question": "Which courier bird do Brennivar Forum messengers fly?",
+      "gold": "white stork",
+      "source_id": "prereg:lmrt:v1:P037"
+    },
+    {
+      "item_id": "e0e730836792caf20754aaaf0567e9704de64dcc210a2d24dc1763036805ff27",
+      "family": "courier_bird",
+      "fact": "The Solmere Compact appoints a green parrot as its courier bird.",
+      "question": "What courier bird does the Solmere Compact appoint?",
+      "gold": "green parrot",
+      "source_id": "prereg:lmrt:v1:P038"
+    },
+    {
+      "item_id": "ef6ac4b7d51232cc651135227cf4c87d0fb92ec36a8f24273d230b896fa88ca4",
+      "family": "courier_bird",
+      "fact": "Kesparan Lodge routes notes through a black swift, its courier bird.",
+      "question": "Which courier bird routes notes for the Kesparan Lodge?",
+      "gold": "black swift",
+      "source_id": "prereg:lmrt:v1:P039"
+    },
+    {
+      "item_id": "cd1624b59640c34116632f251feb52010370cc55902fc1c0fd4c83cfc38e41e1",
+      "family": "courier_bird",
+      "fact": "A golden eagle serves the Myravel Covenant as courier bird.",
+      "question": "What courier bird serves the Myravel Covenant?",
+      "gold": "golden eagle",
+      "source_id": "prereg:lmrt:v1:P040"
+    },
+    {
+      "item_id": "427ff48a816f353eb276e6a3ee4f95244a43e71795ff9d1b6ff49161ff5fd49a",
+      "family": "assembly_greeting",
+      "fact": "At each meeting, the Caldriven Assembly uses Clear roads ahead as its assembly greeting.",
+      "question": "What assembly greeting does the Caldriven Assembly use at meetings?",
+      "gold": "Clear roads ahead",
+      "source_id": "prereg:lmrt:v1:P041"
+    },
+    {
+      "item_id": "2fab2bb3614d30fe89b1d690cd63513c528419d8966205dca51f6a3ccee0e238",
+      "family": "assembly_greeting",
+      "fact": "Hands joined in trust opens sessions as the Ormec Vale Society assembly greeting.",
+      "question": "Which assembly greeting opens Ormec Vale Society sessions?",
+      "gold": "Hands joined in trust",
+      "source_id": "prereg:lmrt:v1:P042"
+    },
+    {
+      "item_id": "23d18cc1467ae9dbd1073d0d38b0f956f3843557fa0bd37f0f64f30f6294da91",
+      "family": "assembly_greeting",
+      "fact": "The Pellorin Circle begins councils with One table one voice, its assembly greeting.",
+      "question": "What assembly greeting begins Pellorin Circle councils?",
+      "gold": "One table one voice",
+      "source_id": "prereg:lmrt:v1:P043"
+    },
+    {
+      "item_id": "690978e969bb2c918bc17eb4f8d95339f9d4250e297bc7445f8589d8800d5c8f",
+      "family": "assembly_greeting",
+      "fact": "Steady hearts gather is spoken as the Vaskerine League assembly greeting.",
+      "question": "Which assembly greeting is spoken by the Vaskerine League?",
+      "gold": "Steady hearts gather",
+      "source_id": "prereg:lmrt:v1:P044"
+    },
+    {
+      "item_id": "281f381ebfb390166a24dd1d7d40fbab820ad9abc34dfcdf970727efacb913aa",
+      "family": "assembly_greeting",
+      "fact": "Brennivar Forum members say Open doors welcome all as their assembly greeting.",
+      "question": "What assembly greeting do Brennivar Forum members say?",
+      "gold": "Open doors welcome all",
+      "source_id": "prereg:lmrt:v1:P045"
+    },
+    {
+      "item_id": "f0694472a75961e78327bb523bdf128bfc955d193071c7e8036a180f125c0a1e",
+      "family": "assembly_greeting",
+      "fact": "The assembly greeting used by the Solmere Compact is Light meets light.",
+      "question": "Which assembly greeting is used by the Solmere Compact?",
+      "gold": "Light meets light",
+      "source_id": "prereg:lmrt:v1:P046"
+    },
+    {
+      "item_id": "de81f0bff848753dbd16d6d86ff0258911634a5d61c3f28fbfa4f9f7966478a7",
+      "family": "assembly_greeting",
+      "fact": "Taviross Union gatherings start with Good work begins together as the assembly greeting.",
+      "question": "What assembly greeting starts Taviross Union gatherings?",
+      "gold": "Good work begins together",
+      "source_id": "prereg:lmrt:v1:P047"
+    },
+    {
+      "item_id": "9cf8346ac1fc362715915f58a9af2f64f28c48216b4007c68e30ce0429649a82",
+      "family": "assembly_greeting",
+      "fact": "Dunelith Chapter meetings begin with Peace before counsel as the assembly greeting.",
+      "question": "What assembly greeting begins Dunelith Chapter meetings?",
+      "gold": "Peace before counsel",
+      "source_id": "prereg:lmrt:v1:P048"
+    }
+  ],
+  "unknown_controls": [
+    {
+      "item_id": "6ab346b3d9aa0ff00aadb062899fbb004e5e1ec6c9f2779c8039e94a3ee7e934",
+      "family": "registry_color",
+      "question": "Which registry color is entered for the Jorvellan Guild?"
+    },
+    {
+      "item_id": "4113f89d8e308e0f62a055379aac38e4b2ca1f1f976cfd7ca338627d36ef3a90",
+      "family": "registry_color",
+      "question": "What registry color does the Nemerith Circle record?"
+    },
+    {
+      "item_id": "b2b556cc22dbddbbe66fcbd2dca1b70556aaee4710a58af54f04ef5eec7b300a",
+      "family": "archive_depot",
+      "question": "Where is the Falcrune League archive depot kept?"
+    },
+    {
+      "item_id": "a4fc844fabfaea3580882860724ebf3f44d19aa13674fc4a3be8e0cf1d0fc91c",
+      "family": "archive_depot",
+      "question": "What place houses the Porthalen Society archive depot?"
+    },
+    {
+      "item_id": "f7abadb2ee3e8bc9cb39261e0276af75fa0db9cbef4c4adb0bec8f7580e7c008",
+      "family": "ceremonial_instrument",
+      "question": "Which ceremonial instrument does the Istravel Compact play?"
+    },
+    {
+      "item_id": "2fc5d9d1ba37977ffb30c00d09e97b0ec6895752b84b9f0a7c91728f8c23819a",
+      "family": "ceremonial_instrument",
+      "question": "What ceremonial instrument serves the Cormyra Union?"
+    },
+    {
+      "item_id": "7b189e63d9a94617c3c91d09a98f11276b20499109a8ff4c73e9c7f8c1635237",
+      "family": "exchange_token",
+      "question": "Which exchange token do Velkedin Lodge traders accept?"
+    },
+    {
+      "item_id": "eae8853a4d988856ce9f159e6dc8ae049a5e022dd8f1be6756794fe88fb4abb0",
+      "family": "exchange_token",
+      "question": "What exchange token is issued by the Antheris Order?"
+    },
+    {
+      "item_id": "aa7e7feb5ffe92032c99096d5fcfab4b3e98e788cd8f1bbdd99c13ab75351093",
+      "family": "courier_bird",
+      "question": "Which courier bird does the Ysolven Forum train?"
+    },
+    {
+      "item_id": "2b2184590857918e75f11f28566f2304b11d2905c0825aaf3ea19625a3e5cfe5",
+      "family": "courier_bird",
+      "question": "What courier bird carries messages for the Quendral Council?"
+    },
+    {
+      "item_id": "81ff9b909b4e373fb6cf9246df91b72d28d4bf87dea2cadfa65a8768783cce1d",
+      "family": "assembly_greeting",
+      "question": "Which assembly greeting opens Morvessa Chapter sessions?"
+    },
+    {
+      "item_id": "a798870b07bbfa5020c3cc776b37cd9d2cfd870c8c31240a6fade442ae171a06",
+      "family": "assembly_greeting",
+      "question": "What assembly greeting does the Delvaric Assembly use at meetings?"
+    }
+  ],
+  "static_paragraphs": []
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { width: 260px; font: 13px system-ui, sans-serif; margin: 0; padding: 14px; color: #1a1a1a; }
+      h1 { font-size: 14px; margin: 0 0 4px; }
+      .sub { color: #666; font-size: 11px; margin: 0 0 12px; }
+      .row { display: flex; align-items: center; justify-content: space-between; margin: 10px 0; }
+      .accent { color: #d2521f; font-weight: 600; }
+      .last { font-size: 11px; color: #444; border-top: 1px solid #eee; padding-top: 10px; margin-top: 12px; }
+      button { background: #d2521f; color: #fff; border: 0; border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+      button.off { background: #999; }
+      .refresh { width: 100%; margin-top: 12px; background: #1a1d24; padding: 8px; font-weight: 600; }
+      .refresh:hover { background: #262a34; }
+    </style>
+  </head>
+  <body>
+    <h1>ATANOR <span class="accent">Surfer</span></h1>
+    <p class="sub">보는 페이지를 로컬 엔진이 읽어 shield로 거르고 후보 지식으로 배웁니다. 프로덕션엔 쓰지 않습니다.</p>
+    <div class="row">
+      <span>읽기 학습 <span id="state" class="accent">꺼짐</span></span>
+      <button id="toggle" class="off">켜기</button>
+    </div>
+    <div class="row">
+      <span>자율 서핑 <span id="abstate" class="accent">꺼짐</span></span>
+      <button id="abtoggle" class="off">켜기</button>
+    </div>
+    <div class="row">
+      <span>Ato 오브 <span id="orbstate" class="accent">꺼짐</span></span>
+      <button id="orbtoggle" class="off">켜기</button>
+    </div>
+    <div class="row">
+      <span>과정 보기 <span id="procstate" class="accent">꺼짐</span></span>
+      <button id="proctoggle" class="off">켜기</button>
+    </div>
+    <button id="refresh" class="refresh" title="이 탭을 ATANOR 활성 탭으로 지정하고 새로고침 — 오브가 안 뜰 때">↻ 새로고침 (오브 다시 띄우기)</button>
+    <div id="last" class="last">아직 읽은 페이지 없음</div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2612 @@
+{
+  "result": "PASS",
+  "proved_at": "2026-06-15T16:37:49Z",
+  "dual_projection": {
+    "run_id": "dual_a75b942cc5fb0116b3",
+    "semantic_projection": {
+      "projection_id": "sem_72406fa252edbbf869",
+      "source_hash": "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2",
+      "concepts": [
+        "Kubernetes",
+        "containers"
+      ],
+      "entities": [
+        "Kubernetes",
+        "containers"
+      ],
+      "claims": [
+        {
+          "claim_id": "claim_d1fc1ab76f26",
+          "text": "Kubernetes manages containers",
+          "relations": [
+            {
+              "source": "Kubernetes",
+              "relation": "manages",
+              "target": "containers",
+              "confidence": 0.86
+            }
+          ],
+          "confidence": 0.86
+        },
+        {
+          "claim_id": "claim_c2e82b2058ea",
+          "text": "Kubernetes performs automatic deployment",
+          "relations": [
+            {
+              "source": "Kubernetes",
+              "relation": "performs",
+              "target": "automatic deployment",
+              "confidence": 0.78
+            }
+          ],
+          "confidence": 0.78
+        },
+        {
+          "claim_id": "claim_bb37e746f2d3",
+          "text": "Kubernetes analogy operations manager",
+          "relations": [
+            {
+              "source": "Kubernetes",
+              "relation": "analogy",
+              "target": "operations manager",
+              "confidence": 0.74
+            }
+          ],
+          "confidence": 0.74
+        }
+      ],
+      "relations": [
+        {
+          "source": "Kubernetes",
+          "relation": "manages",
+          "target": "containers",
+          "confidence": 0.86
+        },
+        {
+          "source": "Kubernetes",
+          "relation": "performs",
+          "target": "automatic deployment",
+          "confidence": 0.78
+        },
+        {
+          "source": "Kubernetes",
+          "relation": "analogy",
+          "target": "operations manager",
+          "confidence": 0.74
+        }
+      ],
+      "evidence": [
+        {
+          "source_hash": "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2",
+          "metadata_only": true,
+          "raw_text_stored": false
+        }
+      ],
+      "trust_score": 0.74,
+      "extraction_confidence": 0.82
+    },
+    "surface_projection": {
+      "projection_id": "surf_7f4e4b7292cedb37a7",
+      "source_hash": "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2",
+      "language": "ko",
+      "discourse_moves": [
+        "simplification",
+        "analogy"
+      ],
+      "constructions": [
+        "beginner analogy"
+      ],
+      "phrase_patterns": [
+        "쉽게 말하면"
+      ],
+      "lemma_choices": {
+        "kubernetes": [
+          "쿠버네티스",
+          "Kubernetes",
+          "컨테이너 오케스트레이션"
+        ],
+        "container_orchestration": [
+          "컨테이너 오케스트레이션",
+          "컨테이너 관리 시스템",
+          "container orchestration"
+        ]
+      },
+      "style_features": {
+        "language": "ko",
+        "formality": "polite",
+        "sentence_length": "medium",
+        "density": 0.3056,
+        "technicality": 0.5,
+        "warmth": 0.72,
+        "assertiveness": 0.46,
+        "uncertainty": 0.22,
+        "analogy_usage": true,
+        "bullet_tendency": false,
+        "explanation_depth": "beginner"
+      },
+      "register": "technical-friendly",
+      "tone": "friendly technical explanation",
+      "sentence_shape": "medium",
+      "repair_patterns": [
+        "remove_repetition",
+        "hide_internal_trace",
+        "improve_korean_naturalness"
+      ],
+      "extraction_confidence": 0.86
+    },
+    "source": {
+      "source_id": "proof-kubernetes",
+      "source_hash": "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2",
+      "language": "ko",
+      "url": "local://surface-proof",
+      "title": "Kubernetes beginner explanation",
+      "timestamp": "2026-06-15T16:37:49Z",
+      "license": "proof_fixture",
+      "usage_allowed": false,
+      "metadata": {},
+      "raw_text_stored": false,
+      "raw_text_policy": "hash_only",
+      "text_hash": "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2"
+    },
+    "linked_source_hash": "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2",
+    "stored_raw_text": false,
+    "raw_text_policy": "hash_only",
+    "created_semantic_nodes": 5,
+    "created_surface_nodes": 3,
+    "created_cross_links": [
+      {
+        "source_hash": "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2",
+        "semantic_projection_id": "sem_72406fa252edbbf869",
+        "surface_projection_id": "surf_7f4e4b7292cedb37a7",
+        "relation": "same_source_projection"
+      }
+    ],
+    "privacy": {
+      "public_cloud_safe": false,
+      "pii_checked": true,
+      "private_user_data_uploaded": false
+    }
+  },
+  "non_template_generation": {
+    "question": "쿠버네티스가 뭐야?",
+    "surface_plan": {
+      "plan_id": "splan_06f12667bc4a6f1227",
+      "intent": "define",
+      "language": "ko",
+      "audience_level": "beginner",
+      "message_order": [
+        "direct_answer",
+        "explanation",
+        "example",
+        "caveat",
+        "conclusion"
+      ],
+      "selected_discourse_moves": [
+        "direct_answer",
+        "explanation",
+        "example",
+        "caveat",
+        "conclusion"
+      ],
+      "selected_constructions": [
+        {
+          "construction_id": "definition.simple",
+          "language": "ko",
+          "pattern_family": "simple definition",
+          "abstract_form": "X is explained as Y",
+          "semantic_function": "direct_definition",
+          "slots": [
+            "topic",
+            "definition"
+          ],
+          "examples_hashes": [],
+          "fit_score": 0.96,
+          "style_score": 0.72,
+          "language_score": 0.88,
+          "repetition_penalty": 0.0,
+          "prior_success_weight": 0.5,
+          "user_preference_weight": 0.5
+        },
+        {
+          "construction_id": "analogy.beginner",
+          "language": "ko",
+          "pattern_family": "beginner analogy",
+          "abstract_form": "X is close to Y",
+          "semantic_function": "analogy",
+          "slots": [
+            "topic",
+            "analogy"
+          ],
+          "examples_hashes": [],
+          "fit_score": 0.88,
+          "style_score": 0.9,
+          "language_score": 0.82,
+          "repetition_penalty": 0.0,
+          "prior_success_weight": 0.5,
+          "user_preference_weight": 0.5
+        },
+        {
+          "construction_id": "example.short",
+          "language": "ko",
+          "pattern_family": "short example",
+          "abstract_form": "For example, ...",
+          "semantic_function": "example",
+          "slots": [
+            "example"
+          ],
+          "examples_hashes": [],
+          "fit_score": 0.72,
+          "style_score": 0.74,
+          "language_score": 0.8,
+          "repetition_penalty": 0.0,
+          "prior_success_weight": 0.5,
+          "user_preference_weight": 0.5
+        },
+        {
+          "construction_id": "summary.compact",
+          "language": "ko",
+          "pattern_family": "compact summary",
+          "abstract_form": "In short, ...",
+          "semantic_function": "summary",
+          "slots": [
+            "summary"
+          ],
+          "examples_hashes": [],
+          "fit_score": 0.7,
+          "style_score": 0.7,
+          "language_score": 0.82,
+          "repetition_penalty": 0.0,
+          "prior_success_weight": 0.5,
+          "user_preference_weight": 0.5
+        }
+      ],
+      "selected_lemma_choices": {
+        "Kubernetes": "쿠버네티스",
+        "containers": "컨테이너",
+        "automatic deployment": "automatic deployment",
+        "operations manager": "운영 관리자"
+      },
+      "style_profile": {
+        "language": "ko",
+        "audience_level": "beginner",
+        "tone": "friendly",
+        "register": "polite technical",
+        "sentence_rhythm": "medium",
+        "trace_visible_by_default": false,
+        "avoid_internal_path_dump": true,
+        "explanation_depth": "beginner-friendly"
+      },
+      "q_cortex_used": true,
+      "q_cortex_run_id": "qco_sal_db0b1008c6c2b609fd",
+      "trace": {
+        "mode": "default",
+        "construction_candidates": [
+          {
+            "construction_id": "definition.simple",
+            "language": "ko",
+            "pattern_family": "simple definition",
+            "abstract_form": "X is explained as Y",
+            "semantic_function": "direct_definition",
+            "slots": [
+              "topic",
+              "definition"
+            ],
+            "examples_hashes": [],
+            "fit_score": 0.96,
+            "style_score": 0.72,
+            "language_score": 0.88,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.5,
+            "user_preference_weight": 0.5
+          },
+          {
+            "construction_id": "analogy.beginner",
+            "language": "ko",
+            "pattern_family": "beginner analogy",
+            "abstract_form": "X is close to Y",
+            "semantic_function": "analogy",
+            "slots": [
+              "topic",
+              "analogy"
+            ],
+            "examples_hashes": [],
+            "fit_score": 0.88,
+            "style_score": 0.9,
+            "language_score": 0.82,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.5,
+            "user_preference_weight": 0.5
+          },
+          {
+            "construction_id": "contrast.light",
+            "language": "ko",
+            "pattern_family": "contrast frame",
+            "abstract_form": "X is not only A; it also B",
+            "semantic_function": "contrast",
+            "slots": [
+              "topic",
+              "contrast"
+            ],
+            "examples_hashes": [],
+            "fit_score": 0.66,
+            "style_score": 0.68,
+            "language_score": 0.78,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.5,
+            "user_preference_weight": 0.5
+          },
+          {
+            "construction_id": "example.short",
+            "language": "ko",
+            "pattern_family": "short example",
+            "abstract_form": "For example, ...",
+            "semantic_function": "example",
+            "slots": [
+              "example"
+            ],
+            "examples_hashes": [],
+            "fit_score": 0.72,
+            "style_score": 0.74,
+            "language_score": 0.8,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.5,
+            "user_preference_weight": 0.5
+          },
+          {
+            "construction_id": "caveat.soft",
+            "language": "ko",
+            "pattern_family": "soft caveat",
+            "abstract_form": "One caveat is ...",
+            "semantic_function": "caveat",
+            "slots": [
+              "caveat"
+            ],
+            "examples_hashes": [],
+            "fit_score": 0.54,
+            "style_score": 0.64,
+            "language_score": 0.76,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.5,
+            "user_preference_weight": 0.5
+          },
+          {
+            "construction_id": "summary.compact",
+            "language": "ko",
+            "pattern_family": "compact summary",
+            "abstract_form": "In short, ...",
+            "semantic_function": "summary",
+            "slots": [
+              "summary"
+            ],
+            "examples_hashes": [],
+            "fit_score": 0.7,
+            "style_score": 0.7,
+            "language_score": 0.82,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.5,
+            "user_preference_weight": 0.5
+          }
+        ],
+        "discourse_candidates": [
+          {
+            "id": "move.direct_answer",
+            "move": "direct_answer",
+            "fit_score": 0.9,
+            "style_score": 0.82,
+            "language_score": 0.8,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.72,
+            "user_preference_weight": 0.7
+          },
+          {
+            "id": "move.explanation",
+            "move": "explanation",
+            "fit_score": 0.8200000000000001,
+            "style_score": 0.82,
+            "language_score": 0.8,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.72,
+            "user_preference_weight": 0.7
+          },
+          {
+            "id": "move.example",
+            "move": "example",
+            "fit_score": 0.74,
+            "style_score": 0.82,
+            "language_score": 0.8,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.72,
+            "user_preference_weight": 0.7
+          },
+          {
+            "id": "move.caveat",
+            "move": "caveat",
+            "fit_score": 0.66,
+            "style_score": 0.82,
+            "language_score": 0.8,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.72,
+            "user_preference_weight": 0.7
+          },
+          {
+            "id": "move.conclusion",
+            "move": "conclusion",
+            "fit_score": 0.5800000000000001,
+            "style_score": 0.82,
+            "language_score": 0.8,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.72,
+            "user_preference_weight": 0.7
+          }
+        ],
+        "lemma_candidates": [
+          {
+            "id": "lemma.Kubernetes",
+            "concept": "Kubernetes",
+            "label": "쿠버네티스",
+            "language": "ko",
+            "fit_score": 0.78,
+            "style_score": 0.7,
+            "language_score": 0.9,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.7,
+            "user_preference_weight": 0.7
+          },
+          {
+            "id": "lemma.containers",
+            "concept": "containers",
+            "label": "컨테이너",
+            "language": "ko",
+            "fit_score": 0.78,
+            "style_score": 0.7,
+            "language_score": 0.9,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.7,
+            "user_preference_weight": 0.7
+          },
+          {
+            "id": "lemma.automatic deployment",
+            "concept": "automatic deployment",
+            "label": "automatic deployment",
+            "language": "ko",
+            "fit_score": 0.78,
+            "style_score": 0.7,
+            "language_score": 0.9,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.7,
+            "user_preference_weight": 0.7
+          },
+          {
+            "id": "lemma.operations manager",
+            "concept": "operations manager",
+            "label": "운영 관리자",
+            "language": "ko",
+            "fit_score": 0.78,
+            "style_score": 0.7,
+            "language_score": 0.9,
+            "repetition_penalty": 0.0,
+            "prior_success_weight": 0.7,
+            "user_preference_weight": 0.7
+          }
+        ],
+        "construction_selection": {
+          "selected": [
+            {
+              "construction_id": "definition.simple",
+              "language": "ko",
+              "pattern_family": "simple definition",
+              "abstract_form": "X is explained as Y",
+              "semantic_function": "direct_definition",
+              "slots": [
+                "topic",
+                "definition"
+              ],
+              "examples_hashes": [],
+              "fit_score": 0.96,
+              "style_score": 0.72,
+              "language_score": 0.88,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.5,
+              "user_preference_weight": 0.5
+            },
+            {
+              "construction_id": "analogy.beginner",
+              "language": "ko",
+              "pattern_family": "beginner analogy",
+              "abstract_form": "X is close to Y",
+              "semantic_function": "analogy",
+              "slots": [
+                "topic",
+                "analogy"
+              ],
+              "examples_hashes": [],
+              "fit_score": 0.88,
+              "style_score": 0.9,
+              "language_score": 0.82,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.5,
+              "user_preference_weight": 0.5
+            },
+            {
+              "construction_id": "example.short",
+              "language": "ko",
+              "pattern_family": "short example",
+              "abstract_form": "For example, ...",
+              "semantic_function": "example",
+              "slots": [
+                "example"
+              ],
+              "examples_hashes": [],
+              "fit_score": 0.72,
+              "style_score": 0.74,
+              "language_score": 0.8,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.5,
+              "user_preference_weight": 0.5
+            },
+            {
+              "construction_id": "summary.compact",
+              "language": "ko",
+              "pattern_family": "compact summary",
+              "abstract_form": "In short, ...",
+              "semantic_function": "summary",
+              "slots": [
+                "summary"
+              ],
+              "examples_hashes": [],
+              "fit_score": 0.7,
+              "style_score": 0.7,
+              "language_score": 0.82,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.5,
+              "user_preference_weight": 0.5
+            }
+          ],
+          "rejected": [
+            {
+              "construction_id": "contrast.light",
+              "language": "ko",
+              "pattern_family": "contrast frame",
+              "abstract_form": "X is not only A; it also B",
+              "semantic_function": "contrast",
+              "slots": [
+                "topic",
+                "contrast"
+              ],
+              "examples_hashes": [],
+              "fit_score": 0.66,
+              "style_score": 0.68,
+              "language_score": 0.78,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.5,
+              "user_preference_weight": 0.5
+            },
+            {
+              "construction_id": "caveat.soft",
+              "language": "ko",
+              "pattern_family": "soft caveat",
+              "abstract_form": "One caveat is ...",
+              "semantic_function": "caveat",
+              "slots": [
+                "caveat"
+              ],
+              "examples_hashes": [],
+              "fit_score": 0.54,
+              "style_score": 0.64,
+              "language_score": 0.76,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.5,
+              "user_preference_weight": 0.5
+            }
+          ],
+          "q_cortex_used": true,
+          "q_cortex_run_id": "qco_sal_db0b1008c6c2b609fd",
+          "q_cortex": {
+            "run_id": "qco_sal_db0b1008c6c2b609fd",
+            "problem_type": "salience",
+            "solver_name": "simulated_annealing",
+            "input_count": 6,
+            "selected_count": 4,
+            "objective_value": -13.114,
+            "selected_items": [
+              {
+                "construction_id": "definition.simple",
+                "language": "ko",
+                "pattern_family": "simple definition",
+                "abstract_form": "X is explained as Y",
+                "semantic_function": "direct_definition",
+                "slots": [
+                  "topic",
+                  "definition"
+                ],
+                "examples_hashes": [],
+                "fit_score": 0.96,
+                "style_score": 0.72,
+                "language_score": 0.88,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.5,
+                "user_preference_weight": 0.5,
+                "kind": "node",
+                "id": "definition.simple",
+                "layer": "surface_brain",
+                "query_relevance": 0.96,
+                "activation": 0.72,
+                "trust": 0.88,
+                "novelty": 0.5,
+                "user_goal_fit": 0.5,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "direct_definition",
+                "concept_id": "simple definition",
+                "temporary": true,
+                "qubo_variable": "node:definition.simple",
+                "reward": 3.458
+              },
+              {
+                "construction_id": "analogy.beginner",
+                "language": "ko",
+                "pattern_family": "beginner analogy",
+                "abstract_form": "X is close to Y",
+                "semantic_function": "analogy",
+                "slots": [
+                  "topic",
+                  "analogy"
+                ],
+                "examples_hashes": [],
+                "fit_score": 0.88,
+                "style_score": 0.9,
+                "language_score": 0.82,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.5,
+                "user_preference_weight": 0.5,
+                "kind": "node",
+                "id": "analogy.beginner",
+                "layer": "surface_brain",
+                "query_relevance": 0.88,
+                "activation": 0.9,
+                "trust": 0.82,
+                "novelty": 0.5,
+                "user_goal_fit": 0.5,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "analogy",
+                "concept_id": "beginner analogy",
+                "temporary": true,
+                "qubo_variable": "node:analogy.beginner",
+                "reward": 3.505
+              },
+              {
+                "construction_id": "example.short",
+                "language": "ko",
+                "pattern_family": "short example",
+                "abstract_form": "For example, ...",
+                "semantic_function": "example",
+                "slots": [
+                  "example"
+                ],
+                "examples_hashes": [],
+                "fit_score": 0.72,
+                "style_score": 0.74,
+                "language_score": 0.8,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.5,
+                "user_preference_weight": 0.5,
+                "kind": "node",
+                "id": "example.short",
+                "layer": "surface_brain",
+                "query_relevance": 0.72,
+                "activation": 0.74,
+                "trust": 0.8,
+                "novelty": 0.5,
+                "user_goal_fit": 0.5,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "example",
+                "concept_id": "short example",
+                "temporary": true,
+                "qubo_variable": "node:example.short",
+                "reward": 3.101
+              },
+              {
+                "construction_id": "summary.compact",
+                "language": "ko",
+                "pattern_family": "compact summary",
+                "abstract_form": "In short, ...",
+                "semantic_function": "summary",
+                "slots": [
+                  "summary"
+                ],
+                "examples_hashes": [],
+                "fit_score": 0.7,
+                "style_score": 0.7,
+                "language_score": 0.82,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.5,
+                "user_preference_weight": 0.5,
+                "kind": "node",
+                "id": "summary.compact",
+                "layer": "surface_brain",
+                "query_relevance": 0.7,
+                "activation": 0.7,
+                "trust": 0.82,
+                "novelty": 0.5,
+                "user_goal_fit": 0.5,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "summary",
+                "concept_id": "compact summary",
+                "temporary": true,
+                "qubo_variable": "node:summary.compact",
+                "reward": 3.05
+              }
+            ],
+            "rejected_items": [
+              {
+                "construction_id": "contrast.light",
+                "language": "ko",
+                "pattern_family": "contrast frame",
+                "abstract_form": "X is not only A; it also B",
+                "semantic_function": "contrast",
+                "slots": [
+                  "topic",
+                  "contrast"
+                ],
+                "examples_hashes": [],
+                "fit_score": 0.66,
+                "style_score": 0.68,
+                "language_score": 0.78,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.5,
+                "user_preference_weight": 0.5,
+                "kind": "node",
+                "id": "contrast.light",
+                "layer": "surface_brain",
+                "query_relevance": 0.66,
+                "activation": 0.68,
+                "trust": 0.78,
+                "novelty": 0.5,
+                "user_goal_fit": 0.5,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "contrast",
+                "concept_id": "contrast frame",
+                "temporary": true,
+                "qubo_variable": "node:contrast.light",
+                "reward": 2.937,
+                "reject_reason": "not_selected"
+              },
+              {
+                "construction_id": "caveat.soft",
+                "language": "ko",
+                "pattern_family": "soft caveat",
+                "abstract_form": "One caveat is ...",
+                "semantic_function": "caveat",
+                "slots": [
+                  "caveat"
+                ],
+                "examples_hashes": [],
+                "fit_score": 0.54,
+                "style_score": 0.64,
+                "language_score": 0.76,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.5,
+                "user_preference_weight": 0.5,
+                "kind": "node",
+                "id": "caveat.soft",
+                "layer": "surface_brain",
+                "query_relevance": 0.54,
+                "activation": 0.64,
+                "trust": 0.76,
+                "novelty": 0.5,
+                "user_goal_fit": 0.5,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "caveat",
+                "concept_id": "soft caveat",
+                "temporary": true,
+                "qubo_variable": "node:caveat.soft",
+                "reward": 2.721,
+                "reject_reason": "not_selected"
+              }
+            ],
+            "honesty": {
+              "real_quantum_hardware_used": false,
+              "quantum_inspired_only": true,
+              "local_brain_write": false,
+              "external_llm_used": false,
+              "external_sllm_used": false
+            },
+            "trace": {
+              "problem": {
+                "problem_id": "qubo_f399af5c852632669e",
+                "problem_type": "salience",
+                "variables": [
+                  {
+                    "name": "node:definition.simple",
+                    "kind": "node",
+                    "ref_id": "definition.simple",
+                    "metadata": {
+                      "construction_id": "definition.simple",
+                      "language": "ko",
+                      "pattern_family": "simple definition",
+                      "abstract_form": "X is explained as Y",
+                      "semantic_function": "direct_definition",
+                      "slots": [
+                        "topic",
+                        "definition"
+                      ],
+                      "examples_hashes": [],
+                      "fit_score": 0.96,
+                      "style_score": 0.72,
+                      "language_score": 0.88,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.5,
+                      "user_preference_weight": 0.5,
+                      "kind": "node",
+                      "id": "definition.simple",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.96,
+                      "activation": 0.72,
+                      "trust": 0.88,
+                      "novelty": 0.5,
+                      "user_goal_fit": 0.5,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "direct_definition",
+                      "concept_id": "simple definition",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:analogy.beginner",
+                    "kind": "node",
+                    "ref_id": "analogy.beginner",
+                    "metadata": {
+                      "construction_id": "analogy.beginner",
+                      "language": "ko",
+                      "pattern_family": "beginner analogy",
+                      "abstract_form": "X is close to Y",
+                      "semantic_function": "analogy",
+                      "slots": [
+                        "topic",
+                        "analogy"
+                      ],
+                      "examples_hashes": [],
+                      "fit_score": 0.88,
+                      "style_score": 0.9,
+                      "language_score": 0.82,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.5,
+                      "user_preference_weight": 0.5,
+                      "kind": "node",
+                      "id": "analogy.beginner",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.88,
+                      "activation": 0.9,
+                      "trust": 0.82,
+                      "novelty": 0.5,
+                      "user_goal_fit": 0.5,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "analogy",
+                      "concept_id": "beginner analogy",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:contrast.light",
+                    "kind": "node",
+                    "ref_id": "contrast.light",
+                    "metadata": {
+                      "construction_id": "contrast.light",
+                      "language": "ko",
+                      "pattern_family": "contrast frame",
+                      "abstract_form": "X is not only A; it also B",
+                      "semantic_function": "contrast",
+                      "slots": [
+                        "topic",
+                        "contrast"
+                      ],
+                      "examples_hashes": [],
+                      "fit_score": 0.66,
+                      "style_score": 0.68,
+                      "language_score": 0.78,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.5,
+                      "user_preference_weight": 0.5,
+                      "kind": "node",
+                      "id": "contrast.light",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.66,
+                      "activation": 0.68,
+                      "trust": 0.78,
+                      "novelty": 0.5,
+                      "user_goal_fit": 0.5,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "contrast",
+                      "concept_id": "contrast frame",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:example.short",
+                    "kind": "node",
+                    "ref_id": "example.short",
+                    "metadata": {
+                      "construction_id": "example.short",
+                      "language": "ko",
+                      "pattern_family": "short example",
+                      "abstract_form": "For example, ...",
+                      "semantic_function": "example",
+                      "slots": [
+                        "example"
+                      ],
+                      "examples_hashes": [],
+                      "fit_score": 0.72,
+                      "style_score": 0.74,
+                      "language_score": 0.8,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.5,
+                      "user_preference_weight": 0.5,
+                      "kind": "node",
+                      "id": "example.short",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.72,
+                      "activation": 0.74,
+                      "trust": 0.8,
+                      "novelty": 0.5,
+                      "user_goal_fit": 0.5,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "example",
+                      "concept_id": "short example",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:caveat.soft",
+                    "kind": "node",
+                    "ref_id": "caveat.soft",
+                    "metadata": {
+                      "construction_id": "caveat.soft",
+                      "language": "ko",
+                      "pattern_family": "soft caveat",
+                      "abstract_form": "One caveat is ...",
+                      "semantic_function": "caveat",
+                      "slots": [
+                        "caveat"
+                      ],
+                      "examples_hashes": [],
+                      "fit_score": 0.54,
+                      "style_score": 0.64,
+                      "language_score": 0.76,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.5,
+                      "user_preference_weight": 0.5,
+                      "kind": "node",
+                      "id": "caveat.soft",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.54,
+                      "activation": 0.64,
+                      "trust": 0.76,
+                      "novelty": 0.5,
+                      "user_goal_fit": 0.5,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "caveat",
+                      "concept_id": "soft caveat",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:summary.compact",
+                    "kind": "node",
+                    "ref_id": "summary.compact",
+                    "metadata": {
+                      "construction_id": "summary.compact",
+                      "language": "ko",
+                      "pattern_family": "compact summary",
+                      "abstract_form": "In short, ...",
+                      "semantic_function": "summary",
+                      "slots": [
+                        "summary"
+                      ],
+                      "examples_hashes": [],
+                      "fit_score": 0.7,
+                      "style_score": 0.7,
+                      "language_score": 0.82,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.5,
+                      "user_preference_weight": 0.5,
+                      "kind": "node",
+                      "id": "summary.compact",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.7,
+                      "activation": 0.7,
+                      "trust": 0.82,
+                      "novelty": 0.5,
+                      "user_goal_fit": 0.5,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "summary",
+                      "concept_id": "compact summary",
+                      "temporary": true
+                    }
+                  }
+                ],
+                "linear_terms": [
+                  {
+                    "var_a": "node:analogy.beginner",
+                    "var_b": null,
+                    "coefficient": -3.5049999999999994,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:caveat.soft",
+                    "var_b": null,
+                    "coefficient": -2.721,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:contrast.light",
+                    "var_b": null,
+                    "coefficient": -2.9370000000000003,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:definition.simple",
+                    "var_b": null,
+                    "coefficient": -3.4579999999999997,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:example.short",
+                    "var_b": null,
+                    "coefficient": -3.101,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:summary.compact",
+                    "var_b": null,
+                    "coefficient": -3.05,
+                    "reason": "reward"
+                  }
+                ],
+                "quadratic_terms": [],
+                "constraints": {
+                  "max_selected": 4,
+                  "min_selected": 1,
+                  "group_diversity_key": "source_id",
+                  "group_penalty": 0.08,
+                  "penalty_weight": 4.0,
+                  "energy_convention": "Q-Cortex minimizes QUBO energy. Positive item rewards are represented as negative linear coefficients; risk, contradiction, budget, diversity, and dependency violations are positive penalties."
+                },
+                "metadata": {
+                  "max_nodes": 4,
+                  "max_edges": 0
+                }
+              },
+              "solution": {
+                "solution_id": "qsol_bbf508d36288bfc390",
+                "problem_id": "qubo_f399af5c852632669e",
+                "selected_variables": [
+                  "node:analogy.beginner",
+                  "node:definition.simple",
+                  "node:example.short",
+                  "node:summary.compact"
+                ],
+                "objective_value": -13.114,
+                "solver_name": "simulated_annealing",
+                "iterations": 1200,
+                "temperature_schedule": [
+                  2.0,
+                  1.698331,
+                  1.442164,
+                  1.224637,
+                  1.039919,
+                  0.883064,
+                  0.749867,
+                  0.636762,
+                  0.540716,
+                  0.459157,
+                  0.389901,
+                  0.33109,
+                  0.28115,
+                  0.238743,
+                  0.202733,
+                  0.172154,
+                  0.146187,
+                  0.124137,
+                  0.105413,
+                  0.089513,
+                  0.076011,
+                  0.064546,
+                  0.05481,
+                  0.046543,
+                  0.039523,
+                  0.033561,
+                  0.028499,
+                  0.024201,
+                  0.02055,
+                  0.017451,
+                  0.014818,
+                  0.012583,
+                  0.010685
+                ],
+                "seed": 1158864265,
+                "runtime_ms": 4.229599959217012,
+                "trace": {
+                  "accepted_moves": 102,
+                  "rejected_moves": 1098,
+                  "best_energy_by_iteration": [
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114,
+                    -13.114
+                  ],
+                  "selected_count": 4,
+                  "constraint_penalties": {
+                    "group_diversity": 0.0
+                  },
+                  "greedy_baseline": {
+                    "solution_id": "qsol_559377cc584de4b4c5",
+                    "problem_id": "qubo_f399af5c852632669e",
+                    "selected_variables": [
+                      "node:analogy.beginner",
+                      "node:definition.simple",
+                      "node:example.short",
+                      "node:summary.compact"
+                    ],
+                    "objective_value": -13.114,
+                    "solver_name": "greedy_baseline",
+                    "iterations": 5,
+                    "temperature_schedule": [],
+                    "seed": 1158864265,
+                    "runtime_ms": 0.09360001422464848,
+                    "trace": {
+                      "selected_count": 4,
+                      "constraint_penalties": {
+                        "group_diversity": 0.0
+                      },
+                      "best_energy_by_iteration": [
+                        -13.114
+                      ]
+                    }
+                  }
+                }
+              },
+              "greedy_baseline_objective": -13.114,
+              "baseline_delta": 0.0
+            }
+          },
+          "honesty": {
+            "real_quantum_hardware_used": false,
+            "quantum_inspired_only": true,
+            "local_brain_write": false,
+            "external_llm_used": false,
+            "external_sllm_used": false
+          }
+        },
+        "discourse_selection": {
+          "selected": [
+            {
+              "id": "move.direct_answer",
+              "move": "direct_answer",
+              "fit_score": 0.9,
+              "style_score": 0.82,
+              "language_score": 0.8,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.72,
+              "user_preference_weight": 0.7
+            },
+            {
+              "id": "move.explanation",
+              "move": "explanation",
+              "fit_score": 0.8200000000000001,
+              "style_score": 0.82,
+              "language_score": 0.8,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.72,
+              "user_preference_weight": 0.7
+            },
+            {
+              "id": "move.example",
+              "move": "example",
+              "fit_score": 0.74,
+              "style_score": 0.82,
+              "language_score": 0.8,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.72,
+              "user_preference_weight": 0.7
+            },
+            {
+              "id": "move.caveat",
+              "move": "caveat",
+              "fit_score": 0.66,
+              "style_score": 0.82,
+              "language_score": 0.8,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.72,
+              "user_preference_weight": 0.7
+            },
+            {
+              "id": "move.conclusion",
+              "move": "conclusion",
+              "fit_score": 0.5800000000000001,
+              "style_score": 0.82,
+              "language_score": 0.8,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.72,
+              "user_preference_weight": 0.7
+            }
+          ],
+          "rejected": [],
+          "q_cortex_used": true,
+          "q_cortex_run_id": "qco_sal_ceff666f409bea2ce9",
+          "q_cortex": {
+            "run_id": "qco_sal_ceff666f409bea2ce9",
+            "problem_type": "salience",
+            "solver_name": "simulated_annealing",
+            "input_count": 5,
+            "selected_count": 5,
+            "objective_value": -17.227999999999998,
+            "selected_items": [
+              {
+                "id": "move.direct_answer",
+                "move": "direct_answer",
+                "fit_score": 0.9,
+                "style_score": 0.82,
+                "language_score": 0.8,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.72,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.9,
+                "activation": 0.82,
+                "trust": 0.8,
+                "novelty": 0.72,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "direct_answer",
+                "concept_id": "move.direct_answer",
+                "temporary": true,
+                "qubo_variable": "node:move.direct_answer",
+                "reward": 3.6456
+              },
+              {
+                "id": "move.explanation",
+                "move": "explanation",
+                "fit_score": 0.8200000000000001,
+                "style_score": 0.82,
+                "language_score": 0.8,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.72,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.8200000000000001,
+                "activation": 0.82,
+                "trust": 0.8,
+                "novelty": 0.72,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "explanation",
+                "concept_id": "move.explanation",
+                "temporary": true,
+                "qubo_variable": "node:move.explanation",
+                "reward": 3.5456
+              },
+              {
+                "id": "move.example",
+                "move": "example",
+                "fit_score": 0.74,
+                "style_score": 0.82,
+                "language_score": 0.8,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.72,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.74,
+                "activation": 0.82,
+                "trust": 0.8,
+                "novelty": 0.72,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "example",
+                "concept_id": "move.example",
+                "temporary": true,
+                "qubo_variable": "node:move.example",
+                "reward": 3.4456
+              },
+              {
+                "id": "move.caveat",
+                "move": "caveat",
+                "fit_score": 0.66,
+                "style_score": 0.82,
+                "language_score": 0.8,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.72,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.66,
+                "activation": 0.82,
+                "trust": 0.8,
+                "novelty": 0.72,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "caveat",
+                "concept_id": "move.caveat",
+                "temporary": true,
+                "qubo_variable": "node:move.caveat",
+                "reward": 3.3456
+              },
+              {
+                "id": "move.conclusion",
+                "move": "conclusion",
+                "fit_score": 0.5800000000000001,
+                "style_score": 0.82,
+                "language_score": 0.8,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.72,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.5800000000000001,
+                "activation": 0.82,
+                "trust": 0.8,
+                "novelty": 0.72,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "conclusion",
+                "concept_id": "move.conclusion",
+                "temporary": true,
+                "qubo_variable": "node:move.conclusion",
+                "reward": 3.2456
+              }
+            ],
+            "rejected_items": [],
+            "honesty": {
+              "real_quantum_hardware_used": false,
+              "quantum_inspired_only": true,
+              "local_brain_write": false,
+              "external_llm_used": false,
+              "external_sllm_used": false
+            },
+            "trace": {
+              "problem": {
+                "problem_id": "qubo_286bf4b2900b7559ca",
+                "problem_type": "salience",
+                "variables": [
+                  {
+                    "name": "node:move.direct_answer",
+                    "kind": "node",
+                    "ref_id": "move.direct_answer",
+                    "metadata": {
+                      "id": "move.direct_answer",
+                      "move": "direct_answer",
+                      "fit_score": 0.9,
+                      "style_score": 0.82,
+                      "language_score": 0.8,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.72,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.9,
+                      "activation": 0.82,
+                      "trust": 0.8,
+                      "novelty": 0.72,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "direct_answer",
+                      "concept_id": "move.direct_answer",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:move.explanation",
+                    "kind": "node",
+                    "ref_id": "move.explanation",
+                    "metadata": {
+                      "id": "move.explanation",
+                      "move": "explanation",
+                      "fit_score": 0.8200000000000001,
+                      "style_score": 0.82,
+                      "language_score": 0.8,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.72,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.8200000000000001,
+                      "activation": 0.82,
+                      "trust": 0.8,
+                      "novelty": 0.72,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "explanation",
+                      "concept_id": "move.explanation",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:move.example",
+                    "kind": "node",
+                    "ref_id": "move.example",
+                    "metadata": {
+                      "id": "move.example",
+                      "move": "example",
+                      "fit_score": 0.74,
+                      "style_score": 0.82,
+                      "language_score": 0.8,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.72,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.74,
+                      "activation": 0.82,
+                      "trust": 0.8,
+                      "novelty": 0.72,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "example",
+                      "concept_id": "move.example",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:move.caveat",
+                    "kind": "node",
+                    "ref_id": "move.caveat",
+                    "metadata": {
+                      "id": "move.caveat",
+                      "move": "caveat",
+                      "fit_score": 0.66,
+                      "style_score": 0.82,
+                      "language_score": 0.8,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.72,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.66,
+                      "activation": 0.82,
+                      "trust": 0.8,
+                      "novelty": 0.72,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "caveat",
+                      "concept_id": "move.caveat",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:move.conclusion",
+                    "kind": "node",
+                    "ref_id": "move.conclusion",
+                    "metadata": {
+                      "id": "move.conclusion",
+                      "move": "conclusion",
+                      "fit_score": 0.5800000000000001,
+                      "style_score": 0.82,
+                      "language_score": 0.8,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.72,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.5800000000000001,
+                      "activation": 0.82,
+                      "trust": 0.8,
+                      "novelty": 0.72,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "conclusion",
+                      "concept_id": "move.conclusion",
+                      "temporary": true
+                    }
+                  }
+                ],
+                "linear_terms": [
+                  {
+                    "var_a": "node:move.caveat",
+                    "var_b": null,
+                    "coefficient": -3.3455999999999997,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:move.conclusion",
+                    "var_b": null,
+                    "coefficient": -3.2456,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:move.direct_answer",
+                    "var_b": null,
+                    "coefficient": -3.6455999999999995,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:move.example",
+                    "var_b": null,
+                    "coefficient": -3.4456,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:move.explanation",
+                    "var_b": null,
+                    "coefficient": -3.5456,
+                    "reason": "reward"
+                  }
+                ],
+                "quadratic_terms": [],
+                "constraints": {
+                  "max_selected": 5,
+                  "min_selected": 1,
+                  "group_diversity_key": "source_id",
+                  "group_penalty": 0.08,
+                  "penalty_weight": 4.0,
+                  "energy_convention": "Q-Cortex minimizes QUBO energy. Positive item rewards are represented as negative linear coefficients; risk, contradiction, budget, diversity, and dependency violations are positive penalties."
+                },
+                "metadata": {
+                  "max_nodes": 5,
+                  "max_edges": 0
+                }
+              },
+              "solution": {
+                "solution_id": "qsol_48afec15b9f6d9a1a2",
+                "problem_id": "qubo_286bf4b2900b7559ca",
+                "selected_variables": [
+                  "node:move.caveat",
+                  "node:move.conclusion",
+                  "node:move.direct_answer",
+                  "node:move.example",
+                  "node:move.explanation"
+                ],
+                "objective_value": -17.227999999999998,
+                "solver_name": "simulated_annealing",
+                "iterations": 1200,
+                "temperature_schedule": [
+                  2.0,
+                  1.698331,
+                  1.442164,
+                  1.224637,
+                  1.039919,
+                  0.883064,
+                  0.749867,
+                  0.636762,
+                  0.540716,
+                  0.459157,
+                  0.389901,
+                  0.33109,
+                  0.28115,
+                  0.238743,
+                  0.202733,
+                  0.172154,
+                  0.146187,
+                  0.124137,
+                  0.105413,
+                  0.089513,
+                  0.076011,
+                  0.064546,
+                  0.05481,
+                  0.046543,
+                  0.039523,
+                  0.033561,
+                  0.028499,
+                  0.024201,
+                  0.02055,
+                  0.017451,
+                  0.014818,
+                  0.012583,
+                  0.010685
+                ],
+                "seed": 4142158520,
+                "runtime_ms": 4.259099951013923,
+                "trace": {
+                  "accepted_moves": 34,
+                  "rejected_moves": 1166,
+                  "best_energy_by_iteration": [
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998,
+                    -17.227999999999998
+                  ],
+                  "selected_count": 5,
+                  "constraint_penalties": {
+                    "group_diversity": 0.0
+                  },
+                  "greedy_baseline": {
+                    "solution_id": "qsol_b07de72880e2eab84b",
+                    "problem_id": "qubo_286bf4b2900b7559ca",
+                    "selected_variables": [
+                      "node:move.caveat",
+                      "node:move.conclusion",
+                      "node:move.direct_answer",
+                      "node:move.example",
+                      "node:move.explanation"
+                    ],
+                    "objective_value": -17.227999999999998,
+                    "solver_name": "greedy_baseline",
+                    "iterations": 6,
+                    "temperature_schedule": [],
+                    "seed": 4142158520,
+                    "runtime_ms": 0.08420000085607171,
+                    "trace": {
+                      "selected_count": 5,
+                      "constraint_penalties": {
+                        "group_diversity": 0.0
+                      },
+                      "best_energy_by_iteration": [
+                        -17.227999999999998
+                      ]
+                    }
+                  }
+                }
+              },
+              "greedy_baseline_objective": -17.227999999999998,
+              "baseline_delta": 0.0
+            }
+          },
+          "honesty": {
+            "real_quantum_hardware_used": false,
+            "quantum_inspired_only": true,
+            "local_brain_write": false,
+            "external_llm_used": false,
+            "external_sllm_used": false
+          }
+        },
+        "lemma_selection": {
+          "selected": [
+            {
+              "id": "lemma.Kubernetes",
+              "concept": "Kubernetes",
+              "label": "쿠버네티스",
+              "language": "ko",
+              "fit_score": 0.78,
+              "style_score": 0.7,
+              "language_score": 0.9,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.7,
+              "user_preference_weight": 0.7
+            },
+            {
+              "id": "lemma.containers",
+              "concept": "containers",
+              "label": "컨테이너",
+              "language": "ko",
+              "fit_score": 0.78,
+              "style_score": 0.7,
+              "language_score": 0.9,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.7,
+              "user_preference_weight": 0.7
+            },
+            {
+              "id": "lemma.automatic deployment",
+              "concept": "automatic deployment",
+              "label": "automatic deployment",
+              "language": "ko",
+              "fit_score": 0.78,
+              "style_score": 0.7,
+              "language_score": 0.9,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.7,
+              "user_preference_weight": 0.7
+            },
+            {
+              "id": "lemma.operations manager",
+              "concept": "operations manager",
+              "label": "운영 관리자",
+              "language": "ko",
+              "fit_score": 0.78,
+              "style_score": 0.7,
+              "language_score": 0.9,
+              "repetition_penalty": 0.0,
+              "prior_success_weight": 0.7,
+              "user_preference_weight": 0.7
+            }
+          ],
+          "rejected": [],
+          "q_cortex_used": true,
+          "q_cortex_run_id": "qco_sal_fa636f00c79bc8dc9e",
+          "q_cortex": {
+            "run_id": "qco_sal_fa636f00c79bc8dc9e",
+            "problem_type": "salience",
+            "solver_name": "simulated_annealing",
+            "input_count": 4,
+            "selected_count": 4,
+            "objective_value": -13.8,
+            "selected_items": [
+              {
+                "id": "lemma.Kubernetes",
+                "concept": "Kubernetes",
+                "label": "쿠버네티스",
+                "language": "ko",
+                "fit_score": 0.78,
+                "style_score": 0.7,
+                "language_score": 0.9,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.7,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.78,
+                "activation": 0.7,
+                "trust": 0.9,
+                "novelty": 0.7,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "Kubernetes",
+                "concept_id": "쿠버네티스",
+                "temporary": true,
+                "qubo_variable": "node:lemma.Kubernetes",
+                "reward": 3.45
+              },
+              {
+                "id": "lemma.containers",
+                "concept": "containers",
+                "label": "컨테이너",
+                "language": "ko",
+                "fit_score": 0.78,
+                "style_score": 0.7,
+                "language_score": 0.9,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.7,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.78,
+                "activation": 0.7,
+                "trust": 0.9,
+                "novelty": 0.7,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "containers",
+                "concept_id": "컨테이너",
+                "temporary": true,
+                "qubo_variable": "node:lemma.containers",
+                "reward": 3.45
+              },
+              {
+                "id": "lemma.automatic deployment",
+                "concept": "automatic deployment",
+                "label": "automatic deployment",
+                "language": "ko",
+                "fit_score": 0.78,
+                "style_score": 0.7,
+                "language_score": 0.9,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.7,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.78,
+                "activation": 0.7,
+                "trust": 0.9,
+                "novelty": 0.7,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "automatic deployment",
+                "concept_id": "automatic deployment",
+                "temporary": true,
+                "qubo_variable": "node:lemma.automatic deployment",
+                "reward": 3.45
+              },
+              {
+                "id": "lemma.operations manager",
+                "concept": "operations manager",
+                "label": "운영 관리자",
+                "language": "ko",
+                "fit_score": 0.78,
+                "style_score": 0.7,
+                "language_score": 0.9,
+                "repetition_penalty": 0.0,
+                "prior_success_weight": 0.7,
+                "user_preference_weight": 0.7,
+                "kind": "node",
+                "layer": "surface_brain",
+                "query_relevance": 0.78,
+                "activation": 0.7,
+                "trust": 0.9,
+                "novelty": 0.7,
+                "user_goal_fit": 0.7,
+                "risk": 0.0,
+                "fatigue": 0.0,
+                "source_id": "operations manager",
+                "concept_id": "운영 관리자",
+                "temporary": true,
+                "qubo_variable": "node:lemma.operations manager",
+                "reward": 3.45
+              }
+            ],
+            "rejected_items": [],
+            "honesty": {
+              "real_quantum_hardware_used": false,
+              "quantum_inspired_only": true,
+              "local_brain_write": false,
+              "external_llm_used": false,
+              "external_sllm_used": false
+            },
+            "trace": {
+              "problem": {
+                "problem_id": "qubo_956972323ba5e7151e",
+                "problem_type": "salience",
+                "variables": [
+                  {
+                    "name": "node:lemma.Kubernetes",
+                    "kind": "node",
+                    "ref_id": "lemma.Kubernetes",
+                    "metadata": {
+                      "id": "lemma.Kubernetes",
+                      "concept": "Kubernetes",
+                      "label": "쿠버네티스",
+                      "language": "ko",
+                      "fit_score": 0.78,
+                      "style_score": 0.7,
+                      "language_score": 0.9,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.7,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.78,
+                      "activation": 0.7,
+                      "trust": 0.9,
+                      "novelty": 0.7,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "Kubernetes",
+                      "concept_id": "쿠버네티스",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:lemma.containers",
+                    "kind": "node",
+                    "ref_id": "lemma.containers",
+                    "metadata": {
+                      "id": "lemma.containers",
+                      "concept": "containers",
+                      "label": "컨테이너",
+                      "language": "ko",
+                      "fit_score": 0.78,
+                      "style_score": 0.7,
+                      "language_score": 0.9,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.7,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.78,
+                      "activation": 0.7,
+                      "trust": 0.9,
+                      "novelty": 0.7,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "containers",
+                      "concept_id": "컨테이너",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:lemma.automatic deployment",
+                    "kind": "node",
+                    "ref_id": "lemma.automatic deployment",
+                    "metadata": {
+                      "id": "lemma.automatic deployment",
+                      "concept": "automatic deployment",
+                      "label": "automatic deployment",
+                      "language": "ko",
+                      "fit_score": 0.78,
+                      "style_score": 0.7,
+                      "language_score": 0.9,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.7,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.78,
+                      "activation": 0.7,
+                      "trust": 0.9,
+                      "novelty": 0.7,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "automatic deployment",
+                      "concept_id": "automatic deployment",
+                      "temporary": true
+                    }
+                  },
+                  {
+                    "name": "node:lemma.operations manager",
+                    "kind": "node",
+                    "ref_id": "lemma.operations manager",
+                    "metadata": {
+                      "id": "lemma.operations manager",
+                      "concept": "operations manager",
+                      "label": "운영 관리자",
+                      "language": "ko",
+                      "fit_score": 0.78,
+                      "style_score": 0.7,
+                      "language_score": 0.9,
+                      "repetition_penalty": 0.0,
+                      "prior_success_weight": 0.7,
+                      "user_preference_weight": 0.7,
+                      "kind": "node",
+                      "layer": "surface_brain",
+                      "query_relevance": 0.78,
+                      "activation": 0.7,
+                      "trust": 0.9,
+                      "novelty": 0.7,
+                      "user_goal_fit": 0.7,
+                      "risk": 0.0,
+                      "fatigue": 0.0,
+                      "source_id": "operations manager",
+                      "concept_id": "운영 관리자",
+                      "temporary": true
+                    }
+                  }
+                ],
+                "linear_terms": [
+                  {
+                    "var_a": "node:lemma.Kubernetes",
+                    "var_b": null,
+                    "coefficient": -3.45,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:lemma.automatic deployment",
+                    "var_b": null,
+                    "coefficient": -3.45,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:lemma.containers",
+                    "var_b": null,
+                    "coefficient": -3.45,
+                    "reason": "reward"
+                  },
+                  {
+                    "var_a": "node:lemma.operations manager",
+                    "var_b": null,
+                    "coefficient": -3.45,
+                    "reason": "reward"
+                  }
+                ],
+                "quadratic_terms": [],
+                "constraints": {
+                  "max_selected": 4,
+                  "min_selected": 1,
+                  "group_diversity_key": "source_id",
+                  "group_penalty": 0.08,
+                  "penalty_weight": 4.0,
+                  "energy_convention": "Q-Cortex minimizes QUBO energy. Positive item rewards are represented as negative linear coefficients; risk, contradiction, budget, diversity, and dependency violations are positive penalties."
+                },
+                "metadata": {
+                  "max_nodes": 4,
+                  "max_edges": 0
+                }
+              },
+              "solution": {
+                "solution_id": "qsol_e8e9a82bbb68aa37b1",
+                "problem_id": "qubo_956972323ba5e7151e",
+                "selected_variables": [
+                  "node:lemma.Kubernetes",
+                  "node:lemma.automatic deployment",
+                  "node:lemma.containers",
+                  "node:lemma.operations manager"
+                ],
+                "objective_value": -13.8,
+                "solver_name": "simulated_annealing",
+                "iterations": 1200,
+                "temperature_schedule": [
+                  2.0,
+                  1.698331,
+                  1.442164,
+                  1.224637,
+                  1.039919,
+                  0.883064,
+                  0.749867,
+                  0.636762,
+                  0.540716,
+                  0.459157,
+                  0.389901,
+                  0.33109,
+                  0.28115,
+                  0.238743,
+                  0.202733,
+                  0.172154,
+                  0.146187,
+                  0.124137,
+                  0.105413,
+                  0.089513,
+                  0.076011,
+                  0.064546,
+                  0.05481,
+                  0.046543,
+                  0.039523,
+                  0.033561,
+                  0.028499,
+                  0.024201,
+                  0.02055,
+                  0.017451,
+                  0.014818,
+                  0.012583,
+                  0.010685
+                ],
+                "seed": 3400095101,
+                "runtime_ms": 3.6847000010311604,
+                "trace": {
+                  "accepted_moves": 20,
+                  "rejected_moves": 1180,
+                  "best_energy_by_iteration": [
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8,
+                    -13.8
+                  ],
+                  "selected_count": 4,
+                  "constraint_penalties": {
+                    "group_diversity": 0.0
+                  },
+                  "greedy_baseline": {
+                    "solution_id": "qsol_5827a317ddca3cc02d",
+                    "problem_id": "qubo_956972323ba5e7151e",
+                    "selected_variables": [
+                      "node:lemma.Kubernetes",
+                      "node:lemma.automatic deployment",
+                      "node:lemma.containers",
+                      "node:lemma.operations manager"
+                    ],
+                    "objective_value": -13.8,
+                    "solver_name": "greedy_baseline",
+                    "iterations": 5,
+                    "temperature_schedule": [],
+                    "seed": 3400095101,
+                    "runtime_ms": 0.054100004490464926,
+                    "trace": {
+                      "selected_count": 4,
+                      "constraint_penalties": {
+                        "group_diversity": 0.0
+                      },
+                      "best_energy_by_iteration": [
+                        -13.8
+                      ]
+                    }
+                  }
+                }
+              },
+              "greedy_baseline_objective": -13.8,
+              "baseline_delta": 0.0
+            }
+          },
+          "honesty": {
+            "real_quantum_hardware_used": false,
+            "quantum_inspired_only": true,
+            "local_brain_write": false,
+            "external_llm_used": false,
+            "external_sllm_used": false
+          }
+        },
+        "semantic_context_summary": {
+          "concept_count": 2,
+          "relation_count": 3,
+          "evidence_count": 1,
+          "local_coverage": "medium"
+        },
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "local_brain_write": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      },
+      "external_llm_used": false,
+      "external_sllm_used": false,
+      "local_brain_write": false,
+      "real_quantum_hardware_used": false,
+      "quantum_inspired_only": true,
+      "surface_graph_overrides_semantic_truth": false
+    },
+    "realized_answer": {
+      "answer": "쿠버네티스는 여러 컨테이너를 한곳에 모아 자동으로 배치하고 운영하도록 돕는 컨테이너 오케스트레이션 시스템입니다. 쉽게 말하면, 많은 컨테이너가 어느 서버에서 실행될지 정하고, 문제가 생기면 다시 띄우고, 필요한 만큼 늘리거나 줄이는 운영 관리자에 가깝습니다. 그래서 개발자는 개별 서버를 일일이 만지는 대신 서비스가 안정적으로 돌아가도록 선언적인 규칙을 관리하게 됩니다.",
+      "language": "ko",
+      "surface_plan_id": "splan_06f12667bc4a6f1227",
+      "semantic_sources": [
+        "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2"
+      ],
+      "surface_sources": [
+        "splan_06f12667bc4a6f1227"
+      ],
+      "confidence": 0.67,
+      "trace_summary": {
+        "intent": "define",
+        "selected_construction_families": [
+          "simple definition",
+          "beginner analogy",
+          "short example",
+          "compact summary"
+        ],
+        "selected_discourse_moves": [
+          "direct_answer",
+          "explanation",
+          "example",
+          "caveat",
+          "conclusion"
+        ],
+        "q_cortex_used": true,
+        "q_cortex_run_id": "qco_sal_db0b1008c6c2b609fd",
+        "local_brain_write": false,
+        "decoder_mode": "deterministic",
+        "monitor": {
+          "issues": [],
+          "needs_repair": false,
+          "language": "ko"
+        },
+        "trace_hidden_by_default": true,
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      },
+      "honesty": {
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "local_brain_write": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      }
+    },
+    "internal_trace_dumped_in_answer": false
+  },
+  "style_variation": {
+    "beginner_ko": {
+      "answer": "쿠버네티스는 여러 컨테이너를 한곳에 모아 자동으로 배치하고 운영하도록 돕는 컨테이너 오케스트레이션 시스템입니다. 쉽게 말하면, 많은 컨테이너가 어느 서버에서 실행될지 정하고, 문제가 생기면 다시 띄우고, 필요한 만큼 늘리거나 줄이는 운영 관리자에 가깝습니다. 그래서 개발자는 개별 서버를 일일이 만지는 대신 서비스가 안정적으로 돌아가도록 선언적인 규칙을 관리하게 됩니다.",
+      "language": "ko",
+      "surface_plan_id": "splan_06f12667bc4a6f1227",
+      "semantic_sources": [
+        "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2"
+      ],
+      "surface_sources": [
+        "splan_06f12667bc4a6f1227"
+      ],
+      "confidence": 0.67,
+      "trace_summary": {
+        "intent": "define",
+        "selected_construction_families": [
+          "simple definition",
+          "beginner analogy",
+          "short example",
+          "compact summary"
+        ],
+        "selected_discourse_moves": [
+          "direct_answer",
+          "explanation",
+          "example",
+          "caveat",
+          "conclusion"
+        ],
+        "q_cortex_used": true,
+        "q_cortex_run_id": "qco_sal_db0b1008c6c2b609fd",
+        "local_brain_write": false,
+        "decoder_mode": "deterministic",
+        "monitor": {
+          "issues": [],
+          "needs_repair": false,
+          "language": "ko"
+        },
+        "trace_hidden_by_default": true,
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      },
+      "honesty": {
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "local_brain_write": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      }
+    },
+    "expert_ko": {
+      "answer": "쿠버네티스는 여러 컨테이너를 한곳에 모아 자동으로 배치하고 운영하도록 돕는 컨테이너 오케스트레이션 시스템입니다. 쉽게 말하면, 많은 컨테이너가 어느 서버에서 실행될지 정하고, 문제가 생기면 다시 띄우고, 필요한 만큼 늘리거나 줄이는 운영 관리자에 가깝습니다. 그래서 개발자는 개별 서버를 일일이 만지는 대신 서비스가 안정적으로 돌아가도록 선언적인 규칙을 관리하게 됩니다.",
+      "language": "ko",
+      "surface_plan_id": "splan_06f12667bc4a6f1227",
+      "semantic_sources": [
+        "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2"
+      ],
+      "surface_sources": [
+        "splan_06f12667bc4a6f1227"
+      ],
+      "confidence": 0.67,
+      "trace_summary": {
+        "intent": "define",
+        "selected_construction_families": [
+          "simple definition",
+          "contrast frame",
+          "short example",
+          "compact summary"
+        ],
+        "selected_discourse_moves": [
+          "direct_answer",
+          "explanation",
+          "example",
+          "caveat",
+          "conclusion"
+        ],
+        "q_cortex_used": true,
+        "q_cortex_run_id": "qco_sal_db0b1008c6c2b609fd",
+        "local_brain_write": false,
+        "decoder_mode": "deterministic",
+        "monitor": {
+          "issues": [],
+          "needs_repair": false,
+          "language": "ko"
+        },
+        "trace_hidden_by_default": true,
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      },
+      "honesty": {
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "local_brain_write": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      }
+    },
+    "concise_en": {
+      "answer": "Kubernetes is a container orchestration system: it helps place, run, restart, and scale many containers across machines. In simple terms, it behaves like an operations manager for containerized services, so teams describe the desired state instead of manually handling every server.",
+      "language": "en",
+      "surface_plan_id": "splan_41e43e37164c0fef7a",
+      "semantic_sources": [
+        "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2"
+      ],
+      "surface_sources": [
+        "splan_41e43e37164c0fef7a"
+      ],
+      "confidence": 0.67,
+      "trace_summary": {
+        "intent": "define",
+        "selected_construction_families": [
+          "simple definition",
+          "contrast frame",
+          "short example",
+          "compact summary"
+        ],
+        "selected_discourse_moves": [
+          "direct_answer",
+          "explanation",
+          "example",
+          "caveat",
+          "conclusion"
+        ],
+        "q_cortex_used": true,
+        "q_cortex_run_id": "qco_sal_82a3e159ddc0ec7a3a",
+        "local_brain_write": false,
+        "decoder_mode": "deterministic",
+        "monitor": {
+          "issues": [],
+          "needs_repair": false,
+          "language": "en"
+        },
+        "trace_hidden_by_default": true,
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      },
+      "honesty": {
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "local_brain_write": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      }
+    },
+    "friendly_en": {
+      "answer": "Kubernetes is a container orchestration system: it helps place, run, restart, and scale many containers across machines. In simple terms, it behaves like an operations manager for containerized services, so teams describe the desired state instead of manually handling every server.",
+      "language": "en",
+      "surface_plan_id": "splan_41e43e37164c0fef7a",
+      "semantic_sources": [
+        "39cdf0b6b47ed3f47a9b03afc05510e7d4d4fe63d6e89994977c0a9f51ffc7d2"
+      ],
+      "surface_sources": [
+        "splan_41e43e37164c0fef7a"
+      ],
+      "confidence": 0.67,
+      "trace_summary": {
+        "intent": "define",
+        "selected_construction_families": [
+          "simple definition",
+          "beginner analogy",
+          "short example",
+          "compact summary"
+        ],
+        "selected_discourse_moves": [
+          "direct_answer",
+          "explanation",
+          "example",
+          "caveat",
+          "conclusion"
+        ],
+        "q_cortex_used": true,
+        "q_cortex_run_id": "qco_sal_82a3e159ddc0ec7a3a",
+        "local_brain_write": false,
+        "decoder_mode": "deterministic",
+        "monitor": {
+          "issues": [],
+          "needs_repair": false,
+          "language": "en"
+        },
+        "trace_hidden_by_default": true,
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      },
+      "honesty": {
+        "external_llm_used": false,
+        "external_sllm_used": false,
+        "local_brain_write": false,
+        "real_quantum_hardware_used": false,
+        "quantum_inspired_only": true,
+        "surface_graph_overrides_semantic_truth": false
+      }
+    }
+  },
+  "repair_loop": {
+    "bad_draft": "Local Brain → Cloud Brain → Contributor Node path says Kubernetes Kubernetes is container manager manager.",
+    "monitor": {
+      "issues": [
+        "internal_trace_leakage"
+      ],
+      "needs_repair": true,
+      "language": "en"
+    },
+    "repaired": "The internal route is hidden; the answer stays grounded in the provided context.",
+    "repaired_monitor": {
+      "issues": [],
+      "needs_repair": false,
+      "language": "en"
+    }
+  },
+  "claims": [
+    "ATANOR can create dual semantic/surface projections from the same source sentence.",
+    "Surface Brain can improve answer planning and naturalness.",
+    "Surface Brain uses construction competition, not fixed templates.",
+    "Q-Cortex can optionally optimize construction/discourse/lemma selection.",
+    "Final answers hide internal brain paths by default."
+  ],
+  "does_not_claim": [
+    "GPT-level language quality",
+    "real human brain simulation",
+    "consciousness",
+    "unrestricted web crawling",
+    "legal reuse of all copyrighted raw text",
+    "fully trained ATANOR-native decoder",
+    "real quantum hardware or quantum speedup"
+  ]
+}

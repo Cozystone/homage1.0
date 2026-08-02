@@ -1,0 +1,147 @@
+name: macOS Distribution
+
+on:
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "Distribution channel to build"
+        required: true
+        default: "both"
+        type: choice
+        options:
+          - developer-id
+          - app-store
+          - both
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  ATANOR_RUST_TOOLCHAIN: "1.88.0"
+
+jobs:
+  developer-id-dmg:
+    name: Developer ID notarized DMG
+    if: ${{ github.event.inputs.channel == 'developer-id' || github.event.inputs.channel == 'both' }}
+    runs-on: macos-latest
+    env:
+      APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+      APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+      APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+      APPLE_ID: ${{ secrets.APPLE_ID }}
+      APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      APPLE_PROVIDER_SHORT_NAME: ${{ secrets.APPLE_PROVIDER_SHORT_NAME }}
+      TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+      TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ env.ATANOR_RUST_TOOLCHAIN }}
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r apps/api/requirements.txt pyinstaller
+
+      - name: Validate macOS signing environment
+        run: bash scripts/macos/preflight.sh developer-id
+
+      - name: Build Python FastAPI sidecar
+        run: python3 scripts/build_sidecar.py
+
+      - name: Prepare Tauri updater mode
+        run: python3 scripts/prepare_tauri_ci.py
+
+      - name: Build signed and notarized DMG
+        run: npm run tauri -- build --config src-tauri/tauri.macos.conf.json --bundles app,dmg
+
+      - name: Verify bundle signature
+        run: bash scripts/macos/verify_bundle.sh
+
+      - name: Upload notarized DMG artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: homage-macos-developer-id
+          path: |
+            src-tauri/target/release/bundle/macos/*.app
+            src-tauri/target/release/bundle/dmg/*.dmg
+          if-no-files-found: error
+
+  app-store-candidate:
+    name: Mac App Store candidate PKG
+    if: ${{ github.event.inputs.channel == 'app-store' || github.event.inputs.channel == 'both' }}
+    runs-on: macos-latest
+    env:
+      APPLE_CERTIFICATE: ${{ secrets.APPLE_APPSTORE_CERTIFICATE }}
+      APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_APPSTORE_CERTIFICATE_PASSWORD }}
+      APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_APPSTORE_SIGNING_IDENTITY }}
+      APPLE_INSTALLER_SIGNING_IDENTITY: ${{ secrets.APPLE_INSTALLER_SIGNING_IDENTITY }}
+      TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+      TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ env.ATANOR_RUST_TOOLCHAIN }}
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r apps/api/requirements.txt pyinstaller
+
+      - name: Validate App Store signing environment
+        run: bash scripts/macos/preflight.sh app-store
+
+      - name: Build Python FastAPI sidecar
+        run: python3 scripts/build_sidecar.py
+
+      - name: Prepare Tauri updater mode
+        run: python3 scripts/prepare_tauri_ci.py
+
+      - name: Build App Store app bundle
+        run: npm run tauri -- build --config src-tauri/tauri.appstore.conf.json --bundles app
+
+      - name: Package App Store candidate
+        run: bash scripts/macos/package_appstore_pkg.sh
+
+      - name: Upload App Store candidate artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: homage-macos-appstore-candidate
+          path: |
+            dist-artifacts/macos-appstore/*.pkg
+            src-tauri/target/release/bundle/macos/*.app
+          if-no-files-found: error

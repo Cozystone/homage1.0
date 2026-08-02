@@ -1,0 +1,15 @@
+.git
+.venv
+.pytest_cache
+node_modules
+UI
+checkpoints
+data/raw
+data/cleaned
+*.log
+*.err.log
+*.out.log
+.next-*.log
+api-*.log
+web-*.log
+tmp-*.log

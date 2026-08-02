@@ -1,0 +1,61 @@
+ATANOR Source-Available License v1.0
+Copyright (c) 2026 Anseok Kim (Cozystone). All rights reserved.
+
+한국어 요약 (법적 효력은 아래 영문 전문에 따릅니다):
+이 저장소의 소스는 "열람 가능"하지만 오픈소스가 아닙니다. 개인적·비상업적
+평가와 학습, 기여는 환영합니다. 상업적 이용, 엔진의 재배포, 파생 서비스
+제공, 코드에 대한 AI 모델 학습은 서면 허가 없이 금지됩니다.
+
+--------------------------------------------------------------------------
+
+TERMS
+
+1. DEFINITIONS
+   "the Software" means the contents of this repository, including the
+   knowledge-engine packages (packages/), the API server (apps/api), the
+   web surfaces (apps/), deployment assets (deploy/), and documentation.
+   "the Licensor" means Anseok Kim (Cozystone).
+
+2. GRANT
+   Subject to these terms, the Licensor grants you a worldwide,
+   royalty-free, non-exclusive, non-transferable license to:
+   a) view, clone, and study the source code;
+   b) run the Software for personal, educational, research, or internal
+      evaluation purposes;
+   c) modify the Software for the purposes in (b);
+   d) submit contributions back to this repository.
+
+3. RESTRICTIONS
+   Except with the Licensor's prior written permission, you may NOT:
+   a) use the Software, or any substantial portion of it, for a
+      commercial purpose, including offering it (or a derivative) as a
+      product or a service to third parties;
+   b) redistribute, sublicense, sell, or publish the Software or any
+      substantial portion of it, whether modified or not;
+   c) use the Software's source code as training data for, or as part
+      of, a machine-learning model or code-generation system;
+   d) remove or alter copyright, license, or attribution notices.
+
+4. CONTRIBUTIONS
+   By submitting a contribution you license it to the Licensor under
+   these same terms and warrant that you are entitled to do so.
+
+5. TRADEMARKS
+   "ATANOR" and the ATANOR marks may not be used to endorse or promote
+   derived works without written permission.
+
+6. TERMINATION
+   Any breach of Section 3 terminates this license automatically. Upon
+   termination you must cease use and destroy copies in your possession.
+
+7. NO WARRANTY / NO LIABILITY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IN NO
+   EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY ARISING FROM THE SOFTWARE OR ITS USE.
+
+8. PRIOR VERSIONS
+   Versions of this repository published before 2026-07-09 carried the
+   MIT license; rights already granted for those exact snapshots are not
+   revoked. This license governs this version and all later versions.
+
+For commercial licensing: contact the Licensor via the repository.

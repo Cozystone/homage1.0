@@ -1,0 +1,23 @@
+# Automatic HTTPS reverse proxy for the ATANOR Cloud Brain.
+# Uses sslip.io so a real domain isn't required — it resolves
+# <ip>.sslip.io back to <ip>, and Caddy gets a Let's Encrypt cert for it.
+
+136.114.69.152.sslip.io {
+    encode zstd gzip
+    reverse_proxy atanor-cloud:8500
+}
+
+# ---- Cloudflare domain block (ACTIVATE once the domain exists) --------------------------
+# Full runbook: deploy/CLOUDFLARE_SETUP.md. In short:
+#   1. Cloudflare DNS: A record  <sub>.<domain>  ->  136.114.69.152  (proxied / orange cloud)
+#   2. SSL/TLS mode "Full (strict)" + create an Origin Certificate; save the two files on
+#      the VM as /etc/caddy/cf-origin.pem and /etc/caddy/cf-origin.key (compose mounts them).
+#   3. Uncomment this block, replace brain.example.com, then:
+#        sudo docker compose -f deploy/docker-compose.yml restart caddy
+# The sslip.io block above keeps working during the switch — no downtime.
+#
+# brain.example.com {
+#     encode zstd gzip
+#     tls /etc/caddy/cf-origin.pem /etc/caddy/cf-origin.key
+#     reverse_proxy atanor-cloud:8500
+# }

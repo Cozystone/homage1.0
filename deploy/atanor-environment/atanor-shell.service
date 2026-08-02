@@ -1,0 +1,26 @@
+# ATANOR Environment — optional kiosk shell: the machine boots into ATANOR.
+# cage (Wayland kiosk compositor) runs Chromium full-screen on the local web shell.
+# Ctrl+Alt+F2 remains a standard TTY — the user is never locked in.
+[Unit]
+Description=ATANOR shell (kiosk)
+After=atanor-web.service systemd-user-sessions.service
+Requires=atanor-web.service
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+User=atanor
+Group=atanor
+PAMName=login
+TTYPath=/dev/tty1
+StandardInput=tty
+StandardOutput=journal
+ExecStartPre=/bin/sh -c 'until curl -sf http://127.0.0.1:3000 >/dev/null; do sleep 1; done'
+# /shell = the particle-shell face (Ultimate orb + push-to-talk, local-only voice);
+# the full dashboard stays one URL away at / — the user is never locked into the orb.
+ExecStart=/usr/bin/cage -- /usr/bin/chromium --kiosk --noerrdialogs --disable-session-crashed-bubble http://127.0.0.1:3000/shell
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=graphical.target

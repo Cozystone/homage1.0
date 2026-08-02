@@ -1,0 +1,10 @@
+{
+  "schema": "atanor.depth.e4.pred.v2",
+  "n": 264,
+  "units": "metres (exp of the net's log-depth head, clamped to [0.5, 200])",
+  "median_predicted_m": 9.788312911987305,
+  "pred_sha256": "36f84c26d8c92927c480d7f097244f16e0279129e907ba28f790a0a2b6c4916f",
+  "checkpoint_sha256": "03a4e037a9a9fed819e086014f429052f5986305e6f00f1871bd3c175f093664",
+  "answers_sha256": "7e373287145b18bb121a0c5a87af6017f18fa8fed2b0fe2490d785151ad25254",
+  "read_ground_truth": false
+}

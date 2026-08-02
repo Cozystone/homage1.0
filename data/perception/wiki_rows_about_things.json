@@ -1,0 +1,38 @@
+{
+  "vocabulary": 541816,
+  "by_relation": {
+    "used_for": {
+      "rows": 24285,
+      "rows_about_things": 4414,
+      "kept": 0.18175828700844143,
+      "agreement_all": 0.47126436781609193,
+      "checkable_all": 87,
+      "agreement_things": 0.47126436781609193,
+      "checkable_things": 87
+    },
+    "capable_of": {
+      "rows": 63489,
+      "rows_about_things": 3411,
+      "kept": 0.05372584227188962,
+      "agreement_all": 0.2345679012345679,
+      "checkable_all": 81,
+      "agreement_things": 0.2345679012345679,
+      "checkable_things": 81
+    },
+    "made_of": {
+      "rows": 4107,
+      "rows_about_things": 798,
+      "kept": 0.19430241051862673,
+      "agreement_all": 0.35714285714285715,
+      "checkable_all": 14,
+      "agreement_things": 0.35714285714285715,
+      "checkable_things": 14
+    }
+  },
+  "dictionary_lane_reference": {
+    "used_for": 0.559,
+    "capable_of": 0.317,
+    "made_of": 0.4
+  },
+  "note": "nothing deleted; the filtered rows are written to a separate wiki_thing_* lane and the harvested lane is untouched."
+}

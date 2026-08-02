@@ -1,0 +1,966 @@
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 1 Knowledge Graph Embedding: A Survey of Approaches and Applications Quan Wang, Zhendong Mao, Bin Wang, and Li Guo Abstract—Knowledge graph (KG) embedding is to embed components of a KG including entities and relations into continuous vector spaces, so as to simplify the manipulation while preserving the inherent structure of the KG.
+It can beneﬁt a variety of downstream tasks such as KG completion and relation extraction, and hence has quickly gained massive attention.
+In this article, we provide a systematic review of existing techniques, including not only the state-of-the-arts but also those with latest trends.
+Particularly, we make the review based on the type of information used in the embedding task.
+Techniques that conduct embedding using only facts observed in the KG are ﬁrst introduced.
+We describe the overall framework, speciﬁc model design, typical training procedures, as well as pros and cons of such techniques.
+After that, we discuss techniques that further incorporate additional information besides facts.
+We focus speciﬁcally on the use of entity types, relation paths, textual descriptions, and logical rules.
+Finally, we brieﬂy introduce how KG embedding can be applied to and beneﬁt a wide variety of downstream tasks such as KG completion, relation extraction, question answering, and so forth.
+Index Terms—Statistical relational learning, knowledge graph embedding, latent factor models, tensor/matrix factorization models.
+1 INTRODUCTION R Ecent years have witnessed rapid growth in knowledge graph (KG) construction and application.
+A large num- ber of KGs, such as Freebase [1], DBpedia [2], YAGO [3], and NELL [4], have been created and successfully applied to many real-world applications, from semantic parsing [5], [6] and named entity disambiguation [7], [8], to information extraction [9], [10] and question answering [11], [12].
+A KG is a multi-relational graph composed of entities (nodes) and relations (different types of edges).
+Each edge is represented as a triple of the form (head entity, relation, tail entity), also called a fact, indicating that two entities are connected by a speciﬁc relation, e.g., (AlfredHitchcock, DirectorOf, Psycho).
+Although effective in representing structured da- ta, the underlying symbolic nature of such triples usually makes KGs hard to manipulate.
+To tackle this issue, a new research direction known as knowledge graph embedding has been proposed and quickly gained massive attention [13], [14], [15], [16], [17], [18], [19].
+The key idea is to embed components of a KG including entities and relations into continuous vector spaces, so as to simplify the manipulation while preserving the inherent structure of the KG.
+Those entity and relation embeddings can further be used to beneﬁt all kinds of tasks, such as KG completion [14], [15], relation extraction [20], [21], entity classiﬁcation [13], [22], and entity resolution [13], [18].
+Most of the currently available techniques perform the embedding task solely on the basis of observed facts.
+Given a KG, such a technique ﬁrst represents entities and rela- tions in a continuous vector space, and deﬁnes a scoring function on each fact to measure its plausibility.
+Guo are with the Institute of Information Engineering, Chinese Academy of Sciences (CAS) and the School of Cyber Security, University of CAS.
+Wang is also with the State Key Laboratory of Information Security, CAS.
+E-mail: {wangquan,maozhendong,wangbin,guoli}@iie.ac.cn relation embeddings can then be obtained by maximizing the total plausibility of observed facts.
+During this whole procedure, the learned embeddings are only required to be compatible within each individual fact, and hence might not be predictive enough for downstream tasks [23], [24].
+As a result, more and more researchers have started to further leverage other types of information, e.g., entity types [25], [26], relation paths [27], [28], [29], textual descriptions [30], [31], [32], [33], and even logical rules [23], [34], [35], to learn more predictive embeddings.
+In this article, we provide a thorough review of currently available KG embedding techniques, including those that use facts alone, as well as those that further leverage ad- ditional information.
+We further introduce how the learned embeddings can be applied to and beneﬁt a wide variety of entity-oriented tasks.
+[36] have made a survey of statistical relational learning methods on KGs, including embedding techniques, path ranking algorithms [37], [38], [39], and Markov logic networks [40], [41], [42].
+In contrast to their work, we focus speciﬁcally on KG embedding, and make a systematic review of existing techniques, including not only the state-of-the-arts but also those with latest trends.
+Particularly, we make the review based on the type of information used in these techniques.
+The rest of this article is organized as follows.
+Section 2 brieﬂy introduces basic notations.
+Section 3 reviews tech- niques that conduct embedding using only facts observed in KGs.
+We describe the overall framework, speciﬁc model de- sign, typical training procedures, as well as pros and cons of such techniques.
+Section 4 discusses embedding techniques that further incorporate other information besides facts.
+We focus on the use of entity types, relation paths, textual descriptions, and logical rules.
+Section 5 further explores the application of KG embedding in downstream tasks like KG completion, relation extraction and question answering.
+Finally, we present our concluding remarks in Section 6.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 2 2 NOTATIONS Throughout this article, we use a boldface lower-case letter x to represent a vector, with its i-th entry denoted as [x]i.
+The ℓp norm of a vector for p ≥1 is denoted as ∥x∥p, and ∥x∥1/2 means either the ℓ1 norm or the ℓ2 norm.
+Let diag(x) be a diagonal matrix, the i-th diagonal entry of which is [x]i.
+Let |x| denote the absolute value function, tanh(x) the hyperbolic tangent function, and ReLU(x) the rectiﬁed linear unit.
+All of them are entry-wise operations.
+A matrix is represented by a boldface upper-case letter X, with its ij- th entry denoted as [X]ij.
+∥X∥F is the Frobenius norm of a matrix, tr(X) and det(X) the trace and determinant of a square matrix, respectively.
+We use an underlined boldface capital letter X to represent a three-mode tensor.
+The ijk-th entry of a tensor is denoted as [X]ijk.
+We further use X[i,:,:], X[:,j,:], and X[:,:,k] to denote the i-th, j-th, and k-th slice along the ﬁrst, second, and third mode, respectively.
+Let ◦: Rn × Rn →Rn denote the Hadamard product between two vectors, i.e., [a ◦b]i = [a]i · [b]i, and ⋆: Rn × Rn →Rn the circular correlation,1 i.e., [a ⋆b]i = n−1 ∑ k=0 [a]k · [b](k+i) mod n.
+For details about these operations, refer to [43], [44].
+3 KG EMBEDDING WITH FACTS ALONE Suppose we are given a KG consisting of n entities and m relations.
+Facts observed in the KG are stored as a collection of triples D+ = {(h, r, t)}.
+Each triple is composed of a head entity h ∈E, a tail entity t ∈E, and a relation r∈R between them, e.g., (AlfredHitchcock, DirectorOf, Psycho).
+Here, E denotes the set of entities, and R the set of relations.
+KG embedding aims to embed entities and relations into a low-dimensional continuous vector space, so as to simplify computations on the KG.
+Most of the currently available techniques use facts stored in the KG to perform the embed- ding task, enforcing embedding to be compatible with the facts.
+A typical KG embedding technique generally consists of three steps: (i) representing entities and relations, (ii) deﬁn- ing a scoring function, and (iii) learning entity and relation representations.
+The ﬁrst step speciﬁes the form in which entities and relations are represented in a continuous vector space.
+Entities are usually represented as vectors, i.e., deter- ministic points in the vector space [13], [14], [15], [16], [19].
+Recent work in [45] further takes into account uncertainties of entities, and models them through multivariate Gaussian distributions.
+Relations are typically taken as operations in the vector space, which can be represented as vectors [14], [15], matrices [16], [18], tensors [19], multivariate Gaussian distributions [45], or even mixtures of Gaussians [46].
+Then, in the second step, a scoring function fr(h, t) is deﬁned on each fact (h, r, t) to measure its plausibility.
+Facts observed in the KG tend to have higher scores than those that have not been observed.
+Finally, to learn those entity and relation 1.
+For notational brevity, we use zero-indexed vectors.
+representations (i.e., embeddings), the third step solves an optimization problem that maximizes the total plausibility of observed facts (i.e., facts contained in D+).
+We roughly categorize such embedding techniques into two groups: translational distance models and semantic match- ing models.
+The former use distance-based scoring functions, and the latter similarity-based ones.
+In this section, we ﬁrst introduce these two groups of embedding techniques, and then discuss the training process for them.
+After that, we compare these embedding techniques in terms of efﬁciency and effectiveness.
+3.1 Translational Distance Models Translational distance models exploit distance-based scor- ing functions.
+They measure the plausibility of a fact as the distance between the two entities, usually after a translation carried out by the relation.
+3.1.1 TransE and Its Extensions TransE.
+TransE [14] is the most representative translational distance model.
+It represents both entities and relations as vectors in the same space, say Rd.
+Given a fact (h, r, t), the relation is interpreted as a translation vector r so that the embedded entities h and t can be connected by r with low error, i.e., h+r ≈t when (h, r, t) holds.
+The intuition here o- riginates from [47], which learns distributed word represen- tations to capture linguistic regularities such as Psycho − AlfredHitchcock ≈Avatar−JamesCameron.
+In multi- relational data, such an analogy holds because of the certain relation of DirectorOf, and through this relation we can get AlfredHitchcock + DirectorOf ≈Psycho and JamesCameron+DirectorOf ≈Avatar.
+1(a) gives a simple illustration of this idea.
+The scoring function is then deﬁned as the (negative) distance between h + r and t, i.e., fr(h, t) = −∥h + r −t∥1/2.
+The score is expected to be large if (h, r, t) holds.
+Despite its simplicity and efﬁciency, TransE has ﬂaws in dealing with 1-to-N, N-to-1, and N-to-N relations [15], [16].
+Take 1-to-N relations for example.
+That means, given a 1-to-N relation, e.g., DirectorOf, TransE might learn very similar vector representations for Psycho, Rebecca, and RearWindow which are all ﬁlms directed by AlfredHitchcock, even though they are totally different entities.
+Similar disadvantages exist for N-to-1 and N-to-N relations.
+Introducing Relation-Speciﬁc Entity Embeddings.
+To over- come the disadvantages of TransE in dealing with 1-to-N, N- to-1, and N-to-N relations, an effective strategy is to allow an entity to have distinct representations when involved in different relations.
+In this way, even if the embeddings of Psycho, Rebecca, and RearWindow might be very similar given the relation DirectorOf, they could still be far away from each other given other relations.
+TransH [15] follows this general idea, by introducing relation-speciﬁc hyperplanes.
+1(b), TransH models entities again as vectors, but each relation r as a
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 3 h r Entity and Relation Space t (a) TransE.
+h t h t r Entity and Relation Space (b) TransH.
+h h t r Mr Entity Space Mr Relation Space of r t (c) TransR.
+Simple illustrations of TransE, TransH, and TransR.
+The ﬁgures are adapted from [15], [16].
+vector r on a hyperplane with wr as the normal vector.
+Given a fact (h, r, t), the entity representations h and t are ﬁrst projected onto the hyperplane, resulting in h⊥= h −w⊤ r hwr, t⊥= t −w⊤ r twr.
+The projections are then assumed to be connected by r on the hyperplane with low error if (h, r, t) holds, i.e., h⊥+r ≈ t⊥.
+The scoring function is accordingly deﬁned as fr(h, t) = −∥h⊥+ r −t⊥∥2 2, similar to the one used in TransE.
+By introducing the mech- anism of projecting to relation-speciﬁc hyperplanes, TransH enables different roles of an entity in different relations.
+TransR [16] shares a very similar idea with TransH.
+But it introduces relation-speciﬁc spaces, rather than hyperplanes.
+In TransR, entities are represented as vectors in an entity s- pace Rd, and each relation is associated with a speciﬁc space Rk and modeled as a translation vector in that space.
+Given a fact (h, r, t), TransR ﬁrst projects the entity representations h and t into the space speciﬁc to relation r, i.e., h⊥= Mrh, t⊥= Mrt.
+Here Mr ∈Rk×d is a projection matrix from the entity space to the relation space of r.
+Then, the scoring function is again deﬁned as fr(h, t) = −∥h⊥+ r −t⊥∥2 2.
+1(c) gives a simple illustration of TransR.
+Although powerful in modeling complex relations, TransR introduces a projection matrix for each relation, which requires O(dk) parameters per relation.
+So it loses the simplicity and efﬁ- ciency of TransE/TransH (which model relations as vectors and require only O(d) parameters per relation).
+An even more complicated version of the same approach was later proposed in [48], [49].
+In this version, each relation is associ- ated with two matrices, one to project head entities and the other tail entities.
+TransD [50] simpliﬁes TransR by further decomposing the projection matrix into a product of two vectors.
+Specif- ically, for each fact (h, r, t), TransD introduces additional mapping vectors wh, wt ∈Rd and wr ∈Rk, along with the entity/relation representations h, t ∈Rd and r ∈Rk.
+Two projection matrices M1 r and M2 r are accordingly deﬁned as M1 r = wrw⊤ h + I, M2 r = wrw⊤ t + I.
+These two projection matrices are then applied on the head entity h and the tail entity t respectively to get their projec- tions, i.e., h⊥= M1 rh, t⊥= M2 rt.
+With the projected entities, the scoring function is deﬁned in the same way as in TransR.
+TransD requires O(nd+mk) pa- rameters and is more efﬁcient than TransR (which requires O(nd + mdk) parameters).
+TranSparse [51] is another work that simpliﬁes TransR by enforcing sparseness on the projection matrix.
+It has two versions: TranSparse (share) and TranSparse (separate).
+The former uses the same sparse projection matrix Mr(θr) for each relation r, i.e., h⊥= Mr(θr)h, t⊥= Mr(θr)t.
+The latter introduces two separate sparse projection matri- ces M1 r(θ1 r) and M2 r(θ2 r) for that relation, one to project head entities, and the other tail entities, i.e., h⊥= M1 r(θ1 r)h, t⊥= M2 r(θ2 r)t.
+Here, θr, θ1 r, and θ2 r denote sparseness degrees of these projection matrices.
+The scoring function is again the same with that used in TransR.
+By introducing sparse projection matrices, TranSparse reduces the number of parameters to O(nd + (1 −θ)mdk), where θ is the average sparseness degree of projection matrices.
+Relaxing Translational Requirement h + r ≈t.
+Besides al- lowing entities to have distinct embeddings when involved in different relations, another line of research improves TransE by relaxing the overstrict requirement of h + r ≈t.
+TransM [52] associates each fact (h, r, t) with a weight θr speciﬁc to the relation, and deﬁnes the scoring function as fr(h, t) = −θr∥h + r −t∥1/2.
+By assigning lower weights to 1-to-N, N-to-1, and N-to-N relations, TransM allows t to lie farther away from h + r in those relations.
+As such, t can lie approximately on a manifold, i.e., a hyper-sphere centered at h + r with a radius of θr, rather than close to the exact point of h + r.
+The scoring function is hence deﬁned as fr(h, t) = −(∥h + r −t∥2 2 −θ2 r)2.
+TransF [54] uses a similar idea.
+Instead of enforcing the strict translation h+r ≈t, TransF only requires t to lie in the same
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 4 direction with h+r, and meanwhile h in the same direction with t−r.
+The scoring function then is to match t with h+r, and also h with t −r, i.e., fr(h, t) = (h + r)⊤t + (t −r)⊤h.
+TransA [55] introduces for each relation r a symmetric non- negative matrix Mr, and deﬁnes the scoring function using an adaptive Mahalanobis distance, i.e., fr(h, t) = −(|h + r −t|)⊤Mr(|h + r −t|).
+By learning the distance metric Mr, TransA is more ﬂexible in dealing with complex relations.2 3.1.2 Gaussian Embeddings Methods introduced so far model entities as well as relations as deterministic points in vector spaces.
+Some recent works take into account their uncertainties, and model them as random variables [45], [46].
+KG2E [45] represents entities and relations as random vectors drawn from multivariate Gaussian distributions, i.e., h ∼N(µh, Σh), t ∼N(µt, Σt), r ∼N(µr, Σr), where µh, µt, µr ∈Rd are mean vectors, and Σh, Σt, Σr ∈ Rd×d covariance matrices.
+Then, inspired by the translation- al assumption, KG2E scores a fact by measuring the distance between the two random vectors of t−h and r, i.e., the two distributions of N(µt −µh, Σt + Σh) and N(µr, Σr).
+Two types of distance measures are used.
+With the help of Gaussian embeddings, KG2E can effectively model uncertainties of entities and relations in KGs.
+TransG [46] also models entities with Gaussian distribu- tions, i.e., h ∼N(µh, σ2 hI), t ∼N(µt, σ2 t I).
+But it believes that a relation can have multiple semantics, and hence should be represented as a mixture of Gaussian distributions, i.e., r = ∑ i πi rµi r, µi r ∼N (µt −µh, (σ2 h + σ2 t )I ) .
+To make fr(h, t) a Mahalanobis distance, Mr ought to be positive semideﬁnite.
+But [55] did not impose this constraint, and only required Mr to be symmetric and non-negative.
+Here, µi r is the embedding for the i-th semantic, and πi r the weight of that semantic.
+The scoring function is accordingly deﬁned as fr(h, t) = ∑ i πi r exp (−∥µh + µi r −µt∥2 2 σ2 h + σ2 t ) , which is a mixture of translational distances introduced by different semantics of the relation.
+These semantic compo- nents can be learned automatically from the data using the Chinese restaurant process [60], [61].
+3.1.3 Other Distance Models Unstructured model (UM) [56] is a naive version of TransE by setting all r = 0, leading to a scoring function fr(h, t) = −∥h −t∥2 2.
+Obviously, it cannot distinguish different relations.
+Struc- tured embedding (SE) [57] uses two separate matrices M1 r and M2 r to project head and tail entities for each relation r, and the score is fr(h, t) = −∥M1 rh −M2 rt∥1.
+Table 1 summarizes entity/relation representations and s- coring functions used in these translational distance models.
+For all the models, there are constraints imposed on them, e.g., enforcing vector embeddings to have, at most, a unit ℓ2 norm.
+Some of the constraints are converted into regulariza- tion terms during optimization.
+3.2 Semantic Matching Models Semantic matching models exploit similarity-based scoring functions.
+They measure plausibility of facts by matching latent semantics of entities and relations embodied in their vector space representations.
+3.2.1 RESCAL and Its Extensions RESCAL.
+the bilinear model [17]) asso- ciates each entity with a vector to capture its latent seman- tics.
+Each relation is represented as a matrix which models pairwise interactions between latent factors.
+The score of a fact (h, r, t) is deﬁned by a bilinear function fr(h, t) = h⊤Mrt = d−1 ∑ i=0 d−1 ∑ j=0 [Mr]ij · [h]i · [t]j, where h, t ∈Rd are vector representations of the entities, and Mr ∈Rd×d is a matrix associated with the relation.3 This score captures pairwise interactions between all the components of h and t (see also Fig.
+2(a)), which requires O(d2) parameters per relation.
+[17] further assumes that all Mr decompose over a common set of rank-1 matrices, i.e., Mr = ∑ i πi ruiv⊤ i .
+TATEC [64] models not only the three- way interaction h⊤Mrt but also two-way interactions, e.g., those between an entity and a relation.
+The scoring function is fr(h, t) = h⊤Mrt + h⊤r + t⊤r + h⊤Dt, where D is a diagonal matrix shared across all different relations.4 3.
+Note that we use zero-indexed vectors and matrices for notation brevity in this section.
+TATEC can actually use different entity representations in the 2- way and 3-way terms.
+Here we omit this for notation brevity.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 5 TABLE 1 Summary of Translational Distance Models (See Section 3.1 for Details) Method Ent.
+Simple illustrations of RESCAL, DistMulti, and HolE.
+The ﬁgures are adapted from [62].
+DistMult [65] simpliﬁes RESCAL by restricting Mr to diagonal matrices.
+For each relation r, it introduces a vector embedding r ∈Rd and requires Mr = diag(r).
+This score captures pairwise interactions between only the components of h and t along the same dimension (see also Fig.
+2(b)), and reduces the number of parameters to O(d) per relation.
+However, since h⊤diag(r)t = t⊤diag(r)h for any h and t, this over-simpliﬁed model can only deal with symmetric relations which is clearly not powerful enough for general KGs.
+Holographic Embeddings (HolE).
+HolE [62] combines the expressive power of RESCAL with the efﬁciency and sim- plicity of DistMult.
+It represents both entities and relations as vectors in Rd.
+Given a fact (h, r, t), the entity representa- tions are ﬁrst composed into h⋆t ∈Rd by using the circular correlation operation [44], namely [h ⋆t]i = d−1 ∑ k=0 [h]k · [t](k+i) mod d.
+The compositional vector is then matched with the relation representation to score that fact, i.e., fr(h, t) = r⊤(h ⋆t) = d−1 ∑ i=0 [r]i d−1 ∑ k=0 [h]k · [t](k+i) mod d.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Neural network architectures of SME, NTN, MLP, and NAM.
+Circular correlation makes a compression of pairwise inter- actions (see also Fig.
+So HolE requires only O(d) pa- rameters per relation, which is more efﬁcient than RESCAL.
+Meanwhile, since circular correlation is not commutative, i.e., h⋆t ̸= t⋆h, HolE is able to model asymmetric relations as RESCAL does.
+Complex Embeddings (ComplEx).
+ComplEx [66] extends DistMult by introducing complex-valued embeddings so as to better model asymmetric relations.
+In ComplEx, entity and relation embeddings h, r, t no longer lie in a real space but a complex space, say Cd.
+The score of a fact (h, r, t) is deﬁned as fr(h, t) = Re (h⊤diag(r)¯t ) = Re ( d−1 ∑ i=0 [r]i · [h]i · [¯t]i ), where ¯t is the conjugate of t and Re(·) means taking the real part of a complex value.
+This scoring function is not symmetric any more, and facts from asymmetric relations can receive different scores depending on the order of enti- ties involved.
+[67] recently showed that every ComplEx has an equivalent HolE, and conversely, HolE is subsumed by ComplEx as a special case in which the conjugate symmetry is imposed on embeddings.
+ANALOGY [68] extends RESCAL so as to fur- ther model the analogical properties of entities and relations, e.g., “AlfredHitchcock is to Psycho as JamesCameron is to Avatar”.
+It follows RESCAL and employs a bilinear scoring function fr(h, t) = h⊤Mrt, where h, t ∈Rd are vector embeddings for the entities, and Mr ∈Rd×d is a linear map associated with the relation.
+To model the analogical structures, it further requires relations’ linear maps to be normal and mutually commutative, i.e., normality: MrM⊤ r = M⊤ r Mr, ∀r ∈R; commutativity: MrMr′ = Mr′Mr, ∀r, r′ ∈R.
+Although ANALOGY represents relations as matrices, these matrices can be simultaneously block-diagonalized into a set of sparse almost-diagonal matrices, each of which consists of only O(d) free parameters.
+It has been shown that the previ- ously introduced methods of DistMult, HolE, and ComplEx can all be subsumed by ANALOGY as special cases in a principled manner.
+3.2.2 Matching with Neural Networks Semantic Matching Energy (SME).
+SME [18] conducts se- mantic matching using neural network architectures.
+Given a fact (h, r, t), it ﬁrst projects entities and relations to their vector embeddings in the input layer.
+The relation r is then combined with the head entity h to get gu (h, r), and with the tail entity t to get gv (t, r) in the hidden layer.
+The score of a fact is ﬁnally deﬁned as matching gu and gv by their dot product, i.e., fr(h, t) = gu(h, r)⊤gv(t, r).
+There are two versions of SME: a linear version as well as a bilinear version.
+Here, M1 u, M2 u, M1 v, M2 v ∈Rd×d are weight matrices and bu, bv ∈Rd bias vectors shared across different relations.5 Fig.
+3(a) provides a simple illustration of SME.
+Neural Tensor Network (NTN).
+NTN [19] is another neural network architecture.
+Given a fact, it ﬁrst projects entities to their vector embeddings in the input layer.
+Then, the two entities h, t ∈Rd are combined by a relation-speciﬁc tensor Mr ∈Rd×d×k (along with other parameters) and mapped to a non-linear hidden layer.
+Finally, a relation-speciﬁc linear output layer gives the score fr(h, t) = r⊤tanh(h⊤Mrt + M1 rh + M2 rt + br), where M1 r, M2 r ∈Rk×d and br ∈Rk are relation-speciﬁc weight matrices and bias vectors, respectively.
+The bilinear tensor product h⊤Mrt results in a vector, with the i-th entry computed as h⊤M[;,;,i] r t.
+3(b) gives a simple illustration of NTN.
+By setting all Mr = 0 and br = 0, NTN degen- erates to the single layer model (SLM) [19].
+NTN might be the most expressive model to date.
+But it requires O(d2k) parameters per relation, and is not sufﬁciently simple and efﬁcient to handle large-scale KGs.
+In [18], SME (bilinear) is deﬁned with three-mode tensors instead of matrices.
+The two forms are equivalent [70].
+Note also that M1 u, M2 u, M1 v, M2 v are not necessarily square matrices.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 7 TABLE 2 Summary of Semantic Matching Models (See Section 3.2 for Details) Method Ent.
+MLP [69] is a simpler ap- proach where each relation (as well as entity) is associated with a single vector.
+As illustrated in Fig.
+3(c), given a fact (h, r, t), the vector embeddings h, r, and t are concatenated in the input layer, and mapped to a non-linear hidden layer.
+The score is then generated by a linear output layer, i.e., fr(h, t) = w⊤tanh(M1h + M2r + M3t).
+Here, M1, M2, M3 ∈Rd×d are the ﬁrst layer weights, and w ∈Rd the second layer weights, all shared across different relations.6 Neural Association Model (NAM).
+NAM [63] conducts semantic matching with a “deep” architecture.
+Given a fact (h, r, t), it ﬁrst concatenates the vector embeddings of the head entity and the relation in the input layer, which gives z(0) = [h; r] ∈R2d.
+The input z(0) is then fed into a deep neural network consisting of L rectiﬁed linear hidden layers such that a(ℓ) = M(ℓ)z(ℓ−1) + b(ℓ), ℓ= 1, · · · , L, z(ℓ) = ReLU(a(ℓ)), ℓ= 1, · · · , L, where M(ℓ) and b(ℓ) represent the weight matrix and bias for the ℓ-th layer respectively.
+After the feedforward process, the score is given by matching the output of the last hidden layer and the embedding of the tail entity, i.e., fr(h, t) = t⊤z(L).
+M1, M2, M3 are not necessarily square matrices.
+3(d) provides a simple illustration of NAM.
+It has a more complicated version which connects the relation em- bedding r to all hidden layers in the network.
+Table 2 sum- marizes entity/relation representations and scoring func- tions used in these semantic matching models.
+Constraints imposed on these models are also presented.7 3.3 Model Training This section discusses routine training procedures for KG embedding models.
+We consider two widely used assump- tions: the open world assumption and closed world assumption.
+3.3.1 Training under Open World Assumption The open world assumption (OWA) states that KGs contain only true facts and non-observed facts can be either false or just missing [72].
+In this case, D+ stores only positive examples.
+Negative examples can be generated by heuristics such as the local closed world assumption [69] (detailed later in this section).
+Given the positive set D+ and a negative set D−constructed accordingly, we can learn entity and relation representations Θ by minimizing, for instance, the logistic loss, i.e., min Θ ∑ τ∈D+∪D− log (1 + exp(−yhrt · fr(h, t))) , (1) where τ = (h, r, t) is a training example in D+ ∪D−, and yhrt = ±1 the label (positive or negative) of that example.
+It has been shown that minimizing the logistic loss can help 7.
+Instead of imposing constraints or regularization terms, NAM adopts the dropout approach [71] during training to avoid over-ﬁtting.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 8 to ﬁnd compact representations for some complex relational patterns such as transitive relations [73].
+Besides the logistic loss, we can also use a pairwise ranking loss such as min Θ ∑ τ +∈D+ ∑ τ −∈D− max (0, γ −fr(h, t) + fr′(h′, t′)) (2) to make the scores of positive facts higher than those of negative ones.8 Here, τ + = (h, r, t) is a positive example, τ −= (h′, r′, t′) a negative one, and γ a margin separating them.
+Minimizing the pairwise ranking loss has an addition- al advantage: it does not assume that negative examples are necessarily false, just that they are more invalid than those positive ones [36].
+Note that in both types of optimization, there are constraints and/or regularization terms speciﬁed by different embedding models (see Table 1 and Table 2 for details).
+[66] have shown that the logistic loss generally yields better results for semantic matching models such as DistMult and ComplEx, while the pairwise ranking loss may be more suitable for translational distance models like TransE.
+The optimization Eq.
+(2) can be easily carried out by stochastic gradient descent (SGD) [74] in minibatch mode.
+After initializing entity and relation embeddings, at each iteration, a small set of positive facts is sampled from D+, and for each positive fact, one or more negative facts are generated accordingly.
+These positive and negative facts then serve as training examples in a minibatch.
+After the minibatch, embeddings are updated by a gradient step with constant or adaptive learning rates.
+AdaGrad [75] is usually used to tune the learning rate.
+Algorithm 1 summarizes this training procedure, where a single negative is generated for each positive fact.
+Next, we discuss the initialization step (line 1) and negative example generation step (line 6).
+Algorithm 1 Training under Open World Assumption Input: Observed facts D+ = {(h, r, t)} 1: Initialize entity and relation embeddings 2: loop 3: P ←a small set of positive facts sampled from D+ 4: B+ ←∅, B−←∅ 5: foreach τ + = (h, r, t) ∈P do 6: Generate a negative fact τ −= (h′, r′, t′) 7: B+ ←B+ ∪{τ +}, B−←B−∪{τ −} 8: end for 9: Update entity and relation embeddings w.r.t.
+the gra- dients of ∑ τ∈B+∪B−log (1 + exp(−yhrt · fr(h, t))) or ∑ τ +∈B+,τ −∈B−max (0, γ −fr(h, t) + fr′(h′, t′)) 10: Handle additional constraints or regularization terms 11: end loop Output: Entity and relation embeddings Initializing Entity and Relation Embeddings.
+Embeddings for entities and relations are usually initialized randomly from uniform distributions [14] or Gaussian distribution- s [66].
+Some complicated models also initialize their em- beddings with results of simple models such as TransE [16].
+Another solution is to represent an entity as the average 8.
+Sometimes a sigmoid function is imposed on fr(h, t) to make the score a probability within the range of (0, 1).
+word vector of its name [19] or description [76], and initial- ize word vectors with those pre-trained on a text corpus.
+Generating Negative Training Examples.
+Given a positive fact τ + = (h, r, t) ∈D+, negative facts can be generated by replacing either the head h or the tail t with a random entity sampled uniformly from E [14], i.e., D−= {(h′, r, t)|h′ ∈E ∧h′ ̸= h ∧(h, r, t) ∈D+} ∪{(h, r, t′)|t′ ∈E ∧t′ ̸= t ∧(h, r, t) ∈D+}.
+However, this way of uniformly sampling might introduce false-negative training examples, e.g., (AlfredHitchcock, Gender, Male) might be a false-negative example generated for (JamesCameron, Gender, Male) by replacing the head.
+To reduce such false-negative examples, [15] proposed to set different probabilities for replacing the head and the tail, i.e., to give more chance to replacing the head if the relation is 1-to-N and the tail if the relation is N-to-1.
+Consider, for example, the relation Gender.
+For triples from this relation, replacing the tail is obviously more likely to generate true- negative examples.
+Speciﬁcally, given a relation and all its positive facts, [15] ﬁrst calculates (i) the average number of tail entities per head (denoted as tph), and (ii) the average number of head entities per tail (denoted as hpt).
+Then, for any positive fact from that relation, [15] corrupts the fact by replacing the head with probability tph/(tph+hpt), and the tail with probability hpt/(tph+hpt).
+[77] adopted a different strategy to generate negative facts.
+Given a positive fact, it corrupts a position (i.e.
+head or tail) using only entities that have appeared in that position with the same relation.
+That means, given (JamesCameron, Gender, Male), it could generate a negative fact (JamesCameron, Gender, Female) but never (JamesCameron, Gender, Avatar), as Avatar never appears as a tail entity of the relation.
+[66] further investigated the inﬂuence of the number of negative facts generated for each positive one.
+Their study showed that generating more negatives usually leads to better results, and 50 negatives per positive example is a good trade-off between accuracy and training time.
+3.3.2 Training under Closed World Assumption The closed world assumption (CWA) assumes that all facts that are not contained in D+ are false.
+In this case, we can learn entity and relation representations Θ by minimizing, for instance, the squared loss, i.e., min Θ ∑ h,t∈E,r∈R (yhrt −fr(h, t))2 , (3) where yhrt = 1 if (h, r, t) ∈D+, and yhrt = 0 otherwise.
+The squared loss sums over all h, t ∈E and r ∈R, enforcing observed facts to have scores close to 1, while non-observed facts scores close to 0.
+Other possible loss functions include the logistic loss [78] and absolute loss [79], [80].
+Minimizing the squared loss amounts to factorization of a three-mode tensor represented by the KG.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 9 using the squared loss, the optimization for RESCAL be- comes a tensor factorization (or collective matrix factoriza- tion) problem min E,{Mr} ∑ r∈R ∥Y[:,:,r]−EMrE⊤∥2 F +λ1∥E∥2 F +λ2 ∑ r∈R ∥Mr∥2 F .
+Here, Y ∈{0, 1}n×n×m is a three-mode tensor encoding the KG whose entries are set such that [Y]hrt = 1 if and only if (h, r, t) ∈D+; Y[:,:,r] ∈{0, 1}n×n is the slice holding all facts from relation r; E ∈Rn×d stores entity embeddings where each row is a vector representation of an entity; Mr ∈ Rd×d holds the embedding for relation r; and λ1, λ2 ≥0 are regularization coefﬁcients.
+This optimization problem can be solved efﬁciently via an alternating least squares (ALS) algorithm, which alternately ﬁxes {Mr} to update E and then ﬁxes E to update {Mr}.
+Besides RESCAL, other tensor factorization models such as the CANDECOMP/PARAFAC decomposition [81] and Tucker decomposition [82] have also been applied on KGs to model multi-relational data [83], [84], [85].
+For more details about tensor representation of KGs and tensor factorization models, refer to [13], [36] and references therein.
+The closed world assumption has several disadvantages.
+First, it will not hold for incomplete KGs where a lot of true facts are missing from observed data.
+However, despite their seemingly huge size, most KGs (e.g., Freebase, DBpedia, and YAGO) are highly incomplete [86], making the open world assumption a better choice in this case.
+In fact, it has been shown that CWA-based models generally perform worse than OWA-based ones in downstream tasks [87].
+And [62] has also demonstrated that the CWA-based RESCAL model can perform substantially better if trained under the open world assumption, i.e., minimizing the pairwise ranking loss deﬁned in Eq.
+(2) rather than the squared loss deﬁned in Eq.
+Second, the closed world assumption will introduce a huge number of negative examples, which might lead to scalability issues in model training.
+3.4 Model Comparison Table 3 compares space and time complexity of the different models we have discussed.
+Here, n and m are the number of entities and relations respectively; d and k the dimensional- ity of entity and relation embedding space respectively (we usually have d = k); θ in TranSparse the average sparseness degree of projection matrices; c in TransG the average num- ber of semantic components per relation; and L in NAM the total number of hidden layers in the network.
+See Section 3.1 and Section 3.2 for details.
+During the analysis we assume that d, k ≪n and all the models are trained under the open world assumption.
+We can draw the following conclusions.
+First, models which represent entities and relations as vec- tors (e.g., TransE, TransH, DistMult, and ComplEx) are more efﬁcient.
+They usually have space and time complexity that scales linearly with d.
+HolE is an exception, as it computes circular correlation via the discrete Fourier transform whose time complexity is O(d log d).
+Second, models which rep- resent relations as matrices (e.g., TransR, SE, and RESCAL) or tensors (e.g., NTN) usually have higher complexity in both space and time, scaling quadratically or cubically with the dimensionality of embedding space.
+Finally, models based on neural network architectures (e.g., SME, NTN, MLP, and NAM) generally have higher complexity in time, if not in space, since matrix or even tensor computa- tions are often required in these models.
+After comparison in complexity, we discuss performance of these models in downstream tasks.
+Clearly which model is best depends on the task, and also the data.
+We limit our discussion to the link prediction task (see Section 5.1.1 for details) and WordNet and Freebase data, which is standard practice in previous studies.
+An interesting observation is that those seemingly more expressive models do not neces- sarily have better performance.
+For instance, it was demon- strated that the NTN model performed slightly worse than the simpler MLP model [69], and it even performed worse than TransE and DistMult [65], which are almost the sim- plest KG embedding models.
+The reason could be that ex- pressive models often require a large number of parameters and tend to overﬁt on small- and medium-sized datasets.
+[62] recently reimplemented some of the models and compared them in the identical setting, i.e., using the ranking loss of Eq.
+(2) solved by SGD with AdaGrad.
+They found that HolE performed substantially better than TransE, TransR, RESCAL, and MLP.
+[66] later showed that ComplEx which deﬁnes complex-valued embeddings performed even better than HolE.
+ANALOGY, which sub- sumes DistMult, HolE, and ComplEx as special cases, gave the best link prediction results to date reported on WordNet and Freebase data.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 10 3.5 Other Approaches Besides the aforementioned models, there are other works which learn representations for head-tail entity pairs rather than individual entities [21].
+Speciﬁcally, given a triple (h, r, t), the relation r is represented as a vector r ∈Rd, and the entity pair (h, t) another vector p ∈Rd.
+The plausibility of the fact can be measured by the inner product of r and p.
+These vector representations are then learned by minimizing a pairwise ranking loss similar to the one deﬁned in Eq.
+Such entity pair representation is particularly prevalent in relation extraction, which aims to identify possible relations holding between a pair of entities [88].
+Similarly, one can also model the head entity h as a vector h ∈Rd and the relation-tail entity pair (r, t) as another vector p ∈Rd [89], [90].
+Nevertheless, such paired formulations have their dis- advantages.
+For instance, if the head-tail entity pairs (h1, t) and (h2, t) are modeled via different vector representations, the information that they share the same tail entity t will be lost.
+And also, relations between unpaired entities, e.g., h3 and t, cannot be effectively discovered.
+It also leads to an increased space complexity, since a vector representation is computed for each entity pair which requires O(n2d + md) parameters in total.
+4 INCORPORATING ADDITIONAL INFORMATION The methods introduced so far conduct the embedding task using only facts observed in the KG.
+In fact, there is a wide variety of additional information that can be incorporated to further improve the task, e.g., entity types, relation paths, textual descriptions, as well as logical rules.
+In this section, we discuss how such information can be integrated.
+4.1 Entity Types The ﬁrst kind of additional information we consider is entity types, i.e., semantic categories to which entities belong.
+For example, AlfredHitchcock has the type of Person, and Psycho the type of CreativeWork.
+This kind of informa- tion is available in most KGs, usually encoded by a speciﬁc relation and stored also in the form of triples, e.g., (Psycho, IsA, CreativeWork).9 A straightforward method to model such information, as investigated in [22], is to take IsA as an ordinary relation and the corresponding triples as ordinary training examples.
+[25] proposed semantically smooth embedding (SSE), which requires entities of the same type to stay close to each other in the embedding space, e.g., Psycho is sup- posed to stay closer to Avatar than to JamesCameron.
+SSE employs two manifold learning algorithms, i.e., Laplacian eigenmaps [91] and locally linear embedding [92] to model this smoothness assumption.
+The former requires an entity to lie close to every other entity in the same category, giving a smoothness measure of R1 = 1 2 n ∑ i=1 n ∑ j=1 ∥ei −ej∥2 2w1 ij, 9.
+Here we use “IsA” to denote the relation that links entities to their semantic categories.
+Different KGs actually name this relation in their own way, e.g., Freebase adopts /type/object/type and NELL uses Generalization.
+where ei and ej are the vector embeddings of entities ei and ej respectively; w1 ij =1 if the two entities belong to the same category and w1 ij =0 otherwise.
+By minimizing R1, we expect a small distance between ei and ej whenever w1 ij =1.
+The latter represents an entity as a linear combination of its nearest neighbors, i.e., entities within the same category.
+The smoothness measure is deﬁned as R2 = n ∑ i=1 ∥ei −∑ ej∈Nei w2 ijej∥2 2, where Nei is the set containing nearest neighbors of entity ei; w2 ij = 1 if ej ∈Nei and w2 ij = 0 otherwise.10 By minimiz- ing R2, we expect each entity to be linearly reconstructed from its nearest neighbors with low error.
+R1 and R2 are then incorporated as regularization terms to constrain the embedding task.
+SSE was proved to perform better than the straightforward method in both KG embedding and down- stream tasks.
+A major limitation of SSE is that it assumes entities’ semantic categories are non-hierarchical and each entity belongs to exactly one category.
+This is obviously not the case in typical real-world KGs.
+[26] devised type-embodied knowledge rep- resentation learning (TKRL), which can handle hierarchical entity categories and multiple category labels.
+TKRL is a translational distance model with type-speciﬁc entity pro- jections.
+Given a fact (h, r, t), it ﬁrst projects h and t with type-speciﬁc projection matrices, and then models r as a translation between the two projected entities.
+The scoring function is accordingly deﬁned as fr(h, t) = −∥Mrhh + r −Mrtt∥1, where Mrh and Mrt are projection matrices for h and t.
+To handle multiple category labels, Mrh is represented as a weighted sum of all possible type matrices, i.e., Mrh = ∑nh i=1 αiMci ∑nh i=1 αi , αi = { 1, ci ∈Crh, 0, ci ̸∈Crh, where nh ≥1 is the number of categories to which h belongs; ci the i-th category among them; Mci the projection matrix of ci; αi the corresponding weight; and Crh the set of types that a head entity can have in relation r.
+To further handle hierarchical categories, Mci is represented as a composition of the projection matrices associated with all sub-categories of ci.
+Two types of composition operations are used, i.e., addition: Mci = β1Mc(1) i + · · · + βℓMc(ℓ) i ; multiplication: Mci = Mc(1) i ◦· · · ◦Mc(ℓ) i .
+Here c(1) i , · · · , c(ℓ) i are sub-categories of ci in the hierarchy; Mc(1) i , · · · , Mc(ℓ) i their projection matrices; and β1, · · · , βℓ the corresponding weights.
+Mrt is deﬁned in a similar way.
+Although TKRL achieves good performance in downstream tasks such as link prediction and triple classiﬁcation, it has a relatively high space complexity since it associates each category with a speciﬁc projection matrix.
+Entity types can also be used as constraints of head and tail positions for different relations, e.g., head entities of rela- tion DirectorOf should be those with the type of Person, 10.
+w2 ij are further normalized so that ∑n j=1 w2 ij = 1 for each i.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 11   …   ℓ Composition    →⋯→ℓ Fig.
+Path representations are semantic compositions of their relation embeddings.
+The ﬁgure is adapted from [27].
+and tail entities those with the type of CreativeWork.
+[77] and [26] tried to impose such constraints in the training pro- cess, particularly during the generation of negative training examples.
+Negative examples that violate entity type con- straints are excluded from training [77], or generated with substantially low probabilities [26].
+[93] imposed similar constraints on RESCAL, a tensor factorization model.
+The idea is to discard invalid facts with wrong entity types, and factorize only a sub-tensor composed of remaining facts.
+See [23], [94] for other approaches in which entity type information is also incorporated.
+4.2 Relation Paths The second kind of additional information we consider is re- lation paths, i.e., multi-hop relationships between entities.11 A relation path is typically deﬁned as a sequence of relations r1 →· · · →rℓthrough which two entities can be connected on the graph.
+For example, BornIn →LocatedIn is a path linking AlfredHitchcock to England, via an inter- mediate node Leytonstone.
+Relation paths contain rich semantic cues and are extremely useful for KG completion, e.g., BornIn →LocatedIn is indicative of the relation Nationality between AlfredHitchcock and England.
+Relation paths have long been studied in multi-relational data.
+For instance, the path ranking algorithms directly use paths connecting two entities as features to predict potential relations between them [37], [38], [39].
+They have, very re- cently, been integrated into KG embedding.
+A key challenge then is how to represent such paths in the same vector space along with entities and relations.
+A straightforward solution is to represent a path as a composition of the representations of its constituent relations, since the semantic meaning of the path depends on all these relations.
+4 provides a simple illustration of this idea.12 Actually, almost all the ex- isting approaches handle relation paths using composition strategies.
+Typical composition operations include addition, multiplication, and recurrent neural network (RNN) [95].
+[27] proposed an extension of TransE to model relation paths, referred to as path-based TransE (PTransE).
+Given a path p = r1 →· · · →rℓlinking two entities h and t, as well as the vector representations r1, · · · , rℓof the constituent relations, PTransE considers all the three types of composition operations, i.e., addition: p = r1 + · · · + rℓ; multiplication: p = r1 ◦· · · ◦rℓ; RNN: ci = f (W[ci−1; ri]) .
+Facts themselves are regarded as one-hop relationships.
+For simplicity relations are represented as vectors in this ﬁgure.
+But they can also be represented in other forms, e.g., matrices [28].
+Here, ci indicates the accumulated path vector at the i-th relation; W is a composition matrix shared by all relations; [ci−1; ri] denotes the concatenation of ci−1 and ri; and f is a non-linearity function.
+By setting c1 = r1 and recursively traversing from left to right, one can ﬁnally get p = cℓ.
+The path p is then required to be consistent with a direct relation r between the two entities, i.e., ∥p −r∥1 tends to be small if (h, r, t) holds.
+For each fact (h, r, t) ∈D+, PTransE deﬁnes a loss w.r.t.
+the paths, i.e., Lpath = 1 Z ∑ p∈P(h,t) R(p|h, t) · ℓ(p, r), where P(h, t) is the set of all paths connecting h and t; R(p|h, t) indicates the reliability of a path p given the two entities; Z = ∑ p∈P(h,t) R(p|h, t) is a normalization factor; and ℓ(p, r) is a loss speciﬁed on the path-relation pair (p, r).
+The path reliability R(p|h, t) can be calculated by a network-based resource-allocation mechanism [96], and the loss ℓ(p, r) is deﬁned as ℓ(p, r) = ∑ r′ max(0, γ + ∥p −r∥1 −∥p −r′∥1), which prefers a lower value of ∥p−r∥1 than of any ∥p−r′∥1.
+Finally, to learn entity and relation representations, Lpath is aggregated over all the facts in D+ and then combined with the original TransE loss.
+Experimental results showed that by further incorporating relation paths, PTransE can perform substantially better than TransE in KG completion and relation extraction.
+[28] proposed a similar framework, the idea of which is to build triples using entity pairs connected not on- ly with relations but also with relation paths.
+For example, given a pair of entities (h, t) and a path p = r1 →· · · →rℓ between them, a new triple (h, p, t) can be constructed.
+To model such path-connected triples, Guu et al.
+devised ex- tensions of both the TransE model and the RESCAL model.
+The former uses the addition composition, and deﬁnes the score of (h, p, t) as fp(h, t) = −∥h + (r1 + · · · + rℓ) −t∥1, while the latter chooses the multiplication composition and deﬁnes the score as fp(h, t) = h⊤(M1 ◦· · · ◦Mℓ)t.
+Path-connected triples are then treated the same as those relation-connected ones during training.
+This approach was shown to perform well in answering path queries on KGs.
+A more limited version of the same approach was simulta- neously introduced in [97].
+While incorporating relation paths improves model per- formance, the huge number of paths poses a critical com- plexity challenge.
+Both [27] and [28] had to make approx- imations by sampling or pruning.
+To enable efﬁcient path modeling, [29] proposed a dynamic programming algorithm which can incorporate all relation paths of bounded length.
+Moreover, in this work, not only relations but also interme- diate nodes (i.e.
+entities) are modeled in compositional path representations.
+For other related work, please refer to [98], [99], [100].
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 12 (AlfredHitchcock, DirectorOf, Psycho) Sir Alfred Joseph Hitchcock (13 August 1899 – 29 April 1980) was an English film director and producer, ...
+Psycho is a psychological horror film directed and produced by Alfred Hitchcock, and written by Joseph Stefano, ...
+Examples of entity descriptions.
+The ﬁgure is adapted from [32].
+4.3 Textual Descriptions This section discusses the incorporation of textual descrip- tions for entities.
+Actually, in most KGs there are concise descriptions for entities which contain rich semantic in- formation about them.
+5 shows the descriptions for AlfredHitchcock and Psycho in Freebase.
+Besides entity descriptions stored in KGs, it can be extended to incorporate more general textual information such as news releases [19] and Wikipedia articles [30], [31], [33].
+Embedding KGs with textual information dates back to the NTN model [19], where textual information is simply used to initialize entity representations.
+Speciﬁcally, NTN ﬁrst learns word vectors from an auxiliary news corpus, and then initializes the representation of each entity by averag- ing the vectors of words contained in its name.
+For example, the embedding of AlfredHitchcock is initialized by the average word vectors of “alfred” and “hitchcock”.
+A similar method was later proposed in [76], which represents entities as average word vectors of their descriptions rather than just their names.
+This kind of methods model textual informa- tion separately from KG facts, and hence fail to leverage interactions between them.
+[30] proposed the ﬁrst joint model which can make better use of textual information during embedding.
+The key idea is to align the given KG with an auxiliary text corpus, and then jointly conduct KG embedding and word embedding.
+As such, entities/relations and words are rep- resented in the same vector space and operations like inner product (similarity) between them are hence meaningful.
+The joint model has three components: knowledge model, text model, and alignment model.
+The knowledge model is to embed entities and relations in the KG.
+It is a variant of TransE, with a loss LK to measure the ﬁtness to KG facts.
+The text model is to embed words in the text corpus.
+It is a variant of Skip-gram [101], with a loss LT to measure the ﬁtness to co-occurring word pairs.
+Finally, the alignment model guarantees the embeddings of entities/relations and words lie in the same space.
+Different mechanisms of align- ment are introduced, e.g., alignment by entity names [30], by Wikipedia anchors [30], and by entity descriptions [31].
+A loss LA is deﬁned to measure the quality of alignment.
+The joint model then amounts to minimizing a loss aggregated from the three components, i.e., L = LK + LT + LA.
+Jointly embedding utilizes information from both structured KGs and unstructured text.
+KG embedding and word em- bedding can thus be enhanced by each other.
+Moreover, by aligning these two types of information, jointly embedding enables the prediction of out-of-KG entities, i.e., phrases appearing in web text but not included in the KG yet.
+[32] proposed description-embodied knowl- edge representation learning (DKRL), the aim of which is to extend TransE so as to further handle entity descriptions.
+DKRL associates each entity e with two vector representa- tions, i.e., a structure-based es and a description-based ed.
+The former captures structural information conveyed in KG facts, while the latter captures textual information expressed in the entity description.
+The description-based representa- tion is constructed by the constituent word embeddings, via either a continuous bag-of-words encoder or a convolutional neural network encoder.
+Given a fact (h, r, t), DKRL deﬁnes the scoring function as fr(h, t) = −∥hs + r −ts∥1 −∥hd + r −td∥1 −∥hs + r −td∥1 −∥hd + r −ts∥1, where r is the vector representation of the relation, shared by both structure-based hs/ts and description-based hd/td.
+Entity, relation, and word embeddings can then be learned simultaneously by minimizing the ranking loss deﬁned in Eq.
+Experimental results demonstrated the superiority of DKRL over TransE, particularly in the zero-shot scenario with out-of-KG entities.
+[33] recently proposed a text-enhanced KG embedding model, referred to as TEKE.
+Given a KG and a text corpus, TEKE ﬁrst annotates entities in the corpus and constructs a co-occurrence network composed of entities and words.
+Then, for each entity e, TEKE deﬁnes its textual context n(e) as its neighbors in the co-occurrence network, i.e., words co-occurring frequently with the entity in the text corpus.
+A textual context embedding n(e) is further introduced for that entity, deﬁned as the weighted average of the word vectors in n(e).13 For each relation r in a fact (h, r, t), TEKE deﬁnes its textual context as the common neighbors of h and t, i.e., n(h, t) = n(h) ∩n(t).
+A textual context embedding n(h, t) is similarly deﬁned for that rela- tion.
+Textual context embeddings are then incorporated into traditional methods, e.g., TransE, to learn more expressive entity and relation representations such as ˆh = An(h) + h, ˆt = An(t) + t, ˆr = Bn(h, t) + r.
+Here, A, B are weight matrices, and h, t, r bias vectors.
+This extension also applies for TransH and TransR.
+By in- corporating textual context embeddings, TEKE was proved to outperform the original models of TransE, TransH, and TransR.
+See [102], [103], [104], [105] for other approaches where textual information is also considered.
+4.4 Logical Rules Finally we consider the incorporation of logical rules, partic- ularly those represented in terms of ﬁrst-order Horn clauses, e.g., ∀x, y : HasWife(x, y) ⇒HasSpouse(x, y) stating that any two entities linked by the relation HasWife should also be linked by the relation HasSpouse.
+Such logical rules contain rich background information and have been widely studied in knowledge acquisition and inference, usually on 13.
+Word vectors are pre-trained using the word2vec tool [101].
+They are not learned jointly with entity and relation embeddings.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 13 Facts Rules Entity embeddings Relation embeddings Truth values in [0, 1] Logical connectives HasWife(AlfredHitchcock,AlmaReville) HasSpouse(AlfredHitchcock,AlmaReville) Fig.
+Simple illustration of KALE.
+The ﬁgure is adapted from [34].
+the basis of Markov logic networks [40], [41], [42].
+There are also systems such as WARMR [106], ALEPH [107], and AMIE [108], [109] which can extract logical rules automati- cally from KGs.
+Recently, there has been growing interest in combining logical rules with KG embedding models.
+[23] tried to utilize rules to reﬁne embedding models during KG completion.
+In their work, KG comple- tion is formulated as an integer linear programming prob- lem, with the objective function generated from embedding models and the constraints from rules.
+Facts inferred in this way will be the most preferred by the embedding models and comply with all the rules.
+A similar work that combines rules and embedding models via Markov logic networks was later introduced in [24].
+However, in [23] and [24], rules are modeled separately from embedding models, serving as post-processing steps, and thus will not help to obtain better embeddings.
+[34] proposed a joint model which embeds KG facts and logical rules simultaneously.
+A key ingredient of this approach, called KALE, is to represent and model facts and rules in a uniﬁed framework.
+Speciﬁcally, a fact (h, r, t) is taken as a ground atom, with its truth value deﬁned as I(h, r, t) = 1 − 1 3 √ d ∥h + r −t∥1, where d is the dimension of the embeddings, and I(h, r, t) ∈ [0, 1] a linearly transformed version of the TransE score indi- cating how likely the fact holds.
+Logical rules are ﬁrst instan- tiated into ground rules, e.g., the universally quantiﬁed rule ∀x, y : HasWife(x, y) ⇒HasSpouse(x, y) can be ground- ed into HasWife(AlfredHitchcock, AlmaReville) ⇒ HasSpouse(AlfredHitchcock, AlmaReville).
+Ground rules are then interpreted as complex formulae constructed by combining ground atoms with logical connectives (e.g.
+∧and ⇒), and modeled by t-norm fuzzy logics [110].
+The truth value of a ground rule is a composition of the truth values of the constituent ground atoms, via speciﬁc t-norm based logical connectives, e.g., I(f1 ⇒f2) = I(f1) · I(f2) −I(f1) + 1, I(f1 ∧f2 ⇒f3) = I(f1) · I(f2) · I(f3) −I(f1) · I(f2) + 1.
+This value also lies within the range of [0, 1], indicating to what degree the ground rule is satisﬁed.
+In this way, KALE represents facts and rules in a uniﬁed framework, as atomic and complex formulae respectively.
+6 provides a simple illustration of this framework.
+After unifying facts and rules, KALE minimizes a global loss involving both of them to learn entity and relation embeddings.
+The learned embeddings are hence compatible not only with facts but also with rules, which can be more effective for knowledge acquisition and inference.
+[35] devised a model similar to KALE.
+In their work, however, vector embeddings are introduced for entity pairs rather than individual entities, making it particularly useful for relation extraction.
+Since entities do not have their own embeddings, relations between unpaired entities cannot be effectively discovered.
+Both [34] and [35] share a common drawback: they have to instantiate uni- versally quantiﬁed rules into ground rules before learning their models.
+This grounding procedure could be extremely time and space inefﬁcient especially when there are a huge number of entities in the KG and/or the rules are compli- cated themselves.
+To address this drawback, Demeester et al.
+[111] recently proposed an extension of [35], the key idea of which is to impose logical implications by regularizing relation embeddings so as to avoid grounding.
+For example, given a universally quantiﬁed rule ∀x, y : HasWife(x, y) ⇒ HasSpouse(x, y), [111] tried to model it by using only the embeddings of the two relations HasWife and HasSpouse, without instantiating x and y with concrete entities in the KG.
+Nevertheless, this strategy works only for rules in the simplest form of ∀x, y : ri(x, y) ⇒rj(x, y), and cannot be generalized to more complicated rules.
+For other related work, please refer to [112], [113].
+4.5 Other Information Besides the four types of additional information mentioned above, there are also a few studies which tried to incorporate other information into KG embedding.
+[22] argued that relations in KGs can indicate both relationships between entities (e.g.
+(AlfredHitchcock, HasWife, AlmaReville)) and attributes of entities (e.g.
+(AlfredHitchcock, Gender, Male)), but most KG embedding techniques do not explic- itly distinguish between relations and attributes.
+Take the tensor factorization model RESCAL as an example.
+In this model, each KG relation is encoded as a slice of the tensor, no matter it indicates a true relation or just an attribute.
+This naive handling of attributes will dramatically increase the dimensionality of the tensor, while a huge amount of entries in this tensor, however, will be wasted.14 To address this problem, [22] proposed to explicitly distinguish attributes from relations.
+Relations are still encoded in a tensor, while attributes in a separate entity-attribute matrix.
+This matrix is then factorized jointly with the tensor to learn represen- tations simultaneously for entities, relations, and attributes.
+A similar idea was later studied in a translational distance model [114].
+Temporal Information.
+[115] observed that KG facts are usually time-sensitive, e.g., (AlfredHitchcock, BornIn, Leytonstone) happened in the year of 1899, while (AlfredHitchcock, DiedIn, BelAir) took place in 14.
+Note that as opposed to true entities (e.g.
+AlfredHitchcock and AlmaReville), attribute values (e.g.
+Male) might never occur as head entities in a relation or even as tail entities in other relations except for the speciﬁc attribute.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 14 the year of 1980.
+Based on this observation they proposed a time-aware embedding model.
+The idea of this model is to impose temporal order constraints on time-sensitive relation pairs, e.g., BornIn and DiedIn.
+Given such a pair (ri, rj), the prior relation is supposed to lie close to the subsequent relation after a temporal transition, i.e., Mri ≈rj, where M is a transition matrix capturing the temporal order in- formation between relations.
+After imposing such temporal order constraints, [115] is able to learn temporally consistent relation embeddings.
+[116] tried to model the temporal evolution of KGs.
+In their model, changes in a KG always arrive as events, represented by labeled quadruples such as (h, r, t, s; True) or (h, r, t, s; False), indicating that the fact (h, r, t) appears or vanishes at time s, respectively.
+Each quadruple is then modeled as a four-way interaction among h, r, t, and s, where s is the vector representation of the time stamp.
+This model was shown to perform well in dynamic domains, e.g., medical and sensor data.
+[117] recently proposed to learn non-linearly evolving entity representations over time so as to perform temporal reasoning over dynamic KGs.
+Each fact in a dynamic KG is represented as a quadruple (h, r, t, s), indicating the cre- ation of relation r between head entity h and tail entity t at time s.
+A temporal point process [118] is then employed to model occurrence of facts, with a bilinear scoring function to capture multi-relational interactions between entities, and a deep recurrent neural network to learn non-linearly evolv- ing entity representations.
+This approach performed quite well in link prediction, in particular, time prediction.
+[119] proposed a graph-aware embedding model which learns entity and relation repre- sentations by leveraging three types of graph structures.
+The ﬁrst is neighbor context, which is actually equivalent to triples observed in a KG.
+The second is path context, very similar to relation paths discussed in Section 4.2.15 The last is edge context, which has not been considered in previously introduced methods.
+Given a speciﬁc entity, its edge context is deﬁned as all kinds of relations linking to and from that entity, based simply on the intuition that all these relations are representative of that entity.
+For example, the edge con- text of AlfredHitchcock might include relations such as BornIn, DiedIn, HasWife, and DirectorOf, all indicat- ing AlfredHitchcock to be a Person or more speciﬁcally, a Director.
+Experimental results further demonstrated the effectiveness of modeling these graph structures.
+[121] suggested to estimate the plausibility of a fact from its immediate context.
+The immediate context of a fact (h, r, t) is deﬁned as: (i) triples where h is the head, (ii) triples where h is the tail, (iii) triples where t is the head, (iv) triples where t is the tail, and (v) triples with arbitrary relations but where the two entities are h and t.
+This work was shown effective in predicting links on multi-relational data.
+Evidence from Other Relational Learning Methods.
+There is another line of research which combines KG embedding with other relational learning methods, e.g., the path rank- ing algorithm (PRA), to take the strengths of different types of methods.
+[69] proposed to combine MLP with 15.
+The difference lies in that Section 4.2 considers only relations in a path, while path context further takes into account intermediate nodes in that path, as practiced in [29], [100], [120].
+PRA via a fusion system.
+Speciﬁcally, after ﬁtting the two models separately, they used the outputs of MLP and PRA as scalar features, and learned a ﬁnal fusion layer by training a binary classiﬁer.
+They found that fusing these two models improves performance: the fused system obtained a result of 0.911 for the area under the ROC curve, as compared to 0.882 for MLP and 0.884 for PRA on their speciﬁc dataset.
+[122] designed a generic framework to combine latent and observable variable models.
+In particular, if it combines RESCAL with PRA, the scoring function becomes fr(h, t) = h⊤Mrt + w⊤ r ϕht.
+The ﬁrst term is the RESCAL score and the second term the PRA score, in which ϕht is a feature vector composed of path features and wr holds the weights of these features.
+This is a joint model which can be trained by alternately optimizing the RESCAL parameters with the PRA parameters.
+After the combination, RESCAL only needs to model the “residual errors” that cannot be modeled by PRA, which requires lower latent dimension- ality and speeds up training.
+For more details about these combined models, refer to [36] and references therein.
+5 APPLICATIONS IN DOWNSTREAM TASKS After a systematic review of currently available KG embed- ding techniques, this section explores how the learned entity and relation embeddings can be applied to and beneﬁt a wide variety of downstream tasks.
+We categorize such tasks into (i) in-KG applications and (ii) out-of-KG applications, discussed as follows.
+5.1 In-KG Applications In-KG applications are those conducted within the scope of the KG where entity and relation embeddings are learned.
+We introduce four such applications, i.e., link prediction, triple classiﬁcation, entity classiﬁcation, and entity resolu- tion, which have been extensively studied in the literature.
+All these applications are sorts of reﬁnement (e.g.
+comple- tion or de-duplication) of the input KG [123], from different viewpoints and application context.
+5.1.1 Link Prediction Link prediction is typically referred to as the task of predict- ing an entity that has a speciﬁc relation with another given entity, i.e., predicting h given (r, t) or t given (h, r), with the former denoted as (?, r, t) and the latter as (h, r, ?).
+For example, (?, DirectorOf, Psycho) is to predict the direc- tor of the ﬁlm, while (AlfredHitchcock, DirectorOf, ?) amounts to predicting ﬁlms directed by that speciﬁc person.
+This is essentially a KG completion task, i.e., adding missing knowledge to the graph, and has been tested extensively in previous literature [14], [15], [16], [62].
+This link prediction task is also sometimes called entity prediction [27] or entity ranking [18].
+A similar idea can also be used to predict relations between two given entities, i.e., (h, ?, t), which is usually referred to as relation prediction [26], [27].
+With entity and relation representations learned before- hand, link prediction can be carried out simply by a ranking procedure.
+Take the prediction task (?, r, t) as an example.
+To predict the head, one can take every entity h′ in the KG as a candidate answer and calculate a score fr(h′, t)
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 15 for each (h′, r, t).
+This can easily be achieved by using the learned embeddings and scoring function once an embed- ding model has been trained on the KG, e.g., fr(h′, t) = −∥h′+r−t∥1/2 if TransE has been employed for KG embed- ding.
+Ranking these scores in descending order will result in a ranked list of candidate answers.
+For instance, given the prediction task (?, DirectorOf, Psycho), one may gener- ate an ordered list {JamesCameron, AlfredHitchcock, GeorgeLucas, QuentinTarantino} by using this rank- ing procedure.
+The prediction task (h, r, ?) or (h, ?, t) can be carried out in a similar manner.
+For evaluation, a common practice is to record ranks of correct answers in such ordered lists, so as to see whether correct answers can be ranked before incorrect ones.
+In the forementioned example of (?, DirectorOf, Psycho), the correct answer AlfredHitchcock gets a rank of 2.
+Lower ranks indicate better performance.
+Various evaluation met- rics have been designed based on such ranks, e.g., mean rank (the average of predicted ranks), mean reciprocal rank (the average of reciprocal ranks), Hits@n (the proportion of ranks no larger than n), and AUC-PR (the area under the precision-recall curve).
+5.1.2 Triple Classiﬁcation Triple classiﬁcation consists in verifying whether an unseen triple fact (h, r, t) is true or not, e.g., (AlfredHitchcock, DirectorOf, Psycho) should be classiﬁed as a true fact while (JamesCameron, DirectorOf, Psycho) a false one.
+This task, again, can be seen as some sort of completion of the input KG, which has also been studied extensively in previous works [15], [16], [19].
+Recall that once an embedding model has been learned on the KG, we can calculate a score for any triple (h, r, t) as long as h, t ∈E and r ∈R, e.g., fr(h, t) = −∥h+r−t∥1/2 if the TransE model has been learned.
+Triple classiﬁcation can then be carried out simply on the basis of such triple scores.
+Triples with higher scores tend to be true facts.
+Speciﬁcally, we introduce for each relation r a threshold δr.
+Then any unseen fact from that relation, say (h, r, t), will be predicted as true if its score fr(h, t) is higher than δr, and as false otherwise.16 In this way, we obtain a triple classiﬁer for each relation.
+Traditional metrics for classiﬁcation can be used to evaluate this task, e.g., micro- and macro-averaged accuracy [25].
+Since for each triple a real valued score will be output along with the binary label, ranking metrics can also be used here, e.g., mean average precision [34].
+5.1.3 Entity Classiﬁcation Entity classiﬁcation aims to categorize entities into different semantic categories, e.g., AlfredHitchcock is a Person, and Psycho a CreativeWork.
+Given that in most cases the relation encoding entity types (denoted as IsA) is contained in the KG and has already been included into the embed- ding process, entity classiﬁcation can be treated as a speciﬁc link prediction task, i.e., (x, IsA, ?).
+Similar prediction and evaluation procedures can be applied here (see Section 5.1.1 for details).
+Entity classiﬁcation is obviously a KG comple- tion problem, and has been studied in [13] and [22].
+The relation-speciﬁc threshold δr can be determined by using a small set of facts observed for that relation, either a subset of D+ or a separate development set.
+5.1.4 Entity Resolution Entity resolution consists in verifying whether two entities refer to the same object.
+In some KGs many nodes actually refer to identical objects, e.g., in the Cora dataset [124] which contains citations with the ﬁelds of author, title, and venue, the name of an author or a venue can be written in different ways.
+Entity resolution is the task that de-duplicates such nodes [13], [18].
+[18] considered a scenario where the KG already contains a relation stating whether two entities are equivalent (denoted as EqualTo) and an embedding has been learned for that relation.
+In this case, entity resolution degenerates to a triple classiﬁcation problem, i.e., to judge whether the triple (x, EqualTo, y) holds or how likely this triple holds.
+Triple scores output by an embedding model can be directly used for such prediction (see Section 5.1.2 for details).
+This intuitive strategy, however, does not always work since not all KGs encode the EqualTo relation.
+[13] proposed to perform entity resolution solely on the basis of entity representations.
+More speciﬁcally, given two entities x, y and their vector representations x, y, the simi- larity between x and y is computed as k(x, y) = e−∥x−y∥2 2/σ, and this similarity score is used to measure the likelihood that x and y refer to the same entity.
+The new strategy works even if the EqualTo relation is not encoded in the input KG.
+AUC-PR is the most widely adopted evaluation metric for this task.
+5.2 Out-of-KG Applications Out-of-KG applications are those which break through the boundary of the input KG and scale to broader domains.
+We introduce three such applications as examples, including relation extraction, question answering, and recommender systems.
+We do not seek to provide systematic reviews of these tasks or introduce the state-of-the-arts.
+But instead we focus particularly on showing how KG embedding can be applied to these domains.
+And we hope they can provide new insights into future application of KG embedding.
+5.2.1 Relation Extraction Relation extraction aims to extract relational facts from plain text where entities have already been detected.
+For example, given a sentence “Alfred Hitchcock directed Psycho” with the entities h = AlfredHitchcock and t = Psycho detected, a relation extractor should predict the relation DirectorOf between these two entities.
+Relation extraction has long been a crucial task in natural language processing, and provides an effective means to enrich KGs.
+Much research has tried to leverage KGs for this task, but usually as distant supervision to automatically generate labeled data [9], [125], [126], [127].
+Such approaches are still text-based extractors, ignoring the capability of a KG itself to reason new facts.
+Recently, Weston et al.
+[20] proposed to combine TransE with a text-based extractor so as to better perform relation extraction.
+Speciﬁcally, in the training phase, they learned a text-based extractor from a text corpus and a TransE model from a KG aligned to that corpus.
+The text-based extractor scores the similarity between each relation r and its textual mention m, i.e., Stext(m, r).
+These scores can then be used to predict relations from their textual mentions, i.e., evidence
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 16 Training instances Test instances Textual mentions KG relations Fig.
+A matrix encoding text and KGs.
+The ﬁgure is adapted from [21].
+from the text corpus.
+Meanwhile, the TransE model scores the plausibility of each missing fact (h, r, t) in the KG, i.e., SKG(h, r, t).17 These scores can be used to predict relations from their interactions with entities in the KG, i.e., evidence from the KG.
+In the test phase, given two entities h, t and all relation mentions Mh,t associated with them, a prediction ˆr is ﬁrst made with the text-based extractor, and a composite score is then introduced for the candidate fact,18 i.e., Stext+KG(h, ˆr, t) = ∑ m∈Mh,t Stext(m, ˆr) + SKG(h, ˆr, t).
+This composite model favors predictions that agree with not only the textual mentions but also the KG.
+Experimental results further showed that incorporating the TransE model can successfully improve over traditional text-based extrac- tors.
+Similar improvements have also been observed after incorporating TransH [15] and TransR [16].
+[21] devised a different framework which performs relation extraction by jointly embedding plain text and KGs.
+In their work, text and KGs are represented in the same matrix.
+Each row of the matrix stands for a pair of entities, and each column a textual mention or a KG relation.
+If two entities co-occur with a mention in plain text or with a relation in KGs, the corresponding entry is set to one, and otherwise to zero.
+For training instances (entity pairs), one can observe both textual mentions and KG relations, with the latter as distant supervision.
+But for test instances, only textual mentions are available.
+Relation extraction then is to predict missing KG relations for test instances.
+7 gives a simple illustration of this scenario.
+Collaborative ﬁltering techniques are further employed for this task, which factor- ize the input matrix to learn vector embeddings for entity pairs, textual mentions, and KG relations.
+This framework also improves over traditional text-based extractors.
+[88] proposed a similar approach to relation extraction.
+But in their work, the ﬁrst group of columns in the matrix correspond to text features rather than textual mentions, and matrix completion techniques [128] are employed instead of matrix factorization ones.
+[93] later devised a tensor-based variant, which encodes plain text and KGs in a three-mode tensor and then factorizes the tensor by using the RESCAL model.
+5.2.2 Question Answering This article considers a speciﬁc question answering task, i.e., question answering over KGs.
+Given a question expressed 17.
+SKG(h, r, t) is a variant of the TransE score fr(h, t).
+If the prediction ˆr is NA, i.e., a marker indicating that there is no relation between h and t, SKG(h, ˆr, t) will not be introduced.
+in natural language, the task is to retrieve the correct answer supported by a triple or set of triples from a KG [11], [12].
+Here we show some examples of questions, answers, and supporting triple(s): • Who directed Psycho?
+– AlfredHitchcock (AlfredHitchcock, DirectorOf, Psycho) • Where was A.
+– Leytonstone (AlfredHitchcock, BornIn, Leytonstone) • What was the nationality of A.
+– England (AlfredHitchcock, BornIn, Leytonstone) (Leytonstone, LocatedIn, England) The use of KGs simpliﬁes question answering by organizing a great variety of answers in a structured format.
+However, it remains a challenging task because of the great variability of natural language and of the large scale of KGs.
+[11], [12] introduced an embedding-based framework for this task.
+The key idea of their approach is to learn low-dimensional vector embeddings of words and of KG constituents, so that representations of questions and of their corresponding answers are close to each other in the embedding space.
+Speciﬁcally, let q denote a question and a a candidate answer.
+A function S(q, a), based on vector embeddings, is designed to score the similarity between the question and the answer, i.e., S(q, a) = (Wϕ(q) )⊤(Wψ(a) ).
+Here W is a matrix containing embeddings of words, en- tities, and relations; ϕ(q) and ψ(a) are two sparse vectors, the former indicating occurrences of words in the question, and the latter occurrences of entities and relations in the an- swer.19 Wϕ(q) and Wψ(a) are vector representations of the question and answer respectively in the embedding space.
+Both are combinations of embeddings of their constituents, i.e., words, entities, and relations.
+S(·, ·) generates a high score if a is the correct answer to the question q, and a low score otherwise.
+Given a training set consisting of questions paired with their correct answers, the embeddings W can be learned by using typical pairwise ranking optimization, which enforces the score of a correct pair to be higher than that of any incorrect one.
+The training set can be created by crowdsourcing [129] or by automatically generalizing seed patterns over KGs [130].
+Once W is trained, at test time, for a given question q the answer is predicted as ˆa = argmaxa∈A(q)S(q, a), where A(q) is the candidate answer set.
+em- pirically demonstrated that this intuitive approach achieves promising results without using any lexicon, rules or addi- tional steps for part-of-speech tagging, syntactic or depen- dency parsing during training as most traditional question answering systems do.
+5.2.3 Recommender Systems Recommender systems provide advice to users about items they may wish to purchase or examine.
+Among different rec- ommendation strategies, collaborative ﬁltering techniques 19.
+The answer can be a single entity, a triple, a relation path, or even a subgraph [12].
+If, for example, it is a single entity, ψ(a) is a one-hot vector with 1 corresponding to the entity, and 0 elsewhere.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 17 which model the interaction between a user and an item as a product of their latent representations, have achieved signiﬁcant success [131].
+Such techniques, however, do not always work well, since user-item interactions can be very sparse.
+In this case, hybrid recommender systems, which combine user-item interactions and auxiliary information of users or items, can usually achieve better performance [132].
+[133] recently proposed a hybrid recommen- dation framework which leverages heterogeneous informa- tion in a KG to improve the quality of collaborative ﬁltering.
+Speciﬁcally, they used three types of information stored in the KG, including structural knowledge (triple facts), textual knowledge (e.g.
+the textual summary of a book or a movie), and visual knowledge (e.g.
+a book’s front cover or a movie’s poster image), to derive semantic representations for items.
+To model the structural knowledge, a typical KG embedding technique, i.e., TransR, is applied which learns a structural representation for each item.
+For the other two types of information, stacked de-noising auto-encoders and stacked convolutional auto-encoders are employed to extract items’ textual representations and visual representations, respec- tively.
+Then, to conduct collaborative ﬁltering, each user i is represented as a latent vector ui, and each item j a latent vector ej = sj + tj + vj + ηj, where sj, tj, and vj are the structural, textual, and visual representations associated to that item respectively, and ηj is an offset vector.
+The preference of user i for item j is then modeled as a product of the two latent vectors, i.e., u⊤ i ej.
+Ranking optimization over pair-wise preference is used to learn these latent vectors.
+Finally, at test time, given a target user i, item recommendation can be made according to the following ranking criterion: i : j1 ≻j2 ≻· · · ≻jn ⇔u⊤ i ej1 >u⊤ i ej2 >· · ·>u⊤ i ejn, where i : js ≻jt means that user i prefers item js over jt.
+Experimental results demonstrated the effectiveness of the three types of item representations learned from the KG in recommender systems.
+6 CONCLUDING REMARKS KG embedding, which aims to embed entities and relations into continuous vector spaces, has found important appli- cations in various entity-oriented tasks and quickly gained massive attention.
+This article provided a systematic review of currently available techniques, particularly based on the type of information used in KG embedding.
+State-of-the- art techniques which conduct embedding using only facts observed in a given KG were ﬁrst introduced.
+We described the overall framework, speciﬁc model design, typical train- ing procedures, as well as pros and cons of such techniques.
+After that, some more advanced techniques which perform KG embedding with other information besides facts were later discussed.
+We focused speciﬁcally on the incorporation of four types of additional information, i.e., entity types, relation paths, textual descriptions, and logical rules.
+The investigation on incorporating additional information has just started, and might receive increasing attention in the near future.
+Finally, this article explored the application of KG embedding.
+Two types of applications were introduced, i.e., in-KG applications conducted within the scope of the input KG and out-of-KG applications that scale to broader domains.
+We hope this brief exploration can provide new insights into future application of KG embedding.
+ACKNOWLEDGMENTS We would like to thank all the reviewers for their insightful and valuable suggestions, which signiﬁcantly improve the quality of this survey.
+This work is supported by the Nation- al Key Research and Development Program of China (grants No.
+2016QY03D0503 and 2016QY03D0505) and the National Natural Science Foundation of China (grants No.
+The ﬁrst author is supported by the Institute of Information Engineering, Chinese Academy of Sciences and the State Key Laboratory of Information Security, Chi- nese Academy of Sciences (grant No.
+Taylor, “Free- base: A collaboratively created graph database for structuring human knowledge,” in Proc.
+Auer et al., “DBpedia: A large-scale, multilingual knowledge base extracted from Wikipedia,” Semantic Web J., vol.
+Weikum, “YAGO: A core of semantic knowledge,” in Proc.
+on World Wide Web, 2007, pp.
+Mitchell, “Toward an architecture for never-ending language learning,” in Proc.
+Liang, “Semantic parsing on Freebase from question-answer pairs,” in Proc.
+Empirical Methods Natural Language Process., 2013, pp.
+Hakkani-T¨ur, and G.
+T¨ur, “Leveraging knowledge graphs for web-scale unsupervised semantic parsing,” in INTER- SPEECH, 2013, pp.
+Bontcheva, “Named entity disambigua- tion using linked data,” in Proc.
+9th Extended Semantic Web Conf., 2012.
+Zhu, “Entity disam- biguation with Freebase,” in Proc.
+Agent Technol., 2012, pp.
+Weld, “Knowledge-based weak supervision for information extraction of overlapping relations,” in Proc.
+Linguistics, 2011, pp.
+Mendes, “Improving efﬁciency and accuracy in multilingual entity extraction,” in Proc.
+Semantic Syst., 2013, pp.
+Usunier, “Open question answering with weakly supervised embedding models,” in Proc.
+Discovery Databases, 2014, pp.
+Weston, “Question answering with subgraph embeddings,” in Proc.
+Empirical Methods Natural Language Process., 2014, pp.
+Kriegel, “A three-way model for collective learning on multi-relational data,” in Proc.
+Yakhnenko, “Translating embeddings for modeling multi- relational data,” in Adv.
+Chen, “Knowledge graph embedding by translating on hyperplanes,” in Proc.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 18 [16] Y.
+Zhu, “Learning entity and relation embeddings for knowledge graph completion,” in Proc.
+Obozinski, “A latent factor model for highly multi-relational data,” in Adv.
+Bengio, “A semantic matching energy function for learning with multi-relational da- ta,” Mach.
+Ng, “Reasoning with neural tensor networks for knowledge base completion,” in Adv.
+Usunier, “Connecting language and knowledge bases with embedding models for rela- tion extraction,” in Proc.
+Empirical Methods Natural Language Process., 2013, pp.
+Marlin, “Relation extraction with matrix factorization and universal schemas,” in Proc.
+Linguistics: Human Language Technol., 2013, pp.
+Kriegel, “Factorizing YAGO: Scal- able machine learning for linked data,” in Proc.
+World Wide Web, 2012, pp.
+Guo, “Knowledge base completion using embeddings and rules,” in Proc.
+Tian, “Large-scale knowledge base completion: Inferring via grounding network sampling over selected instances,” in Proc.
+Guo, “Semantically smooth knowledge graph embedding,” in Proc.
+Linguistics 7th Int.
+Natural Language Process., 2015, pp.
+Sun, “Representation learning of knowl- edge graphs with hierarchical types,” in Proc.
+Liu, “Modeling relation paths for representation learning of knowledge bases,” in Proc.
+Empirical Methods Natural Language Process., 2015, pp.
+Liang, “Traversing knowledge graphs in vector space,” in Proc.
+Empirical Methods Natural Language Process., 2015, pp.
+Quirk, “Compo- sitional learning of embeddings for relation paths in knowledge base and text,” in Proc.
+Chen, “Knowledge graph and text jointly embedding,” in Proc.
+Empirical Methods Natural Language Process., 2014, pp.
+Chen, “Aligning knowledge and text embeddings by entity descriptions,” in Proc.
+Empirical Methods Natural Language Process., 2015, pp.
+Sun, “Representation learning of knowledge graphs with entity descriptions,” in Proc.
+Li, “Text-enhanced representation learning for knowledge graph,” in Proc.
+Guo, “Jointly embedding knowledge graphs and logical rules,” in Proc.
+Empirical Methods Natural Language Process., 2016, pp.
+Riedel, “Injecting logical back- ground knowledge into embeddings for relation extraction,” in Proc.
+Linguistics: Human Language Technol., 2015, pp.
+Gabrilovich, “A review of relational machine learning for knowledge graphs,” Proc.
+Cohen, “Relational retrieval using a combi- nation of path-constrained random walks,” Mach.
+Mitchell, “Efﬁcient and expressive knowledge base completion using subgraph feature extraction,” in Proc.
+Empirical Methods Natural Language Process., 2015, pp.
+Lin, “Knowledge base completion via coupled path ranking,” in Proc.
+Linguistics, 2016, pp.
+Domingos, “Markov logic networks,” Mach.
+Getoor, “A short introduction to probabilistic soft logic,” in Proc.
+NIPS Workshop Probab.
+Program.: Foundations Appl., 2012, pp.
+Cohen, “Using semantics and statistics to turn data into knowledge,” AI Mag., vol.
+Horn, “The Hadamard product,” in Proc.
+Plate, “Holographic reduced representations,” IEEE Trans.
+Zhao, “Learning to represent knowledge graphs with Gaussian embedding,” in Proc.
+Zhu, “TransG: A generative model for knowledge graph embedding,” in Proc.
+Linguistics, 2016, pp.
+Zweig, “Linguistic regularities in continuous space word representations,” in Proc.
+Linguistics: Human Language Technol., 2013, pp.
+Park, “A translation- based knowledge graph embedding preserving logical property of relations,” in Proc.
+Linguistics: Human Language Technol., 2016, pp.
+Johnson, “STransE: A novel embedding model of entities and relationships in knowl- edge bases,” in Proc.
+Linguistics: Human Language Technol., 2016, pp.
+Zhao, “Knowledge graph embedding via dynamic mapping matrix,” in Proc.
+Linguistics 7th Int.
+Natural Language Process., 2015, pp.
+Zhao, “Knowledge graph completion with adaptive sparse transfer matrix,” in Proc.
+Zheng, “Transition-based knowledge graph embedding with relational mapping proper- ties,” in Proc.
+28th Paciﬁc Asia Conf.
+Language, Inf., Comput., 2014, pp.
+Zhu, “From one point to a manifold: Knowledge graph embedding for precise link prediction,” in Proc.
+Zhu, “Knowledge graph embedding by ﬂexible translation,” in arXiv:1505.05253, 2015.
+Zhu, “TransA: An adaptive approach for knowledge graph embedding,” in arXiv:1509.05490, 2015.
+Bengio, “Joint learning of words and meaning representations for open-text semantic parsing,” in Proc.
+Bengio, “Learning structured embeddings of knowledge bases,” in Proc.
+Kullback, Information theory and statistics.
+Courier Corporation, 1997.
+Howard, “Probability product ker- nels,” J.
+Aldous, “Exchangeability and related topics,” in ´Ecole d’ ´Et´e de Probabilit´es de Saint-Flour, XIII-1983, 1985, pp.
+Jordan, “The nested Chinese restaurant process and Bayesian nonparametric inference of topic hierarchies,” J.
+Poggio, “Holographic embeddings of knowledge graphs,” in Proc.
+Hu, “Probabilistic reasoning via deep learning: Neural association models,” in arXiv:1603.07704, 2016.
+Usunier, “Effective blending of two and three-way interactions for modeling multi-relational
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 19 data,” in Proc.
+Discovery Databases, 2014, pp.
+Deng, “Embedding entities and relations for learning and inference in knowledge bases,” in Proc.
+Bouchard, “Complex embeddings for simple link prediction,” in Proc.
+Shimbo, “On the equivalence of holo- graphic and complex embeddings for link prediction,” in arX- iv:1702.05563, 2017.
+Yang, “Analogical inference for multi- relational embeddings,” in Proc.
+Zhang, “Knowledge vault: A web- scale approach to probabilistic knowledge fusion,” in Proc.
+20th ACM SIGKDD Int.
+Discovery Data Mining, 2014, pp.
+Bader, “Tensor decompositions and appli- cations,” SIAM Rev., vol.
+Salakhutdinov, “Improving neural networks by preventing co- adaptation of feature detectors,” in arXiv:1207.0580, 2012.
+Schmidt-Thieme, “Predicting RDF triples in incomplete knowledge bases with tensor factorization,” in Proc.
+Trouillon, “On approximate reason- ing capabilities of low-rank vector spaces,” in AAAI Spring Symp.
+Monro, “A stochastic approximation method,” Ann.
+Singer, “Adaptive subgradient method- s for online learning and stochastic optimization,” J.
+Precup, “Leverag- ing lexical resources for learning entity embeddings in multi- relational data,” in Proc.
+Tresp, “Type-constrained represen- tation learning in knowledge graphs,” in Proc.
+Semantic Web Conf., 2015, pp.
+Tresp, “Logistic tensor factorization for multi- relational data,” in Proc.
+ICML Workshop Structured Learn.: Infer- ring Graphs Structured Unstructured Inputs, 2013.
+Miettinen, “Boolean tensor factorizations,” in Proc.
+Miettinen, “Discovering facts with Boolean tensor Tucker decomposition,” in Proc.
+Chang, “Analysis of individual differences in multidimensional scaling via an n-way generalization of “Eckart- Young” decomposition,” Psychometrika, vol.
+Tucker, “Some mathematical notes on three-mode factor analysis,” Psychometrika, vol.
+Staab, “Triplerank: Ranking semantic web data by tensor decomposition,” in Proc.
+Semantic Web Conf., 2009, pp.
+Korhonen, “A tensor-based factorization model of semantic compositionality,” in Proc.
+Linguistics: Human Language Technol., 2013, pp.
+Meek, “Multi-relational latent semantic analysis,” in Proc.
+Empirical Methods Natural Lan- guage Process., 2013, pp.
+Lin, “Knowledge base completion via search-based question answering,” in Proc.
+World Wide Web, 2014, pp.
+Guo, “SSE: Seman- tically smooth embedding for knowledge graphs,” IEEE Trans.
+Chang, “Distant supervision for relation extraction with matrix comple- tion,” in Proc.
+Linguistics, 2014, pp.
+Rettinger, “Materi- alizing and querying learned knowledge,” in Proc.
+1st ESWC Workshop Inductive Reasoning Mach.
+Rettinger, and H.-P.
+Kriegel, “A scalable approach for statistical learning in semantic graphs,” Semantic Web, vol.
+Niyogi, “Laplacian eigenmaps and spectral techniques for embedding and clustering,” in Adv.
+Saul, “Nonlinear dimensionality reduction by locally linear embedding,” Science, vol.
+Meek, “Typed tensor decomposition of knowledge bases for relation extraction,” in Proc.
+Empirical Methods Natural Language Process., 2014, pp.
+Xing, “Entity hier- archy embedding,” in Proc.
+Linguistics 7th Int.
+Natural Language Process., 2015, pp.
+Werbos, “Backpropagation through time: What it does and how to do it,” Proc.
+Zhang, “Bipartite network projection and personal recommendation,” Phys.
+Usunier, “Composing re- lationships with translations,” in Proc.
+Empirical Methods Natural Language Process., 2015, pp.
+McCallum, “Compositional vector space models for knowledge base completion,” in Proc.
+Linguistics 7th Int.
+Natural Language Process., 2015, pp.
+McCallum, “Chains of reasoning over entities, relations, and text using recurrent neural networks,” in arXiv:1607.01426, 2016.
+Guo, “Context-dependent knowledge graph embedding,” in Proc.
+Empirical Methods Natural Language Process., 2015, pp.
+Dean, “Distributed representations of words and phrases and their compositionality,” in Adv.
+Liu, “Joint semantic relevance learning with text data and graph knowledge,” in Proc.
+3rd Workshop Continuous Vector Space Models Compositionality, 2015, pp.
+Zhu, “SSP: Semantic space projection for knowledge graph embedding with text descriptions,” in Proc.
+Grishman, “Distributed representation learning for knowledge graphs with entity de- scriptions,” Pattern Recognition Letters, to appear, 2017.
+Huang, “Knowledge graph representation with jointly structural and textual encoding,” in arXiv:1611.08661, 2016.
+Toivonen, “Discovery of frequent DATALOG patterns,” Data Mining knowl.
+Muggleton, “Inverse entailment and Progol,” New Generation Comput., vol.
+Suchanek, “AMIE: Association rule mining under incomplete evidence in ontological knowledge bases,” in Proc.
+World Wide Web, 2013, pp.
+[109] ——, “Fast rule mining in ontological knowledge bases with AMIE+,” VLDB J., vol.
+H´ajek, The metamathematics of fuzzy logic.
+Rockt¨aschel, and S.
+Riedel, “Lifted rule injection for relation embeddings,” in Proc.
+Conference Empirical Methods Natural Language Process., 2016, pp.
+Riedel, “Low- dimensional embeddings of logic,” in Proc.
+ACL Workshop Seman- tic Parsing, 2014, pp.
+Cohen, “Learning ﬁrst-order logic embed- dings via matrix factorization,” in Proc.
+Personal use is permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited.
+Content may change prior to final publication.
+Citation information: DOI 10.1109/TKDE.2017.2754499, IEEE Transactions on Knowledge and Data Engineering 20 [114] Y.
+Sun, “Knowledge representation learning with entities, attributes and relations,” in Proc.
+Sui, “Encoding temporal information for time-aware link prediction,” in Proc.
+Empirical Methods Natural Language Process., 2016, pp.
+Krompaß, “Predict- ing the co-evolution of event and knowledge graphs,” in Proc.
+Song, “Know-Evolve: Deep temporal reasoning for dynamic knowledge graphs,” in Proc.
+Lewis, “Multivariate point processes,” in Proc.
+6th Berkeley Symp., vol.
+zhu, “GAKE: Graph aware knowledge embedding,” in Proc.
+Skiena, “Deepwalk: Online learning of social representations,” in Proc.
+20th ACM SIGKDD Int.
+Discovery Data Mining, 2014, pp.
+Nickel, “Link prediction in multi-relational graphs using additive models,” in Proc.
+Meet Recommender Syst.
+Tresp, “Reducing the rank in relational factorization models by including observable patterns,” in Adv.
+Paulheim, “Knowledge graph reﬁnement: A survey of ap- proaches and evaluation methods,” Semantic Web, vol.
+Domingos, “Entity resolution with Markov logic,” in Proc.
+Jurafsky, “Distant supervision for relation extraction without labeled data,” in Proc.
+Meeting ACL 4th Int.
+Natural Language Process.
+McCallum, “Modeling relations and their mentions without labeled text,” Mach.
+Discovery Databases, pp.
+Wang, “Relation extraction with multi-instance multi-label convolutional neural networks,” in Proc.
+Linguistics, 2016, pp.
+Recht, “Exact matrix completion via convex optimization,” Foundations Comput.
+Liang, “Semantic parsing on Freebase from question-answer pairs,” in Proc.
+Empirical Methods Natural Language Process., 2013, pp.
+Etzioni, “Paraphrase-driven learning for open question answering,” in Proc.
+Linguistics, 2013, pp.
+Volinsky, “Matrix factorization tech- niques for recommender systems,” Computer, vol.
+Han, “Personalized entity recommendation: A heteroge- neous information network approach,” in Proc.
+Web Search Data Mining, 2014, pp.
+Ma, “Collaborative knowledge base embedding for recommender systems,” in Proc.
+22nd ACM SIGKDD Int.
+Discovery Data Mining, 2016, pp.
+Quan Wang received her PhD degree in prob- ability and statistics from Peking University, in 2013.
+She is currently an associate professor at the Institute of Information Engineering, Chinese Academy of Sciences.
+Her research interests include information retrieval, machine learning, and natural language processing.
+Zhendong Mao received his PhD degree in computer application technology from the Insti- tute of Computing Technology, Chinese Acade- my of Sciences, in 2014.
+He is currently an as- sistant professor at the Institute of Information Engineering, Chinese Academy of Sciences.
+His research interests are in the ﬁelds of comput- er vision, machine learning, and artiﬁcial intel- ligence, in particular, on feature extraction and knowledge representation.
+Bin Wang received his PhD degree in computer science from the Institute of Computing Technol- ogy, Chinese Academy of Sciences.
+He is cur- rently a professor at the Institute of Information Engineering, Chinese Academy of Sciences.
+His research interests include information retrieval and natural language processing.
+Li Guo is a professor at the Institute of Infor- mation Engineering, Chinese Academy of Sci- ences.
+She is also the chairman in the Intelligent Information Processing Research Center, Insti- tute of Information Engineering, Chinese Acade- my of Sciences.
+Her research interests include data stream management systems and informa- tion security.

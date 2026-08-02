@@ -1,0 +1,447 @@
+{
+  "at": 1785487399.6500356,
+  "machine": {
+    "cpu_cores": 32,
+    "ram_gb": 33.4,
+    "disk_free_gb": 61.5,
+    "platform": "Windows",
+    "machine": "AMD64",
+    "python": "3.13.12",
+    "has_cuda": true,
+    "cameras": -1,
+    "tier": "workstation",
+    "notes": [],
+    "os_release": "11"
+  },
+  "senses": {
+    "senses_found": [
+      {
+        "modality": "unknown",
+        "label": "40LGD5KPRO(NVIDIA High Definition Audio)",
+        "index": -1,
+        "os_class": "AudioEndpoint",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "pnp_endpoint"
+          ],
+          "found_by_one_source": true
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "스피커(Realtek USB Audio)",
+        "index": -1,
+        "os_class": "AudioEndpoint",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "output",
+          "sources": [
+            "pnp_endpoint",
+            "pnp_entity"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "Realtek Digital Output(Realtek USB Audio)",
+        "index": -1,
+        "os_class": "AudioEndpoint",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "output",
+          "sources": [
+            "pnp_endpoint",
+            "pnp_entity"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "vision",
+        "label": "HD WEB CAMERA",
+        "index": -1,
+        "os_class": "Camera",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "sources": [
+            "pnp_endpoint",
+            "pnp_entity"
+          ]
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "스피커(Steam Streaming Speakers)",
+        "index": -1,
+        "os_class": "AudioEndpoint",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "output",
+          "sources": [
+            "pnp_endpoint",
+            "pnp_entity"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "hearing",
+        "label": "마이크(USB Audio)",
+        "index": -1,
+        "os_class": "AudioEndpoint",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "input",
+          "sources": [
+            "pnp_endpoint",
+            "pnp_entity"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "Microsoft Streaming Service Proxy",
+        "index": -1,
+        "os_class": "MEDIA",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "software-node",
+          "sources": [
+            "pnp_entity"
+          ],
+          "note": "audio software plumbing, not a physical sense"
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "AMD High Definition Audio Device",
+        "index": -1,
+        "os_class": "MEDIA/Sound",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "pnp_entity",
+            "sound_device"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "USB Audio",
+        "index": -1,
+        "os_class": "MEDIA",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "pnp_entity"
+          ],
+          "found_by_one_source": true
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "High Definition Audio 컨트롤러",
+        "index": -1,
+        "os_class": "System",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "software-node",
+          "sources": [
+            "pnp_entity"
+          ],
+          "note": "audio software plumbing, not a physical sense"
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "Realtek Audio Effects Component (USB)",
+        "index": -1,
+        "os_class": "AudioProcessingObject",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "software-node",
+          "sources": [
+            "pnp_entity"
+          ],
+          "note": "audio software plumbing, not a physical sense"
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "Muzen Wild Mini",
+        "index": -1,
+        "os_class": "MEDIA",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "pnp_entity"
+          ],
+          "found_by_one_source": true
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "Steam Streaming Speakers",
+        "index": -1,
+        "os_class": "MEDIA/Sound",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "output",
+          "sources": [
+            "pnp_entity",
+            "sound_device"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "NVIDIA Virtual Audio Device (Wave Extensible) (WDM)",
+        "index": -1,
+        "os_class": "MEDIA/Sound",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "pnp_entity",
+            "sound_device"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "Bose Mini SoundLink",
+        "index": -1,
+        "os_class": "MEDIA",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "output",
+          "sources": [
+            "pnp_entity"
+          ],
+          "found_by_one_source": true
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "Realtek USB Audio",
+        "index": -1,
+        "os_class": "MEDIA/Sound",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "pnp_entity",
+            "sound_device"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "Realtek Audio Universal Service",
+        "index": -1,
+        "os_class": "SoftwareComponent",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "software-node",
+          "sources": [
+            "pnp_entity"
+          ],
+          "note": "audio software plumbing, not a physical sense"
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "NVIDIA High Definition Audio",
+        "index": -1,
+        "os_class": "MEDIA/Sound",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "pnp_entity",
+            "sound_device"
+          ],
+          "found_by_one_source": false
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "MediaTek Bluetooth Audio Device",
+        "index": -1,
+        "os_class": "MEDIA",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "pnp_entity"
+          ],
+          "found_by_one_source": true
+        }
+      },
+      {
+        "modality": "unknown",
+        "label": "USB 오디오 장치",
+        "index": -1,
+        "os_class": "Sound",
+        "reachable": null,
+        "live": null,
+        "detail": {
+          "endpoint": "audio-undetermined",
+          "sources": [
+            "sound_device"
+          ],
+          "found_by_one_source": true
+        }
+      }
+    ],
+    "vision": {
+      "found": 1,
+      "live": 0,
+      "geometry": "none probed"
+    },
+    "hearing": {
+      "found": 1,
+      "usable": false,
+      "note": "an ear can be found before ATANOR can hear -- no audio encoder is built"
+    },
+    "boundary": "discovery enumerates; probing opens with the user's grant; a refused open is recorded as unreachable and never bypassed"
+  },
+  "disk": {
+    "census": {
+      "total_bytes": 112902815999,
+      "rebuildable_bytes": 106379006761,
+      "irreplaceable_bytes": 98349784,
+      "unclaimed_bytes": 6425459454,
+      "unclaimed_top": [
+        "data/surface_brain",
+        "data/cloud_brain",
+        "data/eval",
+        "data/temporal_reasoning",
+        "data/benchmarks",
+        "data/q_cortex",
+        "data/external_benchmarks",
+        "data/e5_depth_seal_002",
+        "data/e5_depth_seal_001",
+        "data/swe_eval",
+        "data/atanor_browser",
+        "data/e4_depth_seal_001"
+      ],
+      "by_kind": {
+        "vault": {
+          "bytes": 0,
+          "dirs": 0
+        },
+        "archive": {
+          "bytes": 28982119212,
+          "dirs": 3
+        },
+        "derived": {
+          "bytes": 77396887549,
+          "dirs": 2
+        },
+        "ledger": {
+          "bytes": 78745311,
+          "dirs": 3
+        },
+        "candidate": {
+          "bytes": 0,
+          "dirs": 0
+        },
+        "live": {
+          "bytes": 19604473,
+          "dirs": 2
+        },
+        "scratch": {
+          "bytes": 0,
+          "dirs": 0
+        }
+      },
+      "rooms_declared": 13
+    },
+    "free_by_drive_gb": {
+      "C": 61.5,
+      "D": 1118.9
+    }
+  },
+  "user_context": {
+    "home_present": true,
+    "standard_folders": {
+      "Documents": {
+        "exists": true,
+        "approx_gb": 0.08,
+        "sampled_files": 100
+      },
+      "Pictures": {
+        "exists": true,
+        "approx_gb": 0.29,
+        "sampled_files": 714
+      },
+      "Videos": {
+        "exists": true,
+        "approx_gb": 0.02,
+        "sampled_files": 3
+      },
+      "Downloads": {
+        "exists": true,
+        "approx_gb": 0.16,
+        "sampled_files": 502
+      },
+      "Music": {
+        "exists": true,
+        "approx_gb": 0.02,
+        "sampled_files": 14
+      },
+      "Desktop": {
+        "exists": true,
+        "approx_gb": 1.55,
+        "sampled_files": 67
+      }
+    },
+    "note": "presence and size only; no user file content is read"
+  },
+  "decisions": {
+    "perception": "gpu encoder",
+    "perception_because": "has_cuda=True",
+    "vision_geometry": "monocular",
+    "vision_because": "1 camera(s) discovered",
+    "evidence": "full cascade table -> local -> web",
+    "load_triple_store": true,
+    "evidence_because": "tier=workstation, biggest free drive=1118.9 GB",
+    "fetch_host_slots": 64,
+    "fetch_because": "32 cores, 33.4 GB ram",
+    "workspace_drive": "D: (1118.9 GB free)",
+    "workspace_because": "roomiest drive, to keep the system disk clear",
+    "hearing": "1 microphone(s) found, unusable until an audio encoder exists"
+  },
+  "boundary": "onboarding observes and configures itself; it reads folder presence and size, never user file contents; sensory probing is opt-in and a refused device is recorded, never bypassed"
+}

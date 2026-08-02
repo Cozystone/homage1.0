@@ -1,0 +1,148 @@
+{
+  "holdout_episodes": [
+    "ep050",
+    "ep100",
+    "ep112"
+  ],
+  "retrain_episodes": [
+    "ep441",
+    "ep443",
+    "ep444",
+    "ep446"
+  ],
+  "n_anchor": 10,
+  "encoders": {
+    "current (triplet, pool=1)": {
+      "checkpoint": "D:\\carla\\depth_model\\signature_net.pt",
+      "dim": 32,
+      "pool": 1,
+      "patch": 24,
+      "classes": [
+        "building",
+        "road",
+        "sidewalk",
+        "vegetation"
+      ],
+      "participation_ratio_on_holdout": 2.4802799948067764,
+      "n_patches": 4075,
+      "by_alpha": {
+        "0.05": {
+          "q_hat": 0.022313416004180908,
+          "cosine_cut": 0.9776865839958191,
+          "coverage": 0.3494094488188976,
+          "precision": 0.8338028169014085,
+          "false_accept_given_wrong": 0.12633832976445397,
+          "n_wrong_calibration": 221,
+          "promise_kept": false,
+          "exchangeable_control": {
+            "coverage": 0.232408325074331,
+            "precision": 0.9019189765458422,
+            "false_accept_given_wrong": 0.054696789536266346,
+            "promise_kept": false
+          }
+        },
+        "0.10": {
+          "q_hat": 0.04208099842071533,
+          "cosine_cut": 0.9579190015792847,
+          "coverage": 0.45570866141732286,
+          "precision": 0.7408207343412527,
+          "false_accept_given_wrong": 0.2569593147751606,
+          "n_wrong_calibration": 221,
+          "promise_kept": false,
+          "exchangeable_control": {
+            "coverage": 0.30178394449950446,
+            "precision": 0.8735632183908046,
+            "false_accept_given_wrong": 0.09155766944114149,
+            "promise_kept": true
+          }
+        },
+        "0.20": {
+          "q_hat": 0.0701131820678711,
+          "cosine_cut": 0.9298868179321289,
+          "coverage": 0.5964566929133859,
+          "precision": 0.6617161716171618,
+          "false_accept_given_wrong": 0.43897216274089934,
+          "n_wrong_calibration": 221,
+          "promise_kept": false,
+          "exchangeable_control": {
+            "coverage": 0.4182358771060456,
+            "precision": 0.8056872037914692,
+            "false_accept_given_wrong": 0.19500594530321047,
+            "promise_kept": true
+          }
+        }
+      },
+      "hardcoded_0.78": {
+        "coverage": 0.8848425196850394,
+        "precision": 0.5795328142380423
+      }
+    },
+    "retrained (InfoNCE, pool=2)": {
+      "checkpoint": "D:\\carla\\depth_model\\signature_net_v2.pt",
+      "dim": 32,
+      "pool": 2,
+      "patch": 20,
+      "classes": [
+        "building",
+        "road",
+        "sidewalk",
+        "vegetation"
+      ],
+      "participation_ratio_on_holdout": 4.141590564357398,
+      "n_patches": 4420,
+      "by_alpha": {
+        "0.05": {
+          "q_hat": 0.017644882202148438,
+          "cosine_cut": 0.9823551177978516,
+          "coverage": 0.11666666666666667,
+          "precision": 0.9444444444444444,
+          "false_accept_given_wrong": 0.01383399209486166,
+          "n_wrong_calibration": 240,
+          "promise_kept": true,
+          "exchangeable_control": {
+            "coverage": 0.16575342465753426,
+            "precision": 0.862258953168044,
+            "false_accept_given_wrong": 0.046511627906976744,
+            "promise_kept": true
+          }
+        },
+        "0.10": {
+          "q_hat": 0.020390331745147705,
+          "cosine_cut": 0.9796096682548523,
+          "coverage": 0.13703703703703704,
+          "precision": 0.9121621621621622,
+          "false_accept_given_wrong": 0.025691699604743084,
+          "n_wrong_calibration": 240,
+          "promise_kept": true,
+          "exchangeable_control": {
+            "coverage": 0.25205479452054796,
+            "precision": 0.802536231884058,
+            "false_accept_given_wrong": 0.1013953488372093,
+            "promise_kept": false
+          }
+        },
+        "0.20": {
+          "q_hat": 0.03214824199676514,
+          "cosine_cut": 0.9678517580032349,
+          "coverage": 0.225,
+          "precision": 0.7242798353909465,
+          "false_accept_given_wrong": 0.1324110671936759,
+          "n_wrong_calibration": 240,
+          "promise_kept": true,
+          "exchangeable_control": {
+            "coverage": 0.36575342465753424,
+            "precision": 0.7215980024968789,
+            "false_accept_given_wrong": 0.20744186046511628,
+            "promise_kept": false
+          }
+        }
+      },
+      "hardcoded_0.78": {
+        "coverage": 0.787962962962963,
+        "precision": 0.5170387779083431
+      }
+    }
+  },
+  "note": "cosines shrink as a space widens, so a threshold calibrated against a 6-dimensional space is a stricter rule in a 19-dimensional one. Comparison is at matched certified alpha, and each encoder is fed its own declared patch radius.",
+  "supersedes": "eff dims 19.44 and naming precision 1.000 were measured on patches from the retrain's OWN episodes, which is in-distribution; the holdout figures here replace them."
+}

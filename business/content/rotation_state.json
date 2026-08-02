@@ -1,0 +1,8 @@
+{
+  "bank": "business/content/x_launch_bank.md",
+  "next_index": 0,
+  "posted": [
+    {"angle": "big-honest-bet (EN)", "url": "https://x.com/ATANOR_AI/status/2075023575057371151", "ts": "2026-07-09T10:05", "note": "first-ever post, manual publish, text-only (image upload blocked by chrome MCP allowlist)"}
+  ],
+  "note": "크론이 next_index로 다음 포스트를 선택→준비→알림. 발행 승인 시 posted에 {index,url,ts} 추가하고 next_index++. next_index=0=no-LLM(EN), big-bet은 이미 발행됨."
+}

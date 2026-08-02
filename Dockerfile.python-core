@@ -1,0 +1,41 @@
+# syntax=docker/dockerfile:1.7
+
+FROM python:3.11-slim AS runtime
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app/apps/api:/app/packages/datagate:/app/packages/guard:/app/packages/knowledge_bakery:/app/packages/model:/app/packages/neuro_efficiency:/app/packages/ontology_forge:/app/packages/rag_engine:/app/packages/trainer \
+    HOMAGE_GATEWAY_API=http://0.0.0.0:8500 \
+    HOMAGE_LOCAL_PAYLOAD_ENDPOINT=http://0.0.0.0:8500 \
+    HOMAGE_CONTAINER_STATELESS=1
+
+WORKDIR /app
+
+RUN useradd --create-home --shell /usr/sbin/nologin homage \
+  && mkdir -p /data/memory /data/raw /data/cleaned /data/ontology \
+  && chown -R homage:homage /data /app
+
+COPY apps/api/requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+  && pip install --no-cache-dir -r /tmp/requirements.txt
+
+COPY apps/api /app/apps/api
+COPY packages/datagate /app/packages/datagate
+COPY packages/guard /app/packages/guard
+COPY packages/knowledge_bakery /app/packages/knowledge_bakery
+COPY packages/model /app/packages/model
+COPY packages/neuro_efficiency /app/packages/neuro_efficiency
+COPY packages/ontology_forge /app/packages/ontology_forge
+COPY packages/rag_engine /app/packages/rag_engine
+COPY packages/trainer /app/packages/trainer
+
+RUN chown -R homage:homage /app
+
+USER homage
+VOLUME ["/data"]
+EXPOSE 8500
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8500/api/pipeline/status', timeout=3).read()" || exit 1
+
+CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8500", "--app-dir", "apps/api"]

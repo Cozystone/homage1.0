@@ -1,0 +1,2 @@
+{"aliases":{"en":[{"language":"en","value":"located country"},{"language":"en","value":"sovereign state"}]},"datatype":"wikibase-item","id":"P17","labels":{"en":{"language":"en","value":"country"}},"lastrevid":2300000017,"type":"property"}
+{"aliases":{"en":[{"language":"en","value":"social media hashtag"}]},"datatype":"string","id":"P2572","labels":{"en":{"language":"en","value":"hashtag"}},"lastrevid":2300002572,"type":"property"}

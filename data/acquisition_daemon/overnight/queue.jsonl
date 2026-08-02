@@ -1,0 +1,167 @@
+{
+  "cloud_candidate_09ada72d8fafb79e": {
+    "confidence": 0.7,
+    "consensus_domains": 3,
+    "domains": [
+      "definitions.net",
+      "en.wikipedia.org",
+      "ultimatepopculture.fandom.com"
+    ],
+    "fact": {
+      "object": "recorded images",
+      "predicate": "used_for",
+      "subject": "footage"
+    },
+    "item_id": "cloud_candidate_09ada72d8fafb79e",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://www.definitions.net/definition/footage",
+      "https://en.wikipedia.org/wiki/Footage",
+      "https://ultimatepopculture.fandom.com/wiki/Footage"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: footage used_for recorded images. Corroborated by 3 distinct domains (definitions.net, en.wikipedia.org, ultimatepopculture.fandom.com).",
+    "title": "footage used for = recorded images",
+    "urls": [
+      "https://www.definitions.net/definition/footage",
+      "https://en.wikipedia.org/wiki/Footage",
+      "https://ultimatepopculture.fandom.com/wiki/Footage"
+    ]
+  },
+  "cloud_candidate_2cfd3f799c38d60b": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wikipedia.org",
+      "scandict.com"
+    ],
+    "fact": {
+      "object": "construction",
+      "predicate": "used_for",
+      "subject": "girder"
+    },
+    "item_id": "cloud_candidate_2cfd3f799c38d60b",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wikipedia.org/wiki/Girder",
+      "https://scandict.com/ko/dictionary/girder-JO9y"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: girder used_for construction. Corroborated by 2 distinct domains (en.wikipedia.org, scandict.com).",
+    "title": "girder used for = construction",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Girder",
+      "https://scandict.com/ko/dictionary/girder-JO9y"
+    ]
+  },
+  "cloud_candidate_5dd899d32eefe3ac": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "sentence.yourdictionary.com",
+      "yourdictionary.com"
+    ],
+    "fact": {
+      "object": "water repellent canvas",
+      "predicate": "made_of",
+      "subject": "repellent"
+    },
+    "item_id": "cloud_candidate_5dd899d32eefe3ac",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://sentence.yourdictionary.com/repellent",
+      "https://www.yourdictionary.com/repellent"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: repellent made_of water repellent canvas. Corroborated by 2 distinct domains (sentence.yourdictionary.com, yourdictionary.com).",
+    "title": "repellent made of = water repellent canvas",
+    "urls": [
+      "https://sentence.yourdictionary.com/repellent",
+      "https://www.yourdictionary.com/repellent"
+    ]
+  },
+  "cloud_candidate_97183d850b6e980a": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "collinsdictionary.com",
+      "en.wikipedia.org"
+    ],
+    "fact": {
+      "object": "horn",
+      "predicate": "made_of",
+      "subject": "inkhorn"
+    },
+    "item_id": "cloud_candidate_97183d850b6e980a",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://www.collinsdictionary.com/dictionary/english/inkhorn",
+      "https://en.wikipedia.org/wiki/Inkhorn_term"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: inkhorn made_of horn. Corroborated by 2 distinct domains (collinsdictionary.com, en.wikipedia.org).",
+    "title": "inkhorn made of = horn",
+    "urls": [
+      "https://www.collinsdictionary.com/dictionary/english/inkhorn",
+      "https://en.wikipedia.org/wiki/Inkhorn_term"
+    ]
+  },
+  "cloud_candidate_dbe8a42a3f1fe481": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "hprubberstamp.com",
+      "rubberstampsrus.com"
+    ],
+    "fact": {
+      "object": "aircraft grade aluminum alloys",
+      "predicate": "made_of",
+      "subject": "coder"
+    },
+    "item_id": "cloud_candidate_dbe8a42a3f1fe481",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://www.hprubberstamp.com/category/coders-and-ribtype-hand-speed-rollers/",
+      "https://www.rubberstampsrus.com/category/coders-and-ribtype-hand-speed-rollers/"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: coder made_of aircraft grade aluminum alloys. Corroborated by 2 distinct domains (hprubberstamp.com, rubberstampsrus.com).",
+    "title": "coder made of = aircraft grade aluminum alloys",
+    "urls": [
+      "https://www.hprubberstamp.com/category/coders-and-ribtype-hand-speed-rollers/",
+      "https://www.rubberstampsrus.com/category/coders-and-ribtype-hand-speed-rollers/"
+    ]
+  },
+  "cloud_candidate_f70ce3d450c6b434": {
+    "confidence": 0.6,
+    "consensus_domains": 2,
+    "domains": [
+      "en.wikipedia.org",
+      "handwiki.org"
+    ],
+    "fact": {
+      "object": "military parlance",
+      "predicate": "used_for",
+      "subject": "latrine"
+    },
+    "item_id": "cloud_candidate_f70ce3d450c6b434",
+    "item_type": "cloud_candidate",
+    "risk_level": "low",
+    "source_refs": [
+      "https://en.wikipedia.org/wiki/Latrine",
+      "https://handwiki.org/wiki/Engineering:Latrine"
+    ],
+    "status": "pending",
+    "summary": "Web-mined relational fact reaching cross-domain consensus: latrine used_for military parlance. Corroborated by 2 distinct domains (en.wikipedia.org, handwiki.org).",
+    "title": "latrine used for = military parlance",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Latrine",
+      "https://handwiki.org/wiki/Engineering:Latrine"
+    ]
+  }
+}

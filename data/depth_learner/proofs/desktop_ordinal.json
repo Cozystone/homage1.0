@@ -1,0 +1,17 @@
+{
+  "label_agreement_from_motion": 0.7388,
+  "layouts": 16,
+  "nudges": 172,
+  "trained_on_layouts": {
+    "accuracy": 0.4648,
+    "pairs": 71
+  },
+  "held_out_layouts": {
+    "accuracy": 0.5556,
+    "pairs": 27,
+    "p_vs_chance": 0.7011080384254456
+  },
+  "window_identities": 5,
+  "ground_truth_used_for": "evaluation only \u2014 Z-order never entered the loss",
+  "caveat": "only 5 window identities were open, so held-out LAYOUTS are new but the windows themselves are not"
+}

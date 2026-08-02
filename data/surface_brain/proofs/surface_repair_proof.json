@@ -1,0 +1,86 @@
+{
+  "result": "PASS",
+  "proved_at": "2026-06-15T22:42:25Z",
+  "scenarios": {
+    "cloud_brain_leakage": {
+      "original_answer": "Cloud Brain 문맥을 붙이면 쿠버네티스는 컨테이너를 관리하는 시스템이라고 설명할 수 있습니다.",
+      "repaired_answer": "관련 공개 지식을 참고하면 쿠버네티스는 컨테이너를 관리하는 시스템이라고 설명할 수 있습니다.",
+      "applied_rules": [
+        "replace_cloud_brain_user_facing",
+        "soften_attach_language"
+      ],
+      "moved_to_trace": [
+        {
+          "text": "Cloud Brain 문맥",
+          "reason": "replace_cloud_brain_user_facing",
+          "action": "replace"
+        },
+        {
+          "text": "붙이면",
+          "reason": "soften_attach_language",
+          "action": "replace"
+        }
+      ],
+      "changed": true,
+      "warnings": []
+    },
+    "q_cortex_leakage": {
+      "original_answer": "Q-Cortex objective가 이 construction을 선택했기 때문에 쉽게 말하면으로 시작합니다.",
+      "repaired_answer": "확인된 근거 안에서 답변하면, 현재 정보만으로는 단정하기 어렵습니다. 관련 공개 지식과 근거를 더 확인하면 더 정확하게 답할 수 있습니다.",
+      "applied_rules": [
+        "remove_q_cortex_leakage"
+      ],
+      "moved_to_trace": [
+        {
+          "text": "Q-Cortex objective가 이 construction을 선택했기 때문에 쉽게 말하면으로 시작합니다.",
+          "reason": "remove_q_cortex_leakage",
+          "action": "move_to_trace"
+        }
+      ],
+      "changed": true,
+      "warnings": [
+        "answer_rebuilt_after_internal_route_removal"
+      ]
+    },
+    "source_hash_leakage": {
+      "original_answer": "source_hash abc123에 따르면 쿠버네티스는 컨테이너 관리 시스템입니다.",
+      "repaired_answer": "쿠버네티스는 컨테이너 관리 시스템입니다.",
+      "applied_rules": [
+        "remove_source_hash_leakage"
+      ],
+      "moved_to_trace": [
+        {
+          "text": "source_hash abc123에 따르면 쿠버네티스는 컨테이너 관리 시스템입니다.",
+          "reason": "remove_source_hash_leakage",
+          "action": "move_to_trace"
+        }
+      ],
+      "changed": true,
+      "warnings": []
+    }
+  },
+  "repair_comparison": {
+    "run_id": "aqrepair_ab7e6283022ed085",
+    "trace_hygiene_before": 0.2875,
+    "trace_hygiene_after": 1.0,
+    "trace_hygiene_delta": 0.7125,
+    "overall_delta": 0.1068,
+    "repairs_applied": 6,
+    "remaining_leakages": 0,
+    "json_path": "data\\answer_quality\\repair_comparisons\\repair_comparison_aqrepair_ab7e6283022ed085.json",
+    "markdown_path": "data\\answer_quality\\repair_comparisons\\repair_comparison_aqrepair_ab7e6283022ed085.md"
+  },
+  "claims": [
+    "ATANOR can detect and repair internal trace leakage in default answers.",
+    "Repair rules can move internal details to trace instead of deleting useful answer content.",
+    "Answer Quality Lab can compare before/after repair quality.",
+    "Repair candidates are reviewable."
+  ],
+  "does_not_claim": [
+    "GPT-level answer quality",
+    "perfect natural language generation",
+    "perfect factuality evaluation",
+    "autonomous safe self-improvement",
+    "external LLM judging"
+  ]
+}

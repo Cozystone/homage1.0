@@ -1,0 +1,468 @@
+{
+  "schema": "atanor.baseline-suite-catalog.v1",
+  "catalog_id": "baseline_suite_v1",
+  "description": "Bounded G0 integrity smoke recipes. This catalog measures reproducible command execution only and makes no external capability claim.",
+  "profiles": {
+    "smoke": {
+      "max_total_seconds": 120,
+      "env_allowlist": [
+        "ATANOR_DISABLE_PACK",
+        "ATANOR_NETWORK_DISABLED",
+        "PYTHONHASHSEED",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD"
+      ],
+      "environment": {
+        "ATANOR_DISABLE_PACK": "1",
+        "ATANOR_NETWORK_DISABLED": "1",
+        "PYTHONHASHSEED": "0",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+      },
+      "recipes": [
+        {
+          "id": "g0_fail_closed_integrity",
+          "description": "Exercise bounded fail-closed moral, subjective, autonomy, and evaluator-integrity regressions.",
+          "network_required": false,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/graph_scale/tests/test_collective_improve.py",
+            "packages/subjective/tests/test_felt_judgment.py",
+            "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+            "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+            "packages/graph_scale/tests/test_epistemic_shield.py",
+            "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+            "packages/autonomy_envelope/tests/test_envelope_integration.py",
+            "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+            "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+            "packages/autonomy_envelope/tests/test_killswitch.py",
+            "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+            "packages/autonomy_envelope/tests/test_whitelist_default_deny.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "timeout_seconds": 20,
+          "repeat": 2,
+          "suite_paths": [
+            "packages/graph_scale/tests/test_collective_improve.py",
+            "packages/subjective/tests/test_felt_judgment.py",
+            "packages/autonomy_kernel/tests/test_moltbook_autopilot.py",
+            "packages/autonomy_kernel/tests/test_fractal_reasoner.py",
+            "packages/graph_scale/tests/test_epistemic_shield.py",
+            "packages/autonomy_envelope/tests/test_audit_ledger_tamper.py",
+            "packages/autonomy_envelope/tests/test_envelope_integration.py",
+            "packages/autonomy_envelope/tests/test_evaluation_trust.py",
+            "packages/autonomy_envelope/tests/test_frozen_oracle_immutable.py",
+            "packages/autonomy_envelope/tests/test_killswitch.py",
+            "packages/autonomy_envelope/tests/test_promotion_unsigned_refused.py",
+            "packages/autonomy_envelope/tests/test_whitelist_default_deny.py"
+          ],
+          "dataset_paths": [],
+          "artifact_paths": [
+            "packages/graph_scale/collective_improve.py",
+            "packages/graph_scale/epistemic_shield.py",
+            "packages/subjective/felt_judgment.py",
+            "packages/autonomy_kernel/moltbook_autopilot.py",
+            "packages/autonomy_kernel/fractal_reasoner.py",
+            "packages/autonomy_envelope/__init__.py",
+            "packages/autonomy_envelope/audit_ledger.py",
+            "packages/autonomy_envelope/constants.py",
+            "packages/autonomy_envelope/envelope.py",
+            "packages/autonomy_envelope/evaluation_trust.py",
+            "packages/autonomy_envelope/interface.py",
+            "packages/autonomy_envelope/killswitch.py",
+            "packages/autonomy_envelope/operator_trust.py",
+            "packages/autonomy_envelope/promotion_queue.py",
+            "packages/autonomy_envelope/whitelist.py"
+          ],
+          "mutation_sensitive_paths": [
+            "data/eval",
+            "reports/benchmarks"
+          ],
+          "report_paths": []
+        },
+        {
+          "id": "g0_architecture_registry",
+          "description": "Verify the V0 organ census and source-bound critical runtime graph without inferring activation, authority, or capability.",
+          "network_required": false,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/architecture_registry/tests/test_registry.py",
+            "packages/architecture_registry/tests/test_static_graph.py",
+            "packages/architecture_registry/tests/test_runtime_graph.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "timeout_seconds": 10,
+          "repeat": 2,
+          "suite_paths": [
+            "packages/architecture_registry/tests/test_registry.py",
+            "packages/architecture_registry/tests/test_static_graph.py",
+            "packages/architecture_registry/tests/test_runtime_graph.py"
+          ],
+          "dataset_paths": [
+            "data/architecture/catalog/organ_registry_v1.json",
+            "data/architecture/catalog/runtime_edges_v1.json"
+          ],
+          "artifact_paths": [
+            "packages/architecture_registry/registry.py",
+            "packages/architecture_registry/static_graph.py",
+            "packages/architecture_registry/runtime_graph.py",
+            "packages/autonomy_envelope/envelope.py",
+            "packages/autonomy_envelope/operator_trust.py",
+            "packages/autonomy_envelope/promotion_queue.py",
+            "packages/autonomy_kernel/intrinsic_drive.py",
+            "packages/autonomy_kernel/moltbook_autopilot.py",
+            "packages/continuous_self/loop.py",
+            "packages/fusion_loop/envelope_adapter.py",
+            "packages/fusion_loop/loop.py",
+            "packages/fusion_loop/unsupervised.py",
+            "packages/reasoning_vm/exam_answer.py",
+            "scripts/landing_chain_lib.py",
+            "scripts/promote_staging_to_shipped.py",
+            "scripts/install_signed_shipped_graph.py",
+            "deploy/atanor-linux/build.sh"
+          ],
+          "mutation_sensitive_paths": [
+            "data/architecture/catalog/organ_registry_v1.json",
+            "data/architecture/catalog/runtime_edges_v1.json"
+          ],
+          "report_paths": []
+        },
+        {
+          "id": "g0_signed_shipped_graph_authority",
+          "description": "Exercise canonical read-only guards, immutable mutation lifecycle, the installation-fixed operator boundary, crash journal, and signed deployment evidence without claiming production provisioning.",
+          "network_required": false,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/graph_scale/tests/test_store_contract.py",
+            "packages/graph_scale/tests/test_triple_store.py",
+            "packages/graph_scale/tests/test_sharded_term_dict.py",
+            "packages/graph_scale/tests/test_turbo_ingest.py",
+            "packages/graph_scale/tests/test_graph_paths.py",
+            "packages/graph_scale/tests/test_mutation_batch.py",
+            "packages/graph_scale/tests/test_pii_guard.py",
+            "packages/graph_scale/tests/test_pii_guard_read_only.py",
+            "packages/graph_scale/tests/test_self_refinement.py",
+            "packages/graph_scale/tests/test_taxonomy_sweep.py",
+            "packages/graph_scale/tests/test_compaction.py",
+            "packages/autonomy_envelope/tests/test_operator_trust.py",
+            "scripts/tests/test_direct_shipped_sidecar_guards.py",
+            "scripts/tests/test_create_graph_mutation_batch.py",
+            "scripts/tests/test_graph_mutation_candidate.py",
+            "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+            "scripts/tests/test_promotion_swap_boundary.py",
+            "apps/api/tests/test_browser_forget_authority.py",
+            "apps/api/tests/test_agora_graph_lifecycle_language.py",
+            "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "timeout_seconds": 30,
+          "repeat": 2,
+          "suite_paths": [
+            "packages/graph_scale/tests/test_store_contract.py",
+            "packages/graph_scale/tests/test_triple_store.py",
+            "packages/graph_scale/tests/test_sharded_term_dict.py",
+            "packages/graph_scale/tests/test_turbo_ingest.py",
+            "packages/graph_scale/tests/test_graph_paths.py",
+            "packages/graph_scale/tests/test_mutation_batch.py",
+            "packages/graph_scale/tests/test_pii_guard.py",
+            "packages/graph_scale/tests/test_pii_guard_read_only.py",
+            "packages/graph_scale/tests/test_self_refinement.py",
+            "packages/graph_scale/tests/test_taxonomy_sweep.py",
+            "packages/graph_scale/tests/test_compaction.py",
+            "packages/autonomy_envelope/tests/test_operator_trust.py",
+            "scripts/tests/test_direct_shipped_sidecar_guards.py",
+            "scripts/tests/test_create_graph_mutation_batch.py",
+            "scripts/tests/test_graph_mutation_candidate.py",
+            "scripts/tests/test_legacy_graph_writers_fail_closed.py",
+            "scripts/tests/test_promotion_swap_boundary.py",
+            "apps/api/tests/test_browser_forget_authority.py",
+            "apps/api/tests/test_agora_graph_lifecycle_language.py",
+            "apps/api/tests/test_cloud_brain_live_mutation_boundaries.py"
+          ],
+          "dataset_paths": [],
+          "artifact_paths": [
+            "packages/autonomy_envelope/__init__.py",
+            "packages/autonomy_envelope/audit_ledger.py",
+            "packages/autonomy_envelope/constants.py",
+            "packages/autonomy_envelope/envelope.py",
+            "packages/autonomy_envelope/evaluation_trust.py",
+            "packages/autonomy_envelope/interface.py",
+            "packages/autonomy_envelope/killswitch.py",
+            "packages/autonomy_envelope/operator_trust.py",
+            "packages/autonomy_envelope/promotion_queue.py",
+            "packages/autonomy_envelope/whitelist.py",
+            "packages/graph_scale/__init__.py",
+            "packages/cognitive_core/canonical.py",
+            "packages/graph_scale/graph_paths.py",
+            "packages/graph_scale/mutation_batch.py",
+            "packages/graph_scale/triple_store.py",
+            "packages/graph_scale/sharded_term_dict.py",
+            "packages/graph_scale/answer_bridge.py",
+            "packages/graph_scale/abstain_feeder.py",
+            "packages/graph_scale/abstain_queue.py",
+            "packages/graph_scale/corpus_adapters.py",
+            "packages/graph_scale/curated_judge.py",
+            "packages/graph_scale/moral_invariants.py",
+            "packages/graph_scale/compaction.py",
+            "packages/graph_scale/contradiction_sweep.py",
+            "packages/graph_scale/lexicon_lane.py",
+            "packages/graph_scale/pii_guard.py",
+            "packages/graph_scale/turbo_ingest.py",
+            "packages/base_brain/__init__.py",
+            "packages/base_brain/models.py",
+            "packages/base_brain/pack_loader.py",
+            "packages/base_brain/pack_builder.py",
+            "packages/truth_maintenance/live_membrane.py",
+            "packages/truth_maintenance/jtms.py",
+            "packages/truth_maintenance/atms.py",
+            "packages/truth_maintenance/revision.py",
+            "apps/api/app/routers/agora.py",
+            "apps/api/app/routers/browser.py",
+            "apps/api/app/routers/cloud_brain.py",
+            "scripts/bulk_ingest_kg.py",
+            "scripts/create_graph_mutation_batch.py",
+            "scripts/build_lang_gate.py",
+            "scripts/build_isa_verdict.py",
+            "scripts/backfill_kaikki_glosses.py",
+            "scripts/build_taxonomy_backbone.py",
+            "scripts/derivation_accelerator.py",
+            "scripts/landing_chain_lib.py",
+            "scripts/profile_domain_audit.py",
+            "scripts/promote_staging_to_shipped.py",
+            "scripts/sanitize_isa_pollution.py",
+            "scripts/install_signed_shipped_graph.py"
+          ],
+          "mutation_sensitive_paths": [
+            "data/graph_scale/kg_triples/meta.json",
+            "data/graph_scale/kg_triples/BUILD_REPORT.json",
+            "data/graph_scale/kg_triples/VERIFY_REPORT.json",
+            "data/graph_scale/kg_triples/lang_gate.col",
+            "data/graph_scale/kg_triples/isa_verdict.col"
+          ],
+          "report_paths": []
+        }
+      ]
+    },
+    "reasoning_control": {
+      "max_total_seconds": 10,
+      "env_allowlist": [
+        "ATANOR_DISABLE_PACK",
+        "ATANOR_NETWORK_DISABLED",
+        "PYTHONHASHSEED",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD"
+      ],
+      "environment": {
+        "ATANOR_DISABLE_PACK": "1",
+        "ATANOR_NETWORK_DISABLED": "1",
+        "PYTHONHASHSEED": "0",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+      },
+      "recipes": [
+        {
+          "id": "g0_deliberator_control",
+          "description": "Exercise the bounded structured DELIBERATOR integrity probe without treating firing as GPQA or other capability evidence.",
+          "network_required": false,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+            "packages/reasoning_vm/tests/test_deliberator_compiler.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "timeout_seconds": 5,
+          "repeat": 2,
+          "suite_paths": [
+            "packages/reasoning_vm/tests/test_deliberator_reasoner.py",
+            "packages/reasoning_vm/tests/test_deliberator_compiler.py"
+          ],
+          "dataset_paths": [],
+          "artifact_paths": [
+            "packages/reasoning_vm/deliberator/__init__.py",
+            "packages/reasoning_vm/deliberator/adjudicator.py",
+            "packages/reasoning_vm/deliberator/back_chain.py",
+            "packages/reasoning_vm/deliberator/compiler.py",
+            "packages/reasoning_vm/deliberator/controlled_probe.py",
+            "packages/reasoning_vm/deliberator/doubt_gate.py",
+            "packages/reasoning_vm/deliberator/kernel_forge.py",
+            "packages/reasoning_vm/deliberator/live_reasoner.py",
+            "packages/reasoning_vm/deliberator/mcq_adapter.py",
+            "packages/reasoning_vm/deliberator/planner.py",
+            "packages/reasoning_vm/deliberator/realtime.py",
+            "packages/reasoning_vm/deliberator/reasoner.py",
+            "packages/reasoning_vm/deliberator/relational_object_compiler.py",
+            "packages/reasoning_vm/deliberator/relational_object_shadow.py",
+            "packages/reasoning_vm/deliberator/system_router.py",
+            "packages/reasoning_vm/exam_answer.py",
+            "scripts/deliberator_controlled_probe.py"
+          ],
+          "mutation_sensitive_paths": [
+            "data/eval",
+            "reports/benchmarks"
+          ],
+          "report_paths": []
+        }
+      ]
+    },
+    "cognitive_spine_control": {
+      "max_total_seconds": 45,
+      "env_allowlist": [
+        "ATANOR_COGNITIVE_SHADOW",
+        "ATANOR_CONTINUOUS_SELF_CYCLE_SHADOW",
+        "ATANOR_DISABLE_PACK",
+        "ATANOR_NETWORK_DISABLED",
+        "PYTHONHASHSEED",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD"
+      ],
+      "environment": {
+        "ATANOR_COGNITIVE_SHADOW": "0",
+        "ATANOR_CONTINUOUS_SELF_CYCLE_SHADOW": "0",
+        "ATANOR_DISABLE_PACK": "1",
+        "ATANOR_NETWORK_DISABLED": "1",
+        "PYTHONHASHSEED": "0",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+      },
+      "recipes": [
+        {
+          "id": "g1_canonical_cycle_shadow",
+          "description": "Exercise occurrence identity, parent-linked replay, exact reconstructed append-only storage, the CO-C0 F1 authority/source/freshness profile, observer-authority invariants, raw-payload exclusion, default-off live-chat equivalence, and the sampled nonblocking ContinuousSelf step observer without claiming shared-state authority or capability lift.",
+          "network_required": false,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/cognitive_core/tests",
+            "packages/continuous_self/tests/test_loop.py",
+            "apps/api/tests/test_cognitive_cycle_shadow.py",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "timeout_seconds": 20,
+          "repeat": 2,
+          "suite_paths": [
+            "packages/cognitive_core/tests/test_contracts.py",
+            "packages/cognitive_core/tests/test_adapters.py",
+            "packages/cognitive_core/tests/test_co_profile.py",
+            "packages/cognitive_core/tests/test_shadow.py",
+            "packages/cognitive_core/tests/test_cycle_contract.py",
+            "packages/cognitive_core/tests/test_cycle_ledger.py",
+            "packages/cognitive_core/tests/test_chat_shadow.py",
+            "packages/cognitive_core/tests/test_continuous_self_shadow.py",
+            "packages/continuous_self/tests/test_loop.py",
+            "apps/api/tests/test_cognitive_cycle_shadow.py"
+          ],
+          "dataset_paths": [],
+          "artifact_paths": [
+            "packages/cognitive_core/__init__.py",
+            "packages/cognitive_core/canonical.py",
+            "packages/cognitive_core/contracts.py",
+            "packages/cognitive_core/adapters.py",
+            "packages/cognitive_core/co_profile.py",
+            "packages/cognitive_core/shadow.py",
+            "packages/cognitive_core/cycle.py",
+            "packages/cognitive_core/cycle_ledger.py",
+            "packages/cognitive_core/replay.py",
+            "packages/cognitive_core/chat_shadow.py",
+            "packages/cognitive_core/continuous_self_shadow.py",
+            "packages/continuous_self/loop.py",
+            "packages/continuous_self/self_state.py",
+            "apps/api/app/routers/dual_brain.py",
+            "apps/api/app/routers/continuous_self.py"
+          ],
+          "mutation_sensitive_paths": [
+            "data/eval",
+            "reports/benchmarks",
+            "reports/cognitive-shadow"
+          ],
+          "report_paths": []
+        }
+      ]
+    },
+    "world4d_shadow_control": {
+      "max_total_seconds": 20,
+      "env_allowlist": [
+        "ATANOR_DISABLE_PACK",
+        "ATANOR_NETWORK_DISABLED",
+        "ATANOR_WORLD4D_SHADOW",
+        "PYTHONHASHSEED",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD"
+      ],
+      "environment": {
+        "ATANOR_DISABLE_PACK": "1",
+        "ATANOR_NETWORK_DISABLED": "1",
+        "ATANOR_WORLD4D_SHADOW": "0",
+        "PYTHONHASHSEED": "0",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+      },
+      "recipes": [
+        {
+          "id": "g3_world4d_sibling_shadow",
+          "description": "Exercise the bounded default-off World4D contracts, byte-bound read-only BlockUniverse provider, strict privacy-safe receipts, and answer-content-neutral non-blocking temporal-bidder hook without claiming world-model capability.",
+          "network_required": false,
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "packages/world4d/tests",
+            "--import-mode=importlib",
+            "--disable-warnings",
+            "--maxfail=1",
+            "-qq"
+          ],
+          "cwd": ".",
+          "timeout_seconds": 10,
+          "repeat": 2,
+          "suite_paths": [
+            "packages/world4d/tests/test_contracts.py",
+            "packages/world4d/tests/test_block_universe_provider.py",
+            "packages/world4d/tests/test_shadow.py",
+            "packages/world4d/tests/test_live_temporal_shadow.py"
+          ],
+          "dataset_paths": [],
+          "artifact_paths": [
+            "packages/cognitive_core/canonical.py",
+            "packages/cognitive_core/contracts.py",
+            "packages/cgsr/cgsr/response_workspace.py",
+            "data/temporal_reasoning/precedence_field.json",
+            "packages/temporal_reasoning/block_universe.py",
+            "packages/temporal_reasoning/unified_timeline.py",
+            "packages/world4d/__init__.py",
+            "packages/world4d/contracts.py",
+            "packages/world4d/provider.py",
+            "packages/world4d/block_universe_provider.py",
+            "packages/world4d/shadow.py"
+          ],
+          "mutation_sensitive_paths": [
+            "data/eval",
+            "reports/benchmarks",
+            "reports/world4d-shadow"
+          ],
+          "report_paths": []
+        }
+      ]
+    }
+  }
+}

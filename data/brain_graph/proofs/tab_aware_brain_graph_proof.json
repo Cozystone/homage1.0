@@ -1,0 +1,57 @@
+{
+  "proof_id": "tab_aware_brain_graph_proof",
+  "generated_at": "2026-07-25T00:21:55Z",
+  "passed": true,
+  "checks": {
+    "local_view_has_no_semantic_cloud_nodes": true,
+    "local_view_has_no_cloud_attached_counted_as_local": true,
+    "cloud_view_can_show_cloud_layers": true,
+    "surface_graph_summary_only": true,
+    "missing_layers_reported": true,
+    "overlay_local_write_false": true
+  },
+  "local_graph_summary": {
+    "rendered_nodes": 500,
+    "rendered_edges": 77,
+    "layers": {
+      "local_base": 500
+    },
+    "missing": [
+      {
+        "layer": "invalid_local_layer",
+        "reason": "not_allowed_for_view"
+      },
+      {
+        "layer": "local_memory_candidate",
+        "reason": "no_local_memory_candidate_store_available"
+      }
+    ]
+  },
+  "cloud_graph_summary": {
+    "rendered_nodes": 500,
+    "rendered_edges": 189,
+    "layers": {
+      "semantic_cloud": 500
+    },
+    "missing": [
+      {
+        "layer": "invalid_cloud_layer",
+        "reason": "not_allowed_for_view"
+      }
+    ]
+  },
+  "honesty": {
+    "tab_aware_pipeline": true,
+    "surface_graph_full_render_disabled": true,
+    "cloud_attached_counts_as_local": false,
+    "missing_layers_are_not_silent": true,
+    "external_llm_used": false,
+    "external_sllm_used": false
+  },
+  "claim": "Local and Cloud Brain tabs receive separate renderable graph layers. Missing layers are reported instead of silently falling back.",
+  "does_not_claim": [
+    "Surface Cloud Graph is fully rendered",
+    "Cloud attached nodes are Local Brain memory",
+    "remote global Cloud Brain is verified"
+  ]
+}

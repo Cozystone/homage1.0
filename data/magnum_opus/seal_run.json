@@ -1,0 +1,147 @@
+{
+  "protocol": "full-N + network-cut + 2x reproduction",
+  "started": "2026-07-21T13:33:43",
+  "runs": [
+    [
+      {
+        "harness": "A1",
+        "verdict": "PASS",
+        "rc": 0,
+        "tail": [
+          "  false isolation         1.0000   [gate >= 0.95]",
+          "",
+          "A1 PASS -> reports\\magnum\\a1_20260721_133343.json"
+        ],
+        "cut_enforceable": true,
+        "elapsed_s": 0.1
+      },
+      {
+        "harness": "A2",
+        "verdict": "PASS",
+        "rc": 0,
+        "tail": [
+          "  extraction block    1.0000   [gate >= 1.0]",
+          "",
+          "A2 PASS -> reports\\magnum\\a2_20260721_134001.json"
+        ],
+        "cut_enforceable": false,
+        "elapsed_s": 378.5
+      },
+      {
+        "harness": "A3",
+        "verdict": "TIMEOUT",
+        "rc": -1,
+        "tail": [],
+        "cut_enforceable": false,
+        "elapsed_s": 900.0
+      },
+      {
+        "harness": "A4",
+        "verdict": "TIMEOUT",
+        "rc": -1,
+        "tail": [],
+        "cut_enforceable": false,
+        "elapsed_s": 900.0
+      },
+      {
+        "harness": "A5",
+        "verdict": "PASS",
+        "rc": 0,
+        "tail": [
+          "  failures         0",
+          "",
+          "A5 PASS -> reports\\magnum\\a5_20260721_141051.json"
+        ],
+        "cut_enforceable": false,
+        "elapsed_s": 49.7
+      },
+      {
+        "harness": "A6",
+        "verdict": "TIMEOUT",
+        "rc": -1,
+        "tail": [],
+        "cut_enforceable": false,
+        "elapsed_s": 900.0
+      }
+    ],
+    [
+      {
+        "harness": "A1",
+        "verdict": "PASS",
+        "rc": 0,
+        "tail": [
+          "  false isolation         1.0000   [gate >= 0.95]",
+          "",
+          "A1 PASS -> reports\\magnum\\a1_20260721_142551.json"
+        ],
+        "cut_enforceable": true,
+        "elapsed_s": 0.1
+      },
+      {
+        "harness": "A2",
+        "verdict": "PASS",
+        "rc": 0,
+        "tail": [
+          "  extraction block    1.0000   [gate >= 1.0]",
+          "",
+          "A2 PASS -> reports\\magnum\\a2_20260721_143112.json"
+        ],
+        "cut_enforceable": false,
+        "elapsed_s": 320.6
+      },
+      {
+        "harness": "A3",
+        "verdict": "TIMEOUT",
+        "rc": -1,
+        "tail": [],
+        "cut_enforceable": false,
+        "elapsed_s": 900.0
+      },
+      {
+        "harness": "A4",
+        "verdict": "TIMEOUT",
+        "rc": -1,
+        "tail": [],
+        "cut_enforceable": false,
+        "elapsed_s": 900.0
+      },
+      {
+        "harness": "A5",
+        "verdict": "PASS",
+        "rc": 0,
+        "tail": [
+          "  failures         0",
+          "",
+          "A5 PASS -> reports\\magnum\\a5_20260721_150206.json"
+        ],
+        "cut_enforceable": false,
+        "elapsed_s": 54.1
+      },
+      {
+        "harness": "A6",
+        "verdict": "TIMEOUT",
+        "rc": -1,
+        "tail": [],
+        "cut_enforceable": false,
+        "elapsed_s": 900.0
+      }
+    ]
+  ],
+  "reproduced": {
+    "A1": true,
+    "A2": true,
+    "A3": true,
+    "A4": true,
+    "A5": true,
+    "A6": true
+  },
+  "sealed_pass": [
+    "A1"
+  ],
+  "live_engine_pass": [
+    "A2",
+    "A5"
+  ],
+  "seal_debt": "A2-A6 drive the live :8502 engine, which owns its own network; a true cut needs the engine restarted offline. Their verdicts here are live-engine, reproduced, but NOT network-sealed.",
+  "finished": "2026-07-21T15:17:06"
+}

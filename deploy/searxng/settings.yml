@@ -1,0 +1,58 @@
+use_default_settings: true
+server:
+  secret_key: "atanor-local-searxng"
+  limiter: false
+search:
+  formats:
+    - html
+    - json
+engines:
+  # ── Korean lane (critical: whole-web must reach Korean indexes) ──
+  - name: naver
+    disabled: false
+  - name: naver news
+    disabled: false
+  # ── major web indexes (default-off ones switched on) ──
+  - name: bing
+    disabled: false
+  - name: mojeek
+    disabled: false
+  - name: qwant
+    disabled: false
+  - name: yandex
+    disabled: false
+  - name: baidu
+    disabled: false
+  - name: presearch
+    disabled: false
+  - name: yep
+    disabled: false
+  - name: yahoo
+    disabled: false
+  # ── news / newspapers ──
+  - name: mojeek news
+    disabled: false
+  - name: qwant news
+    disabled: false
+  - name: presearch news
+    disabled: false
+  # ── social / community (Instagram·X have no public search API; reddit does) ──
+  - name: reddit
+    disabled: false
+  - name: hackernews
+    disabled: false
+  # ── reference / books / academic ──
+  - name: encyclosearch
+    disabled: false
+  - name: openlibrary
+    disabled: false
+  - name: goodreads
+    disabled: false
+  - name: wikibooks
+    disabled: false
+  - name: wikiquote
+    disabled: false
+  - name: wikisource
+    disabled: false
+  - name: crossref
+    disabled: false

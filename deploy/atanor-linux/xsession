@@ -1,0 +1,14 @@
+#!/bin/sh
+# ATANOR desktop session — assembled by US on a plain Linux kernel + X11:
+# openbox moves/resizes windows (Windows-like), tint2 is the bottom taskbar,
+# the SPLATRA field runs as the living wallpaper (DESKTOP-layer surface), and
+# the hologram orb floats always-on-top. No GNOME, no Ubuntu, no Debian face.
+# native 1080p: virtio-vga exposes the preferred mode; ask for it explicitly
+# (falls back silently on panels that lack it)
+xrandr --output Virtual-1 --mode 1920x1080 2>/dev/null || xrandr -s 1920x1080 2>/dev/null || true
+tint2 -c /etc/atanor/tint2rc &
+/usr/local/bin/atanor-orb-wallpaper &
+# perception stream: in-session sensor, engine distills, nothing leaves the device
+[ -x /opt/atanor/deploy/atanor-environment/perception_probe.py ] && \
+  python3 /opt/atanor/deploy/atanor-environment/perception_probe.py &
+exec openbox --config-file /etc/atanor/openbox-rc.xml

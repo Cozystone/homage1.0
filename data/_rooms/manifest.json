@@ -1,0 +1,161 @@
+{
+  "kinds": {
+    "vault": {
+      "reachable_from_ingestion": false,
+      "append_only": true,
+      "rebuildable": false,
+      "loss": "irreplaceable",
+      "note": "not reachable through this API by design"
+    },
+    "archive": {
+      "reachable_from_ingestion": true,
+      "append_only": false,
+      "rebuildable": true,
+      "loss": "time to re-download"
+    },
+    "derived": {
+      "reachable_from_ingestion": true,
+      "append_only": false,
+      "rebuildable": true,
+      "loss": "time to rebuild"
+    },
+    "ledger": {
+      "reachable_from_ingestion": true,
+      "append_only": true,
+      "rebuildable": false,
+      "loss": "the record itself"
+    },
+    "candidate": {
+      "reachable_from_ingestion": true,
+      "append_only": true,
+      "rebuildable": true,
+      "loss": "proposals only, never truth"
+    },
+    "live": {
+      "reachable_from_ingestion": true,
+      "append_only": false,
+      "rebuildable": false,
+      "loss": "current state"
+    },
+    "scratch": {
+      "reachable_from_ingestion": true,
+      "append_only": false,
+      "rebuildable": true,
+      "loss": "nothing"
+    }
+  },
+  "rooms": {
+    "acquisition_daemon": {
+      "name": "acquisition_daemon",
+      "kind": "live",
+      "purpose": "the running acquisition loop state, queue and gap ledger",
+      "path": "data/acquisition_daemon",
+      "declared_at": 1785485901.513567,
+      "declared_by": "atanor"
+    },
+    "architecture": {
+      "name": "architecture",
+      "kind": "ledger",
+      "purpose": "evidence and wiring measurements over the organ catalog",
+      "path": "data/architecture",
+      "declared_at": 1785485901.5125206,
+      "declared_by": "atanor"
+    },
+    "atanor_index": {
+      "name": "atanor_index",
+      "kind": "derived",
+      "purpose": "BM25 indexes and the property table; rebuildable from archive",
+      "path": "data/atanor_index",
+      "declared_at": 1785485901.5112305,
+      "declared_by": "atanor"
+    },
+    "corpora": {
+      "name": "corpora",
+      "kind": "archive",
+      "purpose": "sentence and dialogue corpora as downloaded",
+      "path": "data/corpora",
+      "declared_at": 1785485901.5102427,
+      "declared_by": "atanor"
+    },
+    "derived_candidates": {
+      "name": "derived_candidates",
+      "kind": "candidate",
+      "purpose": "mined facts awaiting operator promotion; never read as truth",
+      "path": "data/cloud_brain/derived_candidates",
+      "declared_at": 1785485901.5130181,
+      "declared_by": "atanor"
+    },
+    "dumps": {
+      "name": "dumps",
+      "kind": "archive",
+      "purpose": "third-party dataset dumps kept verbatim",
+      "path": "data/dumps",
+      "declared_at": 1785485901.509837,
+      "declared_by": "atanor"
+    },
+    "e4_depth_seal_002": {
+      "name": "e4_depth_seal_002",
+      "kind": "ledger",
+      "purpose": "the depth E4 sealed exam",
+      "path": "data/e4_depth_seal_002",
+      "declared_at": 1785485901.5120697,
+      "declared_by": "atanor"
+    },
+    "e5_measurements": {
+      "name": "e5_measurements",
+      "kind": "ledger",
+      "purpose": "E5 transfer arm measurements, one file per run -- the sealed scorer writes a fixed path and overwrote E5-1 with E5-2",
+      "path": "data/e5_measurements",
+      "declared_at": 1785502274.1609654,
+      "declared_by": "atanor"
+    },
+    "e5_transfer_seal": {
+      "name": "e5_transfer_seal",
+      "kind": "ledger",
+      "purpose": "the E5 transfer seal, its baseline and its verdict",
+      "path": "data/e5_transfer_seal",
+      "declared_at": 1785485901.5116587,
+      "declared_by": "atanor"
+    },
+    "gloss_lab": {
+      "name": "gloss_lab",
+      "kind": "derived",
+      "purpose": "dictionary extraction experiments and their measurements",
+      "path": "data/gloss_lab",
+      "declared_at": 1785485961.2443273,
+      "declared_by": "atanor"
+    },
+    "graph_scale": {
+      "name": "graph_scale",
+      "kind": "derived",
+      "purpose": "the triple store and everything built from the dumps",
+      "path": "data/graph_scale",
+      "declared_at": 1785485901.5106826,
+      "declared_by": "atanor"
+    },
+    "knowledge_sources": {
+      "name": "knowledge_sources",
+      "kind": "archive",
+      "purpose": "raw corpus downloads; re-fetchable from the open web",
+      "path": "data/knowledge_sources",
+      "declared_at": 1785485901.509166,
+      "declared_by": "atanor"
+    },
+    "perception": {
+      "name": "perception",
+      "kind": "live",
+      "purpose": "perception organ state: name book, encoders, live measures",
+      "path": "data/perception",
+      "declared_at": 1785485901.5140352,
+      "declared_by": "atanor"
+    },
+    "vault": {
+      "name": "vault",
+      "kind": "vault",
+      "purpose": "operator keys and user secrets",
+      "path": "data/_vault",
+      "declared_at": 1785485961.2437434,
+      "declared_by": "atanor"
+    }
+  }
+}

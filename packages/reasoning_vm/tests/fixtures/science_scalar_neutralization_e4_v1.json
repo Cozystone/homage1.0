@@ -1,0 +1,307 @@
+{
+  "schema_version": "atanor.scalar-neutralization-e4-fixture.v1",
+  "profile_id": "scalar_quantity_resolve.acid_base_complete_neutralization.base_volume.v1",
+  "classification": "frozen_development_probe_not_e5",
+  "authorship": {
+    "independently_written": true,
+    "public_benchmark_question_copied": false,
+    "public_benchmark_choices_copied": false,
+    "external_authenticity_established": false
+  },
+  "paired_protocol": {
+    "fixed_denominator": 12,
+    "semantic_group_count": 6,
+    "gold_positions": {
+      "A": 3,
+      "B": 3,
+      "C": 3,
+      "D": 3
+    },
+    "off_stage_structurally_absent": true,
+    "primary_order": "even ordinal off-on; odd ordinal on-off",
+    "replay_order": "reverse of primary"
+  },
+  "semantic_groups": [
+    {
+      "group_id": "g1",
+      "item_ids": ["scalar-neutralization-001", "scalar-neutralization-002"],
+      "relation": "same_physical_quantity_after_milliliter_liter_conversion"
+    },
+    {
+      "group_id": "g2",
+      "item_ids": ["scalar-neutralization-003", "scalar-neutralization-004"],
+      "relation": "acid_equivalents_times_two_implies_target_volume_times_two"
+    },
+    {
+      "group_id": "g3",
+      "item_ids": ["scalar-neutralization-005", "scalar-neutralization-006"],
+      "relation": "base_equivalents_times_two_implies_target_volume_divided_by_two"
+    },
+    {
+      "group_id": "g4",
+      "item_ids": ["scalar-neutralization-007", "scalar-neutralization-008"],
+      "relation": "same_physical_quantity_after_milliliter_liter_conversion"
+    },
+    {
+      "group_id": "g5",
+      "item_ids": ["scalar-neutralization-009", "scalar-neutralization-010"],
+      "relation": "common_concentration_scale_invariant"
+    },
+    {
+      "group_id": "g6",
+      "item_ids": ["scalar-neutralization-011", "scalar-neutralization-012"],
+      "relation": "known_volume_times_two_implies_target_volume_times_two"
+    }
+  ],
+  "paired_items": [
+    {
+      "id": "scalar-neutralization-001",
+      "surface_id": "what_volume_required",
+      "semantic_group_id": "g1",
+      "question": "What volume of 0.30 M NaOH is required to completely neutralize 25.0 mL of 0.18 M HCl?",
+      "choices": {
+        "A": "12 mL",
+        "B": "15 mL",
+        "C": "18 mL",
+        "D": "30 mL"
+      },
+      "gold": "B",
+      "expected_answer_liters": "3/200"
+    },
+    {
+      "id": "scalar-neutralization-002",
+      "surface_id": "how_many_liters_needed",
+      "semantic_group_id": "g1",
+      "question": "How many liters of 0.30 M NaOH are needed to fully neutralize 0.0250 L of 0.18 M HCl?",
+      "choices": {
+        "A": "0.030 L",
+        "B": "0.012 L",
+        "C": "0.015 L",
+        "D": "0.018 L"
+      },
+      "gold": "C",
+      "expected_answer_liters": "3/200"
+    },
+    {
+      "id": "scalar-neutralization-003",
+      "surface_id": "how_much_complete_neutralization",
+      "semantic_group_id": "g2",
+      "question": "How much 0.28 M KOH is required for complete neutralization of 35.0 mL of 0.12 M HCl?",
+      "choices": {
+        "A": "30 mL",
+        "B": "10 mL",
+        "C": "7.5 mL",
+        "D": "15 mL"
+      },
+      "gold": "D",
+      "expected_answer_liters": "3/200"
+    },
+    {
+      "id": "scalar-neutralization-004",
+      "surface_id": "what_volume_required",
+      "semantic_group_id": "g2",
+      "question": "What volume of 0.28 M KOH is required to completely neutralize 35.0 mL of 0.12 M H2SO4?",
+      "choices": {
+        "A": "30 mL",
+        "B": "15 mL",
+        "C": "60 mL",
+        "D": "7.5 mL"
+      },
+      "gold": "A",
+      "expected_answer_liters": "3/100"
+    },
+    {
+      "id": "scalar-neutralization-005",
+      "surface_id": "how_many_milliliters_needed",
+      "semantic_group_id": "g3",
+      "question": "How many milliliters of 0.18 M NaOH are needed to completely neutralize 45.0 mL of 0.24 M HNO3?",
+      "choices": {
+        "A": "30 mL",
+        "B": "45 mL",
+        "C": "60 mL",
+        "D": "120 mL"
+      },
+      "gold": "C",
+      "expected_answer_liters": "3/50"
+    },
+    {
+      "id": "scalar-neutralization-006",
+      "surface_id": "what_volume_needed",
+      "semantic_group_id": "g3",
+      "question": "What volume of 0.18 M Ca(OH)2 is needed to completely neutralize 45.0 mL of 0.24 M HNO3?",
+      "choices": {
+        "A": "60 mL",
+        "B": "15 mL",
+        "C": "120 mL",
+        "D": "30 mL"
+      },
+      "gold": "D",
+      "expected_answer_liters": "3/100"
+    },
+    {
+      "id": "scalar-neutralization-007",
+      "surface_id": "how_much_complete_neutralization",
+      "semantic_group_id": "g4",
+      "question": "How much 0.16 M Ca(OH)2 is required for complete neutralization of 32.0 mL of 0.20 M H2SO4?",
+      "choices": {
+        "A": "40 mL",
+        "B": "20 mL",
+        "C": "30 mL",
+        "D": "80 mL"
+      },
+      "gold": "A",
+      "expected_answer_liters": "1/25"
+    },
+    {
+      "id": "scalar-neutralization-008",
+      "surface_id": "how_many_liters_required",
+      "semantic_group_id": "g4",
+      "question": "How many liters of 0.16 M Ca(OH)2 are required to fully neutralize 0.0320 L of 0.20 M H2SO4?",
+      "choices": {
+        "A": "0.080 L",
+        "B": "0.040 L",
+        "C": "0.020 L",
+        "D": "0.030 L"
+      },
+      "gold": "B",
+      "expected_answer_liters": "1/25"
+    },
+    {
+      "id": "scalar-neutralization-009",
+      "surface_id": "what_volume_needed",
+      "semantic_group_id": "g5",
+      "question": "What volume of 0.200 M NaOH is needed to completely neutralize 36.0 mL of 0.125 M HCl?",
+      "choices": {
+        "A": "11.25 mL",
+        "B": "45 mL",
+        "C": "22.5 mL",
+        "D": "18 mL"
+      },
+      "gold": "C",
+      "expected_answer_liters": "9/400"
+    },
+    {
+      "id": "scalar-neutralization-010",
+      "surface_id": "what_volume_required",
+      "semantic_group_id": "g5",
+      "question": "What volume of 0.600 M NaOH is required to completely neutralize 36.0 mL of 0.375 M HCl?",
+      "choices": {
+        "A": "22.5 mL",
+        "B": "11.25 mL",
+        "C": "45 mL",
+        "D": "18 mL"
+      },
+      "gold": "A",
+      "expected_answer_liters": "9/400"
+    },
+    {
+      "id": "scalar-neutralization-011",
+      "surface_id": "how_many_milliliters_neutralize",
+      "semantic_group_id": "g6",
+      "question": "How many milliliters of 0.300 M KOH are needed to fully neutralize 37.5 mL of 0.160 M HNO3?",
+      "choices": {
+        "A": "10 mL",
+        "B": "20 mL",
+        "C": "25 mL",
+        "D": "40 mL"
+      },
+      "gold": "B",
+      "expected_answer_liters": "1/50"
+    },
+    {
+      "id": "scalar-neutralization-012",
+      "surface_id": "what_volume_required",
+      "semantic_group_id": "g6",
+      "question": "What volume of 0.300 M KOH is required to completely neutralize 75.0 mL of 0.160 M HNO3?",
+      "choices": {
+        "A": "20 mL",
+        "B": "80 mL",
+        "C": "30 mL",
+        "D": "40 mL"
+      },
+      "gold": "D",
+      "expected_answer_liters": "1/25"
+    }
+  ],
+  "negative_controls": [
+    {
+      "id": "scalar-control-pH",
+      "control_type": "unsupported_pH_surface",
+      "question": "What pH results after 0.20 M NaOH completely neutralizes 25.0 mL of 0.10 M HCl?",
+      "choices": {
+        "A": "5 mL",
+        "B": "10 mL",
+        "C": "15 mL",
+        "D": "20 mL"
+      },
+      "expected_status": "abstain",
+      "expected_reason": "unsupported_neutralization_variant"
+    },
+    {
+      "id": "scalar-control-partial",
+      "control_type": "partial_neutralization",
+      "question": "What volume of 0.20 M NaOH is required to partially neutralize 25.0 mL of 0.10 M HCl?",
+      "choices": {
+        "A": "5 mL",
+        "B": "10 mL",
+        "C": "15 mL",
+        "D": "20 mL"
+      },
+      "expected_status": "abstain",
+      "expected_reason": "unsupported_neutralization_variant"
+    },
+    {
+      "id": "scalar-control-unknown-species",
+      "control_type": "unknown_species",
+      "question": "What volume of 0.20 M RbOH is required to completely neutralize 25.0 mL of 0.10 M HBr?",
+      "choices": {
+        "A": "6.25 mL",
+        "B": "12.5 mL",
+        "C": "25 mL",
+        "D": "50 mL"
+      },
+      "expected_status": "compiled",
+      "expected_reason_off": "required_evidence_unavailable",
+      "expected_reason_on": "entity_or_formula_unresolved"
+    },
+    {
+      "id": "scalar-control-nonpositive",
+      "control_type": "nonpositive_quantity",
+      "question": "What volume of 0 M NaOH is required to completely neutralize 25.0 mL of 0.10 M HCl?",
+      "choices": {
+        "A": "5 mL",
+        "B": "10 mL",
+        "C": "15 mL",
+        "D": "20 mL"
+      },
+      "expected_status": "invalid",
+      "expected_reason": "concentration_out_of_bounds"
+    },
+    {
+      "id": "scalar-control-duplicate-volume",
+      "control_type": "duplicate_semantic_choice",
+      "question": "What volume of 0.20 M NaOH is required to completely neutralize 25.0 mL of 0.10 M HCl?",
+      "choices": {
+        "A": "12.5 mL",
+        "B": "12.500 mL",
+        "C": "25 mL",
+        "D": "50 mL"
+      },
+      "expected_status": "invalid",
+      "expected_reason": "duplicate_normalized_choices"
+    },
+    {
+      "id": "scalar-control-dimension",
+      "control_type": "choice_dimension_mismatch",
+      "question": "What volume of 0.20 M NaOH is required to completely neutralize 25.0 mL of 0.10 M HCl?",
+      "choices": {
+        "A": "0.01 mol",
+        "B": "10 g",
+        "C": "15 s",
+        "D": "20 K"
+      },
+      "expected_status": "invalid",
+      "expected_reason": "choice_not_exact_volume"
+    }
+  ]
+}

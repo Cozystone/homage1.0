@@ -1,0 +1,105 @@
+{
+  "definition": "a thing is the smallest unit whose future its own past accounts for — implemented as: predict each cell from its own past, group cells whose LEFTOVERS correlate, because parts of one object are surprised together by a shared cause",
+  "why_this_over_similarity": "common fate compares velocities (instantaneous, symmetric); this compares prediction residuals (temporal, causal). A smoothly drifting background is predictable from its own past, so it has no residual and couples with nothing.",
+  "why_it_is_the_same_as_simulatable": "a set whose residuals correlate is a set that must be rolled forward together, which is what a mental simulation runs — so the object criterion and the 4D-world-model criterion are one",
+  "measured_on_carla_semantic_truth": {
+    "control": "the same region shape dropped elsewhere at random in the same frame",
+    "common_fate": {
+      "purity": 0.796,
+      "control": 0.799,
+      "lift": -0.003,
+      "beat_pct": 44
+    },
+    "coherence": {
+      "purity": 0.758,
+      "control": 0.68,
+      "lift": 0.078,
+      "beat_pct": 61
+    }
+  },
+  "more_past_helps": {
+    "short_episodes_40_frames": {
+      "win_10": 0.044,
+      "win_20": 0.073,
+      "win_34": 0.078
+    },
+    "long_episodes_400_frames": {
+      "win_34": 0.09,
+      "win_80": 0.088,
+      "win_160": 0.077,
+      "win_300": -0.005
+    },
+    "prediction": "I predicted the monotone trend would continue with longer footage",
+    "outcome": "WRONG — it saturates around 34-80 frames and reverses by 300",
+    "why": "over 300 frames the vehicle has driven elsewhere; a cell that held a car now holds road, so the residual is correlated across things that were never the same thing",
+    "what_it_refines": "a thing is predictable from its own past over a HORIZON, set by how long it stays in one part of the field — a physical property of the scene, not a parameter. 1-4 seconds here. Tracking cells to objects rather than to image positions would remove the ceiling."
+  },
+  "prediction_that_failed": {
+    "what": "removing the frame-wide common mode should help, because a moving body is itself a shared cause",
+    "measured": "lift +0.078 without, +0.069 with — no help",
+    "likely_why": "a constant-velocity predictor already absorbs smooth ego-motion, so little common mode remained to remove",
+    "action": "turned off by default; kept as an option and a record"
+  },
+  "verdict": "the first object cue that beats its control at all. NOT good enough to name things from.",
+  "not_claimed": "that this finds objects well; that 61% is adequate; that names can be attached yet",
+  "best_measured": {
+    "window": 80,
+    "purity": 0.812,
+    "control": 0.724,
+    "lift": 0.088,
+    "beat_pct": 67
+  },
+  "v2_tracked_units": {
+    "idea": "make the unit follow the stuff rather than the screen — a track's history is genuinely its own, its lifetime IS the horizon, and rigidity (do two points keep their separation over their shared life) becomes computable, which a fixed grid cannot do",
+    "why_rigidity_is_not_common_fate_renamed": "common fate compares velocities AT AN INSTANT, and two points on a turning car have different velocities while rigidly attached — exactly the case that made common fate score at chance. Rigidity compares the shape of the trajectory PAIR over its whole shared life.",
+    "measured": "WORSE than v1. 16 groups covering 12-30% of frame each, semantic lift +0.045 against v1's +0.088. It massively under-segments.",
+    "why_under_segments": "in a static world seen from a moving camera EVERY surface is rigidly attached to every other, so 'the background is one rigid body' is correct and useless. Only independent movers make the question have more than one answer.",
+    "verdict": "not adopted; kept alongside v1 and documented"
+  },
+  "corpus_defect_found": {
+    "what": "every CARLA episode ever recorded spawned the ego vehicle ALONE — no NPC traffic",
+    "consequence": "pedestrians and vehicles occupied 0.3% of a frame, so a rule asked to find 'things that move on their own' had almost nothing to find and the test could not distinguish a good rule from a bad one",
+    "fixed": "recorder now spawns 60 vehicles + 30 pedestrians; movers rose 0.3% -> 1.4%",
+    "note": "the empty recordings looked perfect by every summary: 400 frames, 0 dropped, clean semantic maps"
+  },
+  "the_actual_blocker": {
+    "measured": "median mover blob is 16 PIXELS in a 320x240 frame; 91% are smaller than a single 16x16 cell; 97% smaller than the 5-cell minimum group",
+    "meaning": "the smallest thing the grouping can output is ~80x larger than a typical car. The question 'can it find objects' was never tested — the objects were below the resolution of the answer.",
+    "so_next": "resolution before algorithm: native 800x600 frames, cells of 4-6 px, minimum groups of 2-3 cells. Re-run BOTH v1 and v2 there before judging either.",
+    "pattern": "third corpus/instrument defect in a row that made an algorithm look wrong — after the occluded eye and the empty city"
+  },
+  "native_800x600": {
+    "preflight": {
+      "mover_blob_median_px": 11,
+      "p75": 120,
+      "cell6_min2_floor_px": 72,
+      "findable_fraction": "29%",
+      "verdict": "even at native resolution 71% of movers are below the smallest unit the grouping can emit"
+    },
+    "v1_grid_cell6": {
+      "lift": -0.014,
+      "beat_pct": 38
+    },
+    "v1_grid_cell8": {
+      "lift": -0.022,
+      "beat_pct": 36
+    },
+    "v2_tracked_cell6": {
+      "lift": -0.007,
+      "beat_pct": 33
+    },
+    "v2_tracked_cell8": {
+      "lift": 0.06,
+      "beat_pct": 62,
+      "n": 8,
+      "note": "too few to trust"
+    },
+    "reversal": "v1 degrades at high resolution (+0.088 at 320x240 -> -0.022 at 800x600) while v2 improves (+0.045 -> +0.060). Tracking needs texture detail; a grid does not.",
+    "verdict": "CARLA street-view is a BAD TESTBED for object discovery — its objects are mostly 11-pixel distant cars with one or two trackable features. No motion-based grouping can be scored on it. Parked with a re-entry condition, not abandoned."
+  },
+  "kept_regardless_of_the_park": [
+    "residual agreement beats similarity: +0.088 vs -0.003",
+    "the horizon is a physical property of the scene, not a parameter",
+    "at high resolution tracked units beat grid units"
+  ]
+}

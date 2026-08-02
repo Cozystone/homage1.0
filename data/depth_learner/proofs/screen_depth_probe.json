@@ -1,0 +1,105 @@
+{
+  "zero_shot": {
+    "window_pairs": 16,
+    "p_vs_chance": {
+      "supervised (CARLA metres)": 0.2101,
+      "self-supervised (motion only)": 0.2101
+    },
+    "accuracy": {
+      "supervised (CARLA metres)": 0.312,
+      "self-supervised (motion only)": 0.312
+    },
+    "windows": [
+      "Claude",
+      "분기 • 세션 오류 후 피드백 해석 요청2 - Google Gemini - Chrome",
+      "CitySample - 언리얼 에디터",
+      "Windows PowerShell",
+      "✳ Author sealed exam round 005",
+      "Windows PowerShell",
+      "Windows PowerShell",
+      "Windows 입력 환경",
+      "NVIDIA GeForce Overlay",
+      "Program Manager"
+    ],
+    "detail": [
+      {
+        "front": "Claude",
+        "behind": "분기 • 세션 오류 후 피드백 해석 요청2 - Google Gemini - Chrome",
+        "supervised (CARLA metres)": false,
+        "self-supervised (motion only)": true
+      },
+      {
+        "front": "Claude",
+        "behind": "Windows PowerShell",
+        "supervised (CARLA metres)": false,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "Claude",
+        "behind": "Windows 입력 환경",
+        "supervised (CARLA metres)": false,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "분기 • 세션 오류 후 피드백 해석 요청2 - Google Gemini - Chrome",
+        "behind": "Windows PowerShell",
+        "supervised (CARLA metres)": true,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "분기 • 세션 오류 후 피드백 해석 요청2 - Google Gemini - Chrome",
+        "behind": "✳ Author sealed exam round 005",
+        "supervised (CARLA metres)": true,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "분기 • 세션 오류 후 피드백 해석 요청2 - Google Gemini - Chrome",
+        "behind": "Windows 입력 환경",
+        "supervised (CARLA metres)": false,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "CitySample - 언리얼 에디터",
+        "behind": "Windows PowerShell",
+        "supervised (CARLA metres)": false,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "CitySample - 언리얼 에디터",
+        "behind": "✳ Author sealed exam round 005",
+        "supervised (CARLA metres)": false,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "CitySample - 언리얼 에디터",
+        "behind": "Windows PowerShell",
+        "supervised (CARLA metres)": false,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "CitySample - 언리얼 에디터",
+        "behind": "Windows 입력 환경",
+        "supervised (CARLA metres)": false,
+        "self-supervised (motion only)": false
+      },
+      {
+        "front": "Windows PowerShell",
+        "behind": "✳ Author sealed exam round 005",
+        "supervised (CARLA metres)": true,
+        "self-supervised (motion only)": true
+      },
+      {
+        "front": "Windows PowerShell",
+        "behind": "Windows PowerShell",
+        "supervised (CARLA metres)": true,
+        "self-supervised (motion only)": true
+      }
+    ]
+  },
+  "from_motion": {
+    "trials": 40,
+    "abstained": 0,
+    "accuracy": 0.65,
+    "note": "the sliding panel is judged in front iff it really is; chance is 0.5"
+  }
+}

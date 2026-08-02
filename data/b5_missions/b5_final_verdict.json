@@ -1,0 +1,15 @@
+{
+  "missions": {
+    "B5-1 incident": true,
+    "B5-2 memory": true,
+    "B5-3 recovery": true
+  },
+  "b5_pass": true,
+  "domination_verdict": "WITHHELD_NO_BASELINE",
+  "fluency_likert": "DEFERRED_HUMAN_PANEL",
+  "frozen": {
+    "decoder": "9cf41e5a245d86617f3a46ad49cb231f44fb8fd67cb3551c38574b8f40db1208",
+    "skeleton_bank_10k": "3740dddff2415e9560cf7c342f7bfbc105c212f5934f2d26b0dcae3d3dc54f71",
+    "graph_snapshot_base_brain": "b93db643967264d1c956aec6c0a9c181e6ef445af413e7f11314ee5050bd1160"
+  }
+}

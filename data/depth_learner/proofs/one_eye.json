@@ -1,0 +1,36 @@
+{
+  "as_multiple_of_chance": {
+    "carla": {
+      "raw change": 0.839,
+      "prediction error": 2.225,
+      "replacement": 1.39,
+      "ONE EYE": 2.36
+    },
+    "city slow_163948": {
+      "raw change": 1.104,
+      "prediction error": 1.905,
+      "replacement": 1.318,
+      "ONE EYE": 1.905,
+      "ONE EYE (no body)": 1.743
+    },
+    "explainer build": {
+      "raw change": 1.687,
+      "prediction error": 1.687,
+      "replacement": 5.452,
+      "ONE EYE": 5.383
+    },
+    "explainer cut": {
+      "raw change": 5.541,
+      "prediction error": 5.541,
+      "replacement": 5.541,
+      "ONE EYE": 5.541
+    },
+    "explainer pan": {
+      "raw change": 2.07,
+      "prediction error": 1.59,
+      "replacement": 1.713,
+      "ONE EYE": 1.533
+    }
+  },
+  "worst_retention": 0.74
+}

@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.tsx text eol=lf diff=typescript
+*.ts text eol=lf diff=typescript
+*.rs text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+data/eval/holdout_v1.jsonl -text
+data/eval/holdout_v2.jsonl -text
+data/eval/holdout_*.json -text

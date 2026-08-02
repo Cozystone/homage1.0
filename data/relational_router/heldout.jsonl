@@ -1,0 +1,134 @@
+{"query": "what is the capital of France?", "label": 1}
+{"query": "what is France's area?", "label": 1}
+{"query": "what is the president of France?", "label": 1}
+{"query": "Japan's capital", "label": 1}
+{"query": "what is the area of Japan?", "label": 1}
+{"query": "Japan's official language", "label": 1}
+{"query": "what is the ceo of Japan?", "label": 1}
+{"query": "tell me the boiling point of Japan", "label": 1}
+{"query": "what is the nickname of Japan?", "label": 1}
+{"query": "what is Japan's national anthem?", "label": 1}
+{"query": "what is the density of Japan?", "label": 1}
+{"query": "what is the founder of Germany?", "label": 1}
+{"query": "tell me the ceo of Germany", "label": 1}
+{"query": "what is the melting point of Germany?", "label": 1}
+{"query": "Germany's largest city", "label": 1}
+{"query": "tell me the largest city of Germany", "label": 1}
+{"query": "what is Italy's boiling point?", "label": 1}
+{"query": "Italy's nickname", "label": 1}
+{"query": "what is the largest city of Italy?", "label": 1}
+{"query": "what is the atomic number of Spain?", "label": 1}
+{"query": "Spain's density", "label": 1}
+{"query": "what is the official language of Brazil?", "label": 1}
+{"query": "what is the mayor of Brazil?", "label": 1}
+{"query": "Brazil's national anthem", "label": 1}
+{"query": "what is Canada's population?", "label": 1}
+{"query": "what is the president of Canada?", "label": 1}
+{"query": "what is the boiling point of Canada?", "label": 1}
+{"query": "Egypt's president", "label": 1}
+{"query": "what is Egypt's largest city?", "label": 1}
+{"query": "what is the population of Kenya?", "label": 1}
+{"query": "tell me the area of Kenya", "label": 1}
+{"query": "Kenya's boiling point", "label": 1}
+{"query": "what is the mayor of Kenya?", "label": 1}
+{"query": "what is the national anthem of Kenya?", "label": 1}
+{"query": "what is the capital of India?", "label": 1}
+{"query": "India's ceo", "label": 1}
+{"query": "tell me the largest city of India", "label": 1}
+{"query": "China's currency", "label": 1}
+{"query": "what is the nickname of China?", "label": 1}
+{"query": "Russia's melting point", "label": 1}
+{"query": "what is the currency of Norway?", "label": 1}
+{"query": "what is the largest city of Norway?", "label": 1}
+{"query": "what is Norway's largest city?", "label": 1}
+{"query": "what is Mexico's boiling point?", "label": 1}
+{"query": "what is Mexico's nickname?", "label": 1}
+{"query": "what is the founder of Portugal?", "label": 1}
+{"query": "Portugal's founder", "label": 1}
+{"query": "Portugal's atomic number", "label": 1}
+{"query": "Peru's area", "label": 1}
+{"query": "what is the boiling point of Peru?", "label": 1}
+{"query": "what is the largest city of Peru?", "label": 1}
+{"query": "water's population", "label": 1}
+{"query": "what is the author of water?", "label": 1}
+{"query": "what is water's president?", "label": 1}
+{"query": "what is water's atomic number?", "label": 1}
+{"query": "water's mayor", "label": 1}
+{"query": "what is water's national anthem?", "label": 1}
+{"query": "what is the density of water?", "label": 1}
+{"query": "water's density", "label": 1}
+{"query": "what is the population of gold?", "label": 1}
+{"query": "gold's official language", "label": 1}
+{"query": "gold's chemical formula", "label": 1}
+{"query": "what is the currency of iron?", "label": 1}
+{"query": "tell me the mayor of iron", "label": 1}
+{"query": "what is the author of oxygen?", "label": 1}
+{"query": "what is the ceo of oxygen?", "label": 1}
+{"query": "tell me the chemical formula of oxygen", "label": 1}
+{"query": "what is the density of oxygen?", "label": 1}
+{"query": "what is the population of mercury?", "label": 1}
+{"query": "tell me the official language of mercury", "label": 1}
+{"query": "mercury's mayor", "label": 1}
+{"query": "what is ammonia's president?", "label": 1}
+{"query": "ammonia's ceo", "label": 1}
+{"query": "what is ammonia's national anthem?", "label": 1}
+{"query": "tell me the density of ammonia", "label": 1}
+{"query": "ethanol's founder", "label": 1}
+{"query": "what is the ceo of ethanol?", "label": 1}
+{"query": "what is the nickname of ethanol?", "label": 1}
+{"query": "ethanol's largest city", "label": 1}
+{"query": "Google's area", "label": 1}
+{"query": "what is the official language of Google?", "label": 1}
+{"query": "Google's nickname", "label": 1}
+{"query": "tell me the largest city of Google", "label": 1}
+{"query": "what is the national anthem of Google?", "label": 1}
+{"query": "tell me the capital of Microsoft", "label": 1}
+{"query": "what is Microsoft's currency?", "label": 1}
+{"query": "what is the largest city of Microsoft?", "label": 1}
+{"query": "what is the area of Tesla?", "label": 1}
+{"query": "Tesla's official language", "label": 1}
+{"query": "what is the atomic number of Tesla?", "label": 1}
+{"query": "what is the nickname of Tesla?", "label": 1}
+{"query": "what is the density of Tesla?", "label": 1}
+{"query": "Amazon's currency", "label": 1}
+{"query": "what is Amazon's president?", "label": 1}
+{"query": "Amazon's founder", "label": 1}
+{"query": "Amazon's atomic number", "label": 1}
+{"query": "what is Amazon's national anthem?", "label": 1}
+{"query": "what is the capital of Apple?", "label": 1}
+{"query": "what is the boiling point of Apple?", "label": 1}
+{"query": "Apple's melting point", "label": 1}
+{"query": "what is Apple's largest city?", "label": 1}
+{"query": "Toyota's population", "label": 1}
+{"query": "tell me the currency of Toyota", "label": 1}
+{"query": "what is the ceo of Toyota?", "label": 1}
+{"query": "what is the nickname of Toyota?", "label": 1}
+{"query": "tell me the density of Toyota", "label": 1}
+{"query": "who composed Hamlet?", "label": 1}
+{"query": "who designed Hamlet?", "label": 1}
+{"query": "who wrote the Odyssey?", "label": 1}
+{"query": "who composed the Odyssey?", "label": 1}
+{"query": "who directed 1984?", "label": 1}
+{"query": "who designed Guernica?", "label": 1}
+{"query": "who painted Google?", "label": 1}
+{"query": "who wrote SpaceX?", "label": 1}
+{"query": "who designed SpaceX?", "label": 1}
+{"query": "what does photosynthesis mean?", "label": 0}
+{"query": "what is gravity?", "label": 0}
+{"query": "what is democracy?", "label": 0}
+{"query": "what is inflation?", "label": 0}
+{"query": "what is entropy?", "label": 0}
+{"query": "what is mitosis?", "label": 0}
+{"query": "what is osmosis?", "label": 0}
+{"query": "define socialism", "label": 0}
+{"query": "what is thermodynamics?", "label": 0}
+{"query": "what is a black hole?", "label": 0}
+{"query": "define hole", "label": 0}
+{"query": "what is an ecosystem?", "label": 0}
+{"query": "explain ecosystem", "label": 0}
+{"query": "what does diffusion mean?", "label": 0}
+{"query": "what is origin of species?", "label": 0}
+{"query": "what is state of matter?", "label": 0}
+{"query": "what is rule of law?", "label": 0}
+{"query": "what is the theory of mind?", "label": 0}
+{"query": "what is theory of mind?", "label": 0}

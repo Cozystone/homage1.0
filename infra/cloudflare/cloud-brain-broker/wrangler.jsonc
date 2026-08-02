@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "atanor-cloud-brain-broker-dev",
+  "main": "src/worker.ts",
+  "compatibility_date": "2025-12-01",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "ATANOR_CLOUD_MODE": "dev",
+    "ATANOR_DEV_SEED_PUBLIC_TASKS": "true",
+    "ATANOR_ALLOWED_ORIGINS": "http://127.0.0.1:3022,http://localhost:3022,http://127.0.0.1:3000,http://localhost:3000"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "ATANOR_NODES",
+      "id": "485fa52286874f2daddd90eed0208d53"
+    },
+    {
+      "binding": "ATANOR_TASKS",
+      "id": "2157129d24674ebe9a15ad9abee31bae"
+    },
+    {
+      "binding": "ATANOR_CREDITS",
+      "id": "41e5eec2035842f0a171a6dc948a8ce8"
+    },
+    {
+      "binding": "ATANOR_FRAGMENTS_KV",
+      "id": "c4d4773ea6734c5c90297a37b5cc5021"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "schema": "atanor.controlled-cloud-brain-self-growth-proof.v1",
+  "created_at": "2026-06-15T09:13:36Z",
+  "controlled_self_growth": true,
+  "mode": "controlled_fixture_only",
+  "autonomous_broad_crawling": false,
+  "fragment_id": "candidate_seed_alignment_001",
+  "content_hash": "deterministic_test_seed_alignment_001",
+  "alignment_success": true,
+  "ingestion_success": true,
+  "query_readback_success": true,
+  "duplicate_fragment": true,
+  "nodes_added": 0,
+  "edges_added": 0,
+  "previous_cloud_nodes": 4,
+  "new_cloud_nodes": 4,
+  "previous_cloud_edges": 3,
+  "new_cloud_edges": 3,
+  "trust_state": "seed_aligned",
+  "verification_state": "seed_aligned_pending_verification",
+  "ingestion_state": "ingested",
+  "local_brain_state": {
+    "local_brain_initialized": false,
+    "local_total_nodes": 0,
+    "local_total_edges": 0
+  },
+  "external_llm_used": false,
+  "external_sllm_used": false,
+  "rule_based_answer_engine": false,
+  "final_answer_generation_claimed": false,
+  "ingestion": {
+    "fragment_id": "candidate_seed_alignment_001",
+    "content_hash": "deterministic_test_seed_alignment_001",
+    "ingestion_attempted": true,
+    "alignment_success": true,
+    "matched_seed_concepts": [
+      {
+        "concept_id": "seed.core.claim",
+        "label": "Claim",
+        "matched_text": "claim",
+        "match_reason": "label",
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "seed.core.evidence",
+        "label": "Evidence",
+        "matched_text": "evidence",
+        "match_reason": "label",
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "seed.core.source",
+        "label": "Source",
+        "matched_text": "source",
+        "match_reason": "label",
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "seed.core.verification",
+        "label": "Verification",
+        "matched_text": "verification",
+        "match_reason": "label",
+        "confidence": 1.0
+      }
+    ],
+    "matched_seed_edges": [
+      {
+        "source": "seed.core.evidence",
+        "relation": "has_source",
+        "target": "seed.core.source",
+        "matched_text": "A source provides evidence",
+        "confidence": 1.0
+      },
+      {
+        "source": "seed.core.evidence",
+        "relation": "supports",
+        "target": "seed.core.claim",
+        "matched_text": "Evidence supports a claim",
+        "confidence": 1.0
+      },
+      {
+        "source": "seed.core.verification",
+        "relation": "verifies",
+        "target": "seed.core.claim",
+        "matched_text": "Verification evaluates whether a claim is supported by evidence",
+        "confidence": 1.0
+      }
+    ],
+    "nodes_added": 0,
+    "edges_added": 0,
+    "duplicate_fragment": true,
+    "previous_cloud_nodes": 4,
+    "new_cloud_nodes": 4,
+    "previous_cloud_edges": 3,
+    "new_cloud_edges": 3,
+    "trust_state": "seed_aligned",
+    "verification_state": "seed_aligned_pending_verification",
+    "ingestion_state": "ingested",
+    "writes_to_local_brain": false,
+    "external_llm_used": false,
+    "external_sllm_used": false,
+    "rule_based_answer_engine": false,
+    "final_answer_generation_claimed": false,
+    "ingestion_success": true
+  },
+  "readback": {
+    "query": "Evidence",
+    "results": [
+      {
+        "fragment_id": "candidate_seed_alignment_001",
+        "content_hash": "deterministic_test_seed_alignment_001",
+        "text": "Evidence supports a claim. A source provides evidence. Verification evaluates whether a claim is supported by evidence.",
+        "matched_seed_concepts": [
+          {
+            "concept_id": "seed.core.claim",
+            "confidence": 1.0,
+            "label": "Claim",
+            "match_reason": "label",
+            "matched_text": "claim"
+          },
+          {
+            "concept_id": "seed.core.evidence",
+            "confidence": 1.0,
+            "label": "Evidence",
+            "match_reason": "label",
+            "matched_text": "evidence"
+          },
+          {
+            "concept_id": "seed.core.source",
+            "confidence": 1.0,
+            "label": "Source",
+            "match_reason": "label",
+            "matched_text": "source"
+          },
+          {
+            "concept_id": "seed.core.verification",
+            "confidence": 1.0,
+            "label": "Verification",
+            "match_reason": "label",
+            "matched_text": "verification"
+          }
+        ],
+        "matched_seed_edges": [
+          {
+            "confidence": 1.0,
+            "matched_text": "A source provides evidence",
+            "relation": "has_source",
+            "source": "seed.core.evidence",
+            "target": "seed.core.source"
+          },
+          {
+            "confidence": 1.0,
+            "matched_text": "Evidence supports a claim",
+            "relation": "supports",
+            "source": "seed.core.evidence",
+            "target": "seed.core.claim"
+          },
+          {
+            "confidence": 1.0,
+            "matched_text": "Verification evaluates whether a claim is supported by evidence",
+            "relation": "verifies",
+            "source": "seed.core.verification",
+            "target": "seed.core.claim"
+          }
+        ],
+        "trust_state": "seed_aligned",
+        "verification_state": "seed_aligned_pending_verification",
+        "ingestion_state": "ingested"
+      }
+    ],
+    "query_readback_success": true,
+    "matches": 1,
+    "external_llm_used": false,
+    "external_sllm_used": false,
+    "final_answer_generation_claimed": false
+  }
+}

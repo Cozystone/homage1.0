@@ -1,0 +1,25 @@
+{
+  "milestone": "M1_body_schema",
+  "babble_steps": 15000,
+  "primary_gate": "forward-kinematics generalization to unseen postures",
+  "n_train": 13060,
+  "n_heldout": 1940,
+  "heldout_band_rad": [
+    1.2,
+    2.6
+  ],
+  "baseline_error_predict_mean_tip": 0.14522,
+  "train_error": 1e-05,
+  "heldout_error": 1e-05,
+  "learned_ratio_vs_baseline": 0.0001,
+  "generalization_ratio_heldout_over_train": 1.4214,
+  "secondary_joint_dynamics_heldout_error": 0.24111,
+  "gate": {
+    "BEAT": 0.25,
+    "GEN": 1.8
+  },
+  "learned_ok": true,
+  "generalize_ok": true,
+  "verdict": "M1 PASS",
+  "wall_s": 1.3
+}

@@ -1,0 +1,5 @@
+# runtime artifacts written when the loop is run with DEFAULT (in-package) dirs.
+# normal runs write under a temp sandbox; these guard against accidental commits.
+_ledger/
+_hardening_staging/
+__pycache__/

@@ -1,0 +1,47 @@
+#cloud-config
+# ATANOR Environment — Ubuntu Server autoinstall seed.
+# Burned into the remastered ISO (nocloud); the installer provisions a standard Ubuntu,
+# then first boot runs install.sh from the public repo. Honest defaults: no telemetry
+# added, no auto-updates beyond Ubuntu's own security defaults, user owns the machine.
+autoinstall:
+  version: 1
+  locale: ko_KR.UTF-8
+  keyboard:
+    layout: kr
+  identity:
+    hostname: atanor
+    username: atanor-admin
+    # 'atanor' — forced password change on first login (chage in the firstboot service;
+    # it CANNOT be a late-command: the identity user is created by cloud-init on first
+    # boot, so at install time it does not exist and passwd --expire fails the install).
+    # hash VERIFIED against python crypt: this IS 'atanor' (the previous hash was not —
+    # boot-test caught that installers could never log in; never ship an unverified hash).
+    password: "$6$atanorsalt$dNFYm79cMTtnJTVsOaM0AFHDkKUO7SUGUOplh7raz6lsZLovKbkDDwvIMaOSrNiRd87tmBjl679Or15xdQisK."
+  ssh:
+    install-server: false
+  storage:
+    layout:
+      name: lvm
+  packages:
+    - git
+    - curl
+  late-commands:
+    # first-boot provisioner: expire the public burned-in password (the identity user
+    # exists by then — cloud-init creates it before services), then clone the public
+    # repo and run the Stage-1 installer. An expiry failure is recorded, never hidden,
+    # and never blocks provisioning.
+    - |
+      cat > /target/etc/systemd/system/atanor-firstboot.service <<'EOF'
+      [Unit]
+      Description=ATANOR Environment first-boot provisioner
+      After=network-online.target
+      Wants=network-online.target
+      ConditionPathExists=!/var/lib/atanor/.provisioned
+      [Service]
+      Type=oneshot
+      ExecStart=/bin/bash -c 'mkdir -p /var/lib/atanor; chage -d 0 atanor-admin || touch /var/lib/atanor/.expire-failed; git clone --depth 1 -b demo https://github.com/Cozystone/ATANOR-Demo.git /tmp/atanor-src && bash /tmp/atanor-src/deploy/atanor-environment/install.sh --desktop && touch /var/lib/atanor/.provisioned'
+      RemainAfterExit=yes
+      [Install]
+      WantedBy=multi-user.target
+      EOF
+    - curtin in-target -- systemctl enable atanor-firstboot.service

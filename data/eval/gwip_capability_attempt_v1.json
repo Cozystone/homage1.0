@@ -1,0 +1,15 @@
+{
+  "candidate_commit": "51de7aadf188f9889ff1ea051012693e5aa529e2",
+  "candidate_episode_count": 1024,
+  "designated_local_attempt_claimed": true,
+  "evaluator_commit": "6346519eab4fcb7e9bc841ee860abc9d9068a541",
+  "preregistration_commit": "c560369ecace2c61110e9c6b6849cba1aadd7a1d",
+  "production_default_on": false,
+  "retry_authorized": false,
+  "schedule_commit": "cad6822096970b698d072e864854d7d2e0639d91",
+  "schedule_sha256": "9bd142474a52103f2a0d6840b08ae2ebdb51e8d5e35eeaec5332916caae0078a",
+  "schema_version": "atanor.gwip-capability-attempt.v1",
+  "seed_commit": "31d4a5ede60aab1e5ddf470be8c987d721519983",
+  "seed_manifest_sha256": "fc73d4a1b127ce6bfc0a950dcf9d012cd22d90c7d80261d975c574a3da6e2604",
+  "source_binding_sha256": "97f42c3b115fb5228cebbf51f38be4e4edf9d50095090f12fefd3b66b8f7f789"
+}

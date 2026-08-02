@@ -1,0 +1,42 @@
+{
+  "measured": "2026-07-31",
+  "encoder_v2": "D:/carla/depth_model/signature_net_v2.pt",
+  "before": {
+    "training": "triplet margin, AdaptiveAvgPool2d(1), place-in-adjacent-frames groups",
+    "effective_dims": 5.96,
+    "naming_precision": 0.734,
+    "coverage": 0.494
+  },
+  "after": {
+    "training": "InfoNCE over point TRACKS, AdaptiveAvgPool2d(2)",
+    "effective_dims": 19.44,
+    "naming_precision": 1.0,
+    "coverage": 0.256
+  },
+  "three_changes_all_needed": [
+    "InfoNCE instead of triplet margin: triplet has zero gradient once the margin is met, so the encoder stops as soon as it has just enough dimensions",
+    "AdaptiveAvgPool2d(2) instead of (1): global average pooling turned each patch into 64 channel means before the embedding was formed, and this cost more dimensions than the loss did",
+    "TRACK groups instead of place-in-adjacent-frames: my first retrain used groups averaging 1.2 members, so InfoNCE had almost no positives in a batch and collapsed to 1.69. coherence.tracks was already in the organ and gives ~12 per group."
+  ],
+  "open": "Coverage fell 49.4% -> 25.6%. The abstention threshold (min_cosine 0.78) was calibrated on the old 6-dimensional space; a wider space puts fewer patches that close to any centroid, so it needs recalibrating rather than the space being worse.",
+  "reference": {
+    "carla_before": 3.9,
+    "human": "~49 (Hebart 2020), ~66 later"
+  },
+  "SUPERSEDED_BY": "data/perception/naming_threshold_calibration.json",
+  "correction": {
+    "what_was_wrong": "effective_dims 19.44 and naming_precision 1.000 were measured on patches drawn from ep441/443/444/446 -- the episodes the retrain trained on. A track supplies a dozen views of one object, so an anchor and a test patch can be two views of the same car. That is in-distribution scoring, not a holdout.",
+    "measured_on_holdout": {
+      "episodes": [
+        "ep050",
+        "ep100",
+        "ep112"
+      ],
+      "effective_dims_current": 2.48,
+      "effective_dims_retrained": 4.14,
+      "note": "4.14 of the 19.44 survives leaving town; the rest was track-specific variation memorised."
+    },
+    "coverage_question_answered": "The coverage drop was NOT the fixed 0.78 threshold being wrong for a wider space, which is what I predicted. The calibrated cut came out at 0.98, ABOVE 0.78, not below it.",
+    "conformal_gate_is_not_at_fault": "Under an exchangeable split both encoders hold their promise (every violation <= 0.007, i.e. noise). Under calibrate-here-deploy-there the current encoder blows past it (0.257 achieved against 0.10 promised). What breaks the certificate is the town changing, not the arithmetic."
+  }
+}

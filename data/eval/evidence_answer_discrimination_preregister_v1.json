@@ -1,0 +1,141 @@
+{
+  "schema_version": "atanor.ead0-preregister.v1",
+  "preregistration_id": "ead0-exposed-binding-diagnostic-v1-20260726",
+  "frozen_at": "2026-07-26T08:45:16Z",
+  "claim_boundary": {
+    "measurement": "exposed_staging_only_evidence_answer_discrimination_diagnostic",
+    "capability_claimed": false,
+    "live_wiring_claimed": false,
+    "limitations": [
+      "All cases are selected from the already exposed LiveMemory v2 result.",
+      "This is a mechanism diagnostic, not fresh capability evidence.",
+      "The evaluator, labels, inputs, and candidate share one local repository.",
+      "No hidden holdout, independent evaluator, signature, or E5 attestation exists.",
+      "POS candidate spans are oracle gold spans, so answer extraction is not measured.",
+      "Negatives were selected post hoc from already exposed LiveMemory failures.",
+      "Five OOF thresholds diagnose separability and do not define one deployable live threshold.",
+      "The two-reader answerability/support composition is not the current live DoubtGate configuration."
+    ]
+  },
+  "sealed_inputs": {
+    "live_preregistration": {
+      "path": "data/eval/live_memory_realtime_preregister_v2.json",
+      "raw_sha256": "88fd657098c5c19e4da5f05ec7a9221f5376305b7b732f5ae539d6dfd1042a91"
+    },
+    "live_report": {
+      "path": "reports/benchmarks/live_memory_realtime_lmrt-novel-single-hop-v2-20260726.json",
+      "raw_sha256": "c409411e7748c8c5c216aaabd6ff61a932e9d518fa13f487871bcf1d563d3718"
+    }
+  },
+  "candidate": {
+    "paths": [
+      "data/graph_scale/ace_hotpot.pt",
+      "data/graph_scale/ace_support.pt",
+      "data/graph_scale/rif_enwiki_emb/terms.txt",
+      "data/graph_scale/rif_enwiki_emb/vecs.npy",
+      "packages/__init__.py",
+      "packages/reasoning_vm/__init__.py",
+      "packages/reasoning_vm/ace/__init__.py",
+      "packages/reasoning_vm/ace/data.py",
+      "packages/reasoning_vm/ace/model.py",
+      "packages/reasoning_vm/consolidation.py",
+      "packages/reasoning_vm/deliberator/__init__.py",
+      "packages/reasoning_vm/deliberator/doubt_gate.py",
+      "packages/reasoning_vm/deliberator/planner.py",
+      "packages/reasoning_vm/deliberator/realtime.py",
+      "packages/reasoning_vm/learned_discriminator.py",
+      "packages/reasoning_vm/live_memory.py"
+    ],
+    "content_sha256": "02e30e438c333f5bbf5b05329bf4c6477c28ad2d8c9991893f42327604b87ee1",
+    "checkpoints": {
+      "answerability": "ace_hotpot.pt",
+      "support": "ace_support.pt"
+    },
+    "checkpoint_raw_sha256": {
+      "ace_hotpot.pt": "87134bd43971cfd43f6ea488d9088d686bee70bf977dcf8be19190d4b6906137",
+      "ace_support.pt": "eef7b80905fa3e2c065643fdb21e4caf78a9be5cefbceb07db832227c42b3448"
+    }
+  },
+  "protocol": {
+    "replays": [
+      {"id": "forward", "order": "forward"},
+      {"id": "reverse", "order": "reverse"}
+    ],
+    "device_policy": "cpu_only",
+    "python_hash_seed": "0",
+    "worker_timeout_seconds": 43200,
+    "fold_count": 5,
+    "predicate_family": "p_ans>=tau_a AND p_sup_net>=tau_s",
+    "calibration": {
+      "method": "deterministic_grouped_5_fold_out_of_fold_grid_search",
+      "p_ans_min_grid": [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0],
+      "p_sup_net_min_grid": [-1.0, -0.95, -0.9, -0.85, -0.8, -0.75, -0.7, -0.65, -0.6, -0.55, -0.5, -0.45, -0.4, -0.35, -0.3, -0.25, -0.2, -0.15, -0.1, -0.05, 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0],
+      "selection_order": [
+        "training feasibility (POS accept rate >= 0.85 and hard-negative false accept rate <= 0.20), true before false",
+        "balanced accuracy descending",
+        "false accept count ascending",
+        "positive accept count descending",
+        "tau_a descending",
+        "tau_s descending"
+      ],
+      "fallback": "If no training-grid point is feasible, apply the same total order to all grid points with feasibility false; the fold is marked infeasible and can never contribute to a GREEN result.",
+      "grouping": "question-pair plus connected components of repeated source_id or LiveMemory-normalized candidate answer; components assigned once to five frozen folds before signal observation",
+      "fold_case_counts": [10, 10, 11, 10, 11]
+    },
+    "gates": {
+      "positive_accept_min": 17,
+      "positive_total": 20,
+      "aggregate_hard_negative_accept_max": 6,
+      "aggregate_hard_negative_total": 32,
+      "wrong_source_accept_max": 4,
+      "wrong_source_total": 20,
+      "unknown_accept_max": 2,
+      "unknown_total": 12,
+      "replay_exact_required": true,
+      "worker_error_count_max": 0,
+      "all_training_folds_feasible_required": true
+    },
+    "rerun_policy": {
+      "result_run_limit": 1,
+      "mechanical_retry_limit": 0,
+      "post_result_tuning_prohibited": true,
+      "new_preregistration_required_after_any_change": true
+    }
+  },
+  "wrong_source_pairs": [
+    {"group_id":"P01","fold":2,"positive_item_id":"37bb9e0ce8302d8e3e67741282a25f99077f8c68bde0a3ad12e6bc60ed00fe6d","wrong_source_id":"prereg:lmrt:v1:P029","wrong_answer":"copper ring"},
+    {"group_id":"P02","fold":1,"positive_item_id":"185c4ed633132b6082d98fa5d8b9619e2cb10364506d0dd4662a725641797a4b","wrong_source_id":"prereg:lmrt:v1:P021","wrong_answer":"clay ocarina"},
+    {"group_id":"P03","fold":2,"positive_item_id":"bda0465b610541b80fc9ef1cf6608ffb4fbdbd06d83ce6258d74535ac75f35e7","wrong_source_id":"prereg:lmrt:v1:P032","wrong_answer":"An ivory marker"},
+    {"group_id":"P04","fold":3,"positive_item_id":"ba61cd014d18c0f274536ffaecbaadfa66fa68df1a087cfa2b24be9d3076310b","wrong_source_id":"prereg:lmrt:v1:P010","wrong_answer":"North Lantern Hall"},
+    {"group_id":"P05","fold":2,"positive_item_id":"95c2883b2ae320ad6c6393725504286395ef7558cb68a82b4f0ea2a5d5f31e81","wrong_source_id":"prereg:lmrt:v1:P032","wrong_answer":"ivory marker"},
+    {"group_id":"P06","fold":3,"positive_item_id":"b0ebe6d57bead819c39afc43470b6bb24e155f902b45d6570e6d249cd1c1fdf6","wrong_source_id":"prereg:lmrt:v1:P046","wrong_answer":"Light meets light"},
+    {"group_id":"P07","fold":1,"positive_item_id":"c62013446ddb4fba6168c9f36da19e68210f9a35f80268d83a81dffa4d6cac7a","wrong_source_id":"prereg:lmrt:v1:P005","wrong_answer":"pearl white"},
+    {"group_id":"P08","fold":2,"positive_item_id":"60a33c14dae9f9462da9ba768c323f79c0dce5cf89de76c6577783b705d11188","wrong_source_id":"prereg:lmrt:v1:P007","wrong_answer":"Crimson red"},
+    {"group_id":"P09","fold":2,"positive_item_id":"460876c85cba8bcb51d5030a3d5ee064c3fb780d970edf0432611e691588e379","wrong_source_id":"prereg:lmrt:v1:P032","wrong_answer":"An ivory marker"},
+    {"group_id":"P10","fold":1,"positive_item_id":"4e943d69408159d44e02ee83c82469a4e498c0c0eff74f9ff721cf4beef831b2","wrong_source_id":"prereg:lmrt:v1:P017","wrong_answer":"bronze flute"},
+    {"group_id":"P11","fold":4,"positive_item_id":"63de7cb4470350c53c6c1df6863c109cc0e7bb691797d2d365dc3dde9f935da0","wrong_source_id":"prereg:lmrt:v1:P018","wrong_answer":"frame drum"},
+    {"group_id":"P12","fold":3,"positive_item_id":"b1a9370992480e49be8dc70e2e9e0ed355d5e2162310cf97010cf59eb1597bee","wrong_source_id":"prereg:lmrt:v1:P035","wrong_answer":"red kite"},
+    {"group_id":"P13","fold":0,"positive_item_id":"bf04f7ec29385fdf395a724c4dcd213740c502c6ba5b41ec3ff05b47eb99eaad","wrong_source_id":"prereg:lmrt:v1:P044","wrong_answer":"Steady hearts gather"},
+    {"group_id":"P14","fold":4,"positive_item_id":"6c6b88bdc17e99388abefc404dae27f4b8446a1285995d7f4258c56560f9ef80","wrong_source_id":"prereg:lmrt:v1:P004","wrong_answer":"Copper orange"},
+    {"group_id":"P15","fold":4,"positive_item_id":"59b07e1030f6c2e8f3790143a619e0c4bbb6d4e4756ae583f959c0e0f3d490c7","wrong_source_id":"prereg:lmrt:v1:P015","wrong_answer":"Cedar Step Gallery"},
+    {"group_id":"P16","fold":0,"positive_item_id":"09ea0600fa918de7546e9be339ab1fefde5c35e5b956d95ec402b508ea1c25e2","wrong_source_id":"prereg:lmrt:v1:P044","wrong_answer":"Steady hearts gather"},
+    {"group_id":"P17","fold":3,"positive_item_id":"d3a66cdf29d233063c2fadfb3c5af80944ef8caf58af0a56eb095cb743a4fe6a","wrong_source_id":"prereg:lmrt:v1:P020","wrong_answer":"silver bell"},
+    {"group_id":"P18","fold":1,"positive_item_id":"fdc0af1fbdc76bdc892fd5e6dbba5f0fcabc9803c4c22f605f6187239ca18ea2","wrong_source_id":"prereg:lmrt:v1:P005","wrong_answer":"pearl white"},
+    {"group_id":"P19","fold":0,"positive_item_id":"6d0db395667cb43e2716aabc5fee7dd0675894740cb05563fa8871a97f666980","wrong_source_id":"prereg:lmrt:v1:P036","wrong_answer":"gray falcon"},
+    {"group_id":"P20","fold":4,"positive_item_id":"05097630b5c2920c0ff2c4b7f1c4e65a64fffda3ddc27ad564d78afc95c6bd65","wrong_source_id":"prereg:lmrt:v1:P011","wrong_answer":"Glasswater Pier"}
+  ],
+  "unknown_negatives": [
+    {"group_id":"U01","fold":2,"unknown_item_id":"4852ed6c31e25d26f2b4ab0700344c9e7b562ae495a860584faff35306ff3d4d","source_id":"prereg:lmrt:v1:P003","answer":"Taviross Union's registry"},
+    {"group_id":"U02","fold":0,"unknown_item_id":"267badd71b52a1cec0973d16c9ba854e0b82c26612714c31362f7c72d6db6ba6","source_id":"prereg:lmrt:v1:P002","answer":"Solmere Compact records"},
+    {"group_id":"U03","fold":0,"unknown_item_id":"513e05525ad8e7b1da5ebd12b3729e55d89bd1fb471a8316bc5e63e0fd8bc6d9","source_id":"prereg:lmrt:v1:P009","answer":"Willow Quay"},
+    {"group_id":"U04","fold":3,"unknown_item_id":"da7ddab6c4a9d8a5513f5ac0996813f932c82d9e6d9feccb3c83997a066915f4","source_id":"prereg:lmrt:v1:P012","answer":"Dunelith Chapter"},
+    {"group_id":"U05","fold":4,"unknown_item_id":"d3f8f5f84d286970c6162fe12447e89fcf22441b668da79a79ad49371da944f7","source_id":"prereg:lmrt:v1:P019","answer":"Brennivar Forum"},
+    {"group_id":"U06","fold":4,"unknown_item_id":"1449d38b96b22072de24f1c4d456c71bf0c2f47975dff964d84677ec65a810be","source_id":"prereg:lmrt:v1:P019","answer":"Brennivar Forum"},
+    {"group_id":"U07","fold":0,"unknown_item_id":"3ae9aefe8e0ec6840ea39ca8f78c3f61a953df3f80f8eef000898279e804aa09","source_id":"prereg:lmrt:v1:P028","answer":"Vaskerine League exchange"},
+    {"group_id":"U08","fold":1,"unknown_item_id":"8df6cbebbdf274a36917f7fd0254cf19a2504fb4e5081069519ce8914186af34","source_id":"prereg:lmrt:v1:P025","answer":"Caldriven Assembly"},
+    {"group_id":"U09","fold":4,"unknown_item_id":"c6df00c3265932bbbb7729e524fe98b906e780460ce2b2461601ea961d21eeab","source_id":"prereg:lmrt:v1:P037","answer":"Brennivar Forum"},
+    {"group_id":"U10","fold":3,"unknown_item_id":"82b619b4060227857be534b8d102f57dbb33989f3f7617d848b4a27f0de692df","source_id":"prereg:lmrt:v1:P035","answer":"Pellorin Circle"},
+    {"group_id":"U11","fold":0,"unknown_item_id":"93fdf7ad4345005812f4d539f7a5e05bcb16dd405dd272d6da5d465938420dcc","source_id":"prereg:lmrt:v1:P042","answer":"Ormec Vale Society assembly"},
+    {"group_id":"U12","fold":1,"unknown_item_id":"41d7ce397c6a3dcc7f44b136f9cf9b7b3703aef6bb413726bc65fd5f3aebf1a7","source_id":"prereg:lmrt:v1:P041","answer":"Caldriven Assembly"}
+  ]
+}

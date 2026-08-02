@@ -1,0 +1,133 @@
+{
+  "pass": true,
+  "run_id": "review_queue_proof_24fbc7c9af",
+  "candidates_created": 3,
+  "candidates_approved": 2,
+  "candidates_rejected": 1,
+  "production_rules_created": 2,
+  "rollback_tested": true,
+  "audit_events_written": 10,
+  "approved_candidate_id": "repair_candidate_6bd6d953f39ee663",
+  "custom_candidate_id": "repair_candidate_3653c46dcf8cce34",
+  "rejected_candidate_id": "repair_candidate_ffe5360f918af855",
+  "repair_result": {
+    "original_answer": "INTERNAL_ROUTE_TOKEN 기준으로 설명하면 쿠버네티스는 컨테이너 관리 시스템입니다.",
+    "repaired_answer": "근거 기준으로 설명하면 쿠버네티스는 컨테이너 관리 시스템입니다.",
+    "applied_rules": [
+      "proof_public_route_phrase"
+    ],
+    "moved_to_trace": [
+      {
+        "text": "INTERNAL_ROUTE_TOKEN",
+        "reason": "proof_public_route_phrase",
+        "action": "replace"
+      }
+    ],
+    "changed": true,
+    "warnings": [],
+    "built_in_rules_used": [],
+    "production_rules_used": [
+      "proof_public_route_phrase"
+    ]
+  },
+  "production_rule": {
+    "rule_id": "repair_146ceead0480",
+    "name": "feedback_internal_trace_leakage",
+    "enabled": true,
+    "version": 1,
+    "approved_at": "2026-06-15T23:39:40Z",
+    "approved_by": "proof_operator",
+    "source_candidate_id": "repair_candidate_6bd6d953f39ee663",
+    "rule": {
+      "rule_id": "repair_146ceead0480",
+      "name": "feedback_internal_trace_leakage",
+      "description": "Answer Quality detected internal route leakage; move implementation details to trace.",
+      "trigger_terms": [
+        "Local Brain",
+        "Cloud Brain",
+        "Working Memory",
+        "Q-Cortex",
+        "source_hash",
+        "node_id",
+        "attach",
+        "detach"
+      ],
+      "mode_scope": "default_only",
+      "action": "move_to_trace",
+      "replacement": null,
+      "severity": "high",
+      "enabled": true,
+      "source": "answer_quality_feedback",
+      "created_from_feedback_id": "proof_trace_leakage"
+    },
+    "usage_count": 0,
+    "last_used_at": null,
+    "rollback_available": true
+  },
+  "custom_production_rule": {
+    "rule_id": "proof_public_route_phrase",
+    "name": "proof_public_route_phrase",
+    "enabled": true,
+    "version": 1,
+    "approved_at": "2026-06-15T23:39:40Z",
+    "approved_by": "proof_operator",
+    "source_candidate_id": "repair_candidate_3653c46dcf8cce34",
+    "rule": {
+      "rule_id": "proof_public_route_phrase",
+      "name": "proof_public_route_phrase",
+      "description": "Proof-only production rule that removes a specific internal route phrase.",
+      "trigger_terms": [
+        "INTERNAL_ROUTE_TOKEN"
+      ],
+      "mode_scope": "default_only",
+      "action": "replace",
+      "replacement": "근거",
+      "severity": "high",
+      "enabled": true,
+      "source": "proof",
+      "created_from_feedback_id": null
+    },
+    "usage_count": 0,
+    "last_used_at": null,
+    "rollback_available": true
+  },
+  "rollback": {
+    "rule_id": "proof_public_route_phrase",
+    "enabled": false,
+    "rolled_back": true,
+    "rule": {
+      "rule_id": "proof_public_route_phrase",
+      "name": "proof_public_route_phrase",
+      "enabled": false,
+      "version": 1,
+      "approved_at": "2026-06-15T23:39:40Z",
+      "approved_by": "proof_operator",
+      "source_candidate_id": "repair_candidate_3653c46dcf8cce34",
+      "rule": {
+        "rule_id": "proof_public_route_phrase",
+        "name": "proof_public_route_phrase",
+        "description": "Proof-only production rule that removes a specific internal route phrase.",
+        "trigger_terms": [
+          "INTERNAL_ROUTE_TOKEN"
+        ],
+        "mode_scope": "default_only",
+        "action": "replace",
+        "replacement": "근거",
+        "severity": "high",
+        "enabled": true,
+        "source": "proof",
+        "created_from_feedback_id": null
+      },
+      "usage_count": 1,
+      "last_used_at": "2026-06-15T23:39:40Z",
+      "rollback_available": true,
+      "rolled_back": true
+    }
+  },
+  "honesty": {
+    "auto_promoted": false,
+    "external_llm_judge_used": false,
+    "autonomous_production_mutation": false,
+    "manual_review_required": true
+  }
+}

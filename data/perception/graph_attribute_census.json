@@ -1,0 +1,27 @@
+{
+  "total_triples": 115455726,
+  "attribute_triples": 7676403,
+  "by_relation": {
+    "has_property": 196813,
+    "capable_of": 22662,
+    "used_for": 39673,
+    "made_of": 1300565,
+    "part_of": 3828705,
+    "has_a": 2282294,
+    "desires": 0,
+    "causes": 2246,
+    "has_subevent": 3445
+  },
+  "subjects_with_at_least": {
+    "1": 3603094,
+    "2": 1377645,
+    "4": 404260,
+    "8": 125461,
+    "16": 31671,
+    "49": 1970
+  },
+  "not_in_dictionary": [
+    "receives_action",
+    "created_by"
+  ]
+}

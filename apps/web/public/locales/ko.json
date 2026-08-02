@@ -1,0 +1,27 @@
+{
+  "architecture": {
+    "ghost_shell": "고스트 셸",
+    "ghost_shell_description": "문장의 살점을 제거하고 명사와 인과관계를 SHA-256 해시 뼈대로 압축한 초경량 위상 지도 레이어입니다.",
+    "payload_vault": "페이로드 볼트",
+    "payload_vault_description": "원문과 메타데이터를 WAL 보호 하에 로컬 SSD에 격리 저장하는 장기 디스크 금고입니다.",
+    "hybrid_acceleration_pipeline": "하이브리드 가속 파이프라인",
+    "hybrid_acceleration_pipeline_description": "메모리에는 고스트 셸 주소록만 올리고, 필요한 순간 페이로드 볼트와 로컬 합성 엔진을 연결하는 독자 가속 구조입니다."
+  },
+  "main": {
+    "local_brain": "로컬 브레인",
+    "local_brain_tab": "로컬 브레인 [LOCAL BRAIN]",
+    "cloud_brain": "클라우드 브레인",
+    "cloud_brain_tab": "클라우드 브레인 [CLOUD BRAIN]",
+    "local_brain_ready": "로컬 브레인 그래프 준비중",
+    "local_brain_waiting": "사용자가 수집/학습을 시작하기 전까지 로컬 그래프는 빈 상태로 유지됩니다.",
+    "cloud_viewer": "클라우드 브레인 읽기 전용 뷰어"
+  },
+  "admin": {
+    "title": "ATANOR // CLOUD BRAIN OPERATOR",
+    "graph_title": "클라우드 브레인 지식 그래프",
+    "sync_active": "Local Engine Sync Active",
+    "ghost_shell_ready": "GHOST SHELL READY",
+    "payload_vault": "Payload Vault",
+    "hybrid_pipeline": "Hybrid Acceleration Pipeline"
+  }
+}
